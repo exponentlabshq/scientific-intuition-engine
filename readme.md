@@ -7,6 +7,9 @@ Jagdeo, M. (2025). Scientific Intuition Engine (UMPF). Exponent Labs LLC. https:
 
 Original Thesis: Jagdeo, M. (2025). The Rosetta Stone of UMPF: A Research Methodology. Exponent Labs LLC. https://github.com/exponentlabshq/the-rosetta-stone
 
+How this solution was created: 
+https://chatgpt.com/share/68aede11-3df4-8010-a06e-e7bda6ed259b
+
 ## 📋 **Table of Contents**
 1. [Abstract](#abstract)
 2. [Purpose](#purpose)
