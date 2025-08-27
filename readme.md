@@ -11,10 +11,12 @@ Original Thesis: Jagdeo, M. (2025). The Rosetta Stone of UMPF: A Research Method
 1. [Abstract](#abstract)
 2. [Purpose](#purpose)
 3. [The UMPF Frame](#the-umpf-frame)
-4. [What the Current Artifacts Show](#what-the-current-artifacts-show)
-5. [Repository Contents](#repository-contents)
-6. [Get Started](#get-started)
-7. [License & Citation](#license--citation)
+4. [The Rosetta Stone: A Four-Layer Monadic Architecture](#-the-rosetta-stone-a-four-layer-monadic-architecture)
+5. [Domain-Equivalent Pairs: How UMPF Chooses Cross-Domain Matches](#-domain-equivalent-pairs-how-umpf-chooses-cross-domain-matches)
+6. [What the Current Artifacts Show](#what-the-current-artifacts-show)
+7. [Repository Contents](#repository-contents)
+8. [Get Started](#get-started)
+9. [License & Citation](#license--citation)
 
 ---
 
@@ -51,6 +53,55 @@ This engine converts canonical scientific sources into two auditable artifacts: 
 
 - **Domain Classification**  
   Physical, Informational, Human/Social, Creative (recurring monad/graph/lens signatures)
+
+---
+
+## 🔬 **The Rosetta Stone: A Four-Layer Monadic Architecture**
+
+### **Layer 0 (Atomic)**: Primitive Operations
+- **Monads**: Maybe, Either for handling absence and choice
+- **Graphs**: Sparse connectivity, local interactions
+- **Lenses**: Basic property access and modification
+
+### **Layer 1 (Domain)**: Stateful Processes  
+- **Monads**: State, Reader, Writer for context and evolution
+- **Graphs**: Modular structure, functional connectivity
+- **Lenses**: Contextual state transformations
+
+### **Layer 2 (Control)**: Boundary Management
+- **Monads**: IO, Async, STM for external interaction
+- **Graphs**: Hierarchical control, feedback loops  
+- **Lenses**: Interface management, protocol handling
+
+### **Layer 3 (Orchestration)**: Emergent Behavior
+- **Monads**: Free, Effect systems for compositional behavior
+- **Graphs**: System-level organization, emergent properties
+- **Lenses**: Strategic transformations, policy implementation
+
+---
+
+## 🏗️ **Domain-Equivalent Pairs: How UMPF Chooses Cross-Domain Matches**
+
+### **Systematic Pattern Transfer Protocol**
+UMPF uses a rigorous 6-step protocol to identify and validate cross-domain equivalences:
+1. **Domain Decomposition**: Apply monad-graph-lens analysis to both source and target domains
+2. **Pattern Matching**: Identify structural correspondences across the four abstraction layers
+3. **Mechanism Mapping**: Translate mechanisms via categorical functors/natural transformations
+4. **Hypothesis Generation**: Formulate testable predictions about transferred mechanisms
+5. **Validation Protocol**: Design experiments to verify transfer effectiveness
+6. **Iteration**: Refine mappings based on empirical results
+
+### **Cross-Domain Similarity Metrics**
+- **Structural Similarity**: Graph isomorphism and motif preservation across layers
+- **Behavioral Similarity**: Monadic pattern correspondence (Maybe/State/IO/Free)
+- **Functional Similarity**: Lens operation equivalence (lawful get/set flows)
+- **Statistical Validation**: Correlation and effect-size thresholds (e.g., >10% improvement, p<0.05)
+
+### **Why This Works**
+- **Abstraction Alignment**: Comparable layers prevent false analogies
+- **Monadic Pattern Match**: Ensures like-for-like computation patterns
+- **Graph Structure Similarity**: Preserves constraints and feedback topology
+- **Lens Compatibility**: Guarantees meaningful intervention/observation symmetry
 
 ---
 
