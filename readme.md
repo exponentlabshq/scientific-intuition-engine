@@ -136,6 +136,17 @@ flowchart TD
     F --> G[Peer-review notes]
 ```
 
+### Flow (GitHub-compatible)
+```mermaid
+flowchart TD
+    A[PDF in inputs] --> B[Extract text]
+    B --> C[Save txt]
+    C --> D[Load UMPF prompt]
+    D --> E[LLM low temp]
+    E --> F[Save md]
+    F --> G[Peer-review notes]
+```
+
 ---
 
 ## Repository Contents
