@@ -1,53 +1,99 @@
-## Scientific Intuition Engine (UMPF)
+# Scientific Intuition Engine | Universal Monadic Pattern Framework (UMPF)
 
-### Purpose
-Turn canonical scientific sources into auditable knowledge that travels: from a Nobel‑level paper to a pair of artifacts that anyone can verify, compare, and build upon. The engine privileges fidelity (verbatim text) and structure (formal analysis) so insight is transferable across domains without losing grounding.
+### Author: Michael Jagdeo
+### Organization: Exponent Labs LLC
+### Cite this:
+Jagdeo, M. (2025). Scientific Intuition Engine (UMPF). Exponent Labs LLC. https://github.com/exponentlabshq/scientific-intuition-engine
 
-### What This Is (and why it matters)
-- A fidelity‑first transformation of primary literature into:
-  - a citation‑grade substrate (verbatim text), and
-  - a structured UMPF analysis (category‑theoretic framing).
-- A portable, reproducible way to compare discoveries across disciplines using the same conceptual language.
-- A bridge from “story of a result” to “map of its structure,” enabling cross‑domain transfer without erasing provenance.
+Original Thesis: Jagdeo, M. (2025). The Rosetta Stone of UMPF: A Research Methodology. Exponent Labs LLC. https://github.com/exponentlabshq/the-rosetta-stone
 
-### The UMPF Frame (from the thesis)
-UMPF is a universal lens for complex systems:
-- **Monads (computation patterns)**
-  - Maybe: uncertainty/absence
-  - State: evolution/learning
-  - IO: boundary/interaction
+## 📋 **Table of Contents**
+1. [Abstract](#abstract)
+2. [Purpose](#purpose)
+3. [The UMPF Frame](#the-umpf-frame)
+4. [What the Current Artifacts Show](#what-the-current-artifacts-show)
+5. [Repository Contents](#repository-contents)
+6. [Get Started](#get-started)
+7. [License & Citation](#license--citation)
+
+---
+
+## Abstract
+
+This engine converts canonical scientific sources into two auditable artifacts: (1) a citation‑grade verbatim text substrate and (2) a structured UMPF analysis that maps the source onto monads, graphs, lenses, and a four‑layer abstraction hierarchy. The goal is cross‑domain comparability, faithful provenance, and research acceleration without sacrificing rigor.
+
+---
+
+## Purpose
+
+- Turn narrative into structure without losing truth.  
+- Make discoveries comparable across disciplines via a shared language.  
+- Create artifacts that are traceable (verbatim text), testable (formal schema), and portable (plain text/Markdown).
+
+---
+
+## The UMPF Frame
+
+- **Monads (computation patterns)**  
+  - Maybe: uncertainty/absence  
+  - State: evolution/learning  
+  - IO: boundary/interaction  
   - Free: orchestration/composition
-- **Graphs (relational topology)**
-  - Components and interactions; connectivity, modularity, dynamics
-- **Lenses (focused transformation)**
-  - Composable get/set on subsystems; lawful access to state
-- **Four‑Layer Hierarchy**
-  - Atomic → Domain → Control → Orchestration
-- **Domain Classification**
-  - Physical, Informational, Human/Social, Creative (recurring monad/graph/lens signatures)
 
-### What the Current Artifacts Show
-- A Nobel‑level primary source was re‑expressed as:
-  - Verbatim text (title, authors, DOI, license, narrative intact)
-  - A structured analysis that uses definitions, mappings, and a common sectioning (e.g., “7.2 Technology Development”)—turning narrative into structure.
-- Result: a pair of artifacts that are traceable (back to the source), comparable (across papers), and useful (for cross‑domain reasoning).
+- **Graphs (relational topology)**  
+  Components and interactions; connectivity, modularity, dynamics over time
 
-### Why This Changes the Work
-- **From anecdote to algebra**: Formal sections and mappings force clarity and make results comparable without flattening their meaning.
-- **From isolated papers to a shared atlas**: The same scaffold applies to quantum physics, immunology, distributed systems, etc.—different content, identical structure.
-- **From opinion to audit**: The verbatim substrate anchors truth; the analysis is a claim against that anchor. Peer‑review notes complete the loop.
+- **Lenses (focused transformation)**  
+  Lawful get/set on subsystem state (Get‑Set, Set‑Get, Set‑Set)
 
-### Promises and Principles
-- Keep the original voice available (verbatim). Never force interpretation without evidence.
-- Constrain interpretation with a shared schema (UMPF) so comparisons are fair and productive.
-- Prefer portability: plain text, Markdown, human‑readable structure that any model or colleague can pick up.
+- **Four‑Layer Hierarchy**  
+  Atomic → Domain → Control → Orchestration
 
-### What This Enables Next
-- Rapid, comparable analyses of additional primary sources—across Nobel domains and beyond.
-- Cross‑domain transfers: importing mechanisms and constraints from one field to another with fewer translation losses.
-- Programmatic meta‑analysis: searching the structured corpus for repeating monadic/graph/lens patterns.
+- **Domain Classification**  
+  Physical, Informational, Human/Social, Creative (recurring monad/graph/lens signatures)
 
-### How to Engage (high‑level)
-- Bring a primary source. Expect a verbatim anchor and a structured re‑expression.
-- Critique at two levels: facts (the text) and structure (the mapping). Improve either without breaking the other.
-- Use the shared language (monads, graphs, lenses, layers) to propose cross‑domain hypotheses that are testable and comparable.
+---
+
+## What the Current Artifacts Show
+
+- A Nobel‑level primary source has been re‑expressed as:  
+  - Verbatim text (title, authors, DOI, license preserved)  
+  - A structured UMPF analysis with formal sections (e.g., Abstract; Formal Framework with Definitions 1–3; Monadic Domain Analysis; “7.2 Technology Development”).
+- Outcome: a pair of artifacts that are traceable to the source, comparable across papers, and useful for cross‑domain reasoning.
+
+---
+
+## Repository Contents
+
+- **readme.md** — Project overview, purpose, and framing (this document)
+- **umpf_pipeline/**  
+  - inputs/ — primary sources (PDFs)  
+  - outputs/ — verbatim `.txt` and structured `.md` analyses  
+  - prompts/ — UMPF system prompt schema  
+  - peer-review/ — model/human audits (e.g., grok.md, openai.md)  
+  - main.py — orchestration script (kept minimal; not the focus)  
+  - the-rosetta-stone-thesis.md — reference thesis text
+- **LICENSE** — MIT
+- **CITATION.cff** — repository citation and original thesis reference
+
+---
+
+## Get Started
+
+1) Place a primary source in `umpf_pipeline/inputs/`  
+2) Ensure a UMPF schema prompt exists in `umpf_pipeline/prompts/`  
+3) Run the pipeline (see `umpf_pipeline/main.py`)  
+4) Review artifacts in `umpf_pipeline/outputs/` (verbatim `.txt` and structured `.md`)
+
+Principle: the verbatim `.txt` is the anchor; the `.md` is the formal claim against that anchor.
+
+---
+
+## License & Citation
+
+- License: MIT (© 2025 Michael Jagdeo, Exponent Labs LLC)  
+- Repo: https://github.com/exponentlabshq/scientific-intuition-engine  
+- Cite this repository:
+  - Jagdeo, M. (2025). Scientific Intuition Engine (UMPF). Exponent Labs LLC. https://github.com/exponentlabshq/scientific-intuition-engine
+- Cite the original thesis:
+  - Jagdeo, M. (2025). The Rosetta Stone of UMPF: A Research Methodology. Exponent Labs LLC. https://github.com/exponentlabshq/the-rosetta-stone
