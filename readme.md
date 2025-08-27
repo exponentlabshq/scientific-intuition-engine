@@ -14,9 +14,10 @@ Original Thesis: Jagdeo, M. (2025). The Rosetta Stone of UMPF: A Research Method
 4. [The Rosetta Stone: A Four-Layer Monadic Architecture](#-the-rosetta-stone-a-four-layer-monadic-architecture)
 5. [Domain-Equivalent Pairs: How UMPF Chooses Cross-Domain Matches](#-domain-equivalent-pairs-how-umpf-chooses-cross-domain-matches)
 6. [What the Current Artifacts Show](#what-the-current-artifacts-show)
-7. [Repository Contents](#repository-contents)
-8. [Get Started](#get-started)
-9. [License & Citation](#license--citation)
+7. [What main.py Does (run behavior)](#what-mainpy-does-run-behavior)
+8. [Repository Contents](#repository-contents)
+9. [Get Started](#get-started)
+10. [License & Citation](#license--citation)
 
 ---
 
@@ -114,6 +115,29 @@ UMPF uses a rigorous 6-step protocol to identify and validate cross-domain equiv
 
 ---
 
+## What main.py Does (run behavior)
+
+- Auto‑selects the first `*.pdf` in `umpf_pipeline/inputs/` (sorted lexicographically).
+- Extracts verbatim text with `pdfminer.six` and writes `outputs/<basename>.txt` (truth anchor).
+- Loads the UMPF schema prompt from `umpf_pipeline/prompts/umpf_system_prompt.md` (or `.txt` fallback).
+- Sends (txt, prompt) to OpenAI ChatCompletion (low temperature) and writes `outputs/<basename>.md` (structured analysis).
+- Leaves peer‑review notes under `umpf_pipeline/peer-review/` for model/human audits.
+
+Invariants: the `.txt` is source‑truth; the `.md` is a structured claim constrained by the schema. Analysis must be read against the verbatim anchor.
+
+### Flow (simple)
+```mermaid
+flowchart TD
+    A[PDF in inputs/] --> B[Extract text (pdfminer.six)]
+    B --> C[Save outputs/<name>.txt]
+    C --> D[Load UMPF prompt]
+    D --> E[ChatCompletion (low temperature)]
+    E --> F[Save outputs/<name>.md]
+    F --> G[Peer-review notes]
+```
+
+---
+
 ## Repository Contents
 
 - **readme.md** — Project overview, purpose, and framing (this document)
@@ -148,3 +172,27 @@ Principle: the verbatim `.txt` is the anchor; the `.md` is the formal claim agai
   - Jagdeo, M. (2025). Scientific Intuition Engine (UMPF). Exponent Labs LLC. https://github.com/exponentlabshq/scientific-intuition-engine
 - Cite the original thesis:
   - Jagdeo, M. (2025). The Rosetta Stone of UMPF: A Research Methodology. Exponent Labs LLC. https://github.com/exponentlabshq/the-rosetta-stone
+
+---
+
+## Why These Folders Matter (the meat of the function)
+
+- **inputs/** — Source of truth (primary artifacts)
+  - Holds canonical PDFs. Nothing begins without a verifiable source.
+  - Guarantees provenance: title, authors, DOI, license remain inspectable.
+
+- **prompts/** — Formal schema (structure, not style)
+  - Defines the analytical shape (sections, definitions, mappings) the model must honor.
+  - Constrains interpretation so outputs are comparable across domains.
+
+- **outputs/** — Twin artifacts (truth anchor + formal claim)
+  - `<name>.txt`: verbatim substrate (citation‑grade; what the paper actually says).
+  - `<name>.md`: structured UMPF analysis (how the paper is formally re‑expressed).
+  - Read the `.md` against the `.txt`. If they diverge, the `.txt` wins.
+
+- **peer-review/** — Audit loop (accountability and improvement)
+  - Stores model/human critiques (e.g., grok.md, openai.md) tied to a specific run.
+  - Turns one‑off generations into traceable research assets with a history of review.
+
+Interaction:
+- inputs → (schema in prompts) → outputs (.txt, then .md) → peer‑review → better prompts/analyses next run.
