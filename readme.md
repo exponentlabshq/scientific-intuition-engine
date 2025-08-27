@@ -125,17 +125,6 @@ UMPF uses a rigorous 6-step protocol to identify and validate cross-domain equiv
 
 Invariants: the `.txt` is source‑truth; the `.md` is a structured claim constrained by the schema. Analysis must be read against the verbatim anchor.
 
-### Flow (simple)
-```mermaid
-flowchart TD
-    A[PDF in inputs/] --> B[Extract text (pdfminer.six)]
-    B --> C[Save outputs/<name>.txt]
-    C --> D[Load UMPF prompt]
-    D --> E[ChatCompletion (low temperature)]
-    E --> F[Save outputs/<name>.md]
-    F --> G[Peer-review notes]
-```
-
 ### Flow (GitHub-compatible)
 ```mermaid
 flowchart TD
