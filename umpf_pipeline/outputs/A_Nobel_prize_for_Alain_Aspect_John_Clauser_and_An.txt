@@ -1,0 +1,259 @@
+THE NOBEL PRIZE IN PHYSICS 2022
+
+A Nobel prize  
+for  Alain Aspect, John  Clauser and Anton Zeilinger
+ Jean DALIBARD, Sylvain GIGAN* 
+Laboratoire Kastler-Brossel, CNRS, ENS, Collège de France, Sorbonne Université, Paris, France
+* sylvain.gigan@lkb.ens.fr
+
+The Nobel committee announced on October 4th that Alain Aspect, John Clauser and Anton Zeilinger 
+were awarded the Nobel prize “for experiments with entangled photons, establishing the violation of 
+Bell inequalities and pioneering quantum information science” [1]. In this article, we want to put the 
+Nobel Prize in perspective, and replace the three laureates’ contribution in their historical context. 
+
+https://doi.org/10.1051/photon/202211623
+
+This is an Open Access article distributed under the terms of the Creative Commons Attribution License (http://creativecommons.org/licenses/by/4.0), which permits 
+unrestricted use, distribution, and reproduction in any medium, provided the original work is properly cited.
+
+T he development of Quantum 
+
+Physics during the 20th centu-
+ry is certainly one of the most 
+extraordinary intellectual adven-
+tures of mankind. This theory has 
+deeply modified our conception of 
+the world, and it has had in parallel 
+a strong impact on our life with its 
+numerous applications: transistors, 
+lasers, integrated circuits. One cor-
+nerstone of quantum science is the 
+concept of photons, introduced in 
+1905 (see [2]) and one of the most 
+prominent features of the quantum 
+formalism is entanglement (a term 
+
+coined by Schrödinger). Einstein, 
+Podolsky and Rosen pointed out its 
+subtle and paradoxical character in 
+a celebrated paper. They used this 
+notion to demonstrate the conflict 
+between quantum mechanics and 
+a realistic local theory of the phy-
+sical world. Moreover, to the ques-
+tion “Can a quantum-mechanical 
+description of physical reality be 
+considered complete?” the answer 
+of Einstein and co-authors was ne-
+gative,  and  their  conclusion  was 
+incompatible with the “orthodox” 
+point of view, advocated in particular 
+
+by N. Bohr. This conflict between 
+Einstein and Bohr lasted until the 
+end of their lives; it remained a phi-
+losophical question until the work 
+of J.S. Bell in 1964. Bell proved that 
+the correlations between any pair of 
+physical quantities, when calculated 
+within a realistic local theory, are 
+constrained by a specific inequality, 
+which can be violated by quantum 
+mechanics. From this moment, the 
+above-mentioned conflict was no 
+longer a matter of taste, but it be-
+came a quantitative question that 
+could be settled experimentally.
+
+ Photoniques 116  I www.photoniques.com 23
+
+one of us (SG) was at one of the epi-
+centers of this revolution, and wit-
+nessed the vitality of the field, and the 
+breadth of its application, spanning 
+also well beyond optics, to atoms, 
+superconductors  and  mechanical 
+systems. Although very little doubts 
+remain about local realism, the quest 
+to experimentally close all potential 
+loopholes continued, and remains 
+to date an important topic, both as 
+a fundamental subject, but also of 
+practical importance, as pointed out 
+by Alain Aspect in his 2015 perspec-
+tive paper [6]. 
+Beyond their crucial contributions 
+for which the prize was awarded, 
+one can also stress the importance 
+and diversity of the three Laureates’s 
+other  contributions  to  quantum 
+science, for instance for Alain Aspect, 
+the Bose-Einstein condensation of 
+Helium or the Anderson localization 
+of Atoms, to name just two salient 
+examples.  Another  lasting  legacy 
+is the many outstanding PhD stu-
+dents and postdoctoral researchers 
+that they formed over decades, and 
+who continue to dynamize the field. 
+The impact of the findings of these 
+three physicists over our vision of 
+the world is tremendous and it goes 
+actually far beyond the Physics com-
+munity. Philosophers and epistemo-
+logists have now incorporated all 
+these results in their own works and 
+concepts. The hope of Einstein for a 
+local and realistic description of the 
+physical world has failed, and quan-
+tum mechanics is in perfect agree-
+ment with experimental results on 
+
+Figure 1: Concept of the Bell Inequality violation 
+experiment designed by Aspect: a source of 
+entangled photons (center) distributes each 
+photon of the pair to four detectors (left and 
+right), where fast switches enable measurements 
+over different sets of polarizations.
+
+two key articles [4], to which one of 
+us (JD) was lucky to be associated, 
+together with Philippe Grangier and 
+with Gérard Roger -a skilful engineer.
+Anton  Zeilinger  realized  in 
+Innsbruck in 1997 the first quantum 
+teleportation experiment, followed 
+in 1998 by the third key experiment 
+on Bell inequality violations with 
+photons, by using ultrafast and ran-
+dom settings of the analyzers, thus 
+enforcing so-called “strict Einstein 
+locality conditions” [5]. As a postdoc 
+in Vienna, where the group of Anton 
+Zeilinger moved in the early 2000,  
+
+Figure 2:  At a conference honoring the 
+memory of Alfred Kastler in 1985, photo of 
+A. Messiah, A. Aspect and J. Bell, discussing. 
+©Laboratoire Kastler-Brossel.
+
+THE NOBEL PRIZE IN PHYSICS 2022
+
+This is when John Clauser enters 
+into the story : first, as a graduate 
+student at Columbia University, when 
+he found a modified version of Bell’s 
+theorem with an inequality that can 
+be applied to practical experiments 
+(using pairs of entangled photons 
+and measurement over various po-
+larizations),  then in 1972 when he 
+performed with Stuart Freedman at 
+the University of Berkeley the first ex-
+periment that conclusively showed 
+a  violation  of  Bell’s  inequality  by 
+more than 5 standard deviations [3]. 
+This experiment, which was using a 
+lamp to excite the atoms (pre-laser 
+era!) was a tour-de-force with a data 
+acquisition time of 200 hours. The re-
+sult of Clauser was later confirmed 
+with a similar experiment by Fry and 
+Thompson in 1976. 
+In the meantime, starting in 1974, 
+Alain Aspect engaged in a program 
+in which the independence between 
+the polarization measurements on 
+each photon of the pair was enforced 
+by a relativistic argument. In these 
+experiments realized at Institut d’Op-
+tique in Orsay, the setting of each po-
+larizer was changing rapidly in time, 
+so that there was no possibility that 
+an information about this setting is 
+exchanged between the two detection 
+channels: The choice of the measure-
+ment basis for the photons polari-
+zation was done well after the pair 
+of entangled photons was created 
+and the locality condition, which 
+is an essential hypothesis of Bell's 
+theorem, becomes a consequence 
+of Einstein’s causality that prevents 
+any faster-than-light influence. This 
+resulted in the publication in 1982 of 
+
+ 24 www.photoniques.com  I Photoniques 116
+
+ Photoniques 116  I www.photoniques.com  25
+
+THE NOBEL PRIZE IN PH YSIC S 2022
+
+this matter. The results of Aspect, Clauser and Zeilinger 
+are now at the core of several modern textbooks in quan-
+tum mechanics.
+These seminal works crowned by the Nobel prize did not re-
+main limited to closing a philosophical debate or to textbooks, 
+but were rapidly followed by a stream of applications of en-
+tanglement, and to the birth of a blooming field, quantum 
+information processing, that spans from teleportation, to 
+quantum cryptography, to quantum computing. All these 
+feats rely heavily, at their core, on the phenomenon of quan-
+tum entanglement and on non-locality.  Quantum informa-
+tion processing is now a very active field worldwide, involving 
+thousands of groups, and poised to revolutionize the way we 
+communicate and compute. Quantum communications, be 
+it on deployed fibered networks spanning across countries 
+(and enabled by meshes of “quantum repeaters”), or along 
+free-space link through satellites, are already a reality for un-
+conditionally-secure cryptography. Quantum computing has 
+recently demonstrated over different platforms the so-called 
+“quantum advantage”: its capacity to perform some specific 
+calculations with an exponential speedup over conventional 
+computers.  While a large-scale universal quantum computer 
+remains years away, the world is already getting prepared for 
+the “post-quantum” era, where quantum technologies may 
+render several of our current approaches to information pro-
+cessing obsolete.For example, it is reasonable to expect that 
+quantum simulators could soon be used to solve currently 
+intractable problems in chemistry and physics, with crucial 
+applications such as the design of new drug molecules.
+It remains a humbling lesson to witness how such a pro-
+found technological and societal change may stems from 
+sheer curiosity-driven research : from the  deep philosophi-
+cal considerations of the founders of quantum mechanics, 
+later formalized by John Bell into measurable quantities, 
+and ultimately to the experiments imagined by Alain 
+Aspect, John Clauser and Anton Zeilinger.
+
+REFERENCES
+[1] Demonstrations of quantum entanglement earn the 2022 Nobel 
+Prize in Physics, Physics Today (2022) 
+
+[2] A. Zeilinger et al., Nature 433, 230 (2005) 
+
+[3] S.J. Freedman and J.F. Clauser, Phys. Rev. Lett. 28, 938 (1972).  
+https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.28.938
+
+[4] A. Aspect, J. Dalibard, and G. Roger, Phys. Rev. Lett. 49, 1804 
+(1982). A. Aspect, P. Grangier, and G. Roger, Phys. Rev. Lett. 49, 
+91 (1982)
+
+[5] G. Weihs, T. Jennewein, C. Simon, H. Weinfurter, A. Zeilinger,  
+Phys. Rev. Lett. 81, 5039 (1998). D. Bouwmeester, J. W. Pan, K. Mattle, 
+M. Eibl, H. Weinfurter, A. Zeilinger, Nature 390, 575 (1997)
+
+[6] A. Aspect, Physics 8, 123. (2015) 
+
+SOME KEY ARTICLES RECENTLY PUBLISHED IN PHOTONIQUES: 
+C. Fabre, Photoniques 107, 55 (2021)
+
+B. Vest et L. Jacubowiez, Photoniques 113, 26 (2022)
+
+SEE ALSO:
+T. Van Der Sar, T. H. Taminiau and R. Hanson, Photoniques 107, 
+44 (2021)
+
+ Photoniques 116  I www.photoniques.com  25
+
+
