@@ -88,6 +88,30 @@
     [
       "Human Financial Trading Algorithms",
       "Ecology — predator-prey population dynamics"
+    ],
+    [
+      "Immunology — innate immune response",
+      "Military Strategy (Human & Social Systems) — Atomic: Mission succeeds/fails, Enemy positions unknown, Multiple tactical options; Domain: Battle situation evolves, Military doctrine, Log tactical moves; Control: Intelligence systems, Concurrent operations, Atomic command updates; Orchestration: Defense coordination, War gaming vs actual combat"
+    ],
+    [
+      "Epidemiology — herd immunity thresholds",
+      "Creative Inspiration Variability"
+    ],
+    [
+      "Cognitive Attention Map Evolution",
+      "Informational Event-Driven Systems"
+    ],
+    [
+      "Ecology — predator-prey population dynamics",
+      "Materials science — phase transitions"
+    ],
+    [
+      "Language Linguistics (Information & Intelligence Systems) — Atomic: Translation accurate/inaccurate, Word meaning ambiguous, Multiple interpretations; Domain: Language evolves through usage, Grammar rules, Log linguistic changes; Control: External linguistic corpora, Concurrent translation, Atomic meaning resolution; Orchestration: Academic coordination, Theory vs usage environments",
+      "Physical Telescope Telemetry"
+    ],
+    [
+      "Game theory — Nash bargaining",
+      "Music — sample-based hip-hop production"
     ]
   ],
   "already_janused": [
@@ -100,7 +124,13 @@
     "Human Cognitive Bias",
     "Physical Quantum Measurement",
     "Creative Creative Block",
-    "Informational Load Balancing"
+    "Informational Load Balancing",
+    "Physical Feedback Loop Control",
+    "Cognitive AI Preprocessing Pipelines",
+    "Knowledge Systems (Cognitive & Pattern Recognition Systems) — Atomic: Data interpretation uncertain, Model output ambiguous, Multiple insights; Domain: Knowledge evolves, Historical context, Log insights; Control: Distributed analysis, Parallel computation, Atomic integration; Orchestration: Knowledge deployment coordination",
+    "Physical Mechanical Spring Systems",
+    "Physical Flux Regulation",
+    "Urban planning — zoning and land use"
   ],
   "already_homospatial": [
     [
@@ -130,6 +160,30 @@
     [
       "Informational Cache Miss Handling",
       "Human Individual Indecision"
+    ],
+    [
+      "Linguistics — historical sound change",
+      "Fluid dynamics — turbulence and laminar flow"
+    ],
+    [
+      "Immunology — adaptive immune memory",
+      "Human Urban Planning"
+    ],
+    [
+      "Swarm robotics — flocking / boids behavior",
+      "Physical Acoustic Resonance"
+    ],
+    [
+      "Chemistry — self-assembly of molecular structures",
+      "Informational Event-Driven Systems"
+    ],
+    [
+      "Law — common law precedent and stare decisis",
+      "Informational Database State"
+    ],
+    [
+      "Architecture (Creative & Performance Systems) — Atomic: Building permits approved/denied, Material availability uncertain, Multiple design options; Domain: Building construction progresses, Building codes, Log construction events; Control: Building inspections & permits, Concurrent construction, Atomic structural updates; Orchestration: City planning coordination, Design vs construction environments",
+      "Cross Domain Pattern Recognition (Cognitive & Pattern Recognition Systems) — Atomic: Pattern recognition uncertain, Mapping valid/invalid, Multiple domain analogies; Domain: Cross-domain understanding evolves, Universal monadic patterns, Log successful transfers; Control: Multiple data sources, Parallel analysis, Atomic synthesis; Orchestration: Cross-domain coordination & system integration"
     ]
   ],
   "domain_pool": [
