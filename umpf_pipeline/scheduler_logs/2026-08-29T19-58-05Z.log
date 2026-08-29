@@ -1,0 +1,623 @@
+=== run_cycle_scheduled.sh starting at 2026-08-29T19-58-05Z (UTC) ===
+=== Eureka Engine cycle — 2026-08-29T19:58:05.099523+00:00 ===
+Plan: {'bisociation': 13, 'janusian': 12, 'homospatial': 15} (40 total)
+$ /Library/Frameworks/Python.framework/Versions/3.12/bin/python3 hypothesis_engine.py --mode bisociation --autonomous --count 13
+🧬 [1/13] Bisociating: Astronomy — gravitational lensing  ×  Telecommunications — packet switching and routing
+  ⚠️  No named-entity search query found — asking for a targeted correction...
+  ✅ Retry passed — a named-entity search query is now present.
+✅ Saved to /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/hypotheses/2026-08-29-astronomy-x-telecommunications.md
+🧬 [2/13] Bisociating: Climatology — ocean current circulation (thermohaline)  ×  Cognitive Model Adaptation
+  ⚠️  No named-entity search query found — asking for a targeted correction...
+  ✅ Retry passed — a named-entity search query is now present.
+✅ Saved to /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/hypotheses/2026-08-29-climatology-ocean-current-circulation-x-cognitive-model-adaptation.md
+🧬 [3/13] Bisociating: Thermodynamics — entropy and irreversibility  ×  Informational Signal Jitter
+  ⚠️  No named-entity search query found — asking for a targeted correction...
+  ⚠️  Retry still has no named-entity query — flagging in output rather than looping indefinitely.
+✅ Saved to /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/hypotheses/2026-08-29-thermodynamics-x-informational-signal-jitter.md
+🧬 [4/13] Bisociating: Creative Instrument Track Development  ×  Informational Load Balancing
+  ⚠️  No named-entity search query found — asking for a targeted correction...
+  ✅ Retry passed — a named-entity search query is now present.
+✅ Saved to /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/hypotheses/2026-08-29-creative-instrument-track-development-x-informational-load-balancing.md
+🧬 [5/13] Bisociating: Materials science — phase transitions  ×  Cognitive Streaming Data Processing
+  ⚠️  No named-entity search query found — asking for a targeted correction...
+  ✅ Retry passed — a named-entity search query is now present.
+✅ Saved to /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/hypotheses/2026-08-29-materials-science-x-cognitive-streaming-data-processing.md
+🧬 [6/13] Bisociating: Biological Systems (Physical & Natural Systems) — Atomic: Gene expression uncertain, Mutation beneficial/harmful, Multiple phenotypes; Domain: Organism develops, Genetic code context, Log cellular events; Control: Environmental signals, Concurrent processes, Atomic DNA replication; Orchestration: Ecosystem coordination, Laboratory vs natural evolution  ×  Informational Scientific Experiment Orchestration
+  ⚠️  No named-entity search query found — asking for a targeted correction...
+  ✅ Retry passed — a named-entity search query is now present.
+✅ Saved to /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/hypotheses/2026-08-29-biological-systems-x-informational-scientific-experiment-orchestration.md
+🧬 [7/13] Bisociating: Creative Musical Composition  ×  Human Emotional Fluctuation
+  ⚠️  No named-entity search query found — asking for a targeted correction...
+  ✅ Retry passed — a named-entity search query is now present.
+✅ Saved to /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/hypotheses/2026-08-29-creative-musical-composition-x-human-emotional-fluctuation.md
+🧬 [8/13] Bisociating: Ecology — predator-prey population dynamics  ×  Informational Ledger State Evolution
+  ⚠️  No named-entity search query found — asking for a targeted correction...
+  ✅ Retry passed — a named-entity search query is now present.
+✅ Saved to /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/hypotheses/2026-08-29-ecology-x-informational-ledger-state-evolution.md
+🧬 [9/13] Bisociating: Informational Routing Policy Enforcement  ×  Physical Thermal Variation
+  ⚠️  No named-entity search query found — asking for a targeted correction...
+  ✅ Retry passed — a named-entity search query is now present.
+✅ Saved to /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/hypotheses/2026-08-29-informational-routing-policy-enforcement-x-physical-thermal-variation.md
+🧬 [10/13] Bisociating: Human Urban Planning  ×  Physical Photon Emission
+  ⚠️  No named-entity search query found — asking for a targeted correction...
+  ✅ Retry passed — a named-entity search query is now present.
+✅ Saved to /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/hypotheses/2026-08-29-human-urban-planning-x-physical-photon-emission.md
+🧬 [11/13] Bisociating: Biological Systems (Physical & Natural Systems) — Atomic: Gene expression uncertain, Mutation beneficial/harmful, Multiple phenotypes; Domain: Organism develops, Genetic code context, Log cellular events; Control: Environmental signals, Concurrent processes, Atomic DNA replication; Orchestration: Ecosystem coordination, Laboratory vs natural evolution  ×  Creative Musical Motif Deviation
+  ⚠️  No named-entity search query found — asking for a targeted correction...
+  ✅ Retry passed — a named-entity search query is now present.
+✅ Saved to /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/hypotheses/2026-08-29-biological-systems-x-creative-musical-motif-deviation.md
+🧬 [12/13] Bisociating: Creative Narrative Arc Development  ×  Human Team Collaboration
+  ⚠️  No named-entity search query found — asking for a targeted correction...
+  ✅ Retry passed — a named-entity search query is now present.
+✅ Saved to /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/hypotheses/2026-08-29-creative-narrative-arc-development-x-human-team-collaboration.md
+🧬 [13/13] Bisociating: Chemistry — self-assembly of molecular structures  ×  Creative Album Production Orchestration
+  ✅ Search Queries includes at least one named-entity query.
+✅ Saved to /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/hypotheses/2026-08-29-chemistry-x-creative-album-production-orchestration.md
+📒 domains.json updated — 13 new bisociation run(s) recorded as explored.
+
+$ /Library/Frameworks/Python.framework/Versions/3.12/bin/python3 hypothesis_engine.py --mode janusian --autonomous --count 12
+🎭 [1/12] Janusian hold on: Behavioral psychology — habit formation loops
+  ⚠️  §4 used context-split language (depending on, in other situations, context-dependent) — likely a disguised compromise, retrying once with a correction...
+  ⚠️  Retry still used context-split language (in other cases, context-dependent) — flagging in output rather than looping indefinitely.
+  ✅ Search Queries includes at least one named-entity query.
+✅ Saved to /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/hypotheses/2026-08-29-janusian-behavioral-psychology.md
+🎭 [2/12] Janusian hold on: Informational Cache Miss Handling
+  ✅ §4 passed the same-instance mechanical check on the first attempt.
+  ✅ Search Queries includes at least one named-entity query.
+✅ Saved to /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/hypotheses/2026-08-29-janusian-informational-cache-miss-handling.md
+🎭 [3/12] Janusian hold on: Music theory — jazz improvisation over changes
+  ⚠️  §4 used context-split language (depending on, different contexts) — likely a disguised compromise, retrying once with a correction...
+  ⚠️  Retry still used context-split language (depending on, in some instances) — flagging in output rather than looping indefinitely.
+  ✅ Search Queries includes at least one named-entity query.
+✅ Saved to /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/hypotheses/2026-08-29-janusian-music-theory.md
+🎭 [4/12] Janusian hold on: Artificial Intelligence (Information & Intelligence Systems) — Atomic: Neural activation uncertain, Training succeeds/fails, Multiple architectures; Domain: Model weights evolve, Hyperparameters context, Log training metrics; Control: External data sources, Distributed training, Atomic parameter updates; Orchestration: AI system coordination, Research vs deployment environments
+  ⚠️  §4 used context-split language (depending on, in some cases) — likely a disguised compromise, retrying once with a correction...
+  ⚠️  Retry still used context-split language (in some cases) — flagging in output rather than looping indefinitely.
+  ✅ Search Queries includes at least one named-entity query.
+✅ Saved to /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/hypotheses/2026-08-29-janusian-artificial-intelligence.md
+🎭 [5/12] Janusian hold on: Physical Electrical Noise
+  ⚠️  §4 used context-split language (depending on, in some cases) — likely a disguised compromise, retrying once with a correction...
+  ⚠️  Retry still used context-split language (depending on, different contexts) — flagging in output rather than looping indefinitely.
+  ⚠️  No named-entity search query found — asking for a targeted correction...
+  ✅ Retry passed — a named-entity search query is now present.
+✅ Saved to /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/hypotheses/2026-08-29-janusian-physical-electrical-noise.md
+🎭 [6/12] Janusian hold on: Cognitive Neuron Activation
+  ⚠️  §4 used context-split language (depending on) — likely a disguised compromise, retrying once with a correction...
+  ⚠️  Retry still used context-split language (depending on, different contexts) — flagging in output rather than looping indefinitely.
+  ✅ Search Queries includes at least one named-entity query.
+✅ Saved to /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/hypotheses/2026-08-29-janusian-cognitive-neuron-activation.md
+🎭 [7/12] Janusian hold on: Neuroscience — cortical map reorganization
+  ⚠️  §4 used context-split language (depending on, in some cases, context-dependent, in some instances) — likely a disguised compromise, retrying once with a correction...
+  ⚠️  Retry still used context-split language (depending on, in some cases, context-dependent) — flagging in output rather than looping indefinitely.
+  ✅ Search Queries includes at least one named-entity query.
+✅ Saved to /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/hypotheses/2026-08-29-janusian-neuroscience.md
+🎭 [8/12] Janusian hold on: Creative Inspiration Variability
+  ⚠️  §4 used context-split language (depending on) — likely a disguised compromise, retrying once with a correction...
+  ✅ Retry passed — §4 is context-split-language-free.
+  ✅ Search Queries includes at least one named-entity query.
+✅ Saved to /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/hypotheses/2026-08-29-janusian-creative-inspiration-variability.md
+🎭 [9/12] Janusian hold on: Architecture — modular/prefab construction
+  ⚠️  §4 used context-split language (depending on, in certain contexts) — likely a disguised compromise, retrying once with a correction...
+  ✅ Retry passed — §4 is context-split-language-free.
+  ✅ Search Queries includes at least one named-entity query.
+✅ Saved to /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/hypotheses/2026-08-29-janusian-architecture.md
+🎭 [10/12] Janusian hold on: Architecture (Creative & Performance Systems) — Atomic: Building permits approved/denied, Material availability uncertain, Multiple design options; Domain: Building construction progresses, Building codes, Log construction events; Control: Building inspections & permits, Concurrent construction, Atomic structural updates; Orchestration: City planning coordination, Design vs construction environments
+  ✅ §4 passed the same-instance mechanical check on the first attempt.
+  ⚠️  No named-entity search query found — asking for a targeted correction...
+  ✅ Retry passed — a named-entity search query is now present.
+✅ Saved to /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/hypotheses/2026-08-29-janusian-architecture.md
+🎭 [11/12] Janusian hold on: Creative Improvisation Adjustment
+  ⚠️  §4 used context-split language (in some instances) — likely a disguised compromise, retrying once with a correction...
+  ⚠️  Retry still used context-split language (in some situations) — flagging in output rather than looping indefinitely.
+  ✅ Search Queries includes at least one named-entity query.
+✅ Saved to /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/hypotheses/2026-08-29-janusian-creative-improvisation-adjustment.md
+🎭 [12/12] Janusian hold on: Human Social Influence
+  ⚠️  §4 used context-split language (depending on, in some situations) — likely a disguised compromise, retrying once with a correction...
+  ⚠️  Retry still used context-split language (depending on) — flagging in output rather than looping indefinitely.
+  ⚠️  No named-entity search query found — asking for a targeted correction...
+  ✅ Retry passed — a named-entity search query is now present.
+✅ Saved to /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/hypotheses/2026-08-29-janusian-human-social-influence.md
+📒 domains.json updated — 12 new janusian run(s) recorded as explored.
+
+$ /Library/Frameworks/Python.framework/Versions/3.12/bin/python3 hypothesis_engine.py --mode homospatial --autonomous --count 15
+🪞 [1/15] Superimposing: Linguistics — creole genesis  ×  Informational Backup Systems
+  ⚠️  Forbidden comparison language in §2 (similar to, mirrors) and §3 (akin to) — retrying once with a correction...
+  ✅ Retry passed — §2 and §3 are comparison-word-free.
+  ✅ Search Queries includes at least one named-entity query.
+✅ Saved to /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/hypotheses/2026-08-29-homospatial-linguistics-x-informational-backup-systems.md
+🪞 [2/15] Superimposing: Linguistics — creole genesis  ×  Learning Systems (Cognitive & Pattern Recognition Systems) — Atomic: Learning outcomes uncertain, Skill acquisition succeeds/fails, Multiple learning states; Domain: Learning progresses, Educational context, Log development; Control: External learning resources, Parallel skill development, Atomic knowledge updates; Orchestration: Individual vs collective learning coordination
+  ⚠️  Forbidden comparison language in §2 (parallels, mirrors) — retrying once with a correction...
+  ✅ Retry passed — §2 and §3 are comparison-word-free.
+  ⚠️  No named-entity search query found — asking for a targeted correction...
+  ✅ Retry passed — a named-entity search query is now present.
+✅ Saved to /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/hypotheses/2026-08-29-homospatial-linguistics-x-learning-systems.md
+🪞 [3/15] Superimposing: Geology — sedimentary layering and stratigraphy  ×  Music Sound (Creative & Performance Systems) — Atomic: Note pitch flat/sharp, Instrument availability uncertain, Multiple harmonic possibilities; Domain: Musical composition evolves, Music theory context, Log performances; Control: Live audience feedback, Concurrent musician coordination, Atomic tempo synchronization; Orchestration: Music industry coordination, Composition vs performance environments
+  ⚠️  Forbidden comparison language in §2 (akin to, parallels) and §3 (like) — retrying once with a correction...
+  ⚠️  Retry still used comparison language (similar to) — flagging in output rather than looping indefinitely.
+  ⚠️  No named-entity search query found — asking for a targeted correction...
+  ✅ Retry passed — a named-entity search query is now present.
+✅ Saved to /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/hypotheses/2026-08-29-homospatial-geology-x-music-sound.md
+🪞 [4/15] Superimposing: Climatology — ocean current circulation (thermohaline)  ×  Epigenetics — gene expression regulation without DNA change
+  ✅ §2 and §3 passed the comparison-word check on the first attempt.
+  ⚠️  No named-entity search query found — asking for a targeted correction...
+  ✅ Retry passed — a named-entity search query is now present.
+✅ Saved to /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/hypotheses/2026-08-29-homospatial-climatology-ocean-current-circulation-x-epigenetics.md
+🪞 [5/15] Superimposing: Neuroscience — synaptic pruning  ×  Human Trust Variance
+  ⚠️  Forbidden comparison language in §2 (similar to, parallels) — retrying once with a correction...
+  ✅ Retry passed — §2 and §3 are comparison-word-free.
+  ✅ Search Queries includes at least one named-entity query.
+✅ Saved to /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/hypotheses/2026-08-29-homospatial-neuroscience-x-human-trust-variance.md
+🪞 [6/15] Superimposing: Neuroscience — synaptic pruning  ×  Law — contract formation and offer/acceptance
+  ⚠️  Forbidden comparison language in §2 (parallels, just as) and §3 (mirroring) — retrying once with a correction...
+  ✅ Retry passed — §2 and §3 are comparison-word-free.
+  ✅ Search Queries includes at least one named-entity query.
+✅ Saved to /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/hypotheses/2026-08-29-homospatial-neuroscience-x-law.md
+🪞 [7/15] Superimposing: Decision Support (Cognitive & Pattern Recognition Systems) — Atomic: Outcome uncertain, Advice succeeds/fails, Multiple options; Domain: Skill evolves, Organizational context, Log outcomes; Control: External data sources, Concurrent processing, Atomic updates; Orchestration: Policy vs implementation coordination  ×  Informational Queue Overflow
+  ✅ §2 and §3 passed the comparison-word check on the first attempt.
+  ✅ Search Queries includes at least one named-entity query.
+✅ Saved to /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/hypotheses/2026-08-29-homospatial-decision-support-x-informational-queue-overflow.md
+🪞 [8/15] Superimposing: Comedy — crowd work and audience read  ×  Cognitive AI Hyperparameter Orchestration
+  ⚠️  Forbidden comparison language in §2 (parallels) — retrying once with a correction...
+  ✅ Retry passed — §2 and §3 are comparison-word-free.
+  ✅ Search Queries includes at least one named-entity query.
+✅ Saved to /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/hypotheses/2026-08-29-homospatial-comedy-x-cognitive-ai-hyperparameter-orchestration.md
+🪞 [9/15] Superimposing: Informational Load Balancing  ×  Physical Immune System
+  ⚠️  Forbidden comparison language in §2 (akin to) — retrying once with a correction...
+  ✅ Retry passed — §2 and §3 are comparison-word-free.
+  ✅ Search Queries includes at least one named-entity query.
+✅ Saved to /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/hypotheses/2026-08-29-homospatial-informational-load-balancing-x-physical-immune-system.md
+🪞 [10/15] Superimposing: Linguistics — creole genesis  ×  Cognitive Model Adaptation
+  ✅ §2 and §3 passed the comparison-word check on the first attempt.
+  ⚠️  No named-entity search query found — asking for a targeted correction...
+  ✅ Retry passed — a named-entity search query is now present.
+✅ Saved to /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/hypotheses/2026-08-29-homospatial-linguistics-x-cognitive-model-adaptation.md
+🪞 [11/15] Superimposing: Creative Musical Composition  ×  Physical Mechanical Spring Systems
+  ⚠️  Forbidden comparison language in §2 (akin to) — retrying once with a correction...
+  ✅ Retry passed — §2 and §3 are comparison-word-free.
+  ✅ Search Queries includes at least one named-entity query.
+✅ Saved to /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/hypotheses/2026-08-29-homospatial-creative-musical-composition-x-physical-mechanical-spring-systems.md
+🪞 [12/15] Superimposing: Creative Musical Motif Deviation  ×  Human Committee Formation
+  ⚠️  Forbidden comparison language in §3 (mirroring) — retrying once with a correction...
+  ✅ Retry passed — §2 and §3 are comparison-word-free.
+  ✅ Search Queries includes at least one named-entity query.
+✅ Saved to /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/hypotheses/2026-08-29-homospatial-creative-musical-motif-deviation-x-human-committee-formation.md
+🪞 [13/15] Superimposing: Creative Idea Uncertainty  ×  Creative Musical Motif Deviation
+  ✅ §2 and §3 passed the comparison-word check on the first attempt.
+  ✅ Search Queries includes at least one named-entity query.
+✅ Saved to /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/hypotheses/2026-08-29-homospatial-creative-idea-uncertainty-x-creative-musical-motif-deviation.md
+🪞 [14/15] Superimposing: Informational Backup Systems  ×  Informational Bit Flips
+  ✅ §2 and §3 passed the comparison-word check on the first attempt.
+  ✅ Search Queries includes at least one named-entity query.
+✅ Saved to /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/hypotheses/2026-08-29-homospatial-informational-backup-systems-x-informational-bit-flips.md
+🪞 [15/15] Superimposing: Healthcare (Human & Social Systems) — Atomic: Test results missing, Diagnosis succeeds/fails, Multiple allergies; Domain: Patient health evolves, Clinical guidelines, Log interventions; Control: Lab results from external systems, Concurrent monitoring, Atomic record updates; Orchestration: Compliance coordination, Training vs live simulation  ×  Creative Idea Uncertainty
+  ✅ §2 and §3 passed the comparison-word check on the first attempt.
+  ⚠️  No named-entity search query found — asking for a targeted correction...
+  ✅ Retry passed — a named-entity search query is now present.
+✅ Saved to /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/hypotheses/2026-08-29-homospatial-healthcare-x-creative-idea-uncertainty.md
+📒 domains.json updated — 15 new homospatial run(s) recorded as explored.
+
+
+Generated 39 new hypothesis file(s) this cycle.
+$ /Library/Frameworks/Python.framework/Versions/3.12/bin/python3 verify_hypothesis.py --all-unverified
+Verifying 39 hypothesis file(s)...
+
+  → [bisociation] Astronomy × Telecommunications
+    queries: ['gravitational lensing modeling packet routing', 'packet switching uncertainty gravitational lensing', 'network routing optimization astronomical models', 'telecommunications routing protocols gravitational lensing', 'complex systems in astronomy and telecommunications named theory OR framework OR researcher']
+    25 search results gathered
+    verdict: NO_SIGNAL
+
+  → [bisociation] Biological Systems × Creative Musical Motif Deviation
+    queries: ['biological mutation and musical creativity', 'evolution of motifs in music theory', 'adaptive processes in biological systems and art', 'gene expression uncertainty and creative deviation', 'evolutionary music theory OR named theory OR framework']
+    25 search results gathered
+    verdict: ADJACENT_ACTIVE
+
+  → [bisociation] Biological Systems × Informational Scientific Experiment Orchestration
+    queries: ['gene expression uncertainty experimental design correlation', 'biological systems experimental orchestration frameworks', 'impact of mutations on scientific experiment outcomes', 'environmental signals in biological experiments', 'Adaptive Experimentation framework OR theory']
+    25 search results gathered
+    verdict: ADJACENT_ACTIVE
+
+  → [bisociation] Chemistry × Creative Album Production Orchestration
+    queries: ['self-assembly principles in chemistry applied to creative collaboration', 'molecular interactions and music production orchestration', 'chemistry of creativity in album production', 'emergent structures in chemistry and music', 'collaborative creativity in album production OR music industry']
+    25 search results gathered
+    verdict: ADJACENT_ACTIVE
+
+  → [bisociation] Climatology × Cognitive Model Adaptation
+    queries: ['thermohaline circulation cognitive model adaptation', 'ocean current prediction cognitive frameworks', 'adaptive systems theory in climatology', 'feedback mechanisms in ocean currents and cognition', 'complex adaptive systems named theory OR framework OR researcher']
+    25 search results gathered
+    verdict: NO_SIGNAL
+
+  → [bisociation] Creative Instrument Track Development × Informational Load Balancing
+    queries: ['music composition decision-making processes', 'informational load balancing efficiency metrics', 'creative processes in music and computational systems', 'task allocation in load balancing systems', 'Adaptive Load Balancing theory OR framework OR researcher']
+    25 search results gathered
+    verdict: ADJACENT_ACTIVE
+
+  → [bisociation] Creative Musical Composition × Human Emotional Fluctuation
+    queries: ['music composition emotional response correlation', 'emotional fluctuation in music perception studies', 'impact of musical structure on listener emotions', 'theory of emotion in music composition', 'David Huron music emotion theory OR framework']
+    25 search results gathered
+    verdict: ADJACENT_ACTIVE
+
+  → [bisociation] Creative Narrative Arc Development × Human Team Collaboration
+    queries: ['narrative arc development in team dynamics', 'team collaboration stages and narrative structure', 'character development parallels in group work', 'creative storytelling in team environments', "Tuckman's stages of group development OR narrative theory"]
+    25 search results gathered
+    verdict: ADJACENT_ACTIVE
+
+  → [bisociation] Ecology × Informational Ledger State Evolution
+    queries: ['Lotka-Volterra equations in ecology', 'blockchain state evolution theory', 'predator-prey dynamics and transaction validation', 'ecosystem interactions named theory OR framework OR researcher', 'informational ledger ecology model']
+    25 search results gathered
+    verdict: NO_SIGNAL
+
+  → [homospatial] Ocean Current Circulation ⊕ Epigenetics
+    queries: ['Hydroepigenesis marine organisms epigenetic response to ocean currents', 'thermohaline circulation effects on marine genetics', 'epigenetic regulation in response to environmental changes', 'impact of ocean temperature on gene expression in fish', 'ocean current influence on biodiversity adaptation named theory OR framework OR researcher']
+    25 search results gathered
+    verdict: ADJACENT_ACTIVE
+
+  → [homospatial] Comedy ⊕ Cognitive AI Hyperparameter Orchestration
+    queries: ['Humor-Driven Adaptive Intelligence framework', 'real-time audience feedback in AI content generation', 'crowd work in comedy AI applications', 'adaptive learning in humor generation', 'AI hyperparameter tuning in entertainment']
+    25 search results gathered
+    verdict: ADJACENT_ACTIVE
+
+  → [homospatial] Creative Idea Uncertainty ⊕ Creative Musical Motif Deviation
+    queries: ['Motif-Driven Ideation" theory OR framework', 'creative idea generation and music" academic research', 'impact of musical motifs on creativity" study', 'creative uncertainty in music composition" literature', 'musical deviation and idea development" research']
+    25 search results gathered
+    verdict: NO_SIGNAL
+
+  → [homospatial] Creative Musical Composition ⊕ Physical Mechanical Spring Systems
+    queries: ['Harmonic Springwave theory OR framework', 'musical composition and mechanical systems integration', 'spring systems in music composition', 'oscillation patterns in sound and mechanics', 'physical representation of musical dynamics']
+    25 search results gathered
+    verdict: NO_SIGNAL
+
+  → [homospatial] Creative Musical Motif Deviation ⊕ Human Committee Formation
+    queries: ['Harmonic Consensus Composition" named theory OR framework OR researcher', 'musical motifs in collaborative decision-making', 'creative music composition and group dynamics', 'collective identity in music and committee formation', 'variations in music and negotiation processes']
+    25 search results gathered
+    verdict: ADJACENT_ACTIVE
+
+  → [homospatial] Decision Support Systems ⊕ Informational Queue Overflow
+    queries: ['Cognitive Overflow Management System" theory OR framework', 'Decision support systems and information overload" study', 'Pattern recognition in high information environments" research', 'Managing informational queue overflow in decision-making" analysis', 'Cognitive processing under data saturation" literature']
+    25 search results gathered
+    verdict: ADJACENT_ACTIVE
+
+  → [homospatial] Geology ⊕ Music Sound
+    queries: ['Stratamusic theory', 'Geological stratigraphy in music composition', 'Sedimentary layers and audience feedback in live performances', 'Fauconnier Turner conceptual blending music theory', 'Layered musical composition as geological record']
+    25 search results gathered
+    verdict: ADJACENT_ACTIVE
+
+  → [homospatial] Healthcare (Human & Social Systems) ⊕ Creative Idea Uncertainty
+    queries: ['Health-Creative Dynamics framework', 'integrating creativity in healthcare treatment planning', 'real-time adaptation in healthcare systems', 'creative problem solving in medical practice', 'design thinking in healthcare named theory OR framework OR researcher']
+    25 search results gathered
+    verdict: ADJACENT_ACTIVE
+
+  → [homospatial] Informational Backup Systems ⊕ Informational Bit Flips
+    queries: ['Dynamic Integrity Backup System research', 'real-time data backup error correction mechanisms', 'impact of bit flips on data integrity in backup systems', 'self-healing data storage systems', 'informational backup systems and bit flip error correction']
+    25 search results gathered
+    verdict: ADJACENT_ACTIVE
+
+  → [homospatial] Informational Load Balancing ⊕ Physical Immune System
+    queries: ['Immuno-Informatic Response System theory OR framework', 'load balancing in biological systems', 'adaptive immune response data processing', 'information systems and immune system integration', 'dynamic resource allocation in biological and computational systems']
+    25 search results gathered
+    verdict: ADJACENT_ACTIVE
+
+  → [homospatial] Linguistics — Creole Genesis ⊕ Cognitive Model Adaptation
+    queries: ['Cognitolect language cognitive flexibility', 'Creole genesis cognitive model adaptation', 'Language evolution cognitive processes', 'Cognitive linguistics and creole languages', 'Conceptual blending theory OR framework OR researcher']
+    25 search results gathered
+    verdict: ADJACENT_ACTIVE
+
+  → [homospatial] Linguistics — Creole Genesis ⊕ Informational Backup Systems
+    queries: ['Creole Backup Language theory OR framework', 'Linguistic adaptation in data preservation systems', 'Creole languages and data integrity', 'Informational backup systems in language evolution', 'Dynamic linguistic systems and data storage']
+    25 search results gathered
+    verdict: NO_SIGNAL
+
+  → [homospatial] Linguistics — Creole Genesis ⊕ Learning Systems
+    queries: ['LinguaMosaic language development framework', 'creole genesis cognitive learning systems', 'adaptive learning in language acquisition', 'social interaction and language evolution', 'Distributed Cognition named theory OR framework OR researcher']
+    25 search results gathered
+    verdict: NO_SIGNAL
+
+  → [homospatial] Neuroscience — Synaptic Pruning ⊕ Human Trust Variance
+    queries: ['Trustaptic Pruning theory', 'Neuroscience of trust relationships', 'Synaptic pruning and social trust dynamics', 'Cognitive optimization in social networks', 'Neural mechanisms of trust variance']
+    25 search results gathered
+    verdict: NO_SIGNAL
+
+  → [homospatial] Neuroscience ⊕ Law
+    queries: ['Prunactive Contracts" theory OR framework', 'iterative refinement in legal contracts', 'neuroscience and contract law intersection', 'synaptic pruning in legal agreement formation', 'neural efficiency and legal clarity']
+    25 search results gathered
+    verdict: ADJACENT_ACTIVE
+
+  → [bisociation] Human Urban Planning × Physical Photon Emission
+    queries: ['urban planning photon emission correlation', 'quantum states uncertainty urban land use', 'stakeholder interactions photon control mechanisms', 'urban systems photon interactions materials', 'urban ecology theory OR framework OR researcher']
+    25 search results gathered
+    verdict: NO_SIGNAL
+
+  → [bisociation] Informational Routing Policy Enforcement × Physical Thermal Variation
+    queries: ['routing policy enforcement and thermal dynamics', 'adaptive systems in thermal variation', 'uncertainty in network routing and heat transfer', 'thermal variation modeling using routing principles', 'complex adaptive systems theory OR framework']
+    25 search results gathered
+    verdict: NO_SIGNAL
+
+  → [janusian] Architecture (Creative & Performance Systems)
+    queries: ['architecture innovation building codes compliance', 'case studies architectural design safety regulations', 'creative architecture disregarding building codes', 'Fritz Lang architectural theory OR framework', 'adaptive architecture named theory OR framework OR researcher']
+    25 search results gathered
+    verdict: ADJACENT_ACTIVE
+
+  → [janusian] Artificial Intelligence (Information & Intelligence Systems)
+    queries: ['predictability in AI model training outcomes', 'unpredictable behavior in machine learning models', 'complexity in neural network training', 'AI model performance variability studies', 'Albert Rothenberg Janusian thinking in AI']
+    25 search results gathered
+    verdict: ADJACENT_ACTIVE
+
+  → [janusian] Behavioral psychology — habit formation loops
+    queries: ['habit formation cue routine reward behavioral psychology', 'random behavior emergence psychology', 'spontaneous habit formation studies', 'behavioral psychology habit loops OR theories', 'Charles Duhigg habit loop research']
+    25 search results gathered
+    verdict: ADJACENT_ACTIVE
+
+  → [janusian] Cognitive Neuron Activation
+    queries: ['cognitive neuron activation variability external stimuli internal states', 'neural response inconsistency cognitive processes', 'cognitive neuroscience paradox predictability of neuron activation', 'contextual influences on cognitive activation theories', 'cognitive activation named theory OR framework OR researcher']
+    25 search results gathered
+    verdict: ADJACENT_ACTIVE
+
+  → [janusian] Creative Improvisation Adjustment
+    queries: ['Creative improvisation flexibility rigidity study', 'Improvisational performance adaptability constraints', 'Albert Rothenberg Janusian thinking in creativity', 'Improvisation dynamics collaborative art research', 'Theater improvisation feedback adaptability framework']
+    25 search results gathered
+    verdict: ADJACENT_ACTIVE
+
+  → [janusian] Creative Inspiration Variability
+    queries: ['creative inspiration external stimuli internal cognition', 'creativity variability environmental factors psychological states', 'Albert Rothenberg creativity paradox', 'creativity studies environmental influences OR internal processes', 'psychological factors in creativity variability']
+    25 search results gathered
+    verdict: ADJACENT_ACTIVE
+
+  → [janusian] Human Social Influence
+    queries: ['social influence named theory OR framework OR researcher', 'social psychology conformity theory', 'individual defiance in social influence research', 'Cialdini social influence principles', 'Asch conformity experiments and individual resistance']
+    25 search results gathered
+    verdict: ADJACENT_ACTIVE
+
+  → [janusian] Informational Cache Miss Handling
+    queries: ['cache performance metrics AND cache misses', 'adaptive caching strategies AND performance optimization', 'impact of cache misses on data retrieval efficiency', 'computer architecture AND cache miss benefits', 'cache miss handling theories OR frameworks']
+    25 search results gathered
+    verdict: NO_SIGNAL
+
+  → [janusian] Music theory — jazz improvisation over changes
+    queries: ['jazz improvisation spontaneity vs. mechanical expression', 'improvisation in jazz music creative freedom and rigidity', 'theory of jazz improvisation named researchers OR frameworks', 'jazz improvisation analysis creativity adherence to chord changes', 'Albert Murray jazz improvisation framework']
+    25 search results gathered
+    verdict: ADJACENT_ACTIVE
+
+  → [janusian] Neuroscience — cortical map reorganization
+    queries: ['cortical map reorganization beneficial adaptation OR detrimental change', 'neuroscience brain plasticity positive negative outcomes', 'cortical reorganization maladaptive behaviors in rehabilitation', 'brain injury recovery cortical reorganization studies', 'neuroscience plasticity paradox OR tension in recovery']
+    25 search results gathered
+    verdict: ADJACENT_ACTIVE
+
+  → [janusian] Physical Electrical Noise
+    queries: ['physical electrical noise dual role in electronics', 'harnessing electrical noise for performance enhancement', 'impact of electrical noise on electronic systems', 'noise in signal processing applications', 'Stochastic Resonance theory in electronics']
+    25 search results gathered
+    verdict: ADJACENT_ACTIVE
+
+  → [bisociation] Materials Science — Phase Transitions × Cognitive Streaming Data Processing
+    queries: ['phase transitions in materials science and cognitive computing', 'real-time data processing phase transition analogy', 'cognitive streaming data processing models phase transitions', 'phase transition theory applications in computing', 'Per Bak self-organized criticality theory in data processing']
+    25 search results gathered
+    verdict: ADJACENT_ACTIVE
+
+  → [bisociation] Thermodynamics × Informational Signal Jitter
+    queries: ['entropy and signal jitter correlation', 'thermodynamics entropy irreversibility signal processing', 'impact of jitter on data transmission reliability', 'thermodynamic principles in information theory', "Shannon's entropy in communication systems"]
+    25 search results gathered
+    verdict: ADJACENT_ACTIVE
+
+============================================================
+Done. 39 processed.
+  NO_SIGNAL    2026-08-29-astronomy-x-telecommunications
+  ADJACENT_ACTIVE 2026-08-29-biological-systems-x-creative-musical-motif-deviation
+  ADJACENT_ACTIVE 2026-08-29-biological-systems-x-informational-scientific-experiment-orchestration
+  ADJACENT_ACTIVE 2026-08-29-chemistry-x-creative-album-production-orchestration
+  NO_SIGNAL    2026-08-29-climatology-ocean-current-circulation-x-cognitive-model-adaptation
+  ADJACENT_ACTIVE 2026-08-29-creative-instrument-track-development-x-informational-load-balancing
+  ADJACENT_ACTIVE 2026-08-29-creative-musical-composition-x-human-emotional-fluctuation
+  ADJACENT_ACTIVE 2026-08-29-creative-narrative-arc-development-x-human-team-collaboration
+  NO_SIGNAL    2026-08-29-ecology-x-informational-ledger-state-evolution
+  ADJACENT_ACTIVE 2026-08-29-homospatial-climatology-ocean-current-circulation-x-epigenetics
+  ADJACENT_ACTIVE 2026-08-29-homospatial-comedy-x-cognitive-ai-hyperparameter-orchestration
+  NO_SIGNAL    2026-08-29-homospatial-creative-idea-uncertainty-x-creative-musical-motif-deviation
+  NO_SIGNAL    2026-08-29-homospatial-creative-musical-composition-x-physical-mechanical-spring-systems
+  ADJACENT_ACTIVE 2026-08-29-homospatial-creative-musical-motif-deviation-x-human-committee-formation
+  ADJACENT_ACTIVE 2026-08-29-homospatial-decision-support-x-informational-queue-overflow
+  ADJACENT_ACTIVE 2026-08-29-homospatial-geology-x-music-sound
+  ADJACENT_ACTIVE 2026-08-29-homospatial-healthcare-x-creative-idea-uncertainty
+  ADJACENT_ACTIVE 2026-08-29-homospatial-informational-backup-systems-x-informational-bit-flips
+  ADJACENT_ACTIVE 2026-08-29-homospatial-informational-load-balancing-x-physical-immune-system
+  ADJACENT_ACTIVE 2026-08-29-homospatial-linguistics-x-cognitive-model-adaptation
+  NO_SIGNAL    2026-08-29-homospatial-linguistics-x-informational-backup-systems
+  NO_SIGNAL    2026-08-29-homospatial-linguistics-x-learning-systems
+  NO_SIGNAL    2026-08-29-homospatial-neuroscience-x-human-trust-variance
+  ADJACENT_ACTIVE 2026-08-29-homospatial-neuroscience-x-law
+  NO_SIGNAL    2026-08-29-human-urban-planning-x-physical-photon-emission
+  NO_SIGNAL    2026-08-29-informational-routing-policy-enforcement-x-physical-thermal-variation
+  ADJACENT_ACTIVE 2026-08-29-janusian-architecture
+  ADJACENT_ACTIVE 2026-08-29-janusian-artificial-intelligence
+  ADJACENT_ACTIVE 2026-08-29-janusian-behavioral-psychology
+  ADJACENT_ACTIVE 2026-08-29-janusian-cognitive-neuron-activation
+  ADJACENT_ACTIVE 2026-08-29-janusian-creative-improvisation-adjustment
+  ADJACENT_ACTIVE 2026-08-29-janusian-creative-inspiration-variability
+  ADJACENT_ACTIVE 2026-08-29-janusian-human-social-influence
+  NO_SIGNAL    2026-08-29-janusian-informational-cache-miss-handling
+  ADJACENT_ACTIVE 2026-08-29-janusian-music-theory
+  ADJACENT_ACTIVE 2026-08-29-janusian-neuroscience
+  ADJACENT_ACTIVE 2026-08-29-janusian-physical-electrical-noise
+  ADJACENT_ACTIVE 2026-08-29-materials-science-x-cognitive-streaming-data-processing
+  ADJACENT_ACTIVE 2026-08-29-thermodynamics-x-informational-signal-jitter
+
+$ /Library/Frameworks/Python.framework/Versions/3.12/bin/python3 refute_hypothesis.py --all-pending
+Refuting 18 hypothesis(es)...
+
+  → [bisociation] Astronomy × Telecommunications
+    coherence: REFUTED
+    testability: REFUTED
+    triviality: REFUTED
+    tally: 0 of 3 survive -> REFUTED
+
+  → [bisociation] Climatology × Cognitive Model Adaptation
+    coherence: REFUTED
+    testability: REFUTED
+    triviality: REFUTED
+    tally: 0 of 3 survive -> REFUTED
+
+  → [bisociation] Ecology × Informational Ledger State Evolution
+    coherence: REFUTED
+    testability: REFUTED
+    triviality: REFUTED
+    tally: 0 of 3 survive -> REFUTED
+
+  → [homospatial] Creative Idea Uncertainty ⊕ Creative Musical Motif Deviation
+    coherence: REFUTED
+    testability: REFUTED
+    triviality: REFUTED
+    tally: 0 of 3 survive -> REFUTED
+
+  → [homospatial] Creative Musical Composition ⊕ Physical Mechanical Spring Systems
+    coherence: REFUTED
+    testability: REFUTED
+    triviality: REFUTED
+    tally: 0 of 3 survive -> REFUTED
+
+  → [homospatial] Linguistics — Creole Genesis ⊕ Informational Backup Systems
+    coherence: REFUTED
+    testability: REFUTED
+    triviality: REFUTED
+    tally: 0 of 3 survive -> REFUTED
+
+  → [homospatial] Linguistics — Creole Genesis ⊕ Learning Systems
+    coherence: REFUTED
+    testability: REFUTED
+    triviality: REFUTED
+    tally: 0 of 3 survive -> REFUTED
+
+  → [homospatial] Neuroscience — Synaptic Pruning ⊕ Human Trust Variance
+    coherence: REFUTED
+    testability: REFUTED
+    triviality: REFUTED
+    tally: 0 of 3 survive -> REFUTED
+
+  → [bisociation] Human Urban Planning × Physical Photon Emission
+    coherence: REFUTED
+    testability: REFUTED
+    triviality: REFUTED
+    tally: 0 of 3 survive -> REFUTED
+
+  → [bisociation] Informational Routing Policy Enforcement × Physical Thermal Variation
+    coherence: REFUTED
+    testability: REFUTED
+    triviality: REFUTED
+    tally: 0 of 3 survive -> REFUTED
+
+  → [janusian] Artificial Intelligence (Information & Intelligence Systems)
+    coherence: REFUTED
+    testability: REFUTED
+    triviality: REFUTED
+    tally: 0 of 3 survive -> REFUTED
+
+  → [janusian] Behavioral psychology — habit formation loops
+    coherence: REFUTED
+    testability: REFUTED
+    triviality: REFUTED
+    tally: 0 of 3 survive -> REFUTED
+
+  → [janusian] Cognitive Neuron Activation
+    coherence: REFUTED
+    testability: REFUTED
+    triviality: REFUTED
+    tally: 0 of 3 survive -> REFUTED
+
+  → [janusian] Creative Improvisation Adjustment
+    coherence: REFUTED
+    testability: REFUTED
+    triviality: REFUTED
+    tally: 0 of 3 survive -> REFUTED
+
+  → [janusian] Informational Cache Miss Handling
+    coherence: REFUTED
+    testability: REFUTED
+    triviality: REFUTED
+    tally: 0 of 3 survive -> REFUTED
+
+  → [janusian] Music theory — jazz improvisation over changes
+    coherence: REFUTED
+    testability: REFUTED
+    triviality: REFUTED
+    tally: 0 of 3 survive -> REFUTED
+
+  → [janusian] Neuroscience — cortical map reorganization
+    coherence: REFUTED
+    testability: REFUTED
+    triviality: REFUTED
+    tally: 0 of 3 survive -> REFUTED
+
+  → [bisociation] Thermodynamics × Informational Signal Jitter
+    coherence: REFUTED
+    testability: REFUTED
+    triviality: REFUTED
+    tally: 0 of 3 survive -> REFUTED
+
+============================================================
+Done. 18 processed.
+  REFUTED (0/3)        2026-08-29-astronomy-x-telecommunications
+  REFUTED (0/3)        2026-08-29-climatology-ocean-current-circulation-x-cognitive-model-adaptation
+  REFUTED (0/3)        2026-08-29-ecology-x-informational-ledger-state-evolution
+  REFUTED (0/3)        2026-08-29-homospatial-creative-idea-uncertainty-x-creative-musical-motif-deviation
+  REFUTED (0/3)        2026-08-29-homospatial-creative-musical-composition-x-physical-mechanical-spring-systems
+  REFUTED (0/3)        2026-08-29-homospatial-linguistics-x-informational-backup-systems
+  REFUTED (0/3)        2026-08-29-homospatial-linguistics-x-learning-systems
+  REFUTED (0/3)        2026-08-29-homospatial-neuroscience-x-human-trust-variance
+  REFUTED (0/3)        2026-08-29-human-urban-planning-x-physical-photon-emission
+  REFUTED (0/3)        2026-08-29-informational-routing-policy-enforcement-x-physical-thermal-variation
+  REFUTED (0/3)        2026-08-29-janusian-artificial-intelligence
+  REFUTED (0/3)        2026-08-29-janusian-behavioral-psychology
+  REFUTED (0/3)        2026-08-29-janusian-cognitive-neuron-activation
+  REFUTED (0/3)        2026-08-29-janusian-creative-improvisation-adjustment
+  REFUTED (0/3)        2026-08-29-janusian-informational-cache-miss-handling
+  REFUTED (0/3)        2026-08-29-janusian-music-theory
+  REFUTED (0/3)        2026-08-29-janusian-neuroscience
+  REFUTED (0/3)        2026-08-29-thermodynamics-x-informational-signal-jitter
+
+$ /Library/Frameworks/Python.framework/Versions/3.12/bin/python3 score_hypotheses.py
+✅ Scored 134 entries -> /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/leaderboard.md
+
+$ /Library/Frameworks/Python.framework/Versions/3.12/bin/python3 audit_agent.py --observe
+Observation logged: The total number of hypotheses has increased from 95 to 134, with a notable rise in adjacent active verdicts from 41 to 61.
+
+$ /Library/Frameworks/Python.framework/Versions/3.12/bin/python3 publish_site.py
+$ (cwd=.) /Library/Frameworks/Python.framework/Versions/3.12/bin/python3 assemble_experience_data.py
+
+Assembled 134 entries. Missing hypothesis content: 0. Missing verification content: 0.
+Wrote /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/experience_data.json
+
+$ (cwd=.) /Library/Frameworks/Python.framework/Versions/3.12/bin/python3 site_build/build_experience.py
+Wrote leaderboard-experience.html (1197.2 KB)
+
+$ (cwd=.) /Library/Frameworks/Python.framework/Versions/3.12/bin/python3 site_build/wrap_standalone.py /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/leaderboard-experience.html /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/site_build/output/leaderboard.html leaderboard
+Wrote /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/site_build/output/leaderboard.html (1198.9 KB), title='Faculty of Interdisciplinary Research', nav_active='leaderboard'
+
+$ (cwd=site_build) /Library/Frameworks/Python.framework/Versions/3.12/bin/python3 build_landing.py
+Wrote landing.html (2164.8 KB)
+
+$ (cwd=site_build) /Library/Frameworks/Python.framework/Versions/3.12/bin/python3 build_dashboard.py
+Wrote dashboard.html (25.1 KB)
+
+
+Built: /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/site_build/output/leaderboard.html
+Built: /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/site_build/output/landing.html
+Built: /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/site_build/output/dashboard.html
+(whitepaper.html intentionally not rebuilt -- see this script's own docstring)
+
+Changed: ['leaderboard.html', 'landing.html', 'dashboard.html']
+Deployed: leaderboard.html
+Deployed: landing.html
+Deployed: dashboard.html
+$ (cwd=../eureka-engine-web) git add leaderboard.html landing.html dashboard.html
+$ (cwd=../eureka-engine-web) git commit -m Auto-publish: leaderboard.html, landing.html, dashboard.html regenerated from ledger
+
+Generated by publish_site.py, 2026-08-29T20:18:24.256558+00:00. Data-driven pages only (leaderboard experience, landing page stat fields) -- whitepaper.html is never touched by this script.
+
+Co-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>
+[main 261b28a] Auto-publish: leaderboard.html, landing.html, dashboard.html regenerated from ledger
+ 3 files changed, 5 insertions(+), 5 deletions(-)
+
+$ (cwd=../eureka-engine-web) git push
+
+Publish complete.
+
+
+Cycle logged to /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/cycle_log.jsonl — status: success
+=== Cycle complete ===
+=== run_cycle_scheduled.sh finished at 2026-08-29T20-18-26Z (UTC) -- exit 0 ===

@@ -160,6 +160,58 @@
     [
       "Gaming Narrative (Creative & Performance Systems) — Atomic: Player action succeeds/fails, Character status unknown, Multiple dialogue choices; Domain: Game world evolves, Game rules context, Log player actions; Control: Player input from controllers, Concurrent NPCs & physics, Atomic world consistency; Orchestration: Game engine coordination, Narrative vs gameplay environments",
       "Cognitive Attention Map Evolution"
+    ],
+    [
+      "Astronomy — gravitational lensing",
+      "Telecommunications — packet switching and routing"
+    ],
+    [
+      "Climatology — ocean current circulation (thermohaline)",
+      "Cognitive Model Adaptation"
+    ],
+    [
+      "Thermodynamics — entropy and irreversibility",
+      "Informational Signal Jitter"
+    ],
+    [
+      "Creative Instrument Track Development",
+      "Informational Load Balancing"
+    ],
+    [
+      "Materials science — phase transitions",
+      "Cognitive Streaming Data Processing"
+    ],
+    [
+      "Biological Systems (Physical & Natural Systems) — Atomic: Gene expression uncertain, Mutation beneficial/harmful, Multiple phenotypes; Domain: Organism develops, Genetic code context, Log cellular events; Control: Environmental signals, Concurrent processes, Atomic DNA replication; Orchestration: Ecosystem coordination, Laboratory vs natural evolution",
+      "Informational Scientific Experiment Orchestration"
+    ],
+    [
+      "Creative Musical Composition",
+      "Human Emotional Fluctuation"
+    ],
+    [
+      "Ecology — predator-prey population dynamics",
+      "Informational Ledger State Evolution"
+    ],
+    [
+      "Informational Routing Policy Enforcement",
+      "Physical Thermal Variation"
+    ],
+    [
+      "Human Urban Planning",
+      "Physical Photon Emission"
+    ],
+    [
+      "Biological Systems (Physical & Natural Systems) — Atomic: Gene expression uncertain, Mutation beneficial/harmful, Multiple phenotypes; Domain: Organism develops, Genetic code context, Log cellular events; Control: Environmental signals, Concurrent processes, Atomic DNA replication; Orchestration: Ecosystem coordination, Laboratory vs natural evolution",
+      "Creative Musical Motif Deviation"
+    ],
+    [
+      "Creative Narrative Arc Development",
+      "Human Team Collaboration"
+    ],
+    [
+      "Chemistry — self-assembly of molecular structures",
+      "Creative Album Production Orchestration"
     ]
   ],
   "already_janused": [
@@ -187,7 +239,19 @@
     "Control theory — PID feedback loops",
     "Informational Database Sharding",
     "Human Learning Uncertainty",
-    "Climatology — feedback loops in ice-albedo effect"
+    "Climatology — feedback loops in ice-albedo effect",
+    "Behavioral psychology — habit formation loops",
+    "Informational Cache Miss Handling",
+    "Music theory — jazz improvisation over changes",
+    "Artificial Intelligence (Information & Intelligence Systems) — Atomic: Neural activation uncertain, Training succeeds/fails, Multiple architectures; Domain: Model weights evolve, Hyperparameters context, Log training metrics; Control: External data sources, Distributed training, Atomic parameter updates; Orchestration: AI system coordination, Research vs deployment environments",
+    "Physical Electrical Noise",
+    "Cognitive Neuron Activation",
+    "Neuroscience — cortical map reorganization",
+    "Creative Inspiration Variability",
+    "Architecture — modular/prefab construction",
+    "Architecture (Creative & Performance Systems) — Atomic: Building permits approved/denied, Material availability uncertain, Multiple design options; Domain: Building construction progresses, Building codes, Log construction events; Control: Building inspections & permits, Concurrent construction, Atomic structural updates; Orchestration: City planning coordination, Design vs construction environments",
+    "Creative Improvisation Adjustment",
+    "Human Social Influence"
   ],
   "already_homospatial": [
     [
@@ -301,6 +365,66 @@
     [
       "Linguistics — creole genesis",
       "Economics — market microstructure and order books"
+    ],
+    [
+      "Linguistics — creole genesis",
+      "Informational Backup Systems"
+    ],
+    [
+      "Linguistics — creole genesis",
+      "Learning Systems (Cognitive & Pattern Recognition Systems) — Atomic: Learning outcomes uncertain, Skill acquisition succeeds/fails, Multiple learning states; Domain: Learning progresses, Educational context, Log development; Control: External learning resources, Parallel skill development, Atomic knowledge updates; Orchestration: Individual vs collective learning coordination"
+    ],
+    [
+      "Geology — sedimentary layering and stratigraphy",
+      "Music Sound (Creative & Performance Systems) — Atomic: Note pitch flat/sharp, Instrument availability uncertain, Multiple harmonic possibilities; Domain: Musical composition evolves, Music theory context, Log performances; Control: Live audience feedback, Concurrent musician coordination, Atomic tempo synchronization; Orchestration: Music industry coordination, Composition vs performance environments"
+    ],
+    [
+      "Climatology — ocean current circulation (thermohaline)",
+      "Epigenetics — gene expression regulation without DNA change"
+    ],
+    [
+      "Neuroscience — synaptic pruning",
+      "Human Trust Variance"
+    ],
+    [
+      "Neuroscience — synaptic pruning",
+      "Law — contract formation and offer/acceptance"
+    ],
+    [
+      "Decision Support (Cognitive & Pattern Recognition Systems) — Atomic: Outcome uncertain, Advice succeeds/fails, Multiple options; Domain: Skill evolves, Organizational context, Log outcomes; Control: External data sources, Concurrent processing, Atomic updates; Orchestration: Policy vs implementation coordination",
+      "Informational Queue Overflow"
+    ],
+    [
+      "Comedy — crowd work and audience read",
+      "Cognitive AI Hyperparameter Orchestration"
+    ],
+    [
+      "Informational Load Balancing",
+      "Physical Immune System"
+    ],
+    [
+      "Linguistics — creole genesis",
+      "Cognitive Model Adaptation"
+    ],
+    [
+      "Creative Musical Composition",
+      "Physical Mechanical Spring Systems"
+    ],
+    [
+      "Creative Musical Motif Deviation",
+      "Human Committee Formation"
+    ],
+    [
+      "Creative Idea Uncertainty",
+      "Creative Musical Motif Deviation"
+    ],
+    [
+      "Informational Backup Systems",
+      "Informational Bit Flips"
+    ],
+    [
+      "Healthcare (Human & Social Systems) — Atomic: Test results missing, Diagnosis succeeds/fails, Multiple allergies; Domain: Patient health evolves, Clinical guidelines, Log interventions; Control: Lab results from external systems, Concurrent monitoring, Atomic record updates; Orchestration: Compliance coordination, Training vs live simulation",
+      "Creative Idea Uncertainty"
     ]
   ],
   "domain_pool": [
