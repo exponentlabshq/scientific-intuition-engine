@@ -128,6 +128,14 @@
     [
       "Organizational theory — self-organizing teams",
       "Finance (Human & Social Systems) — Atomic: Transaction succeeds/fails, Account lookup missing, Multiple positions; Domain: Portfolio evolves, Market context, Audit logging; Control: External trades & APIs, Streaming market data, Atomic account updates; Orchestration: Regulatory coordination, Simulation vs live trading"
+    ],
+    [
+      "Creative Brainstorming Facilitation",
+      "Physical Electrical Noise"
+    ],
+    [
+      "Physical Ecosystem Succession",
+      "Physical Immune System"
     ]
   ],
   "already_janused": [
@@ -149,7 +157,8 @@
     "Urban planning — zoning and land use",
     "Culinary Arts (Creative & Performance Systems) — Atomic: Recipe succeeds/fails, Ingredient freshness unknown, Multiple flavor combinations; Domain: Dish develops through cooking, Recipes & traditions, Log cooking steps; Control: External food suppliers, Concurrent cooking processes, Atomic seasoning adjustments; Orchestration: Restaurant coordination, Recipe vs service environments",
     "Informational Queue Overflow",
-    "Informational Database State"
+    "Informational Database State",
+    "Epidemiology — herd immunity thresholds"
   ],
   "already_homospatial": [
     [
@@ -219,6 +228,18 @@
     [
       "Creative Narrative Arc Development",
       "Human Committee Formation"
+    ],
+    [
+      "Human Individual Indecision",
+      "Physical Voltage Spikes"
+    ],
+    [
+      "Informational Scientific Experiment Orchestration",
+      "Physical Magnetic Fluctuation"
+    ],
+    [
+      "Behavioral psychology — operant conditioning",
+      "Physical Magnetic Field Control"
     ]
   ],
   "domain_pool": [

@@ -36,6 +36,7 @@ from dotenv import find_dotenv, load_dotenv
 from openai import OpenAI
 
 from token_tracker import log_usage
+from retry import call_with_retry
 
 load_dotenv(find_dotenv(usecwd=False))
 TAVILY_API_KEY = os.getenv("TAVILY_API_KEY")
@@ -179,7 +180,8 @@ def classify(title, mode, domains, core_claim, search_results, rubric, slug=None
         f"Hypothesis: {title}\nMode: {mode}\nDomain(s): {', '.join(domains)}\n\n"
         f"Core claim:\n{core_claim}\n\nSearch results:\n{results_block}"
     )
-    resp = client.chat.completions.create(
+    resp = call_with_retry(
+        client.chat.completions.create,
         model="gpt-4o",
         messages=[
             {"role": "system", "content": system_prompt},

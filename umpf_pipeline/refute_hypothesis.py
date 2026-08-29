@@ -48,6 +48,7 @@ from verify_hypothesis import (
     title_and_domains,
 )
 from token_tracker import log_usage
+from retry import call_with_retry
 
 load_dotenv(find_dotenv(usecwd=False))
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
@@ -125,7 +126,8 @@ def run_lens(lens_name: str, question: str, rubric: str, title: str, mode: str,
         f"Core claim:\n{core_claim}\n\n"
         f"Phase 2 web-verification finding for this hypothesis (for context):\n{verification_note}"
     )
-    resp = client.chat.completions.create(
+    resp = call_with_retry(
+        client.chat.completions.create,
         model=REFUTATION_MODEL,
         messages=[
             {"role": "system", "content": system_prompt},

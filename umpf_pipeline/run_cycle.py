@@ -20,6 +20,20 @@ from that automation -- see publish_site.py's own docstring for why. Pass
 --skip-publish to opt a cycle out of touching the site at all, or --no-push
 to build + commit locally without pushing.
 
+Update (2026-08-29) — fail-closed on publish. A verification audit found
+this script logged a failed stage's stderr but otherwise treated it as a
+no-op and continued straight through to publish anyway -- a fully failed
+generation stage could still end in a "successful" cycle that pushed a
+site update reflecting nothing new, with no signal anywhere that anything
+had gone wrong. Fixed: any stage returning nonzero now marks the cycle
+DEGRADED, and publish is skipped entirely once that's true (scoring still
+runs against whatever's really in the ledger -- that's always safe, the
+ledger is append-only). The script now exits 1 on a degraded or failed
+cycle and 0 on a clean one, so a cron wrapper (or just `echo $?`) has an
+honest signal to act on -- this script does not send notifications itself,
+it makes sure the exit code and cycle_log.jsonl are trustworthy for
+whatever does.
+
 Usage:
     python3 run_cycle.py --total 6                 # 6 hypotheses this cycle, split by mode_weights.json
     python3 run_cycle.py --hypotheses-per-mode 2    # exactly 2 per mode (6 total), ignoring weights
@@ -88,6 +102,16 @@ def run_subprocess(cmd: list, dry_run: bool) -> dict:
     }
 
 
+def failed(result) -> bool:
+    """A stage's run_subprocess() result, or a list of them (generation runs
+    one subprocess per mode) -- True if any real (non-dry-run) call in it
+    returned nonzero."""
+    if result is None:
+        return False
+    results = result if isinstance(result, list) else [result]
+    return any(r.get("returncode", 0) != 0 for r in results if not r.get("dry_run"))
+
+
 def main():
     parser = argparse.ArgumentParser(description="One full autonomous Eureka Engine cycle (generate -> verify -> refute -> score)")
     parser.add_argument("--total", type=int, help="Total hypotheses this cycle, split across modes by mode_weights.json")
@@ -120,6 +144,7 @@ def main():
         "dry_run": args.dry_run,
         "stages": {},
     }
+    degraded_reasons = []
 
     # --- Phase 1: generation ---
     before = existing_hypothesis_files()
@@ -130,6 +155,9 @@ def main():
         cycle_record["stages"].setdefault("generation", []).append(
             run_subprocess(cmd, args.dry_run)
         )
+    if failed(cycle_record["stages"].get("generation")):
+        degraded_reasons.append("generation: at least one mode's subprocess failed")
+
     after = existing_hypothesis_files()
     new_files = sorted(after - before)
     print(f"\nGenerated {len(new_files)} new hypothesis file(s) this cycle.")
@@ -139,6 +167,8 @@ def main():
     if not args.dry_run and new_files:
         cmd = [PYTHON, "verify_hypothesis.py", "--all-unverified"]
         cycle_record["stages"]["verification"] = run_subprocess(cmd, args.dry_run)
+        if failed(cycle_record["stages"]["verification"]):
+            degraded_reasons.append("verification failed")
     elif args.dry_run:
         print(f"$ {PYTHON} verify_hypothesis.py --all-unverified")
 
@@ -147,34 +177,54 @@ def main():
         if not args.dry_run:
             cmd = [PYTHON, "refute_hypothesis.py", "--all-no-signal"]
             cycle_record["stages"]["refutation"] = run_subprocess(cmd, args.dry_run)
+            if failed(cycle_record["stages"]["refutation"]):
+                degraded_reasons.append("refutation failed")
         else:
             print(f"$ {PYTHON} refute_hypothesis.py --all-no-signal")
     else:
         print("(skipping refutation this cycle — --skip-refutation)")
 
-    # --- Phase: scoring ---
+    # --- Phase: scoring --- always attempted even if an earlier stage
+    # degraded (the ledger is append-only, rescoring whatever's really in
+    # it is always safe) -- but a scoring failure itself is also a reason
+    # to withhold publish, added below.
     if not args.skip_score:
         if not args.dry_run:
             cmd = [PYTHON, "score_hypotheses.py"]
             cycle_record["stages"]["scoring"] = run_subprocess(cmd, args.dry_run)
+            if failed(cycle_record["stages"]["scoring"]):
+                degraded_reasons.append("scoring failed")
         else:
             print(f"$ {PYTHON} score_hypotheses.py")
 
     # --- Publish: regenerate + deploy the site's data-driven pages ---
-    if not args.skip_publish:
+    # Fail-closed: skipped entirely if anything upstream degraded, so a
+    # partial or broken cycle never pushes a "successful-looking" site
+    # update. Scoring still ran above regardless -- only publish is gated.
+    if degraded_reasons:
+        print(f"\n⚠️  Cycle degraded ({'; '.join(degraded_reasons)}) — skipping publish.")
+    elif not args.skip_publish:
         if not args.dry_run:
             cmd = [PYTHON, "publish_site.py"] + (["--no-push"] if args.no_push else [])
             cycle_record["stages"]["publish"] = run_subprocess(cmd, args.dry_run)
+            if failed(cycle_record["stages"]["publish"]):
+                degraded_reasons.append("publish failed")
         else:
             print(f"$ {PYTHON} publish_site.py" + (" --no-push" if args.no_push else ""))
     else:
         print("(skipping publish this cycle — --skip-publish)")
 
+    cycle_record["status"] = "degraded" if degraded_reasons else "success"
+    cycle_record["degraded_reasons"] = degraded_reasons
+
     if not args.dry_run:
         with open(CYCLE_LOG_PATH, "a", encoding="utf-8") as f:
             f.write(json.dumps(cycle_record) + "\n")
-        print(f"\nCycle logged to {CYCLE_LOG_PATH}")
+        print(f"\nCycle logged to {CYCLE_LOG_PATH} — status: {cycle_record['status']}")
 
+    if degraded_reasons:
+        print(f"=== Cycle DEGRADED: {'; '.join(degraded_reasons)} ===")
+        sys.exit(1)
     print("=== Cycle complete ===")
 
 

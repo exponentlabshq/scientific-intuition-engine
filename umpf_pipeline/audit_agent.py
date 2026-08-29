@@ -48,6 +48,7 @@ from openai import OpenAI
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from score_hypotheses import load_entries, score_entry
 from token_tracker import load_usage, summarize_by_phase
+from retry import call_with_retry
 
 load_dotenv(find_dotenv(usecwd=False))
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
@@ -257,7 +258,8 @@ def run_audit(model: str, dry_run: bool):
     scoring_source = load_scoring_source()
     system_prompt, user_prompt = build_prompt(stats, scoring_source)
 
-    resp = client.chat.completions.create(
+    resp = call_with_retry(
+        client.chat.completions.create,
         model=model,
         messages=[
             {"role": "system", "content": system_prompt},
