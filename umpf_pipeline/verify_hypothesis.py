@@ -28,6 +28,7 @@ import json
 import os
 import random
 import re
+import subprocess
 import sys
 import time
 from datetime import date, datetime, timezone
@@ -42,6 +43,7 @@ from retry import call_with_retry
 load_dotenv(find_dotenv(usecwd=False))
 TAVILY_API_KEY = os.getenv("TAVILY_API_KEY")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+MONID_API_KEY = os.getenv("MONID_API_KEY")  # optional -- see _monid_exa_search()
 if not TAVILY_API_KEY:
     raise SystemExit("TAVILY_API_KEY is not set — add it to the vault-root .env")
 if not OPENAI_API_KEY:
@@ -224,28 +226,72 @@ def _tavily_search_with_retry(query: str, max_results: int = 5, max_retries: int
     raise last_exc
 
 
+def _monid_exa_search(query: str, max_results: int = 5, timeout: int = 45):
+    """Fallback search provider, added 2026-08-29 specifically to overcome
+    Tavily's rate-limit incidents (see TAVILY_RETRYABLE_STATUSES's own
+    comment) -- Monid's Exa neural/keyword search (https://monid.ai),
+    called via the `monid` CLI (npm i -g @monid-ai/cli) rather than a raw
+    HTTP call, since Monid's own docs don't publish a plain REST contract
+    and the CLI's `-j/--json` output is a clean, parseable contract that
+    was directly verified working (confirmed live: a query for "Andrew Lo
+    Adaptive Markets Hypothesis" returned his actual 2004 paper directly --
+    the exact real-world collision the EMH canary test's Tavily-only search
+    missed entirely).
+
+    This is a paid, metered fallback ($0.01/call at time of writing) -- only
+    called when Tavily's own retries are exhausted, never as the primary
+    path, so it doesn't quietly become the majority of search spend. Returns
+    [] (not an exception) on any failure, so a fallback that itself fails
+    behaves exactly like "no results," letting the existing
+    all-queries-failed -> PENDING_VERIFICATION logic still apply rather than
+    crashing the whole verification pass."""
+    if not MONID_API_KEY:
+        return []
+    body = json.dumps({"query": query, "numResults": max_results, "contents": {"text": {"maxCharacters": 800}}})
+    try:
+        proc = subprocess.run(
+            ["monid", "run", "-p", "exa", "-e", "/search", "-i", body, "-j"],
+            capture_output=True, text=True, timeout=timeout,
+        )
+        if proc.returncode != 0:
+            print(f"    ! Monid/Exa fallback failed for {query!r}: {proc.stderr.strip()[:200]}")
+            return []
+        data = json.loads(proc.stdout)
+        if data.get("status") != "COMPLETED":
+            print(f"    ! Monid/Exa fallback did not complete for {query!r}: status={data.get('status')!r}")
+            return []
+        return data.get("output", {}).get("results", []) or []
+    except (subprocess.SubprocessError, json.JSONDecodeError, FileNotFoundError) as e:
+        print(f"    ! Monid/Exa fallback errored for {query!r}: {e}")
+        return []
+
+
 def run_searches(queries):
     """Returns (results, failed_query_count). The count matters: zero
     results because every query genuinely errored out (rate-limited or
-    transient, even after retries) is a fundamentally different situation
-    from zero results because every query succeeded and legitimately found
-    nothing -- verify_one() treats them differently, see its own comment."""
+    transient, even after retries and the Monid fallback) is a fundamentally
+    different situation from zero results because every query succeeded and
+    legitimately found nothing -- verify_one() treats them differently, see
+    its own comment."""
     results = []
     failed_queries = 0
     for q in queries:
         try:
             hits = _tavily_search_with_retry(q)
         except requests.RequestException as e:
-            print(f"    ! Tavily search failed for {q!r} after retries: {e}")
-            failed_queries += 1
-            continue
+            print(f"    ! Tavily search failed for {q!r} after retries — trying Monid/Exa fallback: {e}")
+            hits = _monid_exa_search(q)
+            if not hits:
+                failed_queries += 1
+                continue
+            print(f"    ✅ Monid/Exa fallback recovered {len(hits)} result(s) for {q!r}")
         for h in hits:
             results.append(
                 {
                     "query": q,
                     "title": h.get("title", ""),
                     "url": h.get("url", ""),
-                    "content": (h.get("content") or "")[:800],
+                    "content": (h.get("content") or h.get("text") or "")[:800],
                 }
             )
         time.sleep(0.25)
