@@ -341,6 +341,23 @@ def run_hypothesis(domain_a: str, domain_b: str = None, model: str = "gpt-4o-min
     generated_date = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     raw_output = resp.choices[0].message.content
 
+    # 2026-08-29 fix: every check's "still failed after one retry" flag is
+    # collected here instead of being appended to raw_output immediately.
+    # Real bug found by the $1 frozen-run audit: Search Queries is the LAST
+    # section in every template, so a flag appended before the query-gen
+    # check ran sat AFTER the Search Queries section in raw_output -- and
+    # _replace_queries_section()'s regex matches "## Search Queries" to the
+    # literal end of the string, silently deleting any flag that happened to
+    # land in that region. Confirmed on 3 real cases in one run (2 janusian,
+    # 1 homospatial) -- all landed ADJACENT_ACTIVE and should have been
+    # swept into refute_hypothesis.py's widened net, none were, because the
+    # flag it looks for was already gone. Fix: append nothing mid-function;
+    # collect flag text here and write it ONCE, at the very end, after every
+    # check (mode-specific and query-gen alike) has had its turn -- so no
+    # later check's section-replacement can ever land on top of an earlier
+    # check's flag again.
+    honesty_flags = []
+
     if mode == "homospatial":
         section2 = _extract_section(raw_output, "2. The Superimposition")
         section3 = _extract_section(raw_output, "3. The Emergent Third Thing")
@@ -374,11 +391,11 @@ def run_hypothesis(domain_a: str, domain_b: str = None, model: str = "gpt-4o-min
                 # Honest failure, not a silently-accepted one: flag it in the
                 # output itself rather than pretending the retry succeeded.
                 print(f"  ⚠️  Retry still used comparison language ({', '.join(remaining)}) — flagging in output rather than looping indefinitely.")
-                raw_output2 = raw_output2.rstrip() + (
-                    f"\n\n---\n\n**⚠️ Automated check failed twice:** §2/§3 still contain comparison "
+                honesty_flags.append(
+                    f"**⚠️ Automated check failed twice:** §2/§3 still contain comparison "
                     f"language ({', '.join(remaining)}) after one corrective retry. This hypothesis may "
                     f"be bisociation mislabeled as homospatial — read §2/§3 with that in mind, don't take "
-                    f"the fusion framing at face value.\n"
+                    f"the fusion framing at face value."
                 )
             else:
                 print("  ✅ Retry passed — §2 and §3 are comparison-word-free.")
@@ -410,11 +427,11 @@ def run_hypothesis(domain_a: str, domain_b: str = None, model: str = "gpt-4o-min
             remaining = _find_context_split_phrases(section4_retry)
             if remaining:
                 print(f"  ⚠️  Retry still used context-split language ({', '.join(remaining)}) — flagging in output rather than looping indefinitely.")
-                raw_output2 = raw_output2.rstrip() + (
-                    f"\n\n---\n\n**⚠️ Automated check failed twice:** §4 still contains context-split "
+                honesty_flags.append(
+                    f"**⚠️ Automated check failed twice:** §4 still contains context-split "
                     f"language ({', '.join(remaining)}) after one corrective retry. This hypothesis may be "
                     f"a disguised compromise (A) or synthesis (B) mislabeled as a genuine paradox (C) — read "
-                    f"§4 with that in mind before trusting the paradox framing.\n"
+                    f"§4 with that in mind before trusting the paradox framing."
                 )
             else:
                 print("  ✅ Retry passed — §4 is context-split-language-free.")
@@ -448,14 +465,20 @@ def run_hypothesis(domain_a: str, domain_b: str = None, model: str = "gpt-4o-min
             print("  ✅ Retry passed — a named-entity search query is now present.")
         else:
             print("  ⚠️  Retry still has no named-entity query — flagging in output rather than looping indefinitely.")
-            raw_output = raw_output.rstrip() + (
-                "\n\n---\n\n**⚠️ Automated check failed twice:** no Search Query targets a specific "
+            honesty_flags.append(
+                "**⚠️ Automated check failed twice:** no Search Query targets a specific "
                 "named theory, framework, or researcher, even after one corrective retry. Verification "
                 "may miss an existing collision with real prior art that a more specific search would "
-                "have found — read this hypothesis's verdict with that in mind.\n"
+                "have found — read this hypothesis's verdict with that in mind."
             )
     else:
         print("  ✅ Search Queries includes at least one named-entity query.")
+
+    # Single append point, after every check has run -- see the note where
+    # honesty_flags is initialized for why this must happen exactly once,
+    # here, and nowhere earlier.
+    if honesty_flags:
+        raw_output = raw_output.rstrip() + "\n\n---\n\n" + "\n\n".join(honesty_flags) + "\n"
 
     return _clean_output(raw_output, generated_date)
 
@@ -464,12 +487,35 @@ def save_hypothesis(domain_a: str, domain_b: str, markdown_output: str, mode: st
     os.makedirs(HYPOTHESES_DIR, exist_ok=True)
     date_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     if mode == "janusian":
-        slug = f"{date_str}-janusian-{slugify(domain_a)}"
+        base_slug = f"{date_str}-janusian-{slugify(domain_a)}"
     elif mode == "homospatial":
-        slug = f"{date_str}-homospatial-{slugify(domain_a)}-x-{slugify(domain_b)}"
+        base_slug = f"{date_str}-homospatial-{slugify(domain_a)}-x-{slugify(domain_b)}"
     else:
-        slug = f"{date_str}-{slugify(domain_a)}-x-{slugify(domain_b)}"
+        base_slug = f"{date_str}-{slugify(domain_a)}-x-{slugify(domain_b)}"
+
+    slug = base_slug
     output_file = os.path.join(HYPOTHESES_DIR, slug + ".md")
+    if os.path.exists(output_file):
+        # 2026-08-29 fix: this used to write here unconditionally. The $1
+        # frozen-run audit found a real case -- "Architecture -- modular/
+        # prefab construction" and "Architecture (Creative & Performance
+        # Systems) -- Atomic: ..." are two genuinely different domains that
+        # both reduce to the short name "Architecture" via short_name(), so
+        # they produced the identical slug. The second domain's real,
+        # already-generated hypothesis silently overwrote the first's file
+        # before verify_hypothesis.py ever read it -- permanent, silent data
+        # loss, with domains.json left permanently marking the destroyed
+        # domain "already explored" and no ledger record it was ever
+        # attempted. Never overwrite silently again: disambiguate with a
+        # numeric suffix and say so loudly, so whoever's watching the cycle
+        # log sees it happen instead of it vanishing without a trace.
+        n = 2
+        while os.path.exists(output_file):
+            slug = f"{base_slug}-{n}"
+            output_file = os.path.join(HYPOTHESES_DIR, slug + ".md")
+            n += 1
+        print(f"  ⚠️  Filename collision on '{base_slug}.md' — a different hypothesis already exists there. Saved as '{slug}.md' instead of overwriting it.")
+
     with open(output_file, "w", encoding="utf-8") as f:
         f.write(markdown_output)
     return output_file
