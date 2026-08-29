@@ -59,6 +59,7 @@ from verify_hypothesis import (
     extract_core_claim,
     title_and_domains,
 )
+from ledger import load_latest_entries
 from token_tracker import log_usage
 from retry import call_with_retry
 
@@ -229,18 +230,17 @@ def append_ledger_refutation(slug: str, verdict: str, survives: int, refutation_
 
 
 def already_refuted_slugs():
-    slugs = set()
-    if not os.path.exists(LEDGER_PATH):
-        return slugs
-    with open(LEDGER_PATH, "r", encoding="utf-8") as f:
-        for line in f:
-            line = line.strip()
-            if not line:
-                continue
-            e = json.loads(line)
-            if e.get("refutation_verdict"):
-                slugs.add(e.get("hypothesis_slug"))
-    return slugs
+    """2026-08-29: reads ledger.py's "latest entry per slug" view, not raw
+    lines. If a slug's newest entry (e.g. a real re-verification after the
+    Tavily rate-limit fix) doesn't carry a refutation_verdict, an OLDER,
+    now-superseded line's refutation_verdict for the same slug no longer
+    counts -- it belongs to an entry that isn't the current state of that
+    hypothesis anymore. This does mean a slug can end up refuted twice
+    across its history (once validly, on the old entry; again on the new
+    one, if the new verdict still needs it) -- a small, deliberate cost
+    (a few cents) traded for not having to merge stale fields across ledger
+    lines by hand."""
+    return {e.get("hypothesis_slug") for e in load_latest_entries() if e.get("refutation_verdict")}
 
 
 def failed_own_honesty_check(slug: str) -> bool:
@@ -286,22 +286,15 @@ def pending_refutation_slugs():
        leaderboard already correctly badges as "already researched."
     """
     slugs = []
-    if not os.path.exists(LEDGER_PATH):
-        return slugs
     already = already_refuted_slugs()
-    with open(LEDGER_PATH, "r", encoding="utf-8") as f:
-        for line in f:
-            line = line.strip()
-            if not line:
-                continue
-            e = json.loads(line)
-            slug = e.get("hypothesis_slug")
-            if slug in already:
-                continue
-            if e.get("verdict") == "NO_SIGNAL":
-                slugs.append(slug)
-            elif e.get("verdict") == "ADJACENT_ACTIVE" and failed_own_honesty_check(slug):
-                slugs.append(slug)
+    for e in load_latest_entries():
+        slug = e.get("hypothesis_slug")
+        if not slug or slug in already:
+            continue
+        if e.get("verdict") == "NO_SIGNAL":
+            slugs.append(slug)
+        elif e.get("verdict") == "ADJACENT_ACTIVE" and failed_own_honesty_check(slug):
+            slugs.append(slug)
     return slugs
 
 

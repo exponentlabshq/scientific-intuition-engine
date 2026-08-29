@@ -37,6 +37,7 @@ import requests
 from dotenv import find_dotenv, load_dotenv
 from openai import OpenAI
 
+from ledger import load_latest_entries
 from token_tracker import log_usage
 from retry import call_with_retry
 
@@ -201,14 +202,31 @@ def tavily_search(query: str, max_results: int = 5):
 # Tavily's own, confirmed directly against the real error text this run.
 TAVILY_RETRYABLE_STATUSES = {429, 432}
 
+# Circuit breaker, added 2026-08-29 the same day as the retry logic above --
+# a real re-verification run made the gap in that first version obvious
+# immediately: retrying 3 times with backoff makes sense for an occasional
+# blip, but Tavily was confirmed down for this entire process (every single
+# query, back to back, for 20+ minutes straight) -- paying the ~22s retry
+# tax on EVERY subsequent query once the service is already known to be
+# down is pure waste, not caution. Once the first query in a process
+# exhausts every retry, stop retrying Tavily for the rest of that process
+# and go straight to the Monid fallback -- a single process run is short-
+# lived enough that "confirmed down once" is a safe, cheap signal to act on
+# for its remaining lifetime, without needing a time-boxed reset.
+_tavily_degraded = False
+
 
 def _tavily_search_with_retry(query: str, max_results: int = 5, max_retries: int = 3, base_delay: float = 3.0):
     """Retry a Tavily call with exponential backoff + jitter on rate-limit-
     shaped HTTP errors and on connection/timeout failures. A non-retryable
     HTTP error (auth, bad request) re-raises immediately -- same
-    fail-fast-on-real-errors discipline as retry.py's OpenAI wrapper."""
+    fail-fast-on-real-errors discipline as retry.py's OpenAI wrapper. Skips
+    straight to a single, no-retry attempt if the circuit breaker above has
+    already confirmed Tavily down earlier in this same process."""
+    global _tavily_degraded
+    effective_retries = 0 if _tavily_degraded else max_retries
     last_exc = None
-    for attempt in range(max_retries + 1):
+    for attempt in range(effective_retries + 1):
         try:
             return tavily_search(query, max_results=max_results)
         except requests.exceptions.HTTPError as e:
@@ -218,11 +236,14 @@ def _tavily_search_with_retry(query: str, max_results: int = 5, max_retries: int
             last_exc = e
         except requests.exceptions.RequestException as e:
             last_exc = e
-        if attempt == max_retries:
+        if attempt == effective_retries:
             break
         delay = base_delay * (2 ** attempt) + random.uniform(0, 1)
-        print(f"    ! Tavily rate-limited/transient error on {query!r} (attempt {attempt + 1}/{max_retries + 1}) — retrying in {delay:.1f}s")
+        print(f"    ! Tavily rate-limited/transient error on {query!r} (attempt {attempt + 1}/{effective_retries + 1}) — retrying in {delay:.1f}s")
         time.sleep(delay)
+    if not _tavily_degraded:
+        _tavily_degraded = True
+        print("    ⚠️  Tavily confirmed down this run — skipping its retries for the rest of this process, going straight to Monid/Exa.")
     raise last_exc
 
 
@@ -381,19 +402,21 @@ def append_ledger_entry(slug, mode, verdict, domains, self_score, result, querie
 
 
 def already_verified_slugs():
-    slugs = set()
-    if not os.path.exists(LEDGER_PATH):
-        return slugs
-    with open(LEDGER_PATH, "r", encoding="utf-8") as f:
-        for line in f:
-            line = line.strip()
-            if not line:
-                continue
-            e = json.loads(line)
-            s = e.get("hypothesis_slug")
-            if s:
-                slugs.add(s)
-    return slugs
+    """2026-08-29: reads ledger.py's "latest entry per slug" view (a slug
+    re-verified after a bug fix is judged by its newest entry, not stuck
+    forever on a superseded one), and no longer counts PENDING_VERIFICATION
+    as "done." Closes a real gap: PENDING_VERIFICATION was added specifically
+    for when every search query fails even after retries -- if that verdict
+    counted as "verified," --all-unverified would never naturally retry it,
+    and it would need a human to name the file explicitly forever, the same
+    as the original 2026-08-29 Failure 3 precedent. Now a hypothesis whose
+    latest attempt landed PENDING_VERIFICATION is picked back up
+    automatically the next time --all-unverified runs."""
+    return {
+        e.get("hypothesis_slug")
+        for e in load_latest_entries()
+        if e.get("hypothesis_slug") and e.get("verdict") != "PENDING_VERIFICATION"
+    }
 
 
 def verify_one(filepath, rubric, dry_run=False):

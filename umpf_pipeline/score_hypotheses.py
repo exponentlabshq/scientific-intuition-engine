@@ -61,6 +61,8 @@ import argparse
 import json
 import os
 
+from ledger import key_for, load_latest_entries
+
 PIPELINE_DIR = os.path.dirname(os.path.abspath(__file__))
 LOG_PATH = os.path.join(PIPELINE_DIR, "verification-log.jsonl")
 LEADERBOARD_PATH = os.path.join(PIPELINE_DIR, "leaderboard.md")
@@ -77,18 +79,12 @@ REFUTATION_SURVIVAL_POINTS = {3: 20, 2: 12}  # of-3 survive -> points; 0/1 handl
 
 
 def load_entries():
-    entries = []
-    with open(LOG_PATH, "r", encoding="utf-8") as f:
-        for line in f:
-            line = line.strip()
-            if not line:
-                continue
-            entries.append(json.loads(line))
-    return entries
-
-
-def key_for(rec):
-    return rec.get("hypothesis_slug") or rec.get("case_study") or "unknown"
+    """2026-08-29: now the "latest entry per slug wins" read from ledger.py,
+    not a raw line-by-line load. A slug re-verified after a bug fix (e.g.
+    the Tavily rate-limit incident) gets exactly one row here -- its most
+    recent, correct one -- instead of scoring both the old, wrong entry and
+    the new, corrected one as if they were two different hypotheses."""
+    return load_latest_entries(LOG_PATH)
 
 
 def score_entry(rec):

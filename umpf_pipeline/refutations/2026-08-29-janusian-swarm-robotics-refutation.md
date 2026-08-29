@@ -5,9 +5,9 @@
 
 ## Tally: 0 of 3 survive → **REFUTED**
 
-- **Coherence — REFUTED.** The hypothesis presents a context-dependent compromise rather than a genuine paradox. It suggests that problem characteristics dictate whether decentralized or centralized systems perform better, which is not a paradox but a conditional statement. The claim does not demonstrate a true same-instance paradox where both systems outperform each other simultaneously under identical conditions.
-- **Testability — REFUTED.** The hypothesis lacks a clear operationalized prediction. It suggests that problem characteristics dictate system performance but does not specify metrics, comparison conditions, or rejection thresholds for testing this claim. Without these, no experiment can definitively confirm or refute the hypothesis, rendering it unfalsifiable.
-- **Triviality — REFUTED.** The hypothesis reduces to a trivial statement about complex systems: that the characteristics of a problem dictate which system (centralized or decentralized) performs better. This is a general truth applicable to almost any scenario involving different systems and problem characteristics, lacking specificity to swarm robotics or ant colony optimization.
+- **Coherence — REFUTED.** The hypothesis presents a context-dependent compromise rather than a genuine paradox. It suggests that problem characteristics dictate which system performs better, implying a situational dependency rather than a true same-instance paradox. This undermines the janusian claim of simultaneous contradictory truths.
+- **Testability — REFUTED.** The hypothesis lacks a clear operationalization of its prediction. It does not specify a named metric, comparison condition, or rejection threshold for determining which system performs better based on problem characteristics. Without these elements, the claim remains too vague to be tested empirically, as it does not provide a concrete method to evaluate the performance of decentralized versus centralized systems in specific scenarios.
+- **Triviality — REFUTED.** The hypothesis reduces to a trivial statement about complex systems: that the characteristics of a problem dictate which system performs better. This is a common-sense observation applicable to almost any scenario involving different systems solving the same problem, not a novel insight specific to swarm robotics or ant colony optimization.
 
 ## No steelman offered
 

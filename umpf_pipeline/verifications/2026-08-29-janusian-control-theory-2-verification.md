@@ -3,7 +3,7 @@
 **Verifies**: `hypotheses/2026-08-29-janusian-control-theory-2.md`
 **Verified**: 2026-08-29 · **Method**: Tavily search + GPT-4o classification (`verify_hypothesis.py`, unattended)
 
-## Verdict: **NO_SIGNAL**
+## Verdict: **COLLISION**
 
 ## Queries
 - `Kalman filtering non-linear systems`
@@ -13,7 +13,7 @@
 - `Control theory named researcher OR framework`
 
 ## What was found
-No search results returned for any query related to the hypothesis.
+The search results revealed extensive research on nonlinear Kalman filters, including the extended Kalman filter (EKF) and unscented Kalman filter (UKF), which address the challenges of applying Kalman filtering to nonlinear systems. Sources such as 'Nonlinear Kalman Filters' (https://isif.org/files/isif/2024-01/Nonlinear%20Kalman%20Filters.pdf) and 'Unscented Filtering and Nonlinear Estimation' (https://www.cs.ubc.ca/~murphyk/Papers/Julier_Uhlmann_mar04.pdf) discuss these methods in detail, highlighting their ability to handle nonlinear dynamics and Gaussian noise, which directly relates to the hypothesis's core claim.
 
 ## Reasoning
-The search did not surface any relevant material or research activity related to the hypothesis or the domains individually. Without any specific results, it is impossible to determine if the hypothesis is novel-and-real or vacuous-and-not-even-wrong. Therefore, the correct classification is NO_SIGNAL.
+The hypothesis suggests that Kalman filtering can simultaneously exhibit high fidelity and significant error due to the unpredictable nature of noise and system dynamics in nonlinear systems. However, the search results show that this issue has been extensively addressed by existing nonlinear Kalman filter techniques like EKF and UKF, which are designed to manage the complexities of nonlinear dynamics and Gaussian noise. This indicates that the hypothesis is not novel, as the specific connection between nonlinear system modeling, Gaussian noise, and Kalman filtering has already been explored and documented in the literature.

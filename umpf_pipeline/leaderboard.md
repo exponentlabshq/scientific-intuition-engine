@@ -69,92 +69,92 @@ Points are tied to what an outcome reveals about real potential, not to phase co
 | 59 | Chemistry × Music Sound | **+38** | ADJACENT_ACTIVE | 🧬 Bisociative 🗺️ Frontier Research Group |
 | 60 | Gaming Narrative × Human Financial Trading Algorithms | **+38** | ADJACENT_ACTIVE | 🧬 Bisociative 🗺️ Frontier Research Group |
 | 61 | Healthcare × Physical Voltage Spikes | **+38** | ADJACENT_ACTIVE | 🧬 Bisociative 🗺️ Frontier Research Group |
-| 62 | Social Systems × Human Team Collaboration | **+36** | ADJACENT_ACTIVE | 🧬 Bisociative 🗺️ Frontier Research Group |
-| 63 | Ecology — mycorrhizal fungal networks × Telecommunications — packet switching and routing | **+35** | COLLISION | 🧬 Bisociative 🏛️ Established Department 🔬 Actively Researched |
-| 64 | Astronomy — gravitational lensing | **+35** | COLLISION | 🎭 Janusian 🏛️ Established Department 🔬 Actively Researched |
-| 65 | Finance | **+35** | COLLISION | 🎭 Janusian 🏛️ Established Department 🔬 Actively Researched |
-| 66 | Physical — quantum measurement | **+35** | COLLISION | 🎭 Janusian 🏛️ Established Department 🔬 Actively Researched |
-| 67 | Creative Musical Motif Deviation × Evolutionary biology — punctuated equilibrium | **+33** | COLLISION | 🧬 Bisociative 🏛️ Established Department 🔬 Actively Researched |
-| 68 | Human Financial Trading Algorithms × Ecology — predator-prey population dynamics | **+33** | COLLISION | 🧬 Bisociative 🏛️ Established Department 🔬 Actively Researched |
-| 69 | Informational — distributed consensus | **+33** | COLLISION | 🎭 Janusian 🏛️ Established Department 🔬 Actively Researched |
-| 70 | Human — cognitive bias | **+33** | COLLISION | 🎭 Janusian 🏛️ Established Department 🔬 Actively Researched |
-| 71 | Informational — load balancing | **+33** | COLLISION | 🎭 Janusian 🏛️ Established Department 🔬 Actively Researched |
-| 72 | Physical — chemical reaction networks × Human — committee formation | **+33** | COLLISION | 🪞 Homospatial 🏛️ Established Department 🔬 Actively Researched |
-| 73 | Distributed Consensus Algorithms (Raft, PBFT) × Distributed Cache Coherence Protocols (MESI, Directory-based) | **+30** | ADJACENT_ACTIVE | 📜 Pre-existing case study 🗺️ Frontier Research Group |
-| 74 | Dirac's large numbers hypothesis × Belnap four-valued logic / explainable AI | **+30** | ADJACENT_ACTIVE | 📜 Pre-existing case study 🗺️ Frontier Research Group |
-| 75 | Genetic algorithms × Simulated annealing | **+25** | COLLISION | 📜 Pre-existing case study 🏛️ Established Department 🔬 Actively Researched |
-| 76 | Raft consensus × PBFT consensus | **+25** | COLLISION | 📜 Pre-existing case study 🏛️ Established Department 🔬 Actively Researched |
-| 77 | Human Learning Uncertainty | **+23** | ADJACENT_ACTIVE | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted |
-| 78 | Artificial Intelligence (Information & Intelligence Systems) | **+23** | ADJACENT_ACTIVE | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted |
-| 79 | Behavioral psychology — habit formation loops | **+23** | ADJACENT_ACTIVE | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted |
-| 80 | Cognitive Neuron Activation | **+23** | ADJACENT_ACTIVE | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted |
-| 81 | Creative Improvisation Adjustment | **+23** | ADJACENT_ACTIVE | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted |
-| 82 | Music theory — jazz improvisation over changes | **+23** | ADJACENT_ACTIVE | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted |
-| 83 | Neuroscience — cortical map reorganization | **+23** | ADJACENT_ACTIVE | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted |
-| 84 | Thermodynamics × Informational Signal Jitter | **+23** | ADJACENT_ACTIVE | 🧬 Bisociative 🗺️ Frontier Research Group 💀 Refuted |
-| 85 | Cognitive Neuron Activation × Physical Ecosystem Succession | **+23** | ADJACENT_ACTIVE | 🪞 Homospatial 🗺️ Frontier Research Group 💀 Refuted |
-| 86 | Law — common law precedent and stare decisis | **+15** | COLLISION | 🎭 Janusian 🏛️ Established Department |
-| 87 | Linguistics — historical sound change | **+13** | COLLISION | 🎭 Janusian 🏛️ Established Department |
-| 88 | Materials science — crystal lattice defects | **+13** | COLLISION | 🎭 Janusian 🏛️ Established Department |
-| 89 | Anthropology — gift economies and reciprocity × Military Strategy | **+13** | COLLISION | 🧬 Bisociative 🏛️ Established Department |
-| 90 | Chemistry — self-assembly of molecular structures × Gaming Narrative | **+13** | COLLISION | 🪞 Homospatial 🏛️ Established Department |
-| 91 | Adaptive Immune Memory × Human Urban Planning | **+13** | COLLISION | 🪞 Homospatial 🏛️ Established Department |
-| 92 | Game Theory Nash Bargaining × Human Social Network Dynamics | **+13** | COLLISION | 🪞 Homospatial 🏛️ Established Department |
-| 93 | Climatology — feedback loops in ice-albedo effect | **+13** | COLLISION | 🎭 Janusian 🏛️ Established Department |
-| 94 | Fluid Dynamics × Physical Telescope Telemetry | **+13** | COLLISION | 🧬 Bisociative 🏛️ Established Department |
-| 95 | Music theory — jazz improvisation over changes × Music theory — counterpoint and voice leading | **+11** | COLLISION | 🧬 Bisociative 🏛️ Established Department |
-| 96 | Graph traversal algorithms (Dijkstra's, A*) × Minimax game tree search | **+5** | COLLISION | 📜 Pre-existing case study 🏛️ Established Department |
-| 97 | Physical Mechanical Spring Systems | **+0** | FACT_CHECK_FAIL | 🎭 Janusian ⚠️ Retracted |
-| 98 | Graph traversal algorithms × State space search algorithms | **-5** | COLLISION | 📜 Pre-existing case study 🚫 Not a Valid Bisociation |
-| 99 | Quantum entanglement / Bell inequalities × Quantum information science | **-5** | COLLISION | 📜 Pre-existing case study 🚫 Not a Valid Bisociation |
-| 100 | Trigonometric function analysis × Fourier transform / spectral decomposition | **-5** | COLLISION | 📜 Pre-existing case study 🚫 Not a Valid Bisociation |
-| 101 | Efficient Market Hypothesis | **-5** | NO_SIGNAL | 🎭 Janusian 💀 Refuted |
-| 102 | Neuroscience — cortical map reorganization × Climatology — ocean current circulation (thermohaline) | **-7** | NO_SIGNAL | 🧬 Bisociative 💀 Refuted |
-| 103 | Swarm robotics — flocking / boids behavior × Culinary Arts | **-7** | NO_SIGNAL | 🧬 Bisociative 💀 Refuted |
-| 104 | Comedy — crowd work and audience read × Sports — basketball pick-and-roll offense | **-7** | NO_SIGNAL | 🪞 Homospatial 💀 Refuted |
-| 105 | Astronomy — stellar nucleosynthesis × Creative — album production orchestration | **-7** | NO_SIGNAL | 🪞 Homospatial 💀 Refuted |
-| 106 | Cognitive Attention Map Evolution × Informational Event-Driven Systems | **-7** | NO_SIGNAL | 🧬 Bisociative 💀 Refuted |
-| 107 | Ecology × Materials Science | **-7** | NO_SIGNAL | 🧬 Bisociative 💀 Refuted |
-| 108 | Epidemiology × Creative Inspiration Variability | **-7** | NO_SIGNAL | 🧬 Bisociative 💀 Refuted |
-| 109 | Linguistics × Fluid Dynamics | **-7** | NO_SIGNAL | 🪞 Homospatial 💀 Refuted |
-| 110 | Cognitive AI Preprocessing Pipelines | **-7** | NO_SIGNAL | 🎭 Janusian 💀 Refuted |
-| 111 | Knowledge Systems (Cognitive & Pattern Recognition Systems) | **-7** | NO_SIGNAL | 🎭 Janusian 💀 Refuted |
-| 112 | Urban planning — zoning and land use | **-7** | NO_SIGNAL | 🎭 Janusian 💀 Refuted |
-| 113 | Supply Chain Logistics × Physical Thermal Variation | **-7** | NO_SIGNAL | 🧬 Bisociative 💀 Refuted |
-| 114 | Game Theory — Repeated Prisoner's Dilemma × Informational Measurement Data Evolution | **-7** | NO_SIGNAL | 🧬 Bisociative 💀 Refuted |
-| 115 | Basketball Pick-and-Roll Offense × Physical Flux Regulation | **-7** | NO_SIGNAL | 🪞 Homospatial 💀 Refuted |
-| 116 | Informational Queue Overflow | **-7** | NO_SIGNAL | 🎭 Janusian 💀 Refuted |
-| 117 | Organizational Theory — Self-Organizing Teams × Finance (Human & Social Systems) | **-7** | NO_SIGNAL | 🧬 Bisociative 💀 Refuted |
-| 118 | Creative Brainstorming Facilitation × Physical Electrical Noise | **-7** | NO_SIGNAL | 🧬 Bisociative 💀 Refuted |
-| 119 | Human Individual Indecision × Physical Voltage Spikes | **-7** | NO_SIGNAL | 🪞 Homospatial 💀 Refuted |
-| 120 | Load-Bearing Structural Design × Informational Load Balancing | **-7** | NO_SIGNAL | 🪞 Homospatial 💀 Refuted |
-| 121 | Physical Bridge Cable Tension | **-7** | NO_SIGNAL | 🎭 Janusian 💀 Refuted |
-| 122 | Artificial Intelligence × Informational Queue Overflow | **-7** | NO_SIGNAL | 🧬 Bisociative 💀 Refuted |
-| 123 | Creative Performance Monitoring × Physical Voltage Spikes | **-7** | NO_SIGNAL | 🧬 Bisociative 💀 Refuted |
-| 124 | Linguistics — Creole Genesis × Economics — Market Microstructure and Order Books | **-7** | NO_SIGNAL | 🪞 Homospatial 💀 Refuted |
-| 125 | Astronomy × Telecommunications | **-7** | NO_SIGNAL | 🧬 Bisociative 💀 Refuted |
-| 126 | Climatology × Cognitive Model Adaptation | **-7** | NO_SIGNAL | 🧬 Bisociative 💀 Refuted |
-| 127 | Ecology × Informational Ledger State Evolution | **-7** | NO_SIGNAL | 🧬 Bisociative 💀 Refuted |
-| 128 | Creative Idea Uncertainty × Creative Musical Motif Deviation | **-7** | NO_SIGNAL | 🪞 Homospatial 💀 Refuted |
-| 129 | Creative Musical Composition × Physical Mechanical Spring Systems | **-7** | NO_SIGNAL | 🪞 Homospatial 💀 Refuted |
-| 130 | Linguistics — Creole Genesis × Informational Backup Systems | **-7** | NO_SIGNAL | 🪞 Homospatial 💀 Refuted |
-| 131 | Linguistics — Creole Genesis × Learning Systems | **-7** | NO_SIGNAL | 🪞 Homospatial 💀 Refuted |
-| 132 | Neuroscience — Synaptic Pruning × Human Trust Variance | **-7** | NO_SIGNAL | 🪞 Homospatial 💀 Refuted |
-| 133 | Human Urban Planning × Physical Photon Emission | **-7** | NO_SIGNAL | 🧬 Bisociative 💀 Refuted |
-| 134 | Informational Routing Policy Enforcement × Physical Thermal Variation | **-7** | NO_SIGNAL | 🧬 Bisociative 💀 Refuted |
-| 135 | Informational Cache Miss Handling | **-7** | NO_SIGNAL | 🎭 Janusian 💀 Refuted |
-| 136 | Cognitive AI Hyperparameter Orchestration × Physical Mechanical Spring Systems | **-7** | NO_SIGNAL | 🧬 Bisociative 💀 Refuted |
-| 137 | Human Team Collaboration × Informational Load Balancing | **-7** | NO_SIGNAL | 🪞 Homospatial 💀 Refuted |
-| 138 | Adaptive Immune Memory × Human Defense Coordination | **-7** | NO_SIGNAL | 🪞 Homospatial 💀 Refuted |
-| 139 | Baseball Pitch Sequencing × Finance Transaction Dynamics | **-7** | NO_SIGNAL | 🪞 Homospatial 💀 Refuted |
-| 140 | Urban Planning × Informational Packet Buffer Management | **-7** | NO_SIGNAL | 🪞 Homospatial 💀 Refuted |
-| 141 | Control theory — Kalman filtering | **-7** | NO_SIGNAL | 🎭 Janusian 💀 Refuted |
-| 142 | Healthcare (Human & Social Systems) | **-7** | NO_SIGNAL | 🎭 Janusian 💀 Refuted |
-| 143 | Human Individual Indecision | **-7** | NO_SIGNAL | 🎭 Janusian 💀 Refuted |
-| 144 | Immunology — Innate Immune Response | **-7** | NO_SIGNAL | 🎭 Janusian 💀 Refuted |
-| 145 | Immunology — Adaptive Immune Memory | **-7** | NO_SIGNAL | 🎭 Janusian 💀 Refuted |
-| 146 | Physical Telescope Telemetry | **-7** | NO_SIGNAL | 🎭 Janusian 💀 Refuted |
-| 147 | Swarm Robotics — Ant Colony Optimization | **-7** | NO_SIGNAL | 🎭 Janusian 💀 Refuted |
+| 62 | Human Team Collaboration × Informational Load Balancing | **+38** | ADJACENT_ACTIVE | 🪞 Homospatial 🗺️ Frontier Research Group |
+| 63 | Adaptive Immune Memory × Human Defense Coordination | **+38** | ADJACENT_ACTIVE | 🪞 Homospatial 🗺️ Frontier Research Group |
+| 64 | Urban Planning × Informational Packet Buffer Management | **+38** | ADJACENT_ACTIVE | 🪞 Homospatial 🗺️ Frontier Research Group |
+| 65 | Social Systems × Human Team Collaboration | **+36** | ADJACENT_ACTIVE | 🧬 Bisociative 🗺️ Frontier Research Group |
+| 66 | Ecology — mycorrhizal fungal networks × Telecommunications — packet switching and routing | **+35** | COLLISION | 🧬 Bisociative 🏛️ Established Department 🔬 Actively Researched |
+| 67 | Astronomy — gravitational lensing | **+35** | COLLISION | 🎭 Janusian 🏛️ Established Department 🔬 Actively Researched |
+| 68 | Finance | **+35** | COLLISION | 🎭 Janusian 🏛️ Established Department 🔬 Actively Researched |
+| 69 | Physical — quantum measurement | **+35** | COLLISION | 🎭 Janusian 🏛️ Established Department 🔬 Actively Researched |
+| 70 | Creative Musical Motif Deviation × Evolutionary biology — punctuated equilibrium | **+33** | COLLISION | 🧬 Bisociative 🏛️ Established Department 🔬 Actively Researched |
+| 71 | Human Financial Trading Algorithms × Ecology — predator-prey population dynamics | **+33** | COLLISION | 🧬 Bisociative 🏛️ Established Department 🔬 Actively Researched |
+| 72 | Informational — distributed consensus | **+33** | COLLISION | 🎭 Janusian 🏛️ Established Department 🔬 Actively Researched |
+| 73 | Human — cognitive bias | **+33** | COLLISION | 🎭 Janusian 🏛️ Established Department 🔬 Actively Researched |
+| 74 | Informational — load balancing | **+33** | COLLISION | 🎭 Janusian 🏛️ Established Department 🔬 Actively Researched |
+| 75 | Physical — chemical reaction networks × Human — committee formation | **+33** | COLLISION | 🪞 Homospatial 🏛️ Established Department 🔬 Actively Researched |
+| 76 | Distributed Consensus Algorithms (Raft, PBFT) × Distributed Cache Coherence Protocols (MESI, Directory-based) | **+30** | ADJACENT_ACTIVE | 📜 Pre-existing case study 🗺️ Frontier Research Group |
+| 77 | Dirac's large numbers hypothesis × Belnap four-valued logic / explainable AI | **+30** | ADJACENT_ACTIVE | 📜 Pre-existing case study 🗺️ Frontier Research Group |
+| 78 | Genetic algorithms × Simulated annealing | **+25** | COLLISION | 📜 Pre-existing case study 🏛️ Established Department 🔬 Actively Researched |
+| 79 | Raft consensus × PBFT consensus | **+25** | COLLISION | 📜 Pre-existing case study 🏛️ Established Department 🔬 Actively Researched |
+| 80 | Human Learning Uncertainty | **+23** | ADJACENT_ACTIVE | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted |
+| 81 | Artificial Intelligence (Information & Intelligence Systems) | **+23** | ADJACENT_ACTIVE | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted |
+| 82 | Behavioral psychology — habit formation loops | **+23** | ADJACENT_ACTIVE | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted |
+| 83 | Cognitive Neuron Activation | **+23** | ADJACENT_ACTIVE | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted |
+| 84 | Creative Improvisation Adjustment | **+23** | ADJACENT_ACTIVE | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted |
+| 85 | Music theory — jazz improvisation over changes | **+23** | ADJACENT_ACTIVE | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted |
+| 86 | Neuroscience — cortical map reorganization | **+23** | ADJACENT_ACTIVE | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted |
+| 87 | Thermodynamics × Informational Signal Jitter | **+23** | ADJACENT_ACTIVE | 🧬 Bisociative 🗺️ Frontier Research Group 💀 Refuted |
+| 88 | Cognitive Neuron Activation × Physical Ecosystem Succession | **+23** | ADJACENT_ACTIVE | 🪞 Homospatial 🗺️ Frontier Research Group 💀 Refuted |
+| 89 | Healthcare (Human & Social Systems) | **+23** | ADJACENT_ACTIVE | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted |
+| 90 | Human Individual Indecision | **+23** | ADJACENT_ACTIVE | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted |
+| 91 | Immunology — Adaptive Immune Memory | **+23** | ADJACENT_ACTIVE | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted |
+| 92 | Swarm Robotics — Ant Colony Optimization | **+23** | ADJACENT_ACTIVE | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted |
+| 93 | Law — common law precedent and stare decisis | **+15** | COLLISION | 🎭 Janusian 🏛️ Established Department |
+| 94 | Linguistics — historical sound change | **+13** | COLLISION | 🎭 Janusian 🏛️ Established Department |
+| 95 | Materials science — crystal lattice defects | **+13** | COLLISION | 🎭 Janusian 🏛️ Established Department |
+| 96 | Anthropology — gift economies and reciprocity × Military Strategy | **+13** | COLLISION | 🧬 Bisociative 🏛️ Established Department |
+| 97 | Chemistry — self-assembly of molecular structures × Gaming Narrative | **+13** | COLLISION | 🪞 Homospatial 🏛️ Established Department |
+| 98 | Adaptive Immune Memory × Human Urban Planning | **+13** | COLLISION | 🪞 Homospatial 🏛️ Established Department |
+| 99 | Game Theory Nash Bargaining × Human Social Network Dynamics | **+13** | COLLISION | 🪞 Homospatial 🏛️ Established Department |
+| 100 | Climatology — feedback loops in ice-albedo effect | **+13** | COLLISION | 🎭 Janusian 🏛️ Established Department |
+| 101 | Fluid Dynamics × Physical Telescope Telemetry | **+13** | COLLISION | 🧬 Bisociative 🏛️ Established Department |
+| 102 | Control theory — Kalman filtering | **+13** | COLLISION | 🎭 Janusian 🏛️ Established Department |
+| 103 | Immunology — Innate Immune Response | **+13** | COLLISION | 🎭 Janusian 🏛️ Established Department |
+| 104 | Music theory — jazz improvisation over changes × Music theory — counterpoint and voice leading | **+11** | COLLISION | 🧬 Bisociative 🏛️ Established Department |
+| 105 | Graph traversal algorithms (Dijkstra's, A*) × Minimax game tree search | **+5** | COLLISION | 📜 Pre-existing case study 🏛️ Established Department |
+| 106 | Physical Mechanical Spring Systems | **+0** | FACT_CHECK_FAIL | 🎭 Janusian ⚠️ Retracted |
+| 107 | Graph traversal algorithms × State space search algorithms | **-5** | COLLISION | 📜 Pre-existing case study 🚫 Not a Valid Bisociation |
+| 108 | Quantum entanglement / Bell inequalities × Quantum information science | **-5** | COLLISION | 📜 Pre-existing case study 🚫 Not a Valid Bisociation |
+| 109 | Trigonometric function analysis × Fourier transform / spectral decomposition | **-5** | COLLISION | 📜 Pre-existing case study 🚫 Not a Valid Bisociation |
+| 110 | Efficient Market Hypothesis | **-5** | NO_SIGNAL | 🎭 Janusian 💀 Refuted |
+| 111 | Neuroscience — cortical map reorganization × Climatology — ocean current circulation (thermohaline) | **-7** | NO_SIGNAL | 🧬 Bisociative 💀 Refuted |
+| 112 | Swarm robotics — flocking / boids behavior × Culinary Arts | **-7** | NO_SIGNAL | 🧬 Bisociative 💀 Refuted |
+| 113 | Comedy — crowd work and audience read × Sports — basketball pick-and-roll offense | **-7** | NO_SIGNAL | 🪞 Homospatial 💀 Refuted |
+| 114 | Astronomy — stellar nucleosynthesis × Creative — album production orchestration | **-7** | NO_SIGNAL | 🪞 Homospatial 💀 Refuted |
+| 115 | Cognitive Attention Map Evolution × Informational Event-Driven Systems | **-7** | NO_SIGNAL | 🧬 Bisociative 💀 Refuted |
+| 116 | Ecology × Materials Science | **-7** | NO_SIGNAL | 🧬 Bisociative 💀 Refuted |
+| 117 | Epidemiology × Creative Inspiration Variability | **-7** | NO_SIGNAL | 🧬 Bisociative 💀 Refuted |
+| 118 | Linguistics × Fluid Dynamics | **-7** | NO_SIGNAL | 🪞 Homospatial 💀 Refuted |
+| 119 | Cognitive AI Preprocessing Pipelines | **-7** | NO_SIGNAL | 🎭 Janusian 💀 Refuted |
+| 120 | Knowledge Systems (Cognitive & Pattern Recognition Systems) | **-7** | NO_SIGNAL | 🎭 Janusian 💀 Refuted |
+| 121 | Urban planning — zoning and land use | **-7** | NO_SIGNAL | 🎭 Janusian 💀 Refuted |
+| 122 | Supply Chain Logistics × Physical Thermal Variation | **-7** | NO_SIGNAL | 🧬 Bisociative 💀 Refuted |
+| 123 | Game Theory — Repeated Prisoner's Dilemma × Informational Measurement Data Evolution | **-7** | NO_SIGNAL | 🧬 Bisociative 💀 Refuted |
+| 124 | Basketball Pick-and-Roll Offense × Physical Flux Regulation | **-7** | NO_SIGNAL | 🪞 Homospatial 💀 Refuted |
+| 125 | Informational Queue Overflow | **-7** | NO_SIGNAL | 🎭 Janusian 💀 Refuted |
+| 126 | Organizational Theory — Self-Organizing Teams × Finance (Human & Social Systems) | **-7** | NO_SIGNAL | 🧬 Bisociative 💀 Refuted |
+| 127 | Creative Brainstorming Facilitation × Physical Electrical Noise | **-7** | NO_SIGNAL | 🧬 Bisociative 💀 Refuted |
+| 128 | Human Individual Indecision × Physical Voltage Spikes | **-7** | NO_SIGNAL | 🪞 Homospatial 💀 Refuted |
+| 129 | Load-Bearing Structural Design × Informational Load Balancing | **-7** | NO_SIGNAL | 🪞 Homospatial 💀 Refuted |
+| 130 | Physical Bridge Cable Tension | **-7** | NO_SIGNAL | 🎭 Janusian 💀 Refuted |
+| 131 | Artificial Intelligence × Informational Queue Overflow | **-7** | NO_SIGNAL | 🧬 Bisociative 💀 Refuted |
+| 132 | Creative Performance Monitoring × Physical Voltage Spikes | **-7** | NO_SIGNAL | 🧬 Bisociative 💀 Refuted |
+| 133 | Linguistics — Creole Genesis × Economics — Market Microstructure and Order Books | **-7** | NO_SIGNAL | 🪞 Homospatial 💀 Refuted |
+| 134 | Astronomy × Telecommunications | **-7** | NO_SIGNAL | 🧬 Bisociative 💀 Refuted |
+| 135 | Climatology × Cognitive Model Adaptation | **-7** | NO_SIGNAL | 🧬 Bisociative 💀 Refuted |
+| 136 | Ecology × Informational Ledger State Evolution | **-7** | NO_SIGNAL | 🧬 Bisociative 💀 Refuted |
+| 137 | Creative Idea Uncertainty × Creative Musical Motif Deviation | **-7** | NO_SIGNAL | 🪞 Homospatial 💀 Refuted |
+| 138 | Creative Musical Composition × Physical Mechanical Spring Systems | **-7** | NO_SIGNAL | 🪞 Homospatial 💀 Refuted |
+| 139 | Linguistics — Creole Genesis × Informational Backup Systems | **-7** | NO_SIGNAL | 🪞 Homospatial 💀 Refuted |
+| 140 | Linguistics — Creole Genesis × Learning Systems | **-7** | NO_SIGNAL | 🪞 Homospatial 💀 Refuted |
+| 141 | Neuroscience — Synaptic Pruning × Human Trust Variance | **-7** | NO_SIGNAL | 🪞 Homospatial 💀 Refuted |
+| 142 | Human Urban Planning × Physical Photon Emission | **-7** | NO_SIGNAL | 🧬 Bisociative 💀 Refuted |
+| 143 | Informational Routing Policy Enforcement × Physical Thermal Variation | **-7** | NO_SIGNAL | 🧬 Bisociative 💀 Refuted |
+| 144 | Informational Cache Miss Handling | **-7** | NO_SIGNAL | 🎭 Janusian 💀 Refuted |
+| 145 | Cognitive AI Hyperparameter Orchestration × Physical Mechanical Spring Systems | **-7** | NO_SIGNAL | 🧬 Bisociative 💀 Refuted |
+| 146 | Baseball Pitch Sequencing × Finance Transaction Dynamics | **-7** | NO_SIGNAL | 🪞 Homospatial 💀 Refuted |
+| 147 | Physical Telescope Telemetry | **-7** | NO_SIGNAL | 🎭 Janusian 💀 Refuted |
 | 148 | Human immune system × Distributed ledger technology | **-15** | NO_SIGNAL | 📜 Pre-existing case study 💀 Refuted |
 | 149 | Neural networks × Coral reef ecosystems | **-15** | NO_SIGNAL | 📜 Pre-existing case study 💀 Refuted |
 | 150 | Sample variance / statistical estimation × Protein structure prediction | **-15** | NO_SIGNAL | 📜 Pre-existing case study 💀 Refuted |
@@ -477,6 +477,21 @@ Points are tied to what an outcome reveals about real potential, not to phase co
 - Phase 1 self-report (4/5): +8
 - Phase 2 ADJACENT_ACTIVE: +30
 
+### Human Team Collaboration × Informational Load Balancing — +38
+
+- Phase 1 self-report (4/5): +8
+- Phase 2 ADJACENT_ACTIVE: +30
+
+### Adaptive Immune Memory × Human Defense Coordination — +38
+
+- Phase 1 self-report (4/5): +8
+- Phase 2 ADJACENT_ACTIVE: +30
+
+### Urban Planning × Informational Packet Buffer Management — +38
+
+- Phase 1 self-report (4/5): +8
+- Phase 2 ADJACENT_ACTIVE: +30
+
 ### Social Systems × Human Team Collaboration — +36
 
 - Phase 1 self-report (3/5): +6
@@ -623,6 +638,34 @@ Points are tied to what an outcome reveals about real potential, not to phase co
 - Adversarial refutation REFUTED: -15
 -   independently confirmed (3 separate agents, full agreement)
 
+### Healthcare (Human & Social Systems) — +23
+
+- Phase 1 self-report (4/5): +8
+- Phase 2 ADJACENT_ACTIVE: +30
+- Adversarial refutation REFUTED: -15
+-   independently confirmed (3 separate agents, full agreement)
+
+### Human Individual Indecision — +23
+
+- Phase 1 self-report (4/5): +8
+- Phase 2 ADJACENT_ACTIVE: +30
+- Adversarial refutation REFUTED: -15
+-   independently confirmed (3 separate agents, full agreement)
+
+### Immunology — Adaptive Immune Memory — +23
+
+- Phase 1 self-report (4/5): +8
+- Phase 2 ADJACENT_ACTIVE: +30
+- Adversarial refutation REFUTED: -15
+-   independently confirmed (3 separate agents, full agreement)
+
+### Swarm Robotics — Ant Colony Optimization — +23
+
+- Phase 1 self-report (4/5): +8
+- Phase 2 ADJACENT_ACTIVE: +30
+- Adversarial refutation REFUTED: -15
+-   independently confirmed (3 separate agents, full agreement)
+
 ### Law — common law precedent and stare decisis — +15
 
 - Phase 1 self-report (5/5): +10
@@ -664,6 +707,16 @@ Points are tied to what an outcome reveals about real potential, not to phase co
 - Phase 2 COLLISION (genuine): +5
 
 ### Fluid Dynamics × Physical Telescope Telemetry — +13
+
+- Phase 1 self-report (4/5): +8
+- Phase 2 COLLISION (genuine): +5
+
+### Control theory — Kalman filtering — +13
+
+- Phase 1 self-report (4/5): +8
+- Phase 2 COLLISION (genuine): +5
+
+### Immunology — Innate Immune Response — +13
 
 - Phase 1 self-report (4/5): +8
 - Phase 2 COLLISION (genuine): +5
@@ -946,20 +999,6 @@ Points are tied to what an outcome reveals about real potential, not to phase co
 - Adversarial refutation REFUTED: -15
 -   independently confirmed (3 separate agents, full agreement)
 
-### Human Team Collaboration × Informational Load Balancing — -7
-
-- Phase 1 self-report (4/5): +8
-- Phase 2 NO_SIGNAL: +0 (pending)
-- Adversarial refutation REFUTED: -15
--   independently confirmed (3 separate agents, full agreement)
-
-### Adaptive Immune Memory × Human Defense Coordination — -7
-
-- Phase 1 self-report (4/5): +8
-- Phase 2 NO_SIGNAL: +0 (pending)
-- Adversarial refutation REFUTED: -15
--   independently confirmed (3 separate agents, full agreement)
-
 ### Baseball Pitch Sequencing × Finance Transaction Dynamics — -7
 
 - Phase 1 self-report (4/5): +8
@@ -967,56 +1006,7 @@ Points are tied to what an outcome reveals about real potential, not to phase co
 - Adversarial refutation REFUTED: -15
 -   independently confirmed (3 separate agents, full agreement)
 
-### Urban Planning × Informational Packet Buffer Management — -7
-
-- Phase 1 self-report (4/5): +8
-- Phase 2 NO_SIGNAL: +0 (pending)
-- Adversarial refutation REFUTED: -15
--   independently confirmed (3 separate agents, full agreement)
-
-### Control theory — Kalman filtering — -7
-
-- Phase 1 self-report (4/5): +8
-- Phase 2 NO_SIGNAL: +0 (pending)
-- Adversarial refutation REFUTED: -15
--   independently confirmed (3 separate agents, full agreement)
-
-### Healthcare (Human & Social Systems) — -7
-
-- Phase 1 self-report (4/5): +8
-- Phase 2 NO_SIGNAL: +0 (pending)
-- Adversarial refutation REFUTED: -15
--   independently confirmed (3 separate agents, full agreement)
-
-### Human Individual Indecision — -7
-
-- Phase 1 self-report (4/5): +8
-- Phase 2 NO_SIGNAL: +0 (pending)
-- Adversarial refutation REFUTED: -15
--   independently confirmed (3 separate agents, full agreement)
-
-### Immunology — Innate Immune Response — -7
-
-- Phase 1 self-report (4/5): +8
-- Phase 2 NO_SIGNAL: +0 (pending)
-- Adversarial refutation REFUTED: -15
--   independently confirmed (3 separate agents, full agreement)
-
-### Immunology — Adaptive Immune Memory — -7
-
-- Phase 1 self-report (4/5): +8
-- Phase 2 NO_SIGNAL: +0 (pending)
-- Adversarial refutation REFUTED: -15
--   independently confirmed (3 separate agents, full agreement)
-
 ### Physical Telescope Telemetry — -7
-
-- Phase 1 self-report (4/5): +8
-- Phase 2 NO_SIGNAL: +0 (pending)
-- Adversarial refutation REFUTED: -15
--   independently confirmed (3 separate agents, full agreement)
-
-### Swarm Robotics — Ant Colony Optimization — -7
 
 - Phase 1 self-report (4/5): +8
 - Phase 2 NO_SIGNAL: +0 (pending)
