@@ -112,6 +112,18 @@
     [
       "Game theory — Nash bargaining",
       "Music — sample-based hip-hop production"
+    ],
+    [
+      "Supply chain logistics — bullwhip effect",
+      "Physical Thermal Variation"
+    ],
+    [
+      "Social Systems (Human & Social Systems) — Atomic: Interaction outcome uncertain, Communication succeeds/fails, Multiple relationship types; Domain: Social network evolves, Cultural norms, Log social events; Control: External social media, Concurrent social processes, Atomic reputation updates; Orchestration: Governance coordination, Theory vs practice in policy",
+      "Human Team Collaboration"
+    ],
+    [
+      "Game theory — repeated prisoner's dilemma",
+      "Informational Measurement Data Evolution"
     ]
   ],
   "already_janused": [
@@ -130,7 +142,10 @@
     "Knowledge Systems (Cognitive & Pattern Recognition Systems) — Atomic: Data interpretation uncertain, Model output ambiguous, Multiple insights; Domain: Knowledge evolves, Historical context, Log insights; Control: Distributed analysis, Parallel computation, Atomic integration; Orchestration: Knowledge deployment coordination",
     "Physical Mechanical Spring Systems",
     "Physical Flux Regulation",
-    "Urban planning — zoning and land use"
+    "Urban planning — zoning and land use",
+    "Culinary Arts (Creative & Performance Systems) — Atomic: Recipe succeeds/fails, Ingredient freshness unknown, Multiple flavor combinations; Domain: Dish develops through cooking, Recipes & traditions, Log cooking steps; Control: External food suppliers, Concurrent cooking processes, Atomic seasoning adjustments; Orchestration: Restaurant coordination, Recipe vs service environments",
+    "Informational Queue Overflow",
+    "Informational Database State"
   ],
   "already_homospatial": [
     [
@@ -184,6 +199,18 @@
     [
       "Architecture (Creative & Performance Systems) — Atomic: Building permits approved/denied, Material availability uncertain, Multiple design options; Domain: Building construction progresses, Building codes, Log construction events; Control: Building inspections & permits, Concurrent construction, Atomic structural updates; Orchestration: City planning coordination, Design vs construction environments",
       "Cross Domain Pattern Recognition (Cognitive & Pattern Recognition Systems) — Atomic: Pattern recognition uncertain, Mapping valid/invalid, Multiple domain analogies; Domain: Cross-domain understanding evolves, Universal monadic patterns, Log successful transfers; Control: Multiple data sources, Parallel analysis, Atomic synthesis; Orchestration: Cross-domain coordination & system integration"
+    ],
+    [
+      "Cognitive Attention Map Evolution",
+      "Creative Artistic Critique"
+    ],
+    [
+      "Sports — basketball pick-and-roll offense",
+      "Physical Flux Regulation"
+    ],
+    [
+      "Game theory — Nash bargaining",
+      "Human Social Network Dynamics"
     ]
   ],
   "domain_pool": [

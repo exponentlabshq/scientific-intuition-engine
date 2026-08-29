@@ -11,12 +11,14 @@ a live session watching it. Every phase's real subprocess output is
 captured into cycle_log.jsonl so a human can audit what an unattended run
 actually did after the fact, even though nobody was watching live.
 
-Deliberately scoped to the RESEARCH pipeline only -- it does not rebuild or
-redeploy the public website (landing/whitepaper/leaderboard-experience).
-That stays a separate, human-reviewed publishing step. An unattended cron
-job silently redeploying a public site is a materially different risk than
-one appending to a private ledger, and this script does not make that call
-for you.
+Update (2026-08-29): the final stage now also calls publish_site.py, which
+regenerates and deploys the site's data-driven pages -- the interactive
+leaderboard experience (a pure data render, always safe to automate) and
+landing.html's stat fields (templated, everything else on that page is
+untouched hand-written content). whitepaper.html is deliberately excluded
+from that automation -- see publish_site.py's own docstring for why. Pass
+--skip-publish to opt a cycle out of touching the site at all, or --no-push
+to build + commit locally without pushing.
 
 Usage:
     python3 run_cycle.py --total 6                 # 6 hypotheses this cycle, split by mode_weights.json
@@ -92,6 +94,8 @@ def main():
     parser.add_argument("--hypotheses-per-mode", type=int, help="Exact count per mode, ignoring mode_weights.json")
     parser.add_argument("--skip-refutation", action="store_true", help="Skip Phase 2.5 (adversarial refutation) this cycle")
     parser.add_argument("--skip-score", action="store_true", help="Skip regenerating leaderboard.md this cycle")
+    parser.add_argument("--skip-publish", action="store_true", help="Skip regenerating/deploying the site's data-driven pages this cycle")
+    parser.add_argument("--no-push", action="store_true", help="Publish and commit the site locally but don't git push (passed through to publish_site.py)")
     parser.add_argument("--dry-run", action="store_true", help="Print the plan and the commands that would run; execute nothing")
     args = parser.parse_args()
 
@@ -155,6 +159,16 @@ def main():
             cycle_record["stages"]["scoring"] = run_subprocess(cmd, args.dry_run)
         else:
             print(f"$ {PYTHON} score_hypotheses.py")
+
+    # --- Publish: regenerate + deploy the site's data-driven pages ---
+    if not args.skip_publish:
+        if not args.dry_run:
+            cmd = [PYTHON, "publish_site.py"] + (["--no-push"] if args.no_push else [])
+            cycle_record["stages"]["publish"] = run_subprocess(cmd, args.dry_run)
+        else:
+            print(f"$ {PYTHON} publish_site.py" + (" --no-push" if args.no_push else ""))
+    else:
+        print("(skipping publish this cycle — --skip-publish)")
 
     if not args.dry_run:
         with open(CYCLE_LOG_PATH, "a", encoding="utf-8") as f:
