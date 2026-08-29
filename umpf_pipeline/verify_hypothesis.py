@@ -26,6 +26,7 @@ import argparse
 import glob
 import json
 import os
+import random
 import re
 import sys
 import time
@@ -183,13 +184,60 @@ def tavily_search(query: str, max_results: int = 5):
     return resp.json().get("results", [])
 
 
+# Rate-limit-shaped Tavily failures, added 2026-08-29 after a real production
+# run hit sustained HTTP 432s (Tavily's own rate/quota-limit status code) on
+# 11 of 17 verifications in one batch -- every query in each of those 11
+# calls failed, `run_searches` silently returned an empty list, and
+# `classify()` was handed "(no search results returned for any query)" as if
+# that were a real, evidence-based negative finding. The classifier itself
+# said so plainly in its own reasoning ("The absence of search results...
+# this lack of information means the hypothesis cannot be verified") and
+# STILL output a definitive NO_SIGNAL verdict -- a genuinely wrong signal
+# reaching the ledger, worse than either bug the same day's frozen-run audit
+# found, because it corrupts the actual Phase 2 classification, not a
+# secondary score or filename. 429 is the standard rate-limit code; 432 is
+# Tavily's own, confirmed directly against the real error text this run.
+TAVILY_RETRYABLE_STATUSES = {429, 432}
+
+
+def _tavily_search_with_retry(query: str, max_results: int = 5, max_retries: int = 3, base_delay: float = 3.0):
+    """Retry a Tavily call with exponential backoff + jitter on rate-limit-
+    shaped HTTP errors and on connection/timeout failures. A non-retryable
+    HTTP error (auth, bad request) re-raises immediately -- same
+    fail-fast-on-real-errors discipline as retry.py's OpenAI wrapper."""
+    last_exc = None
+    for attempt in range(max_retries + 1):
+        try:
+            return tavily_search(query, max_results=max_results)
+        except requests.exceptions.HTTPError as e:
+            status = e.response.status_code if e.response is not None else None
+            if status not in TAVILY_RETRYABLE_STATUSES:
+                raise
+            last_exc = e
+        except requests.exceptions.RequestException as e:
+            last_exc = e
+        if attempt == max_retries:
+            break
+        delay = base_delay * (2 ** attempt) + random.uniform(0, 1)
+        print(f"    ! Tavily rate-limited/transient error on {query!r} (attempt {attempt + 1}/{max_retries + 1}) — retrying in {delay:.1f}s")
+        time.sleep(delay)
+    raise last_exc
+
+
 def run_searches(queries):
+    """Returns (results, failed_query_count). The count matters: zero
+    results because every query genuinely errored out (rate-limited or
+    transient, even after retries) is a fundamentally different situation
+    from zero results because every query succeeded and legitimately found
+    nothing -- verify_one() treats them differently, see its own comment."""
     results = []
+    failed_queries = 0
     for q in queries:
         try:
-            hits = tavily_search(q)
+            hits = _tavily_search_with_retry(q)
         except requests.RequestException as e:
-            print(f"    ! Tavily search failed for {q!r}: {e}")
+            print(f"    ! Tavily search failed for {q!r} after retries: {e}")
+            failed_queries += 1
             continue
         for h in hits:
             results.append(
@@ -201,7 +249,7 @@ def run_searches(queries):
                 }
             )
         time.sleep(0.25)
-    return results
+    return results, failed_queries
 
 
 def classify(title, mode, domains, core_claim, search_results, rubric, slug=None):
@@ -315,11 +363,43 @@ def verify_one(filepath, rubric, dry_run=False):
 
     print(f"  → [{mode}] {title}")
     print(f"    queries: {queries}")
-    search_results = run_searches(queries)
-    print(f"    {len(search_results)} search results gathered")
+    search_results, failed_queries = run_searches(queries)
+    print(f"    {len(search_results)} search results gathered" + (f" ({failed_queries} of {len(queries)} queries failed after retries)" if failed_queries else ""))
 
-    result = classify(title, mode, domains, core_claim, search_results, rubric, slug=slug)
-    verdict = result["verdict"]
+    if not search_results and failed_queries == len(queries):
+        # Every single query failed outright (rate-limited or transient),
+        # not "searched successfully and found nothing." Don't let classify()
+        # guess a verdict from zero real evidence -- that's how a real
+        # infrastructure hiccup turned into a false NO_SIGNAL reaching the
+        # ledger (see run_searches()'s own comment for the incident this
+        # fixes). PENDING_VERIFICATION already exists as a real, handled
+        # status in score_hypotheses.py (held out of scoring) and
+        # assemble_experience_data.py (skips the verification-file lookup)
+        # -- this is the first code path that actually writes it, closing a
+        # gap where it was previously only ever set by hand.
+        #
+        # Known, disclosed scope limit: already_verified_slugs() below still
+        # treats a PENDING_VERIFICATION entry as "done," so --all-unverified
+        # will not automatically retry it on its own -- same as the original
+        # 2026-08-29 Failure 3 precedent, where PENDING_VERIFICATION entries
+        # were resolved by an explicit, deliberate re-run naming the specific
+        # files. Building automatic re-queueing would mean rewriting past
+        # ledger lines rather than only ever appending to it, which is a
+        # real, separate design question -- not one to settle inside this fix.
+        print(f"    ⚠️  All {len(queries)} queries failed even after retries — marking PENDING_VERIFICATION rather than guessing a verdict from no evidence.")
+        verdict = "PENDING_VERIFICATION"
+        result = {
+            "what_was_found": "No search results — every query failed (rate-limited or a transient network error), even after retries.",
+            "reasoning": (
+                f"All {len(queries)} search queries for this hypothesis failed before any results were "
+                "gathered, even after retrying with backoff. This is not a real negative finding -- "
+                "verification could not run at all. Re-run `verify_hypothesis.py` explicitly against this "
+                "file once the search API is healthy."
+            ),
+        }
+    else:
+        result = classify(title, mode, domains, core_claim, search_results, rubric, slug=slug)
+        verdict = result["verdict"]
     print(f"    verdict: {verdict}")
 
     if dry_run:

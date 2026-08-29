@@ -78,11 +78,33 @@ def read_if_exists(path):
 def find_by_substring(directory, key, suffix_hint=""):
     """Find the single file in `directory` whose name contains all the
     distinctive tokens of `key`. Returns (filename, content) or (None, None).
-    Prints ambiguous/failed matches for manual inspection."""
+    Prints ambiguous/failed matches for manual inspection.
+
+    2026-08-29 fix: try an EXACT filename first, before ever falling into
+    the substring search below. Found by running hypothesis_engine.py's new
+    filename-collision fix for real: a disambiguated slug like
+    "...janusian-control-theory-2" is, as a bare substring, contained in
+    BOTH "...janusian-control-theory.md" and "...janusian-control-theory-2.md"
+    -- so the base entry's own (unsuffixed) key matched two files here. The
+    "sorted by length" tie-break happened to resolve it correctly every time
+    this ran for real (a suffixed filename is always longer than its own
+    base, and a suffixed key is never a substring of the shorter base
+    filename) -- verified directly against experience_data.json's assembled
+    content, no real mix-up occurred -- but relying on that as a permanent
+    guarantee is exactly the kind of "worked by luck, not by design" gap
+    this project's own discipline exists to close. Exact match removes the
+    ambiguity outright rather than trusting the tie-break to keep landing
+    right."""
     if not os.path.isdir(directory):
         return None, None
     candidates = os.listdir(directory)
     key_norm = key.lower().replace("_", "-")
+    lower_to_real = {c.lower(): c for c in candidates}
+    for exact_candidate in (f"{key_norm}.md", f"{key_norm}-verification.md", f"{key_norm}-refutation.md"):
+        if exact_candidate in lower_to_real:
+            fn = lower_to_real[exact_candidate]
+            return fn, read_if_exists(os.path.join(directory, fn))
+
     exact_hits = [c for c in candidates if key_norm in c.lower()]
     if len(exact_hits) == 1:
         fn = exact_hits[0]

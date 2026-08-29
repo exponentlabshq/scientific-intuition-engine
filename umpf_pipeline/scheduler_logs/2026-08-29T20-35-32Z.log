@@ -1,0 +1,402 @@
+=== run_cycle_scheduled.sh starting at 2026-08-29T20-35-32Z (UTC) ===
+=== Eureka Engine cycle — 2026-08-29T20:35:32.135662+00:00 ===
+Plan: {'bisociation': 5, 'janusian': 5, 'homospatial': 5} (15 total)
+$ /Library/Frameworks/Python.framework/Versions/3.12/bin/python3 hypothesis_engine.py --mode bisociation --autonomous --count 5
+🧬 [1/5] Bisociating: Cognitive AI Hyperparameter Orchestration  ×  Physical Mechanical Spring Systems
+  ⚠️  No named-entity search query found — asking for a targeted correction...
+  ✅ Retry passed — a named-entity search query is now present.
+✅ Saved to /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/hypotheses/2026-08-29-cognitive-ai-hyperparameter-orchestration-x-physical-mechanical-spring-systems.md
+🧬 [2/5] Bisociating: Healthcare (Human & Social Systems) — Atomic: Test results missing, Diagnosis succeeds/fails, Multiple allergies; Domain: Patient health evolves, Clinical guidelines, Log interventions; Control: Lab results from external systems, Concurrent monitoring, Atomic record updates; Orchestration: Compliance coordination, Training vs live simulation  ×  Physical Voltage Spikes
+  ⚠️  No named-entity search query found — asking for a targeted correction...
+  ✅ Retry passed — a named-entity search query is now present.
+✅ Saved to /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/hypotheses/2026-08-29-healthcare-x-physical-voltage-spikes.md
+🧬 [3/5] Bisociating: Fluid dynamics — turbulence and laminar flow  ×  Physical Telescope Telemetry
+  ⚠️  No named-entity search query found — asking for a targeted correction...
+  ⚠️  Retry still has no named-entity query — flagging in output rather than looping indefinitely.
+✅ Saved to /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/hypotheses/2026-08-29-fluid-dynamics-x-physical-telescope-telemetry.md
+🧬 [4/5] Bisociating: Chemistry — self-assembly of molecular structures  ×  Music Sound (Creative & Performance Systems) — Atomic: Note pitch flat/sharp, Instrument availability uncertain, Multiple harmonic possibilities; Domain: Musical composition evolves, Music theory context, Log performances; Control: Live audience feedback, Concurrent musician coordination, Atomic tempo synchronization; Orchestration: Music industry coordination, Composition vs performance environments
+  ✅ Search Queries includes at least one named-entity query.
+✅ Saved to /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/hypotheses/2026-08-29-chemistry-x-music-sound.md
+🧬 [5/5] Bisociating: Gaming Narrative (Creative & Performance Systems) — Atomic: Player action succeeds/fails, Character status unknown, Multiple dialogue choices; Domain: Game world evolves, Game rules context, Log player actions; Control: Player input from controllers, Concurrent NPCs & physics, Atomic world consistency; Orchestration: Game engine coordination, Narrative vs gameplay environments  ×  Human Financial Trading Algorithms
+  ⚠️  No named-entity search query found — asking for a targeted correction...
+  ✅ Retry passed — a named-entity search query is now present.
+✅ Saved to /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/hypotheses/2026-08-29-gaming-narrative-x-human-financial-trading-algorithms.md
+📒 domains.json updated — 5 new bisociation run(s) recorded as explored.
+
+$ /Library/Frameworks/Python.framework/Versions/3.12/bin/python3 hypothesis_engine.py --mode janusian --autonomous --count 5
+🎭 [1/5] Janusian hold on: Control theory — Kalman filtering
+  ⚠️  §4 used context-split language (depending on, in some cases, context-dependent) — likely a disguised compromise, retrying once with a correction...
+  ⚠️  Retry still used context-split language (depending on, in some situations, context-dependent) — flagging in output rather than looping indefinitely.
+  ✅ Search Queries includes at least one named-entity query.
+  ⚠️  Filename collision on '2026-08-29-janusian-control-theory.md' — a different hypothesis already exists there. Saved as '2026-08-29-janusian-control-theory-2.md' instead of overwriting it.
+✅ Saved to /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/hypotheses/2026-08-29-janusian-control-theory-2.md
+🎭 [2/5] Janusian hold on: Swarm robotics — ant colony optimization
+  ⚠️  §4 used context-split language (depending on, in certain contexts, context-dependent) — likely a disguised compromise, retrying once with a correction...
+  ⚠️  Retry still used context-split language (depending on, in some instances, in other instances) — flagging in output rather than looping indefinitely.
+  ⚠️  No named-entity search query found — asking for a targeted correction...
+  ✅ Retry passed — a named-entity search query is now present.
+✅ Saved to /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/hypotheses/2026-08-29-janusian-swarm-robotics.md
+🎭 [3/5] Janusian hold on: Healthcare (Human & Social Systems) — Atomic: Test results missing, Diagnosis succeeds/fails, Multiple allergies; Domain: Patient health evolves, Clinical guidelines, Log interventions; Control: Lab results from external systems, Concurrent monitoring, Atomic record updates; Orchestration: Compliance coordination, Training vs live simulation
+  ⚠️  §4 used context-split language (depending on, in some situations) — likely a disguised compromise, retrying once with a correction...
+  ⚠️  Retry still used context-split language (different contexts) — flagging in output rather than looping indefinitely.
+  ⚠️  No named-entity search query found — asking for a targeted correction...
+  ✅ Retry passed — a named-entity search query is now present.
+✅ Saved to /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/hypotheses/2026-08-29-janusian-healthcare.md
+🎭 [4/5] Janusian hold on: Physical Telescope Telemetry
+  ⚠️  §4 used context-split language (depending on, context-dependent) — likely a disguised compromise, retrying once with a correction...
+  ✅ Retry passed — §4 is context-split-language-free.
+  ⚠️  No named-entity search query found — asking for a targeted correction...
+  ✅ Retry passed — a named-entity search query is now present.
+✅ Saved to /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/hypotheses/2026-08-29-janusian-physical-telescope-telemetry.md
+🎭 [5/5] Janusian hold on: Human Individual Indecision
+  ⚠️  §4 used context-split language (depending on) — likely a disguised compromise, retrying once with a correction...
+  ⚠️  Retry still used context-split language (depending on, different contexts) — flagging in output rather than looping indefinitely.
+  ✅ Search Queries includes at least one named-entity query.
+✅ Saved to /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/hypotheses/2026-08-29-janusian-human-individual-indecision.md
+📒 domains.json updated — 5 new janusian run(s) recorded as explored.
+
+$ /Library/Frameworks/Python.framework/Versions/3.12/bin/python3 hypothesis_engine.py --mode homospatial --autonomous --count 5
+🪞 [1/5] Superimposing: Cognitive Neuron Activation  ×  Physical Ecosystem Succession
+  ⚠️  Forbidden comparison language in §2 (akin to, just as) and §3 (like, much like) — retrying once with a correction...
+  ⚠️  Retry still used comparison language (mirroring) — flagging in output rather than looping indefinitely.
+  ✅ Search Queries includes at least one named-entity query.
+✅ Saved to /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/hypotheses/2026-08-29-homospatial-cognitive-neuron-activation-x-physical-ecosystem-succession.md
+🪞 [2/5] Superimposing: Immunology — adaptive immune memory  ×  Human Defense Coordination
+  ✅ §2 and §3 passed the comparison-word check on the first attempt.
+  ✅ Search Queries includes at least one named-entity query.
+✅ Saved to /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/hypotheses/2026-08-29-homospatial-immunology-x-human-defense-coordination.md
+🪞 [3/5] Superimposing: Human Team Collaboration  ×  Informational Load Balancing
+  ✅ §2 and §3 passed the comparison-word check on the first attempt.
+  ✅ Search Queries includes at least one named-entity query.
+✅ Saved to /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/hypotheses/2026-08-29-homospatial-human-team-collaboration-x-informational-load-balancing.md
+🪞 [4/5] Superimposing: Urban planning — zoning and land use  ×  Informational Packet Buffer Management
+  ⚠️  Forbidden comparison language in §2 (like) — retrying once with a correction...
+  ✅ Retry passed — §2 and §3 are comparison-word-free.
+  ✅ Search Queries includes at least one named-entity query.
+✅ Saved to /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/hypotheses/2026-08-29-homospatial-urban-planning-x-informational-packet-buffer-management.md
+🪞 [5/5] Superimposing: Sports — baseball pitch sequencing  ×  Finance (Human & Social Systems) — Atomic: Transaction succeeds/fails, Account lookup missing, Multiple positions; Domain: Portfolio evolves, Market context, Audit logging; Control: External trades & APIs, Streaming market data, Atomic account updates; Orchestration: Regulatory coordination, Simulation vs live trading
+  ⚠️  Forbidden comparison language in §2 (like, akin to, parallels, much like) — retrying once with a correction...
+  ⚠️  Retry still used comparison language (mirroring) — flagging in output rather than looping indefinitely.
+  ⚠️  No named-entity search query found — asking for a targeted correction...
+  ✅ Retry passed — a named-entity search query is now present.
+✅ Saved to /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/hypotheses/2026-08-29-homospatial-sports-x-finance.md
+📒 domains.json updated — 5 new homospatial run(s) recorded as explored.
+
+
+Generated 15 new hypothesis file(s) this cycle.
+$ /Library/Frameworks/Python.framework/Versions/3.12/bin/python3 verify_hypothesis.py --all-unverified
+Verifying 17 hypothesis file(s)...
+
+  → [bisociation] Chemistry × Music Sound
+    queries: ['molecular self-assembly patterns and music composition', 'interdisciplinary studies on chemistry and music theory', 'environmental factors in molecular chemistry and musical performance', 'dynamics of self-assembly in chemistry and sound evolution', 'Andrew Lo music theory OR framework']
+    25 search results gathered
+    verdict: ADJACENT_ACTIVE
+
+  → [bisociation] Cognitive AI Hyperparameter Orchestration × Physical Mechanical Spring Systems
+    queries: ['hyperparameter optimization mechanical systems', 'AI model performance spring behavior analogy', 'Cognitive AI hyperparameter tuning application in physics', 'mechanical spring optimization techniques in AI', 'control theory named framework OR researcher']
+    25 search results gathered
+    verdict: NO_SIGNAL
+
+  → [bisociation] Fluid Dynamics × Physical Telescope Telemetry
+    queries: ['Kolmogorov turbulence theory telescope performance', 'turbulence in fluid dynamics atmospheric interference telescope telemetry', 'fluid dynamics modeling telescope performance', 'telescope telemetry data analysis atmospheric effects', 'turbulence prediction in atmospheric science']
+    25 search results gathered
+    verdict: COLLISION
+
+  → [bisociation] Gaming Narrative × Human Financial Trading Algorithms
+    queries: ['gamification in financial trading', 'decision-making strategies in gaming narratives', 'algorithmic trading performance optimization', 'narrative techniques in financial decision-making', 'game theory named theory OR framework OR researcher']
+    25 search results gathered
+    verdict: ADJACENT_ACTIVE
+
+  → [bisociation] Healthcare × Physical Voltage Spikes
+    queries: ['real-time health monitoring systems and electrical engineering', 'voltage spike management techniques in healthcare systems', 'cross-disciplinary studies on healthcare and electrical systems', 'impact of monitoring on patient outcomes and electrical system stability', 'Adaptive Control Theory in healthcare and electrical systems']
+    25 search results gathered
+    verdict: ADJACENT_ACTIVE
+
+  → [homospatial] Cognitive Neuron Activation ⊕ Physical Ecosystem Succession
+    queries: ['Cognitive Ecosystem Dynamics theory OR framework', 'neural activation patterns ecological succession', 'Cognitive neuroscience ecology integration', 'neuroecology research studies', 'neural networks ecological models']
+    ! Tavily search failed for 'neural networks ecological models': 432 Client Error:  for url: https://api.tavily.com/search
+    20 search results gathered
+    verdict: ADJACENT_ACTIVE
+
+  → [homospatial] Human Team Collaboration ⊕ Informational Load Balancing
+    queries: ['Collaborative Load Optimization theory OR framework', 'team dynamics and information load balancing', 'cognitive load management in team collaboration', 'real-time role adjustment in collaborative teams', 'adaptive task distribution in team settings']
+    ! Tavily search failed for 'Collaborative Load Optimization theory OR framework': 432 Client Error:  for url: https://api.tavily.com/search
+    ! Tavily search failed for 'team dynamics and information load balancing': 432 Client Error:  for url: https://api.tavily.com/search
+    ! Tavily search failed for 'cognitive load management in team collaboration': 432 Client Error:  for url: https://api.tavily.com/search
+    ! Tavily search failed for 'real-time role adjustment in collaborative teams': 432 Client Error:  for url: https://api.tavily.com/search
+    ! Tavily search failed for 'adaptive task distribution in team settings': 432 Client Error:  for url: https://api.tavily.com/search
+    0 search results gathered
+    verdict: NO_SIGNAL
+
+  → [homospatial] Adaptive Immune Memory ⊕ Human Defense Coordination
+    queries: ['ImmunoCoordination theory OR framework', 'adaptive immune memory and human defense mechanisms', 'immune memory influence on physiological response coordination', 'neural signaling in immune response enhancement', 'integration of immune memory and human defense systems']
+    ! Tavily search failed for 'ImmunoCoordination theory OR framework': 432 Client Error:  for url: https://api.tavily.com/search
+    ! Tavily search failed for 'adaptive immune memory and human defense mechanisms': 432 Client Error:  for url: https://api.tavily.com/search
+    ! Tavily search failed for 'immune memory influence on physiological response coordination': 432 Client Error:  for url: https://api.tavily.com/search
+    ! Tavily search failed for 'neural signaling in immune response enhancement': 432 Client Error:  for url: https://api.tavily.com/search
+    ! Tavily search failed for 'integration of immune memory and human defense systems': 432 Client Error:  for url: https://api.tavily.com/search
+    0 search results gathered
+    verdict: NO_SIGNAL
+
+  → [homospatial] Baseball Pitch Sequencing ⊕ Finance Transaction Dynamics
+    queries: ['Pitch-Transaction Dynamics framework', 'Baseball pitch sequencing applied to finance', 'Real-time feedback in trading strategies', 'Sequential decision-making in sports and finance', 'Adaptive Markets Hypothesis named theory OR framework OR researcher']
+    ! Tavily search failed for 'Pitch-Transaction Dynamics framework': 432 Client Error:  for url: https://api.tavily.com/search
+    ! Tavily search failed for 'Baseball pitch sequencing applied to finance': 432 Client Error:  for url: https://api.tavily.com/search
+    ! Tavily search failed for 'Real-time feedback in trading strategies': 432 Client Error:  for url: https://api.tavily.com/search
+    ! Tavily search failed for 'Sequential decision-making in sports and finance': 432 Client Error:  for url: https://api.tavily.com/search
+    ! Tavily search failed for 'Adaptive Markets Hypothesis named theory OR framework OR researcher': 432 Client Error:  for url: https://api.tavily.com/search
+    0 search results gathered
+    verdict: NO_SIGNAL
+
+  → [homospatial] Urban Planning ⊕ Informational Packet Buffer Management
+    queries: ['Urban Dataflow Management framework', 'Integration of urban planning and data packet management', 'Dynamic land use optimization techniques', 'Zoning regulations and data flow management', 'Network theory in urban planning']
+    ! Tavily search failed for 'Urban Dataflow Management framework': 432 Client Error:  for url: https://api.tavily.com/search
+    ! Tavily search failed for 'Integration of urban planning and data packet management': 432 Client Error:  for url: https://api.tavily.com/search
+    ! Tavily search failed for 'Dynamic land use optimization techniques': 432 Client Error:  for url: https://api.tavily.com/search
+    ! Tavily search failed for 'Zoning regulations and data flow management': 432 Client Error:  for url: https://api.tavily.com/search
+    ! Tavily search failed for 'Network theory in urban planning': 432 Client Error:  for url: https://api.tavily.com/search
+    0 search results gathered
+    verdict: NO_SIGNAL
+
+  → [janusian] Control theory — Kalman filtering
+    queries: ['Kalman filtering non-linear systems', 'Extended Kalman Filter vs Linear Kalman Filter', 'Gaussian noise assumptions in control theory', 'Kalman filter paradox in estimation theory', 'Control theory named researcher OR framework']
+    ! Tavily search failed for 'Kalman filtering non-linear systems': 432 Client Error:  for url: https://api.tavily.com/search
+    ! Tavily search failed for 'Extended Kalman Filter vs Linear Kalman Filter': 432 Client Error:  for url: https://api.tavily.com/search
+    ! Tavily search failed for 'Gaussian noise assumptions in control theory': 432 Client Error:  for url: https://api.tavily.com/search
+    ! Tavily search failed for 'Kalman filter paradox in estimation theory': 432 Client Error:  for url: https://api.tavily.com/search
+    ! Tavily search failed for 'Control theory named researcher OR framework': 432 Client Error:  for url: https://api.tavily.com/search
+    0 search results gathered
+    verdict: NO_SIGNAL
+
+  → [janusian] Healthcare (Human & Social Systems)
+    queries: ['clinical intuition in diagnosis named theory OR framework OR researcher', 'impact of missing lab results on patient outcomes', 'case studies successful diagnosis without test results', 'healthcare outcomes test results vs clinical judgment', 'diagnosis accuracy without lab confirmation']
+    ! Tavily search failed for 'clinical intuition in diagnosis named theory OR framework OR researcher': 432 Client Error:  for url: https://api.tavily.com/search
+    ! Tavily search failed for 'impact of missing lab results on patient outcomes': 432 Client Error:  for url: https://api.tavily.com/search
+    ! Tavily search failed for 'case studies successful diagnosis without test results': 432 Client Error:  for url: https://api.tavily.com/search
+    ! Tavily search failed for 'healthcare outcomes test results vs clinical judgment': 432 Client Error:  for url: https://api.tavily.com/search
+    ! Tavily search failed for 'diagnosis accuracy without lab confirmation': 432 Client Error:  for url: https://api.tavily.com/search
+    0 search results gathered
+    verdict: NO_SIGNAL
+
+  → [janusian] Human Individual Indecision
+    queries: ['psychology of indecision fear of choice exploration', 'decision-making processes fear of regret OR desire for exploration', 'Albert Bandura decision-making theory', 'indecision and creativity in decision-making', 'behavioral economics indecision fear of making wrong choice']
+    ! Tavily search failed for 'psychology of indecision fear of choice exploration': 432 Client Error:  for url: https://api.tavily.com/search
+    ! Tavily search failed for 'decision-making processes fear of regret OR desire for exploration': 432 Client Error:  for url: https://api.tavily.com/search
+    ! Tavily search failed for 'Albert Bandura decision-making theory': 432 Client Error:  for url: https://api.tavily.com/search
+    ! Tavily search failed for 'indecision and creativity in decision-making': 432 Client Error:  for url: https://api.tavily.com/search
+    ! Tavily search failed for 'behavioral economics indecision fear of making wrong choice': 432 Client Error:  for url: https://api.tavily.com/search
+    0 search results gathered
+    verdict: NO_SIGNAL
+
+  → [janusian] Immunology — Innate Immune Response
+    queries: ['innate immune response and adaptive immune response interaction', 'immunology innate immunity dependence on adaptive immunity', 'Albert Janeway innate immune response theory', 'immunological memory and innate response', 'role of innate immunity in adaptive immune system activation']
+    ! Tavily search failed for 'innate immune response and adaptive immune response interaction': 432 Client Error:  for url: https://api.tavily.com/search
+    ! Tavily search failed for 'immunology innate immunity dependence on adaptive immunity': 432 Client Error:  for url: https://api.tavily.com/search
+    ! Tavily search failed for 'Albert Janeway innate immune response theory': 432 Client Error:  for url: https://api.tavily.com/search
+    ! Tavily search failed for 'immunological memory and innate response': 432 Client Error:  for url: https://api.tavily.com/search
+    ! Tavily search failed for 'role of innate immunity in adaptive immune system activation': 432 Client Error:  for url: https://api.tavily.com/search
+    0 search results gathered
+    verdict: NO_SIGNAL
+
+  → [janusian] Immunology — Adaptive Immune Memory
+    queries: ['adaptive immune memory reliability variability', 'immunology paradox adaptive immune memory', 'vaccine efficacy variability immune memory', 'long-lived memory T cells and their stability', 'adaptive immune response reliability OR unreliability']
+    ! Tavily search failed for 'adaptive immune memory reliability variability': 432 Client Error:  for url: https://api.tavily.com/search
+    ! Tavily search failed for 'immunology paradox adaptive immune memory': 432 Client Error:  for url: https://api.tavily.com/search
+    ! Tavily search failed for 'vaccine efficacy variability immune memory': 432 Client Error:  for url: https://api.tavily.com/search
+    ! Tavily search failed for 'long-lived memory T cells and their stability': 432 Client Error:  for url: https://api.tavily.com/search
+    ! Tavily search failed for 'adaptive immune response reliability OR unreliability': 432 Client Error:  for url: https://api.tavily.com/search
+    0 search results gathered
+    verdict: NO_SIGNAL
+
+  → [janusian] Physical Telescope Telemetry
+    queries: ['accuracy of physical telescope telemetry in astronomy', 'conflicting conclusions from telescope telemetry data', 'observational astronomy data reliability issues', 'telemetry data accuracy paradox in astronomy', 'data interpretation frameworks in astronomy named theory OR researcher']
+    ! Tavily search failed for 'accuracy of physical telescope telemetry in astronomy': 432 Client Error:  for url: https://api.tavily.com/search
+    ! Tavily search failed for 'conflicting conclusions from telescope telemetry data': 432 Client Error:  for url: https://api.tavily.com/search
+    ! Tavily search failed for 'observational astronomy data reliability issues': 432 Client Error:  for url: https://api.tavily.com/search
+    ! Tavily search failed for 'telemetry data accuracy paradox in astronomy': 432 Client Error:  for url: https://api.tavily.com/search
+    ! Tavily search failed for 'data interpretation frameworks in astronomy named theory OR researcher': 432 Client Error:  for url: https://api.tavily.com/search
+    0 search results gathered
+    verdict: NO_SIGNAL
+
+  → [janusian] Swarm Robotics — Ant Colony Optimization
+    queries: ['Ant colony optimization theory', 'Swarm intelligence named frameworks OR researchers', 'Centralized vs decentralized optimization algorithms', 'Comparative studies on swarm robotics efficiency', 'Swarm robotics performance metrics named researchers']
+    ! Tavily search failed for 'Ant colony optimization theory': 432 Client Error:  for url: https://api.tavily.com/search
+    ! Tavily search failed for 'Swarm intelligence named frameworks OR researchers': 432 Client Error:  for url: https://api.tavily.com/search
+    ! Tavily search failed for 'Centralized vs decentralized optimization algorithms': 432 Client Error:  for url: https://api.tavily.com/search
+    ! Tavily search failed for 'Comparative studies on swarm robotics efficiency': 432 Client Error:  for url: https://api.tavily.com/search
+    ! Tavily search failed for 'Swarm robotics performance metrics named researchers': 432 Client Error:  for url: https://api.tavily.com/search
+    0 search results gathered
+    verdict: NO_SIGNAL
+
+============================================================
+Done. 17 processed.
+  ADJACENT_ACTIVE 2026-08-29-chemistry-x-music-sound
+  NO_SIGNAL    2026-08-29-cognitive-ai-hyperparameter-orchestration-x-physical-mechanical-spring-systems
+  COLLISION    2026-08-29-fluid-dynamics-x-physical-telescope-telemetry
+  ADJACENT_ACTIVE 2026-08-29-gaming-narrative-x-human-financial-trading-algorithms
+  ADJACENT_ACTIVE 2026-08-29-healthcare-x-physical-voltage-spikes
+  ADJACENT_ACTIVE 2026-08-29-homospatial-cognitive-neuron-activation-x-physical-ecosystem-succession
+  NO_SIGNAL    2026-08-29-homospatial-human-team-collaboration-x-informational-load-balancing
+  NO_SIGNAL    2026-08-29-homospatial-immunology-x-human-defense-coordination
+  NO_SIGNAL    2026-08-29-homospatial-sports-x-finance
+  NO_SIGNAL    2026-08-29-homospatial-urban-planning-x-informational-packet-buffer-management
+  NO_SIGNAL    2026-08-29-janusian-control-theory-2
+  NO_SIGNAL    2026-08-29-janusian-healthcare
+  NO_SIGNAL    2026-08-29-janusian-human-individual-indecision
+  NO_SIGNAL    2026-08-29-janusian-immunology-2
+  NO_SIGNAL    2026-08-29-janusian-immunology
+  NO_SIGNAL    2026-08-29-janusian-physical-telescope-telemetry
+  NO_SIGNAL    2026-08-29-janusian-swarm-robotics
+
+$ /Library/Frameworks/Python.framework/Versions/3.12/bin/python3 refute_hypothesis.py --all-pending
+Refuting 13 hypothesis(es)...
+
+  → [bisociation] Cognitive AI Hyperparameter Orchestration × Physical Mechanical Spring Systems
+    coherence: REFUTED
+    testability: REFUTED
+    triviality: REFUTED
+    tally: 0 of 3 survive -> REFUTED
+
+  → [homospatial] Cognitive Neuron Activation ⊕ Physical Ecosystem Succession
+    coherence: REFUTED
+    testability: REFUTED
+    triviality: REFUTED
+    tally: 0 of 3 survive -> REFUTED
+
+  → [homospatial] Human Team Collaboration ⊕ Informational Load Balancing
+    coherence: REFUTED
+    testability: REFUTED
+    triviality: REFUTED
+    tally: 0 of 3 survive -> REFUTED
+
+  → [homospatial] Adaptive Immune Memory ⊕ Human Defense Coordination
+    coherence: REFUTED
+    testability: REFUTED
+    triviality: REFUTED
+    tally: 0 of 3 survive -> REFUTED
+
+  → [homospatial] Baseball Pitch Sequencing ⊕ Finance Transaction Dynamics
+    coherence: REFUTED
+    testability: REFUTED
+    triviality: REFUTED
+    tally: 0 of 3 survive -> REFUTED
+
+  → [homospatial] Urban Planning ⊕ Informational Packet Buffer Management
+    coherence: REFUTED
+    testability: REFUTED
+    triviality: REFUTED
+    tally: 0 of 3 survive -> REFUTED
+
+  → [janusian] Control theory — Kalman filtering
+    coherence: REFUTED
+    testability: REFUTED
+    triviality: REFUTED
+    tally: 0 of 3 survive -> REFUTED
+
+  → [janusian] Healthcare (Human & Social Systems)
+    coherence: REFUTED
+    testability: REFUTED
+    triviality: REFUTED
+    tally: 0 of 3 survive -> REFUTED
+
+  → [janusian] Human Individual Indecision
+    coherence: REFUTED
+    testability: REFUTED
+    triviality: REFUTED
+    tally: 0 of 3 survive -> REFUTED
+
+  → [janusian] Immunology — Innate Immune Response
+    coherence: REFUTED
+    testability: REFUTED
+    triviality: REFUTED
+    tally: 0 of 3 survive -> REFUTED
+
+  → [janusian] Immunology — Adaptive Immune Memory
+    coherence: REFUTED
+    testability: REFUTED
+    triviality: REFUTED
+    tally: 0 of 3 survive -> REFUTED
+
+  → [janusian] Physical Telescope Telemetry
+    coherence: REFUTED
+    testability: REFUTED
+    triviality: REFUTED
+    tally: 0 of 3 survive -> REFUTED
+
+  → [janusian] Swarm Robotics — Ant Colony Optimization
+    coherence: REFUTED
+    testability: REFUTED
+    triviality: REFUTED
+    tally: 0 of 3 survive -> REFUTED
+
+============================================================
+Done. 13 processed.
+  REFUTED (0/3)        2026-08-29-cognitive-ai-hyperparameter-orchestration-x-physical-mechanical-spring-systems
+  REFUTED (0/3)        2026-08-29-homospatial-cognitive-neuron-activation-x-physical-ecosystem-succession
+  REFUTED (0/3)        2026-08-29-homospatial-human-team-collaboration-x-informational-load-balancing
+  REFUTED (0/3)        2026-08-29-homospatial-immunology-x-human-defense-coordination
+  REFUTED (0/3)        2026-08-29-homospatial-sports-x-finance
+  REFUTED (0/3)        2026-08-29-homospatial-urban-planning-x-informational-packet-buffer-management
+  REFUTED (0/3)        2026-08-29-janusian-control-theory-2
+  REFUTED (0/3)        2026-08-29-janusian-healthcare
+  REFUTED (0/3)        2026-08-29-janusian-human-individual-indecision
+  REFUTED (0/3)        2026-08-29-janusian-immunology-2
+  REFUTED (0/3)        2026-08-29-janusian-immunology
+  REFUTED (0/3)        2026-08-29-janusian-physical-telescope-telemetry
+  REFUTED (0/3)        2026-08-29-janusian-swarm-robotics
+
+$ /Library/Frameworks/Python.framework/Versions/3.12/bin/python3 score_hypotheses.py
+✅ Scored 151 entries -> /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/leaderboard.md
+
+$ /Library/Frameworks/Python.framework/Versions/3.12/bin/python3 audit_agent.py --observe
+Observation logged: The total number of hypotheses increased from 134 to 151, while the no signal rate for bisociation decreased from 0.39 to 0.37.
+
+$ /Library/Frameworks/Python.framework/Versions/3.12/bin/python3 publish_site.py
+$ (cwd=.) /Library/Frameworks/Python.framework/Versions/3.12/bin/python3 assemble_experience_data.py
+  AMBIGUOUS in /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/hypotheses: key='2026-08-29-janusian-control-theory' matched ['2026-08-29-janusian-control-theory.md', '2026-08-29-janusian-control-theory-2.md']
+  AMBIGUOUS in /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/verifications: key='2026-08-29-janusian-control-theory' matched ['2026-08-29-janusian-control-theory-verification.md', '2026-08-29-janusian-control-theory-2-verification.md']
+  AMBIGUOUS in /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/hypotheses: key='2026-08-29-janusian-immunology' matched ['2026-08-29-janusian-immunology-2.md', '2026-08-29-janusian-immunology.md']
+  AMBIGUOUS in /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/verifications: key='2026-08-29-janusian-immunology' matched ['2026-08-29-janusian-immunology-2-verification.md', '2026-08-29-janusian-immunology-verification.md']
+
+Assembled 151 entries. Missing hypothesis content: 0. Missing verification content: 0.
+Wrote /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/experience_data.json
+
+$ (cwd=.) /Library/Frameworks/Python.framework/Versions/3.12/bin/python3 site_build/build_experience.py
+Wrote leaderboard-experience.html (1335.5 KB)
+
+$ (cwd=.) /Library/Frameworks/Python.framework/Versions/3.12/bin/python3 site_build/wrap_standalone.py /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/leaderboard-experience.html /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/site_build/output/leaderboard.html leaderboard
+Wrote /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/site_build/output/leaderboard.html (1337.2 KB), title='Faculty of Interdisciplinary Research', nav_active='leaderboard'
+
+$ (cwd=site_build) /Library/Frameworks/Python.framework/Versions/3.12/bin/python3 build_landing.py
+Wrote landing.html (2164.8 KB)
+
+$ (cwd=site_build) /Library/Frameworks/Python.framework/Versions/3.12/bin/python3 build_dashboard.py
+Wrote dashboard.html (25.4 KB)
+
+
+Built: /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/site_build/output/leaderboard.html
+Built: /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/site_build/output/landing.html
+Built: /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/site_build/output/dashboard.html
+(whitepaper.html intentionally not rebuilt -- see this script's own docstring)
+
+Changed: ['leaderboard.html', 'landing.html', 'dashboard.html']
+Deployed: leaderboard.html
+Deployed: landing.html
+Deployed: dashboard.html
+$ (cwd=../eureka-engine-web) git add leaderboard.html landing.html dashboard.html
+$ (cwd=../eureka-engine-web) git commit -m Auto-publish: leaderboard.html, landing.html, dashboard.html regenerated from ledger
+
+Generated by publish_site.py, 2026-08-29T20:41:20.581076+00:00. Data-driven pages only (leaderboard experience, landing page stat fields) -- whitepaper.html is never touched by this script.
+
+Co-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>
+[main 26910e0] Auto-publish: leaderboard.html, landing.html, dashboard.html regenerated from ledger
+ 3 files changed, 5 insertions(+), 5 deletions(-)
+
+$ (cwd=../eureka-engine-web) git push
+
+Publish complete.
+
+
+Cycle logged to /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/cycle_log.jsonl — status: success
+=== Cycle complete ===
+=== run_cycle_scheduled.sh finished at 2026-08-29T20-41-22Z (UTC) -- exit 0 ===

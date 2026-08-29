@@ -212,6 +212,26 @@
     [
       "Chemistry — self-assembly of molecular structures",
       "Creative Album Production Orchestration"
+    ],
+    [
+      "Cognitive AI Hyperparameter Orchestration",
+      "Physical Mechanical Spring Systems"
+    ],
+    [
+      "Healthcare (Human & Social Systems) — Atomic: Test results missing, Diagnosis succeeds/fails, Multiple allergies; Domain: Patient health evolves, Clinical guidelines, Log interventions; Control: Lab results from external systems, Concurrent monitoring, Atomic record updates; Orchestration: Compliance coordination, Training vs live simulation",
+      "Physical Voltage Spikes"
+    ],
+    [
+      "Fluid dynamics — turbulence and laminar flow",
+      "Physical Telescope Telemetry"
+    ],
+    [
+      "Chemistry — self-assembly of molecular structures",
+      "Music Sound (Creative & Performance Systems) — Atomic: Note pitch flat/sharp, Instrument availability uncertain, Multiple harmonic possibilities; Domain: Musical composition evolves, Music theory context, Log performances; Control: Live audience feedback, Concurrent musician coordination, Atomic tempo synchronization; Orchestration: Music industry coordination, Composition vs performance environments"
+    ],
+    [
+      "Gaming Narrative (Creative & Performance Systems) — Atomic: Player action succeeds/fails, Character status unknown, Multiple dialogue choices; Domain: Game world evolves, Game rules context, Log player actions; Control: Player input from controllers, Concurrent NPCs & physics, Atomic world consistency; Orchestration: Game engine coordination, Narrative vs gameplay environments",
+      "Human Financial Trading Algorithms"
     ]
   ],
   "already_janused": [
@@ -251,7 +271,12 @@
     "Architecture — modular/prefab construction",
     "Architecture (Creative & Performance Systems) — Atomic: Building permits approved/denied, Material availability uncertain, Multiple design options; Domain: Building construction progresses, Building codes, Log construction events; Control: Building inspections & permits, Concurrent construction, Atomic structural updates; Orchestration: City planning coordination, Design vs construction environments",
     "Creative Improvisation Adjustment",
-    "Human Social Influence"
+    "Human Social Influence",
+    "Control theory — Kalman filtering",
+    "Swarm robotics — ant colony optimization",
+    "Healthcare (Human & Social Systems) — Atomic: Test results missing, Diagnosis succeeds/fails, Multiple allergies; Domain: Patient health evolves, Clinical guidelines, Log interventions; Control: Lab results from external systems, Concurrent monitoring, Atomic record updates; Orchestration: Compliance coordination, Training vs live simulation",
+    "Physical Telescope Telemetry",
+    "Human Individual Indecision"
   ],
   "already_homospatial": [
     [
@@ -425,6 +450,26 @@
     [
       "Healthcare (Human & Social Systems) — Atomic: Test results missing, Diagnosis succeeds/fails, Multiple allergies; Domain: Patient health evolves, Clinical guidelines, Log interventions; Control: Lab results from external systems, Concurrent monitoring, Atomic record updates; Orchestration: Compliance coordination, Training vs live simulation",
       "Creative Idea Uncertainty"
+    ],
+    [
+      "Cognitive Neuron Activation",
+      "Physical Ecosystem Succession"
+    ],
+    [
+      "Immunology — adaptive immune memory",
+      "Human Defense Coordination"
+    ],
+    [
+      "Human Team Collaboration",
+      "Informational Load Balancing"
+    ],
+    [
+      "Urban planning — zoning and land use",
+      "Informational Packet Buffer Management"
+    ],
+    [
+      "Sports — baseball pitch sequencing",
+      "Finance (Human & Social Systems) — Atomic: Transaction succeeds/fails, Account lookup missing, Multiple positions; Domain: Portfolio evolves, Market context, Audit logging; Control: External trades & APIs, Streaming market data, Atomic account updates; Orchestration: Regulatory coordination, Simulation vs live trading"
     ]
   ],
   "domain_pool": [
