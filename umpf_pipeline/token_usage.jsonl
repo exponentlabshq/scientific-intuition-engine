@@ -1,0 +1,4 @@
+{"timestamp": "2026-08-29T06:40:55.040958+00:00", "phase": "refutation", "model": "gpt-4o", "prompt_tokens": 1240, "completion_tokens": 91, "total_tokens": 1331, "hypothesis_slug": "2026-08-29-ecology-x-materials-science", "lens": "coherence"}
+{"timestamp": "2026-08-29T06:40:56.432550+00:00", "phase": "refutation", "model": "gpt-4o", "prompt_tokens": 1211, "completion_tokens": 96, "total_tokens": 1307, "hypothesis_slug": "2026-08-29-ecology-x-materials-science", "lens": "testability"}
+{"timestamp": "2026-08-29T06:40:58.107892+00:00", "phase": "refutation", "model": "gpt-4o", "prompt_tokens": 1205, "completion_tokens": 80, "total_tokens": 1285, "hypothesis_slug": "2026-08-29-ecology-x-materials-science", "lens": "triviality"}
+{"timestamp": "2026-08-29T06:43:18.454434+00:00", "phase": "audit", "model": "gpt-4o", "prompt_tokens": 3753, "completion_tokens": 446, "total_tokens": 4199}

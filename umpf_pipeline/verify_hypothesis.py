@@ -35,6 +35,8 @@ import requests
 from dotenv import find_dotenv, load_dotenv
 from openai import OpenAI
 
+from token_tracker import log_usage
+
 load_dotenv(find_dotenv(usecwd=False))
 TAVILY_API_KEY = os.getenv("TAVILY_API_KEY")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
@@ -155,7 +157,7 @@ def run_searches(queries):
     return results
 
 
-def classify(title, mode, domains, core_claim, search_results, rubric):
+def classify(title, mode, domains, core_claim, search_results, rubric, slug=None):
     results_block = "\n\n".join(
         f"[{i + 1}] {r['title']}\nURL: {r['url']}\nQuery: {r['query']}\nSnippet: {r['content']}"
         for i, r in enumerate(search_results)
@@ -186,6 +188,7 @@ def classify(title, mode, domains, core_claim, search_results, rubric):
         temperature=0.1,
         response_format={"type": "json_object"},
     )
+    log_usage("verification", "gpt-4o", resp.usage, hypothesis_slug=slug)
     parsed = json.loads(resp.choices[0].message.content)
     if parsed.get("verdict") not in VALID_VERDICTS:
         raise ValueError(f"Model returned an invalid verdict: {parsed.get('verdict')!r}")
@@ -267,7 +270,7 @@ def verify_one(filepath, rubric, dry_run=False):
     search_results = run_searches(queries)
     print(f"    {len(search_results)} search results gathered")
 
-    result = classify(title, mode, domains, core_claim, search_results, rubric)
+    result = classify(title, mode, domains, core_claim, search_results, rubric, slug=slug)
     verdict = result["verdict"]
     print(f"    verdict: {verdict}")
 

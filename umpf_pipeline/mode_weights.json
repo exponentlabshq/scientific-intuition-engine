@@ -1,0 +1,10 @@
+{
+  "_comment": "Relative weights run_cycle.py uses to split a --total N run across the three generation modes. Not hand-picked -- derived directly from the 2026-08-29 ROTI audit's real per-mode average points across all 58 ledger entries at the time (bisociation 20.6, janusian 20.0, homospatial 24.3 avg pts/hypothesis), normalized to sum to 1.0. homospatial also has the lowest NO_SIGNAL-trigger rate of the two-domain modes (23% vs bisociation's 31%), meaning it both scores higher on average AND triggers the expensive refutation step less often -- the clearest real lever the audit found. This file is a legitimate target for audit_agent.py to propose changes to as the ledger grows and the real numbers shift; a proposal that touches this file writes a NEW version under proposals/ for review, it does not edit this file directly (see audit_agent.py's own file-boundary discipline).",
+  "_derived_from": "58-entry ledger as of 2026-08-29 (run_cycle.py commit) -- bisociation n=16 avg=20.6, janusian n=16 avg=20.0, homospatial n=13 avg=24.3",
+  "_last_reviewed": "2026-08-29",
+  "weights": {
+    "bisociation": 0.317,
+    "janusian": 0.308,
+    "homospatial": 0.375
+  }
+}

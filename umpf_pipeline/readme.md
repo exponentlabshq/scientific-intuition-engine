@@ -113,11 +113,32 @@ search, structured GPT-4o classification, and the file/ledger write paths all co
 scratch output before ever touching the real ledger).
 
 **What's still true:** this doesn't remove the human editorial layer — a batch run unattended is
-worth spot-checking the way any of this repo's automation is, and NO_SIGNAL cases still route to
-the 3-independent-agent adversarial refutation protocol (still Claude-orchestrated; refutation was
-never in scope for this script). What it removes is the actual bottleneck: generation was never
-slow, verification throughput was, and that throughput is no longer capped by one session's
-WebSearch budget.
+worth spot-checking the way any of this repo's automation is. What it removed was the actual
+bottleneck: generation was never slow, verification throughput was, and that throughput is no
+longer capped by one session's WebSearch budget.
+
+**Update (2026-08-29) — refutation is unattended too now, and so is the whole cycle.** The
+paragraph above used to say refutation "was never in scope" for a standalone script and remained
+Claude-orchestrated. That's no longer true. `refute_hypothesis.py` runs the exact same 3-lens
+rubric (`refutations/README.md`) as three independent OpenAI completions instead of three Claude
+Agent subagents — same independence discipline (each lens is its own isolated call, none told the
+others' findings, default-to-REFUTED under uncertainty), at a measured ~26x lower token cost per
+lens (1,308 tokens via OpenAI vs. ~34,700 via a Claude subagent, confirmed by running both against
+the same real case). `run_cycle.py` chains generation, verification, and refutation into one
+command (`python3 run_cycle.py --total N`), cron-schedulable, with zero Claude Code session
+required for routine batches — the only remaining reason to open one is oversight, or genuinely
+novel engineering work on the pipeline itself.
+
+**Update (2026-08-29) — the pipeline can now observe and improve itself, within a hard boundary.**
+`audit_agent.py` reads real ledger and token-usage data, and proposes exactly one grounded,
+additive improvement per run (a new mode-weighting policy, a new alternative scoring/badge scheme,
+a new pre-filter heuristic) — written only to `proposals/` (rationale) and `alt_scoring/` (runnable
+code, if any), never as an edit to an existing file. Nothing else in this pipeline imports or
+executes `alt_scoring/`'s output automatically; a proposal becomes real only when a human reads it,
+runs it, and manually promotes whatever it changes. The first real proposal this produced was
+grounded correctly in real numbers but its generated code had a real bug (see
+`proposals/README.md`) — left as the honest first example of why the review gate isn't decorative,
+not quietly fixed and hidden.
 
 ## License & Citation
 - License: MIT (© 2025 Michael Jagdeo, Exponent Labs LLC)  

@@ -65,6 +65,8 @@ from datetime import datetime, timezone
 from dotenv import load_dotenv, find_dotenv
 from openai import OpenAI
 
+from token_tracker import log_usage
+
 # Load environment variables — find_dotenv() walks up from this file's
 # location, so it picks up talentOS-2026/.env (the vault root) automatically.
 load_dotenv(find_dotenv(usecwd=False))
@@ -244,6 +246,7 @@ def run_hypothesis(domain_a: str, domain_b: str = None, model: str = "gpt-4o-min
         {"role": "user", "content": user_content},
     ]
     resp = client.chat.completions.create(model=model, messages=messages, temperature=0.4)
+    log_usage("generation", model, resp.usage, extra={"mode": mode, "retry": False})
     generated_date = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     raw_output = resp.choices[0].message.content
 
@@ -263,6 +266,7 @@ def run_hypothesis(domain_a: str, domain_b: str = None, model: str = "gpt-4o-min
             messages.append({"role": "assistant", "content": raw_output})
             messages.append({"role": "user", "content": correction})
             resp2 = client.chat.completions.create(model=model, messages=messages, temperature=0.4)
+            log_usage("generation", model, resp2.usage, extra={"mode": mode, "retry": True})
             raw_output2 = resp2.choices[0].message.content
             section3_retry = _extract_section(raw_output2, "3. The Emergent Third Thing")
             remaining = _find_comparison_words(section3_retry)
