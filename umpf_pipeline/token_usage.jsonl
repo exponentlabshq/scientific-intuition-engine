@@ -72,3 +72,4 @@
 {"timestamp": "2026-08-29T07:37:27.134452+00:00", "phase": "refutation", "model": "gpt-4o", "prompt_tokens": 1132, "completion_tokens": 96, "total_tokens": 1228, "hypothesis_slug": "2026-08-29-janusian-physical-bridge-cable-tension", "lens": "coherence"}
 {"timestamp": "2026-08-29T07:37:28.318814+00:00", "phase": "refutation", "model": "gpt-4o", "prompt_tokens": 1103, "completion_tokens": 97, "total_tokens": 1200, "hypothesis_slug": "2026-08-29-janusian-physical-bridge-cable-tension", "lens": "testability"}
 {"timestamp": "2026-08-29T07:37:29.479776+00:00", "phase": "refutation", "model": "gpt-4o", "prompt_tokens": 1097, "completion_tokens": 77, "total_tokens": 1174, "hypothesis_slug": "2026-08-29-janusian-physical-bridge-cable-tension", "lens": "triviality"}
+{"timestamp": "2026-08-29T07:42:27.414867+00:00", "phase": "audit", "model": "gpt-4o", "prompt_tokens": 3866, "completion_tokens": 470, "total_tokens": 4336}

@@ -117,9 +117,14 @@ def load_scoring_source() -> str:
 
 
 def existing_proposal_count() -> int:
+    """Count only real proposal files, not proposals/README.md -- a prior
+    version of this function globbed *.md unconditionally and counted the
+    README as a proposal, which silently skipped a number (001, then 003,
+    no 002) the first time this ran twice. Match the actual naming
+    convention instead of every markdown file in the directory."""
     if not os.path.exists(PROPOSALS_DIR):
         return 0
-    return len(glob.glob(os.path.join(PROPOSALS_DIR, "*.md")))
+    return len(glob.glob(os.path.join(PROPOSALS_DIR, "*-proposal-*.md")))
 
 
 def build_prompt(stats: dict, scoring_source: str) -> tuple:
