@@ -124,6 +124,10 @@
     [
       "Game theory — repeated prisoner's dilemma",
       "Informational Measurement Data Evolution"
+    ],
+    [
+      "Organizational theory — self-organizing teams",
+      "Finance (Human & Social Systems) — Atomic: Transaction succeeds/fails, Account lookup missing, Multiple positions; Domain: Portfolio evolves, Market context, Audit logging; Control: External trades & APIs, Streaming market data, Atomic account updates; Orchestration: Regulatory coordination, Simulation vs live trading"
     ]
   ],
   "already_janused": [
@@ -211,6 +215,10 @@
     [
       "Game theory — Nash bargaining",
       "Human Social Network Dynamics"
+    ],
+    [
+      "Creative Narrative Arc Development",
+      "Human Committee Formation"
     ]
   ],
   "domain_pool": [
