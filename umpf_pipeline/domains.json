@@ -136,6 +136,10 @@
     [
       "Physical Ecosystem Succession",
       "Physical Immune System"
+    ],
+    [
+      "Economics — auction theory",
+      "Human Defense Coordination"
     ]
   ],
   "already_janused": [
@@ -158,7 +162,8 @@
     "Culinary Arts (Creative & Performance Systems) — Atomic: Recipe succeeds/fails, Ingredient freshness unknown, Multiple flavor combinations; Domain: Dish develops through cooking, Recipes & traditions, Log cooking steps; Control: External food suppliers, Concurrent cooking processes, Atomic seasoning adjustments; Orchestration: Restaurant coordination, Recipe vs service environments",
     "Informational Queue Overflow",
     "Informational Database State",
-    "Epidemiology — herd immunity thresholds"
+    "Epidemiology — herd immunity thresholds",
+    "Physical Bridge Cable Tension"
   ],
   "already_homospatial": [
     [
@@ -240,6 +245,14 @@
     [
       "Behavioral psychology — operant conditioning",
       "Physical Magnetic Field Control"
+    ],
+    [
+      "Architecture — load-bearing structural design",
+      "Informational Load Balancing"
+    ],
+    [
+      "Cognitive Attention Map Evolution",
+      "Informational Sensor Networks"
     ]
   ],
   "domain_pool": [
