@@ -64,6 +64,49 @@ sequenceDiagram
 - Long PDFs? Chunk before analysis → stitch outputs for `.md`.  
 - Rendering on GitHub? Keep Mermaid node labels simple (no parentheses).
 
+## The Eureka Engine — hypothesis_engine.py + verification (Phase 1 + Phase 2)
+
+`main.py` above takes one paper and writes one structured UMPF analysis. `hypothesis_engine.py`
+is a separate, faster mode: given two domains (or one, for Janusian), it generates a candidate
+cross-domain hypothesis via one of three distinct generative mechanisms, run with `--mode
+{bisociation,janusian,homospatial}`. Explicit pair/domain or `--autonomous --count N` (draws
+fresh unpaired domains from the combined pool — `domains.json` unioned with
+`rosetta_stone_domains.json` and `equivalency_training_domains.json`, 170 domains total). Outputs
+land in `hypotheses/`.
+
+- **Bisociation** (Koestler) — two domains collide horizontally; each stays itself, a functor maps
+  between them.
+- **Janusian** (Rothenberg) — one domain's load-bearing assumption is held against its exact
+  opposite, simultaneously, within a single instance — a genuine paradox, not a compromise. Prompt:
+  `prompts/umpf_janusian_prompt.md`, with a mechanical "same-instance test" catching the compromise-
+  wearing-paradox failure mode a soft prompt instruction alone did not.
+- **Homospatial** (Rothenberg) — two domains are superimposed until they fuse into one new entity,
+  not compared side by side. Prompt: `prompts/umpf_homospatial_prompt.md`, with a code-level scan
+  for comparison language ("like," "similar to," "akin to") and one corrective re-prompt, for the
+  same reason: a written-only rule got talked past by the model it was supposed to constrain.
+
+**Phase 2 — verification (added 2026-08-28).** Every hypothesis's own self-critique includes "known
+prior art: not verified" — a hand-wave, not a check. Phase 2 resolves it: web search against the
+hypothesis's claim, classified into one of four outcomes per `prompts/umpf_verification_prompt.md`
+— COLLISION (the connection is already established; strong signal the engine reasons soundly,
+weak/no signal the hypothesis itself is worth pursuing), ADJACENT_ACTIVE (real fertile ground near
+the domains, exact connection still open — the target state), FACT_CHECK_FAIL (the domain
+description itself is wrong), or NO_SIGNAL (nothing surfaces either way — genuinely ambiguous, not
+a pass, routed to adversarial refutation — see `refutations/README.md`). Results land in
+`verifications/` (one file per hypothesis, doesn't touch the original) and `verification-log.jsonl`
+(append-only, the ledger `score_hypotheses.py` reads to produce `leaderboard.md`).
+
+**Current limit, stated plainly:** Phase 2 as it exists right now is Claude-orchestrated — a
+Claude Code session runs the searches and applies the rubric — not a standalone script. Nothing in
+this repo can call a web search API unattended; wiring that up (a paid SERP API in a script, or
+scheduling a Claude Code session itself via cron) is unbuilt, not assumed done. This is a real,
+recurring constraint, not theoretical: a prior session's own live WebSearch budget (200 calls) was
+exhausted mid-batch after only 5 of 15 planned verifications, leaving the other 10 in a
+`PENDING_VERIFICATION` state until a later, dedicated session — spending its own budget on nothing
+else — cleared the backlog. That workaround (dedicate a session to verification alone) is real but
+not durable; it will recur at whatever pool size makes a single session's budget insufficient for
+the batch at hand, and the standalone-script fix remains the actual solution, still unbuilt.
+
 ## License & Citation
 - License: MIT (© 2025 Michael Jagdeo, Exponent Labs LLC)  
 - Repo: https://github.com/exponentlabshq/scientific-intuition-engine  

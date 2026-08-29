@@ -1,0 +1,202 @@
+{
+  "_comment": "Seed domain pool for the Eureka Engine (hypothesis_engine.py), which now has two independent generation modes: bisociation (two domains) and janusian (one domain, its assumption inverted). already_paired lists domain pairs already explored via bisociation, including full case studies pre-dating this engine in the-rosetta-stone/case-studies/ — excluded by default so autonomous mode reaches for genuinely novel bisociations. already_janused lists domains already explored via Janusian mode, tracked independently -- a domain can appear in both lists without conflict, since inverting a domain's own assumption and pairing it against another domain are different operations. domain_pool is deliberately broad across physical, informational, biological, social, and creative domains so a random or deliberate pick has real room to be distant, not adjacent.",
+  "already_paired": [
+    [
+      "Dynamic Cache-coherent Architectures (DCA)",
+      "Cache-coherent protocols"
+    ],
+    [
+      "Compiler optimization",
+      "Neural network training"
+    ],
+    [
+      "Genetic algorithms",
+      "Simulated annealing"
+    ],
+    [
+      "Graph algorithms",
+      "Game tree search"
+    ],
+    [
+      "Graph traversal",
+      "State space search"
+    ],
+    [
+      "Human immune system",
+      "Distributed ledger technology"
+    ],
+    [
+      "Neural networks",
+      "Coral reef ecosystems"
+    ],
+    [
+      "Quantum entanglement / Bell inequalities",
+      "Quantum information science"
+    ],
+    [
+      "Physics",
+      "The empiricism problem (philosophy of science)"
+    ],
+    [
+      "Raft consensus",
+      "PBFT consensus"
+    ],
+    [
+      "Sample variance / statistical estimation",
+      "Protein structure prediction"
+    ],
+    [
+      "Trigonometric function analysis",
+      "Fourier transform / spectral decomposition"
+    ],
+    [
+      "Dirac's large numbers hypothesis",
+      "Cosmological constants"
+    ],
+    [
+      "Neuroscience — cortical map reorganization",
+      "Climatology — ocean current circulation (thermohaline)"
+    ],
+    [
+      "Music theory — jazz improvisation over changes",
+      "Music theory — counterpoint and voice leading"
+    ],
+    [
+      "Anthropology — gift economies and reciprocity",
+      "Military Strategy"
+    ],
+    [
+      "Swarm robotics — flocking / boids behavior",
+      "Culinary Arts"
+    ],
+    [
+      "Human Trust Variance",
+      "Cryptography — zero-knowledge proofs"
+    ],
+    [
+      "Physical Bridge Cable Tension",
+      "Organizational theory — bureaucratic hierarchy"
+    ],
+    [
+      "Creative Musical Motif Deviation",
+      "Evolutionary biology — punctuated equilibrium"
+    ],
+    [
+      "Informational Hash Collisions",
+      "Human Social Network Dynamics"
+    ],
+    [
+      "Human Financial Trading Algorithms",
+      "Ecology — predator-prey population dynamics"
+    ]
+  ],
+  "already_janused": [
+    "Linguistics — historical sound change",
+    "Law — common law precedent and stare decisis",
+    "Materials science — crystal lattice defects",
+    "Astronomy — gravitational lensing",
+    "Finance",
+    "Informational Distributed Consensus",
+    "Human Cognitive Bias",
+    "Physical Quantum Measurement",
+    "Creative Creative Block",
+    "Informational Load Balancing"
+  ],
+  "already_homospatial": [
+    [
+      "Comedy — crowd work and audience read",
+      "Sports — basketball pick-and-roll offense"
+    ],
+    [
+      "Chemistry — self-assembly of molecular structures",
+      "Gaming Narrative"
+    ],
+    [
+      "Physical Mechanical Spring Systems",
+      "Human Emotional Fluctuation"
+    ],
+    [
+      "Creative Narrative Arc Development",
+      "Informational Distributed Consensus"
+    ],
+    [
+      "Physical Chemical Reaction Networks",
+      "Human Committee Formation"
+    ],
+    [
+      "Astronomy — stellar nucleosynthesis",
+      "Creative Album Production Orchestration"
+    ],
+    [
+      "Informational Cache Miss Handling",
+      "Human Individual Indecision"
+    ]
+  ],
+  "domain_pool": [
+    "Immunology — adaptive immune memory",
+    "Immunology — innate immune response",
+    "Epidemiology — disease outbreak spread",
+    "Ecology — predator-prey population dynamics",
+    "Ecology — mycorrhizal fungal networks",
+    "Evolutionary biology — punctuated equilibrium",
+    "Neuroscience — synaptic pruning",
+    "Neuroscience — cortical map reorganization",
+    "Music theory — jazz improvisation over changes",
+    "Music theory — counterpoint and voice leading",
+    "Linguistics — historical sound change",
+    "Linguistics — creole genesis",
+    "Urban planning — zoning and land use",
+    "Urban planning — traffic flow optimization",
+    "Supply chain logistics — just-in-time inventory",
+    "Supply chain logistics — bullwhip effect",
+    "Thermodynamics — entropy and irreversibility",
+    "Fluid dynamics — turbulence and laminar flow",
+    "Control theory — PID feedback loops",
+    "Control theory — Kalman filtering",
+    "Cryptography — zero-knowledge proofs",
+    "Cryptography — public-key infrastructure",
+    "Economics — market microstructure and order books",
+    "Economics — auction theory",
+    "Behavioral psychology — operant conditioning",
+    "Behavioral psychology — habit formation loops",
+    "Organizational theory — bureaucratic hierarchy",
+    "Organizational theory — self-organizing teams",
+    "Geology — plate tectonics",
+    "Geology — sedimentary layering and stratigraphy",
+    "Astronomy — stellar nucleosynthesis",
+    "Astronomy — gravitational lensing",
+    "Materials science — crystal lattice defects",
+    "Materials science — phase transitions",
+    "Epidemiology — herd immunity thresholds",
+    "Swarm robotics — ant colony optimization",
+    "Swarm robotics — flocking / boids behavior",
+    "Law — common law precedent and stare decisis",
+    "Law — contract formation and offer/acceptance",
+    "Architecture — load-bearing structural design",
+    "Architecture — modular/prefab construction",
+    "Game theory — repeated prisoner's dilemma",
+    "Game theory — Nash bargaining",
+    "Cell biology — mitochondrial energy production",
+    "Cell biology — protein folding chaperones",
+    "Climatology — ocean current circulation (thermohaline)",
+    "Climatology — feedback loops in ice-albedo effect",
+    "Music — sample-based hip-hop production",
+    "Comedy — crowd work and audience read",
+    "Sports — basketball pick-and-roll offense",
+    "Sports — baseball pitch sequencing",
+    "Agriculture — crop rotation and soil health",
+    "Epigenetics — gene expression regulation without DNA change",
+    "Telecommunications — packet switching and routing",
+    "Telecommunications — error-correcting codes",
+    "Political science — coalition government formation",
+    "Anthropology — gift economies and reciprocity",
+    "Chemistry — catalysis and reaction pathways",
+    "Chemistry — self-assembly of molecular structures"
+  ],
+  "usage_notes": {
+    "pairing_rule": "Prefer pairs that cross at least two of: Physical, Informational, Human/Social, Creative (per the UMPF domain classification in scientific-intuition-engine/readme.md). A pair drawn from the same category (e.g. two pure-CS domains) is allowed but should be flagged as lower-novelty in the output's self-critique.",
+    "exclusion_rule": "Never select a pair that matches (in either order) an entry in already_paired — that combination is already a written case study in the-rosetta-stone/case-studies/.",
+    "extension": "Append newly-explored pairs to already_paired after each successful hypothesis run, so the pool never repeats itself across sessions.",
+    "combined_pool_note": "hypothesis_engine.py's pick_fresh_pair/pick_fresh_domain draw from the UNION of this file's domain_pool and rosetta_stone_domains.json's 23-system pool (see hypothesis_engine.py's load_combined_pool()) -- added 2026-08-28. already_paired/already_janused/already_homospatial entries can reference domains from either source pool; the tracking lists don't distinguish provenance, since pair/domain identity is what matters for exclusion, not which file a domain string originated in."
+  }
+}

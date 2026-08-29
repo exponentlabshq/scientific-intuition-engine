@@ -1,16 +1,17 @@
 import os
-from dotenv import load_dotenv
+from dotenv import load_dotenv, find_dotenv
 from pdfminer.high_level import extract_text
-import openai
+from openai import OpenAI
 
-# Load environment variables
-load_dotenv()
+# Load environment variables — find_dotenv() walks up from this file's
+# location, so it picks up talentOS-2026/.env (the vault root) automatically
+# when this pipeline lives at talentOS-2026/scientific-intuition-engine/.
+load_dotenv(find_dotenv(usecwd=False))
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
-# Initialize OpenAI client (v0.28.x style)
 if not OPENAI_API_KEY:
     raise SystemExit("OPENAI_API_KEY is not set; cannot run analysis.")
-openai.api_key = OPENAI_API_KEY
+client = OpenAI(api_key=OPENAI_API_KEY)
 
 def extract_pdf_text(pdf_path: str) -> str:
     """Extract all text from a PDF."""
@@ -22,8 +23,8 @@ def load_prompt(prompt_path: str) -> str:
         return f.read()
 
 def run_umfp_analysis(system_prompt: str, paper_text: str) -> str:
-    """Run the UMPF analysis using ChatCompletion (v0.28-compatible)."""
-    resp = openai.ChatCompletion.create(
+    """Run the UMPF analysis using the openai>=1.0 chat completions API."""
+    resp = client.chat.completions.create(
         model="gpt-3.5-turbo",
         messages=[
             {"role": "system", "content": system_prompt},
@@ -31,7 +32,7 @@ def run_umfp_analysis(system_prompt: str, paper_text: str) -> str:
         ],
         temperature=0.2,
     )
-    return resp.choices[0].message["content"]
+    return resp.choices[0].message.content
 
 if __name__ == "__main__":
     inputs_dir = "inputs"

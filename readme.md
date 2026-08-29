@@ -141,15 +141,39 @@ flowchart TD
 
 ---
 
+## What hypothesis_engine.py Does (the Eureka Engine mode)
+
+Where `main.py` takes **one** source and writes a full UMPF extension paper, `hypothesis_engine.py` takes **two domains** and writes a short, falsifiable hypothesis about a candidate functor between them — Koestler's bisociation (*The Act of Creation*, 1964), formalized through UMPF's monadic layers. This is the automated version of the manual process that produced every case study in `the-rosetta-stone/case-studies/`.
+
+- **Explicit mode** — name two domains directly:
+  ```bash
+  python3 umpf_pipeline/hypothesis_engine.py \
+    --domain-a "Ecology — mycorrhizal fungal networks" \
+    --domain-b "Telecommunications — packet switching and routing"
+  ```
+- **Autonomous mode** — draw N fresh, unpaired domains from `umpf_pipeline/domains.json` and generate that many hypotheses in one run, with no human picking the pair:
+  ```bash
+  python3 umpf_pipeline/hypothesis_engine.py --autonomous --count 3
+  ```
+
+Each run writes to `umpf_pipeline/hypotheses/<date>-<domain-a>-x-<domain-b>.md` using the schema in `umpf_pipeline/prompts/umpf_hypothesis_prompt.md`: the two frames stated plainly, a four-layer monadic signature table, an explicit functor mapping (not a metaphor), one falsifiable prediction, and a mandatory, unsoftened self-critique (novelty distance 1-5, testability, prior-art honesty, confidence). `domains.json`'s `already_paired` list is checked before every autonomous pick and appended to after every run, so the pool never re-derives a pairing that's already a written case study, and never repeats itself across sessions.
+
+Both scripts share the same `.env`-loading convention (`find_dotenv()` walks up from the file's own location, so a single root `OPENAI_API_KEY` covers both) and the same OpenAI SDK version (`openai>=1.0.0`, modern client, not the deprecated `openai.ChatCompletion` v0.28 call style).
+
+---
+
 ## Repository Contents
 
 - **readme.md** — Project overview, purpose, and framing (this document)
 - **umpf_pipeline/**  
-  - inputs/ — primary sources (PDFs)  
-  - outputs/ — verbatim `.txt` and structured `.md` analyses  
-  - prompts/ — UMPF system prompt schema  
+  - inputs/ — primary sources (PDFs), used by `main.py`
+  - outputs/ — verbatim `.txt` and structured `.md` analyses, written by `main.py`
+  - hypotheses/ — falsifiable two-domain hypotheses, written by `hypothesis_engine.py`
+  - domains.json — seed domain pool + already-explored pairs, read/updated by `hypothesis_engine.py`
+  - prompts/ — `umpf_system_prompt.md` (single-source mode) and `umpf_hypothesis_prompt.md` (two-domain mode)
   - peer-review/ — model/human audits (e.g., grok.md, openai.md)  
-  - main.py — orchestration script (kept minimal; not the focus)  
+  - main.py — single-source orchestration script (full UMPF extension paper)
+  - hypothesis_engine.py — two-domain orchestration script (the Eureka Engine — falsifiable hypotheses)
   - the-rosetta-stone-thesis.md — reference thesis text
 - **LICENSE** — MIT
 - **CITATION.cff** — repository citation and original thesis reference
@@ -158,10 +182,17 @@ flowchart TD
 
 ## Get Started
 
+**Single-source mode (main.py):**
 1) Place a primary source in `umpf_pipeline/inputs/`  
 2) Ensure a UMPF schema prompt exists in `umpf_pipeline/prompts/`  
 3) Run the pipeline (see `umpf_pipeline/main.py`)  
 4) Review artifacts in `umpf_pipeline/outputs/` (verbatim `.txt` and structured `.md`)
+
+**Two-domain mode (hypothesis_engine.py):**
+1) `pip install -r umpf_pipeline/requirements.txt` in a virtualenv
+2) Confirm `OPENAI_API_KEY` is set (in this repo's `.env`, or a parent directory's — see the loading convention above)
+3) Run explicit (`--domain-a` / `--domain-b`) or autonomous (`--autonomous --count N`) mode
+4) Review artifacts in `umpf_pipeline/hypotheses/`
 
 Principle: the verbatim `.txt` is the anchor; the `.md` is the formal claim against that anchor.
 
