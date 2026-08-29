@@ -45,6 +45,7 @@ def nav_html(active):
       <a class="site-nav-brand" href="landing.html">The Eureka Engine</a>
       <div class="site-nav-links">
         <a href="landing.html"{cls("landing")}>Home</a>
+        <a href="dashboard.html"{cls("dashboard")}>Dashboard</a>
         <a href="whitepaper.html"{cls("whitepaper")}>Whitepaper</a>
         <a href="leaderboard.html"{cls("leaderboard")}>Leaderboard</a>
       </div>

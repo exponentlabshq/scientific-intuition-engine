@@ -10,6 +10,12 @@ Scope, deliberately bounded:
     hand-written prose lives in it, so regenerating it from the current
     ledger is always safe and always correct.
 
+  - dashboard.html: FULLY automated, same reasoning as the leaderboard
+    experience. Pure data render off the real ledger, token_usage.jsonl,
+    cycle_log.jsonl (the last cycle's real phase-by-phase outcome, replayed
+    as the pipeline-flow animation), and audit_observations.jsonl (the
+    audit agent's running commentary) -- no hand-written prose to preserve.
+
   - landing.html: PARTIALLY automated. Its stat pills and the
     whitepaper-teaser lede sentence are now template placeholders
     (site_build/build_landing.py's compute_live_stats()) that get filled
@@ -93,9 +99,20 @@ def build():
     with open(landing_deployed, "w", encoding="utf-8") as f:
         f.write(content)
 
-    print(f"\nBuilt: {leaderboard_deployed}\nBuilt: {landing_deployed}")
+    # 5. Rebuild dashboard.html -- fully automated like the leaderboard
+    #    experience (pure data render, real ledger/token-usage/cycle-log/
+    #    audit-observation data, no hand-written prose to preserve).
+    run([PYTHON, "build_dashboard.py"], cwd=SITE_BUILD_DIR)
+    dashboard_built = os.path.join(SITE_BUILD_DIR, "dashboard.html")
+    dashboard_deployed = os.path.join(OUTPUT_DIR, "dashboard.html")
+    with open(dashboard_built, "r", encoding="utf-8") as f:
+        content = f.read()
+    with open(dashboard_deployed, "w", encoding="utf-8") as f:
+        f.write(content)
+
+    print(f"\nBuilt: {leaderboard_deployed}\nBuilt: {landing_deployed}\nBuilt: {dashboard_deployed}")
     print("(whitepaper.html intentionally not rebuilt -- see this script's own docstring)")
-    return {"leaderboard.html": leaderboard_deployed, "landing.html": landing_deployed}
+    return {"leaderboard.html": leaderboard_deployed, "landing.html": landing_deployed, "dashboard.html": dashboard_deployed}
 
 
 def changed_files(built: dict) -> dict:

@@ -34,6 +34,12 @@ honest signal to act on -- this script does not send notifications itself,
 it makes sure the exit code and cycle_log.jsonl are trustworthy for
 whatever does.
 
+Update (2026-08-29) — dashboard. A new lightweight "observe" stage runs
+`audit_agent.py --observe` every cycle (cheap, ~1K tokens on gpt-4o-mini,
+not the full proposal-with-code mode) before publish, so
+publish_site.py's dashboard.html rebuild picks up a fresh, grounded
+observation each time rather than replaying the last one.
+
 Usage:
     python3 run_cycle.py --total 6                 # 6 hypotheses this cycle, split by mode_weights.json
     python3 run_cycle.py --hypotheses-per-mode 2    # exactly 2 per mode (6 total), ignoring weights
@@ -196,6 +202,17 @@ def main():
                 degraded_reasons.append("scoring failed")
         else:
             print(f"$ {PYTHON} score_hypotheses.py")
+
+    # --- Observe: cheap, per-cycle audit commentary for the dashboard ---
+    # Not gated on prior stages, and its own failure never blocks publish --
+    # this is a non-critical commentary feed, not core pipeline integrity.
+    # Runs before publish so the dashboard rebuild below picks up the fresh
+    # observation, not last cycle's.
+    if not args.dry_run:
+        cmd = [PYTHON, "audit_agent.py", "--observe"]
+        cycle_record["stages"]["observe"] = run_subprocess(cmd, args.dry_run)
+    else:
+        print(f"$ {PYTHON} audit_agent.py --observe")
 
     # --- Publish: regenerate + deploy the site's data-driven pages ---
     # Fail-closed: skipped entirely if anything upstream degraded, so a

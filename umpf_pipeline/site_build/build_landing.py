@@ -375,6 +375,7 @@ footer.colophon a { color: var(--text-muted); }
       <a class="site-nav-brand" href="landing.html">The Eureka Engine</a>
       <div class="site-nav-links">
         <a href="landing.html" class="is-active">Home</a>
+        <a href="dashboard.html">Dashboard</a>
         <a href="whitepaper.html">Whitepaper</a>
         <a href="leaderboard.html">Leaderboard</a>
       </div>

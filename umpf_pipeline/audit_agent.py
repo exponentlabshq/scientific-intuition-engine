@@ -60,10 +60,15 @@ PIPELINE_DIR = os.path.dirname(os.path.abspath(__file__))
 PROPOSALS_DIR = os.path.join(PIPELINE_DIR, "proposals")
 ALT_SCORING_DIR = os.path.join(PIPELINE_DIR, "alt_scoring")
 AUDIT_LOG_PATH = os.path.join(PIPELINE_DIR, "audit_log.jsonl")
+OBSERVATIONS_LOG_PATH = os.path.join(PIPELINE_DIR, "audit_observations.jsonl")
 SCORE_HYPOTHESES_PATH = os.path.join(PIPELINE_DIR, "score_hypotheses.py")
 MODE_WEIGHTS_PATH = os.path.join(PIPELINE_DIR, "mode_weights.json")
 
 DEFAULT_MODEL = "gpt-4o"
+OBSERVATION_MODEL = "gpt-4o-mini"  # a one-sentence remark doesn't need frontier
+                                    # reasoning -- cheap on purpose, since this
+                                    # runs every cycle, not occasionally like
+                                    # the full proposal mode
 
 
 def compute_real_stats() -> dict:
@@ -297,12 +302,90 @@ def run_audit(model: str, dry_run: bool):
     return proposal, proposal_path, code_path
 
 
+def load_last_observation():
+    """The most recent observation's stats snapshot, if any -- gives the
+    next observation something to notice a CHANGE against, rather than
+    restating the same static numbers every cycle with nothing to compare
+    them to."""
+    if not os.path.exists(OBSERVATIONS_LOG_PATH):
+        return None
+    last = None
+    with open(OBSERVATIONS_LOG_PATH, "r", encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if line:
+                last = json.loads(line)
+    return last
+
+
+def run_observation(model: str, dry_run: bool):
+    """The lightweight sibling of run_audit(): no code, no full proposal,
+    just one short, grounded remark about what changed since the last
+    cycle -- meant to run every cycle (dashboard commentary feed), cheap
+    enough that it doesn't become its own ROTI problem. Never writes a
+    proposal or alt_scoring/ file; this mode only ever appends to
+    audit_observations.jsonl."""
+    stats = compute_real_stats()
+    previous = load_last_observation()
+    prev_stats = previous.get("stats_snapshot") if previous else None
+
+    system_prompt = (
+        "You are the Eureka Engine's audit agent, in a lightweight mode that runs every cycle. "
+        "Given the current real performance stats (and, if provided, the stats from the last time "
+        "you looked), write exactly ONE short, specific observation -- one sentence, two at most. "
+        "Notice an actual change, an actual anomaly, or an actual number worth flagging -- not a "
+        "generic restatement of the totals. If nothing meaningfully changed since last time, say so "
+        "plainly and briefly rather than inventing significance. Never propose a fix or write code "
+        "here -- that's a different, occasional mode. Ground every claim in the numbers given; never "
+        "invent a statistic.\n\n"
+        'Respond with ONLY a JSON object: {"observation": "your one or two sentences"}'
+    )
+    user_prompt = f"Current stats:\n{json.dumps(stats, indent=2)}\n\n"
+    if prev_stats:
+        user_prompt += f"Stats as of the last observation:\n{json.dumps(prev_stats, indent=2)}"
+    else:
+        user_prompt += "(No prior observation exists yet -- this is the first one.)"
+
+    resp = call_with_retry(
+        client.chat.completions.create,
+        model=model,
+        messages=[
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": user_prompt},
+        ],
+        temperature=0.4,
+        response_format={"type": "json_object"},
+    )
+    from token_tracker import log_usage
+    log_usage("audit_observation", model, resp.usage)
+
+    parsed = json.loads(resp.choices[0].message.content)
+    record = {
+        "timestamp": datetime.now(timezone.utc).isoformat(),
+        "observation": parsed.get("observation", "").strip(),
+        "stats_snapshot": stats,
+    }
+
+    if dry_run:
+        print(record["observation"])
+        return record
+
+    with open(OBSERVATIONS_LOG_PATH, "a", encoding="utf-8") as f:
+        f.write(json.dumps(record) + "\n")
+    print(f"Observation logged: {record['observation']}")
+    return record
+
+
 def main():
     parser = argparse.ArgumentParser(description="Eureka Engine self-audit — one grounded, additive proposal per run")
     parser.add_argument("--model", type=str, default=DEFAULT_MODEL, help="OpenAI model to use for the audit reasoning")
-    parser.add_argument("--dry-run", action="store_true", help="Print the proposal; write nothing to disk")
+    parser.add_argument("--observe", action="store_true", help="Lightweight mode: one short observation, no proposal/code, meant to run every cycle")
+    parser.add_argument("--dry-run", action="store_true", help="Print the proposal/observation; write nothing to disk")
     args = parser.parse_args()
-    run_audit(args.model, args.dry_run)
+    if args.observe:
+        run_observation(OBSERVATION_MODEL if args.model == DEFAULT_MODEL else args.model, args.dry_run)
+    else:
+        run_audit(args.model, args.dry_run)
 
 
 if __name__ == "__main__":
