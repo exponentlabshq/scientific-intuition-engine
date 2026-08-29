@@ -96,16 +96,28 @@ a pass, routed to adversarial refutation — see `refutations/README.md`). Resul
 `verifications/` (one file per hypothesis, doesn't touch the original) and `verification-log.jsonl`
 (append-only, the ledger `score_hypotheses.py` reads to produce `leaderboard.md`).
 
-**Current limit, stated plainly:** Phase 2 as it exists right now is Claude-orchestrated — a
-Claude Code session runs the searches and applies the rubric — not a standalone script. Nothing in
-this repo can call a web search API unattended; wiring that up (a paid SERP API in a script, or
-scheduling a Claude Code session itself via cron) is unbuilt, not assumed done. This is a real,
-recurring constraint, not theoretical: a prior session's own live WebSearch budget (200 calls) was
-exhausted mid-batch after only 5 of 15 planned verifications, leaving the other 10 in a
-`PENDING_VERIFICATION` state until a later, dedicated session — spending its own budget on nothing
-else — cleared the backlog. That workaround (dedicate a session to verification alone) is real but
-not durable; it will recur at whatever pool size makes a single session's budget insufficient for
-the batch at hand, and the standalone-script fix remains the actual solution, still unbuilt.
+**Update (2026-08-29) — the standalone script now exists.** Every prior verification pass was
+Claude-orchestrated: a live Claude Code session ran the searches by hand and applied the rubric
+itself. That recurred as a real constraint, not a theoretical one — a prior session's own live
+WebSearch budget (200 calls) was exhausted mid-batch after only 5 of 15 planned verifications,
+leaving the other 10 `PENDING_VERIFICATION` until a later, dedicated session cleared the backlog.
+`verify_hypothesis.py` closes that gap: real Tavily web search (`TAVILY_API_KEY` in the vault-root
+`.env`) + GPT-4o classification against the exact same
+`prompts/umpf_verification_prompt.md` rubric, run with `python3 verify_hypothesis.py
+--all-unverified` — no live session, no WebSearch budget, schedulable via cron if unattended
+verification is ever wanted. It writes the same `verifications/<slug>-verification.md` and
+`verification-log.jsonl` shapes a human-run session already produces, with verification filenames
+derived directly from the hypothesis slug so `assemble_experience_data.py`'s substring matcher
+finds them with zero manual overrides. Smoke-tested end-to-end 2026-08-29 (parsing, real Tavily
+search, structured GPT-4o classification, and the file/ledger write paths all confirmed against
+scratch output before ever touching the real ledger).
+
+**What's still true:** this doesn't remove the human editorial layer — a batch run unattended is
+worth spot-checking the way any of this repo's automation is, and NO_SIGNAL cases still route to
+the 3-independent-agent adversarial refutation protocol (still Claude-orchestrated; refutation was
+never in scope for this script). What it removes is the actual bottleneck: generation was never
+slow, verification throughput was, and that throughput is no longer capped by one session's
+WebSearch budget.
 
 ## License & Citation
 - License: MIT (© 2025 Michael Jagdeo, Exponent Labs LLC)  
