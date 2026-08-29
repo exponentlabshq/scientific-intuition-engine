@@ -211,17 +211,46 @@ def _clean_output(raw: str, generated_date: str) -> str:
 # one level further: a soft self-check in the prompt gets talked past even
 # when made maximally explicit; only checking the actual output mechanically
 # and forcing a correction closes the gap.
+#
+# 2026-08-29 readiness audit (Failure 4, still-open at the time): the "Phonetic
+# Turbulence" case passed this exact scan clean -- because the scan only ever
+# checked SS3. Its own SS2 (the Superimposition) used "akin to," "reminiscent
+# of," and "similar to" verbatim, unchecked. Fixed here by scanning both
+# sections the prompt itself already tells the model to keep comparison-free
+# (SS2's own line: "Avoid comparison language here too").
 _COMPARISON_WORDS = [
     "like", "similar to", "resembling", "resembles", "as if", "akin to",
     "parallels", "much like", "just as", "reminiscent of", "mirrors", "mirroring",
 ]
 
+# Same-instance-test enforcement for janusian mode. Until this fix, the
+# same-instance test (see prompts/umpf_janusian_prompt.md) was a soft
+# self-check ONLY -- the model was told to run it on its own draft, with no
+# mechanical enforcement, unlike homospatial's comparison-word scan. The
+# 2026-08-29 readiness audit's newest batch found 3 of 6 fresh janusian
+# hypotheses passed that soft check while still being a disguised compromise
+# ("in some contexts... in others," "apply to different types of
+# models/datasets/areas") -- caught only by adversarial refutation, a step
+# later and a real cost later, not by the check meant to catch it at the
+# source. The same day's EMH/Nash canary hypothesis (built to test exactly
+# this) reproduced it again: its own SS4(C) read "...depending on the type of
+# information and the market participants involved" -- textbook context-split
+# language -- and was refuted 0-of-3 on exactly that ground. Same lesson as
+# homospatial's fix, applied to the sibling mode: check the actual text,
+# don't trust the self-check.
+_CONTEXT_SPLIT_PHRASES = [
+    "depending on", "in some contexts", "in other contexts", "in certain contexts",
+    "in some cases", "in other cases", "in some situations", "in other situations",
+    "different contexts", "different types of", "different subpopulations",
+    "context-dependent", "context dependent", "in some instances", "in other instances",
+]
+
 
 def _extract_section(markdown_text: str, heading_prefix: str) -> str:
     """Pull the body of one '## N. Heading' section out of the generated
-    markdown, up to the next '## ' heading. Used to check SS3 specifically,
-    not the whole document (SS1's plain-terms domain descriptions are allowed
-    to use ordinary language freely)."""
+    markdown, up to the next '## ' heading. Used to check specific sections,
+    not the whole document (e.g. SS1's plain-terms domain descriptions are
+    allowed to use ordinary language freely)."""
     pattern = rf"##\s*{re.escape(heading_prefix)}.*?\n(.*?)(?=\n##\s|\Z)"
     m = re.search(pattern, markdown_text, re.DOTALL)
     return m.group(1) if m else ""
@@ -233,6 +262,15 @@ def _find_comparison_words(text: str) -> list:
     for word in _COMPARISON_WORDS:
         if re.search(rf"\b{re.escape(word)}\b", lowered):
             found.append(word)
+    return found
+
+
+def _find_context_split_phrases(text: str) -> list:
+    found = []
+    lowered = text.lower()
+    for phrase in _CONTEXT_SPLIT_PHRASES:
+        if re.search(rf"\b{re.escape(phrase)}\b", lowered):
+            found.append(phrase)
     return found
 
 
@@ -252,40 +290,85 @@ def run_hypothesis(domain_a: str, domain_b: str = None, model: str = "gpt-4o-min
     raw_output = resp.choices[0].message.content
 
     if mode == "homospatial":
+        section2 = _extract_section(raw_output, "2. The Superimposition")
         section3 = _extract_section(raw_output, "3. The Emergent Third Thing")
-        violations = _find_comparison_words(section3)
+        v2 = _find_comparison_words(section2)
+        v3 = _find_comparison_words(section3)
+        violations = sorted(set(v2 + v3))
         if violations:
-            print(f"  ⚠️  §3 used forbidden comparison language ({', '.join(violations)}) — retrying once with a correction...")
+            hit_sections = []
+            if v2:
+                hit_sections.append(f"§2 ({', '.join(v2)})")
+            if v3:
+                hit_sections.append(f"§3 ({', '.join(v3)})")
+            print(f"  ⚠️  Forbidden comparison language in {' and '.join(hit_sections)} — retrying once with a correction...")
             correction = (
-                f"Your §3 (\"The Emergent Third Thing\") used forbidden comparison words: {', '.join(violations)}. "
-                f"Here is what you wrote: \"{section3.strip()}\"\n\n"
-                "Rewrite the ENTIRE response from scratch. Describe the fused entity in §3 in its own "
-                "vocabulary, the way you'd describe a chimera's actual anatomy directly, not by comparing "
-                "it back to a lion and a goat. Zero comparison words anywhere in §3 — check every sentence "
-                "before finalizing."
+                f"Your response used forbidden comparison words in {' and '.join(hit_sections)}. "
+                f"Here is §2 as written: \"{section2.strip()}\"\nHere is §3 as written: \"{section3.strip()}\"\n\n"
+                "Rewrite the ENTIRE response from scratch. Describe the overlay in §2 and the fused entity "
+                "in §3 in the entity's own vocabulary, the way you'd describe a chimera's actual anatomy "
+                "directly, not by comparing it back to a lion and a goat. Zero comparison words anywhere in "
+                "§2 or §3 — check every sentence in both sections before finalizing."
             )
             messages.append({"role": "assistant", "content": raw_output})
             messages.append({"role": "user", "content": correction})
             resp2 = call_with_retry(client.chat.completions.create, model=model, messages=messages, temperature=0.4)
             log_usage("generation", model, resp2.usage, extra={"mode": mode, "retry": True})
             raw_output2 = resp2.choices[0].message.content
+            section2_retry = _extract_section(raw_output2, "2. The Superimposition")
             section3_retry = _extract_section(raw_output2, "3. The Emergent Third Thing")
-            remaining = _find_comparison_words(section3_retry)
+            remaining = sorted(set(_find_comparison_words(section2_retry) + _find_comparison_words(section3_retry)))
             if remaining:
                 # Honest failure, not a silently-accepted one: flag it in the
                 # output itself rather than pretending the retry succeeded.
                 print(f"  ⚠️  Retry still used comparison language ({', '.join(remaining)}) — flagging in output rather than looping indefinitely.")
                 raw_output2 = raw_output2.rstrip() + (
-                    f"\n\n---\n\n**⚠️ Automated check failed twice:** §3 still contains comparison "
+                    f"\n\n---\n\n**⚠️ Automated check failed twice:** §2/§3 still contain comparison "
                     f"language ({', '.join(remaining)}) after one corrective retry. This hypothesis may "
-                    f"be bisociation mislabeled as homospatial — read §3 with that in mind, don't take "
+                    f"be bisociation mislabeled as homospatial — read §2/§3 with that in mind, don't take "
                     f"the fusion framing at face value.\n"
                 )
             else:
-                print("  ✅ Retry passed — §3 is comparison-word-free.")
+                print("  ✅ Retry passed — §2 and §3 are comparison-word-free.")
             raw_output = raw_output2
         else:
-            print("  ✅ §3 passed the comparison-word check on the first attempt.")
+            print("  ✅ §2 and §3 passed the comparison-word check on the first attempt.")
+
+    if mode == "janusian":
+        section4 = _extract_section(raw_output, "4. The Simultaneous Hold")
+        violations = _find_context_split_phrases(section4)
+        if violations:
+            print(f"  ⚠️  §4 used context-split language ({', '.join(violations)}) — likely a disguised compromise, retrying once with a correction...")
+            correction = (
+                f"Your §4 (\"The Simultaneous Hold\") — specifically the (C) Paradox you selected — used "
+                f"context-split language: {', '.join(violations)}. Here is what you wrote: \"{section4.strip()}\"\n\n"
+                "This is the same-instance test failing: a genuine paradox holds for the SAME instance, at "
+                "the SAME time — not '[proposition] in situation A, [inversion] in situation B.' Rewrite the "
+                "ENTIRE response from scratch. Either find a genuinely load-bearing assumption whose inversion "
+                "produces a same-instance paradox (like Einstein's motion/rest, Bohr's wave/particle), or, if "
+                "you cannot, say so plainly in §7 rather than presenting a context-split compromise as (C). "
+                "Zero context-split language anywhere in §4 — check every sentence before finalizing."
+            )
+            messages.append({"role": "assistant", "content": raw_output})
+            messages.append({"role": "user", "content": correction})
+            resp2 = call_with_retry(client.chat.completions.create, model=model, messages=messages, temperature=0.4)
+            log_usage("generation", model, resp2.usage, extra={"mode": mode, "retry": True})
+            raw_output2 = resp2.choices[0].message.content
+            section4_retry = _extract_section(raw_output2, "4. The Simultaneous Hold")
+            remaining = _find_context_split_phrases(section4_retry)
+            if remaining:
+                print(f"  ⚠️  Retry still used context-split language ({', '.join(remaining)}) — flagging in output rather than looping indefinitely.")
+                raw_output2 = raw_output2.rstrip() + (
+                    f"\n\n---\n\n**⚠️ Automated check failed twice:** §4 still contains context-split "
+                    f"language ({', '.join(remaining)}) after one corrective retry. This hypothesis may be "
+                    f"a disguised compromise (A) or synthesis (B) mislabeled as a genuine paradox (C) — read "
+                    f"§4 with that in mind before trusting the paradox framing.\n"
+                )
+            else:
+                print("  ✅ Retry passed — §4 is context-split-language-free.")
+            raw_output = raw_output2
+        else:
+            print("  ✅ §4 passed the same-instance mechanical check on the first attempt.")
 
     return _clean_output(raw_output, generated_date)
 

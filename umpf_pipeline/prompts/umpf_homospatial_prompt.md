@@ -58,6 +58,8 @@ One sentence: what's the most likely reason the "emergent third thing" turns out
 ## Search Queries
 
 List 3-5 concrete, checkable search queries someone could run to verify §4's claim or check §5's "known prior art" line — phrased the way a researcher would actually search.
+
+**At least one query must search by name, not just by concept.** Before writing the list, think: is there a specific named entity, framework, or researcher that might already describe this exact fusion (the way "Adaptive Markets Hypothesis" or "Andrew Lo" sits under general "market efficiency" language)? If you can name one, write a query for it directly. If you genuinely can't think of one, write a query of the form "[the emergent entity] named theory OR framework OR researcher" so the search itself can surface a name you didn't already know — a generic-concept-only query list is exactly what let a real collision with existing published work go undetected in an earlier run of this engine.
 ```
 
 ## Hard rules

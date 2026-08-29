@@ -131,7 +131,24 @@ def extract_self_score(text: str, mode: str):
     # score_hypotheses.py by up to 8 per affected entry. Fixed to require
     # the colon before capturing, so it skips past "(1-5)" and lands on
     # the real value.
-    m = re.search(rf"{key}[^:]*:\s*(\d)", section)
+    #
+    # 2026-08-29 -- control_test_scorer.py (built in direct response to the
+    # readiness audit's "no control test exists for the scorer" gap) found
+    # two more real, latent bugs in this same line, neither yet observed in
+    # the real 89-entry ledger (checked directly: no case drift, no
+    # multi-digit values there today) but both real failure modes waiting to
+    # happen at scale: (a) `(\d)` captures only the FIRST digit of the real
+    # value, so a hallucinated out-of-range score like "10" would silently
+    # become "1" -- the exact same shape of bug as the one this function was
+    # already fixed for once; (b) the match was case-sensitive, so a model
+    # writing "fusion distance" instead of "Fusion distance" would silently
+    # return None -- a missing-score gap, not a wrong one, but the same
+    # underlying fragility. Fixed both: `(\d+)` captures the full number,
+    # and `re.IGNORECASE` makes the label match regardless of case. Regression
+    # check run directly against all 76 real hypothesis files on disk after
+    # this fix: 0 differences between the old and new extraction -- the fix
+    # is additive-safe, not just theoretically safer.
+    m = re.search(rf"{key}[^:]*:\s*(\d+)", section, re.IGNORECASE)
     return int(m.group(1)) if m else None
 
 

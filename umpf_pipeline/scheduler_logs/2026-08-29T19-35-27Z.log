@@ -1,0 +1,140 @@
+=== run_cycle_scheduled.sh starting at 2026-08-29T19-35-27Z (UTC) ===
+=== Eureka Engine cycle — 2026-08-29T19:35:27.850996+00:00 ===
+Plan: {'bisociation': 2, 'janusian': 2, 'homospatial': 2} (6 total)
+$ /Library/Frameworks/Python.framework/Versions/3.12/bin/python3 hypothesis_engine.py --mode bisociation --autonomous --count 2
+🧬 [1/2] Bisociating: Language Linguistics (Information & Intelligence Systems) — Atomic: Translation accurate/inaccurate, Word meaning ambiguous, Multiple interpretations; Domain: Language evolves through usage, Grammar rules, Log linguistic changes; Control: External linguistic corpora, Concurrent translation, Atomic meaning resolution; Orchestration: Academic coordination, Theory vs usage environments  ×  Military Strategy (Human & Social Systems) — Atomic: Mission succeeds/fails, Enemy positions unknown, Multiple tactical options; Domain: Battle situation evolves, Military doctrine, Log tactical moves; Control: Intelligence systems, Concurrent operations, Atomic command updates; Orchestration: Defense coordination, War gaming vs actual combat
+✅ Saved to /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/hypotheses/2026-08-29-language-linguistics-x-military-strategy.md
+🧬 [2/2] Bisociating: Gaming Narrative (Creative & Performance Systems) — Atomic: Player action succeeds/fails, Character status unknown, Multiple dialogue choices; Domain: Game world evolves, Game rules context, Log player actions; Control: Player input from controllers, Concurrent NPCs & physics, Atomic world consistency; Orchestration: Game engine coordination, Narrative vs gameplay environments  ×  Cognitive Attention Map Evolution
+✅ Saved to /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/hypotheses/2026-08-29-gaming-narrative-x-cognitive-attention-map-evolution.md
+📒 domains.json updated — 2 new bisociation run(s) recorded as explored.
+
+$ /Library/Frameworks/Python.framework/Versions/3.12/bin/python3 hypothesis_engine.py --mode janusian --autonomous --count 2
+🎭 [1/2] Janusian hold on: Human Learning Uncertainty
+  ⚠️  §4 used context-split language (depending on) — likely a disguised compromise, retrying once with a correction...
+  ⚠️  Retry still used context-split language (depending on, in other situations) — flagging in output rather than looping indefinitely.
+✅ Saved to /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/hypotheses/2026-08-29-janusian-human-learning-uncertainty.md
+🎭 [2/2] Janusian hold on: Climatology — feedback loops in ice-albedo effect
+  ⚠️  §4 used context-split language (depending on) — likely a disguised compromise, retrying once with a correction...
+  ⚠️  Retry still used context-split language (in some instances) — flagging in output rather than looping indefinitely.
+✅ Saved to /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/hypotheses/2026-08-29-janusian-climatology.md
+📒 domains.json updated — 2 new janusian run(s) recorded as explored.
+
+$ /Library/Frameworks/Python.framework/Versions/3.12/bin/python3 hypothesis_engine.py --mode homospatial --autonomous --count 2
+🪞 [1/2] Superimposing: Cryptography — public-key infrastructure  ×  Cognitive Development (Information & Intelligence Systems) — Atomic: Learning outcome uncertain, Skill acquisition succeeds/fails, Multiple learning paths; Domain: Cognitive skills evolve, Learning context, Log development milestones; Control: External learning resources, Parallel skill development, Atomic knowledge integration; Orchestration: Learning system coordination, Practice vs application environments
+  ⚠️  Forbidden comparison language in §2 (similar to, parallels) — retrying once with a correction...
+  ✅ Retry passed — §2 and §3 are comparison-word-free.
+✅ Saved to /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/hypotheses/2026-08-29-homospatial-cryptography-x-cognitive-development.md
+🪞 [2/2] Superimposing: Linguistics — creole genesis  ×  Economics — market microstructure and order books
+  ⚠️  Forbidden comparison language in §2 (similar to, akin to) — retrying once with a correction...
+  ✅ Retry passed — §2 and §3 are comparison-word-free.
+✅ Saved to /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/hypotheses/2026-08-29-homospatial-linguistics-x-economics.md
+📒 domains.json updated — 2 new homospatial run(s) recorded as explored.
+
+
+Generated 6 new hypothesis file(s) this cycle.
+$ /Library/Frameworks/Python.framework/Versions/3.12/bin/python3 verify_hypothesis.py --all-unverified
+Verifying 6 hypothesis file(s)...
+
+  → [bisociation] Gaming Narrative × Cognitive Attention Map Evolution
+    queries: ['player choices cognitive attention mapping', 'gaming narrative attention dynamics', 'cognitive attention map evolution in interactive environments', 'neuroimaging player decision making in video games', 'attention mapping theory OR framework']
+    25 search results gathered
+    verdict: ADJACENT_ACTIVE
+
+  → [homospatial] Cryptography ⊕ Cognitive Development
+    queries: ['Cognitive Cryptography learning framework', 'Public-key infrastructure in education', 'Cognitive development and knowledge management systems', 'Dual-key systems in learning environments', 'Atomic knowledge integration in cognitive development']
+    25 search results gathered
+    verdict: ADJACENT_ACTIVE
+
+  → [homospatial] Linguistics — Creole Genesis ⊕ Economics — Market Microstructure and Order Books
+    queries: ['Econolect language in financial markets', 'Creole genesis in economic communication', 'Market microstructure and linguistic simplification', 'Order books as a communication system', 'Emergent languages in trading environments']
+    25 search results gathered
+    verdict: NO_SIGNAL
+
+  → [janusian] Climatology — feedback loops in ice-albedo effect
+    queries: ['ice-albedo feedback loop regional effects', 'climate change ice cover mitigation', 'feedback loops in climatology', 'ice-albedo effect paradox', 'climate models ice-albedo feedback']
+    25 search results gathered
+    verdict: COLLISION
+
+  → [janusian] Human Learning Uncertainty
+    queries: ['impact of uncertainty on human learning outcomes', 'uncertainty as a catalyst for learning', 'educational psychology uncertainty theory', 'critical thinking and uncertainty in learning', 'John Dewey uncertainty in education']
+    25 search results gathered
+    verdict: ADJACENT_ACTIVE
+
+  → [bisociation] Language Linguistics × Military Strategy
+    queries: ['language translation accuracy military operations success correlation', 'impact of communication on military strategy effectiveness', 'linguistic evolution military doctrine adaptation', 'historical analysis of translation in military contexts', 'communication theory in military strategy research']
+    25 search results gathered
+    verdict: ADJACENT_ACTIVE
+
+============================================================
+Done. 6 processed.
+  ADJACENT_ACTIVE 2026-08-29-gaming-narrative-x-cognitive-attention-map-evolution
+  ADJACENT_ACTIVE 2026-08-29-homospatial-cryptography-x-cognitive-development
+  NO_SIGNAL    2026-08-29-homospatial-linguistics-x-economics
+  COLLISION    2026-08-29-janusian-climatology
+  ADJACENT_ACTIVE 2026-08-29-janusian-human-learning-uncertainty
+  ADJACENT_ACTIVE 2026-08-29-language-linguistics-x-military-strategy
+
+$ /Library/Frameworks/Python.framework/Versions/3.12/bin/python3 refute_hypothesis.py --all-no-signal
+Refuting 1 hypothesis(es)...
+
+  → [homospatial] Linguistics — Creole Genesis ⊕ Economics — Market Microstructure and Order Books
+    coherence: REFUTED
+    testability: REFUTED
+    triviality: REFUTED
+    tally: 0 of 3 survive -> REFUTED
+
+============================================================
+Done. 1 processed.
+  REFUTED (0/3)        2026-08-29-homospatial-linguistics-x-economics
+
+$ /Library/Frameworks/Python.framework/Versions/3.12/bin/python3 score_hypotheses.py
+✅ Scored 95 entries -> /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/leaderboard.md
+
+$ /Library/Frameworks/Python.framework/Versions/3.12/bin/python3 audit_agent.py --observe
+Observation logged: The total number of hypotheses increased from 88 to 95, and the average points for bisociation improved from 18.7 to 20.1.
+
+$ /Library/Frameworks/Python.framework/Versions/3.12/bin/python3 publish_site.py
+$ (cwd=.) /Library/Frameworks/Python.framework/Versions/3.12/bin/python3 assemble_experience_data.py
+
+Assembled 95 entries. Missing hypothesis content: 0. Missing verification content: 0.
+Wrote /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/experience_data.json
+
+$ (cwd=.) /Library/Frameworks/Python.framework/Versions/3.12/bin/python3 site_build/build_experience.py
+Wrote leaderboard-experience.html (880.9 KB)
+
+$ (cwd=.) /Library/Frameworks/Python.framework/Versions/3.12/bin/python3 site_build/wrap_standalone.py /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/leaderboard-experience.html /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/site_build/output/leaderboard.html leaderboard
+Wrote /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/site_build/output/leaderboard.html (882.6 KB), title='Faculty of Interdisciplinary Research', nav_active='leaderboard'
+
+$ (cwd=site_build) /Library/Frameworks/Python.framework/Versions/3.12/bin/python3 build_landing.py
+Wrote landing.html (2164.8 KB)
+
+$ (cwd=site_build) /Library/Frameworks/Python.framework/Versions/3.12/bin/python3 build_dashboard.py
+Wrote dashboard.html (24.8 KB)
+
+
+Built: /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/site_build/output/leaderboard.html
+Built: /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/site_build/output/landing.html
+Built: /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/site_build/output/dashboard.html
+(whitepaper.html intentionally not rebuilt -- see this script's own docstring)
+
+Changed: ['leaderboard.html', 'landing.html', 'dashboard.html']
+Deployed: leaderboard.html
+Deployed: landing.html
+Deployed: dashboard.html
+$ (cwd=../eureka-engine-web) git add leaderboard.html landing.html dashboard.html
+$ (cwd=../eureka-engine-web) git commit -m Auto-publish: leaderboard.html, landing.html, dashboard.html regenerated from ledger
+
+Generated by publish_site.py, 2026-08-29T19:38:34.316037+00:00. Data-driven pages only (leaderboard experience, landing page stat fields) -- whitepaper.html is never touched by this script.
+
+Co-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>
+[main ac83883] Auto-publish: leaderboard.html, landing.html, dashboard.html regenerated from ledger
+ 3 files changed, 5 insertions(+), 5 deletions(-)
+
+$ (cwd=../eureka-engine-web) git push
+
+Publish complete.
+
+
+Cycle logged to /Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/cycle_log.jsonl — status: success
+=== Cycle complete ===
+=== run_cycle_scheduled.sh finished at 2026-08-29T19-38-35Z (UTC) -- exit 0 ===

@@ -152,6 +152,14 @@
     [
       "Creative Performance Monitoring",
       "Physical Voltage Spikes"
+    ],
+    [
+      "Language Linguistics (Information & Intelligence Systems) — Atomic: Translation accurate/inaccurate, Word meaning ambiguous, Multiple interpretations; Domain: Language evolves through usage, Grammar rules, Log linguistic changes; Control: External linguistic corpora, Concurrent translation, Atomic meaning resolution; Orchestration: Academic coordination, Theory vs usage environments",
+      "Military Strategy (Human & Social Systems) — Atomic: Mission succeeds/fails, Enemy positions unknown, Multiple tactical options; Domain: Battle situation evolves, Military doctrine, Log tactical moves; Control: Intelligence systems, Concurrent operations, Atomic command updates; Orchestration: Defense coordination, War gaming vs actual combat"
+    ],
+    [
+      "Gaming Narrative (Creative & Performance Systems) — Atomic: Player action succeeds/fails, Character status unknown, Multiple dialogue choices; Domain: Game world evolves, Game rules context, Log player actions; Control: Player input from controllers, Concurrent NPCs & physics, Atomic world consistency; Orchestration: Game engine coordination, Narrative vs gameplay environments",
+      "Cognitive Attention Map Evolution"
     ]
   ],
   "already_janused": [
@@ -177,7 +185,9 @@
     "Epidemiology — herd immunity thresholds",
     "Physical Bridge Cable Tension",
     "Control theory — PID feedback loops",
-    "Informational Database Sharding"
+    "Informational Database Sharding",
+    "Human Learning Uncertainty",
+    "Climatology — feedback loops in ice-albedo effect"
   ],
   "already_homospatial": [
     [
@@ -283,6 +293,14 @@
     [
       "Biological Systems (Physical & Natural Systems) — Atomic: Gene expression uncertain, Mutation beneficial/harmful, Multiple phenotypes; Domain: Organism develops, Genetic code context, Log cellular events; Control: Environmental signals, Concurrent processes, Atomic DNA replication; Orchestration: Ecosystem coordination, Laboratory vs natural evolution",
       "Human Social Network Dynamics"
+    ],
+    [
+      "Cryptography — public-key infrastructure",
+      "Cognitive Development (Information & Intelligence Systems) — Atomic: Learning outcome uncertain, Skill acquisition succeeds/fails, Multiple learning paths; Domain: Cognitive skills evolve, Learning context, Log development milestones; Control: External learning resources, Parallel skill development, Atomic knowledge integration; Orchestration: Learning system coordination, Practice vs application environments"
+    ],
+    [
+      "Linguistics — creole genesis",
+      "Economics — market microstructure and order books"
     ]
   ],
   "domain_pool": [
