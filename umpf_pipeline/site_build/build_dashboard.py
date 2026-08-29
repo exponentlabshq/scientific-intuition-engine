@@ -282,9 +282,9 @@ body {
 
 /* console header */
 .console-header { padding: 20px 0 14px; display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 10px; }
-.console-header .id { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.15em; color: var(--text-dim); text-transform: uppercase; }
+.console-header .id { font-family: var(--mono); font-size: 0.85rem; letter-spacing: 0.12em; color: var(--text-dim); text-transform: uppercase; }
 .console-header h1 { font-family: var(--display); font-weight: 900; font-size: clamp(1.3rem, 3vw, 1.9rem); margin: 4px 0 0; color: var(--white); letter-spacing: 0.02em; }
-.status-tag { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.1em; color: var(--led-green); border: 1px solid var(--led-green-dim); background: rgba(0,255,106,0.06); padding: 4px 10px; border-radius: 3px; }
+.status-tag { font-family: var(--mono); font-size: 0.85rem; letter-spacing: 0.08em; color: var(--led-green); border: 1px solid var(--led-green-dim); background: rgba(0,255,106,0.06); padding: 5px 12px; border-radius: 3px; }
 .status-tag .dot { display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--led-green); margin-right: 6px; box-shadow: 0 0 6px var(--led-green); animation: blink 1.6s ease-in-out infinite; }
 @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
 
@@ -298,9 +298,9 @@ body {
 .phase-chip .ring { width: 30px; height: 30px; border-radius: 50%; border: 2px solid var(--text-faint); display: flex; align-items: center; justify-content: center; font-size: 0.85rem; background: var(--panel-2); }
 .phase-chip .ring.ok { border-color: var(--led-green); box-shadow: 0 0 8px rgba(0,255,106,0.4); }
 .phase-chip .ring.fail { border-color: var(--led-red); box-shadow: 0 0 8px rgba(255,32,32,0.4); }
-.phase-chip .lbl { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.08em; color: var(--text-dim); text-transform: uppercase; }
+.phase-chip .lbl { font-family: var(--mono); font-size: 0.9rem; font-weight: 700; letter-spacing: 0.06em; color: var(--text); text-transform: uppercase; }
 .phase-chip .val { font-family: var(--display); font-size: 0.8rem; color: var(--led-red); min-height: 1em; }
-.cycle-meta { font-family: var(--mono); font-size: 0.66rem; color: var(--text-faint); text-align: center; margin-top: 8px; }
+.cycle-meta { font-family: var(--mono); font-size: 0.82rem; color: var(--text-dim); text-align: center; margin-top: 10px; }
 
 /* instrument cluster */
 .cluster { display: grid; grid-template-columns: 1fr 1.3fr 1fr; gap: 16px; align-items: center; margin: 20px 0; }
@@ -309,15 +309,15 @@ body {
 .gauge-panel { background: var(--panel); border: 1px solid var(--bezel); border-radius: 6px; padding: 14px; text-align: center; }
 .gauge-panel svg { display: block; margin: 0 auto; }
 .gauge-num { font-family: var(--display); font-weight: 700; fill: var(--led-red); }
-.gauge-label { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.1em; color: var(--text-dim); text-transform: uppercase; margin-top: 4px; }
+.gauge-label { font-family: var(--mono); font-size: 0.92rem; font-weight: 700; letter-spacing: 0.06em; color: var(--text); text-transform: uppercase; margin-top: 8px; }
 .hero-gauge { background: var(--panel); border: 1px solid var(--bezel); border-radius: 10px; padding: 20px; text-align: center; }
-.hero-gauge .gauge-label { font-size: 0.72rem; margin-top: 8px; }
+.hero-gauge .gauge-label { font-size: 1.15rem; margin-top: 10px; }
 
 /* LED digit readouts (verdict counts) */
 .led-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(90px,1fr)); gap: 10px; margin: 16px 0; }
 .led-box { background: var(--panel); border: 1px solid var(--bezel); border-radius: 6px; padding: 12px 8px; text-align: center; }
 .led-box .n { font-family: var(--display); font-size: 1.6rem; font-weight: 700; text-shadow: 0 0 10px currentColor; }
-.led-box .l { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.08em; color: var(--text-dim); margin-top: 4px; text-transform: uppercase; }
+.led-box .l { font-family: var(--mono); font-size: 0.85rem; font-weight: 700; letter-spacing: 0.06em; color: var(--text); margin-top: 6px; text-transform: uppercase; }
 .led-box.red .n { color: var(--led-red); } .led-box.green .n { color: var(--led-green); } .led-box.amber .n { color: var(--led-amber); }
 
 section.block { margin: 24px 0; }
@@ -329,34 +329,34 @@ section.block h2 { font-family: var(--display); font-size: 0.85rem; font-weight:
 
 /* mode mini gauges row */
 .mode-gauge { text-align: center; }
-.mode-gauge .name { font-family: var(--mono); font-size: 0.66rem; letter-spacing: 0.06em; color: var(--text-dim); text-transform: uppercase; margin-top: 6px; }
-.mode-gauge .stat { font-family: var(--display); font-size: 0.7rem; color: var(--led-red); }
+.mode-gauge .name { font-family: var(--mono); font-size: 0.9rem; font-weight: 700; letter-spacing: 0.06em; color: var(--text); text-transform: uppercase; margin-top: 8px; }
+.mode-gauge .stat { font-family: var(--display); font-size: 0.95rem; color: var(--led-red); margin-top: 2px; }
 
 /* leaderboard terminal list */
-.term-row { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px dashed var(--text-faint); font-size: 0.76rem; }
+.term-row { display: flex; justify-content: space-between; padding: 7px 0; border-bottom: 1px dashed var(--text-faint); font-size: 0.92rem; }
 .term-row:last-child { border-bottom: none; }
 .term-row .pts { font-family: var(--display); color: var(--led-red); font-weight: 700; }
-.term-link { display: inline-block; margin-top: 10px; font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.06em; color: var(--led-red); text-decoration: none; border: 1px solid var(--bezel); padding: 6px 12px; border-radius: 4px; }
+.term-link { display: inline-block; margin-top: 10px; font-family: var(--mono); font-size: 0.85rem; letter-spacing: 0.06em; color: var(--led-red); text-decoration: none; border: 1px solid var(--bezel); padding: 7px 14px; border-radius: 4px; }
 .term-link:hover { background: rgba(255,32,32,0.08); }
 
 /* roti table */
-.roti-table { width: 100%; border-collapse: collapse; font-size: 0.72rem; }
+.roti-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
 .roti-table th, .roti-table td { padding: 5px 6px; text-align: right; border-bottom: 1px solid var(--text-faint); }
 .roti-table th:first-child, .roti-table td:first-child { text-align: left; }
-.roti-table th { font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-dim); font-size: 0.6rem; }
+.roti-table th { font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.04em; color: var(--text); font-size: 0.82rem; }
 .roti-table td { color: var(--text); }
-.roti-note { margin-top: 10px; font-size: 0.68rem; color: var(--text-dim); line-height: 1.5; }
+.roti-note { margin-top: 10px; font-size: 0.85rem; color: var(--text-dim); line-height: 1.6; }
 .roti-note b { color: var(--led-red); }
 
 /* audit feed as terminal log */
-.log-line { font-size: 0.74rem; padding: 4px 0; color: var(--text); }
+.log-line { font-size: 0.9rem; padding: 5px 0; color: var(--text); }
 .log-line .ts { color: var(--text-faint); margin-right: 6px; }
 .log-line::before { content: '>'; color: var(--led-red); margin-right: 6px; }
 
 .proposal-alert { border-color: var(--led-amber); }
-.proposal-alert .tag { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.08em; color: var(--led-amber); text-transform: uppercase; border: 1px solid var(--led-amber); padding: 2px 8px; border-radius: 3px; }
+.proposal-alert .tag { font-family: var(--mono); font-size: 0.8rem; letter-spacing: 0.06em; color: var(--led-amber); text-transform: uppercase; border: 1px solid var(--led-amber); padding: 3px 10px; border-radius: 3px; }
 .proposal-alert .t { font-family: var(--display); font-size: 0.85rem; color: var(--white); margin: 8px 0 4px; }
-.proposal-alert .f { font-family: var(--mono); font-size: 0.68rem; color: var(--text-dim); }
+.proposal-alert .f { font-family: var(--mono); font-size: 0.85rem; color: var(--text-dim); }
 
 @media (prefers-reduced-motion: reduce) { .status-tag .dot { animation: none; } }
 </style>
