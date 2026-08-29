@@ -140,6 +140,10 @@
     [
       "Economics — auction theory",
       "Human Defense Coordination"
+    ],
+    [
+      "Artificial Intelligence (Information & Intelligence Systems) — Atomic: Neural activation uncertain, Training succeeds/fails, Multiple architectures; Domain: Model weights evolve, Hyperparameters context, Log training metrics; Control: External data sources, Distributed training, Atomic parameter updates; Orchestration: AI system coordination, Research vs deployment environments",
+      "Informational Queue Overflow"
     ]
   ],
   "already_janused": [
@@ -163,7 +167,8 @@
     "Informational Queue Overflow",
     "Informational Database State",
     "Epidemiology — herd immunity thresholds",
-    "Physical Bridge Cable Tension"
+    "Physical Bridge Cable Tension",
+    "Control theory — PID feedback loops"
   ],
   "already_homospatial": [
     [
@@ -253,6 +258,10 @@
     [
       "Cognitive Attention Map Evolution",
       "Informational Sensor Networks"
+    ],
+    [
+      "Creative Artistic Critique",
+      "Creative Idea Uncertainty"
     ]
   ],
   "domain_pool": [
