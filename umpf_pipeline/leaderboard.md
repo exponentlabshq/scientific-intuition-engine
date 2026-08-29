@@ -1,6 +1,6 @@
 # Eureka Engine — Leaderboard
 
-**Regenerated from**: `verification-log.jsonl` (88 entries — 87 scored, 1 held out). Do not hand-edit this file — re-run `python3 score_hypotheses.py`.
+**Regenerated from**: `verification-log.jsonl` (89 entries — 88 scored, 1 held out). Do not hand-edit this file — re-run `python3 score_hypotheses.py`.
 
 Points are tied to what an outcome reveals about real potential, not to phase completion — see `score_hypotheses.py`'s own docstring for the full schema.
 
@@ -70,31 +70,32 @@ Points are tied to what an outcome reveals about real potential, not to phase co
 | 60 | Graph traversal algorithms × State space search algorithms | **-5** | COLLISION | 📜 Pre-existing case study 🚫 Not a Valid Bisociation |
 | 61 | Quantum entanglement / Bell inequalities × Quantum information science | **-5** | COLLISION | 📜 Pre-existing case study 🚫 Not a Valid Bisociation |
 | 62 | Trigonometric function analysis × Fourier transform / spectral decomposition | **-5** | COLLISION | 📜 Pre-existing case study 🚫 Not a Valid Bisociation |
-| 63 | Neuroscience — cortical map reorganization × Climatology — ocean current circulation (thermohaline) | **-7** | NO_SIGNAL | 🧬 Bisociative 💀 Refuted |
-| 64 | Swarm robotics — flocking / boids behavior × Culinary Arts | **-7** | NO_SIGNAL | 🧬 Bisociative 💀 Refuted |
-| 65 | Comedy — crowd work and audience read × Sports — basketball pick-and-roll offense | **-7** | NO_SIGNAL | 🪞 Homospatial 💀 Refuted |
-| 66 | Astronomy — stellar nucleosynthesis × Creative — album production orchestration | **-7** | NO_SIGNAL | 🪞 Homospatial 💀 Refuted |
-| 67 | Cognitive Attention Map Evolution × Informational Event-Driven Systems | **-7** | NO_SIGNAL | 🧬 Bisociative 💀 Refuted |
-| 68 | Ecology × Materials Science | **-7** | NO_SIGNAL | 🧬 Bisociative 💀 Refuted |
-| 69 | Epidemiology × Creative Inspiration Variability | **-7** | NO_SIGNAL | 🧬 Bisociative 💀 Refuted |
-| 70 | Linguistics × Fluid Dynamics | **-7** | NO_SIGNAL | 🪞 Homospatial 💀 Refuted |
-| 71 | Cognitive AI Preprocessing Pipelines | **-7** | NO_SIGNAL | 🎭 Janusian 💀 Refuted |
-| 72 | Knowledge Systems (Cognitive & Pattern Recognition Systems) | **-7** | NO_SIGNAL | 🎭 Janusian 💀 Refuted |
-| 73 | Urban planning — zoning and land use | **-7** | NO_SIGNAL | 🎭 Janusian 💀 Refuted |
-| 74 | Supply Chain Logistics × Physical Thermal Variation | **-7** | NO_SIGNAL | 🧬 Bisociative 💀 Refuted |
-| 75 | Game Theory — Repeated Prisoner's Dilemma × Informational Measurement Data Evolution | **-7** | NO_SIGNAL | 🧬 Bisociative 💀 Refuted |
-| 76 | Basketball Pick-and-Roll Offense × Physical Flux Regulation | **-7** | NO_SIGNAL | 🪞 Homospatial 💀 Refuted |
-| 77 | Informational Queue Overflow | **-7** | NO_SIGNAL | 🎭 Janusian 💀 Refuted |
-| 78 | Organizational Theory — Self-Organizing Teams × Finance (Human & Social Systems) | **-7** | NO_SIGNAL | 🧬 Bisociative 💀 Refuted |
-| 79 | Creative Brainstorming Facilitation × Physical Electrical Noise | **-7** | NO_SIGNAL | 🧬 Bisociative 💀 Refuted |
-| 80 | Human Individual Indecision × Physical Voltage Spikes | **-7** | NO_SIGNAL | 🪞 Homospatial 💀 Refuted |
-| 81 | Load-Bearing Structural Design × Informational Load Balancing | **-7** | NO_SIGNAL | 🪞 Homospatial 💀 Refuted |
-| 82 | Physical Bridge Cable Tension | **-7** | NO_SIGNAL | 🎭 Janusian 💀 Refuted |
-| 83 | Artificial Intelligence × Informational Queue Overflow | **-7** | NO_SIGNAL | 🧬 Bisociative 💀 Refuted |
-| 84 | Creative Performance Monitoring × Physical Voltage Spikes | **-7** | NO_SIGNAL | 🧬 Bisociative 💀 Refuted |
-| 85 | Human immune system × Distributed ledger technology | **-15** | NO_SIGNAL | 📜 Pre-existing case study 💀 Refuted |
-| 86 | Neural networks × Coral reef ecosystems | **-15** | NO_SIGNAL | 📜 Pre-existing case study 💀 Refuted |
-| 87 | Sample variance / statistical estimation × Protein structure prediction | **-15** | NO_SIGNAL | 📜 Pre-existing case study 💀 Refuted |
+| 63 | Efficient Market Hypothesis | **-5** | NO_SIGNAL | 🎭 Janusian 💀 Refuted |
+| 64 | Neuroscience — cortical map reorganization × Climatology — ocean current circulation (thermohaline) | **-7** | NO_SIGNAL | 🧬 Bisociative 💀 Refuted |
+| 65 | Swarm robotics — flocking / boids behavior × Culinary Arts | **-7** | NO_SIGNAL | 🧬 Bisociative 💀 Refuted |
+| 66 | Comedy — crowd work and audience read × Sports — basketball pick-and-roll offense | **-7** | NO_SIGNAL | 🪞 Homospatial 💀 Refuted |
+| 67 | Astronomy — stellar nucleosynthesis × Creative — album production orchestration | **-7** | NO_SIGNAL | 🪞 Homospatial 💀 Refuted |
+| 68 | Cognitive Attention Map Evolution × Informational Event-Driven Systems | **-7** | NO_SIGNAL | 🧬 Bisociative 💀 Refuted |
+| 69 | Ecology × Materials Science | **-7** | NO_SIGNAL | 🧬 Bisociative 💀 Refuted |
+| 70 | Epidemiology × Creative Inspiration Variability | **-7** | NO_SIGNAL | 🧬 Bisociative 💀 Refuted |
+| 71 | Linguistics × Fluid Dynamics | **-7** | NO_SIGNAL | 🪞 Homospatial 💀 Refuted |
+| 72 | Cognitive AI Preprocessing Pipelines | **-7** | NO_SIGNAL | 🎭 Janusian 💀 Refuted |
+| 73 | Knowledge Systems (Cognitive & Pattern Recognition Systems) | **-7** | NO_SIGNAL | 🎭 Janusian 💀 Refuted |
+| 74 | Urban planning — zoning and land use | **-7** | NO_SIGNAL | 🎭 Janusian 💀 Refuted |
+| 75 | Supply Chain Logistics × Physical Thermal Variation | **-7** | NO_SIGNAL | 🧬 Bisociative 💀 Refuted |
+| 76 | Game Theory — Repeated Prisoner's Dilemma × Informational Measurement Data Evolution | **-7** | NO_SIGNAL | 🧬 Bisociative 💀 Refuted |
+| 77 | Basketball Pick-and-Roll Offense × Physical Flux Regulation | **-7** | NO_SIGNAL | 🪞 Homospatial 💀 Refuted |
+| 78 | Informational Queue Overflow | **-7** | NO_SIGNAL | 🎭 Janusian 💀 Refuted |
+| 79 | Organizational Theory — Self-Organizing Teams × Finance (Human & Social Systems) | **-7** | NO_SIGNAL | 🧬 Bisociative 💀 Refuted |
+| 80 | Creative Brainstorming Facilitation × Physical Electrical Noise | **-7** | NO_SIGNAL | 🧬 Bisociative 💀 Refuted |
+| 81 | Human Individual Indecision × Physical Voltage Spikes | **-7** | NO_SIGNAL | 🪞 Homospatial 💀 Refuted |
+| 82 | Load-Bearing Structural Design × Informational Load Balancing | **-7** | NO_SIGNAL | 🪞 Homospatial 💀 Refuted |
+| 83 | Physical Bridge Cable Tension | **-7** | NO_SIGNAL | 🎭 Janusian 💀 Refuted |
+| 84 | Artificial Intelligence × Informational Queue Overflow | **-7** | NO_SIGNAL | 🧬 Bisociative 💀 Refuted |
+| 85 | Creative Performance Monitoring × Physical Voltage Spikes | **-7** | NO_SIGNAL | 🧬 Bisociative 💀 Refuted |
+| 86 | Human immune system × Distributed ledger technology | **-15** | NO_SIGNAL | 📜 Pre-existing case study 💀 Refuted |
+| 87 | Neural networks × Coral reef ecosystems | **-15** | NO_SIGNAL | 📜 Pre-existing case study 💀 Refuted |
+| 88 | Sample variance / statistical estimation × Protein structure prediction | **-15** | NO_SIGNAL | 📜 Pre-existing case study 💀 Refuted |
 
 ## Held out of scoring (non-standard verdict)
 
@@ -422,6 +423,13 @@ Points are tied to what an outcome reveals about real potential, not to phase co
 ### Trigonometric function analysis × Fourier transform / spectral decomposition — -5
 
 - Phase 2 COLLISION (not a valid bisociation): -5
+
+### Efficient Market Hypothesis — -5
+
+- Phase 1 self-report (5/5): +10
+- Phase 2 NO_SIGNAL: +0 (pending)
+- Adversarial refutation REFUTED: -15
+-   independently confirmed (3 separate agents, full agreement)
 
 ### Neuroscience — cortical map reorganization × Climatology — ocean current circulation (thermohaline) — -7
 
