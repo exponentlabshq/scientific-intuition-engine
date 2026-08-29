@@ -100,9 +100,38 @@ def extract_core_claim(text: str, mode: str) -> str:
 
 
 def extract_self_score(text: str, mode: str):
-    section = extract_section(text, r"## 6\.\s*[^\n]*\n")
-    key = "Tension score" if mode == "janusian" else "Distance score"
-    m = re.search(rf"{key}[^\d]*(\d)", section)
+    """The self-critique section is numbered differently per mode --
+    bisociation and homospatial put it at '## 5.', janusian at '## 6.'
+    (one extra section, 'The Simultaneous Hold', comes before it). A prior
+    version of this function hardcoded '## 6.' for all three modes, which
+    silently returned None for every bisociation and homospatial entry
+    (confirmed against the real ledger: 28 of 45 entries verified by this
+    script were missing their score entirely). Fixed to match on the
+    section's actual heading text, 'Novelty & Testability Self-Critique',
+    which is identical across all three modes regardless of its number --
+    more robust than hardcoding a number per mode, and won't break again if
+    a future prompt template reorders sections.
+
+    The score's own label also differs by mode, not just janusian vs. the
+    rest: bisociation says 'Distance score', janusian says 'Tension score',
+    homospatial says 'Fusion distance' -- three distinct labels, not two."""
+    section = extract_section(text, r"## \d+\.\s*Novelty & Testability Self-Critique[^\n]*\n")
+    key = {
+        "janusian": "Tension score",
+        "homospatial": "Fusion distance",
+    }.get(mode, "Distance score")
+    # A second, more damaging bug lived here too: [^\d]*(\d) captures the
+    # FIRST digit after the label, which for the real text
+    # "Tension score (1-5): 4" is the "1" inside the range parenthetical,
+    # not the actual "4" after the colon. This wasn't returning None (so
+    # it never showed up as a missing-score gap) -- it was silently
+    # writing a wrong-but-plausible-looking score (always 1, since every
+    # label is followed by "(1-5)") into the ledger for every entry this
+    # script has ever verified, undercounting real Phase 1 points in
+    # score_hypotheses.py by up to 8 per affected entry. Fixed to require
+    # the colon before capturing, so it skips past "(1-5)" and lands on
+    # the real value.
+    m = re.search(rf"{key}[^:]*:\s*(\d)", section)
     return int(m.group(1)) if m else None
 
 
