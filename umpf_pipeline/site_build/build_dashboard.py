@@ -2,6 +2,17 @@
 """
 build_dashboard.py — The Eureka Engine's live operations dashboard.
 
+Restyled 2026-08-29 per Michael's direct request: "styled like the driving
+digital dashboard from that show with Kit & David Hasselhoff... Digital LED
+RED light dots, gauges, radial speed dial large... 75% less text." A KITT
+instrument-cluster reskin -- Orbitron/Share Tech Mono (Google Fonts, real
+digital-HUD faces, not system serif/sans), a continuous red LED scanner bar
+doubling as the real last-cycle phase indicator, one large radial gauge for
+mission success rate, small arc gauges for mode performance, and verdict
+counts as blocky LED digit readouts instead of labeled bars. Every number is
+still the same real, computed data as before -- only the treatment changed,
+prose cut hard everywhere it wasn't load-bearing information.
+
 Fully automated, unlike landing.html: everything on this page is real,
 computed data (verdict distribution, mode performance, ROTI, the last
 cycle's actual phase-by-phase journey, the audit agent's running
@@ -204,10 +215,16 @@ def compute_dashboard_data():
                 "rationale": rationale[:600],
             }
 
+    total_scored_for_rate = sum(v for k, v in verdict_counts.items() if k != "NO_SIGNAL_UNRESOLVED")
+    dead_end_count = verdict_counts.get("COLLISION", 0) + verdict_counts.get("REFUTED", 0) + verdict_counts.get("FACT_CHECK_FAIL", 0)
+    success_rate_pct = round((verdict_counts.get("ADJACENT_ACTIVE", 0) / total_scored_for_rate) * 100, 1) if total_scored_for_rate else 0
+
     return {
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "total_hypotheses": len(entries),
         "verdict_counts": dict(verdict_counts),
+        "success_rate_pct": success_rate_pct,
+        "dead_end_count": dead_end_count,
         "mode_summary": mode_summary,
         "top5": top5,
         "roti_phases": roti_phases,
@@ -233,182 +250,121 @@ html = r'''<!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="robots" content="noindex, nofollow" />
 <title>The Eureka Engine — Live Operations</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
 <style>
 :root {
-  --ink: #14110f; --surface: #241f1a; --surface-2: #2c261f; --border: #3a3229;
-  --text: #ede6d8; --text-muted: #a89a86; --text-faint: #6f6455;
-  --gold: #c89b3c; --gold-bright: #e0b954;
-  --v-adjacent: #5fa88f; --v-collision: #6f93bd; --v-refuted: #b56b6b; --v-pending: #8a8577;
-  --serif: ui-serif, Georgia, 'Iowan Old Style', 'Times New Roman', serif;
-  --sans: -apple-system, BlinkMacSystemFont, 'Inter', ui-sans-serif, 'Segoe UI', sans-serif;
-  --mono: ui-monospace, 'SF Mono', Menlo, monospace;
+  --bg: #030202; --panel: #0b0706; --panel-2: #130c0a; --bezel: #3d1210;
+  --led-red: #ff2020; --led-red-bright: #ff5a3c; --led-red-dim: #3a0808;
+  --led-amber: #ffa500; --led-green: #00ff6a; --led-green-dim: #063d1f;
+  --text: #ffcabf; --text-dim: #8a4d45; --text-faint: #5a2f2a; --white: #fff1e8;
+  --display: 'Orbitron', sans-serif; --mono: 'Share Tech Mono', ui-monospace, monospace;
 }
 * { box-sizing: border-box; }
 body {
-  background: var(--ink); color: var(--text); font-family: var(--sans);
-  font-size: 16px; line-height: 1.6; margin: 0; padding: 0 20px 80px;
-  -webkit-font-smoothing: antialiased;
+  background: var(--bg); color: var(--text); font-family: var(--mono);
+  font-size: 14px; line-height: 1.5; margin: 0; padding: 0 16px 60px;
 }
-.wrap { max-width: 1180px; margin: 0 auto; position: relative; }
+.wrap { max-width: 1180px; margin: 0 auto; }
 
-/* ambient background, same visual family as the landing hero's collision motif */
-.ambient {
-  position: fixed; inset: 0; z-index: -1; pointer-events: none;
-  background:
-    radial-gradient(600px circle at 15% 10%, rgba(200,155,60,0.08), transparent 60%),
-    radial-gradient(500px circle at 90% 30%, rgba(95,168,143,0.05), transparent 60%);
-}
-
-header.top { padding: 48px 0 28px; border-bottom: 2px solid var(--gold); }
-header.top .kicker {
-  font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.14em;
-  color: var(--gold); font-size: 0.76rem; margin-bottom: 12px;
-}
-header.top h1 {
-  font-family: var(--serif); font-weight: 600; font-size: clamp(1.8rem, 4vw, 2.6rem);
-  margin: 0 0 12px; text-wrap: balance;
-}
-header.top .mission {
-  color: var(--text-muted); font-size: 1.02rem; max-width: 720px; margin: 0;
-}
-.live-dot {
-  display: inline-block; width: 8px; height: 8px; border-radius: 50%;
-  background: var(--v-adjacent); margin-right: 8px; vertical-align: middle;
-  animation: pulse-dot 2s ease-in-out infinite;
-}
-@keyframes pulse-dot { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
-
-/* headline stat row */
-.stat-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin: 32px 0; }
-.stat-card {
-  background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
-  padding: 22px 24px; opacity: 0; transform: translateY(10px);
-  animation: rise 0.5s ease-out forwards;
-}
-.stat-card .n {
-  font-family: var(--serif); font-size: 2.2rem; font-weight: 600; color: var(--gold);
-  font-variant-numeric: tabular-nums; line-height: 1;
-}
-.stat-card .l { color: var(--text-muted); font-size: 0.86rem; margin-top: 8px; }
-@keyframes rise { to { opacity: 1; transform: translateY(0); } }
-
-section.block { margin: 48px 0; }
-section.block h2 {
-  font-family: var(--serif); font-size: 1.35rem; font-weight: 600; margin: 0 0 6px;
-}
-section.block .sub { color: var(--text-faint); font-size: 0.88rem; margin: 0 0 20px; font-family: var(--mono); }
-
-/* pipeline flow replay */
-.pipeline-flow {
-  display: flex; align-items: center; justify-content: space-between; gap: 4px;
-  background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
-  padding: 28px 20px; overflow-x: auto;
-}
-.pf-node { display: flex; flex-direction: column; align-items: center; gap: 10px; min-width: 110px; position: relative; }
-.pf-circle {
-  width: 52px; height: 52px; border-radius: 50%; border: 2px solid var(--border);
-  background: var(--ink); display: flex; align-items: center; justify-content: center;
-  font-size: 1.3rem; transition: all 0.4s ease; opacity: 0.4;
-}
-.pf-circle.active { border-color: var(--gold); background: rgba(200,155,60,0.12); opacity: 1; transform: scale(1.08); box-shadow: 0 0 0 4px rgba(200,155,60,0.15); }
-.pf-circle.fail { border-color: var(--v-refuted); background: rgba(181,107,107,0.14); opacity: 1; }
-.pf-label { font-family: var(--mono); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); text-align: center; }
-.pf-value { font-family: var(--serif); font-size: 1rem; color: var(--gold); font-weight: 600; min-height: 1.2em; }
-.pf-line { flex: 1; height: 2px; background: var(--border); margin: 0 -4px 32px; position: relative; min-width: 24px; }
-.pf-line .fill { position: absolute; inset: 0; background: var(--gold); width: 0%; transition: width 0.6s ease; }
-
-/* card grid */
-.grid-2 { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 20px; align-items: start; }
-.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; align-items: start; }
-@media (max-width: 860px) { .grid-2, .grid-3 { grid-template-columns: 1fr; } }
-.card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 22px 24px; }
-.card h3 { font-family: var(--serif); font-size: 1.05rem; margin: 0 0 16px; font-weight: 600; }
-
-/* verdict distribution bars */
-.vbar-row { display: flex; align-items: center; gap: 12px; margin: 10px 0; }
-.vbar-label { width: 130px; font-family: var(--mono); font-size: 0.78rem; color: var(--text-muted); flex-shrink: 0; }
-.vbar-track { flex: 1; height: 20px; background: var(--ink); border-radius: 6px; overflow: hidden; }
-.vbar-fill { height: 100%; width: 0%; border-radius: 6px; transition: width 1s cubic-bezier(0.16,1,0.3,1); }
-.vbar-n { width: 34px; text-align: right; font-family: var(--mono); font-size: 0.82rem; color: var(--text); font-variant-numeric: tabular-nums; }
-
-/* mode performance */
-.mode-row { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--border); }
-.mode-row:last-child { border-bottom: none; }
-.mode-name { font-family: var(--mono); font-size: 0.88rem; }
-.mode-metrics { display: flex; gap: 18px; font-family: var(--mono); font-size: 0.82rem; color: var(--text-muted); }
-.mode-metrics .hi { color: var(--gold); }
-
-/* leaderboard snippet */
-.lb-row { display: flex; justify-content: space-between; align-items: center; padding: 9px 0; border-bottom: 1px solid var(--border); gap: 12px; }
-.lb-row:last-child { border-bottom: none; }
-.lb-domains { font-size: 0.9rem; }
-.lb-points { font-family: var(--mono); font-weight: 600; color: var(--gold); flex-shrink: 0; }
-
-/* ROTI */
-.roti-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
-.roti-table th, .roti-table td { padding: 8px 10px; text-align: left; border-bottom: 1px solid var(--border); }
-.roti-table th { font-family: var(--mono); text-transform: uppercase; font-size: 0.68rem; letter-spacing: 0.04em; color: var(--gold); }
-.roti-table td.num, .roti-table th.num { text-align: right; font-family: var(--mono); font-variant-numeric: tabular-nums; }
-.roti-callout {
-  margin-top: 16px; padding: 14px 16px; background: rgba(200,155,60,0.08);
-  border-left: 3px solid var(--gold); border-radius: 0 8px 8px 0; font-size: 0.88rem;
-}
-
-/* audit commentary feed */
-.feed-item { padding: 12px 0; border-bottom: 1px solid var(--border); font-size: 0.88rem; }
-.feed-item:last-child { border-bottom: none; }
-.feed-item .ts { font-family: var(--mono); font-size: 0.7rem; color: var(--text-faint); display: block; margin-bottom: 4px; }
-.feed-item.newest { position: relative; padding-left: 14px; }
-.feed-item.newest::before { content: ''; position: absolute; left: 0; top: 16px; width: 6px; height: 6px; border-radius: 50%; background: var(--v-adjacent); animation: pulse-dot 2s ease-in-out infinite; }
-
-.proposal-card { border-color: var(--gold); }
-.proposal-card .status-chip {
-  display: inline-block; font-family: var(--mono); font-size: 0.68rem; text-transform: uppercase;
-  letter-spacing: 0.05em; color: var(--v-pending); background: rgba(138,133,119,0.16);
-  padding: 2px 8px; border-radius: 100px; margin-bottom: 10px;
-}
-
-.cta-row { display: flex; gap: 14px; margin-top: 12px; flex-wrap: wrap; }
-.cta-btn {
-  display: inline-flex; align-items: center; gap: 8px; font-family: var(--mono); font-size: 0.8rem;
-  text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink); background: var(--gold);
-  padding: 10px 18px; border-radius: 8px; text-decoration: none;
-}
-.cta-btn.secondary { background: transparent; color: var(--gold-bright); border: 1px solid var(--gold); }
-
-@media (prefers-reduced-motion: reduce) {
-  .stat-card { animation: none; opacity: 1; transform: none; }
-  .live-dot, .feed-item.newest::before { animation: none; }
-  .pf-circle, .vbar-fill, .pf-line .fill { transition: none; }
-}
-
+/* nav (site-wide, matches other pages but restyled to fit) */
 .site-nav {
-  position: sticky; top: 0; z-index: 200;
-  background: rgba(20,17,15,0.94); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
-  border-bottom: 1px solid var(--border); margin: 0 -20px;
+  position: sticky; top: 0; z-index: 200; margin: 0 -16px 0;
+  background: rgba(3,2,2,0.95); border-bottom: 1px solid var(--bezel);
 }
-.site-nav-inner {
-  max-width: 1180px; margin: 0 auto; padding: 14px 24px;
-  display: flex; align-items: center; justify-content: space-between; gap: 20px;
-}
-.site-nav-brand { font-family: var(--serif); font-size: 1rem; color: var(--gold); text-decoration: none; font-weight: 600; white-space: nowrap; }
-.site-nav-links { display: flex; gap: 24px; }
-.site-nav-links a {
-  font-family: var(--mono); font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.06em;
-  color: var(--text-muted); text-decoration: none; transition: color 0.15s; white-space: nowrap;
-}
-.site-nav-links a:hover { color: var(--gold); }
-.site-nav-links a.is-active { color: var(--gold); border-bottom: 1px solid var(--gold); padding-bottom: 2px; }
-@media (max-width: 560px) {
-  .site-nav-inner { padding: 12px 16px; } .site-nav-links { gap: 14px; }
-  .site-nav-brand { font-size: 0.88rem; } .site-nav-links a { font-size: 0.68rem; }
-}
+.site-nav-inner { max-width: 1180px; margin: 0 auto; padding: 12px 20px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.site-nav-brand { font-family: var(--display); font-size: 0.9rem; color: var(--led-red); text-decoration: none; font-weight: 700; letter-spacing: 0.04em; }
+.site-nav-links { display: flex; gap: 20px; }
+.site-nav-links a { font-family: var(--mono); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-dim); text-decoration: none; }
+.site-nav-links a:hover { color: var(--led-red); }
+.site-nav-links a.is-active { color: var(--led-red); border-bottom: 1px solid var(--led-red); padding-bottom: 2px; }
+
+/* console header */
+.console-header { padding: 20px 0 14px; display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 10px; }
+.console-header .id { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.15em; color: var(--text-dim); text-transform: uppercase; }
+.console-header h1 { font-family: var(--display); font-weight: 900; font-size: clamp(1.3rem, 3vw, 1.9rem); margin: 4px 0 0; color: var(--white); letter-spacing: 0.02em; }
+.status-tag { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.1em; color: var(--led-green); border: 1px solid var(--led-green-dim); background: rgba(0,255,106,0.06); padding: 4px 10px; border-radius: 3px; }
+.status-tag .dot { display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--led-green); margin-right: 6px; box-shadow: 0 0 6px var(--led-green); animation: blink 1.6s ease-in-out infinite; }
+@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+
+/* KITT scanner bar */
+.scanner-panel { background: var(--panel); border: 1px solid var(--bezel); border-radius: 6px; padding: 10px 14px 14px; margin-bottom: 16px; }
+.scanner-track { display: flex; gap: 3px; height: 22px; margin-bottom: 8px; }
+.scanner-led { flex: 1; background: var(--led-red-dim); border-radius: 2px; transition: background 0.06s linear, box-shadow 0.06s linear; }
+.scanner-led.lit { background: var(--led-red); box-shadow: 0 0 8px 1px var(--led-red-bright); }
+.phase-row { display: flex; justify-content: space-between; }
+.phase-chip { display: flex; flex-direction: column; align-items: center; gap: 4px; flex: 1; }
+.phase-chip .ring { width: 30px; height: 30px; border-radius: 50%; border: 2px solid var(--text-faint); display: flex; align-items: center; justify-content: center; font-size: 0.85rem; background: var(--panel-2); }
+.phase-chip .ring.ok { border-color: var(--led-green); box-shadow: 0 0 8px rgba(0,255,106,0.4); }
+.phase-chip .ring.fail { border-color: var(--led-red); box-shadow: 0 0 8px rgba(255,32,32,0.4); }
+.phase-chip .lbl { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.08em; color: var(--text-dim); text-transform: uppercase; }
+.phase-chip .val { font-family: var(--display); font-size: 0.8rem; color: var(--led-red); min-height: 1em; }
+.cycle-meta { font-family: var(--mono); font-size: 0.66rem; color: var(--text-faint); text-align: center; margin-top: 8px; }
+
+/* instrument cluster */
+.cluster { display: grid; grid-template-columns: 1fr 1.3fr 1fr; gap: 16px; align-items: center; margin: 20px 0; }
+@media (max-width: 780px) { .cluster { grid-template-columns: 1fr; } }
+.mini-gauges { display: flex; flex-direction: column; gap: 14px; }
+.gauge-panel { background: var(--panel); border: 1px solid var(--bezel); border-radius: 6px; padding: 14px; text-align: center; }
+.gauge-panel svg { display: block; margin: 0 auto; }
+.gauge-num { font-family: var(--display); font-weight: 700; fill: var(--led-red); }
+.gauge-label { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.1em; color: var(--text-dim); text-transform: uppercase; margin-top: 4px; }
+.hero-gauge { background: var(--panel); border: 1px solid var(--bezel); border-radius: 10px; padding: 20px; text-align: center; }
+.hero-gauge .gauge-label { font-size: 0.72rem; margin-top: 8px; }
+
+/* LED digit readouts (verdict counts) */
+.led-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(90px,1fr)); gap: 10px; margin: 16px 0; }
+.led-box { background: var(--panel); border: 1px solid var(--bezel); border-radius: 6px; padding: 12px 8px; text-align: center; }
+.led-box .n { font-family: var(--display); font-size: 1.6rem; font-weight: 700; text-shadow: 0 0 10px currentColor; }
+.led-box .l { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.08em; color: var(--text-dim); margin-top: 4px; text-transform: uppercase; }
+.led-box.red .n { color: var(--led-red); } .led-box.green .n { color: var(--led-green); } .led-box.amber .n { color: var(--led-amber); }
+
+section.block { margin: 24px 0; }
+section.block h2 { font-family: var(--display); font-size: 0.85rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text); margin: 0 0 10px; border-bottom: 1px solid var(--bezel); padding-bottom: 8px; }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start; }
+.grid-3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; }
+@media (max-width: 780px) { .grid-2, .grid-3 { grid-template-columns: 1fr; } }
+.card { background: var(--panel); border: 1px solid var(--bezel); border-radius: 6px; padding: 14px 16px; }
+
+/* mode mini gauges row */
+.mode-gauge { text-align: center; }
+.mode-gauge .name { font-family: var(--mono); font-size: 0.66rem; letter-spacing: 0.06em; color: var(--text-dim); text-transform: uppercase; margin-top: 6px; }
+.mode-gauge .stat { font-family: var(--display); font-size: 0.7rem; color: var(--led-red); }
+
+/* leaderboard terminal list */
+.term-row { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px dashed var(--text-faint); font-size: 0.76rem; }
+.term-row:last-child { border-bottom: none; }
+.term-row .pts { font-family: var(--display); color: var(--led-red); font-weight: 700; }
+.term-link { display: inline-block; margin-top: 10px; font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.06em; color: var(--led-red); text-decoration: none; border: 1px solid var(--bezel); padding: 6px 12px; border-radius: 4px; }
+.term-link:hover { background: rgba(255,32,32,0.08); }
+
+/* roti table */
+.roti-table { width: 100%; border-collapse: collapse; font-size: 0.72rem; }
+.roti-table th, .roti-table td { padding: 5px 6px; text-align: right; border-bottom: 1px solid var(--text-faint); }
+.roti-table th:first-child, .roti-table td:first-child { text-align: left; }
+.roti-table th { font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-dim); font-size: 0.6rem; }
+.roti-table td { color: var(--text); }
+.roti-note { margin-top: 10px; font-size: 0.68rem; color: var(--text-dim); line-height: 1.5; }
+.roti-note b { color: var(--led-red); }
+
+/* audit feed as terminal log */
+.log-line { font-size: 0.74rem; padding: 4px 0; color: var(--text); }
+.log-line .ts { color: var(--text-faint); margin-right: 6px; }
+.log-line::before { content: '>'; color: var(--led-red); margin-right: 6px; }
+
+.proposal-alert { border-color: var(--led-amber); }
+.proposal-alert .tag { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.08em; color: var(--led-amber); text-transform: uppercase; border: 1px solid var(--led-amber); padding: 2px 8px; border-radius: 3px; }
+.proposal-alert .t { font-family: var(--display); font-size: 0.85rem; color: var(--white); margin: 8px 0 4px; }
+.proposal-alert .f { font-family: var(--mono); font-size: 0.68rem; color: var(--text-dim); }
+
+@media (prefers-reduced-motion: reduce) { .status-tag .dot { animation: none; } }
 </style>
 </head>
 <body>
 <nav class="site-nav">
   <div class="site-nav-inner">
-    <a class="site-nav-brand" href="landing.html">The Eureka Engine</a>
+    <a class="site-nav-brand" href="landing.html">THE EUREKA ENGINE</a>
     <div class="site-nav-links">
       <a href="landing.html">Home</a>
       <a href="dashboard.html" class="is-active">Dashboard</a>
@@ -417,58 +373,63 @@ section.block .sub { color: var(--text-faint); font-size: 0.88rem; margin: 0 0 2
     </div>
   </div>
 </nav>
-<div class="ambient"></div>
 <div class="wrap">
 
-  <header class="top">
-    <div class="kicker"><span class="live-dot"></span>Exponent Labs LLC &middot; Faculty of Interdisciplinary Research</div>
-    <h1>The Eureka Engine — Live Operations</h1>
-    <p class="mission">A research department whose entire job is to tell you before you spend the time, not after. Every hypothesis below is a question a real Master's or PhD researcher could have spent months answering by hand &mdash; checked here in minutes, in the open, wrong answers included.</p>
-  </header>
+  <div class="console-header">
+    <div>
+      <div class="id">EXPONENT LABS // FACULTY OF INTERDISCIPLINARY RESEARCH</div>
+      <h1>OPERATIONS CONSOLE</h1>
+    </div>
+    <div class="status-tag"><span class="dot"></span>ONLINE</div>
+  </div>
 
-  <div class="stat-row" id="stat-row"></div>
+  <div class="scanner-panel">
+    <div class="scanner-track" id="scanner-track"></div>
+    <div class="phase-row" id="phase-row"></div>
+    <div class="cycle-meta" id="cycle-meta"></div>
+  </div>
+
+  <div class="cluster">
+    <div class="mini-gauges">
+      <div class="gauge-panel" id="gauge-total"></div>
+      <div class="gauge-panel" id="gauge-cost"></div>
+    </div>
+    <div class="hero-gauge" id="gauge-hero"></div>
+    <div class="mini-gauges">
+      <div class="gauge-panel" id="gauge-deadend"></div>
+      <div class="gauge-panel" id="gauge-tpp"></div>
+    </div>
+  </div>
+
+  <div class="led-row" id="verdict-leds"></div>
 
   <section class="block">
-    <h2>Last Cycle — What Actually Ran</h2>
-    <p class="sub" id="last-cycle-meta">loading…</p>
-    <div class="pipeline-flow" id="pipeline-flow"></div>
+    <h2>Mode Performance</h2>
+    <div class="grid-3" id="mode-gauges"></div>
   </section>
 
   <section class="block grid-2">
     <div class="card">
-      <h3>Leaderboard — Top 5</h3>
-      <div id="leaderboard-snippet"></div>
-      <div class="cta-row">
-        <a class="cta-btn" href="leaderboard.html">Full Leaderboard &rarr;</a>
-      </div>
+      <h2 style="border:none;margin:0 0 8px;">Leaderboard Top 5</h2>
+      <div id="leaderboard-list"></div>
+      <a class="term-link" href="leaderboard.html">FULL LEADERBOARD →</a>
     </div>
     <div class="card">
-      <h3>Verdict Distribution</h3>
-      <div id="verdict-bars"></div>
-    </div>
-  </section>
-
-  <section class="block grid-2">
-    <div class="card">
-      <h3>Mode Performance</h3>
-      <div id="mode-performance"></div>
-    </div>
-    <div class="card">
-      <h3>Return on Token Investment</h3>
+      <h2 style="border:none;margin:0 0 8px;">Return on Token Investment</h2>
       <div id="roti-table"></div>
-      <div class="roti-callout" id="roti-callout"></div>
+      <div class="roti-note" id="roti-note"></div>
     </div>
   </section>
 
   <section class="block grid-2">
     <div class="card">
-      <h3>Audit Agent — Running Commentary</h3>
-      <div id="observations-feed"></div>
+      <h2 style="border:none;margin:0 0 8px;">Audit Log</h2>
+      <div id="audit-log"></div>
     </div>
-    <div class="card proposal-card" id="proposal-card">
-      <div class="status-chip">Unreviewed proposal</div>
-      <h3 id="proposal-title">No proposal yet</h3>
-      <p id="proposal-rationale" style="color: var(--text-muted); font-size: 0.88rem;"></p>
+    <div class="card proposal-alert" id="proposal-card">
+      <span class="tag">Unreviewed Proposal</span>
+      <div class="t" id="proposal-title"></div>
+      <div class="f" id="proposal-file"></div>
     </div>
   </section>
 
@@ -476,178 +437,161 @@ section.block .sub { color: var(--text-faint); font-size: 0.88rem; margin: 0 0 2
 
 <script>
 const DATA = __DATA_JSON__;
-
-function animateCount(el, target, duration=900) {
-  const start = performance.now();
-  const isFloat = target % 1 !== 0;
-  function tick(now) {
-    const p = Math.min((now - start) / duration, 1);
-    const eased = 1 - Math.pow(1 - p, 3);
-    const val = target * eased;
-    el.textContent = isFloat ? val.toFixed(1) : Math.round(val).toLocaleString();
-    if (p < 1) requestAnimationFrame(tick);
-  }
-  requestAnimationFrame(tick);
-}
-
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-// --- Headline stats ---
-const statRow = document.getElementById('stat-row');
-const headline = [
-  { n: DATA.total_hypotheses, l: 'Hypotheses Checked' },
-  { n: (DATA.verdict_counts.COLLISION||0) + (DATA.verdict_counts.REFUTED||0) + (DATA.verdict_counts.FACT_CHECK_FAIL||0), l: 'Dead Ends Caught Before A Human Would Spend Time' },
-  { n: DATA.verdict_counts.ADJACENT_ACTIVE||0, l: 'Genuinely Worth Pursuing' },
-  { n: DATA.total_cost, l: 'Total OpenAI Cost ($)', money: true },
-];
-headline.forEach((s, i) => {
-  const card = document.createElement('div');
-  card.className = 'stat-card';
-  card.style.animationDelay = (i * 0.08) + 's';
-  card.innerHTML = `<div class="n">${s.money ? '$0' : '0'}</div><div class="l">${s.l}</div>`;
-  statRow.appendChild(card);
-  const numEl = card.querySelector('.n');
-  if (reducedMotion) {
-    numEl.textContent = s.money ? '$' + s.n.toFixed(2) : s.n.toLocaleString();
-  } else {
-    setTimeout(() => {
-      if (s.money) {
-        const start = performance.now();
-        function tick(now) {
-          const p = Math.min((now - start) / 900, 1);
-          numEl.textContent = '$' + (s.n * (1 - Math.pow(1-p,3))).toFixed(2);
-          if (p < 1) requestAnimationFrame(tick);
-        }
-        requestAnimationFrame(tick);
-      } else {
-        animateCount(numEl, s.n);
-      }
-    }, i * 80 + 200);
-  }
-});
+/* ---------- KITT scanner bar (ambient) + real phase status ---------- */
+const NUM_LEDS = 24;
+const track = document.getElementById('scanner-track');
+const leds = [];
+for (let i = 0; i < NUM_LEDS; i++) {
+  const d = document.createElement('div');
+  d.className = 'scanner-led';
+  track.appendChild(d);
+  leds.push(d);
+}
+let scanPos = 0, scanDir = 1;
+function scanTick() {
+  leds.forEach((led, i) => {
+    const dist = Math.abs(i - scanPos);
+    led.classList.toggle('lit', dist <= 1);
+  });
+  scanPos += scanDir;
+  if (scanPos >= NUM_LEDS - 1 || scanPos <= 0) scanDir *= -1;
+}
+if (!reducedMotion) { scanTick(); setInterval(scanTick, 55); }
+else { leds.forEach(l => l.classList.add('lit')); }
 
-// --- Pipeline flow replay ---
-const flow = document.getElementById('pipeline-flow');
-const meta = document.getElementById('last-cycle-meta');
-const STAGE_ICONS = { generation: '🧬', verification: '🔍', refutation: '⚖️', scoring: '🏆', publish: '📡' };
-const STAGE_LABELS = { generation: 'Generate', verification: 'Verify', refutation: 'Refute', scoring: 'Score', publish: 'Publish' };
-
+const STAGE_ICON = { generation: '🧬', verification: '🔍', refutation: '⚖', scoring: '🏆', publish: '📡' };
+const STAGE_LABEL = { generation: 'GEN', verification: 'VER', refutation: 'REF', scoring: 'SCR', publish: 'PUB' };
+const phaseRow = document.getElementById('phase-row');
+const cycleMeta = document.getElementById('cycle-meta');
 if (DATA.last_cycle) {
   const lc = DATA.last_cycle;
+  ['generation','verification','refutation','scoring','publish'].forEach(key => {
+    const st = lc.stages[key] || { ran: false };
+    const chip = document.createElement('div');
+    chip.className = 'phase-chip';
+    const ringClass = st.ran ? (st.ok === false ? 'fail' : 'ok') : '';
+    const val = key === 'generation' ? lc.generated : '';
+    chip.innerHTML = `<div class="ring ${ringClass}">${STAGE_ICON[key]}</div><div class="lbl">${STAGE_LABEL[key]}</div><div class="val">${val}</div>`;
+    phaseRow.appendChild(chip);
+  });
   const when = new Date(lc.timestamp);
-  meta.textContent = `${when.toLocaleString()} · plan: ${Object.entries(lc.plan).map(([m,c]) => `${c} ${m}`).join(', ')} · status: ${lc.status}`;
-
-  const stageKeys = ['generation','verification','refutation','scoring','publish'];
-  stageKeys.forEach((key, i) => {
-    const st = lc.stages[key] || { ran: false };
-    const node = document.createElement('div');
-    node.className = 'pf-node';
-    const value = key === 'generation' ? lc.generated : '';
-    node.innerHTML = `
-      <div class="pf-circle" data-idx="${i}">${STAGE_ICONS[key]}</div>
-      <div class="pf-label">${STAGE_LABELS[key]}</div>
-      <div class="pf-value">${value !== '' ? value : ''}</div>
-    `;
-    flow.appendChild(node);
-    if (i < stageKeys.length - 1) {
-      const line = document.createElement('div');
-      line.className = 'pf-line';
-      line.innerHTML = '<div class="fill"></div>';
-      flow.appendChild(line);
-    }
-  });
-
-  const circles = flow.querySelectorAll('.pf-circle');
-  const lines = flow.querySelectorAll('.pf-line .fill');
-  const delay = reducedMotion ? 0 : 380;
-  stageKeys.forEach((key, i) => {
-    const st = lc.stages[key] || { ran: false };
-    setTimeout(() => {
-      if (st.ran) {
-        circles[i].classList.add(st.ok === false ? 'fail' : 'active');
-      }
-      if (i > 0 && lines[i-1]) lines[i-1].style.width = '100%';
-    }, i * delay);
-  });
+  cycleMeta.textContent = `LAST CYCLE ${when.toLocaleString()} — ${lc.status.toUpperCase()}`;
 } else {
-  meta.textContent = 'No cycle has run yet.';
+  cycleMeta.textContent = 'NO CYCLE DATA';
 }
 
-// --- Leaderboard snippet ---
-const lbEl = document.getElementById('leaderboard-snippet');
-DATA.top5.forEach(row => {
+/* ---------- Radial gauge builder (SVG arc + big digital number) ---------- */
+function buildGauge(container, { value, max, label, color, size, sub }) {
+  const strokeWidth = size * 0.1;
+  const r = (size - strokeWidth) / 2;
+  const circ = 2 * Math.PI * r;
+  const pct = Math.max(0, Math.min(1, max ? value / max : 0));
+  const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+  svg.setAttribute('width', size); svg.setAttribute('height', size);
+  svg.innerHTML = `
+    <circle cx="${size/2}" cy="${size/2}" r="${r}" fill="none" stroke="var(--led-red-dim)" stroke-width="${strokeWidth}" />
+    <circle class="arc" cx="${size/2}" cy="${size/2}" r="${r}" fill="none" stroke="${color}" stroke-width="${strokeWidth}"
+      stroke-linecap="round" stroke-dasharray="${circ}" stroke-dashoffset="${circ}"
+      transform="rotate(-90 ${size/2} ${size/2})" style="filter:drop-shadow(0 0 6px ${color});" />
+    <text x="50%" y="46%" text-anchor="middle" dominant-baseline="middle" class="gauge-num" font-size="${size*0.22}">${sub ? '' : Math.round(value)}</text>
+    ${sub ? `<text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" class="gauge-num" font-size="${size*0.16}">${sub}</text>` : ''}
+  `;
+  container.innerHTML = '';
+  container.appendChild(svg);
+  const label_el = document.createElement('div');
+  label_el.className = 'gauge-label';
+  label_el.textContent = label;
+  container.appendChild(label_el);
+  const arc = svg.querySelector('.arc');
+  requestAnimationFrame(() => {
+    arc.style.transition = reducedMotion ? 'none' : 'stroke-dashoffset 1.1s cubic-bezier(0.16,1,0.3,1)';
+    arc.style.strokeDashoffset = circ - (circ * pct);
+  });
+}
+
+buildGauge(document.getElementById('gauge-hero'), {
+  value: DATA.success_rate_pct, max: 100, label: 'MISSION SUCCESS RATE', color: 'var(--led-red)', size: 210, sub: DATA.success_rate_pct + '%'
+});
+buildGauge(document.getElementById('gauge-total'), { value: DATA.total_hypotheses, max: Math.max(DATA.total_hypotheses, 100), label: 'HYPOTHESES', color: 'var(--led-amber)', size: 120 });
+buildGauge(document.getElementById('gauge-deadend'), { value: DATA.dead_end_count, max: DATA.total_hypotheses || 1, label: 'DEAD ENDS CAUGHT', color: 'var(--led-red)', size: 120 });
+buildGauge(document.getElementById('gauge-cost'), { value: DATA.total_cost, max: Math.max(DATA.total_cost * 1.4, 1), label: 'COST $', color: 'var(--led-green)', size: 120, sub: '$' + DATA.total_cost.toFixed(2) });
+buildGauge(document.getElementById('gauge-tpp'), { value: DATA.tokens_per_point || 0, max: Math.max((DATA.tokens_per_point||0) * 1.4, 1), label: 'TOKENS / POINT', color: 'var(--led-amber)', size: 120 });
+
+/* ---------- Verdict LED digit readouts ---------- */
+const VERDICT_META = {
+  ADJACENT_ACTIVE: { code: 'ADJ', cls: 'green' }, COLLISION: { code: 'COL', cls: 'amber' },
+  REFUTED: { code: 'REF', cls: 'red' }, FACT_CHECK_FAIL: { code: 'FCF', cls: 'red' },
+  NO_SIGNAL_UNRESOLVED: { code: 'PND', cls: 'amber' }, OTHER: { code: 'FLG', cls: 'amber' },
+};
+const ledRow = document.getElementById('verdict-leds');
+Object.entries(DATA.verdict_counts).sort((a,b)=>b[1]-a[1]).forEach(([key, count]) => {
+  if (!count) return;
+  const meta = VERDICT_META[key] || { code: key.slice(0,3).toUpperCase(), cls: 'red' };
+  const box = document.createElement('div');
+  box.className = 'led-box ' + meta.cls;
+  box.innerHTML = `<div class="n">${count}</div><div class="l">${meta.code}</div>`;
+  ledRow.appendChild(box);
+});
+
+/* ---------- Mode mini gauges ---------- */
+const modeEl = document.getElementById('mode-gauges');
+DATA.mode_summary.forEach(m => {
+  const panel = document.createElement('div');
+  panel.className = 'card mode-gauge';
+  const gaugeDiv = document.createElement('div');
+  panel.appendChild(gaugeDiv);
+  const extra = document.createElement('div');
+  extra.className = 'stat';
+  extra.textContent = `${m.avg_points} PTS AVG · n=${m.n}`;
+  panel.appendChild(extra);
+  modeEl.appendChild(panel);
+  buildGauge(gaugeDiv, { value: Math.round((1-m.no_signal_rate)*100), max: 100, label: m.label.toUpperCase(), color: 'var(--led-red)', size: 100 });
+});
+
+/* ---------- Leaderboard ---------- */
+const lbEl = document.getElementById('leaderboard-list');
+DATA.top5.forEach((row, i) => {
   const div = document.createElement('div');
-  div.className = 'lb-row';
-  div.innerHTML = `<span class="lb-domains">${row.domains}</span><span class="lb-points">${row.points > 0 ? '+' : ''}${row.points}</span>`;
+  div.className = 'term-row';
+  const short = row.domains.length > 42 ? row.domains.slice(0, 40) + '…' : row.domains;
+  div.innerHTML = `<span>${i+1}. ${short}</span><span class="pts">${row.points > 0 ? '+' : ''}${row.points}</span>`;
   lbEl.appendChild(div);
 });
 
-// --- Verdict distribution ---
-const VERDICT_META = {
-  ADJACENT_ACTIVE: { label: 'Adjacent Active', color: 'var(--v-adjacent)' },
-  COLLISION: { label: 'Collision', color: 'var(--v-collision)' },
-  REFUTED: { label: 'Refuted', color: 'var(--v-refuted)' },
-  FACT_CHECK_FAIL: { label: 'Fact-Check Fail', color: 'var(--v-refuted)' },
-  NO_SIGNAL_UNRESOLVED: { label: 'Pending Refutation', color: 'var(--v-pending)' },
-  OTHER: { label: 'Flagged', color: 'var(--v-pending)' },
-};
-const vbarEl = document.getElementById('verdict-bars');
-const maxV = Math.max(...Object.values(DATA.verdict_counts));
-const sortedVerdicts = Object.entries(DATA.verdict_counts).sort((a, b) => b[1] - a[1]);
-sortedVerdicts.forEach(([key, count]) => {
-  if (!count) return;
-  const meta = VERDICT_META[key] || { label: key, color: 'var(--text-faint)' };
-  const row = document.createElement('div');
-  row.className = 'vbar-row';
-  row.innerHTML = `<span class="vbar-label">${meta.label}</span><div class="vbar-track"><div class="vbar-fill" style="background:${meta.color}"></div></div><span class="vbar-n">${count}</span>`;
-  vbarEl.appendChild(row);
-  const fill = row.querySelector('.vbar-fill');
-  setTimeout(() => { fill.style.width = (count / maxV * 100) + '%'; }, 150);
-});
-
-// --- Mode performance ---
-const modeEl = document.getElementById('mode-performance');
-DATA.mode_summary.forEach(m => {
-  const row = document.createElement('div');
-  row.className = 'mode-row';
-  row.innerHTML = `<span class="mode-name">${m.label}</span><span class="mode-metrics"><span>n=${m.n}</span><span class="hi">${m.avg_points} avg pts</span><span>${Math.round(m.no_signal_rate*100)}% no-signal</span></span>`;
-  modeEl.appendChild(row);
-});
-
-// --- ROTI table ---
+/* ---------- ROTI table ---------- */
 const rotiEl = document.getElementById('roti-table');
-let tbl = '<table class="roti-table"><tr><th>Phase</th><th class="num">Calls</th><th class="num">Avg Tokens</th><th class="num">Cost</th></tr>';
+let tbl = '<table class="roti-table"><tr><th>Phase</th><th>Calls</th><th>Avg Tok</th><th>Cost</th></tr>';
 DATA.roti_phases.forEach(p => {
-  tbl += `<tr><td>${p.phase}</td><td class="num">${p.n_calls}</td><td class="num">${p.avg_tokens.toLocaleString()}</td><td class="num">$${p.cost.toFixed(4)}</td></tr>`;
+  tbl += `<tr><td>${p.phase}</td><td>${p.n_calls}</td><td>${p.avg_tokens.toLocaleString()}</td><td>$${p.cost.toFixed(4)}</td></tr>`;
 });
 tbl += '</table>';
 rotiEl.innerHTML = tbl;
+document.getElementById('roti-note').innerHTML = DATA.claude_tokens_avoided > 0
+  ? `Refutation on OpenAI: <b>${DATA.real_refutation_tokens.toLocaleString()}</b> real tokens vs. est. <b>${DATA.claude_tokens_avoided.toLocaleString()}</b> Claude tokens for the same work.`
+  : `Tokens per point, pool-wide: <b>${DATA.tokens_per_point ?? '—'}</b>`;
 
-const callout = document.getElementById('roti-callout');
-if (DATA.claude_tokens_avoided > 0) {
-  callout.textContent = `Refutation now runs on OpenAI instead of Claude subagents: ${DATA.real_refutation_tokens.toLocaleString()} real tokens spent vs. an estimated ${DATA.claude_tokens_avoided.toLocaleString()} Claude tokens the same work would have cost under the old architecture — measured, not guessed, from this session's own real subagent token counts.`;
+/* ---------- Audit log ---------- */
+const logEl = document.getElementById('audit-log');
+if (!DATA.observations.length) {
+  logEl.innerHTML = '<div class="log-line" style="color:var(--text-faint)">— no observations logged yet —</div>';
 } else {
-  callout.textContent = `Tokens per leaderboard point, pool-wide: ${DATA.tokens_per_point ?? '—'}.`;
-}
-
-// --- Audit commentary feed ---
-const feedEl = document.getElementById('observations-feed');
-if (DATA.observations.length === 0) {
-  feedEl.innerHTML = '<p style="color: var(--text-faint); font-size: 0.88rem;">No observations logged yet — runs automatically every cycle.</p>';
-} else {
-  DATA.observations.forEach((o, i) => {
-    const div = document.createElement('div');
-    div.className = 'feed-item' + (i === 0 ? ' newest' : '');
+  DATA.observations.forEach(o => {
     const when = new Date(o.timestamp);
-    div.innerHTML = `<span class="ts">${when.toLocaleString()}</span>${o.text}`;
-    feedEl.appendChild(div);
+    const div = document.createElement('div');
+    div.className = 'log-line';
+    div.innerHTML = `<span class="ts">${when.toLocaleTimeString()}</span>${o.text}`;
+    logEl.appendChild(div);
   });
 }
 
-// --- Latest deep proposal ---
+/* ---------- Proposal spotlight ---------- */
 if (DATA.latest_proposal) {
   document.getElementById('proposal-title').textContent = DATA.latest_proposal.title;
-  document.getElementById('proposal-rationale').textContent = DATA.latest_proposal.rationale;
+  document.getElementById('proposal-file').textContent = 'proposals/' + (DATA.latest_proposal.proposal_file || '');
+} else {
+  document.getElementById('proposal-card').style.display = 'none';
 }
 </script>
 </body>
