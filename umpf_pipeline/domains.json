@@ -148,6 +148,10 @@
     [
       "Anthropology — gift economies and reciprocity",
       "Physical Evolutionary Selection"
+    ],
+    [
+      "Creative Performance Monitoring",
+      "Physical Voltage Spikes"
     ]
   ],
   "already_janused": [
@@ -172,7 +176,8 @@
     "Informational Database State",
     "Epidemiology — herd immunity thresholds",
     "Physical Bridge Cable Tension",
-    "Control theory — PID feedback loops"
+    "Control theory — PID feedback loops",
+    "Informational Database Sharding"
   ],
   "already_homospatial": [
     [
@@ -270,6 +275,14 @@
     [
       "Fluid dynamics — turbulence and laminar flow",
       "Human Emotional Fluctuation"
+    ],
+    [
+      "Swarm robotics — flocking / boids behavior",
+      "Creative Performance Monitoring"
+    ],
+    [
+      "Biological Systems (Physical & Natural Systems) — Atomic: Gene expression uncertain, Mutation beneficial/harmful, Multiple phenotypes; Domain: Organism develops, Genetic code context, Log cellular events; Control: Environmental signals, Concurrent processes, Atomic DNA replication; Orchestration: Ecosystem coordination, Laboratory vs natural evolution",
+      "Human Social Network Dynamics"
     ]
   ],
   "domain_pool": [
