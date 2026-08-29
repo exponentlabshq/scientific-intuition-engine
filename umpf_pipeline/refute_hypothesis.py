@@ -24,9 +24,21 @@ subagent harness that happened to deliver it before.
 
 Usage:
     python3 refute_hypothesis.py hypotheses/<file>.md
-    python3 refute_hypothesis.py --all-no-signal
-    python3 refute_hypothesis.py --all-no-signal --limit 5
-    python3 refute_hypothesis.py --all-no-signal --dry-run   # print verdicts only
+    python3 refute_hypothesis.py --all-pending
+    python3 refute_hypothesis.py --all-pending --limit 5
+    python3 refute_hypothesis.py --all-pending --dry-run   # print verdicts only
+
+Update (2026-08-29) -- scope widened from NO_SIGNAL-only to "pending." A
+direct audit (prompted by a "what MUST be fixed before this runs on a cron
+job" pass) found two real, live entries on the public leaderboard: janusian
+hypotheses that failed hypothesis_engine.py's own mechanical honesty check
+twice at generation time (a strong signal of a disguised compromise, not a
+genuine paradox) but landed on ADJACENT_ACTIVE rather than NO_SIGNAL --
+meaning the old --all-no-signal rule never sent them here at all. Phase 2's
+verdict and the mechanical honesty check test two different things (does the
+CONCEPT have real-world grounding vs. does THIS hypothesis's internal
+reasoning hold up); passing one says nothing about the other. See
+pending_refutation_slugs()'s own docstring for the exact rule.
 """
 import argparse
 import glob
@@ -231,10 +243,48 @@ def already_refuted_slugs():
     return slugs
 
 
-def no_signal_slugs():
-    """Every ledger entry whose verdict is NO_SIGNAL and has no refutation
-    result yet — the actual real candidate queue, read from the ledger
-    itself rather than re-deriving it from filenames."""
+def failed_own_honesty_check(slug: str) -> bool:
+    """True if hypothesis_engine.py's own mechanical check (janusian's
+    context-split scan, homospatial's comparison-word scan) already flagged
+    this hypothesis as a likely disguised compromise/bisociation-wearing-
+    homospatial's-name, even after one corrective retry. Read directly from
+    the hypothesis file's own text -- the flag IS the file, not a separate
+    record."""
+    filepath = os.path.join(HYPOTHESES_DIR, f"{slug}.md")
+    if not os.path.exists(filepath):
+        return False
+    with open(filepath, "r", encoding="utf-8") as f:
+        return "Automated check failed twice" in f.read()
+
+
+def pending_refutation_slugs():
+    """The real candidate queue for adversarial refutation, read from the
+    ledger itself rather than re-derived from filenames. Two real reasons a
+    hypothesis belongs here, not one:
+
+    1. verdict == NO_SIGNAL -- the original, still-correct reason: Phase 2
+       found no real-world grounding either way, so refutation is the only
+       remaining check on whether the reasoning itself holds up.
+
+    2. verdict == ADJACENT_ACTIVE AND it already failed its own mechanical
+       honesty check twice at generation time. Added 2026-08-29, after a
+       direct audit found two real, live examples of exactly this gap: a
+       janusian hypothesis can fail hypothesis_engine.py's own context-split
+       scan (a strong signal it's a disguised compromise, not a genuine
+       paradox) and still land on ADJACENT_ACTIVE -- which never triggered
+       refutation under the old NO_SIGNAL-only rule, because ADJACENT_ACTIVE
+       means Phase 2 found the CONCEPT has real-world grounding, which says
+       nothing about whether THIS hypothesis's internal reasoning is sound.
+       Those two checks test different things; only running one of them
+       because the other happened to say "real" leaves a hypothesis flagged
+       as likely-broken-reasoning sitting on the public leaderboard with no
+       adversarial scrutiny ever applied to it. COLLISION is deliberately
+       excluded from this rule -- a COLLISION verdict means real, citable
+       prior art already exists, so the hypothesis isn't being recommended
+       to anyone as a novel direction regardless of its internal coherence;
+       refuting it would spend real money re-confirming something the
+       leaderboard already correctly badges as "already researched."
+    """
     slugs = []
     if not os.path.exists(LEDGER_PATH):
         return slugs
@@ -245,8 +295,13 @@ def no_signal_slugs():
             if not line:
                 continue
             e = json.loads(line)
-            if e.get("verdict") == "NO_SIGNAL" and e.get("hypothesis_slug") not in already:
-                slugs.append(e.get("hypothesis_slug"))
+            slug = e.get("hypothesis_slug")
+            if slug in already:
+                continue
+            if e.get("verdict") == "NO_SIGNAL":
+                slugs.append(slug)
+            elif e.get("verdict") == "ADJACENT_ACTIVE" and failed_own_honesty_check(slug):
+                slugs.append(slug)
     return slugs
 
 
@@ -285,24 +340,25 @@ def refute_one(slug: str, rubric: str, dry_run: bool = False):
 def main():
     parser = argparse.ArgumentParser(description="Unattended adversarial refutation (3 independent OpenAI completions per case)")
     parser.add_argument("files", nargs="*", help="Specific hypothesis .md files to refute")
-    parser.add_argument("--all-no-signal", action="store_true", help="Refute every ledger entry with verdict NO_SIGNAL and no refutation result yet")
-    parser.add_argument("--limit", type=int, default=None, help="Cap how many to run this pass (used with --all-no-signal)")
+    parser.add_argument("--all-pending", action="store_true", help="Refute every ledger entry that needs it and has no refutation result yet -- every NO_SIGNAL verdict, plus any ADJACENT_ACTIVE verdict that already failed its own mechanical honesty check twice at generation time (see pending_refutation_slugs())")
+    parser.add_argument("--all-no-signal", action="store_true", help="Deprecated alias for --all-pending, kept for any script still calling the old flag name")
+    parser.add_argument("--limit", type=int, default=None, help="Cap how many to run this pass (used with --all-pending)")
     parser.add_argument("--dry-run", action="store_true", help="Print verdicts only; write nothing")
     args = parser.parse_args()
 
     rubric = load_rubric()
 
-    if args.all_no_signal:
-        slugs = no_signal_slugs()
+    if args.all_pending or args.all_no_signal:
+        slugs = pending_refutation_slugs()
         if args.limit:
             slugs = slugs[: args.limit]
     else:
         if not args.files:
-            raise SystemExit("Pass hypothesis file(s), or use --all-no-signal")
+            raise SystemExit("Pass hypothesis file(s), or use --all-pending")
         slugs = [os.path.splitext(os.path.basename(f))[0] for f in args.files]
 
     if not slugs:
-        print("Nothing to refute — no NO_SIGNAL entries without a refutation result.")
+        print("Nothing to refute — no pending NO_SIGNAL or flagged-ADJACENT_ACTIVE entries.")
         return
 
     print(f"Refuting {len(slugs)} hypothesis(es){' (dry run)' if args.dry_run else ''}...\n")

@@ -181,12 +181,12 @@ def main():
     # --- Phase 2.5: refutation ---
     if not args.skip_refutation:
         if not args.dry_run:
-            cmd = [PYTHON, "refute_hypothesis.py", "--all-no-signal"]
+            cmd = [PYTHON, "refute_hypothesis.py", "--all-pending"]
             cycle_record["stages"]["refutation"] = run_subprocess(cmd, args.dry_run)
             if failed(cycle_record["stages"]["refutation"]):
                 degraded_reasons.append("refutation failed")
         else:
-            print(f"$ {PYTHON} refute_hypothesis.py --all-no-signal")
+            print(f"$ {PYTHON} refute_hypothesis.py --all-pending")
     else:
         print("(skipping refutation this cycle — --skip-refutation)")
 

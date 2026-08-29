@@ -44,23 +44,23 @@ Points are tied to what an outcome reveals about real potential, not to phase co
 | 34 | Informational Database Sharding | **+38** | ADJACENT_ACTIVE | 🎭 Janusian 🗺️ Frontier Research Group |
 | 35 | Gaming Narrative × Cognitive Attention Map Evolution | **+38** | ADJACENT_ACTIVE | 🧬 Bisociative 🗺️ Frontier Research Group |
 | 36 | Cryptography × Cognitive Development | **+38** | ADJACENT_ACTIVE | 🪞 Homospatial 🗺️ Frontier Research Group |
-| 37 | Human Learning Uncertainty | **+38** | ADJACENT_ACTIVE | 🎭 Janusian 🗺️ Frontier Research Group |
-| 38 | Language Linguistics × Military Strategy | **+38** | ADJACENT_ACTIVE | 🧬 Bisociative 🗺️ Frontier Research Group |
-| 39 | Social Systems × Human Team Collaboration | **+36** | ADJACENT_ACTIVE | 🧬 Bisociative 🗺️ Frontier Research Group |
-| 40 | Ecology — mycorrhizal fungal networks × Telecommunications — packet switching and routing | **+35** | COLLISION | 🧬 Bisociative 🏛️ Established Department 🔬 Actively Researched |
-| 41 | Astronomy — gravitational lensing | **+35** | COLLISION | 🎭 Janusian 🏛️ Established Department 🔬 Actively Researched |
-| 42 | Finance | **+35** | COLLISION | 🎭 Janusian 🏛️ Established Department 🔬 Actively Researched |
-| 43 | Physical — quantum measurement | **+35** | COLLISION | 🎭 Janusian 🏛️ Established Department 🔬 Actively Researched |
-| 44 | Creative Musical Motif Deviation × Evolutionary biology — punctuated equilibrium | **+33** | COLLISION | 🧬 Bisociative 🏛️ Established Department 🔬 Actively Researched |
-| 45 | Human Financial Trading Algorithms × Ecology — predator-prey population dynamics | **+33** | COLLISION | 🧬 Bisociative 🏛️ Established Department 🔬 Actively Researched |
-| 46 | Informational — distributed consensus | **+33** | COLLISION | 🎭 Janusian 🏛️ Established Department 🔬 Actively Researched |
-| 47 | Human — cognitive bias | **+33** | COLLISION | 🎭 Janusian 🏛️ Established Department 🔬 Actively Researched |
-| 48 | Informational — load balancing | **+33** | COLLISION | 🎭 Janusian 🏛️ Established Department 🔬 Actively Researched |
-| 49 | Physical — chemical reaction networks × Human — committee formation | **+33** | COLLISION | 🪞 Homospatial 🏛️ Established Department 🔬 Actively Researched |
-| 50 | Distributed Consensus Algorithms (Raft, PBFT) × Distributed Cache Coherence Protocols (MESI, Directory-based) | **+30** | ADJACENT_ACTIVE | 📜 Pre-existing case study 🗺️ Frontier Research Group |
-| 51 | Dirac's large numbers hypothesis × Belnap four-valued logic / explainable AI | **+30** | ADJACENT_ACTIVE | 📜 Pre-existing case study 🗺️ Frontier Research Group |
-| 52 | Genetic algorithms × Simulated annealing | **+25** | COLLISION | 📜 Pre-existing case study 🏛️ Established Department 🔬 Actively Researched |
-| 53 | Raft consensus × PBFT consensus | **+25** | COLLISION | 📜 Pre-existing case study 🏛️ Established Department 🔬 Actively Researched |
+| 37 | Language Linguistics × Military Strategy | **+38** | ADJACENT_ACTIVE | 🧬 Bisociative 🗺️ Frontier Research Group |
+| 38 | Social Systems × Human Team Collaboration | **+36** | ADJACENT_ACTIVE | 🧬 Bisociative 🗺️ Frontier Research Group |
+| 39 | Ecology — mycorrhizal fungal networks × Telecommunications — packet switching and routing | **+35** | COLLISION | 🧬 Bisociative 🏛️ Established Department 🔬 Actively Researched |
+| 40 | Astronomy — gravitational lensing | **+35** | COLLISION | 🎭 Janusian 🏛️ Established Department 🔬 Actively Researched |
+| 41 | Finance | **+35** | COLLISION | 🎭 Janusian 🏛️ Established Department 🔬 Actively Researched |
+| 42 | Physical — quantum measurement | **+35** | COLLISION | 🎭 Janusian 🏛️ Established Department 🔬 Actively Researched |
+| 43 | Creative Musical Motif Deviation × Evolutionary biology — punctuated equilibrium | **+33** | COLLISION | 🧬 Bisociative 🏛️ Established Department 🔬 Actively Researched |
+| 44 | Human Financial Trading Algorithms × Ecology — predator-prey population dynamics | **+33** | COLLISION | 🧬 Bisociative 🏛️ Established Department 🔬 Actively Researched |
+| 45 | Informational — distributed consensus | **+33** | COLLISION | 🎭 Janusian 🏛️ Established Department 🔬 Actively Researched |
+| 46 | Human — cognitive bias | **+33** | COLLISION | 🎭 Janusian 🏛️ Established Department 🔬 Actively Researched |
+| 47 | Informational — load balancing | **+33** | COLLISION | 🎭 Janusian 🏛️ Established Department 🔬 Actively Researched |
+| 48 | Physical — chemical reaction networks × Human — committee formation | **+33** | COLLISION | 🪞 Homospatial 🏛️ Established Department 🔬 Actively Researched |
+| 49 | Distributed Consensus Algorithms (Raft, PBFT) × Distributed Cache Coherence Protocols (MESI, Directory-based) | **+30** | ADJACENT_ACTIVE | 📜 Pre-existing case study 🗺️ Frontier Research Group |
+| 50 | Dirac's large numbers hypothesis × Belnap four-valued logic / explainable AI | **+30** | ADJACENT_ACTIVE | 📜 Pre-existing case study 🗺️ Frontier Research Group |
+| 51 | Genetic algorithms × Simulated annealing | **+25** | COLLISION | 📜 Pre-existing case study 🏛️ Established Department 🔬 Actively Researched |
+| 52 | Raft consensus × PBFT consensus | **+25** | COLLISION | 📜 Pre-existing case study 🏛️ Established Department 🔬 Actively Researched |
+| 53 | Human Learning Uncertainty | **+23** | ADJACENT_ACTIVE | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted |
 | 54 | Law — common law precedent and stare decisis | **+15** | COLLISION | 🎭 Janusian 🏛️ Established Department |
 | 55 | Linguistics — historical sound change | **+13** | COLLISION | 🎭 Janusian 🏛️ Established Department |
 | 56 | Materials science — crystal lattice defects | **+13** | COLLISION | 🎭 Janusian 🏛️ Established Department |
@@ -296,11 +296,6 @@ Points are tied to what an outcome reveals about real potential, not to phase co
 - Phase 1 self-report (4/5): +8
 - Phase 2 ADJACENT_ACTIVE: +30
 
-### Human Learning Uncertainty — +38
-
-- Phase 1 self-report (4/5): +8
-- Phase 2 ADJACENT_ACTIVE: +30
-
 ### Language Linguistics × Military Strategy — +38
 
 - Phase 1 self-report (4/5): +8
@@ -388,6 +383,13 @@ Points are tied to what an outcome reveals about real potential, not to phase co
 
 - Phase 2 COLLISION (genuine): +5
 - Actively researched (real, current evidence): +20
+
+### Human Learning Uncertainty — +23
+
+- Phase 1 self-report (4/5): +8
+- Phase 2 ADJACENT_ACTIVE: +30
+- Adversarial refutation REFUTED: -15
+-   independently confirmed (3 separate agents, full agreement)
 
 ### Law — common law precedent and stare decisis — +15
 

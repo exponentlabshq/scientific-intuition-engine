@@ -274,6 +274,58 @@ def _find_context_split_phrases(text: str) -> list:
     return found
 
 
+# Named-entity search-query enforcement, all three modes. All three prompt
+# templates were given a soft instruction (2026-08-29) requiring at least one
+# Search Query to target a specific named theory/framework/researcher, not
+# just the general concept -- directly closing the gap a real canary test
+# found (an EMH/Nash hypothesis's 5 auto-generated queries never once
+# searched for "Andrew Lo" or "Adaptive Markets Hypothesis" by name, so
+# verification never had a chance to find that real, existing collision).
+# Measured real compliance on the first fresh batch after that soft
+# instruction: 2 of 6 -- the same "a written instruction alone gets partially
+# followed" lesson this file has already hit twice (homospatial's comparison
+# words, janusian's context-split phrases). Mechanically enforced here for
+# the same reason those two were: check the actual output, don't trust the
+# self-check.
+def _extract_queries(markdown_text: str) -> list:
+    m = re.search(r"## Search Queries\s*\n(.*)", markdown_text, re.DOTALL)
+    if not m:
+        return []
+    block = m.group(1).strip()
+    raw = re.findall(r"^\d+\.\s*(.+)$", block, re.MULTILINE)
+    return [q.strip().strip('"') for q in raw if q.strip()]
+
+
+def _has_named_entity_query(queries: list) -> bool:
+    """Crude, deliberately permissive detector -- two consecutive
+    capitalized alphabetic words (a real proper noun: "Andrew Lo," "Adaptive
+    Markets"), or the literal "OR" from the prompt's own explicit fallback
+    pattern ("[X] named theory OR framework OR researcher"). Known, disclosed
+    imprecision: a query that simply restates a capitalized multi-word domain
+    name at its start (e.g. "Cognitive Cryptography learning framework") can
+    false-positive, since that also reads as two consecutive capitalized
+    words -- checked directly against real output. This under-catches rather
+    than over-catches (a false positive skips a retry that a stricter
+    detector would have triggered), but even imperfect is a real improvement
+    over the prior state, which caught nothing mechanically at all -- and
+    tightening this further (e.g. excluding words that appear in the
+    hypothesis's own domain description) risks exactly the kind of unbounded
+    bug-chasing this fix exists to stop, not extend."""
+    for q in queries:
+        if " OR " in q:
+            return True
+        words = q.split()
+        for i in range(len(words) - 1):
+            w1, w2 = words[i], words[i + 1]
+            if w1.isalpha() and w2.isalpha() and len(w1) > 2 and len(w2) > 2 and w1[:1].isupper() and w2[:1].isupper():
+                return True
+    return False
+
+
+def _replace_queries_section(markdown_text: str, new_block: str) -> str:
+    return re.sub(r"## Search Queries\s*\n.*\Z", f"## Search Queries\n\n{new_block.strip()}\n", markdown_text, flags=re.DOTALL)
+
+
 def run_hypothesis(domain_a: str, domain_b: str = None, model: str = "gpt-4o-mini", mode: str = "bisociation") -> str:
     system_prompt = load_prompt(mode)
     if mode == "janusian":
@@ -369,6 +421,41 @@ def run_hypothesis(domain_a: str, domain_b: str = None, model: str = "gpt-4o-min
             raw_output = raw_output2
         else:
             print("  ✅ §4 passed the same-instance mechanical check on the first attempt.")
+
+    # Named-entity search-query check -- runs for all three modes, after any
+    # mode-specific correction above, as a lightweight PATCH retry (only the
+    # Search Queries block gets regenerated, not the whole response) so it
+    # can't undo a mode-specific fix that already succeeded.
+    queries = _extract_queries(raw_output)
+    if not _has_named_entity_query(queries):
+        print("  ⚠️  No named-entity search query found — asking for a targeted correction...")
+        correction = (
+            "Your Search Queries list did not include any query targeting a specific named theory, "
+            "framework, or researcher — only general-concept queries. Reply with ONLY a corrected "
+            "Search Queries list (3-5 numbered queries, same format as before), where at least one "
+            "query searches by name for a specific existing theory/framework/researcher plausibly "
+            "already working this exact ground, or, if you genuinely can't think of one, a query of "
+            "the form \"[core concept] named theory OR framework OR researcher\". Output nothing but "
+            "the numbered list — no other text."
+        )
+        messages.append({"role": "assistant", "content": raw_output})
+        messages.append({"role": "user", "content": correction})
+        resp3 = call_with_retry(client.chat.completions.create, model=model, messages=messages, temperature=0.4)
+        log_usage("generation", model, resp3.usage, extra={"mode": mode, "retry": "queries"})
+        new_block = resp3.choices[0].message.content
+        raw_output = _replace_queries_section(raw_output, new_block)
+        if _has_named_entity_query(_extract_queries(raw_output)):
+            print("  ✅ Retry passed — a named-entity search query is now present.")
+        else:
+            print("  ⚠️  Retry still has no named-entity query — flagging in output rather than looping indefinitely.")
+            raw_output = raw_output.rstrip() + (
+                "\n\n---\n\n**⚠️ Automated check failed twice:** no Search Query targets a specific "
+                "named theory, framework, or researcher, even after one corrective retry. Verification "
+                "may miss an existing collision with real prior art that a more specific search would "
+                "have found — read this hypothesis's verdict with that in mind.\n"
+            )
+    else:
+        print("  ✅ Search Queries includes at least one named-entity query.")
 
     return _clean_output(raw_output, generated_date)
 
