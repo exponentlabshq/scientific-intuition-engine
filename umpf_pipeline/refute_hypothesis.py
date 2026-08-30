@@ -73,9 +73,22 @@ REFUTATIONS_DIR = os.path.join(HERE, "refutations")
 VERIFICATIONS_DIR = os.path.join(HERE, "verifications")
 RUBRIC_PATH = os.path.join(HERE, "refutations", "README.md")
 
-REFUTATION_MODEL = "gpt-4o"  # same model verify_hypothesis.py classifies with; this is a
-                              # judgment task, not a bulk-search-summarization one — kept on
-                              # the stronger model deliberately rather than downgraded by default
+REFUTATION_MODEL = "gpt-4o-mini"  # switched 2026-08-30, after this stayed on gpt-4o by
+                              # deliberate, reasoned choice ("a judgment task, not a bulk-
+                              # search-summarization one") for the whole life of this script,
+                              # untested. Tested properly before switching, not assumed safe:
+                              # 7 real hypotheses (mode-diverse, seeded random sample, not
+                              # hand-picked), 21 individual lens checks total, gpt-4o-mini
+                              # matched gpt-4o on every single one -- zero disagreements -- at
+                              # a consistent 16.7-17.3x lower cost per case. One real gap that
+                              # validation could not close: every case tested REFUTED on both
+                              # models, because the real ledger has never had a case gpt-4o
+                              # found to SURVIVE (the 0-of-79 record itself) -- so this is
+                              # strong, disciplined evidence for the REFUTED side of the
+                              # rubric specifically, not a claim the SURVIVES side was ever
+                              # directly checked. See whitepaper.html Section 9 and Failure 14
+                              # for the full validation record and the cost-measurement bug
+                              # that prompted testing this in the first place.
 
 LENS_QUESTIONS = {
     "coherence": (
