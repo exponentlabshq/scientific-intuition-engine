@@ -75,6 +75,16 @@ def run(cmd, cwd):
 def build():
     os.makedirs(OUTPUT_DIR, exist_ok=True)
 
+    # 0. Ledger-consumer contract check (added 2026-08-30, after Failures 11
+    #    and 13 -- the same "reads verification-log.jsonl raw, no dedup"
+    #    bug found twice, independently, in two different scripts this
+    #    build pipeline calls). Fail closed here, before generating or
+    #    deploying anything: a script that regresses back to a raw ledger
+    #    scan should block publish the same way a failed generation or
+    #    verification stage already does in run_cycle.py, not get caught
+    #    later by someone eyeballing a stat that looks wrong again.
+    run([PYTHON, "check_ledger_consumers.py"], cwd=PIPELINE_DIR)
+
     # 1. Refresh the raw data behind the leaderboard experience -- canonical
     #    location is the pipeline root, matching every prior manual run.
     run([PYTHON, "assemble_experience_data.py"], cwd=PIPELINE_DIR)
