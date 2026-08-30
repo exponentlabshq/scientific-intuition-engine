@@ -2,6 +2,7 @@
 
 **Generated**: 2026-08-28
 **Framework**: UMPF Janusian Hypothesis Engine (Exponent Labs LLC)
+**Revision**: 2026-08-29 — human-sharpened closed-loop formulation (COA 2d). Soft “creative block is sometimes good / struggle helps creativity in other contexts” framing retired; same-instance dual role is load-bearing (Rothenberg bar).
 
 ---
 
@@ -51,3 +52,26 @@ The most likely reason this turns out to be a compromise or synthesis wearing pa
 3. "psychological effects of creative block in artists"
 4. "longitudinal studies on creative output during creative block"
 5. "embracing creative block in the creative process"
+
+---
+
+## COA 2d — Soft vs Hard (operator)
+
+**Sharpened**: 2026-08-29  
+**Soft claim retired**: creative block is sometimes good / struggle helps creativity in other contexts  
+**Hard chimera**: Same-instance Block Paradox (hindrance and selection pressure for one unfinished work)  
+**Hard claim**: For the SAME unfinished project, block duration both suppresses interim output and raises novelty of eventual ship; not context-split; measurable vs uninterrupted matched projects
+
+### Hard search queries (re-verify these — not the soft ones)
+
+1. "Same-instance Block Paradox (hindrance and selection pressure for one unfinished work) For the SAME unfinished project, block duration both suppresses interim output and raises novelty of eventual ship; not context-split; measurable vs uninterrupted matched projects"
+2. "creative block is sometimes good / struggle helps creativity in other contexts prior art OR review"
+3. "yoked control OR chamber geometry OR schedule remapping Same-instance Block Paradox (hindrance and selection pressure for one unfinished work)"
+4. Named adjacent labs / frameworks from first denser search pass
+
+### Re-verify stub
+
+Write: `verifications/2026-08-28-janusian-creative-creative-block-verification.md` with sections:
+Soft near-COLLISION neighbors | Hard claim status | Actively researched contact
+
+Packet send-ready only if hard verdict remains ADJACENT_ACTIVE.

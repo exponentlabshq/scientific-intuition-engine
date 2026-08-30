@@ -2,6 +2,7 @@
 
 **Generated**: 2026-08-29
 **Framework**: UMPF Homospatial Hypothesis Engine (Exponent Labs LLC)
+**Revision**: 2026-08-29 — human-sharpened closed-loop formulation (COA 2d). Soft “AI pattern recognition helps architects design nicer compliant buildings” framing retired; bidirectional built↔library↔permit claim is load-bearing.
 
 ---
 
@@ -41,3 +42,26 @@ The most likely reason Architectural Pattern Synthesis turns out to be just a co
 3. "Adaptive building design using pattern recognition"
 4. "Cross-domain synthesis in architectural practices"
 5. "Impact of cognitive patterns on urban planning outcomes"
+
+---
+
+## COA 2d — Soft vs Hard (operator)
+
+**Sharpened**: 2026-08-29  
+**Soft claim retired**: AI pattern recognition helps architects design nicer compliant buildings  
+**Hard chimera**: Permit-Pattern Loop (built form writes the pattern library that writes future permits)  
+**Hard claim**: Construction outcomes update a shared cross-project pattern graph; permit approval is membership in that graph; both ∂library/∂built and ∂permit/∂library nonzero under code remapping
+
+### Hard search queries (re-verify these — not the soft ones)
+
+1. "Permit-Pattern Loop (built form writes the pattern library that writes future permits) Construction outcomes update a shared cross-project pattern graph; permit approval is membership in that graph; both ∂library/∂built and ∂permit/∂library nonzero under code remapping"
+2. "AI pattern recognition helps architects design nicer compliant buildings prior art OR review"
+3. "yoked control OR chamber geometry OR schedule remapping Permit-Pattern Loop (built form writes the pattern library that writes future permits)"
+4. Named adjacent labs / frameworks from first denser search pass
+
+### Re-verify stub
+
+Write: `verifications/2026-08-29-homospatial-architecture-x-cross-domain-pattern-recognition-verification.md` with sections:
+Soft near-COLLISION neighbors | Hard claim status | Actively researched contact
+
+Packet send-ready only if hard verdict remains ADJACENT_ACTIVE.

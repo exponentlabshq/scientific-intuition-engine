@@ -4,6 +4,15 @@
 live pipeline automatically.** Same discipline as `outreach/README.md`'s Phase 3 drafts — `audit_agent.py`
 proposes, a person decides.
 
+## Disposition board (2026-08-29)
+
+| File | Status | Note |
+|---|---|---|
+| `2026-08-29-proposal-001.md` | **REJECTED** | Wrong ledger field (`mode` vs `source`); mission conflict |
+| `2026-08-29-proposal-002.md` | — | Never written (README was once counted as a proposal; numbering skipped) |
+| `2026-08-29-proposal-003.md` | **REJECTED / SUPERSEDED** | Self-report not predictive of NO_SIGNAL once extraction bugs fixed |
+| `2026-08-29-correction-to-proposal-003.md` | **Canonical write-up** | Why 003 dies; real win was fixing `extract_self_score()` |
+
 ## What this directory is
 
 Every time `audit_agent.py` runs, it computes real, current performance stats from the ledger and

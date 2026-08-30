@@ -8,3 +8,4 @@ eureka-engine-web/
 umpf_pipeline/site_build/output/
 umpf_pipeline/site_build/landing.html
 umpf_pipeline/site_build/dashboard.html
+umpf_pipeline/search_cache/

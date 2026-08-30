@@ -1,19 +1,25 @@
-# Verification: Bisociation — Game Theory — Nash Bargaining × Music — Sample-Based Hip-Hop Production
+# Verification: Game Theory × Music Sampling (COA 2d sharpened)
 
-**Verifies**: `hypotheses/2026-08-29-game-theory-x-music.md`
-**Verified**: 2026-08-28 · **Method**: Tavily search + GPT-4o classification (`verify_hypothesis.py`, unattended)
+**Verifies**: `hypotheses/2026-08-29-game-theory-x-music.md`  
+**Verified**: 2026-08-29 · **Method**: Exa (COA 2d batch)  
+**Hypothesis revision**: Nash-Clearance Market closed-loop form
 
-## Verdict: **ADJACENT_ACTIVE**
+## Soft claim retired
+Negotiation is like sampling / vague game-theory metaphor for clearance.
 
-## Queries
-- `Nash bargaining strategies in creative industries`
-- `Impact of negotiation on sample clearance in hip-hop`
-- `Game theory applications in music production`
-- `Legal frameworks for sampling in hip-hop music`
-- `Comparative analysis of negotiation techniques in art and music`
+## Hard chimera
+Nash-Clearance Market (disagreement-point = no-sample / rewrite).
 
-## What was found
-Research on Nash bargaining strategies in creative industries and the impact of negotiation on sample clearance in hip-hop music was found. Sources include 'Nash-in-Nash Bargaining: A Microfoundation for Applied Work' (https://www.nber.org/system/files/working_papers/w20641/w20641.pdf) and 'How Sample Clearance Has Affected Hip-Hop Music-Making' (https://digitalcommons.csumb.edu/cgi/viewcontent.cgi?article=2405&context=caps_thes_all).
+## Verdict: **COLLISION** (hard claim)
 
-## Reasoning
-The search results reveal active research on negotiation strategies in creative industries, including music, and the specific challenges of sample clearance in hip-hop production. These findings indicate that while the exact mapping of Nash bargaining to sample-based hip-hop production hasn't been explicitly made, there is relevant research activity in both domains. This suggests a fertile area for exploration, aligning with the ADJACENT_ACTIVE verdict.
+Peter DiCola, *Sequential Musical Creation and Sample Licensing* (Northwestern faculty working paper; see also McLeod & DiCola, *Creative License*), explicitly models sample-licensing negotiations with **Nash bargaining**, disagreement/incentive constraints, and division-of-profit inefficiency for sequential musical creation. Soft and hard formulations both land in this program.
+
+| Soft neighbors | Hard claim |
+|---|---|
+| Sample clearance practice literature; Bridgeport; Tracklib | **Named prior art:** DiCola Nash model of sample licensing |
+
+## Actively researched
+Yes — DiCola / music-IP law & economics (Northwestern).
+
+## Packet decision
+**No Phase 3 packet.** Soft-trap exemplar for COA 2d kill sample: engine ADJACENT on soft fusion; denser search → hard COLLISION.

@@ -1,0 +1,181 @@
+{
+  "date": "2026-08-29",
+  "coa_2d": "Packets with sharpened:false are NEEDS_SHARPEN \u2014 not send-ready until closed-loop re-verify.",
+  "packets": [
+    {
+      "slug": "compileroptimization-neuralnetworktraining",
+      "file": "outreach/packets/compileroptimization-neuralnetworktraining.md",
+      "domains": [
+        "Compiler optimization",
+        "Neural network training"
+      ],
+      "mode": null,
+      "sharpened": false,
+      "hard_claim_one_liner": null,
+      "status": "NEEDS_SHARPEN"
+    },
+    {
+      "slug": "2026-08-28-human-trust-variance-x-cryptography",
+      "file": "outreach/packets/2026-08-28-human-trust-variance-x-cryptography.md",
+      "domains": [
+        "Human Trust Variance",
+        "Cryptography \u2014 zero-knowledge proofs"
+      ],
+      "mode": "bisociation",
+      "sharpened": false,
+      "hard_claim_one_liner": null,
+      "status": "NEEDS_SHARPEN"
+    },
+    {
+      "slug": "2026-08-28-physical-bridge-cable-tension-x-organizational-theory",
+      "file": "outreach/packets/2026-08-28-physical-bridge-cable-tension-x-organizational-theory.md",
+      "domains": [
+        "Physical Bridge Cable Tension",
+        "Organizational theory \u2014 bureaucratic hierarchy"
+      ],
+      "mode": "bisociation",
+      "sharpened": false,
+      "hard_claim_one_liner": null,
+      "status": "NEEDS_SHARPEN"
+    },
+    {
+      "slug": "2026-08-28-informational-hash-collisions-x-human-social-network-dynamics",
+      "file": "outreach/packets/2026-08-28-informational-hash-collisions-x-human-social-network-dynamics.md",
+      "domains": [
+        "Informational Hash Collisions",
+        "Human Social Network Dynamics"
+      ],
+      "mode": "bisociation",
+      "sharpened": false,
+      "hard_claim_one_liner": null,
+      "status": "NEEDS_SHARPEN"
+    },
+    {
+      "slug": "2026-08-28-homospatial-physical-mechanical-spring-systems-x-human-emotional-fluctuation",
+      "file": "outreach/packets/2026-08-28-homospatial-physical-mechanical-spring-systems-x-human-emotional-fluc.md",
+      "domains": [
+        "Physical \u2014 mechanical spring systems",
+        "Human \u2014 emotional fluctuation"
+      ],
+      "mode": "homospatial",
+      "sharpened": false,
+      "hard_claim_one_liner": null,
+      "status": "NEEDS_SHARPEN"
+    },
+    {
+      "slug": "2026-08-28-homospatial-creative-narrative-arc-development-x-informational-distributed-consensus",
+      "file": "outreach/packets/2026-08-28-homospatial-creative-narrative-arc-development-x-informational-distri.md",
+      "domains": [
+        "Creative \u2014 narrative arc development",
+        "Informational \u2014 distributed consensus"
+      ],
+      "mode": "homospatial",
+      "sharpened": false,
+      "hard_claim_one_liner": null,
+      "status": "NEEDS_SHARPEN"
+    },
+    {
+      "slug": "2026-08-28-homospatial-informational-cache-miss-handling-x-human-individual-indecision",
+      "file": "outreach/packets/2026-08-28-homospatial-informational-cache-miss-handling-x-human-individual-inde.md",
+      "domains": [
+        "Informational \u2014 cache miss handling",
+        "Human \u2014 individual indecision"
+      ],
+      "mode": "homospatial",
+      "sharpened": false,
+      "hard_claim_one_liner": null,
+      "status": "NEEDS_SHARPEN"
+    },
+    {
+      "slug": "DCA-cachecoherentprotocols",
+      "file": "outreach/packets/DCA-cachecoherentprotocols.md",
+      "sharpened": false,
+      "hard_claim_one_liner": null,
+      "status": "NEEDS_SHARPEN"
+    },
+    {
+      "slug": "2026-08-29-homospatial-swarm-robotics-x-physical-acoustic-resonance",
+      "file": "outreach/packets/2026-08-29-homospatial-swarm-robotics-x-physical-acoustic-resonance.md",
+      "domains": [
+        "Swarm Robotics",
+        "Physical Acoustic Resonance"
+      ],
+      "mode": "homospatial",
+      "sharpened": true,
+      "hard_claim_one_liner": "S\u2194R acoustic blackboard; chamber-geometry spontaneous formation optimization",
+      "status": "SENT_AWAITING_REPLY",
+      "note": "Lightning pass 1 \u2014 Aranson/Frey primary contact",
+      "sent_date": "2026-08-29"
+    },
+    {
+      "slug": "2026-08-29-homospatial-behavioral-psychology-x-physical-magnetic-field-control",
+      "file": "outreach/packets/2026-08-29-homospatial-behavioral-psychology-x-physical-magnetic-field-control.md",
+      "domains": [
+        "Behavioral Psychology Operant Conditioning",
+        "Physical Magnetic Field Control"
+      ],
+      "mode": "homospatial",
+      "sharpened": true,
+      "hard_claim_one_liner": "Programmable field manifold is the reinforcement schedule; yoked controls",
+      "status": "SENT_AWAITING_REPLY",
+      "note": "Lightning pass 2 \u2014 Liboff/Phillips contacts",
+      "sent_date": "2026-08-29"
+    },
+    {
+      "slug": "2026-08-29-homospatial-architecture-x-cross-domain-pattern-recognition",
+      "file": "outreach/packets/2026-08-29-homospatial-architecture-x-cross-domain-pattern-recognition.md",
+      "domains": [
+        "Architecture",
+        "Cross Domain Pattern Recognition"
+      ],
+      "mode": "homospatial",
+      "sharpened": true,
+      "hard_claim_one_liner": "Built outcomes write pattern library that gates future permits",
+      "status": "SEND_READY_NOT_SENT"
+    },
+    {
+      "slug": "2026-08-28-janusian-creative-creative-block",
+      "file": "outreach/packets/2026-08-28-janusian-creative-creative-block.md",
+      "domains": [
+        "Creative \u2014 creative block"
+      ],
+      "mode": "janusian",
+      "sharpened": true,
+      "hard_claim_one_liner": "Same unfinished project: block suppresses interim output and raises novelty of ship",
+      "status": "SEND_READY_NOT_SENT"
+    },
+    {
+      "slug": "2026-08-29-game-theory-x-music",
+      "file": null,
+      "domains": [
+        "Game Theory \u2014 Nash Bargaining",
+        "Music \u2014 Sample-Based Hip-Hop Production"
+      ],
+      "mode": "bisociation",
+      "sharpened": true,
+      "hard_claim_one_liner": "Nash-Clearance Market \u2014 COLLISION DiCola; no packet",
+      "status": "SOFT_TRAP_NO_PACKET",
+      "note": "COA 2d kill-sample: hard claim already DiCola"
+    }
+  ],
+  "status": "drafted_not_sent",
+  "coa_2d_batch": {
+    "date": "2026-08-29",
+    "n": 3,
+    "collision": 1,
+    "adjacent_packeted": 2,
+    "soft_traps": [
+      "2026-08-29-game-theory-x-music"
+    ]
+  },
+  "phase3_clock": {
+    "started": "2026-08-29",
+    "due": "2026-09-19",
+    "sends": 3,
+    "contacts": [
+      "isa12@psu.edu",
+      "frey@lmu.de",
+      "jphillip@vt.edu"
+    ]
+  }
+}

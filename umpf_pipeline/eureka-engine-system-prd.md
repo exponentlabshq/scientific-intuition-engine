@@ -80,7 +80,9 @@ At current unit economics (~$0.019/hypothesis blended), the entire known 14,365-
 
 ## 9. Known, disclosed limitations (not gaps to be surprised by)
 
-- **Phase 3 (real researcher confirmation) has zero real drafts, ever.** The scoring bands exist (+50 confirmed novel, -20 dismissed); the mechanism has never been exercised for real. This is genuine human labor, not something the pipeline can do on its own.
+- **10X COAs (2026-08-29, research mission):** living tracker at `eureka-engine-10x-coas.md` — Phase 3 researcher confirmation, generative-relation generation, thesis-in (`--challenge`), prior-art canaries, ranking + gated verify throughput. Not a deal-ideation tool. Volume is not the lever.
+- **Phase 3 (real researcher confirmation) has zero sends yet.** Scoring bands exist (+50 / +15 / −20); COA 1 drafts packets into `outreach/` — sending is still a human decision every time.
+- **COA 2d send-ready gate (2026-08-29):** before any Phase 3 send, sharpen the hypothesis to a closed-loop hard claim, re-verify soft vs hard (soft near-known neighbors do not earn the packet), and require `packets_manifest.json` `sharpened: true`. Soft-trap exemplar: Game Theory × Music → DiCola COLLISION after sharpen. See `outreach/README.md` and `sharpen_hypothesis.py`.
 - **The Koestler triptych** (a possible fourth generation mode) is not built. Confirmed absent from the codebase; would need real primary-source doctrine grounding and a small pilot before touching any budget, matching the discipline the existing three modes went through.
 - **Verification cost is unaddressed.** It's the largest single line and no low-risk reduction has been identified without risking a silent quality regression.
 - **Refutation's lifetime record is 0-of-54 survived.** This is either strong evidence the lenses discriminate real quality, or a sign the rubric defaults to REFUTED more often than it should — the control test raised this question; it has not been resolved either way.

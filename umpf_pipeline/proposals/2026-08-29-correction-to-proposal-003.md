@@ -1,6 +1,6 @@
 # Correction to Proposal 003 — the underlying signal was corrupted, and once fixed, doesn't exist
 
-**Date**: 2026-08-29 · **Written by**: manual review (not audit_agent.py) · **Status**: resolved — no filter shipped, and here's why
+**Date**: 2026-08-29 · **Written by**: manual review (not audit_agent.py) · **Status**: **canonical disposition for proposal 003** — no filter shipped
 
 Michael asked to fix proposal 003's pre-verification filter logic directly. Investigating it surfaced a
 real bug upstream of the filter, in `verify_hypothesis.py` itself — fixing that changed the answer to

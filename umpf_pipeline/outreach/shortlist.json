@@ -1,0 +1,279 @@
+{
+  "generated": "2026-08-30T00:05:10Z",
+  "count": 12,
+  "rows": [
+    {
+      "slug": "2026-08-28-janusian-creative-creative-block",
+      "domains": [
+        "Creative — creative block"
+      ],
+      "mode": "janusian",
+      "outreach_points": 50,
+      "raw_outreach_points": 50,
+      "actively_researched": true,
+      "active_research_note": "Incubation / mind-wandering / procrastination–creativity literature — context-split relative to same-instance bar",
+      "flagged": false,
+      "sharpened": true,
+      "badges": [
+        "🎭 Janusian",
+        "🗺️ Frontier Research Group",
+        "🔬 Actively Researched"
+      ],
+      "breakdown": [
+        "Phase 2 ADJACENT_ACTIVE: +30",
+        "Actively researched (real, current evidence): +20"
+      ]
+    },
+    {
+      "slug": "2026-08-29-homospatial-architecture-x-cross-domain-pattern-recognition",
+      "domains": [
+        "Architecture",
+        "Cross Domain Pattern Recognition"
+      ],
+      "mode": "homospatial",
+      "outreach_points": 50,
+      "raw_outreach_points": 50,
+      "actively_researched": true,
+      "active_research_note": "BIM ACC / LLM compliance / Rhonda-class permitting AI — closest neighbors, not full closed loop",
+      "flagged": false,
+      "sharpened": true,
+      "badges": [
+        "🪞 Homospatial",
+        "🗺️ Frontier Research Group",
+        "🔬 Actively Researched"
+      ],
+      "breakdown": [
+        "Phase 2 ADJACENT_ACTIVE: +30",
+        "Actively researched (real, current evidence): +20"
+      ]
+    },
+    {
+      "slug": "2026-08-29-homospatial-swarm-robotics-x-physical-acoustic-resonance",
+      "domains": [
+        "Swarm Robotics",
+        "Physical Acoustic Resonance"
+      ],
+      "mode": "homospatial",
+      "outreach_points": 50,
+      "raw_outreach_points": 50,
+      "actively_researched": true,
+      "active_research_note": "Ziepke, Maryshev, Aranson, Frey — Acoustic Signaling Enables Collective Perception and Control in Active Matter Systems (PRX 2025; arXiv:2410.02940). Agents emit/detect, sync to acoustic field, migrate to strongest signal; collective sonar. Closest neighbor — not full collision with cavity-resonance blackboard claim.",
+      "flagged": false,
+      "sharpened": true,
+      "badges": [
+        "🪞 Homospatial",
+        "🗺️ Frontier Research Group",
+        "🔬 Actively Researched"
+      ],
+      "breakdown": [
+        "Phase 2 ADJACENT_ACTIVE: +30",
+        "Actively researched (real, current evidence): +20"
+      ]
+    },
+    {
+      "slug": "2026-08-29-homospatial-behavioral-psychology-x-physical-magnetic-field-control",
+      "domains": [
+        "Behavioral Psychology Operant Conditioning",
+        "Physical Magnetic Field Control"
+      ],
+      "mode": "homospatial",
+      "outreach_points": 50,
+      "raw_outreach_points": 50,
+      "actively_researched": true,
+      "active_research_note": "Thomas, Schrot, Liboff (1986) Bioelectromagnetics — low-intensity MF alters operant FR/DRL patterns; fields as exposure modulators of food-reinforced behavior. Closest neighbor — not field-as-schedule. Also Phillips magnetoreception mazes; Alsop 1987 failed magnetic SD.",
+      "flagged": false,
+      "sharpened": true,
+      "badges": [
+        "🪞 Homospatial",
+        "🗺️ Frontier Research Group",
+        "🔬 Actively Researched"
+      ],
+      "breakdown": [
+        "Phase 2 ADJACENT_ACTIVE: +30",
+        "Actively researched (real, current evidence): +20"
+      ]
+    },
+    {
+      "slug": "compileroptimization-neuralnetworktraining",
+      "domains": [
+        "Compiler optimization",
+        "Neural network training"
+      ],
+      "mode": null,
+      "outreach_points": 30,
+      "raw_outreach_points": 50,
+      "actively_researched": true,
+      "active_research_note": "ML-for-compilers / NAS-compiler co-optimization is a live, fast-moving current ML-systems research area.",
+      "flagged": false,
+      "sharpened": false,
+      "badges": [
+        "📜 Pre-existing case study",
+        "🗺️ Frontier Research Group",
+        "🔬 Actively Researched"
+      ],
+      "breakdown": [
+        "Phase 2 ADJACENT_ACTIVE: +30",
+        "Actively researched (real, current evidence): +20"
+      ]
+    },
+    {
+      "slug": "2026-08-28-human-trust-variance-x-cryptography",
+      "domains": [
+        "Human Trust Variance",
+        "Cryptography — zero-knowledge proofs"
+      ],
+      "mode": "bisociation",
+      "outreach_points": 30,
+      "raw_outreach_points": 50,
+      "actively_researched": true,
+      "active_research_note": "arXiv 2601.02254 (Vouchsafe) is Jan 2026 -- as current as this dataset gets.",
+      "flagged": false,
+      "sharpened": false,
+      "badges": [
+        "🧬 Bisociative",
+        "🗺️ Frontier Research Group",
+        "🔬 Actively Researched"
+      ],
+      "breakdown": [
+        "Phase 2 ADJACENT_ACTIVE: +30",
+        "Actively researched (real, current evidence): +20"
+      ]
+    },
+    {
+      "slug": "2026-08-28-physical-bridge-cable-tension-x-organizational-theory",
+      "domains": [
+        "Physical Bridge Cable Tension",
+        "Organizational theory — bureaucratic hierarchy"
+      ],
+      "mode": "bisociation",
+      "outreach_points": 30,
+      "raw_outreach_points": 50,
+      "actively_researched": true,
+      "active_research_note": "ScienceDirect 'Making sense in less-hierarchical forms of organizing' is a 2025 paper.",
+      "flagged": false,
+      "sharpened": false,
+      "badges": [
+        "🧬 Bisociative",
+        "🗺️ Frontier Research Group",
+        "🔬 Actively Researched"
+      ],
+      "breakdown": [
+        "Phase 2 ADJACENT_ACTIVE: +30",
+        "Actively researched (real, current evidence): +20"
+      ]
+    },
+    {
+      "slug": "2026-08-28-informational-hash-collisions-x-human-social-network-dynamics",
+      "domains": [
+        "Informational Hash Collisions",
+        "Human Social Network Dynamics"
+      ],
+      "mode": "bisociation",
+      "outreach_points": 30,
+      "raw_outreach_points": 50,
+      "actively_researched": true,
+      "active_research_note": "arXiv 2304.01108 ('Coincidental Generation') is April 2023.",
+      "flagged": false,
+      "sharpened": false,
+      "badges": [
+        "🧬 Bisociative",
+        "🗺️ Frontier Research Group",
+        "🔬 Actively Researched"
+      ],
+      "breakdown": [
+        "Phase 2 ADJACENT_ACTIVE: +30",
+        "Actively researched (real, current evidence): +20"
+      ]
+    },
+    {
+      "slug": "2026-08-28-homospatial-physical-mechanical-spring-systems-x-human-emotional-fluctuation",
+      "domains": [
+        "Physical — mechanical spring systems",
+        "Human — emotional fluctuation"
+      ],
+      "mode": "homospatial",
+      "outreach_points": 30,
+      "raw_outreach_points": 50,
+      "actively_researched": true,
+      "active_research_note": "Mathematical modeling of emotion (affective computing) is an active, published field, though the specific spring-mechanics framing is not part of it yet.",
+      "flagged": false,
+      "sharpened": false,
+      "badges": [
+        "🪞 Homospatial",
+        "🗺️ Frontier Research Group",
+        "🔬 Actively Researched"
+      ],
+      "breakdown": [
+        "Phase 2 ADJACENT_ACTIVE: +30",
+        "Actively researched (real, current evidence): +20"
+      ]
+    },
+    {
+      "slug": "2026-08-28-homospatial-creative-narrative-arc-development-x-informational-distributed-consensus",
+      "domains": [
+        "Creative — narrative arc development",
+        "Informational — distributed consensus"
+      ],
+      "mode": "homospatial",
+      "outreach_points": 30,
+      "raw_outreach_points": 50,
+      "actively_researched": true,
+      "active_research_note": "Collaborative story co-creation research is active and current (2025-2026 papers on VR story co-creation and audience-driven narrative).",
+      "flagged": false,
+      "sharpened": false,
+      "badges": [
+        "🪞 Homospatial",
+        "🗺️ Frontier Research Group",
+        "🔬 Actively Researched"
+      ],
+      "breakdown": [
+        "Phase 2 ADJACENT_ACTIVE: +30",
+        "Actively researched (real, current evidence): +20"
+      ]
+    },
+    {
+      "slug": "2026-08-28-homospatial-informational-cache-miss-handling-x-human-individual-indecision",
+      "domains": [
+        "Informational — cache miss handling",
+        "Human — individual indecision"
+      ],
+      "mode": "homospatial",
+      "outreach_points": 30,
+      "raw_outreach_points": 50,
+      "actively_researched": true,
+      "active_research_note": "ACT-R and cognitive-architecture modeling of memory retrieval is active, ongoing research (recent arXiv comparisons and extensions).",
+      "flagged": false,
+      "sharpened": false,
+      "badges": [
+        "🪞 Homospatial",
+        "🗺️ Frontier Research Group",
+        "🔬 Actively Researched"
+      ],
+      "breakdown": [
+        "Phase 2 ADJACENT_ACTIVE: +30",
+        "Actively researched (real, current evidence): +20"
+      ]
+    },
+    {
+      "slug": "DCA-cachecoherentprotocols",
+      "domains": [
+        "Distributed Consensus Algorithms (Raft, PBFT)",
+        "Distributed Cache Coherence Protocols (MESI, Directory-based)"
+      ],
+      "mode": null,
+      "outreach_points": 10,
+      "raw_outreach_points": 30,
+      "actively_researched": false,
+      "active_research_note": null,
+      "flagged": false,
+      "sharpened": false,
+      "badges": [
+        "📜 Pre-existing case study",
+        "🗺️ Frontier Research Group"
+      ],
+      "breakdown": [
+        "Phase 2 ADJACENT_ACTIVE: +30"
+      ]
+    }
+  ]
+}

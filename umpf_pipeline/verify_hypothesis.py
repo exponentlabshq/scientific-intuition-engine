@@ -24,6 +24,7 @@ Usage:
 """
 import argparse
 import glob
+import hashlib
 import json
 import os
 import random
@@ -31,6 +32,7 @@ import re
 import subprocess
 import sys
 import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import date, datetime, timezone
 
 import requests
@@ -56,8 +58,14 @@ HYPOTHESES_DIR = os.path.join(HERE, "hypotheses")
 VERIFICATIONS_DIR = os.path.join(HERE, "verifications")
 LEDGER_PATH = os.path.join(HERE, "verification-log.jsonl")
 RUBRIC_PATH = os.path.join(HERE, "prompts", "umpf_verification_prompt.md")
+SEARCH_CACHE_DIR = os.path.join(HERE, "search_cache")
 
 VALID_VERDICTS = {"COLLISION", "ADJACENT_ACTIVE", "FACT_CHECK_FAIL", "NO_SIGNAL"}
+
+# COA 5: parallel search workers (bounded). Cron/scheduler still NOT installed
+# until a frozen-slug stability A/B shows ≥95% verdict agreement.
+SEARCH_WORKERS = int(os.getenv("EUREKA_SEARCH_WORKERS", "4"))
+SEARCH_CACHE_ENABLED = os.getenv("EUREKA_SEARCH_CACHE", "1") != "0"
 
 MODE_TITLE_PREFIX = [
     (re.compile(r"^#\s*Janusian Hypothesis:"), "janusian"),
@@ -287,25 +295,87 @@ def _monid_exa_search(query: str, max_results: int = 5, timeout: int = 45):
         return []
 
 
+def _cache_key(query: str) -> str:
+    return hashlib.sha256(query.strip().lower().encode("utf-8")).hexdigest()[:40]
+
+
+def _cache_path(query: str) -> str:
+    return os.path.join(SEARCH_CACHE_DIR, f"{_cache_key(query)}.json")
+
+
+def _load_cached_hits(query: str):
+    if not SEARCH_CACHE_ENABLED:
+        return None
+    path = _cache_path(query)
+    if not os.path.exists(path):
+        return None
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        return data.get("hits")
+    except (json.JSONDecodeError, OSError):
+        return None
+
+
+def _save_cached_hits(query: str, hits: list, provider: str) -> None:
+    if not SEARCH_CACHE_ENABLED:
+        return
+    os.makedirs(SEARCH_CACHE_DIR, exist_ok=True)
+    path = _cache_path(query)
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(
+            {
+                "query": query,
+                "provider": provider,
+                "cached_at": datetime.now(timezone.utc).isoformat(),
+                "hits": hits,
+            },
+            f,
+            ensure_ascii=False,
+        )
+        f.write("\n")
+
+
+def _search_one_query(q: str):
+    """Return (query, hits_or_None, failed_bool, provider). Uses disk cache first."""
+    cached = _load_cached_hits(q)
+    if cached is not None:
+        print(f"    📦 cache hit for {q!r} ({len(cached)} results)")
+        return q, cached, False, "cache"
+    try:
+        hits = _tavily_search_with_retry(q)
+        _save_cached_hits(q, hits, "tavily")
+        return q, hits, False, "tavily"
+    except requests.RequestException as e:
+        print(f"    ! Tavily search failed for {q!r} after retries — trying Monid/Exa fallback: {e}")
+        hits = _monid_exa_search(q)
+        if not hits:
+            return q, [], True, "none"
+        print(f"    ✅ Monid/Exa fallback recovered {len(hits)} result(s) for {q!r}")
+        _save_cached_hits(q, hits, "monid")
+        return q, hits, False, "monid"
+
+
 def run_searches(queries):
-    """Returns (results, failed_query_count). The count matters: zero
-    results because every query genuinely errored out (rate-limited or
-    transient, even after retries and the Monid fallback) is a fundamentally
-    different situation from zero results because every query succeeded and
-    legitimately found nothing -- verify_one() treats them differently, see
-    its own comment."""
+    """Returns (results, failed_query_count). COA 5: queries run concurrently
+    (bounded pool) with per-query disk cache. Circuit breaker + Monid fallback
+    unchanged. Zero results from total failure still differs from zero results
+    from successful empty searches — verify_one() treats them differently."""
     results = []
     failed_queries = 0
+    workers = max(1, min(SEARCH_WORKERS, len(queries) or 1))
+    # Preserve input order in output aggregation
+    ordered = {}
+    with ThreadPoolExecutor(max_workers=workers) as pool:
+        futures = {pool.submit(_search_one_query, q): q for q in queries}
+        for fut in as_completed(futures):
+            q, hits, failed, _provider = fut.result()
+            ordered[q] = (hits, failed)
     for q in queries:
-        try:
-            hits = _tavily_search_with_retry(q)
-        except requests.RequestException as e:
-            print(f"    ! Tavily search failed for {q!r} after retries — trying Monid/Exa fallback: {e}")
-            hits = _monid_exa_search(q)
-            if not hits:
-                failed_queries += 1
-                continue
-            print(f"    ✅ Monid/Exa fallback recovered {len(hits)} result(s) for {q!r}")
+        hits, failed = ordered[q]
+        if failed:
+            failed_queries += 1
+            continue
         for h in hits:
             results.append(
                 {
@@ -315,8 +385,12 @@ def run_searches(queries):
                     "content": (h.get("content") or h.get("text") or "")[:800],
                 }
             )
-        time.sleep(0.25)
     return results, failed_queries
+
+
+def load_rubric() -> str:
+    with open(RUBRIC_PATH, "r", encoding="utf-8") as f:
+        return f.read()
 
 
 def classify(title, mode, domains, core_claim, search_results, rubric, slug=None):

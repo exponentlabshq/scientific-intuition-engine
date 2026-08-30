@@ -2,6 +2,7 @@
 
 **Generated**: 2026-08-29
 **Framework**: UMPF Two-Domain Hypothesis Engine (Exponent Labs LLC)
+**Revision**: 2026-08-29 — human-sharpened closed-loop formulation (COA 2d). Soft “negotiation is like sampling / vague game-theory metaphor for clearance” framing retired; bidirectional clearance-market ↔ sample-choice claim is load-bearing.
 
 ---
 
@@ -52,3 +53,26 @@ The most likely reason this functor turns out to be superficial rather than stru
 3. "Game theory applications in music production"
 4. "Legal frameworks for sampling in hip-hop music"
 5. "Comparative analysis of negotiation techniques in art and music"
+
+---
+
+## COA 2d — Soft vs Hard (operator)
+
+**Sharpened**: 2026-08-29  
+**Soft claim retired**: negotiation is like sampling / vague game-theory metaphor for clearance  
+**Hard chimera**: Nash-Clearance Market (disagreement-point = no-sample)  
+**Hard claim**: Clearance bargains are Nash problems: disagreement point is rewrite/no-release; surplus split predicts clearance prices AND which samples get substituted; market structure changes beat choices and beat choices change disagreement payoffs
+
+### Hard search queries (re-verify these — not the soft ones)
+
+1. "Nash-Clearance Market (disagreement-point = no-sample) Clearance bargains are Nash problems: disagreement point is rewrite/no-release; surplus split predicts clearance prices AND which samples get substituted; market structure changes beat choices and beat choices change disagreement payoffs"
+2. "negotiation is like sampling / vague game-theory metaphor for clearance prior art OR review"
+3. "yoked control OR chamber geometry OR schedule remapping Nash-Clearance Market (disagreement-point = no-sample)"
+4. Named adjacent labs / frameworks from first denser search pass
+
+### Re-verify stub
+
+Write: `verifications/2026-08-29-game-theory-x-music-verification.md` with sections:
+Soft near-COLLISION neighbors | Hard claim status | Actively researched contact
+
+Packet send-ready only if hard verdict remains ADJACENT_ACTIVE.

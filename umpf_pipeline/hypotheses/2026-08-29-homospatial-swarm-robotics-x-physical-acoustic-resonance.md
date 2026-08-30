@@ -1,43 +1,57 @@
 # Homospatial Hypothesis: Swarm Robotics ⊕ Physical Acoustic Resonance
 
-**Generated**: 2026-08-29
-**Framework**: UMPF Homospatial Hypothesis Engine (Exponent Labs LLC)
+**Generated**: 2026-08-29  
+**Framework**: UMPF Homospatial Hypothesis Engine (Exponent Labs LLC)  
+**Revision**: 2026-08-29 — human-sharpened closed-loop formulation (ChatGPT critique + operator review). Soft “acoustic communication” framing retired; bidirectional field↔swarm claim is load-bearing.
 
 ---
 
 ## 1. The Two Source Entities
 
-**Entity A — Swarm Robotics**: Swarm robotics involves multiple autonomous robots that coordinate their actions to achieve a common goal, often mimicking natural flocking behavior seen in birds or fish. These robots use local interactions and simple rules to navigate and adapt to their environment collectively.
+**Entity A — Swarm Robotics**: Multiple autonomous robots that coordinate via local interactions and simple rules to produce collective behavior (flocking, formation, task allocation).
 
-**Entity B — Physical Acoustic Resonance**: Physical acoustic resonance refers to the phenomenon where an object vibrates at specific frequencies, amplifying sound waves and creating a rich auditory experience. This occurs when the natural frequency of an object matches the frequency of external sound waves, resulting in enhanced sound production.
+**Entity B — Physical Acoustic Resonance**: An object or cavity vibrates preferentially at natural frequencies when driven by matching sound waves, amplifying and shaping the acoustic field of the shared medium.
 
 ## 2. The Superimposition
 
-In the overlay of swarm robotics and physical acoustic resonance, the autonomous robots not only navigate their environment but also emit sound waves that interact with their surroundings. Each robot's movement generates vibrations that resonate through the medium, creating a dynamic feedback loop where the swarm’s collective behavior influences the acoustic properties of the environment. As the robots adjust their positions based on local interactions, they modulate the frequencies and amplitudes of the sound waves they produce, leading to a spatially and temporally evolving soundscape. This resonance amplifies their communication signals, enabling the swarm to adapt more fluidly to changes in the environment, as the sound waves guide their movements and decisions in real-time.
+Force the swarm’s spatial configuration and the room’s resonant acoustic field into the **same** dynamical slot — not “robots that also make sound,” but one closed loop:
+
+**robot state → acoustic field → resonance → robot sensing/decision → robot state**
+
+By changing formation, the swarm changes the resonant properties of its environment; the resulting field state then changes formation. The environment is not a channel for point-to-point messages — it is a shared physical state variable the swarm both writes and reads.
 
 ## 3. The Emergent Third Thing
 
-This fused entity is called **Resonant Swarm**. A resonant swarm is a collective of autonomous robots that utilize sound wave resonance as a means of communication and environmental navigation. Each robot emits sound waves that resonate with the surrounding medium, creating a feedback system that enhances their flocking behavior. The resonant swarm dynamically adjusts its formation and movement patterns based on the acoustic signals, allowing for sophisticated coordination and adaptability in complex environments.
+**Resonant Swarm (stigmergic acoustic blackboard).**  
+One chimera: a collective that uses **collective acoustic resonance as an emergent coordination variable**. The acoustic environment becomes a physical blackboard — individual → environment → collective → environment — rather than individual → individual messaging.
+
+Not: robots communicating with sound (prior art).  
+Is: swarm optimizing / adapting formation to exploit a field it itself co-creates, with field state feeding back into swarm state.
 
 ## 4. The Hypothesis
 
-If a resonant swarm is real, then the acoustic patterns produced by the swarm will show distinct, measurable changes in response to environmental obstacles, influencing the robots' movement and formation in a way that enhances their collective efficiency.
+1. **Fusion sentence:** I force swarm spatial configuration \(S\) and environmental resonant response \(R\) into the same loop until a Resonant Swarm emerges — a collective that coordinates through a shared acoustic-field blackboard.
+2. **Falsifiable prediction:** If a Resonant Swarm is real, then both directions are nonzero:
+   - \(\partial R_t / \partial S_t \neq 0\) (configuration changes the resonant field)
+   - \(\partial S_{t+1} / \partial R_t \neq 0\) (resonant field changes subsequent configuration)  
+   And under chamber-geometry change, a swarm with resonance feedback converges on spatial configurations that improve a useful acoustic property **without** being programmed with the global solution — outperforming (A) no-acoustic coordination and (B) acoustic communication without resonance feedback on formation stability, convergence time, and acoustic coherence.
 
 ## 5. Novelty & Testability Self-Critique
 
-- **Fusion distance (1-5)**: 4 — The two source entities come from different fields (robotics and acoustics) with distinct mechanisms, making their fusion a significant conceptual leap.
-- **Testability**: Specific experiments could involve measuring the acoustic output of a resonant swarm in various environments and analyzing how these sound patterns correlate with changes in the swarm's movement and efficiency.
-- **Known prior art**: Not verified.
-- **Confidence this is worth a researcher's time**: High, as the integration of sound resonance into swarm robotics presents novel applications in navigation and communication.
+- **Fusion distance (1-5)**: 4 — swarm robotics and cavity/medium resonance are distinct communities; the fusion is the closed loop + blackboard, not either side alone.
+- **Testability**: Controlled acoustic chamber; 20–100 mic/speaker robots; controls A/B vs experimental resonance feedback; measure formation stability, navigation time, collision rate, energy, acoustic coherence, swarm entropy, convergence time, spontaneous frequency/geometry attraction.
+- **Known prior art risk**: Acoustic swarm communication, AcoustoBots, stigmergy, morphogenetic robotics, wavefield control — must be distinguished. Soft “robots use sound” claims are COLLISION-adjacent; this claim is the bidirectional field loop.
+- **Confidence**: Medium-high as a thesis-direction lead *if* prior art does not already name the closed-loop blackboard form.
 
 ## 6. If This Doesn't Hold
 
-The most likely reason the "emergent third thing" turns out to just be domain A and domain B described side by side is that the robots' acoustic output does not significantly influence their movement patterns, resulting in a lack of meaningful interaction between the two domains.
+Most likely failure: acoustic output does not meaningfully reshape \(R\) as a function of \(S\), or robots ignore \(R\) beyond ordinary message-passing — i.e. the chimera collapses to acoustically assisted swarming (domain A with a sensor modality from B).
 
 ## Search Queries
 
-1. "swarm robotics acoustic communication"
-2. "physical acoustic resonance in robotics"
-3. "feedback loops in swarm behavior and sound"
-4. "sound wave modulation in autonomous systems"
-5. "resonance effects on robotic navigation"
+1. "swarm robotics collective acoustic resonance feedback loop"
+2. "stigmergic acoustic field swarm robots"
+3. "swarm robots environment as acoustic blackboard OR physical blackboard"
+4. "morphogenetic robotics acoustic wavefield control"
+5. "AcoustoBots OR acoustic swarm formation resonance feedback"
+6. "collective resonance spatial configuration robots chamber"

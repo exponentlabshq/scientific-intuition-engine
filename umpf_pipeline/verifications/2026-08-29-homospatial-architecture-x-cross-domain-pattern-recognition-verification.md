@@ -1,19 +1,27 @@
-# Verification: Homospatial — Architecture ⊕ Cross Domain Pattern Recognition
+# Verification: Architecture ⊕ Cross-Domain Pattern Recognition (COA 2d sharpened)
 
-**Verifies**: `hypotheses/2026-08-29-homospatial-architecture-x-cross-domain-pattern-recognition.md`
-**Verified**: 2026-08-28 · **Method**: Tavily search + GPT-4o classification (`verify_hypothesis.py`, unattended)
+**Verifies**: `hypotheses/2026-08-29-homospatial-architecture-x-cross-domain-pattern-recognition.md`  
+**Verified**: 2026-08-29 · **Method**: Exa (COA 2d batch)  
+**Hypothesis revision**: Permit-Pattern Loop
 
-## Verdict: **ADJACENT_ACTIVE**
+## Soft claim retired
+AI pattern recognition helps architects design nicer compliant buildings.
 
-## Queries
-- `Architectural design patterns cognitive recognition integration`
-- `Real-time data analysis in construction compliance`
-- `Adaptive building design using pattern recognition`
-- `Cross-domain synthesis in architectural practices`
-- `Impact of cognitive patterns on urban planning outcomes`
+## Hard chimera
+Permit-Pattern Loop — built form writes the pattern library that writes future permits.
 
-## What was found
-The search results revealed active research in integrating cognitive design patterns with architectural frameworks, as seen in sources like 'Cognitive Architecture as a Blueprint' (https://www.research.autodesk.com/blog/cognitive-architecture-as-blueprint) and 'The New Blueprint for AI Systems: Merging AI Architecture and Cognitive Design Patterns' (https://levelup.gitconnected.com/the-new-blueprint-for-ai-systems-merging-ai-architecture-and-cognitive-design-patterns-e7a5712a4056). Additionally, there is ongoing work in real-time data analytics in construction, such as 'Leveraging Data Analytics for Better Compliance in Construction' (https://www.rhumbix.com/blog/leveraging-data-analytics-for-better-compliance-in-construction).
+## Verdict: **ADJACENT_ACTIVE** (hard claim)
 
-## Reasoning
-The hypothesis proposes 'Architectural Pattern Synthesis' as a novel integration of real-time construction data with cognitive pattern recognition. While no source directly describes this exact system, there is significant research activity in related areas, such as cognitive design patterns in architecture and real-time data analytics in construction. These findings indicate that the domains are actively researched and the proposed integration is plausible, but not yet explicitly realized, making it ADJACENT_ACTIVE.
+Soft claim near-known: BIM automated compliance checking (ACC), LLM→Revit rule scripts, ARCHER executable regulations, commercial AI plan-check (Rhonda) including portfolio knowledge carry-forward.
+
+Hard claim (construction outcomes update a shared cross-project pattern graph that then gates permits; both ∂library/∂built and ∂permit/∂library under code remapping) is **not** a named closed program in the hits — ACC is mostly design→rules one-way; Rhonda-style portfolio learning is the closest neighbor but not the full bidirectional permit-membership graph experiment.
+
+| Soft neighbors | Hard status |
+|---|---|
+| BIM ACC reviews; LLM compliance; Rhonda portfolio knowledge; architecture pattern registries | Still adjacent — ask ACC / permitting-AI labs whether built→library→permit remapping is open |
+
+## Actively researched
+Yes — ACC / BIM compliance community; Rhonda-class permitting AI.
+
+## Packet decision
+**Draft packet** (NOT SENT) — hard claim only; contact ACC / permitting-AI adjacent labs.

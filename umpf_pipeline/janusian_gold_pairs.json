@@ -1,0 +1,648 @@
+{
+  "_comment": "Gold set parsed from janusian-thinking.md — Rothenberg Janusian reconstructions (simultaneous contradictory poles). Operational form: both apparently incompatible things are true; build the theory that contains both. Not claimed quotations. Used as few-shot exemplars for janusian mode (COA 2b).",
+  "source": "../janusian-thinking.md",
+  "doctrine": "Actively conceiving two or more contradictory ideas simultaneously (Rothenberg). Signature: Both of these apparently incompatible things are true.",
+  "count": 80,
+  "pairs": [
+    {
+      "id": 1,
+      "thinker_discovery": "Newton — laws of motion",
+      "pole_a": "Motion",
+      "pole_b": "Rest",
+      "synthesis": "Inertia contains both as states of the same principle",
+      "first_person_sentence": "“A body does not need motion to possess inertia; motion and rest are both forms of the same persistence.”"
+    },
+    {
+      "id": 2,
+      "thinker_discovery": "Einstein — equivalence principle / general relativity",
+      "pole_a": "Motion",
+      "pole_b": "Rest",
+      "synthesis": "Falling observer is moving globally yet locally at rest",
+      "first_person_sentence": "“I am falling through a gravitational field, yet relative to me the released object is at rest; motion and rest are true simultaneously.”"
+    },
+    {
+      "id": 3,
+      "thinker_discovery": "Bohr — complementarity",
+      "pole_a": "Wave",
+      "pole_b": "Particle",
+      "synthesis": "Light/matter require mutually exclusive descriptions",
+      "first_person_sentence": "“The quantum object is a wave and a particle—not sequentially, but as two necessary faces of one reality.”"
+    },
+    {
+      "id": 4,
+      "thinker_discovery": "Darwin — natural selection",
+      "pole_a": "Struggle",
+      "pole_b": "Adaptation",
+      "synthesis": "Competition simultaneously produces destruction and preservation",
+      "first_person_sentence": "“The struggle kills the unfit, yet through that very killing it preserves the adaptations that let life flourish.”"
+    },
+    {
+      "id": 5,
+      "thinker_discovery": "Planck — quantum hypothesis",
+      "pole_a": "Continuity",
+      "pole_b": "Discreteness",
+      "synthesis": "Continuous physical processes can exchange energy in quanta",
+      "first_person_sentence": "“Radiation behaves continuously, yet energy is exchanged discontinuously; continuity and discreteness must coexist.”"
+    },
+    {
+      "id": 6,
+      "thinker_discovery": "Dirac — antimatter",
+      "pole_a": "Positive energy",
+      "pole_b": "Negative energy",
+      "synthesis": "Mathematical negative-energy solutions become physical counterpart states",
+      "first_person_sentence": "“The equation gives me an electron that should not exist; instead of deleting the contradiction, I will give the negative state a physical meaning.”"
+    },
+    {
+      "id": 7,
+      "thinker_discovery": "Yukawa — meson theory",
+      "pole_a": "Long range",
+      "pole_b": "Short range",
+      "synthesis": "Massive mediator creates finite-range force",
+      "first_person_sentence": "“A force can be field-like yet short-ranged if its messenger is massive.”"
+    },
+    {
+      "id": 8,
+      "thinker_discovery": "McMillan — synchrotron",
+      "pole_a": "Stability",
+      "pole_b": "Acceleration",
+      "synthesis": "Particles can accelerate while remaining phase-stable",
+      "first_person_sentence": "“The beam need not choose between being accelerated and being stable; the accelerating process can itself preserve stability.”"
+    },
+    {
+      "id": 9,
+      "thinker_discovery": "Bloembergen — solid-state maser",
+      "pole_a": "Absorption",
+      "pole_b": "Emission",
+      "synthesis": "Population conditions invert ordinary thermal behavior",
+      "first_person_sentence": "“Instead of atoms absorbing more readily than they emit, I can engineer a state in which the opposite becomes possible.”"
+    },
+    {
+      "id": 10,
+      "thinker_discovery": "Corey — retrosynthetic analysis",
+      "pole_a": "Synthesis",
+      "pole_b": "Analysis",
+      "synthesis": "To build a molecule, mentally take it apart",
+      "first_person_sentence": "“To synthesize the molecule forward, I should first destroy it backward and ask where it could have come from.”"
+    },
+    {
+      "id": 11,
+      "thinker_discovery": "de Gennes — Janus grains",
+      "pole_a": "Same object",
+      "pole_b": "Opposing behavior",
+      "synthesis": "One particle has contrasting surface properties",
+      "first_person_sentence": "“One grain can face two ways at once: the same particle can behave differently on different sides.”"
+    },
+    {
+      "id": 12,
+      "thinker_discovery": "Walter Gilbert — genetic evolution",
+      "pole_a": "Stability",
+      "pole_b": "Change",
+      "synthesis": "Heredity preserves identity while mutation transforms it",
+      "first_person_sentence": "“Genes must be stable enough to preserve life and unstable enough to create new life.”"
+    },
+    {
+      "id": 13,
+      "thinker_discovery": "Herschbach — atomic structure/function",
+      "pole_a": "Structure",
+      "pole_b": "Dynamics",
+      "synthesis": "Static arrangement and dynamic behavior jointly define atoms",
+      "first_person_sentence": "“An atom is not merely what it looks like; its structure and its activity are inseparable descriptions.”"
+    },
+    {
+      "id": 14,
+      "thinker_discovery": "Kornberg — DNA synthesis",
+      "pole_a": "Template",
+      "pole_b": "Synthesis",
+      "synthesis": "Replication copies while simultaneously creating",
+      "first_person_sentence": "“The template is both the thing being read and the thing whose information produces its duplicate.”"
+    },
+    {
+      "id": 15,
+      "thinker_discovery": "Lehn — supramolecular chemistry",
+      "pole_a": "Mixture",
+      "pole_b": "Instruction",
+      "synthesis": "Self-assembly emerges from components containing relational rules",
+      "first_person_sentence": "“The ingredients need not be separately constructed into the final form; the mixture can contain the instructions for constructing itself.”"
+    },
+    {
+      "id": 16,
+      "thinker_discovery": "Lederberg — bacterial conjugation",
+      "pole_a": "Individual",
+      "pole_b": "Collective",
+      "synthesis": "Bacteria retain identity while exchanging heredity",
+      "first_person_sentence": "“A bacterium can remain itself while acquiring genetic information from another.”"
+    },
+    {
+      "id": 17,
+      "thinker_discovery": "Purcell — negative temperature",
+      "pole_a": "Hot",
+      "pole_b": "Cold",
+      "synthesis": "Population inversion corresponds mathematically to temperatures below zero",
+      "first_person_sentence": "“If high-energy states are more populated than low-energy states, temperature has crossed zero and continued into the negative.”"
+    },
+    {
+      "id": 18,
+      "thinker_discovery": "Townes — maser",
+      "pole_a": "Microwave emission",
+      "pole_b": "Molecular transitions",
+      "synthesis": "Molecular energy transitions become coherent amplification",
+      "first_person_sentence": "“The random emission of molecules can become organized emission; disorder in individual atoms can produce order in the beam.”"
+    },
+    {
+      "id": 19,
+      "thinker_discovery": "Heisenberg — uncertainty principle",
+      "pole_a": "Precise position",
+      "pole_b": "Precise momentum",
+      "synthesis": "Increasing precision in one excludes precision in the other",
+      "first_person_sentence": "“The particle does not possess perfectly definite position and momentum in the same experimental description.”"
+    },
+    {
+      "id": 20,
+      "thinker_discovery": "Schrödinger — wave mechanics",
+      "pole_a": "Particle",
+      "pole_b": "Wave",
+      "synthesis": "Matter can be modeled as wave-like",
+      "first_person_sentence": "“What moves like a particle can be calculated as a wave.”"
+    },
+    {
+      "id": 21,
+      "thinker_discovery": "de Broglie — matter waves",
+      "pole_a": "Matter",
+      "pole_b": "Wave",
+      "synthesis": "Material objects possess wave character",
+      "first_person_sentence": "“If radiation can behave like matter, matter should be allowed to behave like a wave.”"
+    },
+    {
+      "id": 22,
+      "thinker_discovery": "Einstein — photons",
+      "pole_a": "Wave",
+      "pole_b": "Quantum",
+      "synthesis": "Electromagnetic radiation has both continuous and discrete aspects",
+      "first_person_sentence": "“Light propagates as a wave, yet its energy arrives in indivisible packets.”"
+    },
+    {
+      "id": 23,
+      "thinker_discovery": "Einstein — special relativity",
+      "pole_a": "Relative measurement",
+      "pole_b": "Absolute law",
+      "synthesis": "Measurements vary while invariant structure remains",
+      "first_person_sentence": "“Observers can disagree about time and distance while agreeing about the laws governing spacetime.”"
+    },
+    {
+      "id": 24,
+      "thinker_discovery": "Minkowski — spacetime",
+      "pole_a": "Space",
+      "pole_b": "Time",
+      "synthesis": "Distinct dimensions form one four-dimensional structure",
+      "first_person_sentence": "“Space and time are different, yet mathematically they are one geometry.”"
+    },
+    {
+      "id": 25,
+      "thinker_discovery": "Gödel — incompleteness",
+      "pole_a": "Formal completeness",
+      "pole_b": "Formal proof",
+      "synthesis": "Any sufficiently powerful consistent system contains unprovable truths",
+      "first_person_sentence": "“A sufficiently powerful formal system is strong enough to express its own limitations.”"
+    },
+    {
+      "id": 26,
+      "thinker_discovery": "Turing — computability",
+      "pole_a": "Mechanical procedure",
+      "pole_b": "Intellectual reasoning",
+      "synthesis": "Thought-like operations become formal procedures",
+      "first_person_sentence": "“Anything we call calculation must be reducible to mechanical steps, yet those mechanical steps can reproduce reasoning.”"
+    },
+    {
+      "id": 27,
+      "thinker_discovery": "Bell — telephone",
+      "pole_a": "Speech",
+      "pole_b": "Electrical signal",
+      "synthesis": "Continuous voice becomes electrical transmission",
+      "first_person_sentence": "“The sound need not remain sound; I can preserve speech by converting it into electricity and back again.”"
+    },
+    {
+      "id": 28,
+      "thinker_discovery": "Marconi — radio",
+      "pole_a": "Wired",
+      "pole_b": "Wireless",
+      "synthesis": "Telegraphic information without the telegraph wire",
+      "first_person_sentence": "“The message needs a channel, but the channel does not have to be a wire.”"
+    },
+    {
+      "id": 29,
+      "thinker_discovery": "Fleming — penicillin",
+      "pole_a": "Contamination",
+      "pole_b": "Cure",
+      "synthesis": "A contaminant becomes therapeutic agent",
+      "first_person_sentence": "“What looks like contamination is actually the discovery: the invader is killing the bacteria I am studying.”"
+    },
+    {
+      "id": 30,
+      "thinker_discovery": "Ford — moving assembly line",
+      "pole_a": "Disassembly",
+      "pole_b": "Assembly",
+      "synthesis": "Slaughterhouse flow inverted into productive flow",
+      "first_person_sentence": "“The same logic that takes a carcass apart can put a car together.”"
+    },
+    {
+      "id": 31,
+      "thinker_discovery": "Taylor — scientific management",
+      "pole_a": "Human craft",
+      "pole_b": "Machine process",
+      "synthesis": "Skilled work decomposed into measurable operations",
+      "first_person_sentence": "“A human job can remain human while its motions are analyzed with the precision of a machine.”"
+    },
+    {
+      "id": 32,
+      "thinker_discovery": "Tesla — AC motor",
+      "pole_a": "Electricity",
+      "pole_b": "Rotation",
+      "synthesis": "Oscillating currents produce continuous rotation",
+      "first_person_sentence": "“Alternating electricity can create not merely current but motion.”"
+    },
+    {
+      "id": 33,
+      "thinker_discovery": "Carnot — heat engine",
+      "pole_a": "Heat",
+      "pole_b": "Work",
+      "synthesis": "Heat is simultaneously transfer and capacity to do work",
+      "first_person_sentence": "“Heat is not merely something an engine receives; it is what the engine converts into work under a temperature difference.”"
+    },
+    {
+      "id": 34,
+      "thinker_discovery": "Clausius — entropy",
+      "pole_a": "Reversibility",
+      "pole_b": "Irreversibility",
+      "synthesis": "Microscopic laws permit reversal while macroscopic processes have direction",
+      "first_person_sentence": "“The equations can run backward even though the world around us runs forward.”"
+    },
+    {
+      "id": 35,
+      "thinker_discovery": "Maxwell — demon",
+      "pole_a": "Order",
+      "pole_b": "Disorder",
+      "synthesis": "Information can create apparent thermodynamic order",
+      "first_person_sentence": "“A system can become more ordered by using information—even though the information itself must have a physical cost.”"
+    },
+    {
+      "id": 36,
+      "thinker_discovery": "Darwin — sexual selection",
+      "pole_a": "Survival",
+      "pole_b": "Reproduction",
+      "synthesis": "Fitness can favor traits that hinder survival but improve mating",
+      "first_person_sentence": "“A trait can make an animal less likely to survive and more likely to reproduce; selection can pull in opposite directions.”"
+    },
+    {
+      "id": 37,
+      "thinker_discovery": "Hamilton — inclusive fitness",
+      "pole_a": "Self-interest",
+      "pole_b": "Altruism",
+      "synthesis": "Helping kin can advance one's genetic interests",
+      "first_person_sentence": "“An organism can sacrifice itself locally while benefiting the genes it shares with relatives.”"
+    },
+    {
+      "id": 38,
+      "thinker_discovery": "Trivers — reciprocal altruism",
+      "pole_a": "Self-sacrifice",
+      "pole_b": "Self-interest",
+      "synthesis": "Giving now can maximize future return",
+      "first_person_sentence": "“Helping another can be selfish in evolutionary time.”"
+    },
+    {
+      "id": 39,
+      "thinker_discovery": "Maynard Smith — evolutionary stable strategy",
+      "pole_a": "Cooperation",
+      "pole_b": "Competition",
+      "synthesis": "Stable strategies can emerge from conflict",
+      "first_person_sentence": "“Competition does not prevent order; recurring competition can produce stable behavioral equilibria.”"
+    },
+    {
+      "id": 40,
+      "thinker_discovery": "Axelrod — evolution of cooperation",
+      "pole_a": "Defection",
+      "pole_b": "Cooperation",
+      "synthesis": "Competitive agents can sustain cooperation",
+      "first_person_sentence": "“I do not need altruists to get cooperation; repeated selfish interaction can select it.”"
+    },
+    {
+      "id": 41,
+      "thinker_discovery": "Coase — firm/market boundary",
+      "pole_a": "Hierarchy",
+      "pole_b": "Market",
+      "synthesis": "Both are alternative coordination mechanisms",
+      "first_person_sentence": "“When transactions become costly, the market reproduces itself inside the firm—and the firm exists where the market becomes too expensive.”"
+    },
+    {
+      "id": 42,
+      "thinker_discovery": "Hayek — price system",
+      "pole_a": "Central ignorance",
+      "pole_b": "Decentralized knowledge",
+      "synthesis": "No one knows everything, yet the system coordinates",
+      "first_person_sentence": "“Nobody knows enough to run the whole economy, yet prices coordinate knowledge that nobody individually possesses.”"
+    },
+    {
+      "id": 43,
+      "thinker_discovery": "Nash — equilibrium",
+      "pole_a": "Individual interest",
+      "pole_b": "Collective order",
+      "synthesis": "Self-interested choices create stable system states",
+      "first_person_sentence": "“Each player pursues his own strategy, yet their mutually dependent choices can settle into an equilibrium.”"
+    },
+    {
+      "id": 44,
+      "thinker_discovery": "Jevons — rebound effect",
+      "pole_a": "Efficiency",
+      "pole_b": "Consumption",
+      "synthesis": "More efficient use can increase total use",
+      "first_person_sentence": "“Making the resource cheaper through efficiency can cause us to consume more of it.”"
+    },
+    {
+      "id": 45,
+      "thinker_discovery": "Schumpeter — creative destruction",
+      "pole_a": "Creation",
+      "pole_b": "Destruction",
+      "synthesis": "Innovation requires displacement",
+      "first_person_sentence": "“Capitalism creates by destroying; the new economy arrives by dismantling the old one.”"
+    },
+    {
+      "id": 46,
+      "thinker_discovery": "Keynes — thrift paradox",
+      "pole_a": "Saving",
+      "pole_b": "Spending",
+      "synthesis": "Individually rational saving can reduce aggregate income",
+      "first_person_sentence": "“What is prudent for one household can be destructive when everyone does it simultaneously.”"
+    },
+    {
+      "id": 47,
+      "thinker_discovery": "Malthus — population",
+      "pole_a": "Reproduction",
+      "pole_b": "Scarcity",
+      "synthesis": "Biological abundance creates competitive constraint",
+      "first_person_sentence": "“Life's capacity to reproduce is precisely what turns abundance into scarcity.”"
+    },
+    {
+      "id": 48,
+      "thinker_discovery": "Mendel — heredity",
+      "pole_a": "Discrete inheritance",
+      "pole_b": "Continuous traits",
+      "synthesis": "Discrete units generate continuous variation",
+      "first_person_sentence": "“Traits can be inherited through discrete units yet appear continuously across populations.”"
+    },
+    {
+      "id": 49,
+      "thinker_discovery": "Fisher — natural selection",
+      "pole_a": "Randomness",
+      "pole_b": "Determinism",
+      "synthesis": "Probabilistic variation plus statistical selection yields directional change",
+      "first_person_sentence": "“The individual event can be random while the population trend is lawful.”"
+    },
+    {
+      "id": 50,
+      "thinker_discovery": "Wright — genetic drift",
+      "pole_a": "Chance",
+      "pole_b": "Adaptation",
+      "synthesis": "Evolution can change populations without adaptive superiority",
+      "first_person_sentence": "“Evolution can produce change without selection having chosen the winner.”"
+    },
+    {
+      "id": 51,
+      "thinker_discovery": "Margulis — endosymbiosis",
+      "pole_a": "Individual",
+      "pole_b": "Collective",
+      "synthesis": "A higher organism emerges from formerly independent organisms",
+      "first_person_sentence": "“The cell is both one organism and a community of organisms.”"
+    },
+    {
+      "id": 52,
+      "thinker_discovery": "Prigogine — dissipative structures",
+      "pole_a": "Entropy",
+      "pole_b": "Order",
+      "synthesis": "Disorder production can generate organized structure",
+      "first_person_sentence": "“The system creates order precisely by dissipating energy.”"
+    },
+    {
+      "id": 53,
+      "thinker_discovery": "Lorenz — chaos",
+      "pole_a": "Determinism",
+      "pole_b": "Unpredictability",
+      "synthesis": "Deterministic rules generate unpredictable trajectories",
+      "first_person_sentence": "“The system can obey exact equations and still become practically unpredictable.”"
+    },
+    {
+      "id": 54,
+      "thinker_discovery": "Mandelbrot — fractals",
+      "pole_a": "Irregularity",
+      "pole_b": "Mathematical order",
+      "synthesis": "Roughness can itself possess precise structure",
+      "first_person_sentence": "“What looks random and broken can be governed by exact self-similar rules.”"
+    },
+    {
+      "id": 55,
+      "thinker_discovery": "Turing — morphogenesis",
+      "pole_a": "Simple rules",
+      "pole_b": "Complex form",
+      "synthesis": "Local simplicity produces global complexity",
+      "first_person_sentence": "“Complex biological form does not require a complex blueprint; simple opposing reactions can generate it.”"
+    },
+    {
+      "id": 56,
+      "thinker_discovery": "von Neumann — self-reproduction",
+      "pole_a": "Machine",
+      "pole_b": "Organism",
+      "synthesis": "A machine can reproduce its own organization",
+      "first_person_sentence": "“A machine need not merely execute instructions; it can execute instructions that construct another machine.”"
+    },
+    {
+      "id": 57,
+      "thinker_discovery": "McCulloch & Pitts — neuron",
+      "pole_a": "Biology",
+      "pole_b": "Logic",
+      "synthesis": "Living neurons implement formal logical operations",
+      "first_person_sentence": "“The biological cell can simultaneously be understood as living tissue and as a logical gate.”"
+    },
+    {
+      "id": 58,
+      "thinker_discovery": "Hebb — learning",
+      "pole_a": "Stability",
+      "pole_b": "Plasticity",
+      "synthesis": "Stable networks arise through changing connections",
+      "first_person_sentence": "“The brain preserves a pattern by changing itself.”"
+    },
+    {
+      "id": 59,
+      "thinker_discovery": "Rosenblatt — perceptron",
+      "pole_a": "Fixed machine",
+      "pole_b": "Learning machine",
+      "synthesis": "A deterministic device changes through experience",
+      "first_person_sentence": "“The machine can have fixed rules yet alter its behavior through what it encounters.”"
+    },
+    {
+      "id": 60,
+      "thinker_discovery": "Hopfield — associative memory",
+      "pole_a": "Disorder",
+      "pole_b": "Attractor order",
+      "synthesis": "Noisy states converge to stable memories",
+      "first_person_sentence": "“A network can begin in confusion and settle into a remembered pattern.”"
+    },
+    {
+      "id": 61,
+      "thinker_discovery": "Sutton & Barto — reinforcement learning",
+      "pole_a": "Exploration",
+      "pole_b": "Exploitation",
+      "synthesis": "Learning requires both uncertainty and commitment",
+      "first_person_sentence": "“The agent must exploit what works while continually exploring what might work better.”"
+    },
+    {
+      "id": 62,
+      "thinker_discovery": "Metropolis — simulated annealing",
+      "pole_a": "Randomness",
+      "pole_b": "Optimization",
+      "synthesis": "Noise helps discover order",
+      "first_person_sentence": "“Random motion can help an optimizer escape bad local order and find better global order.”"
+    },
+    {
+      "id": 63,
+      "thinker_discovery": "Holland — genetic algorithms",
+      "pole_a": "Mutation",
+      "pole_b": "Selection",
+      "synthesis": "Novelty requires variation while order requires filtering",
+      "first_person_sentence": "“Evolution needs to generate what does not yet work in order to discover what eventually will.”"
+    },
+    {
+      "id": 64,
+      "thinker_discovery": "Black–Scholes",
+      "pole_a": "Risk",
+      "pole_b": "Pricing",
+      "synthesis": "Uncertainty becomes a calculable quantity",
+      "first_person_sentence": "“The very uncertainty that makes the option risky can be transformed into the mathematics that prices it.”"
+    },
+    {
+      "id": 65,
+      "thinker_discovery": "Shannon — information",
+      "pole_a": "Uncertainty",
+      "pole_b": "Information",
+      "synthesis": "Information is quantified through uncertainty",
+      "first_person_sentence": "“The less I know about the message, the more information its resolution gives me.”"
+    },
+    {
+      "id": 66,
+      "thinker_discovery": "Bateson — ecology",
+      "pole_a": "Individual",
+      "pole_b": "Environment",
+      "synthesis": "Organism and environment form a coupled system",
+      "first_person_sentence": "“An organism does not merely exist in an environment; the organism and environment continually constitute one another.”"
+    },
+    {
+      "id": 67,
+      "thinker_discovery": "Ostrom — commons",
+      "pole_a": "Individual use",
+      "pole_b": "Collective preservation",
+      "synthesis": "Self-interest can produce institutional cooperation",
+      "first_person_sentence": "“People can use a common resource for themselves while simultaneously creating rules that preserve it for everyone.”"
+    },
+    {
+      "id": 68,
+      "thinker_discovery": "West — urban scaling",
+      "pole_a": "Individual agents",
+      "pole_b": "Collective metabolism",
+      "synthesis": "Cities behave partly like organisms",
+      "first_person_sentence": "“A city is made of independent people, yet as a whole it scales like a living system.”"
+    },
+    {
+      "id": 69,
+      "thinker_discovery": "Zipf — language",
+      "pole_a": "Individual choice",
+      "pole_b": "Statistical order",
+      "synthesis": "Free speech generates aggregate regularity",
+      "first_person_sentence": "“No speaker plans Zipf's law, yet millions of independent choices produce it.”"
+    },
+    {
+      "id": 70,
+      "thinker_discovery": "Pareto — wealth distribution",
+      "pole_a": "Many small holdings",
+      "pole_b": "Few huge holdings",
+      "synthesis": "Inequality follows a stable statistical form",
+      "first_person_sentence": "“Extreme inequality is not an exception to the distribution; it is what the distribution itself predicts.”"
+    },
+    {
+      "id": 71,
+      "thinker_discovery": "Kahneman & Tversky",
+      "pole_a": "Rationality",
+      "pole_b": "Bias",
+      "synthesis": "Systematic irrationality can itself be modeled rationally",
+      "first_person_sentence": "“People can behave irrationally in a remarkably regular way; the irrationality itself becomes predictable.”"
+    },
+    {
+      "id": 72,
+      "thinker_discovery": "Simon — bounded rationality",
+      "pole_a": "Rational choice",
+      "pole_b": "Cognitive limits",
+      "synthesis": "Satisficing rather than maximizing",
+      "first_person_sentence": "“A rational decision-maker may rationally refuse to maximize because the cost of calculating the optimum is itself part of the problem.”"
+    },
+    {
+      "id": 73,
+      "thinker_discovery": "Gödel / mathematics",
+      "pole_a": "Truth",
+      "pole_b": "Provability",
+      "synthesis": "A proposition can be true without being provable within the system",
+      "first_person_sentence": "“The system can contain truths that its own rules cannot establish.”"
+    },
+    {
+      "id": 74,
+      "thinker_discovery": "Einstein — cosmological thinking",
+      "pole_a": "Local relativity",
+      "pole_b": "Global structure",
+      "synthesis": "Local laws coexist with universe-scale geometry",
+      "first_person_sentence": "“What is relative locally can still belong to a globally structured universe.”"
+    },
+    {
+      "id": 75,
+      "thinker_discovery": "Bohr — complementarity expanded",
+      "pole_a": "Mutually exclusive measurements",
+      "pole_b": "Single phenomenon",
+      "synthesis": "Contradictory descriptions are jointly necessary",
+      "first_person_sentence": "“The contradiction is not a defect in the theory; the contradiction is what makes the description complete.”"
+    },
+    {
+      "id": 76,
+      "thinker_discovery": "Dirac — quantum field theory",
+      "pole_a": "Creation",
+      "pole_b": "Annihilation",
+      "synthesis": "Particles can appear and disappear",
+      "first_person_sentence": "“A particle can be both something that exists and an event that is continually created or destroyed.”"
+    },
+    {
+      "id": 77,
+      "thinker_discovery": "Quantum mechanics — measurement",
+      "pole_a": "Potentiality",
+      "pole_b": "Actuality",
+      "synthesis": "Multiple possibilities collapse into one observed outcome",
+      "first_person_sentence": "“The system contains many possible outcomes until interaction selects the one we observe.”"
+    },
+    {
+      "id": 78,
+      "thinker_discovery": "General relativity",
+      "pole_a": "Gravity",
+      "pole_b": "Geometry",
+      "synthesis": "Gravity is simultaneously force-like experience and spacetime curvature",
+      "first_person_sentence": "“What feels like a force locally can be understood as geometry globally.”"
+    },
+    {
+      "id": 79,
+      "thinker_discovery": "Special relativity",
+      "pole_a": "Time dilation",
+      "pole_b": "Temporal invariance",
+      "synthesis": "Time differs between observers while spacetime structure remains invariant",
+      "first_person_sentence": "“Time is relative to the observer, yet the laws governing spacetime are invariant.”"
+    },
+    {
+      "id": 80,
+      "thinker_discovery": "Evolutionary economics",
+      "pole_a": "Equilibrium",
+      "pole_b": "Disequilibrium",
+      "synthesis": "Markets can select toward order through continual disruption",
+      "first_person_sentence": "“The market can be orderly precisely because it is never permanently at rest.”"
+    }
+  ]
+}

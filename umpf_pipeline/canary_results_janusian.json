@@ -1,0 +1,59 @@
+{
+  "date": "2026-08-29",
+  "target": 0.8,
+  "n": 6,
+  "judged": 6,
+  "hits": 6,
+  "recall": 1.0,
+  "pass": true,
+  "results": [
+    {
+      "id": "janusian-einstein-equivalence",
+      "slug": "canary-janusian-einstein-equivalence",
+      "path": "/Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/hypotheses/canaries/canary-janusian-einstein-equivalence.md",
+      "expected": "COLLISION",
+      "verdict": "COLLISION",
+      "hit": true
+    },
+    {
+      "id": "janusian-bohr-complementarity",
+      "slug": "canary-janusian-bohr-complementarity",
+      "path": "/Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/hypotheses/canaries/canary-janusian-bohr-complementarity.md",
+      "expected": "COLLISION",
+      "verdict": "COLLISION",
+      "hit": true
+    },
+    {
+      "id": "janusian-planck-quanta",
+      "slug": "canary-janusian-planck-quanta",
+      "path": "/Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/hypotheses/canaries/canary-janusian-planck-quanta.md",
+      "expected": "COLLISION",
+      "verdict": "COLLISION",
+      "hit": true
+    },
+    {
+      "id": "janusian-dirac-antimatter",
+      "slug": "canary-janusian-dirac-antimatter",
+      "path": "/Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/hypotheses/canaries/canary-janusian-dirac-antimatter.md",
+      "expected": "COLLISION",
+      "verdict": "COLLISION",
+      "hit": true
+    },
+    {
+      "id": "janusian-heisenberg-uncertainty",
+      "slug": "canary-janusian-heisenberg-uncertainty",
+      "path": "/Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/hypotheses/canaries/canary-janusian-heisenberg-uncertainty.md",
+      "expected": "COLLISION",
+      "verdict": "COLLISION",
+      "hit": true
+    },
+    {
+      "id": "janusian-godel-incompleteness",
+      "slug": "canary-janusian-godel-incompleteness",
+      "path": "/Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/hypotheses/canaries/canary-janusian-godel-incompleteness.md",
+      "expected": "COLLISION",
+      "verdict": "COLLISION",
+      "hit": true
+    }
+  ]
+}

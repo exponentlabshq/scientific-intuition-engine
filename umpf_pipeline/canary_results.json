@@ -1,0 +1,62 @@
+{
+  "date": "2026-08-29",
+  "mode_filter": "homospatial",
+  "target": 0.8,
+  "n": 6,
+  "judged": 3,
+  "pending_verification": 3,
+  "hits": 3,
+  "recall": 1.0,
+  "pass": true,
+  "results": [
+    {
+      "id": "homospatial-desktop-gui",
+      "slug": "canary-homospatial-desktop-gui",
+      "path": "/Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/hypotheses/canaries/canary-homospatial-desktop-gui.md",
+      "expected": "COLLISION",
+      "verdict": "COLLISION",
+      "hit": true
+    },
+    {
+      "id": "homospatial-dna-double-helix",
+      "slug": "canary-homospatial-dna-double-helix",
+      "path": "/Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/hypotheses/canaries/canary-homospatial-dna-double-helix.md",
+      "expected": "COLLISION",
+      "verdict": "COLLISION",
+      "hit": true
+    },
+    {
+      "id": "homospatial-mcculloch-pitts",
+      "slug": "canary-homospatial-mcculloch-pitts",
+      "path": "/Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/hypotheses/canaries/canary-homospatial-mcculloch-pitts.md",
+      "expected": "COLLISION",
+      "verdict": "COLLISION",
+      "hit": true
+    },
+    {
+      "id": "homospatial-hopfield",
+      "slug": "canary-homospatial-hopfield",
+      "path": "/Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/hypotheses/canaries/canary-homospatial-hopfield.md",
+      "expected": "COLLISION",
+      "verdict": "PENDING_VERIFICATION",
+      "hit": false
+    },
+    {
+      "id": "homospatial-toyota-kanban",
+      "slug": "canary-homospatial-toyota-kanban",
+      "path": "/Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/hypotheses/canaries/canary-homospatial-toyota-kanban.md",
+      "expected": "COLLISION",
+      "verdict": "PENDING_VERIFICATION",
+      "hit": false
+    },
+    {
+      "id": "homospatial-gutenberg-press",
+      "slug": "canary-homospatial-gutenberg-press",
+      "path": "/Users/michaeljagdeo/Downloads/talentOS-2026/scientific-intuition-engine/umpf_pipeline/hypotheses/canaries/canary-homospatial-gutenberg-press.md",
+      "expected": "COLLISION",
+      "verdict": "PENDING_VERIFICATION",
+      "hit": false
+    }
+  ],
+  "note": "Merged retry of PENDING canaries after Monid cooldown"
+}

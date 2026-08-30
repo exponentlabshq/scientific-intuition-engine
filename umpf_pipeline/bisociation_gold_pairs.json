@@ -1,0 +1,647 @@
+{
+  "_comment": "Gold set parsed from bisociation-domain-pairs.md — Koestlerian reconstructions of generative-relation transplants. Used as few-shot exemplars for bisociation mode (COA 2). Not claimed quotations; operational form: relational rule X also governs Y.",
+  "source": "../bisociation-domain-pairs.md",
+  "count": 80,
+  "pairs": [
+    {
+      "id": 1,
+      "domain_a": "Malthus — population pressure",
+      "domain_b": "Darwin — variation & inheritance",
+      "collision": "Scarcity × variation",
+      "insight": "Natural selection",
+      "first_person_sentence": "“If populations outrun resources, then those with advantageous variation will leave more descendants; scarcity turns variation into selection.”"
+    },
+    {
+      "id": 2,
+      "domain_a": "Watson & Crick — molecular biology",
+      "domain_b": "Franklin — X-ray crystallography",
+      "collision": "Biological information × structural geometry",
+      "insight": "DNA double helix",
+      "first_person_sentence": "“If the X-ray pattern reveals the molecule's geometry, then the geometry should tell us how hereditary information can be physically stored.”"
+    },
+    {
+      "id": 3,
+      "domain_a": "Faraday — electromagnetism",
+      "domain_b": "Maxwell — mathematics",
+      "collision": "Physical phenomena × field equations",
+      "insight": "Classical electromagnetic theory",
+      "first_person_sentence": "“What Faraday sees as lines of force, I can express as a mathematical field; the physical intuition becomes a set of equations.”"
+    },
+    {
+      "id": 4,
+      "domain_a": "Wright brothers — bicycle mechanics",
+      "domain_b": "Aviation — flight",
+      "collision": "Balance/control × aerodynamic lift",
+      "insight": "Controlled powered flight",
+      "first_person_sentence": "“A bicycle is unstable until I control it; an airplane should be no different—the problem is not merely flying, but steering the instability.”"
+    },
+    {
+      "id": 5,
+      "domain_a": "Jevons — economics",
+      "domain_b": "Thermodynamics — energy",
+      "collision": "Production × energy constraints",
+      "insight": "Energy/economic analysis",
+      "first_person_sentence": "“If an economy transforms matter and energy just as an engine does, economic production must obey physical constraints too.”"
+    },
+    {
+      "id": 6,
+      "domain_a": "Shannon — information theory",
+      "domain_b": "Boolean algebra",
+      "collision": "Communication × logical switching",
+      "insight": "Digital computing",
+      "first_person_sentence": "“A message can be represented as discrete symbols, and discrete symbols can be manipulated as logical states.”"
+    },
+    {
+      "id": 7,
+      "domain_a": "Game theory — strategic interaction",
+      "domain_b": "Evolutionary biology — selection",
+      "collision": "Strategy × reproductive fitness",
+      "insight": "Evolutionary game theory",
+      "first_person_sentence": "“What if strategies compete the way organisms compete? Then fitness can select among behaviors.”"
+    },
+    {
+      "id": 8,
+      "domain_a": "Black–Scholes — financial pricing",
+      "domain_b": "Physics — diffusion equations",
+      "collision": "Option prices × stochastic diffusion",
+      "insight": "Options pricing",
+      "first_person_sentence": "“An option price evolves like a diffusing quantity; if the mathematics of diffusion applies, finance can inherit the machinery of physics.”"
+    },
+    {
+      "id": 9,
+      "domain_a": "Darwinian evolution",
+      "domain_b": "Algorithms",
+      "collision": "Natural selection × search",
+      "insight": "Genetic algorithms",
+      "first_person_sentence": "“Evolution does not know the answer; it searches by variation and selection, so an algorithm can do the same.”"
+    },
+    {
+      "id": 10,
+      "domain_a": "Economics — market equilibrium",
+      "domain_b": "Nash — strategic equilibrium",
+      "collision": "Markets × games",
+      "insight": "Strategic market equilibrium",
+      "first_person_sentence": "“A market is not just a collection of prices; it is a game in which each player's best move depends on everyone else's.”"
+    },
+    {
+      "id": 11,
+      "domain_a": "Archimedes — buoyancy",
+      "domain_b": "Geometry",
+      "collision": "Physical displacement × volume",
+      "insight": "Law of buoyancy",
+      "first_person_sentence": "“If the water rises by exactly the volume I immerse, then displacement is geometry made physical.”"
+    },
+    {
+      "id": 12,
+      "domain_a": "Copernicus — heliocentrism",
+      "domain_b": "Kepler — observations",
+      "collision": "Cosmic model × empirical regularity",
+      "insight": "Keplerian planetary laws",
+      "first_person_sentence": "“Put the Sun at the center, and the strange planetary motions become patterns I can describe with simple laws.”"
+    },
+    {
+      "id": 13,
+      "domain_a": "Pasteur — fermentation",
+      "domain_b": "Microbiology",
+      "collision": "Chemical change × living organisms",
+      "insight": "Germ theory",
+      "first_person_sentence": "“Fermentation is not merely chemistry happening on its own; microorganisms can be the agents producing the chemistry.”"
+    },
+    {
+      "id": 14,
+      "domain_a": "Wegener — continental drift",
+      "domain_b": "Geology",
+      "collision": "Moving continents × geological evidence",
+      "insight": "Plate tectonic precursor",
+      "first_person_sentence": "“The continents fit like pieces of a larger object; perhaps the map is not fixed—the land itself has moved.”"
+    },
+    {
+      "id": 15,
+      "domain_a": "Mendel — heredity",
+      "domain_b": "Darwin — selection",
+      "collision": "Discrete inheritance × selection",
+      "insight": "Modern evolutionary synthesis",
+      "first_person_sentence": "“If traits are inherited in discrete units, Darwin's selection suddenly has something concrete to select.”"
+    },
+    {
+      "id": 16,
+      "domain_a": "Einstein — relativity",
+      "domain_b": "Maxwell — electromagnetism",
+      "collision": "Space-time × invariant light speed",
+      "insight": "Special relativity",
+      "first_person_sentence": "“If Maxwell's light speed is invariant, then space and time must adjust rather than light violating the equations.”"
+    },
+    {
+      "id": 17,
+      "domain_a": "Planck — quantization",
+      "domain_b": "Thermodynamics",
+      "collision": "Energy × discrete states",
+      "insight": "Quantum theory",
+      "first_person_sentence": "“If the thermal spectrum refuses continuous energy, perhaps nature itself trades energy in discrete packets.”"
+    },
+    {
+      "id": 18,
+      "domain_a": "Turing — computation",
+      "domain_b": "Biology — morphogenesis",
+      "collision": "Algorithms × biological development",
+      "insight": "Computational morphogenesis",
+      "first_person_sentence": "“If simple local rules can generate complex patterns in a machine, perhaps biological form can emerge from simple rules too.”"
+    },
+    {
+      "id": 19,
+      "domain_a": "Cybernetics — feedback",
+      "domain_b": "Biology — homeostasis",
+      "collision": "Control systems × organisms",
+      "insight": "Systems biology",
+      "first_person_sentence": "“The thermostat regulates temperature by feedback; an organism does the same thing with its internal state.”"
+    },
+    {
+      "id": 20,
+      "domain_a": "Linguistics — grammar",
+      "domain_b": "Computer science — formal systems",
+      "collision": "Language rules × computation",
+      "insight": "Formal language theory",
+      "first_person_sentence": "“A grammar is a rule system, and rule systems can be computed; language therefore has a machine-like structure.”"
+    },
+    {
+      "id": 21,
+      "domain_a": "Köhler — Gestalt psychology",
+      "domain_b": "Problem solving",
+      "collision": "Perception × restructuring",
+      "insight": "Insight learning",
+      "first_person_sentence": "“The solution does not always emerge by accumulating attempts; sometimes the whole pattern suddenly reorganizes.”"
+    },
+    {
+      "id": 22,
+      "domain_a": "Fisher — statistics",
+      "domain_b": "Evolution",
+      "collision": "Probability × natural selection",
+      "insight": "Population genetics",
+      "first_person_sentence": "“If inheritance is probabilistic, Darwinian selection can be described mathematically as changes in gene frequencies.”"
+    },
+    {
+      "id": 23,
+      "domain_a": "Nash — game theory",
+      "domain_b": "Evolution",
+      "collision": "Equilibrium × selection",
+      "insight": "Evolutionarily stable strategy",
+      "first_person_sentence": "“A strategy can be stable not because players consciously choose it, but because variants using it cannot be invaded.”"
+    },
+    {
+      "id": 24,
+      "domain_a": "Coase — transaction costs",
+      "domain_b": "Property rights",
+      "collision": "Firms × markets",
+      "insight": "Theory of the firm / Coase theorem",
+      "first_person_sentence": "“When using the market costs something, the boundary of the firm becomes an economic solution to the cost of transacting.”"
+    },
+    {
+      "id": 25,
+      "domain_a": "Schumpeter — creative destruction",
+      "domain_b": "Evolution",
+      "collision": "Economic competition × biological replacement",
+      "insight": "Evolutionary economics",
+      "first_person_sentence": "“Capitalism evolves by destroying old forms and selecting new ones; innovation is economic mutation under competition.”"
+    },
+    {
+      "id": 26,
+      "domain_a": "Hayek — dispersed knowledge",
+      "domain_b": "Markets — price signals",
+      "collision": "Information × decentralized coordination",
+      "insight": "Prices as information",
+      "first_person_sentence": "“No one possesses all the knowledge needed to coordinate an economy, but prices can carry fragments of that knowledge.”"
+    },
+    {
+      "id": 27,
+      "domain_a": "Shannon — entropy",
+      "domain_b": "Thermodynamics",
+      "collision": "Information uncertainty × physical entropy",
+      "insight": "Information entropy",
+      "first_person_sentence": "“The uncertainty in a message behaves mathematically like entropy; information can therefore be measured as the reduction of uncertainty.”"
+    },
+    {
+      "id": 28,
+      "domain_a": "Darwin — selection",
+      "domain_b": "Artificial intelligence",
+      "collision": "Evolution × search/optimization",
+      "insight": "Evolutionary computation",
+      "first_person_sentence": "“Nature solves problems without a designer, so computation can imitate nature's search through variation and selection.”"
+    },
+    {
+      "id": 29,
+      "domain_a": "Black–Scholes — finance",
+      "domain_b": "Wiener processes",
+      "collision": "Asset pricing × Brownian motion",
+      "insight": "Stochastic option pricing",
+      "first_person_sentence": "“If price changes resemble random motion, then the mathematics of Brownian motion can price financial claims on that motion.”"
+    },
+    {
+      "id": 30,
+      "domain_a": "Nash — equilibrium",
+      "domain_b": "Malthus — scarcity",
+      "collision": "Strategic interaction × resource pressure",
+      "insight": "Equilibrium under selection pressure",
+      "first_person_sentence": "“Players choose against one another, but resources constrain them; equilibrium can emerge from strategy operating under scarcity.”"
+    },
+    {
+      "id": 31,
+      "domain_a": "Archimedes — buoyancy",
+      "domain_b": "Geometry",
+      "collision": "Physical displacement × geometric volume",
+      "insight": "Law of buoyancy",
+      "first_person_sentence": "“If the water rises exactly as much volume as I immerse, then displacement is geometry made physical.”"
+    },
+    {
+      "id": 32,
+      "domain_a": "Gutenberg — wine press",
+      "domain_b": "Writing",
+      "collision": "Mechanical pressing × information reproduction",
+      "insight": "Printing press",
+      "first_person_sentence": "“The press already stamps grapes into wine; why not use the same pressure to stamp letters into pages?”"
+    },
+    {
+      "id": 33,
+      "domain_a": "Leonardo — anatomy",
+      "domain_b": "Artistic perspective",
+      "collision": "Biological structure × visual representation",
+      "insight": "Anatomical illustration",
+      "first_person_sentence": "“The body has hidden structure like a machine, and perspective gives me a way to make that structure visible.”"
+    },
+    {
+      "id": 34,
+      "domain_a": "Harvey — circulation",
+      "domain_b": "Hydraulics",
+      "collision": "Blood flow × pump/plumbing systems",
+      "insight": "Circulatory system",
+      "first_person_sentence": "“The heart behaves like a pump; therefore blood should move in a circuit rather than simply disappear into the body.”"
+    },
+    {
+      "id": 35,
+      "domain_a": "Lavoisier — chemistry",
+      "domain_b": "Accounting",
+      "collision": "Chemical quantities × bookkeeping",
+      "insight": "Conservation of mass",
+      "first_person_sentence": "“Treat matter like money: whatever enters the chemical ledger must leave it somewhere.”"
+    },
+    {
+      "id": 36,
+      "domain_a": "Dalton — atomic theory",
+      "domain_b": "Meteorology",
+      "collision": "Atmospheric gases × discrete particles",
+      "insight": "Atomic theory of matter",
+      "first_person_sentence": "“If gases mix in measurable proportions, perhaps matter itself is composed of discrete units.”"
+    },
+    {
+      "id": 37,
+      "domain_a": "Avogadro — gases",
+      "domain_b": "Counting",
+      "collision": "Gas volume × molecular number",
+      "insight": "Molecular interpretation of gases",
+      "first_person_sentence": "“Equal volumes under equal conditions should contain equal crowds, even when the crowds are made of different molecules.”"
+    },
+    {
+      "id": 38,
+      "domain_a": "Carnot — steam engines",
+      "domain_b": "Heat theory",
+      "collision": "Engine efficiency × thermodynamic limits",
+      "insight": "Carnot cycle",
+      "first_person_sentence": "“A heat engine is really a machine for moving heat between temperatures, and that movement has a limit.”"
+    },
+    {
+      "id": 39,
+      "domain_a": "Darwin — artificial breeding",
+      "domain_b": "Natural environments",
+      "collision": "Selective breeding × natural selection",
+      "insight": "Natural selection",
+      "first_person_sentence": "“If breeders can accumulate traits by choosing parents, nature can accumulate traits by determining who reproduces.”"
+    },
+    {
+      "id": 40,
+      "domain_a": "Morse — telegraphy",
+      "domain_b": "Railroads",
+      "collision": "Electrical signals × transportation networks",
+      "insight": "Telegraph network",
+      "first_person_sentence": "“Railroads move bodies along tracks; wires can move messages along tracks at nearly instantaneous speed.”"
+    },
+    {
+      "id": 41,
+      "domain_a": "Bell — speech",
+      "domain_b": "Telegraphy",
+      "collision": "Voice × electrical signaling",
+      "insight": "Telephone",
+      "first_person_sentence": "“The telegraph carries coded symbols electrically; perhaps speech itself can become the electrical signal.”"
+    },
+    {
+      "id": 42,
+      "domain_a": "Edison — electric lighting",
+      "domain_b": "Manufacturing systems",
+      "collision": "Electrical technology × mass production",
+      "insight": "Commercial electrical infrastructure",
+      "first_person_sentence": "“A lightbulb becomes a technology only when I solve not just the bulb, but the factory and network that make millions of bulbs useful.”"
+    },
+    {
+      "id": 43,
+      "domain_a": "Tesla — rotating machinery",
+      "domain_b": "Polyphase electricity",
+      "collision": "Electrical phase × mechanical rotation",
+      "insight": "Induction motor",
+      "first_person_sentence": "“If alternating currents create a rotating field mathematically, perhaps that field can rotate a machine physically.”"
+    },
+    {
+      "id": 44,
+      "domain_a": "Marconi — radio",
+      "domain_b": "Telegraphy",
+      "collision": "Wireless waves × coded communication",
+      "insight": "Wireless telegraphy",
+      "first_person_sentence": "“If a signal can cross space as a wave, then the wire was never essential to the message.”"
+    },
+    {
+      "id": 45,
+      "domain_a": "Fleming — bacteriology",
+      "domain_b": "Contamination",
+      "collision": "Microbes × inhibition",
+      "insight": "Penicillin",
+      "first_person_sentence": "“The contaminant is not merely ruining my culture; it is killing bacteria, and that killing may itself be useful.”"
+    },
+    {
+      "id": 46,
+      "domain_a": "Wright brothers — bicycles",
+      "domain_b": "Aerodynamics",
+      "collision": "Balance/control × flight",
+      "insight": "Three-axis control",
+      "first_person_sentence": "“A bicycle stays upright by controlling its instability; a flying machine must solve the same problem in three dimensions.”"
+    },
+    {
+      "id": 47,
+      "domain_a": "Ford — slaughterhouse",
+      "domain_b": "Automobile manufacturing",
+      "collision": "Disassembly flow × assembly flow",
+      "insight": "Moving assembly line",
+      "first_person_sentence": "“The slaughterhouse moves the carcass past the worker to take it apart; I can move the automobile past the worker to put it together.”"
+    },
+    {
+      "id": 48,
+      "domain_a": "Taylor — engineering",
+      "domain_b": "Factory labor",
+      "collision": "Measurement × human work",
+      "insight": "Scientific management",
+      "first_person_sentence": "“A worker's motion can be measured like a machine's motion; therefore work itself can be engineered.”"
+    },
+    {
+      "id": 49,
+      "domain_a": "Toyota — supermarkets",
+      "domain_b": "Manufacturing",
+      "collision": "Replenishment × production",
+      "insight": "Just-in-time manufacturing",
+      "first_person_sentence": "“A supermarket replaces what customers have taken; the factory should replace what production has consumed.”"
+    },
+    {
+      "id": 50,
+      "domain_a": "McCulloch & Pitts — neurons",
+      "domain_b": "Formal logic",
+      "collision": "Neurons × Boolean operations",
+      "insight": "Neural computation",
+      "first_person_sentence": "“A neuron either fires or does not fire; that makes it look remarkably like a logical switch.”"
+    },
+    {
+      "id": 51,
+      "domain_a": "Hebb — neuroscience",
+      "domain_b": "Learning theory",
+      "collision": "Synaptic change × learning",
+      "insight": "Hebbian learning",
+      "first_person_sentence": "“When two neurons repeatedly act together, their connection should become the physical trace of that cooperation.”"
+    },
+    {
+      "id": 52,
+      "domain_a": "Rosenblatt — neuroscience",
+      "domain_b": "Statistics",
+      "collision": "Neurons × classification",
+      "insight": "Perceptron",
+      "first_person_sentence": "“If a neuron can add weighted inputs and decide whether to fire, it can classify patterns.”"
+    },
+    {
+      "id": 53,
+      "domain_a": "Hopfield — statistical physics",
+      "domain_b": "Neural networks",
+      "collision": "Energy landscapes × associative memory",
+      "insight": "Hopfield networks",
+      "first_person_sentence": "“A neural network can settle like a physical system into a low-energy state, and that state can be a memory.”"
+    },
+    {
+      "id": 54,
+      "domain_a": "Backpropagation",
+      "domain_b": "Calculus",
+      "collision": "Neural learning × chain rule",
+      "insight": "Gradient-based training",
+      "first_person_sentence": "“The error at the end can be traced backward through every dependency, so calculus can tell every connection how to change.”"
+    },
+    {
+      "id": 55,
+      "domain_a": "Sutton & Barto — psychology",
+      "domain_b": "Computer science",
+      "collision": "Reinforcement × algorithms",
+      "insight": "Reinforcement learning",
+      "first_person_sentence": "“Instead of programming the correct action, let the machine discover good actions from reward and punishment.”"
+    },
+    {
+      "id": 56,
+      "domain_a": "Kahneman & Tversky — psychology",
+      "domain_b": "Economics",
+      "collision": "Cognitive bias × rational-choice theory",
+      "insight": "Behavioral economics",
+      "first_person_sentence": "“If real people systematically violate the model of rational choice, psychology belongs inside economics.”"
+    },
+    {
+      "id": 57,
+      "domain_a": "Simon — psychology",
+      "domain_b": "Computer science",
+      "collision": "Bounded cognition × computation",
+      "insight": "Bounded rationality",
+      "first_person_sentence": "“People cannot calculate everything, so real decision-making must be understood as computation under limits.”"
+    },
+    {
+      "id": 58,
+      "domain_a": "Minsky — psychology",
+      "domain_b": "Artificial intelligence",
+      "collision": "Mental structures × computation",
+      "insight": "Frames",
+      "first_person_sentence": "“Understanding a situation may mean activating a structured mental frame, much as a program loads a data structure.”"
+    },
+    {
+      "id": 59,
+      "domain_a": "Holland — genetics",
+      "domain_b": "Optimization",
+      "collision": "Biological evolution × search",
+      "insight": "Genetic algorithms",
+      "first_person_sentence": "“Evolution does not know the answer; it searches a space by varying, recombining, and selecting candidate solutions.”"
+    },
+    {
+      "id": 60,
+      "domain_a": "Koza — genetics",
+      "domain_b": "Programming",
+      "collision": "Evolution × program generation",
+      "insight": "Genetic programming",
+      "first_person_sentence": "“If evolution can search for useful organisms, evolution can search for useful programs.”"
+    },
+    {
+      "id": 61,
+      "domain_a": "Metropolis — statistical mechanics",
+      "domain_b": "Optimization",
+      "collision": "Thermal motion × search",
+      "insight": "Simulated annealing",
+      "first_person_sentence": "“Let the optimizer behave like matter cooling: explore widely while hot, then settle into a good configuration.”"
+    },
+    {
+      "id": 62,
+      "domain_a": "Feynman — quantum mechanics",
+      "domain_b": "Computation",
+      "collision": "Quantum states × information processing",
+      "insight": "Quantum computing",
+      "first_person_sentence": "“If nature computes with quantum states, perhaps a computer should compute with quantum states too.”"
+    },
+    {
+      "id": 63,
+      "domain_a": "Bennett — thermodynamics",
+      "domain_b": "Information",
+      "collision": "Entropy × computation",
+      "insight": "Thermodynamic cost of information",
+      "first_person_sentence": "“Erasing a bit is a physical act, so deleting information must carry a thermodynamic cost.”"
+    },
+    {
+      "id": 64,
+      "domain_a": "Prigogine — thermodynamics",
+      "domain_b": "Complex systems",
+      "collision": "Dissipation × spontaneous order",
+      "insight": "Dissipative structures",
+      "first_person_sentence": "“Order need not fight entropy; energy flowing through a system can create structure.”"
+    },
+    {
+      "id": 65,
+      "domain_a": "Lorenz — meteorology",
+      "domain_b": "Dynamical systems",
+      "collision": "Weather × nonlinear equations",
+      "insight": "Chaos theory",
+      "first_person_sentence": "“A tiny difference in atmospheric conditions can become a huge difference later; predictability therefore has a mathematical limit.”"
+    },
+    {
+      "id": 66,
+      "domain_a": "Mandelbrot — finance",
+      "domain_b": "Fractal geometry",
+      "collision": "Price fluctuations × self-similarity",
+      "insight": "Fractal market models",
+      "first_person_sentence": "“The irregularity of markets resembles the irregularity of natural fractals; perhaps prices have structure across scales.”"
+    },
+    {
+      "id": 67,
+      "domain_a": "Per Bak — sandpiles",
+      "domain_b": "Complexity theory",
+      "collision": "Avalanches × criticality",
+      "insight": "Self-organized criticality",
+      "first_person_sentence": "“A pile can organize itself to the edge of collapse without anyone deliberately tuning it there.”"
+    },
+    {
+      "id": 68,
+      "domain_a": "Watson & Crick — DNA",
+      "domain_b": "Information theory",
+      "collision": "Molecules × information storage",
+      "insight": "Genetic information paradigm",
+      "first_person_sentence": "“A molecule that specifies how another molecule is built is behaving like an information-bearing code.”"
+    },
+    {
+      "id": 69,
+      "domain_a": "Jacob & Monod — genetics",
+      "domain_b": "Control engineering",
+      "collision": "Gene regulation × feedback control",
+      "insight": "Regulatory networks",
+      "first_person_sentence": "“Genes are not merely instructions; they can switch one another on and off like a control circuit.”"
+    },
+    {
+      "id": 70,
+      "domain_a": "Margulis — symbiosis",
+      "domain_b": "Cell biology",
+      "collision": "Ecological cooperation × cellular evolution",
+      "insight": "Endosymbiotic theory",
+      "first_person_sentence": "“What looks like one organism may actually be a coalition of organisms that became inseparable.”"
+    },
+    {
+      "id": 71,
+      "domain_a": "Hamilton — social behavior",
+      "domain_b": "Genetics",
+      "collision": "Kinship × reproductive fitness",
+      "insight": "Inclusive fitness",
+      "first_person_sentence": "“Helping a relative can still spread my genes; reproduction need not stop at my own body.”"
+    },
+    {
+      "id": 72,
+      "domain_a": "Trivers — cooperation",
+      "domain_b": "Game theory",
+      "collision": "Reciprocity × strategic exchange",
+      "insight": "Reciprocal altruism",
+      "first_person_sentence": "“Helping another can be adaptive when today's cost buys tomorrow's return.”"
+    },
+    {
+      "id": 73,
+      "domain_a": "Axelrod — computer tournaments",
+      "domain_b": "Evolution",
+      "collision": "Repeated games × selection",
+      "insight": "Evolution of cooperation",
+      "first_person_sentence": "“Let strategies compete over repeated games, and cooperation itself can evolve.”"
+    },
+    {
+      "id": 74,
+      "domain_a": "Bertalanffy — biology",
+      "domain_b": "Systems engineering",
+      "collision": "Organisms × interconnected systems",
+      "insight": "General systems theory",
+      "first_person_sentence": "“An organism cannot be understood by isolating its parts; the relations among the parts constitute the whole.”"
+    },
+    {
+      "id": 75,
+      "domain_a": "Geoffrey West — urban scaling",
+      "domain_b": "Biology",
+      "collision": "Cities × organismal scaling",
+      "insight": "Urban scaling laws",
+      "first_person_sentence": "“Cities scale like organisms: changing size changes the way infrastructure and social activity behave.”"
+    },
+    {
+      "id": 76,
+      "domain_a": "Zipf — linguistics",
+      "domain_b": "Statistics",
+      "collision": "Word frequency × distributions",
+      "insight": "Zipf's law",
+      "first_person_sentence": "“Millions of speakers generating language independently still produce a striking statistical order in word frequency.”"
+    },
+    {
+      "id": 77,
+      "domain_a": "Pareto — wealth distribution",
+      "domain_b": "Statistics",
+      "collision": "Social inequality × probability distribution",
+      "insight": "Pareto distribution",
+      "first_person_sentence": "“Wealth is not distributed like a bell curve; a small number possess a disproportionately large share.”"
+    },
+    {
+      "id": 78,
+      "domain_a": "Becker — economics",
+      "domain_b": "Household behavior",
+      "collision": "Economic optimization × family decisions",
+      "insight": "Economics of the household",
+      "first_person_sentence": "“The household is an economy too: time, labor, children, and consumption are resources to be allocated.”"
+    },
+    {
+      "id": 79,
+      "domain_a": "Ostrom — ecology",
+      "domain_b": "Institutional economics",
+      "collision": "Commons ecology × governance",
+      "insight": "Commons governance",
+      "first_person_sentence": "“A commons is not inevitably tragic; its users can create institutions that regulate the resource together.”"
+    },
+    {
+      "id": 80,
+      "domain_a": "Arthur — technology",
+      "domain_b": "Evolution",
+      "collision": "Increasing returns × selection",
+      "insight": "Path dependence / technological lock-in",
+      "first_person_sentence": "“Technologies do not compete on merit alone; an early advantage can compound until history itself selects the winner.”"
+    }
+  ]
+}

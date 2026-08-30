@@ -34,6 +34,7 @@ Run from site_build/ (matches build_landing.py's own convention):
 """
 import json
 import os
+import re
 import sys
 from collections import defaultdict
 from datetime import datetime, timezone
@@ -196,22 +197,50 @@ def compute_dashboard_data():
 
     latest_proposal = None
     audit_log_path = os.path.join(PIPELINE_DIR, "audit_log.jsonl")
+    proposals_dir = os.path.join(PIPELINE_DIR, "proposals")
     if os.path.exists(audit_log_path):
         with open(audit_log_path, "r", encoding="utf-8") as f:
             audits = [json.loads(l) for l in f if l.strip()]
         if audits:
             a = audits[-1]
-            proposal_file = os.path.join(PIPELINE_DIR, "proposals", a.get("proposal_file", ""))
+            proposal_name = a.get("proposal_file") or ""
+            proposal_file = os.path.join(proposals_dir, proposal_name)
             rationale = ""
-            if a.get("proposal_file") and os.path.exists(proposal_file):
+            status = "unreviewed"
+            if proposal_name and os.path.exists(proposal_file):
                 text = open(proposal_file, encoding="utf-8").read()
+                # Status line lives in the header block (before first ##)
+                header = text.split("##", 1)[0]
+                m_status = re.search(r"\*\*Status\*\*:\s*(.+)", header)
+                if m_status:
+                    status = m_status.group(1).strip()
                 m = text.split("## Rationale", 1)
                 if len(m) > 1:
                     rationale = m[1].split("##", 1)[0].strip()
+                # If rejected/superseded, prefer the correction write-up as the
+                # spotlight so the dashboard doesn't pitch a dead filter as live advice.
+                status_l = status.lower()
+                if "rejected" in status_l or "superseded" in status_l:
+                    stem = proposal_name.replace(".md", "")
+                    # e.g. 2026-08-29-proposal-003 → 2026-08-29-correction-to-proposal-003.md
+                    parts = stem.split("-proposal-")
+                    if len(parts) == 2:
+                        corr_name = f"{parts[0]}-correction-to-proposal-{parts[1]}.md"
+                        corr_path = os.path.join(proposals_dir, corr_name)
+                        if os.path.exists(corr_path):
+                            corr = open(corr_path, encoding="utf-8").read()
+                            proposal_name = corr_name
+                            # First prose block after the title/status header
+                            body = corr.split("\n\n", 2)
+                            rationale = (body[2] if len(body) > 2 else corr)[:600].strip()
+                            # Keep rejected marker visible in the title line
+                            a = dict(a)
+                            a["title"] = f"[REJECTED] {a.get('title', 'Untitled')} — see correction"
             latest_proposal = {
                 "title": a.get("title", "Untitled"),
-                "proposal_file": a.get("proposal_file"),
+                "proposal_file": proposal_name,
                 "code_file": a.get("code_file"),
+                "status": status,
                 "rationale": rationale[:600],
             }
 

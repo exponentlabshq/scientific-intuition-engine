@@ -14,6 +14,10 @@
 # GitHub repo on its own, unattended, on a timer, is a standing/persistent
 # configuration change -- deliberately left as a manual step for a human to
 # take deliberately, not something a script silently sets up for itself.
+#
+# COA 5 (2026-08-29 research 10X): do NOT install until a frozen 20-slug
+# verdict-stability A/B shows ≥95% agreement between serial and
+# parallel+cache verify. See umpf_pipeline/stability_ab_protocol.md.
 # See the crontab/launchd snippets at the bottom of this file to actually
 # install it.
 #

@@ -276,7 +276,10 @@
     "Swarm robotics — ant colony optimization",
     "Healthcare (Human & Social Systems) — Atomic: Test results missing, Diagnosis succeeds/fails, Multiple allergies; Domain: Patient health evolves, Clinical guidelines, Log interventions; Control: Lab results from external systems, Concurrent monitoring, Atomic record updates; Orchestration: Compliance coordination, Training vs live simulation",
     "Physical Telescope Telemetry",
-    "Human Individual Indecision"
+    "Human Individual Indecision",
+    "Human Financial Trading Algorithms",
+    "Physical Ecosystem Succession",
+    "Legal Systems (Human & Social Systems) — Atomic: Case outcome win/lose, Evidence admissible/inadmissible, Multiple precedents; Domain: Legal system evolves, Laws & constitution, Log case decisions; Control: Court systems & databases, Concurrent case processing, Atomic precedent updates; Orchestration: Justice coordination, Theoretical vs practical environments"
   ],
   "already_homospatial": [
     [
@@ -470,6 +473,18 @@
     [
       "Sports — baseball pitch sequencing",
       "Finance (Human & Social Systems) — Atomic: Transaction succeeds/fails, Account lookup missing, Multiple positions; Domain: Portfolio evolves, Market context, Audit logging; Control: External trades & APIs, Streaming market data, Atomic account updates; Orchestration: Regulatory coordination, Simulation vs live trading"
+    ],
+    [
+      "Human Role Ambiguity",
+      "Informational Hash Collisions"
+    ],
+    [
+      "Education (Information & Intelligence Systems) — Atomic: Assignment grade uncertain, Learning succeeds/fails, Multiple styles; Domain: Student knowledge evolves, Educational standards, Log progress; Control: External assessment systems, Concurrent learning paths, Atomic grade updates; Orchestration: Curriculum coordination, Practice vs real-world environments",
+      "Human Facilitator Cueing"
+    ],
+    [
+      "Agriculture (Physical & Natural Systems) — Atomic: Crop yield uncertain, Weather unknown, Multiple strategies; Domain: Farm ecosystem evolves, Agricultural knowledge, Log activities; Control: Weather data, Concurrent management, Atomic resource allocation; Orchestration: Policy coordination, Laboratory vs field environments",
+      "Creative Improvisation Adjustment"
     ]
   ],
   "domain_pool": [

@@ -1,43 +1,57 @@
 # Homospatial Hypothesis: Behavioral Psychology Operant Conditioning ⊕ Physical Magnetic Field Control
 
-**Generated**: 2026-08-29
-**Framework**: UMPF Homospatial Hypothesis Engine (Exponent Labs LLC)
+**Generated**: 2026-08-29  
+**Framework**: UMPF Homospatial Hypothesis Engine (Exponent Labs LLC)  
+**Revision**: 2026-08-29 — human-sharpened closed-loop formulation (second “lightning” pass after Resonant Swarm). Soft “magnets influence behavior” framing retired; bidirectional behavior↔field-schedule claim is load-bearing.
 
 ---
 
 ## 1. The Two Source Entities
 
-**Entity A — Behavioral Psychology Operant Conditioning**: Operant conditioning is a learning process through which behaviors are modified based on the consequences that follow them, such as rewards or punishments, thereby reinforcing or diminishing the likelihood of those behaviors being repeated.
+**Entity A — Operant Conditioning**: Behavior is selected by its consequences. Schedules of reinforcement (continuous, fixed/variable ratio/interval) shape rate and pattern of responding; the contingency — not the stimulus alone — is the mechanism.
 
-**Entity B — Physical Magnetic Field Control**: Physical magnetic field control involves the manipulation of magnetic fields to influence the movement and behavior of charged particles or ferromagnetic materials, enabling precise control over physical systems and interactions.
+**Entity B — Controllable Magnetic Fields**: Programmable magnets / gradient coils / Helmholtz or Maxwell configurations that set local field intensity, direction, and time course over a physical arena — a continuous physical field an organism can move through.
 
 ## 2. The Superimposition
 
-In this conceptual overlay, the mechanisms of operant conditioning and physical magnetic field control converge into a single system where behavioral responses are influenced by dynamically changing magnetic fields. The reinforcement of behavior is not merely a function of rewards or punishments but is instead governed by the presence and intensity of magnetic fields that modulate the decision-making processes of organisms. The magnetic fields act as a feedback mechanism, providing real-time adjustments that either enhance or inhibit specific behaviors based on the organism's interactions with its environment. This creates a system where the magnetic field itself becomes a form of reinforcement or deterrent, shaping behavior in a manner that is both immediate and quantifiable.
+Force the *reinforcement schedule* and the *magnetic field manifold* into the same slot — not “magnets affect animals” (magnetoreception / TMS adjacency), but one closed loop:
+
+**behavior → field exposure (as contingency) → consequence → subsequent behavior**
+
+The organism’s locomotion through a programmable magnetic landscape is both the operant response and contact with the reinforcer. The field is not a cue for food or shock; **the field pattern *is* the schedule**. Behavior reshapes which field regimes are sampled; field regimes reshape behavior.
 
 ## 3. The Emergent Third Thing
 
-The emergent entity is termed **Magneto-Behavioral Conditioning**. It is a system where behavioral responses are directly influenced by the modulation of magnetic fields, allowing for real-time adjustments to behavior based on the magnetic environment. In this system, organisms learn to associate specific magnetic field patterns with positive or negative outcomes, leading to the reinforcement or suppression of behaviors in a way that is responsive to the physical manipulation of their surroundings.
+**Magneto-Operant Schedule (field-as-contingency).**  
+One chimera: an operant chamber whose reinforcement schedule is implemented as a controllable magnetic-field manifold — a stigmergic conditioning medium where environment-as-schedule replaces discrete pellet/shock delivery.
+
+Not: magnetoreception, magnetic place preference as cue, or TMS as neuromodulation adjunct.  
+Is: schedules of reinforcement realized as spatiotemporal field programs, with both directions nonzero.
 
 ## 4. The Hypothesis
 
-If Magneto-Behavioral Conditioning is real, then organisms subjected to varying magnetic field patterns will demonstrate measurable changes in behavior that align with the reinforcement schedules dictated by those patterns.
+1. **Fusion sentence:** I force operant contingencies and programmable magnetic field manifolds into the same arena until a Magneto-Operant Schedule emerges — behavior writes which field regimes are sampled; those regimes write subsequent response rates.
+2. **Falsifiable prediction:** If Magneto-Operant Schedules are real, then:
+   - \(\partial B_{\mathrm{experienced}} / \partial \mathrm{behavior} \neq 0\) (responding changes field exposure under a programmed manifold)
+   - \(\partial \mathrm{behavior}_{t+1} / \partial B_{\mathrm{experienced},t} \neq 0\) (field exposure changes subsequent responding)  
+   And classic schedule signatures (e.g. fixed-interval scallop; ratio strain) appear when the *only* programmed contingency is the magnetic manifold — outperforming controls: (A) same arena, field off; (B) field present but yoked/non-contingent (not response-dependent); (C) conventional food/shock contingency without field. Under a sudden remapping of the field program (geometry/schedule change), response patterns reorganize toward the new contingency without a separate symbolic cue.
 
 ## 5. Novelty & Testability Self-Critique
 
-- **Fusion distance (1-5)**: 5 — The two source entities operate in fundamentally different domains, with one focused on psychological behavior and the other on physical manipulation, making the fusion a significant conceptual leap.
-- **Testability**: Experiments could be designed to measure behavioral changes in organisms exposed to controlled magnetic fields paired with reinforcement stimuli, assessing whether the magnetic fields serve as effective reinforcers or punishers.
-- **Known prior art**: Not verified.
-- **Confidence this is worth a researcher's time**: High, as it presents a novel intersection of psychology and physics that could lead to groundbreaking insights in both fields.
+- **Fusion distance (1-5)**: 4 — operant labs and magnetic-control labs rarely share apparatus; the fusion is field-as-schedule, not either literature alone.
+- **Testability**: Rodent or insect arena with programmable gradient coils; response = locomotion / nose-poke into field zones; measure response rate, schedule signatures, yoked controls, remapping transfer.
+- **Known prior art risk**: Magnetoreception; magnetic conditioned place preference; electromagnetic hypersensitivity claims; TMS/tDCS as “reinforcement”; magnetic levitation toys; optogenetic “virtual” reinforcers. Soft claim “fields affect behavior” is likely near-COLLISION. Hard claim is response-contingent field schedules with classic operant signatures under yoked controls.
+- **Confidence**: Medium — high if yoked controls clear; collapses to metaphor if field only acts as weak cue for something else.
 
 ## 6. If This Doesn't Hold
 
-The most likely reason Magneto-Behavioral Conditioning turns out to just be domain A and domain B described side by side is that the magnetic fields do not effectively influence behavior in a meaningful or measurable way, thus failing to create a genuine fusion of the two concepts.
+Most likely failure: field exposure does not function as a consequence (only as a discriminative stimulus or aversive confound), or effects vanish under yoked/non-contingent controls — chimera collapses to magnetoreception / place preference (domain B affecting domain A without schedule fusion).
 
 ## Search Queries
 
-1. "Magnetic fields influence on animal behavior"
-2. "Operant conditioning and environmental factors"
-3. "Magnetic field control in behavioral psychology"
-4. "Real-time behavior modification using magnetic fields"
-5. "Behavioral responses to electromagnetic stimuli"
+1. "operant conditioning magnetic field reinforcement schedule"
+2. "response-contingent magnetic field animal behavior yoked control"
+3. "magnetic conditioned place preference vs operant contingency"
+4. "magnetoreception operant chamber programmable gradient"
+5. "TMS OR tDCS as reinforcer operant conditioning"
+6. "electromagnetic field contingency reinforcement learning animals"

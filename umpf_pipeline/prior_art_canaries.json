@@ -1,0 +1,229 @@
+{
+  "_comment": "COA 4 / 4b / 4c — Frozen prior-art canaries. Bisociation from bisociation-domain-pairs.md; Janusian from janusian-thinking.md; Homospatial from homospatial-thinking.md. All expect COLLISION. Target recall ≥80%. Do not silently edit expected_verdict.",
+  "target_collision_rate": 0.8,
+  "sources": ["../bisociation-domain-pairs.md", "../janusian-thinking.md", "../homospatial-thinking.md"],
+  "canaries": [
+    {
+      "id": "darwin-malthus",
+      "gold_id": 1,
+      "domain_a": "Malthus — population pressure and resource scarcity",
+      "domain_b": "Darwin — variation and inheritance in natural populations",
+      "expected_verdict": "COLLISION",
+      "named_prior_art": ["natural selection", "On the Origin of Species", "Malthus Essay on Population"],
+      "search_hints": ["Darwin Malthus natural selection", "population pressure variation selection"]
+    },
+    {
+      "id": "black-scholes-diffusion",
+      "gold_id": 8,
+      "domain_a": "Black–Scholes — financial option pricing",
+      "domain_b": "Physics — heat / diffusion equations and Brownian motion",
+      "expected_verdict": "COLLISION",
+      "named_prior_art": ["Black-Scholes equation", "heat equation", "Wiener process"],
+      "search_hints": ["Black Scholes heat equation", "option pricing diffusion PDE"]
+    },
+    {
+      "id": "shannon-boolean",
+      "gold_id": 6,
+      "domain_a": "Shannon — information theory and communication",
+      "domain_b": "Boolean algebra — logical switching",
+      "expected_verdict": "COLLISION",
+      "named_prior_art": ["A Mathematical Theory of Communication", "digital switching", "Claude Shannon"],
+      "search_hints": ["Shannon Boolean switching", "information theory digital computing"]
+    },
+    {
+      "id": "ford-slaughterhouse",
+      "gold_id": 47,
+      "domain_a": "Ford — automobile manufacturing",
+      "domain_b": "Slaughterhouse — disassembly line flow",
+      "expected_verdict": "COLLISION",
+      "named_prior_art": ["moving assembly line", "Highland Park", "disassembly line"],
+      "search_hints": ["Ford assembly line slaughterhouse", "moving assembly line history"]
+    },
+    {
+      "id": "gutenberg-wine-press",
+      "gold_id": 32,
+      "domain_a": "Gutenberg — printing and movable type",
+      "domain_b": "Wine press — mechanical pressing",
+      "expected_verdict": "COLLISION",
+      "named_prior_art": ["printing press", "Gutenberg press", "wine press"],
+      "search_hints": ["Gutenberg wine press printing", "printing press derived from wine press"]
+    },
+    {
+      "id": "harvey-hydraulics",
+      "gold_id": 34,
+      "domain_a": "Harvey — blood circulation",
+      "domain_b": "Hydraulics — pumps and plumbing circuits",
+      "expected_verdict": "COLLISION",
+      "named_prior_art": ["De Motu Cordis", "circulatory system", "heart as pump"],
+      "search_hints": ["Harvey heart pump hydraulics", "circulation pump analogy history"]
+    },
+    {
+      "id": "lavoisier-accounting",
+      "gold_id": 35,
+      "domain_a": "Lavoisier — chemical quantities",
+      "domain_b": "Accounting — bookkeeping ledgers",
+      "expected_verdict": "COLLISION",
+      "named_prior_art": ["conservation of mass", "chemical balance sheet"],
+      "search_hints": ["Lavoisier conservation mass accounting", "chemical ledger conservation"]
+    },
+    {
+      "id": "genetic-algorithms",
+      "gold_id": 9,
+      "domain_a": "Darwinian evolution — variation and selection",
+      "domain_b": "Algorithms — search and optimization",
+      "expected_verdict": "COLLISION",
+      "named_prior_art": ["genetic algorithms", "Holland", "evolutionary computation"],
+      "search_hints": ["Holland genetic algorithms", "evolutionary computation Darwin"]
+    },
+    {
+      "id": "hebb-learning",
+      "gold_id": 51,
+      "domain_a": "Hebb — synaptic change in neuroscience",
+      "domain_b": "Learning theory — association and reinforcement of connections",
+      "expected_verdict": "COLLISION",
+      "named_prior_art": ["Hebbian learning", "cells that fire together wire together"],
+      "search_hints": ["Hebbian learning synapse", "fire together wire together"]
+    },
+    {
+      "id": "toyoda-supermarket",
+      "gold_id": 49,
+      "domain_a": "Toyota Production System — manufacturing replenishment",
+      "domain_b": "Supermarkets — shelf replenishment by withdrawal",
+      "expected_verdict": "COLLISION",
+      "named_prior_art": ["just-in-time", "kanban", "supermarket method"],
+      "search_hints": ["Toyota supermarket kanban", "just in time supermarket replenishment"]
+    },
+    {
+      "id": "janusian-einstein-equivalence",
+      "mode": "janusian",
+      "gold_id": 2,
+      "domain": "Gravitation — free fall and inertial frames",
+      "pole_a": "Motion",
+      "pole_b": "Rest",
+      "expected_verdict": "COLLISION",
+      "named_prior_art": ["equivalence principle", "general relativity", "Einstein falling elevator"],
+      "search_hints": ["Einstein equivalence principle falling elevator", "motion and rest simultaneously general relativity"]
+    },
+    {
+      "id": "janusian-bohr-complementarity",
+      "mode": "janusian",
+      "gold_id": 3,
+      "domain": "Quantum mechanics — light and matter",
+      "pole_a": "Wave",
+      "pole_b": "Particle",
+      "expected_verdict": "COLLISION",
+      "named_prior_art": ["complementarity principle", "Bohr", "wave-particle duality"],
+      "search_hints": ["Bohr complementarity wave particle", "wave particle duality same instance"]
+    },
+    {
+      "id": "janusian-planck-quanta",
+      "mode": "janusian",
+      "gold_id": 5,
+      "domain": "Thermal radiation — blackbody spectrum",
+      "pole_a": "Continuity",
+      "pole_b": "Discreteness",
+      "expected_verdict": "COLLISION",
+      "named_prior_art": ["Planck quantum hypothesis", "energy quanta", "blackbody radiation"],
+      "search_hints": ["Planck quantum hypothesis continuity discreteness", "energy quanta blackbody"]
+    },
+    {
+      "id": "janusian-dirac-antimatter",
+      "mode": "janusian",
+      "gold_id": 6,
+      "domain": "Relativistic quantum mechanics — electron equation",
+      "pole_a": "Positive energy",
+      "pole_b": "Negative energy",
+      "expected_verdict": "COLLISION",
+      "named_prior_art": ["Dirac equation", "antimatter", "positron"],
+      "search_hints": ["Dirac negative energy solutions positron", "Dirac antimatter"]
+    },
+    {
+      "id": "janusian-heisenberg-uncertainty",
+      "mode": "janusian",
+      "gold_id": 19,
+      "domain": "Quantum measurement — conjugate observables",
+      "pole_a": "Precise position",
+      "pole_b": "Precise momentum",
+      "expected_verdict": "COLLISION",
+      "named_prior_art": ["Heisenberg uncertainty principle", "conjugate variables"],
+      "search_hints": ["Heisenberg uncertainty principle position momentum", "conjugate observables"]
+    },
+    {
+      "id": "janusian-godel-incompleteness",
+      "mode": "janusian",
+      "gold_id": 25,
+      "domain": "Formal mathematical systems — consistency and completeness",
+      "pole_a": "Formal completeness",
+      "pole_b": "Formal proof",
+      "expected_verdict": "COLLISION",
+      "named_prior_art": ["Gödel incompleteness theorems", "undecidable propositions"],
+      "search_hints": ["Gödel incompleteness theorems", "true but unprovable formal system"]
+    },
+    {
+      "id": "homospatial-desktop-gui",
+      "mode": "homospatial",
+      "gold_id": 12,
+      "entity_a": "Office desk objects — folders, trash, documents",
+      "entity_b": "Computer files and screen plane",
+      "emergent_identity": "Desktop GUI",
+      "expected_verdict": "COLLISION",
+      "named_prior_art": ["desktop metaphor", "Xerox PARC Alto", "Apple Macintosh Finder"],
+      "search_hints": ["desktop metaphor Xerox PARC", "graphical user interface folders trash"]
+    },
+    {
+      "id": "homospatial-dna-double-helix",
+      "mode": "homospatial",
+      "gold_id": 6,
+      "entity_a": "Helical geometry (Franklin)",
+      "entity_b": "Base-pairing chemistry (Chargaff)",
+      "emergent_identity": "Double helix as information-bearing molecule",
+      "expected_verdict": "COLLISION",
+      "named_prior_art": ["DNA double helix", "Watson Crick", "base pairing"],
+      "search_hints": ["Watson Crick DNA double helix", "Franklin geometry Chargaff pairing"]
+    },
+    {
+      "id": "homospatial-mcculloch-pitts",
+      "mode": "homospatial",
+      "gold_id": 9,
+      "entity_a": "Living neuron",
+      "entity_b": "Boolean logic gate",
+      "emergent_identity": "Neuron-as-logical-switch",
+      "expected_verdict": "COLLISION",
+      "named_prior_art": ["McCulloch Pitts neuron", "logical calculus of ideas immanent in nervous activity"],
+      "search_hints": ["McCulloch Pitts neural logic", "neuron Boolean gate model"]
+    },
+    {
+      "id": "homospatial-hopfield",
+      "mode": "homospatial",
+      "gold_id": 11,
+      "entity_a": "Energy landscape / physical minima",
+      "entity_b": "Recalled pattern / memory state",
+      "emergent_identity": "Attractor memory network",
+      "expected_verdict": "COLLISION",
+      "named_prior_art": ["Hopfield network", "associative memory", "attractors"],
+      "search_hints": ["Hopfield associative memory energy", "attractor neural network"]
+    },
+    {
+      "id": "homospatial-toyota-kanban",
+      "mode": "homospatial",
+      "gold_id": 29,
+      "entity_a": "Supermarket shelf replenishment",
+      "entity_b": "Factory production line",
+      "emergent_identity": "Just-in-time / kanban system",
+      "expected_verdict": "COLLISION",
+      "named_prior_art": ["kanban", "just-in-time", "Toyota Production System supermarket"],
+      "search_hints": ["Toyota supermarket kanban", "just in time shelf replenishment manufacturing"]
+    },
+    {
+      "id": "homospatial-gutenberg-press",
+      "mode": "homospatial",
+      "gold_id": 4,
+      "entity_a": "Wine / coin press",
+      "entity_b": "Movable type",
+      "emergent_identity": "Printing press as one machine",
+      "expected_verdict": "COLLISION",
+      "named_prior_art": ["Gutenberg printing press", "movable type", "wine press"],
+      "search_hints": ["Gutenberg wine press printing", "printing press movable type press"]
+    }
+  ]
+}

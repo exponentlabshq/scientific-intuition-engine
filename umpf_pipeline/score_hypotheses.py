@@ -78,17 +78,38 @@ MODE_BADGE = {
 REFUTATION_SURVIVAL_POINTS = {3: 20, 2: 12}  # of-3 survive -> points; 0/1 handled as REFUTED
 
 
+def is_calibration_canary(rec_or_key) -> bool:
+    """Prior-art canaries are calibration plants (COA 4/4b/4c), not public
+    leaderboard hypotheses. They live under hypotheses/canaries/ and use
+    canary-* slugs — exclude from scoring + experience assembly."""
+    if isinstance(rec_or_key, dict):
+        key = key_for(rec_or_key)
+    else:
+        key = rec_or_key or ""
+    return str(key).startswith("canary-")
+
+
 def load_entries():
     """2026-08-29: now the "latest entry per slug wins" read from ledger.py,
     not a raw line-by-line load. A slug re-verified after a bug fix (e.g.
     the Tavily rate-limit incident) gets exactly one row here -- its most
     recent, correct one -- instead of scoring both the old, wrong entry and
-    the new, corrected one as if they were two different hypotheses."""
-    return load_latest_entries(LOG_PATH)
+    the new, corrected one as if they were two different hypotheses.
+
+    Canary calibration plants (canary-*) are excluded from the public
+    leaderboard / experience surface — they remain on the raw ledger for
+    canary_results_*.json."""
+    return [e for e in load_latest_entries(LOG_PATH) if not is_calibration_canary(e)]
 
 
-def score_entry(rec):
-    """Returns (points, badges, breakdown_lines, held_out_reason_or_None)."""
+def score_entry(rec, *, include_self_report: bool = True):
+    """Returns (points, badges, breakdown_lines, held_out_reason_or_None).
+
+    include_self_report=False is the COA 5 outreach-rank path: Phase 2 +
+    actively-researched + refute + Phase 3 only. Self-report Distance/Tension/
+    Fusion is near-zero predictive signal (Failure 5 aftermath) and must not
+    decide which thesis leads get shown to researchers.
+    """
     points = 0
     badges = []
     breakdown = []
@@ -106,12 +127,13 @@ def score_entry(rec):
     if verdict not in CANONICAL_VERDICTS:
         return 0, badges, [f"Non-standard verdict '{verdict}' — held out of scoring, see report below"], verdict
 
-    # Phase 1 — self-reported novelty score (only present for hypothesis_engine.py-generated entries)
-    self_report = rec.get("self_reported_distance", rec.get("self_reported_tension"))
-    if self_report is not None:
-        p = self_report * 2
-        points += p
-        breakdown.append(f"Phase 1 self-report ({self_report}/5): {p:+d}")
+    # Phase 1 — self-reported novelty score (excluded from outreach-rank)
+    if include_self_report:
+        self_report = rec.get("self_reported_distance", rec.get("self_reported_tension"))
+        if self_report is not None:
+            p = self_report * 2
+            points += p
+            breakdown.append(f"Phase 1 self-report ({self_report}/5): {p:+d}")
 
     # Phase 2 — the four-way verdict
     not_valid = rec.get("not_valid_bisociation", False)
@@ -172,14 +194,84 @@ def score_entry(rec):
         breakdown.append("Phase 4 data reconciled: +5")
 
     # Actively researched — orthogonal to the novelty axis on purpose.
-    # Evidence-based only (a dated recent citation or a named currently-active
-    # researcher) — never inferred from the verdict alone.
     if rec.get("actively_researched"):
         points += 20
         badges.append("🔬 Actively Researched")
         breakdown.append("Actively researched (real, current evidence): +20")
 
     return points, badges, breakdown, None
+
+
+def hypothesis_flagged(slug: str) -> bool:
+    """Twice-failed mechanical honesty check → deprioritize for outreach."""
+    if not slug:
+        return False
+    path = os.path.join(PIPELINE_DIR, "hypotheses", f"{slug}.md")
+    if not os.path.exists(path):
+        return False
+    with open(path, "r", encoding="utf-8") as f:
+        return "Automated check failed twice" in f.read()
+
+
+def hypothesis_sharpened(slug: str) -> bool:
+    """COA 2d: hyp file carries a closed-loop revision banner."""
+    if not slug:
+        return False
+    path = os.path.join(PIPELINE_DIR, "hypotheses", f"{slug}.md")
+    if not os.path.exists(path):
+        return False
+    with open(path, "r", encoding="utf-8") as f:
+        head = f.read(2500)
+    return (
+        "**Revision**:" in head
+        or "human-sharpened" in head.lower()
+        or "closed-loop" in head.lower()
+        or "COA 2d" in head
+    )
+
+
+def outreach_shortlist(entries, limit: int = 10):
+    """COA 5 + COA 1 + COA 2d: ADJACENT_ACTIVE preferred, no self-report,
+    deprioritize flagged janusian / twice-failed honesty checks, and soft-demote
+    leads that have not passed sharpen → re-verify (do not hard-drop)."""
+    rows = []
+    for rec in entries:
+        points, badges, breakdown, held = score_entry(rec, include_self_report=False)
+        if held:
+            continue
+        if rec.get("verdict") != "ADJACENT_ACTIVE":
+            continue
+        slug = rec.get("hypothesis_slug") or rec.get("slug") or key_for(rec)
+        flagged = hypothesis_flagged(slug)
+        janusian_flagged = rec.get("mode") == "janusian" and flagged
+        sharpened = hypothesis_sharpened(slug) or bool(rec.get("hypothesis_revision"))
+        # Soft demote: subtract so they sort below clean peers, not hard-drop
+        # (a clean ADJACENT_ACTIVE janusian can still be worth a packet).
+        adj = points
+        if flagged:
+            adj -= 25
+        if janusian_flagged:
+            adj -= 15
+        if not sharpened:
+            adj -= 20  # COA 2d: prefer send-ready sharpened leads
+        rows.append({
+            "slug": slug,
+            "domains": rec.get("domains", []),
+            "mode": rec.get("mode"),
+            "outreach_points": adj,
+            "raw_outreach_points": points,
+            "actively_researched": bool(rec.get("actively_researched")),
+            "active_research_note": rec.get("active_research_note"),
+            "flagged": flagged,
+            "sharpened": sharpened,
+            "badges": badges,
+            "breakdown": breakdown,
+        })
+    rows.sort(
+        key=lambda r: (r["sharpened"], r["actively_researched"], r["outreach_points"]),
+        reverse=True,
+    )
+    return rows[:limit]
 
 
 def render_leaderboard(entries):
@@ -263,9 +355,29 @@ def render_leaderboard(entries):
 def main():
     parser = argparse.ArgumentParser(description="Score every hypothesis in verification-log.jsonl and write leaderboard.md")
     parser.add_argument("--print", action="store_true", dest="do_print", help="Also print the leaderboard to stdout")
+    parser.add_argument("--outreach", action="store_true", help="COA 5: write outreach shortlist (no self-report) to outreach/shortlist.json")
+    parser.add_argument("--outreach-limit", type=int, default=10, help="Max rows in outreach shortlist")
     args = parser.parse_args()
 
     entries = load_entries()
+
+    if args.outreach:
+        rows = outreach_shortlist(entries, limit=args.outreach_limit)
+        out_dir = os.path.join(PIPELINE_DIR, "outreach")
+        os.makedirs(out_dir, exist_ok=True)
+        out_path = os.path.join(out_dir, "shortlist.json")
+        with open(out_path, "w", encoding="utf-8") as f:
+            json.dump({"generated": datetime_now_iso(), "count": len(rows), "rows": rows}, f, indent=2, ensure_ascii=False)
+            f.write("\n")
+        print(f"✅ Outreach shortlist ({len(rows)}) -> {out_path}")
+        for i, r in enumerate(rows, 1):
+            domains = " × ".join(r["domains"]) if r["domains"] else r["slug"]
+            flag = " [FLAGGED]" if r["flagged"] else ""
+            active = " 🔬" if r["actively_researched"] else ""
+            sharp = " ✂" if r.get("sharpened") else " [NEEDS_SHARPEN]"
+            print(f"  {i}. {domains}  outreach={r['outreach_points']:+d}{active}{flag}{sharp}")
+        return
+
     output = render_leaderboard(entries)
 
     with open(LEADERBOARD_PATH, "w", encoding="utf-8") as f:
@@ -275,6 +387,11 @@ def main():
     if args.do_print:
         print()
         print(output)
+
+
+def datetime_now_iso():
+    from datetime import datetime, timezone
+    return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
 if __name__ == "__main__":
