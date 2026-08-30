@@ -701,14 +701,16 @@
       "Sports — basketball pick-and-roll offense"
     ],
     "verdict": "NO_SIGNAL",
-    "points": -7,
+    "points": -17,
     "badges": [
       "🪞 Homospatial",
+      "⚠️ Failed Honesty Check",
       "💀 Refuted"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): +8",
       "Phase 2 NO_SIGNAL: +0 (pending)",
+      "Mechanical honesty check failed twice (disguised compromise, uncorrected): -10",
       "Adversarial refutation REFUTED: -15",
       "  independently confirmed (3 separate agents, full agreement)"
     ],
@@ -2828,14 +2830,16 @@
       "Climatology — feedback loops in ice-albedo effect"
     ],
     "verdict": "COLLISION",
-    "points": 13,
+    "points": 3,
     "badges": [
       "🎭 Janusian",
-      "🏛️ Established Department"
+      "🏛️ Established Department",
+      "⚠️ Failed Honesty Check"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): +8",
-      "Phase 2 COLLISION (genuine): +5"
+      "Phase 2 COLLISION (genuine): +5",
+      "Mechanical honesty check failed twice (disguised compromise, uncorrected): -10"
     ],
     "held_out_reason": null,
     "notes": "The hypothesis suggests that the ice-albedo feedback loop could lead to simultaneous warming and localized cooling effects, which are not predicted by either the presence or absence of the feedback loop alone. However, the search results show that the regional effects of the ice-albedo feedback loop are already accounted for in climate models, such as CMIP5 and CMIP6, which include these effects in their projections. This indicates that the hypothesis is not novel, as the connection between ice-albedo feedback and regional climate effects is already established in existing research and models.",
@@ -2857,15 +2861,17 @@
       "Human Learning Uncertainty"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 23,
+    "points": 13,
     "badges": [
       "🎭 Janusian",
       "🗺️ Frontier Research Group",
+      "⚠️ Failed Honesty Check",
       "💀 Refuted"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): +8",
       "Phase 2 ADJACENT_ACTIVE: +30",
+      "Mechanical honesty check failed twice (disguised compromise, uncorrected): -10",
       "Adversarial refutation REFUTED: -15",
       "  independently confirmed (3 separate agents, full agreement)"
     ],
@@ -3748,15 +3754,17 @@
       "Artificial Intelligence (Information & Intelligence Systems)"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 23,
+    "points": 13,
     "badges": [
       "🎭 Janusian",
       "🗺️ Frontier Research Group",
+      "⚠️ Failed Honesty Check",
       "💀 Refuted"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): +8",
       "Phase 2 ADJACENT_ACTIVE: +30",
+      "Mechanical honesty check failed twice (disguised compromise, uncorrected): -10",
       "Adversarial refutation REFUTED: -15",
       "  independently confirmed (3 separate agents, full agreement)"
     ],
@@ -3780,15 +3788,17 @@
       "Behavioral psychology — habit formation loops"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 23,
+    "points": 13,
     "badges": [
       "🎭 Janusian",
       "🗺️ Frontier Research Group",
+      "⚠️ Failed Honesty Check",
       "💀 Refuted"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): +8",
       "Phase 2 ADJACENT_ACTIVE: +30",
+      "Mechanical honesty check failed twice (disguised compromise, uncorrected): -10",
       "Adversarial refutation REFUTED: -15",
       "  independently confirmed (3 separate agents, full agreement)"
     ],
@@ -3812,15 +3822,17 @@
       "Cognitive Neuron Activation"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 23,
+    "points": 13,
     "badges": [
       "🎭 Janusian",
       "🗺️ Frontier Research Group",
+      "⚠️ Failed Honesty Check",
       "💀 Refuted"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): +8",
       "Phase 2 ADJACENT_ACTIVE: +30",
+      "Mechanical honesty check failed twice (disguised compromise, uncorrected): -10",
       "Adversarial refutation REFUTED: -15",
       "  independently confirmed (3 separate agents, full agreement)"
     ],
@@ -3844,15 +3856,17 @@
       "Creative Improvisation Adjustment"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 23,
+    "points": 13,
     "badges": [
       "🎭 Janusian",
       "🗺️ Frontier Research Group",
+      "⚠️ Failed Honesty Check",
       "💀 Refuted"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): +8",
       "Phase 2 ADJACENT_ACTIVE: +30",
+      "Mechanical honesty check failed twice (disguised compromise, uncorrected): -10",
       "Adversarial refutation REFUTED: -15",
       "  independently confirmed (3 separate agents, full agreement)"
     ],
@@ -3965,15 +3979,17 @@
       "Music theory — jazz improvisation over changes"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 23,
+    "points": 13,
     "badges": [
       "🎭 Janusian",
       "🗺️ Frontier Research Group",
+      "⚠️ Failed Honesty Check",
       "💀 Refuted"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): +8",
       "Phase 2 ADJACENT_ACTIVE: +30",
+      "Mechanical honesty check failed twice (disguised compromise, uncorrected): -10",
       "Adversarial refutation REFUTED: -15",
       "  independently confirmed (3 separate agents, full agreement)"
     ],
@@ -3997,15 +4013,17 @@
       "Neuroscience — cortical map reorganization"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 23,
+    "points": 13,
     "badges": [
       "🎭 Janusian",
       "🗺️ Frontier Research Group",
+      "⚠️ Failed Honesty Check",
       "💀 Refuted"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): +8",
       "Phase 2 ADJACENT_ACTIVE: +30",
+      "Mechanical honesty check failed twice (disguised compromise, uncorrected): -10",
       "Adversarial refutation REFUTED: -15",
       "  independently confirmed (3 separate agents, full agreement)"
     ],
@@ -4089,15 +4107,17 @@
       "Informational Signal Jitter"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 23,
+    "points": 13,
     "badges": [
       "🧬 Bisociative",
       "🗺️ Frontier Research Group",
+      "⚠️ Failed Honesty Check",
       "💀 Refuted"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): +8",
       "Phase 2 ADJACENT_ACTIVE: +30",
+      "Mechanical honesty check failed twice (disguised compromise, uncorrected): -10",
       "Adversarial refutation REFUTED: -15",
       "  independently confirmed (3 separate agents, full agreement)"
     ],
@@ -4184,14 +4204,16 @@
       "Physical Telescope Telemetry"
     ],
     "verdict": "COLLISION",
-    "points": 13,
+    "points": 3,
     "badges": [
       "🧬 Bisociative",
-      "🏛️ Established Department"
+      "🏛️ Established Department",
+      "⚠️ Failed Honesty Check"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): +8",
-      "Phase 2 COLLISION (genuine): +5"
+      "Phase 2 COLLISION (genuine): +5",
+      "Mechanical honesty check failed twice (disguised compromise, uncorrected): -10"
     ],
     "held_out_reason": null,
     "notes": "The hypothesis proposes a mapping between fluid dynamics and telescope telemetry, specifically linking turbulence in fluids to atmospheric interference in telescopes. The search results show that this connection is already well-established in the field, particularly through the use of the Kolmogorov turbulence model to address atmospheric effects on telescopes. This indicates that the hypothesis is not novel, as the specific structural connection it claims has already been made in existing research.",
@@ -4274,15 +4296,17 @@
       "Physical Ecosystem Succession"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 23,
+    "points": 13,
     "badges": [
       "🪞 Homospatial",
       "🗺️ Frontier Research Group",
+      "⚠️ Failed Honesty Check",
       "💀 Refuted"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): +8",
       "Phase 2 ADJACENT_ACTIVE: +30",
+      "Mechanical honesty check failed twice (disguised compromise, uncorrected): -10",
       "Adversarial refutation REFUTED: -15",
       "  independently confirmed (3 separate agents, full agreement)"
     ],
@@ -4367,14 +4391,16 @@
       "Finance Transaction Dynamics"
     ],
     "verdict": "NO_SIGNAL",
-    "points": -7,
+    "points": -17,
     "badges": [
       "🪞 Homospatial",
+      "⚠️ Failed Honesty Check",
       "💀 Refuted"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): +8",
       "Phase 2 NO_SIGNAL: +0 (pending)",
+      "Mechanical honesty check failed twice (disguised compromise, uncorrected): -10",
       "Adversarial refutation REFUTED: -15",
       "  independently confirmed (3 separate agents, full agreement)"
     ],
@@ -4428,14 +4454,16 @@
       "Control theory — Kalman filtering"
     ],
     "verdict": "COLLISION",
-    "points": 13,
+    "points": 3,
     "badges": [
       "🎭 Janusian",
-      "🏛️ Established Department"
+      "🏛️ Established Department",
+      "⚠️ Failed Honesty Check"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): +8",
-      "Phase 2 COLLISION (genuine): +5"
+      "Phase 2 COLLISION (genuine): +5",
+      "Mechanical honesty check failed twice (disguised compromise, uncorrected): -10"
     ],
     "held_out_reason": null,
     "notes": "The hypothesis suggests that Kalman filtering can simultaneously exhibit high fidelity and significant error due to the unpredictable nature of noise and system dynamics in nonlinear systems. However, the search results show that this issue has been extensively addressed by existing nonlinear Kalman filter techniques like EKF and UKF, which are designed to manage the complexities of nonlinear dynamics and Gaussian noise. This indicates that the hypothesis is not novel, as the specific connection between nonlinear system modeling, Gaussian noise, and Kalman filtering has already been explored and documented in the literature.",
@@ -4457,15 +4485,17 @@
       "Healthcare (Human & Social Systems)"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 23,
+    "points": 13,
     "badges": [
       "🎭 Janusian",
       "🗺️ Frontier Research Group",
+      "⚠️ Failed Honesty Check",
       "💀 Refuted"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): +8",
       "Phase 2 ADJACENT_ACTIVE: +30",
+      "Mechanical honesty check failed twice (disguised compromise, uncorrected): -10",
       "Adversarial refutation REFUTED: -15",
       "  independently confirmed (3 separate agents, full agreement)"
     ],
@@ -4489,15 +4519,17 @@
       "Human Individual Indecision"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 23,
+    "points": 13,
     "badges": [
       "🎭 Janusian",
       "🗺️ Frontier Research Group",
+      "⚠️ Failed Honesty Check",
       "💀 Refuted"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): +8",
       "Phase 2 ADJACENT_ACTIVE: +30",
+      "Mechanical honesty check failed twice (disguised compromise, uncorrected): -10",
       "Adversarial refutation REFUTED: -15",
       "  independently confirmed (3 separate agents, full agreement)"
     ],
@@ -4550,15 +4582,17 @@
       "Immunology — Adaptive Immune Memory"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 23,
+    "points": 13,
     "badges": [
       "🎭 Janusian",
       "🗺️ Frontier Research Group",
+      "⚠️ Failed Honesty Check",
       "💀 Refuted"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): +8",
       "Phase 2 ADJACENT_ACTIVE: +30",
+      "Mechanical honesty check failed twice (disguised compromise, uncorrected): -10",
       "Adversarial refutation REFUTED: -15",
       "  independently confirmed (3 separate agents, full agreement)"
     ],
@@ -4613,15 +4647,17 @@
       "Swarm Robotics — Ant Colony Optimization"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 23,
+    "points": 13,
     "badges": [
       "🎭 Janusian",
       "🗺️ Frontier Research Group",
+      "⚠️ Failed Honesty Check",
       "💀 Refuted"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): +8",
       "Phase 2 ADJACENT_ACTIVE: +30",
+      "Mechanical honesty check failed twice (disguised compromise, uncorrected): -10",
       "Adversarial refutation REFUTED: -15",
       "  independently confirmed (3 separate agents, full agreement)"
     ],
@@ -4646,14 +4682,16 @@
       "Informational Hash Collisions"
     ],
     "verdict": "NO_SIGNAL",
-    "points": -7,
+    "points": -17,
     "badges": [
       "🪞 Homospatial",
+      "⚠️ Failed Honesty Check",
       "💀 Refuted"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): +8",
       "Phase 2 NO_SIGNAL: +0 (pending)",
+      "Mechanical honesty check failed twice (disguised compromise, uncorrected): -10",
       "Adversarial refutation REFUTED: -15",
       "  independently confirmed (3 separate agents, full agreement)"
     ],
@@ -4737,15 +4775,17 @@
       "Human Financial Trading Algorithms"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 23,
+    "points": 13,
     "badges": [
       "🎭 Janusian",
       "🗺️ Frontier Research Group",
+      "⚠️ Failed Honesty Check",
       "💀 Refuted"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): +8",
       "Phase 2 ADJACENT_ACTIVE: +30",
+      "Mechanical honesty check failed twice (disguised compromise, uncorrected): -10",
       "Adversarial refutation REFUTED: -15",
       "  independently confirmed (3 separate agents, full agreement)"
     ],
@@ -4769,15 +4809,17 @@
       "Legal Systems"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 25,
+    "points": 15,
     "badges": [
       "🎭 Janusian",
       "🗺️ Frontier Research Group",
+      "⚠️ Failed Honesty Check",
       "💀 Refuted"
     ],
     "breakdown": [
       "Phase 1 self-report (5/5): +10",
       "Phase 2 ADJACENT_ACTIVE: +30",
+      "Mechanical honesty check failed twice (disguised compromise, uncorrected): -10",
       "Adversarial refutation REFUTED: -15",
       "  independently confirmed (3 separate agents, full agreement)"
     ],
@@ -4801,15 +4843,17 @@
       "Physical Ecosystem Succession"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 23,
+    "points": 13,
     "badges": [
       "🎭 Janusian",
       "🗺️ Frontier Research Group",
+      "⚠️ Failed Honesty Check",
       "💀 Refuted"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): +8",
       "Phase 2 ADJACENT_ACTIVE: +30",
+      "Mechanical honesty check failed twice (disguised compromise, uncorrected): -10",
       "Adversarial refutation REFUTED: -15",
       "  independently confirmed (3 separate agents, full agreement)"
     ],
@@ -4834,15 +4878,17 @@
       "Human Team Collaboration"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 23,
+    "points": 13,
     "badges": [
       "🧬 Bisociative",
       "🗺️ Frontier Research Group",
+      "⚠️ Failed Honesty Check",
       "💀 Refuted"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): +8",
       "Phase 2 ADJACENT_ACTIVE: +30",
+      "Mechanical honesty check failed twice (disguised compromise, uncorrected): -10",
       "Adversarial refutation REFUTED: -15",
       "  independently confirmed (3 separate agents, full agreement)"
     ],
@@ -4927,15 +4973,17 @@
       "Human Social Influence"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 23,
+    "points": 13,
     "badges": [
       "🧬 Bisociative",
       "🗺️ Frontier Research Group",
+      "⚠️ Failed Honesty Check",
       "💀 Refuted"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): +8",
       "Phase 2 ADJACENT_ACTIVE: +30",
+      "Mechanical honesty check failed twice (disguised compromise, uncorrected): -10",
       "Adversarial refutation REFUTED: -15",
       "  independently confirmed (3 separate agents, full agreement)"
     ],
@@ -4960,14 +5008,16 @@
       "Human Cognitive Bias"
     ],
     "verdict": "NO_SIGNAL",
-    "points": -7,
+    "points": -17,
     "badges": [
       "🧬 Bisociative",
+      "⚠️ Failed Honesty Check",
       "💀 Refuted"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): +8",
       "Phase 2 NO_SIGNAL: +0 (pending)",
+      "Mechanical honesty check failed twice (disguised compromise, uncorrected): -10",
       "Adversarial refutation REFUTED: -15",
       "  independently confirmed (3 separate agents, full agreement)"
     ],
@@ -5118,14 +5168,16 @@
       "Linguistic Systems"
     ],
     "verdict": "NO_SIGNAL",
-    "points": -5,
+    "points": -15,
     "badges": [
       "🪞 Homospatial",
+      "⚠️ Failed Honesty Check",
       "💀 Refuted"
     ],
     "breakdown": [
       "Phase 1 self-report (5/5): +10",
       "Phase 2 NO_SIGNAL: +0 (pending)",
+      "Mechanical honesty check failed twice (disguised compromise, uncorrected): -10",
       "Adversarial refutation REFUTED: -15",
       "  independently confirmed (3 separate agents, full agreement)"
     ],
@@ -5180,14 +5232,16 @@
       "Physical Bridge Cable Tension"
     ],
     "verdict": "NO_SIGNAL",
-    "points": -7,
+    "points": -17,
     "badges": [
       "🪞 Homospatial",
+      "⚠️ Failed Honesty Check",
       "💀 Refuted"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): +8",
       "Phase 2 NO_SIGNAL: +0 (pending)",
+      "Mechanical honesty check failed twice (disguised compromise, uncorrected): -10",
       "Adversarial refutation REFUTED: -15",
       "  independently confirmed (3 separate agents, full agreement)"
     ],
@@ -5485,15 +5539,17 @@
       "Cognitive AI Hyperparameter Orchestration"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 23,
+    "points": 13,
     "badges": [
       "🎭 Janusian",
       "🗺️ Frontier Research Group",
+      "⚠️ Failed Honesty Check",
       "💀 Refuted"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): +8",
       "Phase 2 ADJACENT_ACTIVE: +30",
+      "Mechanical honesty check failed twice (disguised compromise, uncorrected): -10",
       "Adversarial refutation REFUTED: -15",
       "  independently confirmed (3 separate agents, full agreement)"
     ],
@@ -5517,15 +5573,17 @@
       "Cognitive Model Adaptation"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 23,
+    "points": 13,
     "badges": [
       "🎭 Janusian",
       "🗺️ Frontier Research Group",
+      "⚠️ Failed Honesty Check",
       "💀 Refuted"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): +8",
       "Phase 2 ADJACENT_ACTIVE: +30",
+      "Mechanical honesty check failed twice (disguised compromise, uncorrected): -10",
       "Adversarial refutation REFUTED: -15",
       "  independently confirmed (3 separate agents, full agreement)"
     ],
@@ -5578,15 +5636,17 @@
       "Creative Musical Motif Deviation"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 23,
+    "points": 13,
     "badges": [
       "🎭 Janusian",
       "🗺️ Frontier Research Group",
+      "⚠️ Failed Honesty Check",
       "💀 Refuted"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): +8",
       "Phase 2 ADJACENT_ACTIVE: +30",
+      "Mechanical honesty check failed twice (disguised compromise, uncorrected): -10",
       "Adversarial refutation REFUTED: -15",
       "  independently confirmed (3 separate agents, full agreement)"
     ],
@@ -5610,15 +5670,17 @@
       "Decision Support (Cognitive & Pattern Recognition Systems)"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 23,
+    "points": 13,
     "badges": [
       "🎭 Janusian",
       "🗺️ Frontier Research Group",
+      "⚠️ Failed Honesty Check",
       "💀 Refuted"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): +8",
       "Phase 2 ADJACENT_ACTIVE: +30",
+      "Mechanical honesty check failed twice (disguised compromise, uncorrected): -10",
       "Adversarial refutation REFUTED: -15",
       "  independently confirmed (3 separate agents, full agreement)"
     ],
@@ -5642,15 +5704,17 @@
       "Economics — Auction Theory"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 23,
+    "points": 13,
     "badges": [
       "🎭 Janusian",
       "🗺️ Frontier Research Group",
+      "⚠️ Failed Honesty Check",
       "💀 Refuted"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): +8",
       "Phase 2 ADJACENT_ACTIVE: +30",
+      "Mechanical honesty check failed twice (disguised compromise, uncorrected): -10",
       "Adversarial refutation REFUTED: -15",
       "  independently confirmed (3 separate agents, full agreement)"
     ],
@@ -5674,15 +5738,17 @@
       "Finance (Human & Social Systems)"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 23,
+    "points": 13,
     "badges": [
       "🎭 Janusian",
       "🗺️ Frontier Research Group",
+      "⚠️ Failed Honesty Check",
       "💀 Refuted"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): +8",
       "Phase 2 ADJACENT_ACTIVE: +30",
+      "Mechanical honesty check failed twice (disguised compromise, uncorrected): -10",
       "Adversarial refutation REFUTED: -15",
       "  independently confirmed (3 separate agents, full agreement)"
     ],
@@ -5706,15 +5772,17 @@
       "Gaming Narrative (Creative & Performance Systems)"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 23,
+    "points": 13,
     "badges": [
       "🎭 Janusian",
       "🗺️ Frontier Research Group",
+      "⚠️ Failed Honesty Check",
       "💀 Refuted"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): +8",
       "Phase 2 ADJACENT_ACTIVE: +30",
+      "Mechanical honesty check failed twice (disguised compromise, uncorrected): -10",
       "Adversarial refutation REFUTED: -15",
       "  independently confirmed (3 separate agents, full agreement)"
     ],
@@ -5855,15 +5923,17 @@
       "Creative Idea Uncertainty"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 23,
+    "points": 13,
     "badges": [
       "🧬 Bisociative",
       "🗺️ Frontier Research Group",
+      "⚠️ Failed Honesty Check",
       "💀 Refuted"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): +8",
       "Phase 2 ADJACENT_ACTIVE: +30",
+      "Mechanical honesty check failed twice (disguised compromise, uncorrected): -10",
       "Adversarial refutation REFUTED: -15",
       "  independently confirmed (3 separate agents, full agreement)"
     ],
@@ -5888,15 +5958,17 @@
       "Architecture"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 23,
+    "points": 13,
     "badges": [
       "🧬 Bisociative",
       "🗺️ Frontier Research Group",
+      "⚠️ Failed Honesty Check",
       "💀 Refuted"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): +8",
       "Phase 2 ADJACENT_ACTIVE: +30",
+      "Mechanical honesty check failed twice (disguised compromise, uncorrected): -10",
       "Adversarial refutation REFUTED: -15",
       "  independently confirmed (3 separate agents, full agreement)"
     ],
@@ -5951,15 +6023,17 @@
       "Informational Bit Flips"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 23,
+    "points": 13,
     "badges": [
       "🧬 Bisociative",
       "🗺️ Frontier Research Group",
+      "⚠️ Failed Honesty Check",
       "💀 Refuted"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): +8",
       "Phase 2 ADJACENT_ACTIVE: +30",
+      "Mechanical honesty check failed twice (disguised compromise, uncorrected): -10",
       "Adversarial refutation REFUTED: -15",
       "  independently confirmed (3 separate agents, full agreement)"
     ],
@@ -6044,15 +6118,17 @@
       "Cell Biology Protein Folding Chaperones"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 23,
+    "points": 13,
     "badges": [
       "🪞 Homospatial",
       "🗺️ Frontier Research Group",
+      "⚠️ Failed Honesty Check",
       "💀 Refuted"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): +8",
       "Phase 2 ADJACENT_ACTIVE: +30",
+      "Mechanical honesty check failed twice (disguised compromise, uncorrected): -10",
       "Adversarial refutation REFUTED: -15",
       "  independently confirmed (3 separate agents, full agreement)"
     ],
@@ -6077,15 +6153,17 @@
       "Law"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 23,
+    "points": 13,
     "badges": [
       "🧬 Bisociative",
       "🗺️ Frontier Research Group",
+      "⚠️ Failed Honesty Check",
       "💀 Refuted"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): +8",
       "Phase 2 ADJACENT_ACTIVE: +30",
+      "Mechanical honesty check failed twice (disguised compromise, uncorrected): -10",
       "Adversarial refutation REFUTED: -15",
       "  independently confirmed (3 separate agents, full agreement)"
     ],
@@ -6170,15 +6248,17 @@
       "Informational Mobile System Coordination"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 23,
+    "points": 13,
     "badges": [
       "🧬 Bisociative",
       "🗺️ Frontier Research Group",
+      "⚠️ Failed Honesty Check",
       "💀 Refuted"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): +8",
       "Phase 2 ADJACENT_ACTIVE: +30",
+      "Mechanical honesty check failed twice (disguised compromise, uncorrected): -10",
       "Adversarial refutation REFUTED: -15",
       "  independently confirmed (3 separate agents, full agreement)"
     ],
@@ -6479,14 +6559,16 @@
       "Legal Systems"
     ],
     "verdict": "NO_SIGNAL",
-    "points": -5,
+    "points": -15,
     "badges": [
       "🪞 Homospatial",
+      "⚠️ Failed Honesty Check",
       "💀 Refuted"
     ],
     "breakdown": [
       "Phase 1 self-report (5/5): +10",
       "Phase 2 NO_SIGNAL: +0 (pending)",
+      "Mechanical honesty check failed twice (disguised compromise, uncorrected): -10",
       "Adversarial refutation REFUTED: -15",
       "  independently confirmed (3 separate agents, full agreement)"
     ],
@@ -6695,14 +6777,16 @@
       "Informational Backup Systems"
     ],
     "verdict": "NO_SIGNAL",
-    "points": -7,
+    "points": -17,
     "badges": [
       "🪞 Homospatial",
+      "⚠️ Failed Honesty Check",
       "💀 Refuted"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): +8",
       "Phase 2 NO_SIGNAL: +0 (pending)",
+      "Mechanical honesty check failed twice (disguised compromise, uncorrected): -10",
       "Adversarial refutation REFUTED: -15",
       "  independently confirmed (3 separate agents, full agreement)"
     ],
@@ -6878,15 +6962,17 @@
       "Cognitive Development (Information & Intelligence Systems)"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 23,
+    "points": 13,
     "badges": [
       "🎭 Janusian",
       "🗺️ Frontier Research Group",
+      "⚠️ Failed Honesty Check",
       "💀 Refuted"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): +8",
       "Phase 2 ADJACENT_ACTIVE: +30",
+      "Mechanical honesty check failed twice (disguised compromise, uncorrected): -10",
       "Adversarial refutation REFUTED: -15",
       "  independently confirmed (3 separate agents, full agreement)"
     ],
@@ -6910,15 +6996,17 @@
       "Creative Artistic Critique"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 23,
+    "points": 13,
     "badges": [
       "🎭 Janusian",
       "🗺️ Frontier Research Group",
+      "⚠️ Failed Honesty Check",
       "💀 Refuted"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): +8",
       "Phase 2 ADJACENT_ACTIVE: +30",
+      "Mechanical honesty check failed twice (disguised compromise, uncorrected): -10",
       "Adversarial refutation REFUTED: -15",
       "  independently confirmed (3 separate agents, full agreement)"
     ],
@@ -6942,15 +7030,17 @@
       "Creative Idea Uncertainty"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 23,
+    "points": 13,
     "badges": [
       "🎭 Janusian",
       "🗺️ Frontier Research Group",
+      "⚠️ Failed Honesty Check",
       "💀 Refuted"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): +8",
       "Phase 2 ADJACENT_ACTIVE: +30",
+      "Mechanical honesty check failed twice (disguised compromise, uncorrected): -10",
       "Adversarial refutation REFUTED: -15",
       "  independently confirmed (3 separate agents, full agreement)"
     ],
@@ -6974,15 +7064,17 @@
       "Ecology — predator-prey population dynamics"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 23,
+    "points": 13,
     "badges": [
       "🎭 Janusian",
       "🗺️ Frontier Research Group",
+      "⚠️ Failed Honesty Check",
       "💀 Refuted"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): +8",
       "Phase 2 ADJACENT_ACTIVE: +30",
+      "Mechanical honesty check failed twice (disguised compromise, uncorrected): -10",
       "Adversarial refutation REFUTED: -15",
       "  independently confirmed (3 separate agents, full agreement)"
     ],
@@ -7006,14 +7098,16 @@
       "Epigenetics — gene expression regulation without DNA change"
     ],
     "verdict": "COLLISION",
-    "points": 15,
+    "points": 5,
     "badges": [
       "🎭 Janusian",
-      "🏛️ Established Department"
+      "🏛️ Established Department",
+      "⚠️ Failed Honesty Check"
     ],
     "breakdown": [
       "Phase 1 self-report (5/5): +10",
-      "Phase 2 COLLISION (genuine): +5"
+      "Phase 2 COLLISION (genuine): +5",
+      "Mechanical honesty check failed twice (disguised compromise, uncorrected): -10"
     ],
     "held_out_reason": null,
     "notes": "The search results confirm that gene expression can be modified without changing the DNA sequence, and that such modifications can lead to distinct phenotypic outcomes. This directly supports the hypothesis, indicating that the engine's reasoning is valid but the specific hypothesis has already been investigated.",
@@ -7035,15 +7129,17 @@
       "Human Committee Formation"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 23,
+    "points": 13,
     "badges": [
       "🎭 Janusian",
       "🗺️ Frontier Research Group",
+      "⚠️ Failed Honesty Check",
       "💀 Refuted"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): +8",
       "Phase 2 ADJACENT_ACTIVE: +30",
+      "Mechanical honesty check failed twice (disguised compromise, uncorrected): -10",
       "Adversarial refutation REFUTED: -15",
       "  independently confirmed (3 separate agents, full agreement)"
     ],
@@ -7067,14 +7163,16 @@
       "Informational Bit Flips"
     ],
     "verdict": "COLLISION",
-    "points": 13,
+    "points": 3,
     "badges": [
       "🎭 Janusian",
-      "🏛️ Established Department"
+      "🏛️ Established Department",
+      "⚠️ Failed Honesty Check"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): +8",
-      "Phase 2 COLLISION (genuine): +5"
+      "Phase 2 COLLISION (genuine): +5",
+      "Mechanical honesty check failed twice (disguised compromise, uncorrected): -10"
     ],
     "held_out_reason": null,
     "notes": "The search results reveal that existing research has already established the dual role of bit flips in compromising and enhancing information integrity through error correction mechanisms. This indicates that the hypothesis has been previously explored, making it a collision with existing knowledge.",
@@ -7096,15 +7194,17 @@
       "Informational Ledger State Evolution"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 25,
+    "points": 15,
     "badges": [
       "🎭 Janusian",
       "🗺️ Frontier Research Group",
+      "⚠️ Failed Honesty Check",
       "💀 Refuted"
     ],
     "breakdown": [
       "Phase 1 self-report (5/5): +10",
       "Phase 2 ADJACENT_ACTIVE: +30",
+      "Mechanical honesty check failed twice (disguised compromise, uncorrected): -10",
       "Adversarial refutation REFUTED: -15",
       "  independently confirmed (3 separate agents, full agreement)"
     ],
@@ -7157,15 +7257,17 @@
       "Informational Protocol Coordination"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 23,
+    "points": 13,
     "badges": [
       "🎭 Janusian",
       "🗺️ Frontier Research Group",
+      "⚠️ Failed Honesty Check",
       "💀 Refuted"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): +8",
       "Phase 2 ADJACENT_ACTIVE: +30",
+      "Mechanical honesty check failed twice (disguised compromise, uncorrected): -10",
       "Adversarial refutation REFUTED: -15",
       "  independently confirmed (3 separate agents, full agreement)"
     ],
@@ -7296,6 +7398,480 @@
     "hypothesis_content": "# Hypothesis: Sports Athletics × Cognitive Swarm Intelligence\n\n**Generated**: 2026-08-30\n**Framework**: UMPF Two-Domain Hypothesis Engine (Exponent Labs LLC)\n\n---\n\n## 1. The Two Frames (M₁, M₂)\n\n**M₁ — Sports Athletics**: Athletes engage in competitive performance where success is influenced by their own skills and strategies, as well as the unpredictable capabilities of their opponents. Training and competition are governed by established rules, and performance is logged and analyzed to inform future strategies.\n\n**M₂ — Cognitive Swarm Intelligence**: In swarm intelligence, individual agents (like robots or animals) operate based on local interactions and simple rules, leading to complex group behaviors that solve problems or optimize tasks. The collective intelligence emerges from the interactions of these agents, often without centralized control.\n\n## 2. Monadic Signature of Each Domain\n\n| Layer | Sports Athletics | Cognitive Swarm Intelligence |\n|---|---|---|\n| Atomic (Maybe/Either) | Performance outcomes are uncertain; opponent capabilities are unknown | Individual agent success or failure is uncertain; interactions are unpredictable |\n| Domain (State/Reader/Writer) | Athletic performance evolves through training, competition, and strategic adjustments | The state of the swarm evolves based on agent interactions and environmental feedback |\n| Control (IO/STM) | Coordination among team members and real-time performance monitoring | Local interactions among agents govern swarm behavior, with real-time adjustments based on feedback |\n| Orchestration (Free/effects) | Coordination among federations and training environments influences overall performance | The collective behavior of the swarm represents a system-wide solution to a problem |\n\n## 3. The Candidate Functor\n\nMapping *f: M(Sports Athletics) → M(Cognitive Swarm Intelligence)* can be stated as follows:  \n- Atomic outcomes (performance success/failure) in athletics correspond to individual agent outcomes in swarm intelligence.  \n- The evolving state of athletic performance corresponds to the evolving state of the swarm based on agent interactions.  \n- Control mechanisms in athletics (real-time monitoring) correspond to local interactions in swarm intelligence that adjust agent behaviors.  \n- The orchestration of sports federations corresponds to the emergent collective behavior in the swarm.\n\nFor this functor to hold, both domains must demonstrate that local interactions (whether among athletes or agents) directly influence the overall success of the system.\n\n## 4. The Hypothesis\n\n1. **Generative-relation sentence:** \"I noticed that the relational rule governing performance evolution in athletics, driven by feedback from local interactions, also governs the behavior of agents in swarm intelligence — specifically, the rule that local interactions lead to emergent collective outcomes.\"\n2. **Falsifiable prediction:** \"If that relation holds, then enhancing local strategies in athletic training will result in measurable improvements in team performance metrics, and optimizing individual agent behaviors will yield greater efficiency in swarm tasks.\"\n\n## 5. Novelty & Testability Self-Critique\n\n- **Distance score (1-5):** 4 — Sports athletics and cognitive swarm intelligence are typically treated as unrelated fields, with distinct methodologies and communities.\n- **Testability:** Specific data could be drawn from performance metrics in athletics and agent behavior in swarm systems to compare the effects of local interactions on overall success. Experiments could involve altering training strategies and measuring performance outcomes.\n- **Known prior art:** Not verified — while both fields explore performance and optimization, there is no established literature directly linking the two in the context described.\n- **Confidence this is worth a researcher's time:** Medium, as the potential for cross-disciplinary insights is significant, but the novelty of the connection is uncertain.\n\n## 6. If This Doesn't Hold\n\nThe most likely reason this functor turns out to be superficial rather than structural is that the local interactions in sports athletics may be influenced by factors (like psychological elements or environmental conditions) that do not have direct analogs in swarm intelligence.\n\n## Search Queries\n\n1. \"swarm intelligence theory\"\n2. \"emergent behavior in swarm intelligence\"\n3. \"performance metrics in sports training\"\n4. \"local interactions in swarm systems\"\n5. \"collective behavior in athletics named theory OR framework OR researcher\"\n",
     "verification_filename": "2026-08-30-sports-athletics-x-cognitive-swarm-intelligence-verification.md",
     "verification_content": "# Verification: Bisociation — Sports Athletics × Cognitive Swarm Intelligence\n\n**Verifies**: `hypotheses/2026-08-30-sports-athletics-x-cognitive-swarm-intelligence.md`\n**Verified**: 2026-08-30 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)\n\n## Verdict: **ADJACENT_ACTIVE**\n\n## Queries\n- `swarm intelligence theory`\n- `emergent behavior in swarm intelligence`\n- `performance metrics in sports training`\n- `local interactions in swarm systems`\n- `collective behavior in athletics named theory OR framework OR researcher`\n\n## What was found\nResearch on emergent behavior in swarm intelligence, such as studies on collective sensing and evolution in group formation ([link.springer.com](https://link.springer.com/article/10.1007/s11721-018-0156-y?utm_source=openai)), and the role of emergent communication in foraging behavior ([link.springer.com](https://link.springer.com/article/10.1007/s11721-023-00231-6?utm_source=openai)), provides insights into how local interactions among agents lead to complex collective behaviors. In sports athletics, performance metrics and real-time monitoring are crucial for assessing and enhancing individual and team performance. While direct studies mapping these concepts are limited, the parallels in emergent behaviors and performance optimization suggest a fertile area for exploration.\n\n## Reasoning\nThe search revealed active research on emergent behaviors in swarm intelligence, indicating a relevant and active field. However, direct studies mapping these concepts to sports athletics are limited, suggesting the hypothesis is in the ADJACENT_ACTIVE category.\n",
+    "refutation_filename": null,
+    "refutation_content": null,
+    "refutation_independently_confirmed": false
+  },
+  {
+    "key": "2026-08-30-epigenetics-x-physical-bridge-cable-tension",
+    "mode": "bisociation",
+    "source": null,
+    "domains": [
+      "Epigenetics",
+      "Physical Bridge Cable Tension"
+    ],
+    "verdict": "NO_SIGNAL",
+    "points": -7,
+    "badges": [
+      "🧬 Bisociative",
+      "💀 Refuted"
+    ],
+    "breakdown": [
+      "Phase 1 self-report (4/5): +8",
+      "Phase 2 NO_SIGNAL: +0 (pending)",
+      "Adversarial refutation REFUTED: -15",
+      "  independently confirmed (3 separate agents, full agreement)"
+    ],
+    "held_out_reason": null,
+    "notes": "While both domains are influenced by environmental factors, the specific mapping between gene expression and bridge cable tension lacks direct support in the current literature.",
+    "self_reported_distance": 4,
+    "self_reported_tension": null,
+    "hypothesis_filename": "2026-08-30-epigenetics-x-physical-bridge-cable-tension.md",
+    "hypothesis_content": "# Hypothesis: Epigenetics × Physical Bridge Cable Tension\n\n**Generated**: 2026-08-30\n**Framework**: UMPF Two-Domain Hypothesis Engine (Exponent Labs LLC)\n\n---\n\n## 1. The Two Frames (M₁, M₂)\n\n**M₁ — Epigenetics**: Epigenetics involves changes in gene expression that do not alter the underlying DNA sequence. These changes can be influenced by various environmental factors and can affect how genes are turned on or off.\n\n**M₂ — Physical Bridge Cable Tension**: In bridge engineering, the tension in cables is crucial for maintaining the structural integrity of the bridge. The tension can be adjusted based on the load and environmental conditions, ensuring that the bridge remains stable and functional.\n\n## 2. Monadic Signature of Each Domain\n\n| Layer | Epigenetics | Physical Bridge Cable Tension |\n|---|---|---|\n| Atomic (Maybe/Either) | Presence or absence of gene expression | Presence or absence of tension in the cables |\n| Domain (State/Reader/Writer) | Changes in gene expression over time based on environmental factors | Changes in cable tension based on load and environmental conditions |\n| Control (IO/STM) | Interaction of various factors influencing gene expression | Interaction of forces acting on the bridge and its cables |\n| Orchestration (Free/effects) | Overall gene regulation network affecting phenotype | Overall structural integrity of the bridge influenced by cable tension |\n\n## 3. The Candidate Functor\n\nThe proposed mapping *f: M(Epigenetics) → M(Bridge Cable Tension)* is as follows: the presence or absence of gene expression (Atomic) maps to the presence or absence of tension in the cables (Atomic); changes in gene expression (Domain) map to changes in cable tension (Domain); interactions influencing gene expression (Control) map to interactions of forces on the bridge (Control); and the overall gene regulation network (Orchestration) maps to the overall structural integrity of the bridge (Orchestration). For this functor to hold, both domains must exhibit a similar dependency on external factors influencing their respective states (gene expression and cable tension).\n\n## 4. The Hypothesis\n\n1. **Generative-relation sentence (required):** I noticed that the relational rule governing the regulation of gene expression in epigenetics also governed the tension in physical bridge cables — specifically, that both are influenced by external environmental factors that determine their stability and functionality.\n2. **Falsifiable prediction:** If that relation holds, then changes in environmental conditions that affect gene expression should also correlate with measurable changes in cable tension in bridges — or vice versa.\n\n## 5. Novelty & Testability Self-Critique\n\n- **Distance score (1-5)**: 4. While both domains involve regulation and stability, they are typically treated as separate fields with little overlap in research or methodology.\n- **Testability**: Specific experiments could involve measuring how varying environmental conditions (like temperature or load) affect both gene expression in a model organism and cable tension in a bridge, looking for correlations in the patterns of change.\n- **Known prior art**: Not verified; there does not appear to be existing literature explicitly linking epigenetics and bridge cable tension.\n- **Confidence this is worth a researcher's time**: Medium, as the domains are distinct but may reveal interesting insights about regulation and stability across different systems.\n\n## 6. If This Doesn't Hold\n\nThe most likely reason this functor turns out to be superficial rather than structural is that the mechanisms governing gene expression are fundamentally biochemical, while cable tension is governed by mechanical physics, leading to different underlying principles of stability.\n\n## Search Queries\n\n1. \"epigenetics environmental factors influence gene expression\"\n2. \"bridge cable tension environmental factors\"\n3. \"mechanical stability in bridge engineering\"\n4. \"gene regulation and external influences\"\n5. \"structural engineering named theory OR framework OR researcher\"\n",
+    "verification_filename": "2026-08-30-epigenetics-x-physical-bridge-cable-tension-verification.md",
+    "verification_content": "# Verification: Bisociation — Epigenetics × Physical Bridge Cable Tension\n\n**Verifies**: `hypotheses/2026-08-30-epigenetics-x-physical-bridge-cable-tension.md`\n**Verified**: 2026-08-30 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)\n\n## Verdict: **NO_SIGNAL**\n\n## Queries\n- `epigenetics environmental factors influence gene expression`\n- `bridge cable tension environmental factors`\n- `mechanical stability in bridge engineering`\n- `gene regulation and external influences`\n- `structural engineering named theory OR framework OR researcher`\n\n## What was found\nEnvironmental factors such as temperature fluctuations, humidity, and pollutants can influence gene expression through epigenetic mechanisms like DNA methylation and histone modification. ([cdc.gov](https://www.cdc.gov/genomics-and-health/epigenetics/index.html?utm_source=openai)) Similarly, environmental conditions like temperature changes and humidity affect the tension in bridge cables by causing material expansion and contraction. ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC10302245/?utm_source=openai)) However, there is no direct evidence or established framework connecting these two domains in the proposed manner.\n\n## Reasoning\nWhile both domains are influenced by environmental factors, the specific mapping between gene expression and bridge cable tension lacks direct support in the current literature.\n",
+    "refutation_filename": "refutations/2026-08-30-epigenetics-x-physical-bridge-cable-tension-refutation.md",
+    "refutation_content": "# Adversarial Refutation: Bisociation — Epigenetics × Physical Bridge Cable Tension\n\n**Original**: `hypotheses/2026-08-30-epigenetics-x-physical-bridge-cable-tension.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 0 of 3 survive → **REFUTED**\n\n- **Coherence — REFUTED.** The claimed structural mapping between epigenetics and bridge cable tension relies on equivocation of terms, treating fundamentally different mechanisms as analogous. The presence of gene expression and cable tension may both be influenced by external factors, but this does not establish a coherent mapping of their underlying processes. The hypothesis fails to demonstrate a genuine fusion of concepts, instead presenting a context-dependent comparison that lacks empirical support.\n- **Testability — REFUTED.** The hypothesis lacks a clear operationalization of its predictions, as it does not specify measurable metrics, comparison conditions, or rejection thresholds for the proposed mappings. The claim remains vague, making it impossible to design an experiment that could definitively test or falsify the relationship between epigenetics and bridge cable tension.\n- **Triviality — REFUTED.** The claim reduces to a general assertion that two complex systems can be influenced by external factors, which is trivially true for almost any system. The proposed mappings lack specificity and do not establish a meaningful connection between the domains, rendering the hypothesis vacuous.\n\n## No steelman offered\n\nAll three lenses independently converged on REFUTED for this case. If revisited, it would need a genuinely tighter formulation, not a restatement of the same claim.\n",
+    "refutation_independently_confirmed": true
+  },
+  {
+    "key": "2026-08-30-homospatial-culinary-arts-x-physical-bridge-cable-tension",
+    "mode": "homospatial",
+    "source": null,
+    "domains": [
+      "Culinary Arts",
+      "Physical Bridge Cable Tension"
+    ],
+    "verdict": "ADJACENT_ACTIVE",
+    "points": 13,
+    "badges": [
+      "🪞 Homospatial",
+      "🗺️ Frontier Research Group",
+      "⚠️ Failed Honesty Check",
+      "💀 Refuted"
+    ],
+    "breakdown": [
+      "Phase 1 self-report (4/5): +8",
+      "Phase 2 ADJACENT_ACTIVE: +30",
+      "Mechanical honesty check failed twice (disguised compromise, uncorrected): -10",
+      "Adversarial refutation REFUTED: -15",
+      "  independently confirmed (3 separate agents, full agreement)"
+    ],
+    "held_out_reason": null,
+    "notes": "While no existing framework named \"Tensile Culinary System\" was found, there is active research integrating physics and engineering principles into culinary arts. For example, studies have explored how understanding the physics of food structures can lead to innovative cooking techniques. ([link.springer.com](https://link.springer.com/article/10.1186/2044-7248-2-11?utm_source=openai)) Additionally, research has analyzed the statistical laws governing culinary design, highlighting the complex interplay between ingredients and techniques. ([arxiv.org](https://arxiv.org/abs/2604.28021?utm_source=openai)) These studies suggest that the proposed \"Tensile Culinary System\" aligns with current interdisciplinary research in the field.",
+    "self_reported_distance": 4,
+    "self_reported_tension": null,
+    "hypothesis_filename": "2026-08-30-homospatial-culinary-arts-x-physical-bridge-cable-tension.md",
+    "hypothesis_content": "# Homospatial Hypothesis: Culinary Arts ⊕ Physical Bridge Cable Tension\n\n**Generated**: 2026-08-30\n**Framework**: UMPF Homospatial Hypothesis Engine (Exponent Labs LLC)\n\n---\n\n## 1. The Two Source Entities\n\n**Entity A — Culinary Arts**: Culinary arts involve the systematic processes of preparing food, where the success of a dish is determined by factors such as ingredient freshness, flavor combinations, and the orchestration of cooking methods in a restaurant environment.\n\n**Entity B — Physical Bridge Cable Tension**: Physical bridge cable tension refers to the forces exerted on bridge cables, which must be precisely managed to maintain the structural integrity and support the loads applied to the bridge.\n\n## 2. The Superimposition\n\nIn the overlay of culinary arts and physical bridge cable tension, the act of cooking transforms into a dynamic system of tensile relationships. Ingredients interact as if they are cables under tension, where freshness serves as a critical factor influencing the overall stability of flavors. The cooking processes are interwoven like strands of cable, each contributing to the final dish's integrity. Adjustments in seasoning function as fine-tuning of tension, where each increment alters the flavor profile and balance of the dish. The orchestration of cooking steps parallels the engineering of a bridge, where precise coordination ensures that all elements work together seamlessly, creating a cohesive and successful culinary outcome.\n\n## 3. The Emergent Third Thing\n\nThe resulting entity is a \"Tensile Culinary System,\" a unified framework that combines the principles of tension management from bridge engineering with the creative processes of cooking. This system allows chefs to manipulate ingredients and cooking techniques as interconnected tensions, ensuring that each dish achieves optimal flavor balance and structural integrity in its presentation.\n\n## 4. The Hypothesis\n\n1. **Fusion sentence (required):** I force culinary arts and physical bridge cable tension into the same framework until the Tensile Culinary System emerges.\n2. **Falsifiable prediction:** If the Tensile Culinary System is real, then systematic adjustments in ingredient quality and cooking techniques will yield quantifiable improvements in flavor balance and dish presentation, reflecting the principles of tension management found in bridge engineering.\n\n## 5. Novelty & Testability Self-Critique\n\n- **Fusion distance (1-5)**: 4 — the two source entities originate from distinct fields, making the fusion a significant conceptual leap.\n- **Testability**: The hypothesis can be tested through culinary experiments that measure the effects of ingredient adjustments and cooking techniques on flavor profiles and presentation, providing data to validate the framework.\n- **Known prior art**: Not verified.\n- **Confidence this is worth a researcher's time**: Medium, as this fusion presents a novel approach to culinary creativity that could enhance culinary practices and education.\n\n## 6. If This Doesn't Hold\n\nThe most likely reason the Tensile Culinary System turns out to just be culinary arts and physical bridge cable tension described side by side is that the two mechanisms operate in fundamentally different contexts, preventing the formation of a cohesive, integrated system.\n\n## Search Queries\n\n1. \"Tensile Culinary System\" named theory OR framework OR researcher\n2. \"Integration of culinary arts and engineering principles\"\n3. \"Tension management in cooking techniques\"\n4. \"Culinary arts optimization through engineering\"\n5. \"Culinary engineering methods and principles\"\n\n---\n\n**⚠️ Automated check failed twice:** §2–§4 still fail Homospatial fusion (comparison language and/or missing overlay→emergent-identity signature) after one corrective retry. This may be bisociation mislabeled as homospatial — not a thesis-grade fusion lead until rewritten.\n",
+    "verification_filename": "2026-08-30-homospatial-culinary-arts-x-physical-bridge-cable-tension-verification.md",
+    "verification_content": "# Verification: Homospatial — Culinary Arts ⊕ Physical Bridge Cable Tension\n\n**Verifies**: `hypotheses/2026-08-30-homospatial-culinary-arts-x-physical-bridge-cable-tension.md`\n**Verified**: 2026-08-30 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)\n\n## Verdict: **ADJACENT_ACTIVE**\n\n## Queries\n- `Tensile Culinary System\" named theory OR framework OR researcher`\n- `Integration of culinary arts and engineering principles`\n- `Tension management in cooking techniques`\n- `Culinary arts optimization through engineering`\n- `Culinary engineering methods and principles`\n\n## What was found\nIntegration of physics with gastronomy can yield innovations in an efficient manner. ([link.springer.com](https://link.springer.com/article/10.1186/2044-7248-2-11?utm_source=openai)) Cooking is a cultural expression of human creativity that transcends geography and time through the orchestration of ingredients and techniques, much like languages do through words and syntax. ([arxiv.org](https://arxiv.org/abs/2604.28021?utm_source=openai))\n\n## Reasoning\nWhile no existing framework named \"Tensile Culinary System\" was found, there is active research integrating physics and engineering principles into culinary arts. For example, studies have explored how understanding the physics of food structures can lead to innovative cooking techniques. ([link.springer.com](https://link.springer.com/article/10.1186/2044-7248-2-11?utm_source=openai)) Additionally, research has analyzed the statistical laws governing culinary design, highlighting the complex interplay between ingredients and techniques. ([arxiv.org](https://arxiv.org/abs/2604.28021?utm_source=openai)) These studies suggest that the proposed \"Tensile Culinary System\" aligns with current interdisciplinary research in the field.\n",
+    "refutation_filename": "refutations/2026-08-30-homospatial-culinary-arts-x-physical-bridge-cable-tension-refutation.md",
+    "refutation_content": "# Adversarial Refutation: Homospatial — Culinary Arts ⊕ Physical Bridge Cable Tension\n\n**Original**: `hypotheses/2026-08-30-homospatial-culinary-arts-x-physical-bridge-cable-tension.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 0 of 3 survive → **REFUTED**\n\n- **Coherence — REFUTED.** The claim of a 'Tensile Culinary System' conflates distinct principles from bridge engineering and culinary arts without a coherent structural mapping. The term 'tension' is used ambiguously, applying to both physical forces in engineering and abstract culinary processes, leading to a lack of genuine fusion between the domains. This results in a superficial comparison rather than a substantive integration.\n- **Testability — REFUTED.** The hypothesis lacks a clear operationalization of the 'Tensile Culinary System' as a testable framework. There are no defined metrics, comparison conditions, or rejection thresholds that would allow for empirical testing of the claim. The vague nature of the claim, particularly the use of 'optimal flavor balance and structural integrity,' makes it impossible to return a definitive 'no' in an experimental context.\n- **Triviality — REFUTED.** The claim reduces to a vague assertion that any two complex systems can be integrated through a framework of interconnected principles. This is a trivial statement applicable to numerous domains, lacking specificity and operationalization. The idea of a 'Tensile Culinary System' does not provide a unique or novel contribution, as it merely echoes general concepts of system integration without clear, testable predictions.\n\n## No steelman offered\n\nAll three lenses independently converged on REFUTED for this case. If revisited, it would need a genuinely tighter formulation, not a restatement of the same claim.\n",
+    "refutation_independently_confirmed": true
+  },
+  {
+    "key": "2026-08-30-homospatial-healthcare-x-physical-power-grid-orchestration",
+    "mode": "homospatial",
+    "source": null,
+    "domains": [
+      "Healthcare Systems",
+      "Physical Power Grid Orchestration"
+    ],
+    "verdict": "COLLISION",
+    "points": 13,
+    "badges": [
+      "🪞 Homospatial",
+      "🏛️ Established Department"
+    ],
+    "breakdown": [
+      "Phase 1 self-report (4/5): +8",
+      "Phase 2 COLLISION (genuine): +5"
+    ],
+    "held_out_reason": null,
+    "notes": "The term 'HealthGrid' has been previously used to describe initiatives and platforms that integrate grid computing technologies into healthcare systems, focusing on data storage, accessibility, and patient engagement. These existing applications align with the core claim of merging healthcare management with energy resource orchestration, indicating that the proposed 'HealthGrid' concept has been explored in prior research and development efforts.",
+    "self_reported_distance": 4,
+    "self_reported_tension": null,
+    "hypothesis_filename": "2026-08-30-homospatial-healthcare-x-physical-power-grid-orchestration.md",
+    "hypothesis_content": "# Homospatial Hypothesis: Healthcare Systems ⊕ Physical Power Grid Orchestration\n\n**Generated**: 2026-08-30\n**Framework**: UMPF Homospatial Hypothesis Engine (Exponent Labs LLC)\n\n---\n\n## 1. The Two Source Entities\n\n**Entity A — Healthcare Systems**: Healthcare systems manage patient health through a network of processes that include diagnosis, monitoring, and treatment interventions. These systems rely on real-time data from test results, clinical guidelines, and patient history to ensure effective care and compliance.\n\n**Entity B — Physical Power Grid Orchestration**: The physical power grid orchestrates the generation, distribution, and consumption of electrical energy. It involves real-time monitoring of power flows, coordination of supply and demand, and the integration of various energy sources to maintain stability and efficiency.\n\n## 2. The Superimposition\n\nIn the overlay of healthcare systems and physical power grid orchestration, a new entity emerges where patient health data and energy flow metrics are processed together in a unified environment. Continuous monitoring from both domains creates a dynamic feedback loop, where patient health interventions are adjusted based on real-time energy availability and consumption patterns. Clinical guidelines are informed by energy data, enabling healthcare providers to synchronize treatment plans with energy resource management. This integrated approach allows for the simultaneous optimization of patient care and energy efficiency, creating a cohesive operational framework that responds fluidly to both health and energy demands.\n\n## 3. The Emergent Third Thing\n\nThis new entity is called **HealthGrid**, a system that merges patient health management with energy resource orchestration. HealthGrid continuously processes health metrics and energy consumption data in real-time, allowing for immediate adjustments in treatment strategies based on current medical needs and energy conditions. It operates as a singular framework where healthcare decisions are informed by energy dynamics, ensuring optimal care delivery while managing energy resources effectively.\n\n## 4. The Hypothesis\n\n1. **Fusion sentence (required):** I force healthcare systems and physical power grid orchestration into the same framework until HealthGrid emerges.\n2. **Falsifiable prediction:** If HealthGrid is real, then the simultaneous processing of patient health metrics and energy consumption data will lead to improved healthcare outcomes and enhanced energy efficiency in real-time interventions.\n\n## 5. Novelty & Testability Self-Critique\n\n- **Fusion distance (1-5)**: 4 — The two entities are distinct, operating in separate fields, making their fusion a significant conceptual leap.\n- **Testability**: The hypothesis could be confirmed through studies measuring healthcare outcomes and energy efficiency in environments utilizing HealthGrid compared to traditional systems.\n- **Known prior art**: Not verified.\n- **Confidence this is worth a researcher's time**: High, as integrating health and energy systems could yield innovative solutions for both sectors.\n\n## 6. If This Doesn't Hold\n\nThe most likely reason HealthGrid turns out to just be healthcare systems and power grid orchestration described side by side is that the integration mechanisms between health data and energy metrics operate on incompatible timescales, resulting in a disjointed rather than a cohesive system.\n\n## Search Queries\n\n1. \"HealthGrid integration of healthcare and energy systems\"\n2. \"real-time patient monitoring and energy consumption\"\n3. \"healthcare systems energy efficiency framework\"\n4. \"interdisciplinary approaches in healthcare and power grid management\"\n5. \"HealthGrid named theory OR framework OR researcher\"\n",
+    "verification_filename": "2026-08-30-homospatial-healthcare-x-physical-power-grid-orchestration-verification.md",
+    "verification_content": "# Verification: Homospatial — Healthcare Systems ⊕ Physical Power Grid Orchestration\n\n**Verifies**: `hypotheses/2026-08-30-homospatial-healthcare-x-physical-power-grid-orchestration.md`\n**Verified**: 2026-08-30 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)\n\n## Verdict: **COLLISION**\n\n## Queries\n- `HealthGrid integration of healthcare and energy systems`\n- `real-time patient monitoring and energy consumption`\n- `healthcare systems energy efficiency framework`\n- `interdisciplinary approaches in healthcare and power grid management`\n- `HealthGrid named theory OR framework OR researcher`\n\n## What was found\nThe Healthgrid initiative, established in the early 2000s, focused on integrating grid computing technologies into the healthcare sector to enhance data storage and accessibility for medical professionals and patients. ([researchgate.net](https://www.researchgate.net/publication/301866747_A_perspective_on_the_Healthgrid_initiative?utm_source=openai)) Additionally, HealthGrid, a mobile patient engagement platform, was acquired by Allscripts in 2018 to improve patient interactions and satisfaction. ([globenewswire.com](https://www.globenewswire.com/news-release/2018/05/21/1509328/10935/en/Allscripts-closes-acquisition-of-HealthGrid.html?utm_source=openai)) Furthermore, the Health-e-Child project aimed to develop an integrated biomedical platform for pediatric applications using grid-based technologies. ([arxiv.org](https://arxiv.org/abs/cs/0603036?utm_source=openai))\n\n## Reasoning\nThe term 'HealthGrid' has been previously used to describe initiatives and platforms that integrate grid computing technologies into healthcare systems, focusing on data storage, accessibility, and patient engagement. These existing applications align with the core claim of merging healthcare management with energy resource orchestration, indicating that the proposed 'HealthGrid' concept has been explored in prior research and development efforts.\n",
+    "refutation_filename": null,
+    "refutation_content": null,
+    "refutation_independently_confirmed": false
+  },
+  {
+    "key": "2026-08-30-homospatial-military-strategy-x-creative-album-production-orchestration",
+    "mode": "homospatial",
+    "source": null,
+    "domains": [
+      "Military Strategy",
+      "Creative Album Production Orchestration"
+    ],
+    "verdict": "NO_SIGNAL",
+    "points": -7,
+    "badges": [
+      "🪞 Homospatial",
+      "💀 Refuted"
+    ],
+    "breakdown": [
+      "Phase 1 self-report (4/5): +8",
+      "Phase 2 NO_SIGNAL: +0 (pending)",
+      "Adversarial refutation REFUTED: -15",
+      "  independently confirmed (3 separate agents, full agreement)"
+    ],
+    "held_out_reason": null,
+    "notes": "The search did not yield any existing theories or frameworks that combine military strategy with creative album production orchestration, indicating that this specific fusion has not been previously explored.",
+    "self_reported_distance": 4,
+    "self_reported_tension": null,
+    "hypothesis_filename": "2026-08-30-homospatial-military-strategy-x-creative-album-production-orchestration.md",
+    "hypothesis_content": "# Homospatial Hypothesis: Military Strategy ⊕ Creative Album Production Orchestration\n\n**Generated**: 2026-08-30\n**Framework**: UMPF Homospatial Hypothesis Engine (Exponent Labs LLC)\n\n---\n\n## 1. The Two Source Entities\n\n**Entity A — Military Strategy**: Military strategy involves the planning and execution of operations to achieve specific objectives in warfare, utilizing intelligence systems to understand enemy positions and adapt to evolving battle situations.\n\n**Entity B — Creative Album Production Orchestration**: Creative album production orchestration involves the management and arrangement of musical elements and recording processes to create a cohesive album, incorporating real-time adjustments and coordination among artists during the production.\n\n## 2. The Superimposition\n\nIn the overlay of military strategy and creative album production orchestration, a new operational framework emerges where tactical commands and artistic decisions coexist in a single dynamic environment. Intelligence systems are embedded within the creative process, allowing for immediate feedback and adjustments as musical elements are layered and refined. Concurrent operations in military strategy synchronize with the flow of recording sessions, where each artist's contribution influences the direction of the project. The evolving battle situation integrates with the iterative process of producing tracks, resulting in a seamless interaction between strategic planning and creative expression. This synthesis reveals a unique structure where both command and creativity are continuously adapted and optimized in real-time.\n\n## 3. The Emergent Third Thing\n\nThis fused entity is called \"Creative Tactical Orchestration.\" It is a cohesive system that merges the structured decision-making of military strategy with the fluid creativity of album production. Creative Tactical Orchestration facilitates a collaborative environment where strategic objectives guide artistic choices, resulting in a unified output that embodies both tactical precision and innovative expression.\n\n## 4. The Hypothesis\n\n1. **Fusion sentence (required):** I force military strategy and creative album production orchestration into the same space until Creative Tactical Orchestration emerges.\n2. **Falsifiable prediction:** If Creative Tactical Orchestration is real, then collaborative music projects will exhibit a structured adaptability that enhances the creative process, driven by strategic planning principles.\n\n## 5. Novelty & Testability Self-Critique\n\n- **Fusion distance (1-5)**: 4 — the two source entities are from distinctly different domains, making the fusion a significant conceptual leap.\n- **Testability**: The hypothesis could be tested by analyzing case studies of music projects that demonstrate structured adaptability in their production processes, comparing them to military operation case studies for operational parallels.\n- **Known prior art**: Not verified.\n- **Confidence this is worth a researcher's time**: Medium, as exploring the intersection of these fields could yield valuable insights into both strategic planning and creative processes.\n\n## 6. If This Doesn't Hold\n\nThe most likely reason Creative Tactical Orchestration turns out to just be military strategy and creative album production described side by side is that the mechanisms of adaptation and coordination operate at fundamentally different levels, preventing genuine integration.\n\n## Search Queries\n\n1. \"Creative Tactical Orchestration theory OR framework\"\n2. \"Military strategy in creative industries\"\n3. \"Real-time adaptation in music production\"\n4. \"Tactical planning in artistic collaboration\"\n5. \"Comparative analysis of military strategy and music production processes\"\n",
+    "verification_filename": "2026-08-30-homospatial-military-strategy-x-creative-album-production-orchestration-verification.md",
+    "verification_content": "# Verification: Homospatial — Military Strategy ⊕ Creative Album Production Orchestration\n\n**Verifies**: `hypotheses/2026-08-30-homospatial-military-strategy-x-creative-album-production-orchestration.md`\n**Verified**: 2026-08-30 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)\n\n## Verdict: **NO_SIGNAL**\n\n## Queries\n- `Creative Tactical Orchestration theory OR framework`\n- `Military strategy in creative industries`\n- `Real-time adaptation in music production`\n- `Tactical planning in artistic collaboration`\n- `Comparative analysis of military strategy and music production processes`\n\n## What was found\nNo existing theory or framework specifically termed 'Creative Tactical Orchestration' was identified. While there are frameworks in related fields, such as the MDA framework in game design ([en.wikipedia.org](https://en.wikipedia.org/wiki/MDA_framework?utm_source=openai)) and agentic orchestration in computational music ([emergentmind.com](https://www.emergentmind.com/topics/aorchestra?utm_source=openai)), they do not directly merge military strategy with creative album production orchestration. Additionally, no specific research on military strategy within creative industries or real-time adaptation in music production was found.\n\n## Reasoning\nThe search did not yield any existing theories or frameworks that combine military strategy with creative album production orchestration, indicating that this specific fusion has not been previously explored.\n",
+    "refutation_filename": "refutations/2026-08-30-homospatial-military-strategy-x-creative-album-production-orchestration-refutation.md",
+    "refutation_content": "# Adversarial Refutation: Homospatial — Military Strategy ⊕ Creative Album Production Orchestration\n\n**Original**: `hypotheses/2026-08-30-homospatial-military-strategy-x-creative-album-production-orchestration.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 0 of 3 survive → **REFUTED**\n\n- **Coherence — REFUTED.** The claim of 'Creative Tactical Orchestration' conflates distinct processes from military strategy and album production without demonstrating a genuine fusion. The terms 'tactical precision' and 'creative expression' are used interchangeably, but they represent fundamentally different mechanisms that do not cohesively integrate into a single framework. This results in a lack of coherent structural mapping, rendering the hypothesis unsupported.\n- **Testability — REFUTED.** The hypothesis lacks operationalization of its core claim, 'Creative Tactical Orchestration,' as it does not specify measurable metrics, comparison conditions, or rejection thresholds. The vague nature of the claim makes it impossible to design an experiment that could yield a definitive 'no,' thus failing the testability criterion.\n- **Triviality — REFUTED.** The claim reduces to a general assertion that any two complex systems can be integrated to create a new cohesive entity. This is trivially true for countless combinations of systems, lacking specificity and depth. The hypothesis does not present a unique or novel framework, as it merely suggests a synthesis of structured decision-making and creativity, which is a common theme across various domains.\n\n## No steelman offered\n\nAll three lenses independently converged on REFUTED for this case. If revisited, it would need a genuinely tighter formulation, not a restatement of the same claim.\n",
+    "refutation_independently_confirmed": true
+  },
+  {
+    "key": "2026-08-30-homospatial-neuroscience-x-economics",
+    "mode": "homospatial",
+    "source": null,
+    "domains": [
+      "Neuroscience — cortical map reorganization",
+      "Economics — market microstructure and order books"
+    ],
+    "verdict": "NO_SIGNAL",
+    "points": -5,
+    "badges": [
+      "🪞 Homospatial",
+      "💀 Refuted"
+    ],
+    "breakdown": [
+      "Phase 1 self-report (5/5): +10",
+      "Phase 2 NO_SIGNAL: +0 (pending)",
+      "Adversarial refutation REFUTED: -15",
+      "  independently confirmed (3 separate agents, full agreement)"
+    ],
+    "held_out_reason": null,
+    "notes": "The search did not yield any sources discussing 'Neuroeconomic Order Mapping' or a framework combining cortical map reorganization with market microstructure. Existing neuroeconomic theories focus on the neural basis of economic decision-making but do not address the specific integration proposed in the hypothesis.",
+    "self_reported_distance": 5,
+    "self_reported_tension": null,
+    "hypothesis_filename": "2026-08-30-homospatial-neuroscience-x-economics.md",
+    "hypothesis_content": "# Homospatial Hypothesis: Neuroscience — cortical map reorganization ⊕ Economics — market microstructure and order books\n\n**Generated**: 2026-08-30\n**Framework**: UMPF Homospatial Hypothesis Engine (Exponent Labs LLC)\n\n---\n\n## 1. The Two Source Entities\n\n**Entity A — Neuroscience — cortical map reorganization**: Cortical map reorganization refers to the brain's ability to adapt its neural pathways in response to learning, injury, or sensory changes, allowing different brain regions to take over functions previously managed by others.\n\n**Entity B — Economics — market microstructure and order books**: Market microstructure involves the processes and mechanisms through which securities are traded, focusing on the order book, which records all buy and sell orders, and how these orders influence price formation and market behavior.\n\n## 2. The Superimposition\n\nWhen cortical map reorganization and market microstructure are overlaid, a dynamic system emerges where neural pathways adapt in real-time to changing market conditions. In this composite, the brain's neural networks function as an order book, where each synaptic connection represents a buy or sell order. As market conditions fluctuate, the cortical map reorganizes itself to prioritize certain pathways, analogous to how an order book adjusts to reflect the most active trades. This overlay reveals a continuous feedback loop where cognitive processes of decision-making and sensory input are reshaped by market activity, while simultaneously influencing trading decisions based on past experiences and learned behaviors.\n\n## 3. The Emergent Third Thing\n\nThe emergent entity is called \"Neuroeconomic Order Mapping.\" It is a system where the brain's neural architecture functions as a responsive order book, dynamically reorganizing to reflect real-time economic transactions and market behaviors. Neuroeconomic Order Mapping allows for the immediate adaptation of cognitive processes to market fluctuations, resulting in a seamless integration of decision-making and sensory input that shapes trading strategies and responses.\n\n## 4. The Hypothesis\n\n1. **Fusion sentence (required):** I force cortical map reorganization and market microstructure into the same slot until Neuroeconomic Order Mapping emerges.\n2. **Falsifiable prediction:** If Neuroeconomic Order Mapping is real, then analyzing traders' neural activity during market fluctuations should reveal adaptive changes in neural pathways that correspond to their trading behavior.\n\n## 5. Novelty & Testability Self-Critique\n\n- **Fusion distance (1-5)**: 5 — the two source entities operate in distinctly different fields (neuroscience and economics), making this fusion a significant conceptual leap.\n- **Testability**: The hypothesis could be tested through neuroimaging studies that correlate neural activity patterns with trading decisions in real-time market scenarios.\n- **Known prior art**: Not verified.\n- **Confidence this is worth a researcher's time**: High, as it explores the intersection of cognitive neuroscience and economic behavior, potentially leading to new insights in both fields.\n\n## 6. If This Doesn't Hold\n\nThe most likely reason Neuroeconomic Order Mapping turns out to just be domain A and domain B described side by side is that the two mechanisms operate on fundamentally different principles, failing to create a genuine fusion.\n\n## Search Queries\n\n1. \"Neuroeconomic Order Mapping\" theory OR framework OR researcher\n2. \"cortical map reorganization\" and \"market microstructure\"\n3. \"neuroscience of trading behavior\"\n4. \"neural pathways in economic decision making\"\n5. \"order book dynamics and brain function\"\n",
+    "verification_filename": "2026-08-30-homospatial-neuroscience-x-economics-verification.md",
+    "verification_content": "# Verification: Homospatial — Neuroscience — cortical map reorganization ⊕ Economics — market microstructure and order books\n\n**Verifies**: `hypotheses/2026-08-30-homospatial-neuroscience-x-economics.md`\n**Verified**: 2026-08-30 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)\n\n## Verdict: **NO_SIGNAL**\n\n## Queries\n- `Neuroeconomic Order Mapping\" theory OR framework OR researcher`\n- `cortical map reorganization\" and \"market microstructure`\n- `neuroscience of trading behavior`\n- `neural pathways in economic decision making`\n- `order book dynamics and brain function`\n\n## What was found\nNo references to 'Neuroeconomic Order Mapping' theory or framework were found. While neuroeconomic theories explore the neural basis of economic decision-making, such as the neuronal theory of sequential economic choice ([journals.sagepub.com](https://journals.sagepub.com/doi/10.1177/2398212818766675?utm_source=openai)), there is no evidence of a concept specifically integrating cortical map reorganization with market microstructure.\n\n## Reasoning\nThe search did not yield any sources discussing 'Neuroeconomic Order Mapping' or a framework combining cortical map reorganization with market microstructure. Existing neuroeconomic theories focus on the neural basis of economic decision-making but do not address the specific integration proposed in the hypothesis.\n",
+    "refutation_filename": "refutations/2026-08-30-homospatial-neuroscience-x-economics-refutation.md",
+    "refutation_content": "# Adversarial Refutation: Homospatial — Neuroscience — cortical map reorganization ⊕ Economics — market microstructure and order books\n\n**Original**: `hypotheses/2026-08-30-homospatial-neuroscience-x-economics.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 0 of 3 survive → **REFUTED**\n\n- **Coherence — REFUTED.** The claim of 'Neuroeconomic Order Mapping' conflates distinct mechanisms from neuroscience and economics without a coherent structural mapping. The analogy of cortical reorganization functioning as an order book lacks clarity and specificity, leading to equivocation on terms. This results in a failure to establish a genuine fusion between the two domains, rendering the hypothesis vacuous.\n- **Testability — REFUTED.** The core claim lacks operationalization, as it does not specify measurable metrics, comparison conditions, or rejection thresholds for the proposed 'Neuroeconomic Order Mapping.' The vague nature of the claim, particularly the assertion of dynamic reorganization without clear experimental parameters, renders it unfalsifiable.\n- **Triviality — REFUTED.** The claim reduces to a vague assertion that the brain's neural architecture can adapt to economic transactions, which is a general characteristic of complex systems. This triviality renders the hypothesis non-specific and not novel, as it does not provide a unique or testable framework beyond what is already understood about neural adaptability and economic behavior.\n\n## No steelman offered\n\nAll three lenses independently converged on REFUTED for this case. If revisited, it would need a genuinely tighter formulation, not a restatement of the same claim.\n",
+    "refutation_independently_confirmed": true
+  },
+  {
+    "key": "2026-08-30-homospatial-physical-mechanical-vibration-x-physical-power-grid-orchestration",
+    "mode": "homospatial",
+    "source": null,
+    "domains": [
+      "Physical Mechanical Vibration",
+      "Physical Power Grid Orchestration"
+    ],
+    "verdict": "ADJACENT_ACTIVE",
+    "points": 40,
+    "badges": [
+      "🪞 Homospatial",
+      "🗺️ Frontier Research Group"
+    ],
+    "breakdown": [
+      "Phase 1 self-report (5/5): +10",
+      "Phase 2 ADJACENT_ACTIVE: +30"
+    ],
+    "held_out_reason": null,
+    "notes": "While there is no direct reference to a 'Vibrational Energy Modulator (VEM)' system, the integration of mechanical vibrations with electrical power management is an area of active research. The existing studies on forced oscillations, aeolian vibrations, and torsional vibrations in power systems indicate a fertile ground for developing systems that modulate energy distribution based on vibrational feedback.",
+    "self_reported_distance": 5,
+    "self_reported_tension": null,
+    "hypothesis_filename": "2026-08-30-homospatial-physical-mechanical-vibration-x-physical-power-grid-orchestration.md",
+    "hypothesis_content": "# Homospatial Hypothesis: Physical Mechanical Vibration ⊕ Physical Power Grid Orchestration\n\n**Generated**: 2026-08-30\n**Framework**: UMPF Homospatial Hypothesis Engine (Exponent Labs LLC)\n\n---\n\n## 1. The Two Source Entities\n\n**Entity A — Physical Mechanical Vibration**: This domain involves the oscillation of physical objects, where mechanical vibrations can propagate through materials, affecting their structure and behavior. These vibrations can lead to energy transfer, resonance, and various mechanical effects in systems.\n\n**Entity B — Physical Power Grid Orchestration**: This domain encompasses the management and distribution of electrical power across a network, ensuring that energy flows efficiently from generation sources to consumers. It involves real-time monitoring, load balancing, and coordination of multiple energy inputs and outputs to maintain stability in the grid.\n\n## 2. The Superimposition\n\nWhen mechanical vibrations are superimposed onto a power grid orchestration framework, the vibrations act as dynamic signals that modulate the flow of electrical energy. The mechanical oscillations create fluctuations in the grid's voltage and current, which can be harnessed to optimize energy distribution. As vibrations propagate through the grid infrastructure, they trigger responsive adjustments in energy flow, enabling real-time adaptations to changing load conditions. This overlay reveals a new system where energy transfer is not just a static flow but a responsive, oscillatory interaction that enhances grid stability and efficiency.\n\n## 3. The Emergent Third Thing\n\nThe resulting entity is called a **Vibrational Energy Modulator (VEM)**. The VEM is a system that integrates mechanical vibrations with electrical power management, allowing for the dynamic modulation of energy distribution based on real-time vibrational feedback. It operates by converting mechanical oscillations into electrical signals that inform the grid's orchestration, creating a self-regulating energy system that adapts to both mechanical and electrical demands simultaneously.\n\n## 4. The Hypothesis\n\n1. **Fusion sentence (required):** I force physical mechanical vibration and physical power grid orchestration into the same slot until Vibrational Energy Modulator emerges.\n2. **Falsifiable prediction:** If the Vibrational Energy Modulator is real, then implementing mechanical vibrations in power grid systems will lead to measurable improvements in energy efficiency and stability under varying load conditions.\n\n## 5. Novelty & Testability Self-Critique\n\n- **Fusion distance (1-5)**: 5 — The two source entities operate in fundamentally different domains, with mechanical vibrations and electrical power management representing distinct physical phenomena.\n- **Testability**: The hypothesis could be confirmed through experiments measuring energy efficiency and stability in a power grid that incorporates mechanical vibration sensors and modulators.\n- **Known prior art**: Not verified.\n- **Confidence this is worth a researcher's time**: High, as the integration of mechanical and electrical systems presents significant potential for innovation in energy management.\n\n## 6. If This Doesn't Hold\n\nThe most likely reason the \"emergent third thing\" turns out to just be domain A and domain B described side by side is that the mechanical vibrations do not effectively influence the electrical dynamics of the grid, resulting in separate operational mechanisms rather than a cohesive fusion.\n\n## Search Queries\n\n1. \"Vibrational Energy Modulator theory OR framework\"\n2. \"mechanical vibrations in power grid management\"\n3. \"energy efficiency through mechanical oscillations\"\n4. \"real-time energy distribution modulation\"\n5. \"integrating mechanical systems with electrical grids\"\n",
+    "verification_filename": "2026-08-30-homospatial-physical-mechanical-vibration-x-physical-power-grid-orchestration-verification.md",
+    "verification_content": "# Verification: Homospatial — Physical Mechanical Vibration ⊕ Physical Power Grid Orchestration\n\n**Verifies**: `hypotheses/2026-08-30-homospatial-physical-mechanical-vibration-x-physical-power-grid-orchestration.md`\n**Verified**: 2026-08-30 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)\n\n## Verdict: **ADJACENT_ACTIVE**\n\n## Queries\n- `Vibrational Energy Modulator theory OR framework`\n- `mechanical vibrations in power grid management`\n- `energy efficiency through mechanical oscillations`\n- `real-time energy distribution modulation`\n- `integrating mechanical systems with electrical grids`\n\n## What was found\nResearch on forced oscillations in power systems, including detection and mitigation techniques, is ongoing. ([link.springer.com](https://link.springer.com/article/10.1007/s40565-017-0273-4?utm_source=openai)) Studies on aeolian vibrations affecting power lines, such as their impact on conductor fatigue, have been conducted. ([technav.ieee.org](https://technav.ieee.org/topic/aeolian-vibration/?utm_source=openai)) Additionally, investigations into torsional vibrations in turbine-generator units are active. ([powermag.com](https://www.powermag.com/restraining-torsional-vibration/?utm_source=openai))\n\n## Reasoning\nWhile there is no direct reference to a 'Vibrational Energy Modulator (VEM)' system, the integration of mechanical vibrations with electrical power management is an area of active research. The existing studies on forced oscillations, aeolian vibrations, and torsional vibrations in power systems indicate a fertile ground for developing systems that modulate energy distribution based on vibrational feedback.\n",
+    "refutation_filename": null,
+    "refutation_content": null,
+    "refutation_independently_confirmed": false
+  },
+  {
+    "key": "2026-08-30-homospatial-telecommunications-x-quantum-physics",
+    "mode": "homospatial",
+    "source": null,
+    "domains": [
+      "Telecommunications",
+      "Quantum Physics"
+    ],
+    "verdict": "ADJACENT_ACTIVE",
+    "points": 40,
+    "badges": [
+      "🪞 Homospatial",
+      "🗺️ Frontier Research Group"
+    ],
+    "breakdown": [
+      "Phase 1 self-report (5/5): +10",
+      "Phase 2 ADJACENT_ACTIVE: +30"
+    ],
+    "held_out_reason": null,
+    "notes": "The concept of Quantum Packet Networks (QPN) aligns with current research in quantum networking, particularly in areas like quantum superposition in network configurations and packet switching for quantum data transmission. While the exact term 'Quantum Packet Network' is not widely used, the principles described are actively being explored in the field. This indicates that the hypothesis is situated within ongoing research, making it a promising area for further investigation.",
+    "self_reported_distance": 5,
+    "self_reported_tension": null,
+    "hypothesis_filename": "2026-08-30-homospatial-telecommunications-x-quantum-physics.md",
+    "hypothesis_content": "# Homospatial Hypothesis: Telecommunications ⊕ Quantum Physics\n\n**Generated**: 2026-08-30\n**Framework**: UMPF Homospatial Hypothesis Engine (Exponent Labs LLC)\n\n---\n\n## 1. The Two Source Entities\n\n**Entity A — Telecommunications**: In telecommunications, packet switching and routing involve breaking data into packets that are sent through various paths in a network, allowing for efficient and flexible communication. The routing mechanism determines the best path for each packet based on current network conditions.\n\n**Entity B — Quantum Physics**: In quantum physics, particle position is uncertain, and measurement results can be binary, leading to superposition states where particles exist in multiple states simultaneously. The evolution of a quantum system is governed by physical laws, and measurement can collapse the atomic wavefunction, determining a specific state.\n\n## 2. The Superimposition\n\nWhen packet switching and routing are overlaid with quantum mechanics, a new system emerges where data packets exist in superposition, allowing them to occupy multiple paths simultaneously until a measurement is made. The routing mechanism adapts in real-time to the quantum state of the packets, dynamically determining the best path based on probabilistic outcomes rather than fixed routes. This results in a network where the flow of information is not only contingent on the current state of the network but also on the inherent uncertainties of quantum states, creating a flexible, responsive communication system that evolves with the data itself.\n\n## 3. The Emergent Third Thing\n\nThis new entity is called **Quantum Packet Network (QPN)**. The Quantum Packet Network allows data packets to exist in a state of superposition, enabling them to traverse multiple pathways in the network simultaneously. The routing decisions are made based on real-time measurements of the quantum states, leading to an adaptive communication system that optimizes data flow and reduces latency by leveraging the principles of quantum mechanics.\n\n## 4. The Hypothesis\n\n1. **Fusion sentence (required):** I force telecommunications packet switching and quantum physics measurement dynamics into the same slot until the Quantum Packet Network emerges.\n2. **Falsifiable prediction:** If the Quantum Packet Network is real, then it should demonstrate a reduction in data transmission latency compared to classical packet-switched networks under conditions of high uncertainty.\n\n## 5. Novelty & Testability Self-Critique\n\n- **Fusion distance (1-5)**: 5 — the two source entities are from fundamentally different domains, with telecommunications focusing on data transfer and quantum physics on particle behavior, making the fusion a significant conceptual leap.\n- **Testability**: The hypothesis could be confirmed by developing a prototype of the Quantum Packet Network and measuring its performance against traditional packet-switched systems in various scenarios, particularly those involving high uncertainty.\n- **Known prior art**: Not verified.\n- **Confidence this is worth a researcher's time**: High, as it explores the intersection of quantum mechanics and telecommunications, potentially leading to groundbreaking advancements in data communication.\n\n## 6. If This Doesn't Hold\n\nThe most likely reason the Quantum Packet Network turns out to just be domain A and domain B described side by side rather than a genuine fusion is that the mechanisms of packet routing and quantum measurement operate on fundamentally different principles and timescales, preventing a true integration.\n\n## Search Queries\n\n1. \"Quantum Packet Network theory OR framework\"\n2. \"quantum superposition in telecommunications\"\n3. \"quantum routing mechanisms\"\n4. \"quantum communication systems\"\n5. \"quantum mechanics applied to data networks\"\n",
+    "verification_filename": "2026-08-30-homospatial-telecommunications-x-quantum-physics-verification.md",
+    "verification_content": "# Verification: Homospatial — Telecommunications ⊕ Quantum Physics\n\n**Verifies**: `hypotheses/2026-08-30-homospatial-telecommunications-x-quantum-physics.md`\n**Verified**: 2026-08-30 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)\n\n## Verdict: **ADJACENT_ACTIVE**\n\n## Queries\n- `Quantum Packet Network theory OR framework`\n- `quantum superposition in telecommunications`\n- `quantum routing mechanisms`\n- `quantum communication systems`\n- `quantum mechanics applied to data networks`\n\n## What was found\nQuantum networks theory extends quantum mechanics to network configurations, allowing nodes to exist in superposition states and enabling dynamic network topologies. ([doi.org](https://doi.org/10.22331/q-2024-10-23-1508?utm_source=openai)) Packet switching in quantum networks introduces a new paradigm for quantum data transmission, proposing a classical-quantum data frame structure and methods for frame generation and processing. ([doi.org](https://doi.org/10.1103%2FPhysRevResearch.4.043064?utm_source=openai)) Quantum technologies in the telecommunications industry explore the integration of quantum-based technologies into telecommunications, highlighting the potential for quantum communication systems. ([link.springer.com](https://link.springer.com/article/10.1140/epjqt/s40507-021-00108-9?utm_source=openai))\n\n## Reasoning\nThe concept of Quantum Packet Networks (QPN) aligns with current research in quantum networking, particularly in areas like quantum superposition in network configurations and packet switching for quantum data transmission. While the exact term 'Quantum Packet Network' is not widely used, the principles described are actively being explored in the field. This indicates that the hypothesis is situated within ongoing research, making it a promising area for further investigation.\n",
+    "refutation_filename": null,
+    "refutation_content": null,
+    "refutation_independently_confirmed": false
+  },
+  {
+    "key": "2026-08-30-human-committee-formation-x-physical-acoustic-resonance",
+    "mode": "bisociation",
+    "source": null,
+    "domains": [
+      "Human Committee Formation",
+      "Physical Acoustic Resonance"
+    ],
+    "verdict": "ADJACENT_ACTIVE",
+    "points": 38,
+    "badges": [
+      "🧬 Bisociative",
+      "🗺️ Frontier Research Group"
+    ],
+    "breakdown": [
+      "Phase 1 self-report (4/5): +8",
+      "Phase 2 ADJACENT_ACTIVE: +30"
+    ],
+    "held_out_reason": null,
+    "notes": "The search results reveal active research in both human consensus decision-making and acoustic resonance, indicating that the proposed mapping between these domains has not been directly explored. This suggests that the hypothesis is in the ADJACENT_ACTIVE category, with relevant research existing near the domains but not the exact connection.",
+    "self_reported_distance": 4,
+    "self_reported_tension": null,
+    "hypothesis_filename": "2026-08-30-human-committee-formation-x-physical-acoustic-resonance.md",
+    "hypothesis_content": "# Hypothesis: Human Committee Formation × Physical Acoustic Resonance\n\n**Generated**: 2026-08-30\n**Framework**: UMPF Two-Domain Hypothesis Engine (Exponent Labs LLC)\n\n---\n\n## 1. The Two Frames (M₁, M₂)\n\n**M₁ — Human Committee Formation**: In this domain, groups of individuals come together to make decisions, often negotiating and reaching consensus through discussion and compromise. The dynamics of interaction can lead to the emergence of leadership roles and varying levels of participation among members.\n\n**M₂ — Physical Acoustic Resonance**: This domain involves the phenomenon where an object vibrates at specific frequencies, amplifying sound waves due to constructive interference. The resonance occurs when the frequency of external vibrations matches the natural frequency of the object, leading to enhanced sound output.\n\n## 2. Monadic Signature of Each Domain\n\n| Layer | Human Committee Formation | Physical Acoustic Resonance |\n|---|---|---|\n| Atomic (Maybe/Either) | Uncertainty in member agreement or participation | Uncertainty in whether a frequency matches the natural frequency of the object |\n| Domain (State/Reader/Writer) | Evolving state of group dynamics and decision-making | Evolving state of sound waves and resonance conditions |\n| Control (IO/STM) | Interaction boundaries defined by group norms and communication | Interaction boundaries defined by physical properties of materials and sound waves |\n| Orchestration (Free/effects) | Overall group effectiveness and decision quality | Overall sound amplification and clarity achieved through resonance |\n\n## 3. The Candidate Functor\n\nThe proposed mapping *f: M(Human Committee Formation) → M(Physical Acoustic Resonance)* is as follows: the negotiation and consensus-building process in committees maps to the constructive interference of sound waves in resonance; the evolving dynamics of group participation correspond to the changing amplitude of sound waves as they resonate. For this functor to hold, both domains must exhibit a consistent pattern where the interaction dynamics lead to a stable outcome — either a decision in committees or a sustained sound amplification in resonance.\n\n## 4. The Hypothesis\n\n1. **Generative-relation sentence (required):** I noticed that the relational rule governing the consensus-building process in human committees also governed the amplification of sound waves in physical acoustic resonance — specifically the rule of constructive interference leading to stable outcomes.\n2. **Falsifiable prediction:** If that relation holds, then increasing the diversity of member opinions in a committee should lead to a more stable decision-making process, analogous to how varying frequencies can enhance resonance stability — or vice versa.\n\n## 5. Novelty & Testability Self-Critique\n\n- **Distance score (1-5)**: 4 — While both domains involve dynamics and interactions, they are typically treated in isolation, with little crossover in research or application.\n- **Testability**: Specific experiments could involve measuring decision stability in committees with varying levels of opinion diversity and comparing this to acoustic resonance experiments with varying frequencies to see if similar patterns emerge.\n- **Known prior art**: Not verified; there appears to be no existing literature directly linking committee dynamics with acoustic resonance phenomena.\n- **Confidence this is worth a researcher's time**: Medium, as the proposed connection is intriguing but may require substantial foundational work to establish a credible link.\n\n## 6. If This Doesn't Hold\n\nThe most likely reason this functor turns out to be superficial rather than structural is that the dynamics of human decision-making may not exhibit the same physical properties as acoustic resonance, particularly if committee outcomes are influenced by social factors that do not have direct analogs in physical systems.\n\n## Search Queries\n\n1. \"human committee decision-making dynamics\"\n2. \"acoustic resonance constructive interference\"\n3. \"group dynamics and sound amplification\"\n4. \"committee formation and consensus stability\"\n5. \"social choice theory OR group decision-making framework OR John Nash\"\n",
+    "verification_filename": "2026-08-30-human-committee-formation-x-physical-acoustic-resonance-verification.md",
+    "verification_content": "# Verification: Bisociation — Human Committee Formation × Physical Acoustic Resonance\n\n**Verifies**: `hypotheses/2026-08-30-human-committee-formation-x-physical-acoustic-resonance.md`\n**Verified**: 2026-08-30 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)\n\n## Verdict: **ADJACENT_ACTIVE**\n\n## Queries\n- `human committee decision-making dynamics`\n- `acoustic resonance constructive interference`\n- `group dynamics and sound amplification`\n- `committee formation and consensus stability`\n- `social choice theory OR group decision-making framework OR John Nash`\n\n## What was found\nResearch on human consensus decision-making highlights the integration of individual preferences and group dynamics in reaching collective decisions. Studies on acoustic resonance describe how sound waves can constructively interfere to amplify sound pressure. These findings suggest that while both domains involve processes leading to stable outcomes through interaction dynamics, the specific mapping proposed in the hypothesis has not been directly established in existing literature.\n\n## Reasoning\nThe search results reveal active research in both human consensus decision-making and acoustic resonance, indicating that the proposed mapping between these domains has not been directly explored. This suggests that the hypothesis is in the ADJACENT_ACTIVE category, with relevant research existing near the domains but not the exact connection.\n",
+    "refutation_filename": null,
+    "refutation_content": null,
+    "refutation_independently_confirmed": false
+  },
+  {
+    "key": "2026-08-30-immunology-x-linguistics",
+    "mode": "bisociation",
+    "source": null,
+    "domains": [
+      "Immunology",
+      "Linguistics"
+    ],
+    "verdict": "NO_SIGNAL",
+    "points": -7,
+    "badges": [
+      "🧬 Bisociative",
+      "💀 Refuted"
+    ],
+    "breakdown": [
+      "Phase 1 self-report (4/5): +8",
+      "Phase 2 NO_SIGNAL: +0 (pending)",
+      "Adversarial refutation REFUTED: -15",
+      "  independently confirmed (3 separate agents, full agreement)"
+    ],
+    "held_out_reason": null,
+    "notes": "The search did not yield any studies or frameworks that directly map immunological processes to linguistic phenomena. Although both fields involve complex adaptive systems, no specific research bridges the proposed mapping.",
+    "self_reported_distance": 4,
+    "self_reported_tension": null,
+    "hypothesis_filename": "2026-08-30-immunology-x-linguistics.md",
+    "hypothesis_content": "# Hypothesis: Immunology × Linguistics\n\n**Generated**: 2026-08-30\n**Framework**: UMPF Two-Domain Hypothesis Engine (Exponent Labs LLC)\n\n---\n\n## 1. The Two Frames (M₁, M₂)\n\n**M₁ — Immunology**: The innate immune response is the body's first line of defense against pathogens, involving a rapid, non-specific reaction that includes various cells and proteins recognizing and responding to infections.\n\n**M₂ — Linguistics**: Historical sound change refers to the systematic alterations in pronunciation and phonetic structure of words over time within a language, often influenced by social, geographical, and contextual factors.\n\n## 2. Monadic Signature of Each Domain\n\n| Layer | Immunology | Linguistics |\n|---|---|---|\n| Atomic (Maybe/Either) | Presence or absence of pathogens triggers immune responses. | Variants of sounds may exist or be lost in a language over time. |\n| Domain (State/Reader/Writer) | The immune system evolves through memory and adaptation to previously encountered pathogens. | Languages evolve through the adaptation of phonetic rules and the introduction of new sounds. |\n| Control (IO/STM) | Immune cells interact with pathogens and other cells to coordinate a response. | Phonemes interact within a language's phonological system, influencing how sounds are produced and perceived. |\n| Orchestration (Free/effects) | The immune response is a complex system where various components work together to eliminate threats. | Sound changes are orchestrated by social factors, leading to a cohesive evolution of language over time. |\n\n## 3. The Candidate Functor\n\nThe proposed mapping *f: M(Immunology) → M(Linguistics)* is as follows:  \n- The presence of pathogens (Atomic) maps to the presence of sound variants (Atomic).  \n- The evolution of immune memory (Domain) maps to the evolution of phonetic rules (Domain).  \n- Immune interactions (Control) map to phoneme interactions (Control).  \n- The orchestration of immune responses (Orchestration) maps to the orchestration of sound changes (Orchestration).  \n\nFor this functor to hold, both domains must demonstrate a systematic mechanism where the presence of an initial element (pathogen or sound variant) leads to a structured evolutionary response (immune adaptation or phonetic evolution).\n\n## 4. The Hypothesis\n\n1. **Generative-relation sentence (required):** I noticed that the relational rule governing the adaptive response of the innate immune system to pathogens also governed the evolution of phonetic rules in languages — specifically, that both systems exhibit a structured reaction to initial stimuli leading to adaptation over time.\n2. **Falsifiable prediction:** If that relation holds, then changes in the frequency of specific pathogens should correlate with predictable shifts in phonetic variants within a language community — or vice versa.\n\n## 5. Novelty & Testability Self-Critique\n\n- **Distance score (1-5)**: 4. While both fields study systems that evolve over time, immunology and linguistics are typically treated as distinct disciplines with different methodologies and terminologies.\n- **Testability**: Analyzing historical linguistic data alongside epidemiological data to find correlations between the emergence of specific sounds and the prevalence of certain pathogens could confirm or disprove this hypothesis.\n- **Known prior art**: Not verified; while there are studies on language evolution and adaptation, direct connections to immunological mechanisms are not well-established.\n- **Confidence this is worth a researcher's time**: Medium, as the proposal is novel but would require interdisciplinary collaboration and may face challenges in data availability.\n\n## 6. If This Doesn't Hold\n\nThe most likely reason this functor turns out to be superficial rather than structural is that the mechanisms of adaptation in the immune system are fundamentally biological and biochemical, while phonetic changes may be more influenced by social and cultural factors, leading to a divergence in their adaptive processes.\n\n## Search Queries\n\n1. \"innate immune response adaptation sound change correlation\"\n2. \"historical linguistics phonetic evolution immunology\"\n3. \"pathogen presence influence on language sound change\"\n4. \"adaptive mechanisms in immunology and linguistics\"\n5. \"evolutionary linguistics named theory OR framework OR researcher\"\n",
+    "verification_filename": "2026-08-30-immunology-x-linguistics-verification.md",
+    "verification_content": "# Verification: Bisociation — Immunology × Linguistics\n\n**Verifies**: `hypotheses/2026-08-30-immunology-x-linguistics.md`\n**Verified**: 2026-08-30 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)\n\n## Verdict: **NO_SIGNAL**\n\n## Queries\n- `innate immune response adaptation sound change correlation`\n- `historical linguistics phonetic evolution immunology`\n- `pathogen presence influence on language sound change`\n- `adaptive mechanisms in immunology and linguistics`\n- `evolutionary linguistics named theory OR framework OR researcher`\n\n## What was found\nNo direct studies or frameworks explicitly mapping immunological processes to linguistic phenomena were identified. While both fields involve complex adaptive systems, no specific research bridges the proposed mapping.\n\n## Reasoning\nThe search did not yield any studies or frameworks that directly map immunological processes to linguistic phenomena. Although both fields involve complex adaptive systems, no specific research bridges the proposed mapping.\n",
+    "refutation_filename": "refutations/2026-08-30-immunology-x-linguistics-refutation.md",
+    "refutation_content": "# Adversarial Refutation: Bisociation — Immunology × Linguistics\n\n**Original**: `hypotheses/2026-08-30-immunology-x-linguistics.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 0 of 3 survive → **REFUTED**\n\n- **Coherence — REFUTED.** The claimed structural mapping between immunology and linguistics relies on equivocal terms that do not represent genuinely analogous mechanisms. For instance, the 'presence of pathogens' and 'presence of sound variants' are fundamentally different phenomena, lacking a coherent underlying mechanism that justifies their comparison. This results in a context-dependent compromise rather than a true bisociation.\n- **Testability — REFUTED.** The hypothesis lacks operationalization of its predictions, as it does not specify named metrics, comparison conditions, or rejection thresholds for the proposed mappings between immunology and linguistics. The vague nature of the claim, particularly the broad terms like 'evolution of immune memory' and 'orchestration of sound changes,' prevents any clear experimental design that could yield a definitive 'no' outcome.\n- **Triviality — REFUTED.** The claim reduces to a general assertion that complex systems can exhibit structured responses to initial elements, which is true for many systems. This triviality undermines the specificity of the proposed mapping between immunology and linguistics, as it does not provide a unique or novel insight beyond what is applicable to numerous other complex systems.\n\n## No steelman offered\n\nAll three lenses independently converged on REFUTED for this case. If revisited, it would need a genuinely tighter formulation, not a restatement of the same claim.\n",
+    "refutation_independently_confirmed": true
+  },
+  {
+    "key": "2026-08-30-janusian-cell-biology",
+    "mode": "janusian",
+    "source": null,
+    "domains": [
+      "Cell biology — mitochondrial energy production"
+    ],
+    "verdict": "ADJACENT_ACTIVE",
+    "points": 13,
+    "badges": [
+      "🎭 Janusian",
+      "🗺️ Frontier Research Group",
+      "⚠️ Failed Honesty Check",
+      "💀 Refuted"
+    ],
+    "breakdown": [
+      "Phase 1 self-report (4/5): +8",
+      "Phase 2 ADJACENT_ACTIVE: +30",
+      "Mechanical honesty check failed twice (disguised compromise, uncorrected): -10",
+      "Adversarial refutation REFUTED: -15",
+      "  independently confirmed (3 separate agents, full agreement)"
+    ],
+    "held_out_reason": null,
+    "notes": "The search revealed that mitochondrial efficiency is not fixed and can fluctuate based on cellular conditions, supporting the hypothesis that cells under metabolic stress can exhibit both high and low ATP yields simultaneously. This variability aligns with the proposed theory that mitochondrial energy production can be both efficient and inefficient under the same conditions.",
+    "self_reported_distance": null,
+    "self_reported_tension": 4,
+    "hypothesis_filename": "2026-08-30-janusian-cell-biology.md",
+    "hypothesis_content": "# Janusian Hypothesis: Cell biology — mitochondrial energy production\n\n**Generated**: 2026-08-30\n**Framework**: UMPF Janusian Hypothesis Engine (Exponent Labs LLC)\n\n---\n\n## 1. The Domain\n\nMitochondria are organelles within cells that produce adenosine triphosphate (ATP) through oxidative phosphorylation, which is crucial for cellular energy. This process involves the electron transport chain and the generation of a proton gradient, ultimately leading to ATP synthesis.\n\n## 2. The Proposition\n\nMitochondrial energy production is a highly efficient process that maximizes ATP yield from nutrients.\n\n## 3. The Inversion\n\nThe exact opposite is true: mitochondrial energy production is a highly inefficient process that minimizes ATP yield from nutrients.\n\n## 4. The Simultaneous Hold\n\n> \"Mitochondrial energy production is a highly efficient process that maximizes ATP yield from nutrients.\"  \n> \"Mitochondrial energy production is a highly inefficient process that minimizes ATP yield from nutrients.\"  \n> \"Both are true simultaneously.\"\n\n- **(A) Compromise**: Mitochondrial efficiency can vary, leading to both high and low ATP yields, depending on specific conditions.\n- **(B) Synthesis**: Mitochondrial efficiency can be viewed as a balance between energy production and energy expenditure, thus resolving the contradiction.\n- **(C) Paradox**: Mitochondrial energy production can be both efficient and inefficient at the same time for the same cell under fluctuating metabolic demands, reflecting a dual nature of energy production.\n\n(C) is the paradox because it asserts that both efficiency and inefficiency coexist in the same mitochondrial function during varying cellular states, rather than resolving the contradiction into a compromise or synthesis.\n\n## 5. The Hypothesis (The Third Thing)\n\n1. **Simultaneous-hold sentence (required):** \"Both mitochondrial energy production being efficient and inefficient are true simultaneously for the same cellular conditions; the theory must contain both.\"\n2. **Falsifiable prediction:** \"If both mitochondrial energy production is efficient and inefficient hold simultaneously for the same instance, then we would observe that cells under metabolic stress exhibit ATP yields that are both high and low concurrently, which neither truth alone predicts.\"\n\n## 6. Novelty & Testability Self-Critique\n\n- **Tension score (1-5)**: 4 — the assumption of mitochondrial efficiency is a foundational premise in cell biology, and challenging it could lead to significant implications for understanding metabolism and disease.\n- **Testability**: Specific experiments measuring ATP yield in the same cell under varying metabolic conditions (e.g., nutrient availability, oxidative stress) could confirm or challenge this hypothesis.\n- **Known prior art**: Not verified; the tension between efficiency and inefficiency in mitochondrial function may not have been explicitly framed as a paradox in existing literature.\n- **Confidence this is worth a researcher's time**: Medium, as exploring this paradox could yield insights into mitochondrial dysfunction and its role in diseases.\n\n## 7. If This Doesn't Hold\n\nThe most likely reason this turns out to be a compromise or synthesis wearing paradox's clothing is that the efficiency and inefficiency of mitochondrial energy production may apply to different metabolic states of the same mitochondria, rather than being a simultaneous contradiction in the same instance.\n\n## Search Queries\n\n1. \"mitochondrial bioenergetics named theory OR framework OR researcher\"  \n2. \"mitochondrial energy production efficiency inefficiency paradox\"  \n3. \"oxidative phosphorylation ATP yield variability\"  \n4. \"mitochondrial dysfunction energy production efficiency\"  \n5. \"mitochondrial efficiency under stress conditions\"\n\n---\n\n**⚠️ Automated check failed twice:** §4/§5 still fail the Janusian same-instance test (context-split and/or missing simultaneous-hold signature) after one corrective retry. This may be a disguised compromise (A) or synthesis (B) mislabeled as paradox (C) — not a thesis-grade Janusian lead until rewritten.\n",
+    "verification_filename": "2026-08-30-janusian-cell-biology-verification.md",
+    "verification_content": "# Verification: Janusian — Cell biology — mitochondrial energy production\n\n**Verifies**: `hypotheses/2026-08-30-janusian-cell-biology.md`\n**Verified**: 2026-08-30 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)\n\n## Verdict: **ADJACENT_ACTIVE**\n\n## Queries\n- `mitochondrial bioenergetics named theory OR framework OR researcher`\n- `mitochondrial energy production efficiency inefficiency paradox`\n- `oxidative phosphorylation ATP yield variability`\n- `mitochondrial dysfunction energy production efficiency`\n- `mitochondrial efficiency under stress conditions`\n\n## What was found\nStudies indicate that mitochondrial efficiency can vary under different conditions, such as metabolic stress, leading to both high and low ATP yields. For instance, mitochondrial uncoupling proteins (UCPs) can dissipate the proton gradient, reducing ATP production efficiency. This process is regulated to balance energy production and heat generation, which is crucial for maintaining cellular function under stress. ([abcam.com](https://www.abcam.com/en-us/technical-resources/research-areas/metabolism/metabolic-pathways-and-processes/mitochondria-and-energy-metabolism?utm_source=openai))\n\n## Reasoning\nThe search revealed that mitochondrial efficiency is not fixed and can fluctuate based on cellular conditions, supporting the hypothesis that cells under metabolic stress can exhibit both high and low ATP yields simultaneously. This variability aligns with the proposed theory that mitochondrial energy production can be both efficient and inefficient under the same conditions.\n",
+    "refutation_filename": "refutations/2026-08-30-janusian-cell-biology-refutation.md",
+    "refutation_content": "# Adversarial Refutation: Janusian — Cell biology — mitochondrial energy production\n\n**Original**: `hypotheses/2026-08-30-janusian-cell-biology.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 0 of 3 survive → **REFUTED**\n\n- **Coherence — REFUTED.** The claim that mitochondrial energy production can be both efficient and inefficient simultaneously under the same conditions lacks coherence. The terms 'efficient' and 'inefficient' are being used ambiguously, as they refer to different underlying mechanisms of energy production rather than a true paradox. The proposed simultaneous occurrence does not reflect a genuine same-instance paradox but rather a context-dependent variability that does not support the structural mapping claimed.\n- **Testability — REFUTED.** The falsifiable prediction lacks operationalization, as it does not specify a clear metric for measuring ATP yields that are 'high' and 'low' concurrently. Without defined thresholds for what constitutes high and low ATP production, the hypothesis remains vague and cannot be tested in a way that would yield a definitive 'no' outcome.\n- **Triviality — REFUTED.** The core claim reduces to a trivial assertion that complex systems can exhibit contradictory states under varying conditions. The hypothesis does not provide a novel or meaningful insight into mitochondrial energy production, as it merely states that both efficiency and inefficiency can occur simultaneously, which is a common characteristic of many complex systems.\n\n## No steelman offered\n\nAll three lenses independently converged on REFUTED for this case. If revisited, it would need a genuinely tighter formulation, not a restatement of the same claim.\n",
+    "refutation_independently_confirmed": true
+  },
+  {
+    "key": "2026-08-30-janusian-creative-musical-composition",
+    "mode": "janusian",
+    "source": null,
+    "domains": [
+      "Creative Musical Composition"
+    ],
+    "verdict": "ADJACENT_ACTIVE",
+    "points": 38,
+    "badges": [
+      "🎭 Janusian",
+      "🗺️ Frontier Research Group"
+    ],
+    "breakdown": [
+      "Phase 1 self-report (4/5): +8",
+      "Phase 2 ADJACENT_ACTIVE: +30"
+    ],
+    "held_out_reason": null,
+    "notes": "The search results reveal that while Rothenberg's 'homospatial thinking' and subconscious processes are recognized in the context of musical creativity, they do not directly support the specific claim that both conscious application of musical rules and subconscious impulses occur simultaneously in the same act of musical composition. Therefore, the hypothesis is in the 'ADJACENT_ACTIVE' category, indicating that related research exists but does not directly address the proposed claim.",
+    "self_reported_distance": null,
+    "self_reported_tension": 4,
+    "hypothesis_filename": "2026-08-30-janusian-creative-musical-composition.md",
+    "hypothesis_content": "# Janusian Hypothesis: Creative Musical Composition\n\n**Generated**: 2026-08-30\n**Framework**: UMPF Janusian Hypothesis Engine (Exponent Labs LLC)\n\n---\n\n## 1. The Domain\n\nCreative musical composition involves the process of generating original music through various techniques, including improvisation, structured composition, and the integration of different musical styles. It encompasses both the emotional expression of the composer and the technical aspects of music theory and instrumentation.\n\n## 2. The Proposition\n\nThe load-bearing assumption in this field is that creativity in musical composition is primarily driven by the conscious application of established musical rules and techniques.\n\n## 3. The Inversion\n\nThe exact opposite is true: creativity in musical composition is primarily driven by subconscious impulses that defy established musical rules and techniques.\n\n## 4. The Simultaneous Hold\n\n> \"Creativity in musical composition is primarily driven by the conscious application of established musical rules and techniques.\"  \n> \"Creativity in musical composition is primarily driven by subconscious impulses that defy established musical rules and techniques.\"  \n> \"Both are true simultaneously.\"\n\n- **(A) Compromise**: Creativity is influenced by both conscious techniques and subconscious impulses, but one is more dominant at different times.\n- **(B) Synthesis**: Creative musical composition is a combination of conscious rule-following and subconscious inspiration, leading to a balanced outcome.\n- **(C) Paradox**: Creativity in musical composition is both a structured act of following rules and a chaotic act of breaking those rules simultaneously within the same piece of music.\n\n(C) is the genuine paradox because it asserts that both conscious and subconscious influences are active at the same time in the same act of composition. (A) fails because it implies a hierarchy rather than simultaneous truth, while (B) resolves the contradiction by averaging the two rather than preserving it.\n\n## 5. The Hypothesis (The Third Thing)\n\n1. **Simultaneous-hold sentence (required)**: \"Both the conscious application of musical rules and the subconscious impulses that defy those rules are true simultaneously for the same act of musical composition; the theory must contain both.\"\n2. **Falsifiable prediction**: \"If both the conscious application of musical rules and subconscious impulses hold simultaneously for the same instance, then an analysis of a musical piece will reveal both structured elements and unexpected deviations that cannot be explained by either conscious design or subconscious impulse alone.\"\n\n## 6. Novelty & Testability Self-Critique\n\n- **Tension score (1-5)**: 4 — The assumption is foundational in music theory and composition, and challenging it could be seen as heretical by traditionalists.\n- **Testability**: Analyzing compositions through music theory analysis and psychological studies on creativity could confirm or challenge this hypothesis.\n- **Known prior art**: Not verified — while there are discussions on conscious vs. subconscious creativity, a direct exploration of this specific paradox has not been widely documented.\n- **Confidence this is worth a researcher's time**: Medium, as it could lead to new insights into the nature of creativity, but the field may require more foundational work before fully embracing this contradiction.\n\n## 7. If This Doesn't Hold\n\nThe most likely reason this turns out to be a compromise or synthesis wearing paradox's clothing is that the conscious and subconscious processes might actually apply to different aspects of the same composition, rather than being two contradictory truths existing simultaneously.\n\n## Search Queries\n\n1. \"conscious vs subconscious creativity in music composition\"\n2. \"music theory and instinctual expression in composition\"\n3. \"Albert Rothenberg creativity in music\"\n4. \"psychology of musical creativity\"\n5. \"musical composition techniques conscious subconscious\"\n",
+    "verification_filename": "2026-08-30-janusian-creative-musical-composition-verification.md",
+    "verification_content": "# Verification: Janusian — Creative Musical Composition\n\n**Verifies**: `hypotheses/2026-08-30-janusian-creative-musical-composition.md`\n**Verified**: 2026-08-30 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)\n\n## Verdict: **ADJACENT_ACTIVE**\n\n## Queries\n- `conscious vs subconscious creativity in music composition`\n- `music theory and instinctual expression in composition`\n- `Albert Rothenberg creativity in music`\n- `psychology of musical creativity`\n- `musical composition techniques conscious subconscious`\n\n## What was found\nAlbert Rothenberg's concept of 'homospatial thinking' involves conceiving multiple entities occupying the same space, leading to new identities. This cognitive process plays a significant role in creativity across various fields, including music. ([researchgate.net](https://www.researchgate.net/publication/325821684_Creativity_and_the_Homospatial_Process?utm_source=openai)) Additionally, studies have shown that both conscious and subconscious processes contribute to musical creativity. For instance, statistical learning, an implicit cognitive function, is essential for producing and comprehending structured information like music. This suggests that creativity can emerge from subconscious conditions without deliberate intention. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/33958983/?utm_source=openai))\n\n## Reasoning\nThe search results reveal that while Rothenberg's 'homospatial thinking' and subconscious processes are recognized in the context of musical creativity, they do not directly support the specific claim that both conscious application of musical rules and subconscious impulses occur simultaneously in the same act of musical composition. Therefore, the hypothesis is in the 'ADJACENT_ACTIVE' category, indicating that related research exists but does not directly address the proposed claim.\n",
+    "refutation_filename": null,
+    "refutation_content": null,
+    "refutation_independently_confirmed": false
+  },
+  {
+    "key": "2026-08-30-janusian-human-emotional-fluctuation",
+    "mode": "janusian",
+    "source": null,
+    "domains": [
+      "Human Emotional Fluctuation"
+    ],
+    "verdict": "ADJACENT_ACTIVE",
+    "points": 38,
+    "badges": [
+      "🎭 Janusian",
+      "🗺️ Frontier Research Group"
+    ],
+    "breakdown": [
+      "Phase 1 self-report (4/5): +8",
+      "Phase 2 ADJACENT_ACTIVE: +30"
+    ],
+    "held_out_reason": null,
+    "notes": "The search results provide evidence that individuals can exhibit both emotional stability and instability simultaneously, leading to both predictable and unpredictable emotional responses. This aligns with the hypothesis's claim and suggests that the theory is actively being explored in psychological research.",
+    "self_reported_distance": null,
+    "self_reported_tension": 4,
+    "hypothesis_filename": "2026-08-30-janusian-human-emotional-fluctuation.md",
+    "hypothesis_content": "# Janusian Hypothesis: Human Emotional Fluctuation\n\n**Generated**: 2026-08-30\n**Framework**: UMPF Janusian Hypothesis Engine (Exponent Labs LLC)\n\n---\n\n## 1. The Domain\n\nHuman emotional fluctuation refers to the natural variations in a person's emotional state over time, influenced by external stimuli, internal thoughts, and physiological changes. Researchers study these fluctuations to understand their implications for mental health, behavior, and interpersonal relationships.\n\n## 2. The Proposition\n\nThe load-bearing assumption in this field is that emotional states are stable within a given context and fluctuate predictably based on identifiable triggers.\n\n## 3. The Inversion\n\nThe exact opposite is true: emotional states are inherently unstable and fluctuate randomly, independent of identifiable triggers.\n\n## 4. The Simultaneous Hold\n\n> \"Emotional states are stable within a given context and fluctuate predictably based on identifiable triggers.\"  \n> \"Emotional states are inherently unstable and fluctuate randomly, independent of identifiable triggers.\"  \n> \"Both are true simultaneously.\"\n\n- **(A) Compromise**: Emotional states may fluctuate based on some identifiable triggers but can also be influenced by unpredictable factors, leading to a mixed understanding of emotional stability.\n- **(B) Synthesis**: Emotional fluctuations can be categorized into predictable patterns and random occurrences, suggesting a dual nature that resolves the contradiction rather than holding it.\n- **(C) Paradox**: Emotional stability and instability coexist; individuals can experience predictable emotional responses to certain triggers while also experiencing random fluctuations that defy those patterns.\n\n(C) is the true paradox because it asserts that both the stability and instability of emotional states can be true at the same time for the same individual. (A) fails as a hedge because it suggests a varying degree of influence from triggers, while (B) resolves the contradiction by averaging the two states instead of preserving them.\n\n## 5. The Hypothesis (The Third Thing)\n\n1. **Simultaneous-hold sentence (required)**: \"Both emotional stability and emotional instability are true simultaneously for the same individual; the theory must contain both.\"\n2. **Falsifiable prediction**: \"If both emotional stability and emotional instability hold simultaneously, then individuals will demonstrate both predictable emotional responses to certain stimuli and unpredictable emotional reactions in the same context — which would not be predicted by either truth held alone.\"\n\n## 6. Novelty & Testability Self-Critique\n\n- **Tension score (1-5)**: 4 — the assumption about emotional stability is foundational in psychology, making the inversion challenging and potentially heretical.\n- **Testability**: Longitudinal studies measuring emotional responses to the same stimuli over time could confirm or refute this hypothesis, particularly looking for instances of both stable and unstable reactions.\n- **Known prior art**: Not verified; while there are theories on emotional variability and stability, none explicitly hold this contradiction as a live paradox.\n- **Confidence this is worth a researcher's time**: Medium, as the exploration of emotional paradoxes could yield new insights into emotional health and therapy.\n\n## 7. If This Doesn't Hold\n\nThe most likely reason this turns out to be a compromise or synthesis wearing paradox's clothing is that the proposition and inversion may apply to different emotional contexts or situations, leading to a misunderstanding of their simultaneous validity.\n\n## Search Queries\n\n1. \"emotional stability and instability in psychology\"\n2. \"longitudinal studies on emotional fluctuation\"\n3. \"theories of emotional variability\"\n4. \"Albert Rothenberg emotional paradoxes\"\n5. \"human emotional responses predictability\"\n",
+    "verification_filename": "2026-08-30-janusian-human-emotional-fluctuation-verification.md",
+    "verification_content": "# Verification: Janusian — Human Emotional Fluctuation\n\n**Verifies**: `hypotheses/2026-08-30-janusian-human-emotional-fluctuation.md`\n**Verified**: 2026-08-30 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)\n\n## Verdict: **ADJACENT_ACTIVE**\n\n## Queries\n- `emotional stability and instability in psychology`\n- `longitudinal studies on emotional fluctuation`\n- `theories of emotional variability`\n- `Albert Rothenberg emotional paradoxes`\n- `human emotional responses predictability`\n\n## What was found\nThe concept of emotional stability and instability is well-established in psychology, with emotional stability being the tendency to remain calm and steady, and emotional instability involving frequent and intense mood fluctuations. Research indicates that individuals can exhibit both stable and unstable emotional responses simultaneously, leading to both predictable and unpredictable reactions to stimuli. For instance, studies have shown that emotionally unstable individuals can drive collective emotions, challenging the traditional view that stable individuals are the emotional leaders. ([arxiv.org](https://arxiv.org/abs/2510.16046?utm_source=openai)) Additionally, the 'Neuroticism Paradox' suggests that emotional volatility, rather than stability, can drive emotional contagion. ([arxiv.org](https://arxiv.org/abs/2510.16046?utm_source=openai)) These findings support the hypothesis that individuals can demonstrate both predictable and unpredictable emotional responses in the same context.\n\n## Reasoning\nThe search results provide evidence that individuals can exhibit both emotional stability and instability simultaneously, leading to both predictable and unpredictable emotional responses. This aligns with the hypothesis's claim and suggests that the theory is actively being explored in psychological research.\n",
+    "refutation_filename": null,
+    "refutation_content": null,
+    "refutation_independently_confirmed": false
+  },
+  {
+    "key": "2026-08-30-janusian-informational-sensor-networks",
+    "mode": "janusian",
+    "source": null,
+    "domains": [
+      "Informational Sensor Networks"
+    ],
+    "verdict": "ADJACENT_ACTIVE",
+    "points": 13,
+    "badges": [
+      "🎭 Janusian",
+      "🗺️ Frontier Research Group",
+      "⚠️ Failed Honesty Check",
+      "💀 Refuted"
+    ],
+    "breakdown": [
+      "Phase 1 self-report (4/5): +8",
+      "Phase 2 ADJACENT_ACTIVE: +30",
+      "Mechanical honesty check failed twice (disguised compromise, uncorrected): -10",
+      "Adversarial refutation REFUTED: -15",
+      "  independently confirmed (3 separate agents, full agreement)"
+    ],
+    "held_out_reason": null,
+    "notes": "The search results provide evidence of research examining the relationship between sensor density and data accuracy, as well as the challenges associated with sensor overload. This indicates that the hypothesis is situated within an active research area, with studies addressing the complexities of balancing sensor quantity and data quality in sensor networks.",
+    "self_reported_distance": null,
+    "self_reported_tension": 4,
+    "hypothesis_filename": "2026-08-30-janusian-informational-sensor-networks.md",
+    "hypothesis_content": "# Janusian Hypothesis: Informational Sensor Networks\n\n**Generated**: 2026-08-30\n**Framework**: UMPF Janusian Hypothesis Engine (Exponent Labs LLC)\n\n---\n\n## 1. The Domain\n\nInformational sensor networks consist of interconnected sensors that gather, process, and transmit environmental data. These networks are utilized in applications such as smart cities, industrial monitoring, and environmental tracking, allowing for real-time data analysis and decision-making.\n\n## 2. The Proposition\n\nThe load-bearing assumption in this field is that increasing the number of sensors in a network improves the accuracy and reliability of the data collected.\n\n## 3. The Inversion\n\nThe exact opposite is true: increasing the number of sensors in a network reduces the accuracy and reliability of the data collected.\n\n## 4. The Simultaneous Hold\n\n> \"Increasing the number of sensors in a network improves the accuracy and reliability of the data collected.\"  \n> \"Increasing the number of sensors in a network reduces the accuracy and reliability of the data collected.\"  \n> \"Both are true simultaneously.\"\n\n- **(A) Compromise**: More sensors may improve accuracy in some scenarios but can also lead to data overload, which muddles the overall data quality.\n- **(B) Synthesis**: A network can be designed to optimize sensor numbers for accuracy, but this does not account for the simultaneous degradation of data quality due to excess sensors.\n- **(C) Paradox**: In a single network instance, the presence of more sensors can both enhance and diminish data accuracy at the same time, as the additional data can provide richer insights while simultaneously introducing noise and conflicting information.\n\n(C) is the paradox because it captures the simultaneous truth of both the proposition and the inversion without resolving the contradiction. (A) fails as it implies context-dependent outcomes, and (B) suggests a design solution that does not hold for the same instance.\n\n## 5. The Hypothesis (The Third Thing)\n\n1. **Simultaneous-hold sentence (required)**: \"Both increasing the number of sensors enhances data accuracy and simultaneously reduces it due to potential noise for the same network; the theory must contain both.\"\n2. **Falsifiable prediction**: \"If both increasing sensor quantity and decreasing data accuracy hold simultaneously for the same instance, then we would observe that networks with a higher number of sensors produce conflicting data interpretations — which neither truth alone predicts.\"\n\n## 6. Novelty & Testability Self-Critique\n\n- **Tension score (1-5)**: 4 — the assumption that more sensors improve accuracy is a widely accepted premise, making its inversion significant and potentially controversial.\n- **Testability**: An empirical study analyzing existing sensor networks could reveal instances where increased sensor density leads to conflicting data outputs, providing evidence for or against the hypothesis.\n- **Known prior art**: Not verified; while there are studies on sensor networks and data accuracy, I am not aware of specific works that explicitly hold this contradiction.\n- **Confidence this is worth a researcher's time**: Medium — exploring this paradox could yield insights into optimizing sensor network designs, but it requires careful examination of existing data.\n\n## 7. If This Doesn't Hold\n\nThe most likely reason this turns out to be a compromise or synthesis wearing paradox's clothing is that the proposition and inversion might apply to different operational conditions within the same network, meaning they are not truly contradictory but rather reflect different aspects of sensor performance.\n\n## Search Queries\n\n1. \"sensor networks data accuracy vs. sensor density\"\n2. \"impact of sensor overload on data quality in informational sensor networks\"\n3. \"sensor network design principles AND data reliability\"\n4. \"Albert Rothenberg Janusian thinking in technology\"\n5. \"informational sensor networks named theory OR framework OR researcher\"\n\n---\n\n**⚠️ Automated check failed twice:** §4/§5 still fail the Janusian same-instance test (context-split and/or missing simultaneous-hold signature) after one corrective retry. This may be a disguised compromise (A) or synthesis (B) mislabeled as paradox (C) — not a thesis-grade Janusian lead until rewritten.\n",
+    "verification_filename": "2026-08-30-janusian-informational-sensor-networks-verification.md",
+    "verification_content": "# Verification: Janusian — Informational Sensor Networks\n\n**Verifies**: `hypotheses/2026-08-30-janusian-informational-sensor-networks.md`\n**Verified**: 2026-08-30 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)\n\n## Verdict: **ADJACENT_ACTIVE**\n\n## Queries\n- `sensor networks data accuracy vs. sensor density`\n- `impact of sensor overload on data quality in informational sensor networks`\n- `sensor network design principles AND data reliability`\n- `Albert Rothenberg Janusian thinking in technology`\n- `informational sensor networks named theory OR framework OR researcher`\n\n## What was found\nResearch indicates that increasing sensor density can improve data accuracy by reducing the average distance between sensors and signal sources, thereby enhancing the signal-to-noise ratio (SNR). However, higher sensor density can also introduce challenges such as increased energy consumption, potential interference, and data redundancy, which may degrade data quality. Studies have explored the trade-offs between sensor density and data accuracy, highlighting the need for optimal sensor placement to balance coverage and data quality. Additionally, the impact of sensor overload on data quality has been examined, with findings suggesting that excessive sensor density can lead to network congestion and data inconsistencies. These insights align with the hypothesis that both increasing sensor quantity and decreasing data accuracy can occur simultaneously within the same network, leading to conflicting data interpretations.\n\n## Reasoning\nThe search results provide evidence of research examining the relationship between sensor density and data accuracy, as well as the challenges associated with sensor overload. This indicates that the hypothesis is situated within an active research area, with studies addressing the complexities of balancing sensor quantity and data quality in sensor networks.\n",
+    "refutation_filename": "refutations/2026-08-30-janusian-informational-sensor-networks-refutation.md",
+    "refutation_content": "# Adversarial Refutation: Janusian — Informational Sensor Networks\n\n**Original**: `hypotheses/2026-08-30-janusian-informational-sensor-networks.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 0 of 3 survive → **REFUTED**\n\n- **Coherence — REFUTED.** The hypothesis relies on a simultaneous-hold claim that conflates two distinct mechanisms: the enhancement of data accuracy through increased sensor density and the degradation of accuracy due to noise. This equivocation fails to establish a genuine paradox, as the mechanisms operate under different contexts rather than presenting a true Janusian contradiction. The claim does not adequately demonstrate that both effects can coexist in a meaningful way for the same instance, leading to a lack of coherence in the structural mapping.\n- **Testability — REFUTED.** The falsifiable prediction lacks operationalization, as it does not specify a named metric for measuring 'conflicting data interpretations' or a clear comparison condition to assess the impact of sensor quantity on data accuracy. The phrase 'both increasing sensor quantity and decreasing data accuracy hold simultaneously' is vague and does not provide a rejection threshold, making it impossible to conduct a definitive experiment that could yield a clean 'no'.\n- **Triviality — REFUTED.** The core claim reduces to a general observation about complex systems: increasing components can both enhance and degrade performance due to noise and interference. This is a common phenomenon in many systems, not unique to informational sensor networks. The claim lacks specificity and does not present a novel insight, as it merely reiterates a well-known trade-off in system design.\n\n## No steelman offered\n\nAll three lenses independently converged on REFUTED for this case. If revisited, it would need a genuinely tighter formulation, not a restatement of the same claim.\n",
+    "refutation_independently_confirmed": true
+  },
+  {
+    "key": "2026-08-30-organizational-theory-x-physical-magnetic-field-control",
+    "mode": "bisociation",
+    "source": null,
+    "domains": [
+      "Organizational Theory",
+      "Physical Magnetic Field Control"
+    ],
+    "verdict": "ADJACENT_ACTIVE",
+    "points": 13,
+    "badges": [
+      "🧬 Bisociative",
+      "🗺️ Frontier Research Group",
+      "⚠️ Failed Honesty Check",
+      "💀 Refuted"
+    ],
+    "breakdown": [
+      "Phase 1 self-report (4/5): +8",
+      "Phase 2 ADJACENT_ACTIVE: +30",
+      "Mechanical honesty check failed twice (disguised compromise, uncorrected): -10",
+      "Adversarial refutation REFUTED: -15",
+      "  independently confirmed (3 separate agents, full agreement)"
+    ],
+    "held_out_reason": null,
+    "notes": "The search results reveal active research in both organizational theory and physical magnetic field control, focusing on emergent behaviors and self-organization. This indicates that the proposed mapping between these domains is plausible and worth further exploration.",
+    "self_reported_distance": 4,
+    "self_reported_tension": null,
+    "hypothesis_filename": "2026-08-30-organizational-theory-x-physical-magnetic-field-control.md",
+    "hypothesis_content": "# Hypothesis: Organizational Theory × Physical Magnetic Field Control\n\n**Generated**: 2026-08-30\n**Framework**: UMPF Two-Domain Hypothesis Engine (Exponent Labs LLC)\n\n---\n\n## 1. The Two Frames (M₁, M₂)\n\n**M₁ — Organizational Theory**: Self-organizing teams are groups that autonomously coordinate their activities without centralized control, adapting to changes in their environment and leveraging collective intelligence to achieve common goals.\n\n**M₂ — Physical Magnetic Field Control**: In physics, magnetic fields can be manipulated and controlled through the arrangement and interactions of magnetic materials, allowing for the dynamic adjustment of field strength and direction in response to external influences.\n\n## 2. Monadic Signature of Each Domain\n\n| Layer | Organizational Theory | Physical Magnetic Field Control |\n|---|---|---|\n| Atomic (Maybe/Either) | Uncertainty arises from team members' varying levels of commitment and engagement. | Uncertainty exists in the exact strength and direction of the magnetic field due to external disturbances. |\n| Domain (State/Reader/Writer) | The state of the team evolves based on interactions and feedback loops among members. | The state of the magnetic field changes based on the arrangement of magnetic materials and external forces. |\n| Control (IO/STM) | Interaction boundaries are defined by team roles and communication channels. | Control of the magnetic field is achieved through input from electrical currents or physical adjustments to magnetic materials. |\n| Orchestration (Free/effects) | The overall effectiveness of the team emerges from the interplay of individual contributions and collaborative efforts. | The overall magnetic field configuration results from the combined effects of individual magnetic sources and their interactions. |\n\n## 3. The Candidate Functor\n\nThe proposed mapping *f: M(Organizational Theory) → M(Physical Magnetic Field Control)* is as follows:  \n- Atomic: Team member engagement ↔ Magnetic field strength.  \n- Domain: Team dynamics ↔ Magnetic field configuration.  \n- Control: Communication channels ↔ Control mechanisms (currents/material adjustments).  \n- Orchestration: Team effectiveness ↔ Overall magnetic field behavior.  \n\nFor this functor to hold, both domains must demonstrate that the dynamics of interaction (team member engagement and magnetic field control) lead to emergent properties (team effectiveness and magnetic field configuration).\n\n## 4. The Hypothesis\n\n1. **Generative-relation sentence (required):** I noticed that the relational rule governing the self-organization of teams in organizational theory also governed the control of magnetic fields in physics — specifically, the rule of emergent behavior from local interactions leading to global outcomes.\n2. **Falsifiable prediction:** If that relation holds, then manipulating the configuration of a self-organizing team should yield predictable changes in team effectiveness, analogous to how altering magnetic materials should yield predictable changes in the magnetic field's strength and direction — or vice versa.\n\n## 5. Novelty & Testability Self-Critique\n\n- **Distance score (1-5)**: 4. While both domains involve systems and interactions, they are typically studied in isolation without direct cross-disciplinary dialogue, indicating a significant conceptual gap.\n- **Testability**: Specific experiments could involve observing changes in team performance metrics in response to structured interventions that mimic magnetic field adjustments, such as varying communication protocols or team structures.\n- **Known prior art**: Not verified; there appears to be limited direct literature connecting organizational dynamics and physical magnetic field control.\n- **Confidence this is worth a researcher's time**: Medium, as the hypothesis presents an innovative cross-disciplinary perspective but lacks direct prior art to support immediate investigation.\n\n## 6. If This Doesn't Hold\n\nThe most likely reason this functor turns out to be superficial rather than structural is that the emergent properties in organizational theory may depend on qualitative factors (like human emotions and motivations) that do not have a direct analogue in the physical interactions governing magnetic fields.\n\n## Search Queries\n\n1. \"self-organizing teams emergent behavior\"\n2. \"magnetic field control emergent properties\"\n3. \"complex adaptive systems theory\"\n4. \"organizational theory magnetic field analogy\"\n5. \"collective intelligence magnetic systems\"\n\n---\n\n**⚠️ Automated check failed twice:** no Search Query targets a specific named theory, framework, or researcher, even after one corrective retry. Verification may miss an existing collision with real prior art that a more specific search would have found — read this hypothesis's verdict with that in mind.\n",
+    "verification_filename": "2026-08-30-organizational-theory-x-physical-magnetic-field-control-verification.md",
+    "verification_content": "# Verification: Bisociation — Organizational Theory × Physical Magnetic Field Control\n\n**Verifies**: `hypotheses/2026-08-30-organizational-theory-x-physical-magnetic-field-control.md`\n**Verified**: 2026-08-30 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)\n\n## Verdict: **ADJACENT_ACTIVE**\n\n## Queries\n- `self-organizing teams emergent behavior`\n- `magnetic field control emergent properties`\n- `complex adaptive systems theory`\n- `organizational theory magnetic field analogy`\n- `collective intelligence magnetic systems`\n\n## What was found\nResearch on self-organizing systems and emergent behavior in both organizational theory and physical systems like magnetic fields. For example, studies on self-organizing teams highlight characteristics such as distributed control, continuous adaptation, emergent structure, feedback, and resilience. ([agile42.com](https://www.agile42.com/en/blog/self-organizing-teams?utm_source=openai)) Similarly, research on emergent inductance in spiral magnets demonstrates how local interactions can lead to global electromagnetic responses. ([nature.com](https://www.nature.com/articles/s42005-021-00765-3?utm_source=openai))\n\n## Reasoning\nThe search results reveal active research in both organizational theory and physical magnetic field control, focusing on emergent behaviors and self-organization. This indicates that the proposed mapping between these domains is plausible and worth further exploration.\n",
+    "refutation_filename": "refutations/2026-08-30-organizational-theory-x-physical-magnetic-field-control-refutation.md",
+    "refutation_content": "# Adversarial Refutation: Bisociation — Organizational Theory × Physical Magnetic Field Control\n\n**Original**: `hypotheses/2026-08-30-organizational-theory-x-physical-magnetic-field-control.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 0 of 3 survive → **REFUTED**\n\n- **Coherence — REFUTED.** The claimed structural mapping between organizational theory and physical magnetic field control relies on equivocation of terms. For instance, 'engagement' in a team context does not genuinely correspond to 'magnetic field strength,' as the underlying mechanisms differ significantly. This suggests a context-dependent compromise rather than a true bisociation, undermining the coherence of the hypothesis.\n- **Testability — REFUTED.** The core claim lacks operationalization of its predictions, as it does not specify named metrics, comparison conditions, or rejection thresholds for the proposed mappings. The use of vague terms like 'emergent properties' and the 'or vice versa' hedge in the mapping makes it impossible to design a clear experiment that could yield a definitive 'no' outcome.\n- **Triviality — REFUTED.** The claim reduces to a general assertion that interactions in any complex system can lead to emergent properties, which is true for virtually all complex systems. This triviality undermines the specificity and novelty of the hypothesis, as it does not provide a unique or testable insight into the relationship between organizational theory and magnetic field control.\n\n## No steelman offered\n\nAll three lenses independently converged on REFUTED for this case. If revisited, it would need a genuinely tighter formulation, not a restatement of the same claim.\n",
+    "refutation_independently_confirmed": true
+  },
+  {
+    "key": "2026-08-30-organizational-theory-x-physical-thermal-variation",
+    "mode": "bisociation",
+    "source": null,
+    "domains": [
+      "Organizational Theory",
+      "Physical Thermal Variation"
+    ],
+    "verdict": "ADJACENT_ACTIVE",
+    "points": 38,
+    "badges": [
+      "🧬 Bisociative",
+      "🗺️ Frontier Research Group"
+    ],
+    "breakdown": [
+      "Phase 1 self-report (4/5): +8",
+      "Phase 2 ADJACENT_ACTIVE: +30"
+    ],
+    "held_out_reason": null,
+    "notes": "The search results reveal active research in both organizational theory and physical thermal variation, with studies examining the impact of hierarchical structures on decision-making efficiency and the effects of thermal gradients on material properties. However, no direct analogies or mappings between organizational hierarchies and thermal gradients are found, indicating that while both domains involve gradients influencing flow, the proposed mapping lacks direct support in existing research.",
+    "self_reported_distance": 4,
+    "self_reported_tension": null,
+    "hypothesis_filename": "2026-08-30-organizational-theory-x-physical-thermal-variation.md",
+    "hypothesis_content": "# Hypothesis: Organizational Theory × Physical Thermal Variation\n\n**Generated**: 2026-08-30\n**Framework**: UMPF Two-Domain Hypothesis Engine (Exponent Labs LLC)\n\n---\n\n## 1. The Two Frames (M₁, M₂)\n\n**M₁ — Organizational Theory**: In organizational theory, bureaucratic hierarchy refers to a structured system of authority where tasks are divided among different levels of management, creating a clear chain of command and responsibility.\n\n**M₂ — Physical Thermal Variation**: In physical thermal variation, temperature changes within a material or environment can create gradients that influence the flow of heat, leading to a structured pattern of energy distribution based on the differences in thermal energy.\n\n## 2. Monadic Signature of Each Domain\n\n| Layer | Organizational Theory | Physical Thermal Variation |\n|---|---|---|\n| Atomic (Maybe/Either) | Uncertainty in role clarity or authority can lead to ambiguity in decision-making. | Uncertainty in temperature measurement can lead to imprecise thermal gradients. |\n| Domain (State/Reader/Writer) | The state of an organization evolves as roles and responsibilities are redefined over time. | The state of thermal energy distribution changes as heat is applied or removed from a system. |\n| Control (IO/STM) | Interactions between different levels of management control the flow of information and decision-making processes. | Boundaries in thermal systems control the interaction of heat transfer, affecting how energy flows through materials. |\n| Orchestration (Free/effects) | The overall effectiveness of an organization depends on how well different hierarchical layers work together. | The efficiency of heat distribution in a system depends on how well thermal gradients are managed across the material. |\n\n## 3. The Candidate Functor\n\nThe proposed mapping *f: M(Organizational Theory) → M(Physical Thermal Variation)* is as follows: the hierarchical structure in organizations maps to thermal gradients in physical systems, where different levels of authority correspond to varying degrees of thermal energy. For this functor to hold, both domains must exhibit a clear pattern of hierarchical influence on the flow of resources (information in organizations, heat in physical systems).\n\n## 4. The Hypothesis\n\n1. **Generative-relation sentence (required):** I noticed that the relational rule governing the flow of authority in a bureaucratic hierarchy also governed the distribution of thermal energy in a material — specifically, the rule of gradient-driven flow. \n2. **Falsifiable prediction:** If that relation holds, then manipulating the authority levels in an organization should yield predictable changes in decision-making efficiency analogous to altering thermal gradients in a material affecting heat distribution — or vice versa.\n\n## 5. Novelty & Testability Self-Critique\n\n- **Distance score (1-5)**: 4 — Organizational theory and physical thermal variation are typically treated as unrelated fields, with distinct methodologies and terminologies, despite both involving hierarchical structures.\n- **Testability**: Specific data on decision-making efficiency in organizations under varying hierarchical structures could be compared to thermal gradient effects on heat distribution in materials to test the hypothesis.\n- **Known prior art**: Not verified; there appears to be limited interdisciplinary research bridging organizational theory and physical thermal dynamics directly.\n- **Confidence this is worth a researcher's time**: Medium, as exploring the intersection may yield insights but requires careful framing to avoid superficial comparisons.\n\n## 6. If This Doesn't Hold\n\nThe most likely reason this functor turns out to be superficial is that the mechanisms governing authority flow in organizations may not be analogous to the physical laws governing thermal gradients, leading to different underlying principles in each domain.\n\n## Search Queries\n\n1. \"bureaucratic hierarchy decision-making efficiency\"\n2. \"thermal gradient effects on heat distribution\"\n3. \"organizational theory and physical systems analogy\"\n4. \"heat transfer in materials and organizational flow\"\n5. \"Thermodynamics named theory OR framework OR researcher\"\n",
+    "verification_filename": "2026-08-30-organizational-theory-x-physical-thermal-variation-verification.md",
+    "verification_content": "# Verification: Bisociation — Organizational Theory × Physical Thermal Variation\n\n**Verifies**: `hypotheses/2026-08-30-organizational-theory-x-physical-thermal-variation.md`\n**Verified**: 2026-08-30 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)\n\n## Verdict: **ADJACENT_ACTIVE**\n\n## Queries\n- `bureaucratic hierarchy decision-making efficiency`\n- `thermal gradient effects on heat distribution`\n- `organizational theory and physical systems analogy`\n- `heat transfer in materials and organizational flow`\n- `Thermodynamics named theory OR framework OR researcher`\n\n## What was found\nResearch indicates that hierarchical structures in organizations can influence decision-making efficiency, with overemphasis on hierarchy potentially leading to slower decisions and reduced agility. ([papers.ssrn.com](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4361544&utm_source=openai)) In physical systems, thermal gradients, which are the rate of temperature change over distance, drive heat flow from warmer to cooler areas, affecting material properties and processes. ([scienceinsights.org](https://scienceinsights.org/what-is-a-thermal-gradient-and-how-does-it-work/?utm_source=openai)) While both domains involve gradients influencing flow (information in organizations, heat in physical systems), direct analogies between organizational hierarchies and thermal gradients are not established in current literature.\n\n## Reasoning\nThe search results reveal active research in both organizational theory and physical thermal variation, with studies examining the impact of hierarchical structures on decision-making efficiency and the effects of thermal gradients on material properties. However, no direct analogies or mappings between organizational hierarchies and thermal gradients are found, indicating that while both domains involve gradients influencing flow, the proposed mapping lacks direct support in existing research.\n",
     "refutation_filename": null,
     "refutation_content": null,
     "refutation_independently_confirmed": false

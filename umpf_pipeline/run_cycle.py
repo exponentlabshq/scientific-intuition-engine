@@ -172,6 +172,21 @@ def main():
     print(f"\nGenerated {len(new_files)} new hypothesis file(s) this cycle.")
     cycle_record["new_hypothesis_files"] = [os.path.basename(f) for f in new_files]
 
+    # --- Phase 0/0.5: pair-type classification + composability pre-filter (observe-only) ---
+    # eureka-engine-v2-prd.md Section 5, Phase A: logs a real, disclosed, UNCALIBRATED
+    # signal per new hypothesis to prefilter-log.jsonl -- never verification-log.jsonl,
+    # never the ledger, never domain selection, never scoring. Fail-open by design, the
+    # same class of step as the "observe" stage below: its own failure must never mark
+    # this cycle DEGRADED. Not yet validated against real pipeline outcomes -- do not
+    # read a "would_deprioritize" recommendation in this log as a real judgment on any
+    # hypothesis until Phase B (PRD Section 5) actually measures that correlation.
+    if not args.dry_run and new_files:
+        cmd = [PYTHON, "prefilter_observe.py"] + new_files
+        cycle_record["stages"]["prefilter_observe"] = run_subprocess(cmd, args.dry_run)
+        # Deliberately NOT checked with failed()/degraded_reasons -- see comment above.
+    elif args.dry_run and new_files:
+        print(f"$ {PYTHON} prefilter_observe.py <{len(new_files)} new file(s)>")
+
     # --- Phase 2: verification ---
     if not args.dry_run and new_files:
         cmd = [PYTHON, "verify_hypothesis.py", "--all-unverified"]

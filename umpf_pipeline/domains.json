@@ -336,6 +336,26 @@
     [
       "Informational OS Thread Scheduling",
       "Physical Ecosystem Succession"
+    ],
+    [
+      "Organizational theory — self-organizing teams",
+      "Physical Magnetic Field Control"
+    ],
+    [
+      "Organizational theory — bureaucratic hierarchy",
+      "Physical Thermal Variation"
+    ],
+    [
+      "Immunology — innate immune response",
+      "Linguistics — historical sound change"
+    ],
+    [
+      "Human Committee Formation",
+      "Physical Acoustic Resonance"
+    ],
+    [
+      "Epigenetics — gene expression regulation without DNA change",
+      "Physical Bridge Cable Tension"
     ]
   ],
   "already_janused": [
@@ -407,7 +427,11 @@
     "Informational Protocol Coordination",
     "Informational Ledger State Evolution",
     "Ecology — predator-prey population dynamics",
-    "Creative Idea Uncertainty"
+    "Creative Idea Uncertainty",
+    "Human Emotional Fluctuation",
+    "Informational Sensor Networks",
+    "Cell biology — mitochondrial energy production",
+    "Creative Musical Composition"
   ],
   "already_homospatial": [
     [
@@ -733,6 +757,30 @@
     [
       "Economics — market microstructure and order books",
       "Legal Systems (Human & Social Systems) — Atomic: Case outcome win/lose, Evidence admissible/inadmissible, Multiple precedents; Domain: Legal system evolves, Laws & constitution, Log case decisions; Control: Court systems & databases, Concurrent case processing, Atomic precedent updates; Orchestration: Justice coordination, Theoretical vs practical environments"
+    ],
+    [
+      "Military Strategy (Human & Social Systems) — Atomic: Mission succeeds/fails, Enemy positions unknown, Multiple tactical options; Domain: Battle situation evolves, Military doctrine, Log tactical moves; Control: Intelligence systems, Concurrent operations, Atomic command updates; Orchestration: Defense coordination, War gaming vs actual combat",
+      "Creative Album Production Orchestration"
+    ],
+    [
+      "Neuroscience — cortical map reorganization",
+      "Economics — market microstructure and order books"
+    ],
+    [
+      "Culinary Arts (Creative & Performance Systems) — Atomic: Recipe succeeds/fails, Ingredient freshness unknown, Multiple flavor combinations; Domain: Dish develops through cooking, Recipes & traditions, Log cooking steps; Control: External food suppliers, Concurrent cooking processes, Atomic seasoning adjustments; Orchestration: Restaurant coordination, Recipe vs service environments",
+      "Physical Bridge Cable Tension"
+    ],
+    [
+      "Telecommunications — packet switching and routing",
+      "Quantum Physics (Physical & Natural Systems) — Atomic: Particle position uncertain, Measurement binary, Superposition states; Domain: Quantum system evolves, Physical laws context, Log measurements; Control: Measurement apparatus, Parallel quantum processes, Atomic wavefunction collapse; Orchestration: Universal law coordination, Theoretical vs experimental environments"
+    ],
+    [
+      "Physical Mechanical Vibration",
+      "Physical Power Grid Orchestration"
+    ],
+    [
+      "Healthcare (Human & Social Systems) — Atomic: Test results missing, Diagnosis succeeds/fails, Multiple allergies; Domain: Patient health evolves, Clinical guidelines, Log interventions; Control: Lab results from external systems, Concurrent monitoring, Atomic record updates; Orchestration: Compliance coordination, Training vs live simulation",
+      "Physical Power Grid Orchestration"
     ]
   ],
   "domain_pool": [

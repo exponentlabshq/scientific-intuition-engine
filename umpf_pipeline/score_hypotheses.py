@@ -157,6 +157,26 @@ def score_entry(rec, *, include_self_report: bool = True):
     elif verdict == "NO_SIGNAL":
         breakdown.append("Phase 2 NO_SIGNAL: +0 (pending)")
 
+    # 2026-08-30 fix (eureka-engine-v2-prd.md Section 2.4): the mechanical
+    # same-instance / comparison-word honesty checks write "Automated check
+    # failed twice" into a hypothesis file when a disguised compromise
+    # survives one corrective retry -- but until now, ONLY
+    # outreach_shortlist() ever read that signal (as a soft demotion to a
+    # completely separate outreach_points number, never the public score).
+    # A flagged hypothesis that lands ADJACENT_ACTIVE is swept into
+    # refutation regardless and has always been caught there (REFUTED, -15)
+    # -- but that's a different check catching it on the merits, not this
+    # scorer reflecting the flag itself. A flagged hypothesis that lands
+    # COLLISION instead never enters that sweep at all, and scored the plain
+    # +5/-5 with zero trace anywhere that it was independently caught
+    # disguising a compromise. Fixed at the scorer, for every verdict path,
+    # not only the ones that happen to route through refutation first.
+    slug = rec.get("hypothesis_slug") or rec.get("slug") or key_for(rec)
+    if hypothesis_flagged(slug):
+        points -= 10
+        badges.append("⚠️ Failed Honesty Check")
+        breakdown.append("Mechanical honesty check failed twice (disguised compromise, uncorrected): -10")
+
     # Adversarial refutation, if it ran
     refutation_verdict = rec.get("refutation_verdict")
     if refutation_verdict == "REFUTED":
