@@ -2,8 +2,11 @@
 """
 run_cycle.py — one full autonomous Eureka Engine cycle: generate -> verify
 -> refute -> score. No Claude Code session required for any of it; every
-step runs on OpenAI tokens (hypothesis_engine.py, verify_hypothesis.py,
-refute_hypothesis.py) or a search API (Tavily, via verify_hypothesis.py).
+step runs entirely on OpenAI tokens (hypothesis_engine.py,
+verify_hypothesis.py, refute_hypothesis.py). Verification's real web
+search was Tavily + a paid Monid/Exa fallback until 2026-08-30, when both
+were removed entirely in favor of OpenAI's own Responses API `web_search`
+tool -- one vendor now for the whole pipeline, not two.
 
 This is the piece that makes "runs on its own" literal rather than
 aspirational: point cron at this script and the ledger keeps growing without

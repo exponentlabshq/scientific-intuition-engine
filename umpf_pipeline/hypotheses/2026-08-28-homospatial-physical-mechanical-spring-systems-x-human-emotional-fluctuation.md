@@ -2,6 +2,7 @@
 
 **Generated**: 2026-08-28
 **Framework**: UMPF Homospatial Hypothesis Engine (Exponent Labs LLC)
+**Revision**: 2026-08-29 — human-sharpened closed-loop formulation (COA 2d). Soft “Emotomechanical Resonance quantifies emotional states using mechanical principles” framing retired; automated candidate (COA 2d, sharpen_hypothesis_llm.py) — re-verified ADJACENT_ACTIVE; concreteness NOT automatically checked, needs human read.
 
 ---
 
@@ -41,3 +42,26 @@ The most likely reason Emotomechanical Resonance turns out to just be domain A a
 3. "Quantifying emotions as mechanical energy"
 4. "Emotional fluctuations and potential energy models"
 5. "Psychological mechanics of emotional release"
+
+---
+
+## COA 2d — Soft vs Hard (operator)
+
+**Sharpened**: 2026-08-29  
+**Soft claim retired**: Emotomechanical Resonance quantifies emotional states using mechanical principles  
+**Hard chimera**: Emotomechanical Dynamics  
+**Hard claim**: Can a model using mechanical spring system analogs — where emotional buildup and release are mapped to potential and kinetic energy changes respectively — predict specific emotional response patterns to controlled stimuli with measurable accuracy, distinct from existing psychological models that do not use physical system analogies?
+
+### Hard search queries (re-verify these — not the soft ones)
+
+1. "Emotomechanical Dynamics Can a model using mechanical spring system analogs — where emotional buildup and release are mapped to potential and kinetic energy changes respectively — predict specific emotional response patterns to controlled stimuli with measurable accuracy, distinct from existing psychological models that do not use physical system analogies?"
+2. "Emotomechanical Resonance quantifies emotional states using mechanical principles prior art OR review"
+3. "yoked control OR chamber geometry OR schedule remapping Emotomechanical Dynamics"
+4. Named adjacent labs / frameworks from first denser search pass
+
+### Re-verify stub
+
+Write: `verifications/2026-08-28-homospatial-physical-mechanical-spring-systems-x-human-emotional-fluctuation-verification.md` with sections:
+Soft near-COLLISION neighbors | Hard claim status | Actively researched contact
+
+Packet send-ready only if hard verdict remains ADJACENT_ACTIVE.

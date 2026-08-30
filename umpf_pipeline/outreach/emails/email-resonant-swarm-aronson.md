@@ -7,27 +7,27 @@
 
 ---
 
-**From:** Michael Jagdeo \<private@exponentlabs.ai\>  
+**From:** Mike Jagdeo \<private@exponentlabs.ai\>  
 **To:** Igor Aronson \<isa12@psu.edu\>  
-**Cc:** _(optional)_ Rocky Nguyen  
-**Subject:** Quick read — acoustic swarm as environmental resonance blackboard?
+**Subject:** Acoustic Swarm as Environmental Resonance Blackboard?
 
 ---
 
-Dear Prof. Aronson,
+Prof. Aronson,
 
 I'm with Exponent Labs' Eureka Engine.
 
 **Can a swarm use collective environmental / cavity resonance as a stigmergic blackboard — configuration changes the resonant field, and the resonant field changes configuration — such that under chamber-geometry change the swarm spontaneously finds formations that exploit resonance without being given the global solution?**
 
-We arrived here by homospatial overlay of swarm configuration and cavity resonance into one closed loop; soft “robots talk with sound” looked near your acoustic active-matter line, so we kept only the blackboard chimera.
-
 We have a syndicate of investors.
 
-Best regards,  
 Michael Jagdeo  
-Exponent Labs LLC · Eureka Engine  
+Exponent Labs LLC - Eureka Engine  
 private@exponentlabs.ai
+
+---
+
+*2026-08-29 correction: the block above now matches the email exactly as actually sent (confirmed against the real Gmail thread) — the earlier version of this file recorded "Dear Prof. Aronson," an origin-sentence paragraph explaining the homospatial mechanics, a "Best regards," close, and a middle-dot in the sign-off, none of which survived to the real send. The real, working template is leaner than what this project drafted for itself — no lecture on how the finding was produced, just the question. This is now the canonical gold template for COA A's automated sharpener.*
 
 ---
 

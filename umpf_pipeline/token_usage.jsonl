@@ -489,3 +489,27 @@
 {"timestamp": "2026-08-30T02:26:02.852130+00:00", "phase": "refutation", "model": "gpt-4o", "prompt_tokens": 1221, "completion_tokens": 81, "total_tokens": 1302, "hypothesis_slug": "2026-08-29-janusian-physical-ecosystem-succession", "lens": "testability"}
 {"timestamp": "2026-08-30T02:26:03.835086+00:00", "phase": "refutation", "model": "gpt-4o", "prompt_tokens": 1215, "completion_tokens": 83, "total_tokens": 1298, "hypothesis_slug": "2026-08-29-janusian-physical-ecosystem-succession", "lens": "triviality"}
 {"timestamp": "2026-08-30T02:26:05.727956+00:00", "phase": "audit_observation", "model": "gpt-4o-mini", "prompt_tokens": 1631, "completion_tokens": 38, "total_tokens": 1669}
+{"timestamp": "2026-08-30T02:43:55.721073+00:00", "phase": "sharpen", "model": "gpt-4o", "prompt_tokens": 567, "completion_tokens": 116, "total_tokens": 683}
+{"timestamp": "2026-08-30T02:43:56.900204+00:00", "phase": "sharpen_adversarial", "model": "gpt-4o-mini", "prompt_tokens": 218, "completion_tokens": 58, "total_tokens": 276}
+{"timestamp": "2026-08-30T02:44:00.479138+00:00", "phase": "verification", "model": "gpt-4o-mini", "prompt_tokens": 8174, "completion_tokens": 230, "total_tokens": 8404, "hypothesis_slug": "2026-08-28-human-trust-variance-x-cryptography-hardclaim"}
+{"timestamp": "2026-08-30T02:45:56.273138+00:00", "phase": "sharpen", "model": "gpt-4o", "prompt_tokens": 545, "completion_tokens": 101, "total_tokens": 646}
+{"timestamp": "2026-08-30T02:45:57.857126+00:00", "phase": "sharpen", "model": "gpt-4o", "prompt_tokens": 604, "completion_tokens": 122, "total_tokens": 726}
+{"timestamp": "2026-08-30T02:45:58.993392+00:00", "phase": "sharpen_adversarial", "model": "gpt-4o-mini", "prompt_tokens": 223, "completion_tokens": 59, "total_tokens": 282}
+{"timestamp": "2026-08-30T02:46:00.332658+00:00", "phase": "sharpen", "model": "gpt-4o", "prompt_tokens": 543, "completion_tokens": 112, "total_tokens": 655}
+{"timestamp": "2026-08-30T02:46:19.370098+00:00", "phase": "sharpen", "model": "gpt-4o", "prompt_tokens": 545, "completion_tokens": 94, "total_tokens": 639}
+{"timestamp": "2026-08-30T02:46:20.732598+00:00", "phase": "sharpen", "model": "gpt-4o", "prompt_tokens": 543, "completion_tokens": 91, "total_tokens": 634}
+{"timestamp": "2026-08-30T02:47:51.093561+00:00", "phase": "sharpen_adversarial", "model": "gpt-4o-mini", "prompt_tokens": 198, "completion_tokens": 41, "total_tokens": 239}
+{"timestamp": "2026-08-30T02:47:52.190859+00:00", "phase": "sharpen_adversarial", "model": "gpt-4o-mini", "prompt_tokens": 186, "completion_tokens": 53, "total_tokens": 239}
+{"timestamp": "2026-08-30T02:47:52.966506+00:00", "phase": "sharpen_adversarial", "model": "gpt-4o-mini", "prompt_tokens": 207, "completion_tokens": 43, "total_tokens": 250}
+{"timestamp": "2026-08-30T02:51:50.123772+00:00", "phase": "sharpen", "model": "gpt-4o", "prompt_tokens": 550, "completion_tokens": 105, "total_tokens": 655}
+{"timestamp": "2026-08-30T02:51:53.383596+00:00", "phase": "verification", "model": "gpt-4o-mini", "prompt_tokens": 8174, "completion_tokens": 244, "total_tokens": 8418, "hypothesis_slug": "2026-08-28-human-trust-variance-x-cryptography-hardclaim"}
+{"timestamp": "2026-08-30T02:51:54.634589+00:00", "phase": "sharpen", "model": "gpt-4o", "prompt_tokens": 528, "completion_tokens": 108, "total_tokens": 636}
+{"timestamp": "2026-08-30T02:51:57.805490+00:00", "phase": "verification", "model": "gpt-4o-mini", "prompt_tokens": 8174, "completion_tokens": 292, "total_tokens": 8466, "hypothesis_slug": "2026-08-28-physical-bridge-cable-tension-x-organizational-theory-hardclaim"}
+{"timestamp": "2026-08-30T02:51:59.164132+00:00", "phase": "sharpen", "model": "gpt-4o", "prompt_tokens": 526, "completion_tokens": 105, "total_tokens": 631}
+{"timestamp": "2026-08-30T02:52:02.153887+00:00", "phase": "verification", "model": "gpt-4o-mini", "prompt_tokens": 8174, "completion_tokens": 163, "total_tokens": 8337, "hypothesis_slug": "2026-08-28-informational-hash-collisions-x-human-social-network-dynamics-hardclaim"}
+{"timestamp": "2026-08-30T02:52:03.708311+00:00", "phase": "sharpen", "model": "gpt-4o", "prompt_tokens": 587, "completion_tokens": 98, "total_tokens": 685}
+{"timestamp": "2026-08-30T02:52:07.743685+00:00", "phase": "verification", "model": "gpt-4o-mini", "prompt_tokens": 8174, "completion_tokens": 426, "total_tokens": 8600, "hypothesis_slug": "2026-08-28-homospatial-physical-mechanical-spring-systems-x-human-emotional-fluctuation-hardclaim"}
+{"timestamp": "2026-08-30T02:52:09.062266+00:00", "phase": "sharpen", "model": "gpt-4o", "prompt_tokens": 581, "completion_tokens": 93, "total_tokens": 674}
+{"timestamp": "2026-08-30T02:52:12.885618+00:00", "phase": "verification", "model": "gpt-4o-mini", "prompt_tokens": 8174, "completion_tokens": 345, "total_tokens": 8519, "hypothesis_slug": "2026-08-28-homospatial-creative-narrative-arc-development-x-informational-distributed-consensus-hardclaim"}
+{"timestamp": "2026-08-30T02:52:14.421362+00:00", "phase": "sharpen", "model": "gpt-4o", "prompt_tokens": 593, "completion_tokens": 95, "total_tokens": 688}
+{"timestamp": "2026-08-30T02:52:18.052787+00:00", "phase": "verification", "model": "gpt-4o-mini", "prompt_tokens": 8174, "completion_tokens": 278, "total_tokens": 8452, "hypothesis_slug": "2026-08-28-homospatial-informational-cache-miss-handling-x-human-individual-indecision-hardclaim"}

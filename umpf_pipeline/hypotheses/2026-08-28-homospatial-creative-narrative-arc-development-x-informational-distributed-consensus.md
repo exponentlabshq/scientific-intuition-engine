@@ -2,6 +2,7 @@
 
 **Generated**: 2026-08-28
 **Framework**: UMPF Homospatial Hypothesis Engine (Exponent Labs LLC)
+**Revision**: 2026-08-29 — human-sharpened closed-loop formulation (COA 2d). Soft “Collective Narrative Consensus Arc” framing retired; automated candidate (COA 2d, sharpen_hypothesis_llm.py) — re-verified ADJACENT_ACTIVE; concreteness NOT automatically checked, needs human read.
 
 ---
 
@@ -41,3 +42,26 @@ The most likely reason the Collective Narrative Consensus Arc turns out to just 
 3. "distributed consensus in creative writing"
 4. "collective narrative theory"
 5. "impact of audience input on story arcs"
+
+---
+
+## COA 2d — Soft vs Hard (operator)
+
+**Sharpened**: 2026-08-29  
+**Soft claim retired**: Collective Narrative Consensus Arc  
+**Hard chimera**: Consensus-Driven Story Arc  
+**Hard claim**: Can a narrative arc co-created by a distributed consensus mechanism — where each participant's input is weighted and integrated through a decentralized decision-making algorithm — produce a story with higher perceived coherence and engagement than a traditionally authored narrative, when evaluated by a panel blind to the creation method?
+
+### Hard search queries (re-verify these — not the soft ones)
+
+1. "Consensus-Driven Story Arc Can a narrative arc co-created by a distributed consensus mechanism — where each participant's input is weighted and integrated through a decentralized decision-making algorithm — produce a story with higher perceived coherence and engagement than a traditionally authored narrative, when evaluated by a panel blind to the creation method?"
+2. "Collective Narrative Consensus Arc prior art OR review"
+3. "yoked control OR chamber geometry OR schedule remapping Consensus-Driven Story Arc"
+4. Named adjacent labs / frameworks from first denser search pass
+
+### Re-verify stub
+
+Write: `verifications/2026-08-28-homospatial-creative-narrative-arc-development-x-informational-distributed-consensus-verification.md` with sections:
+Soft near-COLLISION neighbors | Hard claim status | Actively researched contact
+
+Packet send-ready only if hard verdict remains ADJACENT_ACTIVE.
