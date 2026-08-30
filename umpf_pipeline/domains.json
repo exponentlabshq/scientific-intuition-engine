@@ -284,6 +284,58 @@
     [
       "Cross Domain Pattern Recognition (Cognitive & Pattern Recognition Systems) — Atomic: Pattern recognition uncertain, Mapping valid/invalid, Multiple domain analogies; Domain: Cross-domain understanding evolves, Universal monadic patterns, Log successful transfers; Control: Multiple data sources, Parallel analysis, Atomic synthesis; Orchestration: Cross-domain coordination & system integration",
       "Human Team Collaboration"
+    ],
+    [
+      "Human Meeting Participation",
+      "Informational Ledger State Evolution"
+    ],
+    [
+      "Music Sound (Creative & Performance Systems) — Atomic: Note pitch flat/sharp, Instrument availability uncertain, Multiple harmonic possibilities; Domain: Musical composition evolves, Music theory context, Log performances; Control: Live audience feedback, Concurrent musician coordination, Atomic tempo synchronization; Orchestration: Music industry coordination, Composition vs performance environments",
+      "Physical Circuit Evolution"
+    ],
+    [
+      "Creative Improvisation Coordination",
+      "Human Individual Indecision"
+    ],
+    [
+      "Sports Athletics (Creative & Performance Systems) — Atomic: Performance succeeds/fails, Opponent capabilities unknown, Multiple strategic approaches; Domain: Athletic performance evolves, Sports rules, Log training sessions; Control: Performance monitoring, Concurrent team coordination, Atomic score updates; Orchestration: Sports federation coordination, Training vs championship environments",
+      "Cognitive Swarm Intelligence"
+    ],
+    [
+      "Culinary Arts (Creative & Performance Systems) — Atomic: Recipe succeeds/fails, Ingredient freshness unknown, Multiple flavor combinations; Domain: Dish develops through cooking, Recipes & traditions, Log cooking steps; Control: External food suppliers, Concurrent cooking processes, Atomic seasoning adjustments; Orchestration: Restaurant coordination, Recipe vs service environments",
+      "Informational Mobile System Coordination"
+    ],
+    [
+      "Behavioral psychology — habit formation loops",
+      "Law — common law precedent and stare decisis"
+    ],
+    [
+      "Fluid dynamics — turbulence and laminar flow",
+      "Knowledge Systems (Cognitive & Pattern Recognition Systems) — Atomic: Data interpretation uncertain, Model output ambiguous, Multiple insights; Domain: Knowledge evolves, Historical context, Log insights; Control: Distributed analysis, Parallel computation, Atomic integration; Orchestration: Knowledge deployment coordination"
+    ],
+    [
+      "Cryptography — zero-knowledge proofs",
+      "Physical Photon Emission"
+    ],
+    [
+      "Ecology — predator-prey population dynamics",
+      "Human Learning Uncertainty"
+    ],
+    [
+      "Linguistics — historical sound change",
+      "Cognitive Concept Drift"
+    ],
+    [
+      "Materials science — phase transitions",
+      "Cognitive AI Pipeline Orchestration"
+    ],
+    [
+      "Education (Information & Intelligence Systems) — Atomic: Assignment grade uncertain, Learning succeeds/fails, Multiple styles; Domain: Student knowledge evolves, Educational standards, Log progress; Control: External assessment systems, Concurrent learning paths, Atomic grade updates; Orchestration: Curriculum coordination, Practice vs real-world environments",
+      "Human Meeting Participation"
+    ],
+    [
+      "Informational OS Thread Scheduling",
+      "Physical Ecosystem Succession"
     ]
   ],
   "already_janused": [
@@ -343,7 +395,19 @@
     "Cognitive Model Adaptation",
     "Physical Immune System",
     "Human Financial Market Systems",
-    "Economics — auction theory"
+    "Economics — auction theory",
+    "Human Committee Formation",
+    "Epigenetics — gene expression regulation without DNA change",
+    "Creative Artistic Critique",
+    "Informational OS Thread Scheduling",
+    "Informational Bit Flips",
+    "Architecture — load-bearing structural design",
+    "Cognitive Concept Drift",
+    "Cognitive Development (Information & Intelligence Systems) — Atomic: Learning outcome uncertain, Skill acquisition succeeds/fails, Multiple learning paths; Domain: Cognitive skills evolve, Learning context, Log development milestones; Control: External learning resources, Parallel skill development, Atomic knowledge integration; Orchestration: Learning system coordination, Practice vs application environments",
+    "Informational Protocol Coordination",
+    "Informational Ledger State Evolution",
+    "Ecology — predator-prey population dynamics",
+    "Creative Idea Uncertainty"
   ],
   "already_homospatial": [
     [
@@ -609,6 +673,66 @@
     [
       "Ecology — predator-prey population dynamics",
       "Informational Load Balancing"
+    ],
+    [
+      "Geology — plate tectonics",
+      "Cognitive Attention Map Evolution"
+    ],
+    [
+      "Law — contract formation and offer/acceptance",
+      "Creative Idea Uncertainty"
+    ],
+    [
+      "Neuroscience — cortical map reorganization",
+      "Informational Backup Systems"
+    ],
+    [
+      "Military Strategy (Human & Social Systems) — Atomic: Mission succeeds/fails, Enemy positions unknown, Multiple tactical options; Domain: Battle situation evolves, Military doctrine, Log tactical moves; Control: Intelligence systems, Concurrent operations, Atomic command updates; Orchestration: Defense coordination, War gaming vs actual combat",
+      "Informational Load Balancing"
+    ],
+    [
+      "Culinary Arts (Creative & Performance Systems) — Atomic: Recipe succeeds/fails, Ingredient freshness unknown, Multiple flavor combinations; Domain: Dish develops through cooking, Recipes & traditions, Log cooking steps; Control: External food suppliers, Concurrent cooking processes, Atomic seasoning adjustments; Orchestration: Restaurant coordination, Recipe vs service environments",
+      "Informational Error Probability"
+    ],
+    [
+      "Learning Systems (Cognitive & Pattern Recognition Systems) — Atomic: Learning outcomes uncertain, Skill acquisition succeeds/fails, Multiple learning states; Domain: Learning progresses, Educational context, Log development; Control: External learning resources, Parallel skill development, Atomic knowledge updates; Orchestration: Individual vs collective learning coordination",
+      "Informational Load Balancing"
+    ],
+    [
+      "Immunology — innate immune response",
+      "Behavioral psychology — operant conditioning"
+    ],
+    [
+      "Cognitive AI Hyperparameter Orchestration",
+      "Creative Improvisation Adjustment"
+    ],
+    [
+      "Astrophysics (Physical & Natural Systems) — Atomic: Telescope readings missing, Measurement valid/invalid, Multiple galaxies; Domain: Models evolve, Physical constants, Log simulations; Control: Telescope telemetry, Concurrent experiments, Atomic mission updates; Orchestration: Mission coordination, Simulation vs real execution",
+      "Military Strategy (Human & Social Systems) — Atomic: Mission succeeds/fails, Enemy positions unknown, Multiple tactical options; Domain: Battle situation evolves, Military doctrine, Log tactical moves; Control: Intelligence systems, Concurrent operations, Atomic command updates; Orchestration: Defense coordination, War gaming vs actual combat"
+    ],
+    [
+      "Organizational theory — bureaucratic hierarchy",
+      "Informational Bit Flips"
+    ],
+    [
+      "Climatology — ocean current circulation (thermohaline)",
+      "Anthropology — gift economies and reciprocity"
+    ],
+    [
+      "Cognitive AI Hyperparameter Orchestration",
+      "Physical Immune System"
+    ],
+    [
+      "Artificial Intelligence (Information & Intelligence Systems) — Atomic: Neural activation uncertain, Training succeeds/fails, Multiple architectures; Domain: Model weights evolve, Hyperparameters context, Log training metrics; Control: External data sources, Distributed training, Atomic parameter updates; Orchestration: AI system coordination, Research vs deployment environments",
+      "Informational Database State"
+    ],
+    [
+      "Informational Cache Miss Handling",
+      "Physical Telescope Telemetry"
+    ],
+    [
+      "Economics — market microstructure and order books",
+      "Legal Systems (Human & Social Systems) — Atomic: Case outcome win/lose, Evidence admissible/inadmissible, Multiple precedents; Domain: Legal system evolves, Laws & constitution, Log case decisions; Control: Court systems & databases, Concurrent case processing, Atomic precedent updates; Orchestration: Justice coordination, Theoretical vs practical environments"
     ]
   ],
   "domain_pool": [
