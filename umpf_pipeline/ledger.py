@@ -40,6 +40,33 @@ def key_for(rec: dict) -> str:
     return rec.get("hypothesis_slug") or rec.get("case_study") or "unknown"
 
 
+def is_verification_record(rec: dict) -> bool:
+    """True for a real Phase 2 verification/re-verification line -- False
+    for a different kind of event this same file legitimately also holds,
+    keyed by the same hypothesis_slug: an outreach-status update
+    (event: "outreach_sent", written when a Phase 3 email actually goes
+    out, per outreach/README.md's own "append a new ledger line" rule).
+
+    Found and fixed 2026-08-30, the day it first mattered for real: the
+    two hypotheses behind the two real Aronson/Phillips sends each got an
+    outreach_sent line appended after their verification line -- and
+    load_latest_entries()'s original "last line wins" logic, written before
+    any outreach event existed in this file, took that event (no verdict,
+    no domains) as the "latest" entry for those slugs. The real effect: on
+    the very first cycle run after that event existed, the two hypotheses
+    that had actually reached a real researcher silently dropped off the
+    scored leaderboard entirely, held out as "non-standard verdict ''."
+    Confirmed directly against the real leaderboard output, not assumed.
+
+    The "latest entry wins" principle this module exists for is still
+    correct for what it was built for -- correcting a wrong verification
+    with a new one. It was never meant to let an unrelated event type
+    overwrite one. Now it can't: only real verification records (no
+    "event" key, per the actual shape both write paths use) participate in
+    the per-slug "latest" dedup at all."""
+    return "event" not in rec
+
+
 def read_raw_entries(path: str = None) -> list:
     """Every line, in file order, no dedup -- for the rare caller that
     genuinely wants full history (an audit, a manual inspection of what
@@ -58,16 +85,21 @@ def read_raw_entries(path: str = None) -> list:
 
 
 def load_latest_entries(path: str = None) -> list:
-    """The real, current state of the ledger: one entry per slug, the LAST
-    one written for it. Preserves each surviving entry's first-seen
-    position in the file, so rank/sort behavior downstream that assumes
-    roughly-chronological order doesn't shuffle unexpectedly just because
-    a correction happened to land later for an early slug."""
+    """The real, current state of the ledger: one VERIFICATION entry per
+    slug, the LAST one written for it -- non-verification events (outreach
+    status updates; see is_verification_record()) are skipped entirely for
+    this dedup, not treated as a competing "latest" record. Preserves each
+    surviving entry's first-seen position in the file, so rank/sort
+    behavior downstream that assumes roughly-chronological order doesn't
+    shuffle unexpectedly just because a correction happened to land later
+    for an early slug."""
     latest_by_key = {}
     order = []
     for rec in read_raw_entries(path):
+        if not is_verification_record(rec):
+            continue
         k = key_for(rec)
         if k not in latest_by_key:
             order.append(k)
-        latest_by_key[k] = rec  # a later occurrence always overwrites -- "latest wins"
+        latest_by_key[k] = rec  # a later VERIFICATION occurrence overwrites -- "latest wins"
     return [latest_by_key[k] for k in order]

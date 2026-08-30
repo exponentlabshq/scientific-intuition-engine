@@ -232,6 +232,58 @@
     [
       "Gaming Narrative (Creative & Performance Systems) — Atomic: Player action succeeds/fails, Character status unknown, Multiple dialogue choices; Domain: Game world evolves, Game rules context, Log player actions; Control: Player input from controllers, Concurrent NPCs & physics, Atomic world consistency; Orchestration: Game engine coordination, Narrative vs gameplay environments",
       "Human Financial Trading Algorithms"
+    ],
+    [
+      "Education (Information & Intelligence Systems) — Atomic: Assignment grade uncertain, Learning succeeds/fails, Multiple styles; Domain: Student knowledge evolves, Educational standards, Log progress; Control: External assessment systems, Concurrent learning paths, Atomic grade updates; Orchestration: Curriculum coordination, Practice vs real-world environments",
+      "Human Social Influence"
+    ],
+    [
+      "Materials science — phase transitions",
+      "Architecture — load-bearing structural design"
+    ],
+    [
+      "Urban planning — traffic flow optimization",
+      "Astronomy — stellar nucleosynthesis"
+    ],
+    [
+      "Epidemiology — herd immunity thresholds",
+      "Human Cognitive Bias"
+    ],
+    [
+      "Agriculture (Physical & Natural Systems) — Atomic: Crop yield uncertain, Weather unknown, Multiple strategies; Domain: Farm ecosystem evolves, Agricultural knowledge, Log activities; Control: Weather data, Concurrent management, Atomic resource allocation; Orchestration: Policy coordination, Laboratory vs field environments",
+      "Human Team Collaboration"
+    ],
+    [
+      "Agriculture — crop rotation and soil health",
+      "Telecommunications — packet switching and routing"
+    ],
+    [
+      "Geology — plate tectonics",
+      "Human Committee Formation"
+    ],
+    [
+      "Linguistics — historical sound change",
+      "Creative Idea Uncertainty"
+    ],
+    [
+      "Immunology — adaptive immune memory",
+      "Creative Album Production Orchestration"
+    ],
+    [
+      "Human Urban Planning",
+      "Physical Magnetic Fluctuation"
+    ],
+    [
+      "Linguistics — historical sound change",
+      "Cognitive AI Preprocessing Pipelines"
+    ],
+    [
+      "Human Facilitator Cueing",
+      "Informational Bit Flips"
+    ],
+    [
+      "Cross Domain Pattern Recognition (Cognitive & Pattern Recognition Systems) — Atomic: Pattern recognition uncertain, Mapping valid/invalid, Multiple domain analogies; Domain: Cross-domain understanding evolves, Universal monadic patterns, Log successful transfers; Control: Multiple data sources, Parallel analysis, Atomic synthesis; Orchestration: Cross-domain coordination & system integration",
+      "Human Team Collaboration"
     ]
   ],
   "already_janused": [
@@ -279,7 +331,19 @@
     "Human Individual Indecision",
     "Human Financial Trading Algorithms",
     "Physical Ecosystem Succession",
-    "Legal Systems (Human & Social Systems) — Atomic: Case outcome win/lose, Evidence admissible/inadmissible, Multiple precedents; Domain: Legal system evolves, Laws & constitution, Log case decisions; Control: Court systems & databases, Concurrent case processing, Atomic precedent updates; Orchestration: Justice coordination, Theoretical vs practical environments"
+    "Legal Systems (Human & Social Systems) — Atomic: Case outcome win/lose, Evidence admissible/inadmissible, Multiple precedents; Domain: Legal system evolves, Laws & constitution, Log case decisions; Control: Court systems & databases, Concurrent case processing, Atomic precedent updates; Orchestration: Justice coordination, Theoretical vs practical environments",
+    "Human Meeting Participation",
+    "Decision Support (Cognitive & Pattern Recognition Systems) — Atomic: Outcome uncertain, Advice succeeds/fails, Multiple options; Domain: Skill evolves, Organizational context, Log outcomes; Control: External data sources, Concurrent processing, Atomic updates; Orchestration: Policy vs implementation coordination",
+    "Cognitive AI Hyperparameter Orchestration",
+    "Creative Musical Motif Deviation",
+    "Creative Film Production Orchestration",
+    "Finance (Human & Social Systems) — Atomic: Transaction succeeds/fails, Account lookup missing, Multiple positions; Domain: Portfolio evolves, Market context, Audit logging; Control: External trades & APIs, Streaming market data, Atomic account updates; Orchestration: Regulatory coordination, Simulation vs live trading",
+    "Informational Measurement Data Evolution",
+    "Gaming Narrative (Creative & Performance Systems) — Atomic: Player action succeeds/fails, Character status unknown, Multiple dialogue choices; Domain: Game world evolves, Game rules context, Log player actions; Control: Player input from controllers, Concurrent NPCs & physics, Atomic world consistency; Orchestration: Game engine coordination, Narrative vs gameplay environments",
+    "Cognitive Model Adaptation",
+    "Physical Immune System",
+    "Human Financial Market Systems",
+    "Economics — auction theory"
   ],
   "already_homospatial": [
     [
@@ -485,6 +549,66 @@
     [
       "Agriculture (Physical & Natural Systems) — Atomic: Crop yield uncertain, Weather unknown, Multiple strategies; Domain: Farm ecosystem evolves, Agricultural knowledge, Log activities; Control: Weather data, Concurrent management, Atomic resource allocation; Orchestration: Policy coordination, Laboratory vs field environments",
       "Creative Improvisation Adjustment"
+    ],
+    [
+      "Biological Systems (Physical & Natural Systems) — Atomic: Gene expression uncertain, Mutation beneficial/harmful, Multiple phenotypes; Domain: Organism develops, Genetic code context, Log cellular events; Control: Environmental signals, Concurrent processes, Atomic DNA replication; Orchestration: Ecosystem coordination, Laboratory vs natural evolution",
+      "Cognitive Concept Drift"
+    ],
+    [
+      "Music — sample-based hip-hop production",
+      "Human Financial Market Systems"
+    ],
+    [
+      "Decision Support (Cognitive & Pattern Recognition Systems) — Atomic: Outcome uncertain, Advice succeeds/fails, Multiple options; Domain: Skill evolves, Organizational context, Log outcomes; Control: External data sources, Concurrent processing, Atomic updates; Orchestration: Policy vs implementation coordination",
+      "Creative Brainstorming Facilitation"
+    ],
+    [
+      "Music theory — jazz improvisation over changes",
+      "Sports — baseball pitch sequencing"
+    ],
+    [
+      "Behavioral psychology — habit formation loops",
+      "Informational Error Probability"
+    ],
+    [
+      "Cell biology — protein folding chaperones",
+      "Language Linguistics (Information & Intelligence Systems) — Atomic: Translation accurate/inaccurate, Word meaning ambiguous, Multiple interpretations; Domain: Language evolves through usage, Grammar rules, Log linguistic changes; Control: External linguistic corpora, Concurrent translation, Atomic meaning resolution; Orchestration: Academic coordination, Theory vs usage environments"
+    ],
+    [
+      "Climate Science (Physical & Natural Systems) — Atomic: Weather data incomplete, Model valid/invalid, Multiple scenarios; Domain: Climate evolves over time, Physical laws & history, Log observations; Control: Satellite & sensor data, Concurrent simulations, Atomic model updates; Orchestration: Global climate coordination, Simulation vs real-world validation",
+      "Creative Artistic Arrangement"
+    ],
+    [
+      "Cognitive Streaming Data Processing",
+      "Creative Film Production Orchestration"
+    ],
+    [
+      "Evolutionary biology — punctuated equilibrium",
+      "Physical Photon Emission"
+    ],
+    [
+      "Quantum Physics (Physical & Natural Systems) — Atomic: Particle position uncertain, Measurement binary, Superposition states; Domain: Quantum system evolves, Physical laws context, Log measurements; Control: Measurement apparatus, Parallel quantum processes, Atomic wavefunction collapse; Orchestration: Universal law coordination, Theoretical vs experimental environments",
+      "Physical Magnetic Field Control"
+    ],
+    [
+      "Game theory — Nash bargaining",
+      "Cell biology — protein folding chaperones"
+    ],
+    [
+      "Economics — auction theory",
+      "Cognitive Attention Map Evolution"
+    ],
+    [
+      "Architecture — modular/prefab construction",
+      "Agriculture (Physical & Natural Systems) — Atomic: Crop yield uncertain, Weather unknown, Multiple strategies; Domain: Farm ecosystem evolves, Agricultural knowledge, Log activities; Control: Weather data, Concurrent management, Atomic resource allocation; Orchestration: Policy coordination, Laboratory vs field environments"
+    ],
+    [
+      "Cognitive Model Adaptation",
+      "Physical Bridge Cable Tension"
+    ],
+    [
+      "Ecology — predator-prey population dynamics",
+      "Informational Load Balancing"
     ]
   ],
   "domain_pool": [
