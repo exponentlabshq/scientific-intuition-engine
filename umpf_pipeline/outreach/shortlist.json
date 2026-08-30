@@ -1,6 +1,6 @@
 {
-  "generated": "2026-08-30T00:05:10Z",
-  "count": 12,
+  "generated": "2026-08-30T03:49:28Z",
+  "count": 15,
   "rows": [
     {
       "slug": "2026-08-28-janusian-creative-creative-block",
@@ -16,6 +16,52 @@
       "sharpened": true,
       "badges": [
         "🎭 Janusian",
+        "🗺️ Frontier Research Group",
+        "🔬 Actively Researched"
+      ],
+      "breakdown": [
+        "Phase 2 ADJACENT_ACTIVE: +30",
+        "Actively researched (real, current evidence): +20"
+      ]
+    },
+    {
+      "slug": "2026-08-28-homospatial-physical-mechanical-spring-systems-x-human-emotional-fluctuation",
+      "domains": [
+        "Physical — mechanical spring systems",
+        "Human — emotional fluctuation"
+      ],
+      "mode": "homospatial",
+      "outreach_points": 50,
+      "raw_outreach_points": 50,
+      "actively_researched": true,
+      "active_research_note": "Mathematical modeling of emotion (affective computing) is an active, published field, though the specific spring-mechanics framing is not part of it yet.",
+      "flagged": false,
+      "sharpened": true,
+      "badges": [
+        "🪞 Homospatial",
+        "🗺️ Frontier Research Group",
+        "🔬 Actively Researched"
+      ],
+      "breakdown": [
+        "Phase 2 ADJACENT_ACTIVE: +30",
+        "Actively researched (real, current evidence): +20"
+      ]
+    },
+    {
+      "slug": "2026-08-28-homospatial-creative-narrative-arc-development-x-informational-distributed-consensus",
+      "domains": [
+        "Creative — narrative arc development",
+        "Informational — distributed consensus"
+      ],
+      "mode": "homospatial",
+      "outreach_points": 50,
+      "raw_outreach_points": 50,
+      "actively_researched": true,
+      "active_research_note": "Collaborative story co-creation research is active and current (2025-2026 papers on VR story co-creation and audience-driven narrative).",
+      "flagged": false,
+      "sharpened": true,
+      "badges": [
+        "🪞 Homospatial",
         "🗺️ Frontier Research Group",
         "🔬 Actively Researched"
       ],
@@ -186,52 +232,6 @@
       ]
     },
     {
-      "slug": "2026-08-28-homospatial-physical-mechanical-spring-systems-x-human-emotional-fluctuation",
-      "domains": [
-        "Physical — mechanical spring systems",
-        "Human — emotional fluctuation"
-      ],
-      "mode": "homospatial",
-      "outreach_points": 30,
-      "raw_outreach_points": 50,
-      "actively_researched": true,
-      "active_research_note": "Mathematical modeling of emotion (affective computing) is an active, published field, though the specific spring-mechanics framing is not part of it yet.",
-      "flagged": false,
-      "sharpened": false,
-      "badges": [
-        "🪞 Homospatial",
-        "🗺️ Frontier Research Group",
-        "🔬 Actively Researched"
-      ],
-      "breakdown": [
-        "Phase 2 ADJACENT_ACTIVE: +30",
-        "Actively researched (real, current evidence): +20"
-      ]
-    },
-    {
-      "slug": "2026-08-28-homospatial-creative-narrative-arc-development-x-informational-distributed-consensus",
-      "domains": [
-        "Creative — narrative arc development",
-        "Informational — distributed consensus"
-      ],
-      "mode": "homospatial",
-      "outreach_points": 30,
-      "raw_outreach_points": 50,
-      "actively_researched": true,
-      "active_research_note": "Collaborative story co-creation research is active and current (2025-2026 papers on VR story co-creation and audience-driven narrative).",
-      "flagged": false,
-      "sharpened": false,
-      "badges": [
-        "🪞 Homospatial",
-        "🗺️ Frontier Research Group",
-        "🔬 Actively Researched"
-      ],
-      "breakdown": [
-        "Phase 2 ADJACENT_ACTIVE: +30",
-        "Actively researched (real, current evidence): +20"
-      ]
-    },
-    {
       "slug": "2026-08-28-homospatial-informational-cache-miss-handling-x-human-individual-indecision",
       "domains": [
         "Informational — cache miss handling",
@@ -269,6 +269,69 @@
       "sharpened": false,
       "badges": [
         "📜 Pre-existing case study",
+        "🗺️ Frontier Research Group"
+      ],
+      "breakdown": [
+        "Phase 2 ADJACENT_ACTIVE: +30"
+      ]
+    },
+    {
+      "slug": "dirac-largenumbers",
+      "domains": [
+        "Dirac's large numbers hypothesis",
+        "Belnap four-valued logic / explainable AI"
+      ],
+      "mode": null,
+      "outreach_points": 10,
+      "raw_outreach_points": 30,
+      "actively_researched": false,
+      "active_research_note": null,
+      "flagged": false,
+      "sharpened": false,
+      "badges": [
+        "📜 Pre-existing case study",
+        "🗺️ Frontier Research Group"
+      ],
+      "breakdown": [
+        "Phase 2 ADJACENT_ACTIVE: +30"
+      ]
+    },
+    {
+      "slug": "2026-08-29-homospatial-chemistry-x-informational-event-driven-systems",
+      "domains": [
+        "Self-Assembly of Molecular Structures",
+        "Informational Event-Driven Systems"
+      ],
+      "mode": "homospatial",
+      "outreach_points": 10,
+      "raw_outreach_points": 30,
+      "actively_researched": false,
+      "active_research_note": null,
+      "flagged": false,
+      "sharpened": false,
+      "badges": [
+        "🪞 Homospatial",
+        "🗺️ Frontier Research Group"
+      ],
+      "breakdown": [
+        "Phase 2 ADJACENT_ACTIVE: +30"
+      ]
+    },
+    {
+      "slug": "2026-08-29-homospatial-law-x-informational-database-state",
+      "domains": [
+        "Law",
+        "Informational Database State"
+      ],
+      "mode": "homospatial",
+      "outreach_points": 10,
+      "raw_outreach_points": 30,
+      "actively_researched": false,
+      "active_research_note": null,
+      "flagged": false,
+      "sharpened": false,
+      "badges": [
+        "🪞 Homospatial",
         "🗺️ Frontier Research Group"
       ],
       "breakdown": [
