@@ -2,6 +2,7 @@
 import base64
 import json
 import os
+import sys
 
 def b64(path):
     with open(path, "rb") as f:
@@ -13,30 +14,41 @@ def compute_live_stats():
     stays standalone-runnable -- no separate 'live stats' file for
     publish_site.py to remember to generate first. Counts verdicts directly
     rather than importing score_hypotheses.py, since only raw counts are
-    needed here, not points/badges."""
-    ledger_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "verification-log.jsonl")
+    needed here, not points/badges.
+
+    Fixed 2026-08-30: this used to read the ledger file itself, line by
+    line, with no dedup -- the exact same class of bug found and fixed in
+    ledger.py/score_hypotheses.py the same day, just in a second consumer
+    that fix never touched. A raw line count double-counts any slug that
+    was ever re-verified (the old wrong entry AND its correction both
+    counted) and also counted outreach_sent events (no verdict, appended
+    per outreach/README.md's own convention) toward "total hypotheses" --
+    together these inflated the landing page's stat pill to 247 against a
+    real deduped count of 209. Now uses ledger.py's load_latest_entries(),
+    the one shared "which entry is authoritative per slug" read, same as
+    score_hypotheses.py -- so this stat can't drift from the leaderboard's
+    own count again."""
+    pipeline_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
+    sys.path.insert(0, pipeline_dir)
+    from ledger import load_latest_entries
+    ledger_path = os.path.join(pipeline_dir, "verification-log.jsonl")
     verdicts = {"COLLISION": 0, "ADJACENT_ACTIVE": 0, "NO_SIGNAL": 0}
     total = 0
     refuted = 0
     survived = 0
     pending = 0
-    with open(ledger_path, "r", encoding="utf-8") as f:
-        for line in f:
-            line = line.strip()
-            if not line:
-                continue
-            e = json.loads(line)
-            total += 1
-            v = e.get("verdict", "")
-            if v == "PENDING_VERIFICATION":
-                pending += 1
-                continue
-            if v in verdicts:
-                verdicts[v] += 1
-            if e.get("refutation_verdict") == "REFUTED":
-                refuted += 1
-            elif e.get("refutation_verdict") == "SURVIVES":
-                survived += 1
+    for e in load_latest_entries(ledger_path):
+        total += 1
+        v = e.get("verdict", "")
+        if v == "PENDING_VERIFICATION":
+            pending += 1
+            continue
+        if v in verdicts:
+            verdicts[v] += 1
+        if e.get("refutation_verdict") == "REFUTED":
+            refuted += 1
+        elif e.get("refutation_verdict") == "SURVIVES":
+            survived += 1
 
     if pending > 0:
         pending_clause = f"{pending} still pending"
