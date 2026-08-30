@@ -7,9 +7,26 @@ Claude Code session ran WebSearch by hand and applied the rubric in
 prompts/umpf_verification_prompt.md itself. That's the exact constraint
 umpf_pipeline/readme.md's "Current limit" section and the whitepaper's
 Limitations section both name — no unattended path existed. This script is
-that path: real Tavily web search + GPT-4o classification against the same
-four-bucket rubric, writing the same verifications/*.md and
-verification-log.jsonl shapes a human-run session already produces.
+that path.
+
+2026-08-29, cut over from a third-party search dependency to OpenAI's own
+Responses API `web_search` tool. Earlier the same day this file grew a real
+Tavily-outage story: sustained HTTP 432s corrupted 11 real verdicts in one
+batch, fixed with retry/backoff, a `PENDING_VERIFICATION` status, a circuit
+breaker, and a paid Monid/Exa fallback -- a lot of real, working machinery
+built specifically to keep one third-party search vendor's unreliability
+from reaching the ledger. All of it is gone now, not just patched around:
+`client.responses.create(model="gpt-4o-mini", tools=[{"type": "web_search"}])`
+does real, live web search AND classification in a single OpenAI call, so
+there is no longer a second vendor whose outage is a distinct failure mode
+from OpenAI's own. Proven directly before the cutover: a real test query
+("Andrew Lo Adaptive Markets Hypothesis") that Tavily's own generated
+queries had completely missed came back correctly, cited from the real
+MIT-hosted PDF, on the first try -- and a second real test found the actual
+named researcher (Marco Dorigo, ant colony optimization) gpt-4o-mini
+specifically. One vendor now for the entire pipeline; if OpenAI itself is
+down, every stage is down together, which was already the accepted failure
+mode elsewhere in this pipeline, not a new risk this introduces.
 
 Verification filenames are derived directly from the hypothesis slug
 (<slug>-verification.md) so assemble_experience_data.py's substring matcher
@@ -24,18 +41,12 @@ Usage:
 """
 import argparse
 import glob
-import hashlib
 import json
 import os
-import random
 import re
-import subprocess
 import sys
-import time
-from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import date, datetime, timezone
 
-import requests
 from dotenv import find_dotenv, load_dotenv
 from openai import OpenAI
 
@@ -44,11 +55,7 @@ from token_tracker import log_usage
 from retry import call_with_retry
 
 load_dotenv(find_dotenv(usecwd=False))
-TAVILY_API_KEY = os.getenv("TAVILY_API_KEY")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-MONID_API_KEY = os.getenv("MONID_API_KEY")  # optional -- see _monid_exa_search()
-if not TAVILY_API_KEY:
-    raise SystemExit("TAVILY_API_KEY is not set — add it to the vault-root .env")
 if not OPENAI_API_KEY:
     raise SystemExit("OPENAI_API_KEY is not set — add it to the vault-root .env")
 client = OpenAI(api_key=OPENAI_API_KEY)
@@ -58,14 +65,8 @@ HYPOTHESES_DIR = os.path.join(HERE, "hypotheses")
 VERIFICATIONS_DIR = os.path.join(HERE, "verifications")
 LEDGER_PATH = os.path.join(HERE, "verification-log.jsonl")
 RUBRIC_PATH = os.path.join(HERE, "prompts", "umpf_verification_prompt.md")
-SEARCH_CACHE_DIR = os.path.join(HERE, "search_cache")
 
 VALID_VERDICTS = {"COLLISION", "ADJACENT_ACTIVE", "FACT_CHECK_FAIL", "NO_SIGNAL"}
-
-# COA 5: parallel search workers (bounded). Cron/scheduler still NOT installed
-# until a frozen-slug stability A/B shows ≥95% verdict agreement.
-SEARCH_WORKERS = int(os.getenv("EUREKA_SEARCH_WORKERS", "4"))
-SEARCH_CACHE_ENABLED = os.getenv("EUREKA_SEARCH_CACHE", "1") != "0"
 
 MODE_TITLE_PREFIX = [
     (re.compile(r"^#\s*Janusian Hypothesis:"), "janusian"),
@@ -179,257 +180,75 @@ def fallback_queries(domains):
     return [f"{domains[0]} {domains[1]} connection research"]
 
 
-def tavily_search(query: str, max_results: int = 5):
-    resp = requests.post(
-        "https://api.tavily.com/search",
-        json={
-            "api_key": TAVILY_API_KEY,
-            "query": query,
-            "search_depth": "advanced",
-            "max_results": max_results,
-            "include_answer": False,
-        },
-        timeout=30,
-    )
-    resp.raise_for_status()
-    return resp.json().get("results", [])
-
-
-# Rate-limit-shaped Tavily failures, added 2026-08-29 after a real production
-# run hit sustained HTTP 432s (Tavily's own rate/quota-limit status code) on
-# 11 of 17 verifications in one batch -- every query in each of those 11
-# calls failed, `run_searches` silently returned an empty list, and
-# `classify()` was handed "(no search results returned for any query)" as if
-# that were a real, evidence-based negative finding. The classifier itself
-# said so plainly in its own reasoning ("The absence of search results...
-# this lack of information means the hypothesis cannot be verified") and
-# STILL output a definitive NO_SIGNAL verdict -- a genuinely wrong signal
-# reaching the ledger, worse than either bug the same day's frozen-run audit
-# found, because it corrupts the actual Phase 2 classification, not a
-# secondary score or filename. 429 is the standard rate-limit code; 432 is
-# Tavily's own, confirmed directly against the real error text this run.
-TAVILY_RETRYABLE_STATUSES = {429, 432}
-
-# Circuit breaker, added 2026-08-29 the same day as the retry logic above --
-# a real re-verification run made the gap in that first version obvious
-# immediately: retrying 3 times with backoff makes sense for an occasional
-# blip, but Tavily was confirmed down for this entire process (every single
-# query, back to back, for 20+ minutes straight) -- paying the ~22s retry
-# tax on EVERY subsequent query once the service is already known to be
-# down is pure waste, not caution. Once the first query in a process
-# exhausts every retry, stop retrying Tavily for the rest of that process
-# and go straight to the Monid fallback -- a single process run is short-
-# lived enough that "confirmed down once" is a safe, cheap signal to act on
-# for its remaining lifetime, without needing a time-boxed reset.
-_tavily_degraded = False
-
-
-def _tavily_search_with_retry(query: str, max_results: int = 5, max_retries: int = 3, base_delay: float = 3.0):
-    """Retry a Tavily call with exponential backoff + jitter on rate-limit-
-    shaped HTTP errors and on connection/timeout failures. A non-retryable
-    HTTP error (auth, bad request) re-raises immediately -- same
-    fail-fast-on-real-errors discipline as retry.py's OpenAI wrapper. Skips
-    straight to a single, no-retry attempt if the circuit breaker above has
-    already confirmed Tavily down earlier in this same process."""
-    global _tavily_degraded
-    effective_retries = 0 if _tavily_degraded else max_retries
-    last_exc = None
-    for attempt in range(effective_retries + 1):
-        try:
-            return tavily_search(query, max_results=max_results)
-        except requests.exceptions.HTTPError as e:
-            status = e.response.status_code if e.response is not None else None
-            if status not in TAVILY_RETRYABLE_STATUSES:
-                raise
-            last_exc = e
-        except requests.exceptions.RequestException as e:
-            last_exc = e
-        if attempt == effective_retries:
-            break
-        delay = base_delay * (2 ** attempt) + random.uniform(0, 1)
-        print(f"    ! Tavily rate-limited/transient error on {query!r} (attempt {attempt + 1}/{effective_retries + 1}) — retrying in {delay:.1f}s")
-        time.sleep(delay)
-    if not _tavily_degraded:
-        _tavily_degraded = True
-        print("    ⚠️  Tavily confirmed down this run — skipping its retries for the rest of this process, going straight to Monid/Exa.")
-    raise last_exc
-
-
-def _monid_exa_search(query: str, max_results: int = 5, timeout: int = 45):
-    """Fallback search provider, added 2026-08-29 specifically to overcome
-    Tavily's rate-limit incidents (see TAVILY_RETRYABLE_STATUSES's own
-    comment) -- Monid's Exa neural/keyword search (https://monid.ai),
-    called via the `monid` CLI (npm i -g @monid-ai/cli) rather than a raw
-    HTTP call, since Monid's own docs don't publish a plain REST contract
-    and the CLI's `-j/--json` output is a clean, parseable contract that
-    was directly verified working (confirmed live: a query for "Andrew Lo
-    Adaptive Markets Hypothesis" returned his actual 2004 paper directly --
-    the exact real-world collision the EMH canary test's Tavily-only search
-    missed entirely).
-
-    This is a paid, metered fallback ($0.01/call at time of writing) -- only
-    called when Tavily's own retries are exhausted, never as the primary
-    path, so it doesn't quietly become the majority of search spend. Returns
-    [] (not an exception) on any failure, so a fallback that itself fails
-    behaves exactly like "no results," letting the existing
-    all-queries-failed -> PENDING_VERIFICATION logic still apply rather than
-    crashing the whole verification pass."""
-    if not MONID_API_KEY:
-        return []
-    body = json.dumps({"query": query, "numResults": max_results, "contents": {"text": {"maxCharacters": 800}}})
-    try:
-        proc = subprocess.run(
-            ["monid", "run", "-p", "exa", "-e", "/search", "-i", body, "-j"],
-            capture_output=True, text=True, timeout=timeout,
-        )
-        if proc.returncode != 0:
-            print(f"    ! Monid/Exa fallback failed for {query!r}: {proc.stderr.strip()[:200]}")
-            return []
-        data = json.loads(proc.stdout)
-        if data.get("status") != "COMPLETED":
-            print(f"    ! Monid/Exa fallback did not complete for {query!r}: status={data.get('status')!r}")
-            return []
-        return data.get("output", {}).get("results", []) or []
-    except (subprocess.SubprocessError, json.JSONDecodeError, FileNotFoundError) as e:
-        print(f"    ! Monid/Exa fallback errored for {query!r}: {e}")
-        return []
-
-
-def _cache_key(query: str) -> str:
-    return hashlib.sha256(query.strip().lower().encode("utf-8")).hexdigest()[:40]
-
-
-def _cache_path(query: str) -> str:
-    return os.path.join(SEARCH_CACHE_DIR, f"{_cache_key(query)}.json")
-
-
-def _load_cached_hits(query: str):
-    if not SEARCH_CACHE_ENABLED:
-        return None
-    path = _cache_path(query)
-    if not os.path.exists(path):
-        return None
-    try:
-        with open(path, "r", encoding="utf-8") as f:
-            data = json.load(f)
-        return data.get("hits")
-    except (json.JSONDecodeError, OSError):
-        return None
-
-
-def _save_cached_hits(query: str, hits: list, provider: str) -> None:
-    if not SEARCH_CACHE_ENABLED:
-        return
-    os.makedirs(SEARCH_CACHE_DIR, exist_ok=True)
-    path = _cache_path(query)
-    with open(path, "w", encoding="utf-8") as f:
-        json.dump(
-            {
-                "query": query,
-                "provider": provider,
-                "cached_at": datetime.now(timezone.utc).isoformat(),
-                "hits": hits,
-            },
-            f,
-            ensure_ascii=False,
-        )
-        f.write("\n")
-
-
-def _search_one_query(q: str):
-    """Return (query, hits_or_None, failed_bool, provider). Uses disk cache first."""
-    cached = _load_cached_hits(q)
-    if cached is not None:
-        print(f"    📦 cache hit for {q!r} ({len(cached)} results)")
-        return q, cached, False, "cache"
-    try:
-        hits = _tavily_search_with_retry(q)
-        _save_cached_hits(q, hits, "tavily")
-        return q, hits, False, "tavily"
-    except requests.RequestException as e:
-        print(f"    ! Tavily search failed for {q!r} after retries — trying Monid/Exa fallback: {e}")
-        hits = _monid_exa_search(q)
-        if not hits:
-            return q, [], True, "none"
-        print(f"    ✅ Monid/Exa fallback recovered {len(hits)} result(s) for {q!r}")
-        _save_cached_hits(q, hits, "monid")
-        return q, hits, False, "monid"
-
-
-def run_searches(queries):
-    """Returns (results, failed_query_count). COA 5: queries run concurrently
-    (bounded pool) with per-query disk cache. Circuit breaker + Monid fallback
-    unchanged. Zero results from total failure still differs from zero results
-    from successful empty searches — verify_one() treats them differently."""
-    results = []
-    failed_queries = 0
-    workers = max(1, min(SEARCH_WORKERS, len(queries) or 1))
-    # Preserve input order in output aggregation
-    ordered = {}
-    with ThreadPoolExecutor(max_workers=workers) as pool:
-        futures = {pool.submit(_search_one_query, q): q for q in queries}
-        for fut in as_completed(futures):
-            q, hits, failed, _provider = fut.result()
-            ordered[q] = (hits, failed)
-    for q in queries:
-        hits, failed = ordered[q]
-        if failed:
-            failed_queries += 1
-            continue
-        for h in hits:
-            results.append(
-                {
-                    "query": q,
-                    "title": h.get("title", ""),
-                    "url": h.get("url", ""),
-                    "content": (h.get("content") or h.get("text") or "")[:800],
-                }
-            )
-    return results, failed_queries
-
-
 def load_rubric() -> str:
     with open(RUBRIC_PATH, "r", encoding="utf-8") as f:
         return f.read()
 
 
-def classify(title, mode, domains, core_claim, search_results, rubric, slug=None):
-    results_block = "\n\n".join(
-        f"[{i + 1}] {r['title']}\nURL: {r['url']}\nQuery: {r['query']}\nSnippet: {r['content']}"
-        for i, r in enumerate(search_results)
-    ) or "(no search results returned for any query)"
-
+def classify(title, mode, domains, core_claim, queries, rubric, slug=None):
+    """Single-call verification: OpenAI's Responses API `web_search` tool
+    does real, live web search AND classification together. Replaces the
+    prior two-step architecture (a separate Tavily/Monid search-gathering
+    pass, then this function classifying pre-gathered snippets) -- see this
+    file's module docstring for why. `queries` (the hypothesis's own
+    generated Search Queries, including its named-entity requirement) are
+    passed as a starting point, not a hard limit -- the model can search
+    adaptively beyond them, which a fixed pre-generated list never could."""
+    suggested = "\n".join(f"- {q}" for q in queries) if queries else "(none suggested — search based on the hypothesis itself)"
     system_prompt = (
         "You are applying the UMPF Phase 2 verification rubric below to one "
-        "hypothesis, given real web search results already gathered for it. "
-        "Follow the rubric exactly, including the umbrella-trap rule under "
-        "ADJACENT_ACTIVE — a generic 'both are complex systems' bridge is "
-        "NO_SIGNAL, not ADJACENT_ACTIVE. Cite real titles/URLs from the "
-        "results given; never invent a source. Respond with ONLY a JSON "
-        "object, no prose outside it:\n\n"
+        "hypothesis. Use the web_search tool to find real evidence before "
+        "classifying — search adaptively; the suggested queries below are a "
+        "starting point, not a limit. Follow the rubric exactly, including "
+        "the umbrella-trap rule under ADJACENT_ACTIVE — a generic 'both are "
+        "complex systems' bridge is NO_SIGNAL, not ADJACENT_ACTIVE. Cite "
+        "real titles/URLs from what you actually find; never invent a "
+        "source. Respond with ONLY a JSON object, no prose outside it, no "
+        "markdown fences:\n\n"
         '{"verdict": "COLLISION|ADJACENT_ACTIVE|FACT_CHECK_FAIL|NO_SIGNAL", '
         '"what_was_found": "...", "reasoning": "..."}\n\n'
         f"--- RUBRIC ---\n{rubric}"
     )
     user_prompt = (
         f"Hypothesis: {title}\nMode: {mode}\nDomain(s): {', '.join(domains)}\n\n"
-        f"Core claim:\n{core_claim}\n\nSearch results:\n{results_block}"
+        f"Core claim:\n{core_claim}\n\nSuggested search starting points:\n{suggested}"
     )
-    resp = call_with_retry(
-        client.chat.completions.create,
-        model="gpt-4o",
-        messages=[
-            {"role": "system", "content": system_prompt},
-            {"role": "user", "content": user_prompt},
-        ],
-        temperature=0.1,
-        response_format={"type": "json_object"},
-    )
-    log_usage("verification", "gpt-4o", resp.usage, hypothesis_slug=slug)
-    parsed = json.loads(resp.choices[0].message.content)
-    if parsed.get("verdict") not in VALID_VERDICTS:
-        raise ValueError(f"Model returned an invalid verdict: {parsed.get('verdict')!r}")
-    return parsed
+
+    # Real, occasional failure mode found the first time this ran at scale
+    # (2026-08-29): a tool-augmented call sometimes returns JSON missing a
+    # required key (seen once in 6 real calls -- "reasoning" absent, verdict
+    # present and correct). Not reproducible on a fresh retry of the exact
+    # same hypothesis, so this reads as generation variance, not a prompt
+    # defect. `call_with_retry` already covers transient network failures;
+    # this is a different kind of retry -- the call succeeded, the JSON
+    # shape didn't -- so it's handled here, once, before giving up loudly.
+    last_error = None
+    for attempt in range(2):
+        resp = call_with_retry(
+            client.responses.create,
+            model="gpt-4o-mini",
+            tools=[{"type": "web_search"}],
+            instructions=system_prompt,
+            input=user_prompt,
+        )
+        log_usage("verification", "gpt-4o-mini", resp.usage, hypothesis_slug=slug)
+        text = resp.output_text.strip()
+        if text.startswith("```"):
+            text = re.sub(r"^```(?:json)?\s*\n", "", text)
+            text = re.sub(r"\n```\s*$", "", text)
+        try:
+            parsed = json.loads(text)
+            if parsed.get("verdict") not in VALID_VERDICTS:
+                raise ValueError(f"Model returned an invalid verdict: {parsed.get('verdict')!r}")
+            missing = [k for k in ("what_was_found", "reasoning") if k not in parsed]
+            if missing:
+                raise ValueError(f"Model JSON missing required key(s): {missing}")
+            return parsed
+        except (json.JSONDecodeError, ValueError) as e:
+            last_error = e
+            if attempt == 0:
+                print(f"    ! Malformed classifier JSON ({e}) — retrying once: {text[:150]!r}")
+    raise last_error
 
 
 def write_verification_md(slug, title, mode, verdict, queries, result):
@@ -438,7 +257,7 @@ def write_verification_md(slug, title, mode, verdict, queries, result):
     content = f"""# Verification: {mode_label} — {title}
 
 **Verifies**: `hypotheses/{slug}.md`
-**Verified**: {date.today().isoformat()} · **Method**: Tavily search + GPT-4o classification (`verify_hypothesis.py`, unattended)
+**Verified**: {date.today().isoformat()} · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
 ## Verdict: **{verdict}**
 
@@ -464,7 +283,7 @@ def append_ledger_entry(slug, mode, verdict, domains, self_score, result, querie
         "domains": domains,
         "verified_date": date.today().isoformat(),
         "notes": result["reasoning"],
-        "verification_method": "tavily+gpt-4o (unattended, verify_hypothesis.py)",
+        "verification_method": "openai-web-search+gpt-4o-mini (unattended, verify_hypothesis.py)",
     }
     if mode == "janusian":
         entry["self_reported_tension"] = self_score
@@ -505,44 +324,17 @@ def verify_one(filepath, rubric, dry_run=False):
     queries = extract_search_queries(text) or fallback_queries(domains)
 
     print(f"  → [{mode}] {title}")
-    print(f"    queries: {queries}")
-    search_results, failed_queries = run_searches(queries)
-    print(f"    {len(search_results)} search results gathered" + (f" ({failed_queries} of {len(queries)} queries failed after retries)" if failed_queries else ""))
-
-    if not search_results and failed_queries == len(queries):
-        # Every single query failed outright (rate-limited or transient),
-        # not "searched successfully and found nothing." Don't let classify()
-        # guess a verdict from zero real evidence -- that's how a real
-        # infrastructure hiccup turned into a false NO_SIGNAL reaching the
-        # ledger (see run_searches()'s own comment for the incident this
-        # fixes). PENDING_VERIFICATION already exists as a real, handled
-        # status in score_hypotheses.py (held out of scoring) and
-        # assemble_experience_data.py (skips the verification-file lookup)
-        # -- this is the first code path that actually writes it, closing a
-        # gap where it was previously only ever set by hand.
-        #
-        # Known, disclosed scope limit: already_verified_slugs() below still
-        # treats a PENDING_VERIFICATION entry as "done," so --all-unverified
-        # will not automatically retry it on its own -- same as the original
-        # 2026-08-29 Failure 3 precedent, where PENDING_VERIFICATION entries
-        # were resolved by an explicit, deliberate re-run naming the specific
-        # files. Building automatic re-queueing would mean rewriting past
-        # ledger lines rather than only ever appending to it, which is a
-        # real, separate design question -- not one to settle inside this fix.
-        print(f"    ⚠️  All {len(queries)} queries failed even after retries — marking PENDING_VERIFICATION rather than guessing a verdict from no evidence.")
-        verdict = "PENDING_VERIFICATION"
-        result = {
-            "what_was_found": "No search results — every query failed (rate-limited or a transient network error), even after retries.",
-            "reasoning": (
-                f"All {len(queries)} search queries for this hypothesis failed before any results were "
-                "gathered, even after retrying with backoff. This is not a real negative finding -- "
-                "verification could not run at all. Re-run `verify_hypothesis.py` explicitly against this "
-                "file once the search API is healthy."
-            ),
-        }
-    else:
-        result = classify(title, mode, domains, core_claim, search_results, rubric, slug=slug)
-        verdict = result["verdict"]
+    print(f"    suggested queries: {queries}")
+    # 2026-08-29: no more separate search-gathering step or PENDING_VERIFICATION
+    # branch here -- classify() does real web search and classification in one
+    # OpenAI call now (see module docstring). If OpenAI itself is unreachable
+    # even after call_with_retry's retries, this raises and main()'s per-file
+    # try/except reports it as a failure with no ledger entry written -- which
+    # already means --all-unverified retries it automatically next time,
+    # without needing a distinct PENDING_VERIFICATION status for a provider
+    # that's now the same one every other stage in this pipeline depends on.
+    result = classify(title, mode, domains, core_claim, queries, rubric, slug=slug)
+    verdict = result["verdict"]
     print(f"    verdict: {verdict}")
 
     if dry_run:
@@ -554,7 +346,7 @@ def verify_one(filepath, rubric, dry_run=False):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Unattended Phase 2 verification (Tavily + GPT-4o)")
+    parser = argparse.ArgumentParser(description="Unattended Phase 2 verification (OpenAI web_search + gpt-4o-mini)")
     parser.add_argument("files", nargs="*", help="Specific hypothesis .md files to verify")
     parser.add_argument("--all-unverified", action="store_true", help="Verify every hypothesis not yet in the ledger")
     parser.add_argument("--limit", type=int, default=None, help="Cap how many to run this pass (used with --all-unverified)")

@@ -23,21 +23,34 @@ USAGE_LOG_PATH = os.path.join(PIPELINE_DIR, "token_usage.jsonl")
 
 def log_usage(phase: str, model: str, usage, hypothesis_slug: str = None, extra: dict = None) -> None:
     """Append one usage record. `usage` is an OpenAI response's `.usage`
-    object (has .prompt_tokens, .completion_tokens, .total_tokens) -- pass
-    it straight through, we don't reshape it. `phase` is one of
-    'generation' | 'verification' | 'refutation' | 'audit' so downstream
+    object -- pass it straight through, we don't reshape it. `phase` is one
+    of 'generation' | 'verification' | 'refutation' | 'audit' so downstream
     analysis can group by pipeline stage, which is the whole point (the
     2026-08-29 audit's central finding -- refutation costs ~15x what
     verification does per call -- is exactly the kind of thing this field
-    makes queryable instead of estimated)."""
+    makes queryable instead of estimated).
+
+    2026-08-29: the Chat Completions API's usage object names these fields
+    `.prompt_tokens`/`.completion_tokens`; the Responses API (used for the
+    web_search tool, replacing Tavily/Monid this same day) names the same
+    two things `.input_tokens`/`.output_tokens`. Reading only the first pair
+    would have silently logged None for every Responses-API call -- checked
+    both, in order, so this file keeps recording real numbers regardless of
+    which API produced the response."""
     if usage is None:
         return  # some SDK paths (e.g. a retried call) may not carry usage; don't crash the caller over it
+    prompt_tokens = getattr(usage, "prompt_tokens", None)
+    if prompt_tokens is None:
+        prompt_tokens = getattr(usage, "input_tokens", None)
+    completion_tokens = getattr(usage, "completion_tokens", None)
+    if completion_tokens is None:
+        completion_tokens = getattr(usage, "output_tokens", None)
     record = {
         "timestamp": datetime.now(timezone.utc).isoformat(),
         "phase": phase,
         "model": model,
-        "prompt_tokens": getattr(usage, "prompt_tokens", None),
-        "completion_tokens": getattr(usage, "completion_tokens", None),
+        "prompt_tokens": prompt_tokens,
+        "completion_tokens": completion_tokens,
         "total_tokens": getattr(usage, "total_tokens", None),
     }
     if hypothesis_slug:
