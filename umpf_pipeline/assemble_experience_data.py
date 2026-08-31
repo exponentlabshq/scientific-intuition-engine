@@ -16,7 +16,7 @@ import os
 import re
 
 from score_hypotheses import (
-    load_entries, score_entry, key_for, tier_for,
+    load_entries, score_entry, key_for, tier_for, refutation_gradient_pct,
     load_prefilter_map, compute_prefilter_correlation, compute_mode_performance,
 )
 
@@ -135,6 +135,7 @@ def main():
         slug = rec.get("hypothesis_slug") or rec.get("slug") or key
         pf = prefilter_map.get(slug)
         pair_type = pf.get("pair_type") if pf else None
+        gradient_pct = refutation_gradient_pct(rec)
 
         is_case_study = rec.get("source") == "rosetta-stone-case-study" or "case_study" in rec
 
@@ -177,6 +178,7 @@ def main():
             "tier_rank": tier_rank,
             "tier_label": tier_label,
             "pair_type": pair_type,
+            "refutation_gradient_pct": gradient_pct,
             "refutation_lens_version": rec.get("refutation_lens_version"),
             "notes": rec.get("notes"),
             "self_reported_distance": rec.get("self_reported_distance"),

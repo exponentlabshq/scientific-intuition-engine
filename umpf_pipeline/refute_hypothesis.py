@@ -356,8 +356,16 @@ def append_ledger_refutation(slug: str, verdict: str, survives: int, refutation_
     the refutation fields, rewrite. Mirrors the exact field shape every prior
     refutation round wrote by hand — refutation_verdict / refutation_file /
     refutation_independently_confirmed / refutation_confirmation_note, plus
-    refutation_survival_count for the SURVIVES case (score_hypotheses.py
-    already reads this field)."""
+    refutation_survival_count (score_hypotheses.py reads this field).
+
+    2026-08-31: refutation_survival_count is now written for EVERY verdict,
+    not only SURVIVES. Collapsing 0-of-3 and 1-of-3 into an undifferentiated
+    REFUTED threw away a real, already-computed ensemble-vote signal — the
+    difference between a unanimous rejection and a genuine near-miss. The
+    271+ pre-existing REFUTED entries were backfilled from their own
+    refutation .md files' real "## Tally: N of 3 survive" line (never
+    guessed, never re-run) -- see score_hypotheses.py's tier_for() and
+    refutation_gradient() for how this is used."""
     lines = []
     found = False
     with open(LEDGER_PATH, "r", encoding="utf-8") as f:
@@ -376,8 +384,7 @@ def append_ledger_refutation(slug: str, verdict: str, survives: int, refutation_
                     "each with its own isolated message list — no shared conversation state, no lens told "
                     "the others' findings. Unattended (refute_hypothesis.py)."
                 )
-                if verdict == "SURVIVES":
-                    entry["refutation_survival_count"] = survives
+                entry["refutation_survival_count"] = survives
                 found = True
             lines.append(json.dumps(entry))
     if not found:

@@ -2,15 +2,15 @@
   "mode_performance": [
     {
       "mode": "bisociation",
-      "n": 223,
-      "avg_points": 17.7,
-      "no_signal_rate": 0.14
+      "n": 228,
+      "avg_points": 17.5,
+      "no_signal_rate": 0.15
     },
     {
       "mode": "homospatial",
-      "n": 238,
-      "avg_points": 10.7,
-      "no_signal_rate": 0.35
+      "n": 244,
+      "avg_points": 10.6,
+      "no_signal_rate": 0.36
     },
     {
       "mode": "case-study",
@@ -20,8 +20,8 @@
     },
     {
       "mode": "janusian",
-      "n": 173,
-      "avg_points": 8.3,
+      "n": 175,
+      "avg_points": 8.2,
       "no_signal_rate": 0.09
     }
   ],
@@ -29,9 +29,9 @@
     "pair_type": [
       {
         "key": "narrative-shaped",
-        "n": 91,
-        "good": 81,
-        "rate_pct": 89.0
+        "n": 96,
+        "good": 84,
+        "rate_pct": 87.5
       },
       {
         "key": "formalism-shaped",
@@ -41,9 +41,9 @@
       },
       {
         "key": "mixed-uncertain",
-        "n": 193,
-        "good": 137,
-        "rate_pct": 71.0
+        "n": 199,
+        "good": 140,
+        "rate_pct": 70.4
       }
     ],
     "recommendation": [
@@ -55,9 +55,9 @@
       },
       {
         "key": "would_deprioritize",
-        "n": 275,
-        "good": 210,
-        "rate_pct": 76.4
+        "n": 286,
+        "good": 216,
+        "rate_pct": 75.5
       }
     ]
   }

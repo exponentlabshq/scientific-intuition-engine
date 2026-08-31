@@ -77,6 +77,18 @@ MODE_BADGE = {
 
 REFUTATION_SURVIVAL_POINTS = {3: 20, 2: 12}  # of-3 survive -> points; 0/1 handled as REFUTED
 
+# 2026-08-31: the refutation gradient. Previously 0-of-3 and 1-of-3 both
+# collapsed into an undifferentiated REFUTED at a flat -15 -- throwing away
+# a real, already-computed ensemble-vote signal (three independent models'
+# real votes, not a self-report -- see refute_hypothesis.py's
+# append_ledger_refutation() docstring for why this isn't the same risk as
+# the self-reported-novelty signal that was excluded from scoring the same
+# day). 0-of-3 (unanimous rejection) stays the worst outcome; 1-of-3 (a
+# real, genuine near-miss -- one independent lens found something worth
+# keeping) is real, if weak, positive-adjacent signal, not equivalent to a
+# clean sweep against the claim.
+REFUTATION_POINTS = {0: -15, 1: -5, 2: 12, 3: 20}
+
 
 def is_calibration_canary(rec_or_key) -> bool:
     """Prior-art canaries are calibration plants (COA 4/4b/4c), not public
@@ -199,17 +211,29 @@ def score_entry(rec, *, include_self_report: bool = False):
         badges.append("⚠️ Failed Honesty Check")
         breakdown.append("Mechanical honesty check failed twice (disguised compromise, uncorrected): -10")
 
-    # Adversarial refutation, if it ran
+    # Adversarial refutation, if it ran -- graduated by the real 0/1/2/3-of-3
+    # ensemble vote, not collapsed to a binary. See REFUTATION_POINTS above.
     refutation_verdict = rec.get("refutation_verdict")
     if refutation_verdict == "REFUTED":
-        points -= 15
-        badges.append("💀 Refuted")
-        breakdown.append("Adversarial refutation REFUTED: -15")
+        survived = rec.get("refutation_survival_count")
+        if survived == 1:
+            p = REFUTATION_POINTS[1]
+            points += p
+            badges.append("🌗 Contested (1-of-3)")
+            breakdown.append(f"Adversarial refutation REFUTED, but a real near-miss (1-of-3 survive): {p:+d}")
+        else:
+            # survived == 0, or unknown (no count recoverable) -- default to
+            # the worst outcome under uncertainty, same discipline as the
+            # lenses' own "default to REFUTED" rule.
+            p = REFUTATION_POINTS[0]
+            points += p
+            badges.append("💀 Refuted")
+            breakdown.append(f"Adversarial refutation REFUTED, unanimous (0-of-3 survive): {p:+d}")
         if rec.get("refutation_independently_confirmed"):
             breakdown.append("  independently confirmed (3 separate agents, full agreement)")
     elif refutation_verdict == "SURVIVES":
         survived = rec.get("refutation_survival_count", 2)
-        p = REFUTATION_SURVIVAL_POINTS.get(survived, 12)
+        p = REFUTATION_POINTS.get(survived, 12)
         points += p
         badges.append("🛡️ Survived the Gauntlet")
         breakdown.append(f"Adversarial refutation survived ({survived}-of-3): +{p}")
@@ -277,8 +301,19 @@ TIER_LABELS = {
     1: "🛡️ Survived Refutation",
     2: "🗺️ Verified, Unrefuted",
     3: "⏳ Pending",
-    4: "💀 Refuted / Rejected",
+    4: "🌗 Contested",
+    5: "💀 Refuted / Rejected",
 }
+
+
+def refutation_gradient_pct(rec):
+    """The real 0/1/2/3-of-3 ensemble vote as a percentage, or None if
+    refutation never ran or the count isn't recoverable. Not a self-report --
+    three independent models' real votes, tallied. 2026-08-31."""
+    survived = rec.get("refutation_survival_count")
+    if survived is None:
+        return None
+    return round(100 * survived / 3)
 
 
 def tier_for(rec) -> tuple:
@@ -292,6 +327,14 @@ def tier_for(rec) -> tuple:
     as a tie-breaker WITHIN a tier (see render_leaderboard) -- they just no
     longer let a refuted claim rank above a survived one.
 
+    2026-08-31, same day: added a Contested tier (rank 4) for a REFUTED
+    verdict with a real 1-of-3 survival count -- previously indistinguishable
+    from a unanimous 0-of-3 rejection. A definitive negative signal (a
+    factual failure, an invalid pairing, a researcher's real dismissal, or
+    the mechanical honesty check) still overrides this and lands in the
+    worst tier regardless of how close refutation came -- those are separate,
+    unambiguous rejections, not softened by a near-miss vote.
+
     Only ever called on entries that passed score_entry()'s held_out check
     (i.e. verdict is one of the four canonical outcomes), so no fallback
     tier for non-standard verdicts is needed here -- those never reach this
@@ -304,14 +347,18 @@ def tier_for(rec) -> tuple:
     slug = rec.get("hypothesis_slug") or rec.get("slug") or key_for(rec)
     flagged = hypothesis_flagged(slug)
 
-    # Refuted or rejected on the merits beats every other signal, regardless
-    # of how promising the entry looked before that check ran.
-    if (refutation_verdict == "REFUTED"
-            or verdict == "FACT_CHECK_FAIL"
+    # Definitive negative signals beat everything, including a real
+    # refutation near-miss -- separate, unambiguous rejections on their own.
+    if (verdict == "FACT_CHECK_FAIL"
             or not_valid
             or outreach_status == "researcher_dismissed"
             or flagged):
-        return 4, TIER_LABELS[4]
+        return 5, TIER_LABELS[5]
+
+    if refutation_verdict == "REFUTED":
+        if rec.get("refutation_survival_count") == 1:
+            return 4, TIER_LABELS[4]  # Contested -- a real, if weak, near-miss
+        return 5, TIER_LABELS[5]      # 0-of-3, or count unrecoverable -- worst, under uncertainty
 
     if outreach_status == "researcher_confirmed_novel":
         return 0, TIER_LABELS[0]
@@ -502,6 +549,7 @@ def render_leaderboard(entries):
             "tier_rank": tier_rank,
             "tier_label": tier_label,
             "pair_type": pf.get("pair_type") if pf else None,
+            "refutation_gradient_pct": refutation_gradient_pct(rec),
         }
         scored.append(row)
 
@@ -521,7 +569,7 @@ def render_leaderboard(entries):
                   "(a refuted claim could outrank a genuine survivor under flat points). Self-reported "
                   "novelty is shown per entry as context but is not scored (near-zero predictive signal, "
                   "Failure 5). Tiers, high to low confidence: " +
-                  " → ".join(TIER_LABELS[i] for i in range(5)) + ".")
+                  " → ".join(TIER_LABELS[i] for i in range(6)) + ".")
     lines.append("")
 
     # COA 4 — mode performance, real and live, not hardcoded.
@@ -568,14 +616,16 @@ def render_leaderboard(entries):
 
     lines.append("## Ranking")
     lines.append("")
-    lines.append("| Rank | Tier | Pairing | Points | Verdict | Pair type | Badges |")
-    lines.append("|---|---|---|---|---|---|---|")
+    lines.append("| Rank | Tier | Pairing | Points | Verdict | Refutation | Pair type | Badges |")
+    lines.append("|---|---|---|---|---|---|---|---|")
     for i, row in enumerate(scored, 1):
         domains_str = " × ".join(row["domains"]) if row["domains"] else row["key"]
         badges_str = " ".join(row["badges"]) if row["badges"] else "—"
         pt = row["pair_type"] or "—"
+        gpct = row["refutation_gradient_pct"]
+        ref_str = f"{gpct}% survived" if gpct is not None else "—"
         lines.append(f"| {i} | {row['tier_label']} | {domains_str} | **{row['points']:+d}** | "
-                      f"{row['verdict']} | {pt} | {badges_str} |")
+                      f"{row['verdict']} | {ref_str} | {pt} | {badges_str} |")
     lines.append("")
 
     if held_out:

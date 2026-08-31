@@ -649,6 +649,7 @@ footer.foot {
             '<span class="pairing">' + pairingName(e).replace(/</g, '&lt;') + '</span>' +
             '<span class="chips">' +
               (e.tier_label ? '<span class="chip tier-chip" title="Confidence tier">' + e.tier_label + '</span>' : '') +
+              (e.refutation_gradient_pct != null ? '<span class="chip tier-chip" title="Real 0/1/2/3-of-3 ensemble vote, not a self-report">' + e.refutation_gradient_pct + '% survived</span>' : '') +
               '<span class="chip ' + vClass + '">' + vLabel + '</span>' +
             '</span>' +
             '<span class="points ' + ptsClass + '">' + (e.points > 0 ? '+' : '') + e.points + '</span>' +
