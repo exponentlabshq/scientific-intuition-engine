@@ -68,6 +68,25 @@ RUBRIC_PATH = os.path.join(HERE, "prompts", "umpf_verification_prompt.md")
 
 VALID_VERDICTS = {"COLLISION", "ADJACENT_ACTIVE", "FACT_CHECK_FAIL", "NO_SIGNAL"}
 
+# 2026-08-31: strict schema enforcement, replacing prose-instructed JSON.
+# This is the exact fix for Failure 12 (a truncated, malformed response
+# silently missing "reasoning") -- that was possible because nothing in the
+# request enforced the shape the prompt asked for in English; the classifier
+# could hit its token ceiling mid-field and nothing would stop it. Confirmed
+# compatible with the web_search tool via direct live test before this
+# shipped, not assumed safe. With this, a well-formed response is guaranteed
+# by the API itself, not by asking nicely and retrying when it isn't.
+VERIFY_SCHEMA = {
+    "type": "object",
+    "properties": {
+        "verdict": {"type": "string", "enum": sorted(VALID_VERDICTS)},
+        "what_was_found": {"type": "string", "description": "3-4 sentences, concise -- real titles/URLs only, never invented."},
+        "reasoning": {"type": "string"},
+    },
+    "required": ["verdict", "what_was_found", "reasoning"],
+    "additionalProperties": False,
+}
+
 MODE_TITLE_PREFIX = [
     (re.compile(r"^#\s*Janusian Hypothesis:"), "janusian"),
     (re.compile(r"^#\s*Homospatial Hypothesis:"), "homospatial"),
@@ -204,10 +223,7 @@ def classify(title, mode, domains, core_claim, queries, rubric, slug=None):
         "complex systems' bridge is NO_SIGNAL, not ADJACENT_ACTIVE. Cite "
         "real titles/URLs from what you actually find; never invent a "
         "source. Keep what_was_found to 3-4 sentences -- concise, not a "
-        "transcript of everything found. Respond with ONLY a JSON object, "
-        "no prose outside it, no markdown fences:\n\n"
-        '{"verdict": "COLLISION|ADJACENT_ACTIVE|FACT_CHECK_FAIL|NO_SIGNAL", '
-        '"what_was_found": "...", "reasoning": "..."}\n\n'
+        "transcript of everything found.\n\n"
         f"--- RUBRIC ---\n{rubric}"
     )
     user_prompt = (
@@ -215,21 +231,16 @@ def classify(title, mode, domains, core_claim, queries, rubric, slug=None):
         f"Core claim:\n{core_claim}\n\nSuggested search starting points:\n{suggested}"
     )
 
-    # Real failure mode found the first time this ran at real scale
-    # (2026-08-29, re-confirmed 2026-08-30 at n=40): a tool-augmented call
-    # sometimes returns JSON missing a required key -- and the raw text
-    # confirmed it directly (2026-08-30): the string cuts off mid-word
-    # ("...specifically named \"Crea) -- an output-length truncation
-    # signature, not the model choosing to omit a field. A single retry
-    # wasn't always enough: 2 of 4 real cases in one batch failed twice in a
-    # row before this fix. Two real mitigations, not just a bigger retry
-    # budget: an explicit generous max_output_tokens (removes the likely
-    # ceiling being hit) and an instruction to keep what_was_found to 3-4
-    # sentences (removes the pressure that was filling the budget before
-    # "reasoning" ever got written). Retries bumped 1 -> 2 as a backstop,
-    # not the primary fix.
-    last_error = None
-    for attempt in range(3):
+    # 2026-08-31: strict schema (VERIFY_SCHEMA, module-level) replaces the
+    # 3-attempt malformed-JSON retry loop this function used to need --
+    # Failure 12 (a truncated response silently missing "reasoning") is now
+    # structurally impossible, not just less likely. What remains is a real,
+    # separate risk strict schema doesn't touch: a genuine transient API
+    # failure (timeout, empty response) -- call_with_retry already covers
+    # that at the HTTP layer, so one defensive retry here is a backstop for
+    # anything that slips past it, not the primary defense the old 3-attempt
+    # loop was.
+    try:
         resp = call_with_retry(
             client.responses.create,
             model="gpt-4o-mini",
@@ -237,25 +248,23 @@ def classify(title, mode, domains, core_claim, queries, rubric, slug=None):
             instructions=system_prompt,
             input=user_prompt,
             max_output_tokens=4000,
+            text={"format": {"type": "json_schema", "name": "verification_verdict", "schema": VERIFY_SCHEMA, "strict": True}},
         )
         log_usage("verification", "gpt-4o-mini", resp.usage, hypothesis_slug=slug)
-        text = resp.output_text.strip()
-        if text.startswith("```"):
-            text = re.sub(r"^```(?:json)?\s*\n", "", text)
-            text = re.sub(r"\n```\s*$", "", text)
-        try:
-            parsed = json.loads(text)
-            if parsed.get("verdict") not in VALID_VERDICTS:
-                raise ValueError(f"Model returned an invalid verdict: {parsed.get('verdict')!r}")
-            missing = [k for k in ("what_was_found", "reasoning") if k not in parsed]
-            if missing:
-                raise ValueError(f"Model JSON missing required key(s): {missing}")
-            return parsed
-        except (json.JSONDecodeError, ValueError) as e:
-            last_error = e
-            if attempt < 2:
-                print(f"    ! Malformed classifier JSON ({e}) — retrying ({attempt + 1}/2): {text[:150]!r}")
-    raise last_error
+        return json.loads(resp.output_text)
+    except Exception as e:
+        print(f"    ! Verification call failed ({e}) — retrying once")
+        resp = call_with_retry(
+            client.responses.create,
+            model="gpt-4o-mini",
+            tools=[{"type": "web_search"}],
+            instructions=system_prompt,
+            input=user_prompt,
+            max_output_tokens=4000,
+            text={"format": {"type": "json_schema", "name": "verification_verdict", "schema": VERIFY_SCHEMA, "strict": True}},
+        )
+        log_usage("verification", "gpt-4o-mini", resp.usage, hypothesis_slug=slug)
+        return json.loads(resp.output_text)
 
 
 def write_verification_md(slug, title, mode, verdict, queries, result):

@@ -463,7 +463,567 @@ def _replace_queries_section(markdown_text: str, new_block: str) -> str:
     return re.sub(r"## Search Queries\s*\n.*\Z", f"## Search Queries\n\n{new_block.strip()}\n", markdown_text, flags=re.DOTALL)
 
 
+# =============================================================================
+# 2026-08-31: strict-schema generation, replacing free-form markdown +
+# regex section-extraction. Real, documented cost of the old approach:
+# Failure 5 -- the self-report extractor read the wrong section for 2 of 3
+# modes and captured the "1" out of "(1-5)" instead of the real value,
+# silently, for the script's entire lifetime, because there was never a real
+# field to read, only a string pattern to guess at. The mechanical honesty
+# checks (comparison-word scans, same-instance test) had the same underlying
+# fragility -- _extract_section()'s own regex is one more thing that can
+# silently miss a boundary.
+#
+# Architecture: get STRUCTURED fields from the model (one schema per mode,
+# matching that mode's real prompt template exactly), run the mechanical
+# checks against those real fields directly, then RENDER the structured data
+# into the exact same markdown document shape every existing consumer
+# depends on (verify_hypothesis.py's section extraction, refute_hypothesis.py,
+# score_hypotheses.py's hypothesis_flagged()/hypothesis_sharpened() text
+# scans, prefilter_observe.py, and any human reading a Phase 3 draft). This
+# is deliberately NOT a raw JSON dump replacing the document -- the document
+# format is a real, load-bearing contract this migration does not break.
+#
+# The old free-form implementation is kept as run_hypothesis_legacy() below,
+# unused but not deleted -- a real rollback path if this migration surfaces
+# a problem at production scale, matching this project's own "never delete
+# something working" discipline.
+# =============================================================================
+
+BISOCIATION_SCHEMA = {
+    "type": "object",
+    "properties": {
+        "m1_description": {"type": "string", "description": "M1 (Domain A): 1-2 sentences, what actually happens in this domain, plain terms a working researcher would recognize as accurate -- not UMPF jargon yet."},
+        "m2_description": {"type": "string", "description": "M2 (Domain B): same, for domain B."},
+        "monadic_atomic_a": {"type": "string", "description": "Domain A: what uncertainty/absence (Maybe/Either) looks like here."},
+        "monadic_atomic_b": {"type": "string", "description": "Domain B: same."},
+        "monadic_domain_layer_a": {"type": "string", "description": "Domain A: what evolving state/context (State/Reader/Writer) looks like here."},
+        "monadic_domain_layer_b": {"type": "string", "description": "Domain B: same."},
+        "monadic_control_a": {"type": "string", "description": "Domain A: what boundary/interaction (IO/STM) looks like here."},
+        "monadic_control_b": {"type": "string", "description": "Domain B: same."},
+        "monadic_orchestration_a": {"type": "string", "description": "Domain A: what system-wide composition (Free/effects) looks like here."},
+        "monadic_orchestration_b": {"type": "string", "description": "Domain B: same."},
+        "functor_mapping": {"type": "string", "description": "The proposed mapping f: M(A) -> M(B), stated explicitly -- name what maps to what, at the layer where the correspondence is strongest. Zero comparison words (like, similar to, mirrors, akin to, resembles)."},
+        "functor_condition": {"type": "string", "description": "One sentence: what would have to be true in BOTH domains for this functor to actually hold (the falsifiability condition) -- not just an assertion that it's plausible."},
+        "generative_relation_sentence": {"type": "string", "description": "First-person reconstruction transplanting a RULE, not a resemblance. Exact shape: 'I noticed that the relational rule governing [X in domain A] also governed [Y in domain B] -- specifically [name the rule].' Zero comparison words."},
+        "falsifiable_prediction": {"type": "string", "description": "Exact shape: 'If that relation holds, then [specific, checkable prediction] -- or vice versa.'"},
+        "distance_score": {"type": "integer", "description": "1-5: how far apart are these domains in ordinary practice? 1 = same field relabeled, 5 = genuinely unrelated communities."},
+        "distance_score_reasoning": {"type": "string", "description": "One sentence justifying the distance_score."},
+        "testability": {"type": "string", "description": "What specific data/experiment/literature could confirm or kill this hypothesis. Say so plainly if none is known -- never invent one."},
+        "known_prior_art": {"type": "string", "description": "Existing work already making this connection, if any. Say 'not verified' rather than asserting novelty you can't back up."},
+        "confidence_worth_time": {"type": "string", "description": "Low / Medium / High, with one sentence of reasoning."},
+        "if_doesnt_hold": {"type": "string", "description": "One sentence: the most likely reason this functor turns out superficial rather than structural."},
+        "search_queries": {
+            "type": "array", "items": {"type": "string"}, "minItems": 3, "maxItems": 5,
+            "description": "3-5 concrete search queries to verify the hypothesis or check prior art. At least one MUST search by a specific named theory/framework/researcher, not just the general concept -- if none is known, use the form '[core concept] named theory OR framework OR researcher'.",
+        },
+    },
+    "required": ["m1_description", "m2_description", "monadic_atomic_a", "monadic_atomic_b",
+                 "monadic_domain_layer_a", "monadic_domain_layer_b", "monadic_control_a", "monadic_control_b",
+                 "monadic_orchestration_a", "monadic_orchestration_b", "functor_mapping", "functor_condition",
+                 "generative_relation_sentence", "falsifiable_prediction", "distance_score",
+                 "distance_score_reasoning", "testability", "known_prior_art", "confidence_worth_time",
+                 "if_doesnt_hold", "search_queries"],
+    "additionalProperties": False,
+}
+
+JANUSIAN_SCHEMA = {
+    "type": "object",
+    "properties": {
+        "domain_description": {"type": "string", "description": "1-2 sentences, what actually happens in this domain, plain terms."},
+        "proposition": {"type": "string", "description": "One sentence: the load-bearing assumption this field treats as settled. Must pass the Gate -- its exact opposite must sound genuinely absurd, not just contrarian."},
+        "inversion": {"type": "string", "description": "The exact opposite, stated directly, no hedging ('on the other hand', 'it could also be')."},
+        "compromise_option": {"type": "string", "description": "(A) The hedge version: 'it depends,' 'both apply differently.' This is what genuine Janusian output must NOT be."},
+        "synthesis_option": {"type": "string", "description": "(B) A resolution that quietly picks a side or averages the two -- also not genuinely Janusian."},
+        "paradox_option": {"type": "string", "description": "(C) A claim true BECAUSE both proposition and inversion are true at once, for the SAME instance -- not different instances in different contexts/subpopulations. This is the one that matters. Zero context-split language (depending on, in some contexts, different types of, etc)."},
+        "why_not_compromise_synthesis": {"type": "string", "description": "State explicitly why (A) and (B) fail to actually be Janusian, and confirm (C) holds for the same instance, same time."},
+        "simultaneous_hold_sentence": {"type": "string", "description": "Exact shape: 'Both [pole A] and [pole B] are true simultaneously for the same [instance]; the theory must contain both.'"},
+        "falsifiable_prediction": {"type": "string", "description": "Exact shape: 'If both [proposition] and [inversion] hold simultaneously, then [specific, checkable prediction] -- which would not be predicted by either truth held alone.'"},
+        "tension_score": {"type": "integer", "description": "1-5: how load-bearing is the inverted assumption -- 1 = minor detail, 5 = foundational premise the field would consider heretical to invert."},
+        "tension_score_reasoning": {"type": "string", "description": "One sentence justifying tension_score."},
+        "testability": {"type": "string", "description": "What specific data/experiment/literature could confirm or kill this hypothesis. Say so plainly if none is known."},
+        "known_prior_art": {"type": "string", "description": "Existing work already holding this exact contradiction, if any. Say 'not verified' if unsure."},
+        "confidence_worth_time": {"type": "string", "description": "Low / Medium / High, with one sentence of reasoning."},
+        "if_doesnt_hold": {"type": "string", "description": "One sentence: the most likely reason this turns out to be a compromise or synthesis wearing paradox's clothing."},
+        "search_queries": {
+            "type": "array", "items": {"type": "string"}, "minItems": 3, "maxItems": 5,
+            "description": "3-5 concrete search queries to verify the claim or check prior art. At least one MUST search by a specific named theory/framework/researcher -- if none known, use '[the domain] named theory OR framework OR researcher'.",
+        },
+    },
+    "required": ["domain_description", "proposition", "inversion", "compromise_option", "synthesis_option",
+                 "paradox_option", "why_not_compromise_synthesis", "simultaneous_hold_sentence",
+                 "falsifiable_prediction", "tension_score", "tension_score_reasoning", "testability",
+                 "known_prior_art", "confidence_worth_time", "if_doesnt_hold", "search_queries"],
+    "additionalProperties": False,
+}
+
+HOMOSPATIAL_SCHEMA = {
+    "type": "object",
+    "properties": {
+        "entity_a_description": {"type": "string", "description": "Entity A: 1-2 sentences, plain terms, what actually happens here."},
+        "entity_b_description": {"type": "string", "description": "Entity B: same, for domain B."},
+        "superimposition": {"type": "string", "description": "Both entities occupying the exact same conceptual space at once -- overlaid, not side by side or connected by an arrow. Name specific mechanisms from each domain and describe what happens when forced into the same slot. Zero comparison words -- describe the overlay as a literal event happening to one merged thing, not a resemblance between two things that stay separate."},
+        "emergent_entity_name": {"type": "string", "description": "A coined name for the single fused entity -- one thing, not two things related to each other."},
+        "emergent_entity_description": {"type": "string", "description": "What the fused entity is, in plain terms, as if it already existed and you were describing it to someone unfamiliar with either source domain. HARD RULE: zero comparison words anywhere (like, similar to, resembling, as if, akin to, parallels, much like, just as, reminiscent of, mirrors) -- describe it in its own vocabulary, the way a chimera's anatomy is described directly, not by comparing it to its sources."},
+        "fusion_sentence": {"type": "string", "description": "Exact shape: 'I force [Entity A] and [Entity B] into the same [space/frame/slot] until [named fused identity] emerges.'"},
+        "falsifiable_prediction": {"type": "string", "description": "Exact shape: 'If [the emergent entity] is real, then [specific, checkable prediction that could only be tested by examining the fused entity, not either source domain alone].'"},
+        "fusion_distance": {"type": "integer", "description": "1-5: how discrete/unrelated were the two source entities before fusion -- 1 = already adjacent, 5 = genuinely unrelated fields."},
+        "fusion_distance_reasoning": {"type": "string", "description": "One sentence justifying fusion_distance."},
+        "testability": {"type": "string", "description": "What specific data/experiment/prototype/literature could confirm or kill the hypothesis about the emergent entity. Say so plainly if none."},
+        "known_prior_art": {"type": "string", "description": "Whether the emergent entity already exists under another name, or this exact fusion has been made. Say 'not verified' if unsure."},
+        "confidence_worth_time": {"type": "string", "description": "Low / Medium / High, one sentence."},
+        "if_doesnt_hold": {"type": "string", "description": "One sentence: the most likely reason the 'emergent third thing' turns out to just be domain A and domain B described side by side."},
+        "search_queries": {
+            "type": "array", "items": {"type": "string"}, "minItems": 3, "maxItems": 5,
+            "description": "3-5 concrete search queries to verify the claim or check prior art. At least one MUST search by a specific named entity/framework/researcher -- if none known, use '[the emergent entity] named theory OR framework OR researcher'.",
+        },
+    },
+    "required": ["entity_a_description", "entity_b_description", "superimposition", "emergent_entity_name",
+                 "emergent_entity_description", "fusion_sentence", "falsifiable_prediction", "fusion_distance",
+                 "fusion_distance_reasoning", "testability", "known_prior_art", "confidence_worth_time",
+                 "if_doesnt_hold", "search_queries"],
+    "additionalProperties": False,
+}
+
+QUERIES_SCHEMA = {
+    "type": "object",
+    "properties": {
+        "search_queries": {
+            "type": "array", "items": {"type": "string"}, "minItems": 3, "maxItems": 5,
+            "description": "3-5 corrected search queries. At least one MUST search by a specific named theory/framework/researcher, not just the general concept.",
+        },
+    },
+    "required": ["search_queries"],
+    "additionalProperties": False,
+}
+
+_MODE_SCHEMA = {"bisociation": BISOCIATION_SCHEMA, "janusian": JANUSIAN_SCHEMA, "homospatial": HOMOSPATIAL_SCHEMA}
+
+
+def _extract_grounding_and_rules(prompt_text: str) -> tuple:
+    """Split a mode's real prompt-file text into (grounding, hard_rules) --
+    the theoretical-grounding prose and hard-rules list stay exactly as
+    human-authored; the markdown-template '## Output' block in between is
+    NOT reused -- a schema replaces it (see build_structured_instructions)."""
+    grounding = prompt_text[: prompt_text.index("## Input")].strip()
+    hard_rules = prompt_text[prompt_text.index("## Hard rules"):].strip()
+    return grounding, hard_rules
+
+
+def build_structured_instructions(mode: str) -> str:
+    """The real theoretical grounding and hard rules, verbatim from the
+    prompt file, with the markdown-template mechanics replaced by a
+    schema-based output instruction. The schema's own field descriptions
+    (above) carry the guidance the old bracketed template placeholders used
+    to -- this adapter only tells the model the OUTPUT FORMAT changed, not
+    what belongs in each part."""
+    grounding, hard_rules = _extract_grounding_and_rules(load_prompt(mode))
+    adapter = (
+        "## Output\n\n"
+        "Return a structured object matching the provided schema -- NOT a markdown document. Every "
+        "schema field corresponds to one piece of content from this framework's normal document "
+        "structure; each field's own description tells you exactly what belongs in it. Write plain "
+        "prose for each field (no markdown headers inside field values), under the same ~600-word "
+        "total content budget and the same content discipline described above."
+    )
+    return f"{grounding}\n\n{adapter}\n\n{hard_rules}"
+
+
+def _fmt_queries(queries: list) -> str:
+    return "\n".join(f'{i}. "{q}"' for i, q in enumerate(queries, 1))
+
+
+def render_bisociation(d: dict, domain_a: str, domain_b: str, date_str: str) -> str:
+    return f"""# Hypothesis: {domain_a} × {domain_b}
+
+**Generated**: {date_str}
+**Framework**: UMPF Two-Domain Hypothesis Engine (Exponent Labs LLC)
+
+---
+
+## 1. The Two Frames (M₁, M₂)
+
+**M₁ — {domain_a}**: {d['m1_description']}
+
+**M₂ — {domain_b}**: {d['m2_description']}
+
+## 2. Monadic Signature of Each Domain
+
+| Layer | {domain_a} | {domain_b} |
+|---|---|---|
+| Atomic (Maybe/Either) | {d['monadic_atomic_a']} | {d['monadic_atomic_b']} |
+| Domain (State/Reader/Writer) | {d['monadic_domain_layer_a']} | {d['monadic_domain_layer_b']} |
+| Control (IO/STM) | {d['monadic_control_a']} | {d['monadic_control_b']} |
+| Orchestration (Free/effects) | {d['monadic_orchestration_a']} | {d['monadic_orchestration_b']} |
+
+## 3. The Candidate Functor
+
+{d['functor_mapping']}
+
+For this functor to hold, {d['functor_condition']}
+
+## 4. The Hypothesis
+
+1. **Generative-relation sentence (required):** {d['generative_relation_sentence']}
+2. **Falsifiable prediction:** {d['falsifiable_prediction']}
+
+## 5. Novelty & Testability Self-Critique
+
+- **Distance score (1-5)**: {d['distance_score']} — {d['distance_score_reasoning']}
+- **Testability**: {d['testability']}
+- **Known prior art**: {d['known_prior_art']}
+- **Confidence this is worth a researcher's time**: {d['confidence_worth_time']}
+
+## 6. If This Doesn't Hold
+
+{d['if_doesnt_hold']}
+
+## Search Queries
+
+{_fmt_queries(d['search_queries'])}
+"""
+
+
+def render_janusian(d: dict, domain_a: str, date_str: str) -> str:
+    return f"""# Janusian Hypothesis: {domain_a}
+
+**Generated**: {date_str}
+**Framework**: UMPF Janusian Hypothesis Engine (Exponent Labs LLC)
+
+---
+
+## 1. The Domain
+
+{d['domain_description']}
+
+## 2. The Proposition
+
+{d['proposition']}
+
+## 3. The Inversion
+
+The exact opposite is true: {d['inversion']}
+
+## 4. The Simultaneous Hold
+
+> "{d['proposition']}"
+> "{d['inversion']}"
+> "Both are true simultaneously."
+
+- **(A) Compromise**: {d['compromise_option']}
+- **(B) Synthesis**: {d['synthesis_option']}
+- **(C) Paradox**: {d['paradox_option']}
+
+{d['why_not_compromise_synthesis']}
+
+## 5. The Hypothesis (The Third Thing)
+
+1. **Simultaneous-hold sentence (required):** {d['simultaneous_hold_sentence']}
+2. **Falsifiable prediction:** {d['falsifiable_prediction']}
+
+## 6. Novelty & Testability Self-Critique
+
+- **Tension score (1-5)**: {d['tension_score']} — {d['tension_score_reasoning']}
+- **Testability**: {d['testability']}
+- **Known prior art**: {d['known_prior_art']}
+- **Confidence this is worth a researcher's time**: {d['confidence_worth_time']}
+
+## 7. If This Doesn't Hold
+
+{d['if_doesnt_hold']}
+
+## Search Queries
+
+{_fmt_queries(d['search_queries'])}
+"""
+
+
+def render_homospatial(d: dict, domain_a: str, domain_b: str, date_str: str) -> str:
+    return f"""# Homospatial Hypothesis: {domain_a} ⊕ {domain_b}
+
+**Generated**: {date_str}
+**Framework**: UMPF Homospatial Hypothesis Engine (Exponent Labs LLC)
+
+---
+
+## 1. The Two Source Entities
+
+**Entity A — {domain_a}**: {d['entity_a_description']}
+
+**Entity B — {domain_b}**: {d['entity_b_description']}
+
+## 2. The Superimposition
+
+{d['superimposition']}
+
+## 3. The Emergent Third Thing
+
+The emergent entity is termed **{d['emergent_entity_name']}**. {d['emergent_entity_description']}
+
+## 4. The Hypothesis
+
+1. **Fusion sentence (required):** {d['fusion_sentence']}
+2. **Falsifiable prediction:** {d['falsifiable_prediction']}
+
+## 5. Novelty & Testability Self-Critique
+
+- **Fusion distance (1-5)**: {d['fusion_distance']} — {d['fusion_distance_reasoning']}
+- **Testability**: {d['testability']}
+- **Known prior art**: {d['known_prior_art']}
+- **Confidence this is worth a researcher's time**: {d['confidence_worth_time']}
+
+## 6. If This Doesn't Hold
+
+{d['if_doesnt_hold']}
+
+## Search Queries
+
+{_fmt_queries(d['search_queries'])}
+"""
+
+
+_RENDER = {"bisociation": render_bisociation, "janusian": render_janusian, "homospatial": render_homospatial}
+
+
 def run_hypothesis(domain_a: str, domain_b: str = None, model: str = "gpt-4o-mini", mode: str = "bisociation") -> str:
+    """Structured generation + deterministic render-to-markdown. See the
+    module-level comment above BISOCIATION_SCHEMA for the full rationale.
+    Same signature and return contract as the legacy implementation
+    (run_hypothesis_legacy, kept below) -- callers in main() are unchanged."""
+    instructions = build_structured_instructions(mode)
+    instructions = instructions.rstrip() + few_shot_block(mode, 3)
+    schema = _MODE_SCHEMA[mode]
+    user_content = f"DOMAIN: {domain_a}" if mode == "janusian" else f"DOMAIN A: {domain_a}\n\nDOMAIN B: {domain_b}"
+    messages = [
+        {"role": "system", "content": instructions},
+        {"role": "user", "content": user_content},
+    ]
+    schema_name = f"{mode}_hypothesis"
+    resp = call_with_retry(
+        client.chat.completions.create,
+        model=model,
+        messages=messages,
+        temperature=0.4,
+        response_format={"type": "json_schema", "json_schema": {"name": schema_name, "schema": schema, "strict": True}},
+    )
+    log_usage("generation", model, resp.usage, extra={"mode": mode, "retry": False})
+    data = json.loads(resp.choices[0].message.content)
+    generated_date = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+
+    # Same "collect flags, append once at the very end" discipline as the
+    # legacy implementation (Failure 9's fix) -- structurally simpler here
+    # since there's no regex section-replacement that could clobber an
+    # earlier flag; render() runs exactly once, after every check.
+    honesty_flags = []
+
+    if mode == "bisociation":
+        check_text = " ".join([data["functor_mapping"], data["functor_condition"],
+                                data["generative_relation_sentence"], data["falsifiable_prediction"]])
+        violations = _find_comparison_words(check_text)
+        has_relation_form = bool(re.search(
+            r"(i noticed|relational rule|generative relation|the rule governing)",
+            data["generative_relation_sentence"], re.IGNORECASE,
+        ))
+        if violations or not has_relation_form:
+            reason = []
+            if violations:
+                reason.append(f"analogy language ({', '.join(violations)})")
+            if not has_relation_form:
+                reason.append("missing generative-relation sentence form")
+            print(f"  ⚠️  Bisociation functor/hypothesis failed generative-relation check ({'; '.join(reason)}) — retrying once...")
+            correction = (
+                f"Your functor_mapping/functor_condition/generative_relation_sentence/falsifiable_prediction "
+                f"fields failed the generative-relation check: {'; '.join(reason)}.\n"
+                f"generative_relation_sentence as written: \"{data['generative_relation_sentence'][:600]}\"\n\n"
+                "Return the FULL corrected object again (same schema). generative_relation_sentence must open "
+                "with a first-person generative-relation sentence transplanting a *rule* (not a resemblance): "
+                "'I noticed that the relational rule governing X also governed Y — specifically [rule].' "
+                "Zero comparison words (like, similar to, mirrors, akin to, resembles) anywhere in "
+                "functor_mapping, functor_condition, generative_relation_sentence, or falsifiable_prediction."
+            )
+            messages.append({"role": "assistant", "content": json.dumps(data)})
+            messages.append({"role": "user", "content": correction})
+            resp2 = call_with_retry(client.chat.completions.create, model=model, messages=messages, temperature=0.4,
+                                     response_format={"type": "json_schema", "json_schema": {"name": schema_name, "schema": schema, "strict": True}})
+            log_usage("generation", model, resp2.usage, extra={"mode": mode, "retry": True})
+            data = json.loads(resp2.choices[0].message.content)
+            check_text2 = " ".join([data["functor_mapping"], data["functor_condition"],
+                                     data["generative_relation_sentence"], data["falsifiable_prediction"]])
+            rem = _find_comparison_words(check_text2)
+            rel_ok = bool(re.search(r"(i noticed|relational rule|generative relation|the rule governing)",
+                                     data["generative_relation_sentence"], re.IGNORECASE))
+            if rem or not rel_ok:
+                print("  ⚠️  Retry still failed generative-relation check — flagging in output.")
+                honesty_flags.append(
+                    "**⚠️ Automated check failed twice:** §3/§4 still lack a clean generative-relation "
+                    "transplant (analogy language and/or missing relational-rule sentence) after one "
+                    "corrective retry. Treat this as resemblance wearing bisociation's name — not a "
+                    "thesis-grade lead until rewritten."
+                )
+            else:
+                print("  ✅ Retry passed — generative-relation form clean.")
+        else:
+            print("  ✅ §3/§4 passed the generative-relation check on the first attempt.")
+
+    if mode == "homospatial":
+        check_text = " ".join([data["superimposition"], data["emergent_entity_description"]])
+        violations = _find_comparison_words(check_text)
+        full_text = " ".join([data["superimposition"], data["emergent_entity_description"],
+                               data["fusion_sentence"], data["falsifiable_prediction"]])
+        has_fusion_form = bool(re.search(
+            r"(overlay|superimpos|fus(e|ed|ion)|emergent|same (conceptual )?space|"
+            r"same (frame|slot|place)|chimera|one (entity|thing|identity)|force[d]? .* into|"
+            r"occupy(ing)? the same)", full_text, re.IGNORECASE,
+        ))
+        if violations or not has_fusion_form:
+            reason = []
+            if violations:
+                reason.append(f"comparison language ({', '.join(violations)})")
+            if not has_fusion_form:
+                reason.append("missing fusion/overlay signature")
+            print(f"  ⚠️  Homospatial superimposition/emergent-entity failed fusion check ({'; '.join(reason)}) — retrying once...")
+            correction = (
+                f"Your superimposition/emergent_entity_description fields failed the Homospatial fusion "
+                f"check: {'; '.join(reason)}.\n"
+                f"superimposition as written: \"{data['superimposition'][:500]}\"\n"
+                f"emergent_entity_description as written: \"{data['emergent_entity_description'][:500]}\"\n\n"
+                "Return the FULL corrected object again (same schema). Rothenberg's bar: actively conceive "
+                "two discrete entities occupying the SAME space until a NEW identity articulates — one "
+                "chimera, not 'A is like B.' superimposition = literal overlay. emergent_entity_description = "
+                "name ONE fused entity in its own vocabulary (zero comparison words). Signature form: "
+                "'I force A and B into the same space until Z emerges.'"
+            )
+            messages.append({"role": "assistant", "content": json.dumps(data)})
+            messages.append({"role": "user", "content": correction})
+            resp2 = call_with_retry(client.chat.completions.create, model=model, messages=messages, temperature=0.4,
+                                     response_format={"type": "json_schema", "json_schema": {"name": schema_name, "schema": schema, "strict": True}})
+            log_usage("generation", model, resp2.usage, extra={"mode": mode, "retry": True})
+            data = json.loads(resp2.choices[0].message.content)
+            check_text2 = " ".join([data["superimposition"], data["emergent_entity_description"]])
+            remaining = _find_comparison_words(check_text2)
+            full_text2 = " ".join([data["superimposition"], data["emergent_entity_description"],
+                                    data["fusion_sentence"], data["falsifiable_prediction"]])
+            fusion_ok = bool(re.search(
+                r"(overlay|superimpos|fus(e|ed|ion)|emergent|same (conceptual )?space|"
+                r"same (frame|slot|place)|chimera|one (entity|thing|identity)|force[d]? .* into|"
+                r"occupy(ing)? the same)", full_text2, re.IGNORECASE,
+            ))
+            if remaining or not fusion_ok:
+                print("  ⚠️  Retry still failed Homospatial fusion check — flagging in output.")
+                honesty_flags.append(
+                    "**⚠️ Automated check failed twice:** §2–§4 still fail Homospatial fusion "
+                    "(comparison language and/or missing overlay→emergent-identity signature) after one "
+                    "corrective retry. This may be bisociation mislabeled as homospatial — not a "
+                    "thesis-grade fusion lead until rewritten."
+                )
+            else:
+                print("  ✅ Retry passed — Homospatial fusion form clean.")
+        else:
+            print("  ✅ §2–§4 passed the Homospatial fusion check on the first attempt.")
+
+    if mode == "janusian":
+        section4_text = " ".join([data["compromise_option"], data["synthesis_option"],
+                                   data["paradox_option"], data["why_not_compromise_synthesis"]])
+        violations = _find_context_split_phrases(section4_text)
+        full_text = section4_text + " " + data["simultaneous_hold_sentence"] + " " + data["falsifiable_prediction"]
+        has_hold_form = bool(re.search(
+            r"(both (are )?true|simultaneously|at (the )?same time|same instance|"
+            r"mutually exclusive|two necessary faces|apparent(ly)? opposite|"
+            r"incompatible things are true)", full_text, re.IGNORECASE,
+        ))
+        if violations or not has_hold_form:
+            reason = []
+            if violations:
+                reason.append(f"context-split language ({', '.join(violations)})")
+            if not has_hold_form:
+                reason.append("missing simultaneous-hold signature language")
+            print(f"  ⚠️  Janusian simultaneous-hold failed same-instance check ({'; '.join(reason)}) — retrying once...")
+            correction = (
+                f"Your paradox_option/why_not_compromise_synthesis/simultaneous_hold_sentence fields failed "
+                f"the Janusian simultaneous-hold check: {'; '.join(reason)}.\n"
+                f"paradox_option as written: \"{data['paradox_option'][:600]}\"\n\n"
+                "Return the FULL corrected object again (same schema). Rothenberg's bar: actively conceive "
+                "two contradictory ideas *simultaneously* for the SAME instance — not '[A] in context 1, "
+                "[B] in context 2.' paradox_option must state both poles true at once (Einstein motion/rest, "
+                "Bohr wave/particle). simultaneous_hold_sentence must be: 'Both [pole A] and [pole B] are "
+                "true simultaneously for the same [instance]; the theory must contain both.' Zero "
+                "context-split language. If you cannot find a genuine same-instance paradox, say so honestly "
+                "in if_doesnt_hold rather than dressing a compromise as paradox_option."
+            )
+            messages.append({"role": "assistant", "content": json.dumps(data)})
+            messages.append({"role": "user", "content": correction})
+            resp2 = call_with_retry(client.chat.completions.create, model=model, messages=messages, temperature=0.4,
+                                     response_format={"type": "json_schema", "json_schema": {"name": schema_name, "schema": schema, "strict": True}})
+            log_usage("generation", model, resp2.usage, extra={"mode": mode, "retry": True})
+            data = json.loads(resp2.choices[0].message.content)
+            section4_text2 = " ".join([data["compromise_option"], data["synthesis_option"],
+                                        data["paradox_option"], data["why_not_compromise_synthesis"]])
+            remaining = _find_context_split_phrases(section4_text2)
+            full_text2 = section4_text2 + " " + data["simultaneous_hold_sentence"] + " " + data["falsifiable_prediction"]
+            hold_ok = bool(re.search(
+                r"(both (are )?true|simultaneously|at (the )?same time|same instance|"
+                r"mutually exclusive|two necessary faces|apparent(ly)? opposite|"
+                r"incompatible things are true)", full_text2, re.IGNORECASE,
+            ))
+            if remaining or not hold_ok:
+                print("  ⚠️  Retry still failed Janusian same-instance check — flagging in output.")
+                honesty_flags.append(
+                    "**⚠️ Automated check failed twice:** §4/§5 still fail the Janusian same-instance "
+                    "test (context-split and/or missing simultaneous-hold signature) after one corrective "
+                    "retry. This may be a disguised compromise (A) or synthesis (B) mislabeled as paradox "
+                    "(C) — not a thesis-grade Janusian lead until rewritten."
+                )
+            else:
+                print("  ✅ Retry passed — Janusian simultaneous-hold clean.")
+        else:
+            print("  ✅ §4/§5 passed the Janusian same-instance mechanical check on the first attempt.")
+
+    # Named-entity search-query check -- operates on the real search_queries
+    # array directly now, not a regex-extracted markdown block. Targeted
+    # retry: ask for JUST a corrected query list (QUERIES_SCHEMA), not the
+    # whole object, since nothing else needs to change.
+    if not _has_named_entity_query(data["search_queries"]):
+        print("  ⚠️  No named-entity search query found — asking for a targeted correction...")
+        correction = (
+            "Your search_queries list did not include any query targeting a specific named theory, "
+            "framework, or researcher — only general-concept queries. Return a corrected search_queries "
+            "list (3-5 queries), where at least one query searches by name for a specific existing "
+            "theory/framework/researcher plausibly already working this exact ground, or, if you genuinely "
+            "can't think of one, a query of the form \"[core concept] named theory OR framework OR "
+            "researcher\"."
+        )
+        messages.append({"role": "assistant", "content": json.dumps({"search_queries": data["search_queries"]})})
+        messages.append({"role": "user", "content": correction})
+        resp3 = call_with_retry(client.chat.completions.create, model=model, messages=messages, temperature=0.4,
+                                 response_format={"type": "json_schema", "json_schema": {"name": "search_queries_only", "schema": QUERIES_SCHEMA, "strict": True}})
+        log_usage("generation", model, resp3.usage, extra={"mode": mode, "retry": "queries"})
+        new_queries = json.loads(resp3.choices[0].message.content)["search_queries"]
+        if _has_named_entity_query(new_queries):
+            print("  ✅ Retry passed — a named-entity search query is now present.")
+        else:
+            print("  ⚠️  Retry still has no named-entity query — flagging in output rather than looping indefinitely.")
+            honesty_flags.append(
+                "**⚠️ Automated check failed twice:** no Search Query targets a specific "
+                "named theory, framework, or researcher, even after one corrective retry. Verification "
+                "may miss an existing collision with real prior art that a more specific search would "
+                "have found — read this hypothesis's verdict with that in mind."
+            )
+        data["search_queries"] = new_queries
+    else:
+        print("  ✅ Search Queries includes at least one named-entity query.")
+
+    markdown = _RENDER[mode](data, domain_a, domain_b, generated_date) if mode != "janusian" else render_janusian(data, domain_a, generated_date)
+
+    # Single append point, after every check has run -- same discipline as
+    # the legacy implementation (Failure 9's fix), structurally guaranteed
+    # here since render() only runs once, after all checks are done.
+    if honesty_flags:
+        markdown = markdown.rstrip() + "\n\n---\n\n" + "\n\n".join(honesty_flags) + "\n"
+
+    return markdown
+
+
+def run_hypothesis_legacy(domain_a: str, domain_b: str = None, model: str = "gpt-4o-mini", mode: str = "bisociation") -> str:
     system_prompt = load_prompt(mode)
     if mode in ("bisociation", "janusian", "homospatial"):
         system_prompt = system_prompt.rstrip() + few_shot_block(mode, 3)

@@ -74,6 +74,25 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 EMAILS_DIR = os.path.join(HERE, "outreach", "emails")
 MANIFEST_PATH = os.path.join(HERE, "outreach", "packets_manifest.json")
 
+# 2026-08-31: strict schema, replacing {"type": "json_object"}. hard_claim
+# and could_not_sharpen_reason are genuinely nullable (a real, honest decline
+# is a valid output, not an error) -- expressed as ["string", "null"] per
+# strict mode's documented nullable-field pattern, both still required keys
+# so the model can never simply omit one. The real retry logic below (decline
+# without a reason -> ask again) is unchanged; json.loads() still gives
+# Python None for a JSON null either way, so gen.get(...) behaves identically.
+HARD_CLAIM_SCHEMA = {
+    "type": "object",
+    "properties": {
+        "soft_retired": {"type": "string", "description": "One line naming the soft framing being retired."},
+        "chimera": {"type": "string", "description": "A short named identity for the hard, fused system."},
+        "hard_claim": {"type": ["string", "null"], "description": "The single hard question, or null if you genuinely cannot find a hard, falsifiable reformulation for this pairing."},
+        "could_not_sharpen_reason": {"type": ["string", "null"], "description": "null if hard_claim is set; otherwise a real, specific one-sentence reason -- never leave both null."},
+    },
+    "required": ["soft_retired", "chimera", "hard_claim", "could_not_sharpen_reason"],
+    "additionalProperties": False,
+}
+
 
 # --- Tried, calibrated against real ground truth, and deliberately NOT
 # wired into the pipeline below -- see the module docstring's calibration
@@ -120,12 +139,7 @@ def generate_hard_claim(title: str, mode: str, domains: list, soft_text: str) ->
         "cannot find a hard, falsifiable reformulation for this specific pairing, set "
         "hard_claim to null AND you MUST fill in could_not_sharpen_reason with a real, "
         "specific one-sentence reason (never leave it null too -- that's an incomplete "
-        "answer). Respond with ONLY a JSON object, no prose outside it, no markdown "
-        "fences:\n\n"
-        '{"soft_retired": "one line naming the soft framing being retired", '
-        '"chimera": "a short named identity for the hard, fused system", '
-        '"hard_claim": "the single hard question, or null", '
-        '"could_not_sharpen_reason": "null if hard_claim is set, otherwise a real reason"}'
+        "answer)."
     )
     user_prompt = f"Title: {title}\nMode: {mode}\nDomain(s): {', '.join(domains)}\n\nSoft claim (from the hypothesis's own §3/§4):\n{soft_text[:1200]}"
 
@@ -136,7 +150,7 @@ def generate_hard_claim(title: str, mode: str, domains: list, soft_text: str) ->
             model="gpt-4o",
             messages=[{"role": "system", "content": system_prompt}, {"role": "user", "content": user_prompt}],
             temperature=0.4,
-            response_format={"type": "json_object"},
+            response_format={"type": "json_schema", "json_schema": {"name": "hard_claim_candidate", "schema": HARD_CLAIM_SCHEMA, "strict": True}},
         )
         log_usage("sharpen", "gpt-4o", resp.usage)
         gen = json.loads(resp.choices[0].message.content)

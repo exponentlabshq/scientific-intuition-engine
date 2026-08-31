@@ -70,6 +70,35 @@ OBSERVATION_MODEL = "gpt-4o-mini"  # a one-sentence remark doesn't need frontier
                                     # runs every cycle, not occasionally like
                                     # the full proposal mode
 
+# 2026-08-31: strict schema, replacing {"type": "json_object"} -- same
+# migration as verify_hypothesis.py/refute_hypothesis.py/hypothesis_engine.py,
+# for the same reason: loose json_object guarantees valid JSON syntax, not
+# that these specific fields exist. filename/code are genuinely nullable (a
+# rationale-only proposal is a valid, real output -- see write_proposal()'s
+# "not proposed" path), expressed as ["string", "null"] per strict mode's
+# documented nullable-field pattern rather than omitting them from required.
+PROPOSAL_SCHEMA = {
+    "type": "object",
+    "properties": {
+        "title": {"type": "string", "description": "Short proposal title."},
+        "rationale": {"type": "string", "description": "2-4 paragraphs, citing the specific real numbers given that motivate this."},
+        "risk_and_limits": {"type": "string", "description": "1-2 sentences on what this proposal does NOT resolve or could get wrong."},
+        "filename": {"type": ["string", "null"], "description": "descriptive_snake_case_name.py, or null if no code is warranted."},
+        "code": {"type": ["string", "null"], "description": "Full, complete, standalone Python source, or null."},
+    },
+    "required": ["title", "rationale", "risk_and_limits", "filename", "code"],
+    "additionalProperties": False,
+}
+
+OBSERVATION_SCHEMA = {
+    "type": "object",
+    "properties": {
+        "observation": {"type": "string", "description": "One or two sentences -- a real, specific change or anomaly, or a plain 'nothing meaningfully changed' if that's honest."},
+    },
+    "required": ["observation"],
+    "additionalProperties": False,
+}
+
 
 def compute_real_stats() -> dict:
     """Everything an audit proposal should be grounded in, computed fresh
@@ -153,12 +182,7 @@ def build_prompt(stats: dict, scoring_source: str) -> tuple:
         "- Never propose deleting, disabling, or silently overriding an existing mechanism — "
         "your job is to add a new, separately runnable option, not replace anything.\n"
         "- If you include code, it must be complete, syntactically valid, standalone Python that "
-        "does not require editing any existing file to run.\n\n"
-        "Respond with ONLY a JSON object:\n"
-        '{"title": "short proposal title", "rationale": "2-4 paragraphs, citing the specific '
-        'numbers given below that motivate this", "risk_and_limits": "1-2 sentences on what this '
-        'proposal does NOT resolve or could get wrong", "filename": "descriptive_snake_case_name.py '
-        'or null if no code is warranted", "code": "the full Python source, or null"}'
+        "does not require editing any existing file to run."
     )
     user_prompt = (
         f"Real performance data, computed fresh from verification-log.jsonl and token_usage.jsonl "
@@ -276,7 +300,7 @@ def run_audit(model: str, dry_run: bool):
             {"role": "user", "content": user_prompt},
         ],
         temperature=0.4,
-        response_format={"type": "json_object"},
+        response_format={"type": "json_schema", "json_schema": {"name": "audit_proposal", "schema": PROPOSAL_SCHEMA, "strict": True}},
     )
     from token_tracker import log_usage
     log_usage("audit", model, resp.usage)
@@ -337,8 +361,7 @@ def run_observation(model: str, dry_run: bool):
         "generic restatement of the totals. If nothing meaningfully changed since last time, say so "
         "plainly and briefly rather than inventing significance. Never propose a fix or write code "
         "here -- that's a different, occasional mode. Ground every claim in the numbers given; never "
-        "invent a statistic.\n\n"
-        'Respond with ONLY a JSON object: {"observation": "your one or two sentences"}'
+        "invent a statistic."
     )
     user_prompt = f"Current stats:\n{json.dumps(stats, indent=2)}\n\n"
     if prev_stats:
@@ -354,7 +377,7 @@ def run_observation(model: str, dry_run: bool):
             {"role": "user", "content": user_prompt},
         ],
         temperature=0.4,
-        response_format={"type": "json_object"},
+        response_format={"type": "json_schema", "json_schema": {"name": "audit_observation", "schema": OBSERVATION_SCHEMA, "strict": True}},
     )
     from token_tracker import log_usage
     log_usage("audit_observation", model, resp.usage)

@@ -90,6 +90,26 @@ REFUTATION_MODEL = "gpt-4o-mini"  # switched 2026-08-30, after this stayed on gp
                               # for the full validation record and the cost-measurement bug
                               # that prompted testing this in the first place.
 
+LENS_SCHEMA = {
+    "type": "object",
+    "properties": {
+        "verdict": {"type": "string", "enum": ["REFUTED", "SURVIVES"]},
+        "reasoning": {"type": "string", "description": "2-4 sentences, terse peer-reviewer style."},
+    },
+    "required": ["verdict", "reasoning"],
+    "additionalProperties": False,
+}
+# 2026-08-31: strict schema, replacing {"type": "json_object"} (loose mode --
+# guarantees syntactically valid JSON, not that "verdict" is REFUTED/SURVIVES
+# or that "reasoning" exists at all). No documented production failure has
+# hit this yet, unlike verify_hypothesis.py's Failure 12 -- this migration is
+# preventative, not reactive. But refutation is the single most consequential
+# check in this pipeline (the 0-of-N record is, per the whitepaper's own
+# words, "the scientific-integrity story, not overhead to be optimized
+# away") -- the stakes of a silent malformed-response bug living here,
+# undetected, are worse than anywhere else it could hide. Cheap to close the
+# gap before it's ever needed, not after.
+
 LENS_QUESTIONS = {
     "coherence": (
         "Does the claimed structural mapping equivocate on a term — using one word for two "
@@ -143,9 +163,7 @@ def run_lens(lens_name: str, question: str, rubric: str, title: str, mode: str,
         f"Default to REFUTED under genuine uncertainty — a hypothesis wrongly killed costs "
         f"nothing; a hollow one wrongly promoted costs someone real research time later. "
         f"This is the same rubric this pipeline has applied by hand in every prior refutation "
-        f"round:\n\n--- FULL RUBRIC (for context; you are applying only your one lens above) ---\n{rubric}\n\n"
-        f'Respond with ONLY a JSON object: {{"verdict": "REFUTED" or "SURVIVES", "reasoning": '
-        f'"2-4 sentences, terse peer-reviewer style"}}'
+        f"round:\n\n--- FULL RUBRIC (for context; you are applying only your one lens above) ---\n{rubric}"
     )
     user_prompt = (
         f"Hypothesis: {title}\nMode: {mode}\nDomain(s): {', '.join(domains)}\n\n"
@@ -160,13 +178,10 @@ def run_lens(lens_name: str, question: str, rubric: str, title: str, mode: str,
             {"role": "user", "content": user_prompt},
         ],
         temperature=0.1,
-        response_format={"type": "json_object"},
+        response_format={"type": "json_schema", "json_schema": {"name": "lens_verdict", "schema": LENS_SCHEMA, "strict": True}},
     )
     log_usage("refutation", REFUTATION_MODEL, resp.usage, hypothesis_slug=slug, extra={"lens": lens_name})
-    parsed = json.loads(resp.choices[0].message.content)
-    if parsed.get("verdict") not in ("REFUTED", "SURVIVES"):
-        raise ValueError(f"Lens {lens_name} returned an invalid verdict: {parsed.get('verdict')!r}")
-    return parsed
+    return json.loads(resp.choices[0].message.content)
 
 
 def write_refutation_md(slug: str, title: str, mode: str, lens_results: dict, verdict: str, survives: int) -> str:
