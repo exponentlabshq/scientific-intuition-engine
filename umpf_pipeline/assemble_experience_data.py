@@ -15,7 +15,10 @@ import json
 import os
 import re
 
-from score_hypotheses import load_entries, score_entry, key_for
+from score_hypotheses import (
+    load_entries, score_entry, key_for, tier_for,
+    load_prefilter_map, compute_prefilter_correlation, compute_mode_performance,
+)
 
 PIPELINE_DIR = os.path.dirname(os.path.abspath(__file__))
 HYPOTHESES_DIR = os.path.join(PIPELINE_DIR, "hypotheses")
@@ -119,11 +122,19 @@ def find_by_substring(directory, key, suffix_hint=""):
 
 def main():
     entries = load_entries()
+    prefilter_map = load_prefilter_map()
     assembled = []
 
     for rec in entries:
         key = key_for(rec)
         points, badges, breakdown, held_out_reason = score_entry(rec)
+        if held_out_reason:
+            tier_rank, tier_label = None, None
+        else:
+            tier_rank, tier_label = tier_for(rec)
+        slug = rec.get("hypothesis_slug") or rec.get("slug") or key
+        pf = prefilter_map.get(slug)
+        pair_type = pf.get("pair_type") if pf else None
 
         is_case_study = rec.get("source") == "rosetta-stone-case-study" or "case_study" in rec
 
@@ -163,6 +174,10 @@ def main():
             "badges": badges,
             "breakdown": breakdown,
             "held_out_reason": held_out_reason,
+            "tier_rank": tier_rank,
+            "tier_label": tier_label,
+            "pair_type": pair_type,
+            "refutation_lens_version": rec.get("refutation_lens_version"),
             "notes": rec.get("notes"),
             "self_reported_distance": rec.get("self_reported_distance"),
             "self_reported_tension": rec.get("self_reported_tension"),
@@ -183,6 +198,26 @@ def main():
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(assembled, f, indent=2, ensure_ascii=False)
     print(f"Wrote {out_path}")
+
+    # Separate meta file (department performance, pre-filter correlation) --
+    # kept apart from the per-entry list so experience_data.json's existing
+    # flat-array contract stays unchanged for any consumer that only wants
+    # entries. 2026-08-31, leaderboard rearchitecture (COA 2 + COA 4).
+    meta = {
+        "mode_performance": [
+            {"mode": m, "n": n, "avg_points": avg, "no_signal_rate": nsr}
+            for m, n, avg, nsr in compute_mode_performance(entries)
+        ],
+        "prefilter_correlation": {
+            k: [{"key": key, "n": total, "good": good, "rate_pct": rate}
+                for key, total, good, rate in rows]
+            for k, rows in compute_prefilter_correlation(entries, prefilter_map).items()
+        },
+    }
+    meta_path = os.path.join(PIPELINE_DIR, "experience_meta.json")
+    with open(meta_path, "w", encoding="utf-8") as f:
+        json.dump(meta, f, indent=2, ensure_ascii=False)
+    print(f"Wrote {meta_path}")
 
 
 if __name__ == "__main__":

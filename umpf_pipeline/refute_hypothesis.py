@@ -90,6 +90,21 @@ REFUTATION_MODEL = "gpt-4o-mini"  # switched 2026-08-30, after this stayed on gp
                               # for the full validation record and the cost-measurement bug
                               # that prompted testing this in the first place.
 
+LENS_VERSION = "2026-08-31-v2"  # bumped each time LENS_QUESTIONS' rubric text
+    # materially changes calibration behavior (not cosmetic edits). "v2" =
+    # the second, more general rewrite (explicit numbered decision
+    # procedures + multiple worked examples + named anti-patterns), real-
+    # tested at 8-of-13 (61.5%) on a held-out Nobel-linked set -- see
+    # refutations/control-test-nobel-calibration.md. Written into every new
+    # ledger entry's refutation_lens_version field (leaderboard rearchitecture,
+    # 2026-08-31) so a REFUTED verdict's provenance is checkable: the 274
+    # real REFUTED entries in the ledger as of this date predate v2 entirely
+    # (no field at all) and were produced under lens text since found to
+    # under-recognize genuine survivors on held-out testing -- disclosed on
+    # the public leaderboard as pre-v2, not silently treated as equivalent
+    # to a v2 verdict. Re-running those 274 under v2 is a real, separate,
+    # costly decision, not something bumping this constant does on its own.
+
 LENS_SCHEMA = {
     "type": "object",
     "properties": {
@@ -354,6 +369,7 @@ def append_ledger_refutation(slug: str, verdict: str, survives: int, refutation_
             if entry.get("hypothesis_slug") == slug:
                 entry["refutation_verdict"] = verdict
                 entry["refutation_file"] = f"refutations/{os.path.basename(refutation_filename)}"
+                entry["refutation_lens_version"] = LENS_VERSION
                 entry["refutation_independently_confirmed"] = True
                 entry["refutation_confirmation_note"] = (
                     "3 independent OpenAI completions, one per lens (coherence/testability/triviality), "

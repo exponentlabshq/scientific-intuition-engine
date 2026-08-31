@@ -1,13 +1,26 @@
 #!/usr/bin/env python3
 import json
+import os
 
 with open("experience_data.json", "r", encoding="utf-8") as f:
     data = json.load(f)
 
+# 2026-08-31, leaderboard rearchitecture: mode-performance / pre-filter
+# correlation, written by assemble_experience_data.py alongside the main
+# entry list. Optional read -- an older experience_data.json without a
+# sibling meta file still renders (empty panel), never a hard failure.
+meta = {}
+meta_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "experience_meta.json")
+if os.path.exists(meta_path):
+    with open(meta_path, "r", encoding="utf-8") as f:
+        meta = json.load(f)
+
 data_json = json.dumps(data, ensure_ascii=False)
+meta_json = json.dumps(meta, ensure_ascii=False)
 # Defensive: a literal "</script" inside embedded content would prematurely
 # close the script tag. Escape it so the JSON stays inert data.
 data_json_safe = data_json.replace("</script", "<\\/script")
+meta_json_safe = meta_json.replace("</script", "<\\/script")
 
 html = r'''<title>Faculty of Interdisciplinary Research</title>
 
@@ -185,6 +198,51 @@ header.top .backlink:hover { border-bottom-color: var(--gold); }
 .chip.v-pending_verification { color: var(--v-pending); background: var(--v-pending-bg); }
 .chip.v-fact_check_fail { color: var(--v-refuted); background: var(--v-refuted-bg); }
 .chip.v-other { color: var(--text-muted); background: var(--surface-hover); }
+.chip.tier-chip { color: var(--gold); background: rgba(200, 155, 60, 0.12); }
+
+.meta-panel {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  margin: 18px 0 0;
+}
+.meta-block {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px 18px;
+}
+.meta-block h3 {
+  margin: 0 0 6px;
+  font-size: 0.92rem;
+  color: var(--text);
+}
+.meta-note {
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  margin: 0 0 10px;
+  line-height: 1.4;
+}
+.meta-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+}
+.meta-table th, .meta-table td {
+  text-align: left;
+  padding: 4px 8px 4px 0;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-muted);
+}
+.meta-table th {
+  color: var(--text-faint);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.68rem;
+  letter-spacing: 0.03em;
+}
+.meta-table td:first-child { color: var(--text); }
+.meta-table + .meta-table { margin-top: 12px; }
 
 .row {
   border: 1px solid var(--border);
@@ -315,11 +373,15 @@ footer.foot {
 
   <div class="stat-strip" id="statStrip"></div>
 
+  <div class="meta-panel" id="metaPanel"></div>
+
   <div class="controls">
     <label for="modeFilter">Mode</label>
     <select id="modeFilter"><option value="">All</option></select>
     <label for="verdictFilter">Verdict</label>
     <select id="verdictFilter"><option value="">All</option></select>
+    <label for="pairTypeFilter">Pair type</label>
+    <select id="pairTypeFilter"><option value="">All</option></select>
     <input type="text" id="searchBox" placeholder="Search pairings…" />
     <span class="count" id="resultCount"></span>
   </div>
@@ -332,10 +394,12 @@ footer.foot {
 </div>
 
 <script type="application/json" id="raw-data">__DATA_JSON__</script>
+<script type="application/json" id="raw-meta">__META_JSON__</script>
 
 <script>
 (function () {
   var DATA = JSON.parse(document.getElementById('raw-data').textContent);
+  var META = JSON.parse(document.getElementById('raw-meta').textContent || '{}');
 
   var MODE_ICON = { bisociation: '🧬', janusian: '🎭', homospatial: '🪞' };
   var MODE_LABEL = { bisociation: 'Bisociation', janusian: 'Janusian', homospatial: 'Homospatial' };
@@ -443,9 +507,49 @@ footer.foot {
     }).join('');
   }
 
+  function renderMeta() {
+    var panel = document.getElementById('metaPanel');
+    var modePerf = META.mode_performance || [];
+    var corr = META.prefilter_correlation || {};
+    var pairTypeRows = corr.pair_type || [];
+    var recRows = corr.recommendation || [];
+    if (!modePerf.length && !pairTypeRows.length) { panel.innerHTML = ''; return; }
+
+    var html = '';
+    if (modePerf.length) {
+      html += '<div class="meta-block"><h3>Department performance</h3>' +
+        '<p class="meta-note">Real, live per-mode averages — a high NO_SIGNAL rate isn\'t a mode failing, ' +
+        'it\'s that mode\'s real base rate for reaching a novel, unresolved claim.</p>' +
+        '<table class="meta-table"><tr><th>Mode</th><th>n</th><th>Avg pts</th><th>NO_SIGNAL rate</th></tr>' +
+        modePerf.map(function (r) {
+          return '<tr><td>' + (MODE_LABEL[r.mode] || r.mode) + '</td><td>' + r.n + '</td><td>' +
+            (r.avg_points >= 0 ? '+' : '') + r.avg_points + '</td><td>' + Math.round(r.no_signal_rate * 100) + '%</td></tr>';
+        }).join('') + '</table></div>';
+    }
+    if (pairTypeRows.length || recRows.length) {
+      html += '<div class="meta-block"><h3>Pre-filter signal (Phase 0.5, observe-only)</h3>' +
+        '<p class="meta-note">Never gates generation, only logs a signal. Live correlation with real downstream outcome, joined fresh every run.</p>';
+      if (pairTypeRows.length) {
+        html += '<table class="meta-table"><tr><th>Pair type</th><th>n</th><th>Good outcome</th></tr>' +
+          pairTypeRows.map(function (r) {
+            return '<tr><td>' + r.key + '</td><td>' + r.n + '</td><td>' + r.rate_pct + '%</td></tr>';
+          }).join('') + '</table>';
+      }
+      if (recRows.length) {
+        html += '<table class="meta-table"><tr><th>Recommendation</th><th>n</th><th>Good outcome</th></tr>' +
+          recRows.map(function (r) {
+            return '<tr><td>' + r.key.replace(/_/g, ' ') + '</td><td>' + r.n + '</td><td>' + r.rate_pct + '%</td></tr>';
+          }).join('') + '</table>';
+      }
+      html += '</div>';
+    }
+    panel.innerHTML = html;
+  }
+
   function populateFilters() {
     var modes = Array.from(new Set(DATA.map(function (e) { return e.mode; }).filter(Boolean))).sort();
     var verdicts = Array.from(new Set(DATA.map(function (e) { return e.verdict; }).filter(Boolean))).sort();
+    var pairTypes = Array.from(new Set(DATA.map(function (e) { return e.pair_type; }).filter(Boolean))).sort();
     var modeSel = document.getElementById('modeFilter');
     modes.forEach(function (m) {
       var o = document.createElement('option');
@@ -457,6 +561,12 @@ footer.foot {
       var o = document.createElement('option');
       o.value = v; o.textContent = v.replace(/_/g, ' ');
       vSel.appendChild(o);
+    });
+    var ptSel = document.getElementById('pairTypeFilter');
+    pairTypes.forEach(function (pt) {
+      var o = document.createElement('option');
+      o.value = pt; o.textContent = pt;
+      ptSel.appendChild(o);
     });
   }
 
@@ -497,15 +607,26 @@ footer.foot {
   function render() {
     var mode = document.getElementById('modeFilter').value;
     var verdict = document.getElementById('verdictFilter').value;
+    var pairType = document.getElementById('pairTypeFilter').value;
     var q = document.getElementById('searchBox').value.trim().toLowerCase();
 
     var filtered = DATA.filter(function (e) {
       if (mode && e.mode !== mode) return false;
       if (verdict && e.verdict !== verdict) return false;
+      if (pairType && e.pair_type !== pairType) return false;
       if (q && pairingName(e).toLowerCase().indexOf(q) === -1) return false;
       return true;
     });
-    filtered.sort(function (a, b) { return (b.points || 0) - (a.points || 0); });
+    // Tier first (real confidence signal — Peer-Endorsed > Survived
+    // Refutation > Verified/Unrefuted > Pending > Refuted/Rejected), points
+    // as a tie-breaker within a tier only. A missing tier_rank (held-out,
+    // non-standard verdict) sorts last. 2026-08-31, leaderboard rearchitecture.
+    filtered.sort(function (a, b) {
+      var ta = (a.tier_rank == null) ? 99 : a.tier_rank;
+      var tb = (b.tier_rank == null) ? 99 : b.tier_rank;
+      if (ta !== tb) return ta - tb;
+      return (b.points || 0) - (a.points || 0);
+    });
 
     document.getElementById('resultCount').textContent = filtered.length + ' of ' + DATA.length;
 
@@ -526,7 +647,10 @@ footer.foot {
             '<span class="rank">' + (i + 1) + '</span>' +
             '<span class="mode-icon">' + (MODE_ICON[e.mode] || '📜') + '</span>' +
             '<span class="pairing">' + pairingName(e).replace(/</g, '&lt;') + '</span>' +
-            '<span class="chips"><span class="chip ' + vClass + '">' + vLabel + '</span></span>' +
+            '<span class="chips">' +
+              (e.tier_label ? '<span class="chip tier-chip" title="Confidence tier">' + e.tier_label + '</span>' : '') +
+              '<span class="chip ' + vClass + '">' + vLabel + '</span>' +
+            '</span>' +
             '<span class="points ' + ptsClass + '">' + (e.points > 0 ? '+' : '') + e.points + '</span>' +
             '<span class="caret">▶</span>' +
           '</div>' +
@@ -543,9 +667,11 @@ footer.foot {
 
   document.getElementById('modeFilter').addEventListener('change', render);
   document.getElementById('verdictFilter').addEventListener('change', render);
+  document.getElementById('pairTypeFilter').addEventListener('change', render);
   document.getElementById('searchBox').addEventListener('input', render);
 
   renderStats();
+  renderMeta();
   populateFilters();
   render();
 })();
@@ -553,6 +679,7 @@ footer.foot {
 '''
 
 html = html.replace('__DATA_JSON__', data_json_safe)
+html = html.replace('__META_JSON__', meta_json_safe)
 
 with open("leaderboard-experience.html", "w", encoding="utf-8") as f:
     f.write(html)

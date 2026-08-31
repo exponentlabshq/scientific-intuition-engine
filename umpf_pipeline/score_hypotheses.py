@@ -102,13 +102,20 @@ def load_entries():
     return [e for e in load_latest_entries(LOG_PATH) if not is_calibration_canary(e)]
 
 
-def score_entry(rec, *, include_self_report: bool = True):
+def score_entry(rec, *, include_self_report: bool = False):
     """Returns (points, badges, breakdown_lines, held_out_reason_or_None).
 
-    include_self_report=False is the COA 5 outreach-rank path: Phase 2 +
-    actively-researched + refute + Phase 3 only. Self-report Distance/Tension/
-    Fusion is near-zero predictive signal (Failure 5 aftermath) and must not
-    decide which thesis leads get shown to researchers.
+    2026-08-31: default flipped to include_self_report=False for the MAIN
+    leaderboard score too, not only the outreach-rank path. Self-report
+    Distance/Tension/Fusion is near-zero predictive signal (Failure 5
+    aftermath) -- that finding already excluded it from outreach_shortlist(),
+    but the public leaderboard's default score kept adding it, a real,
+    checkable inconsistency between what this codebase documented and what
+    it did (see leaderboard rearchitecture, 2026-08-31). Self-report still
+    shows in the breakdown as real, honest context -- just not as points.
+    include_self_report=True is kept only for anyone who wants the old
+    (documented-inconsistent) number for comparison; nothing in this
+    pipeline calls it that way anymore.
     """
     points = 0
     badges = []
@@ -127,13 +134,20 @@ def score_entry(rec, *, include_self_report: bool = True):
     if verdict not in CANONICAL_VERDICTS:
         return 0, badges, [f"Non-standard verdict '{verdict}' — held out of scoring, see report below"], verdict
 
-    # Phase 1 — self-reported novelty score (excluded from outreach-rank)
-    if include_self_report:
-        self_report = rec.get("self_reported_distance", rec.get("self_reported_tension"))
-        if self_report is not None:
+    # Phase 1 — self-reported novelty score. Real, honest context, always
+    # shown -- but not scored by default (2026-08-31), since it carries
+    # near-zero predictive signal (Failure 5 aftermath).
+    self_report = rec.get("self_reported_distance", rec.get("self_reported_tension"))
+    if self_report is not None:
+        if include_self_report:
             p = self_report * 2
             points += p
             breakdown.append(f"Phase 1 self-report ({self_report}/5): {p:+d}")
+        else:
+            breakdown.append(
+                f"Phase 1 self-report ({self_report}/5): not scored — "
+                f"near-zero predictive signal, see Failure 5"
+            )
 
     # Phase 2 — the four-way verdict
     not_valid = rec.get("not_valid_bisociation", False)
@@ -250,13 +264,168 @@ def hypothesis_sharpened(slug: str) -> bool:
     )
 
 
+TIER_LABELS = {
+    0: "✅ Peer-Endorsed",
+    1: "🛡️ Survived Refutation",
+    2: "🗺️ Verified, Unrefuted",
+    3: "⏳ Pending",
+    4: "💀 Refuted / Rejected",
+}
+
+
+def tier_for(rec) -> tuple:
+    """Confidence tier (lower rank = better), independent of raw points.
+
+    2026-08-31, leaderboard rearchitecture: fixes a real, checkable bug in
+    the old flat-points ranking. An ADJACENT_ACTIVE entry later swept into
+    refutation and REFUTED nets +30 (Phase 2) - 15 (refuted) = +15, which
+    outranked a genuine NO_SIGNAL entry that SURVIVES refutation 2-of-3
+    (0 base + 12 = 12) under the old single-number sort. Points still work
+    as a tie-breaker WITHIN a tier (see render_leaderboard) -- they just no
+    longer let a refuted claim rank above a survived one.
+
+    Only ever called on entries that passed score_entry()'s held_out check
+    (i.e. verdict is one of the four canonical outcomes), so no fallback
+    tier for non-standard verdicts is needed here -- those never reach this
+    function; render_leaderboard's existing held-out path handles them.
+    """
+    verdict = rec.get("verdict", "")
+    refutation_verdict = rec.get("refutation_verdict")
+    outreach_status = rec.get("outreach_status")
+    not_valid = rec.get("not_valid_bisociation", False)
+    slug = rec.get("hypothesis_slug") or rec.get("slug") or key_for(rec)
+    flagged = hypothesis_flagged(slug)
+
+    # Refuted or rejected on the merits beats every other signal, regardless
+    # of how promising the entry looked before that check ran.
+    if (refutation_verdict == "REFUTED"
+            or verdict == "FACT_CHECK_FAIL"
+            or not_valid
+            or outreach_status == "researcher_dismissed"
+            or flagged):
+        return 4, TIER_LABELS[4]
+
+    if outreach_status == "researcher_confirmed_novel":
+        return 0, TIER_LABELS[0]
+
+    if refutation_verdict == "SURVIVES":
+        return 1, TIER_LABELS[1]
+
+    if verdict in ("ADJACENT_ACTIVE", "COLLISION"):
+        return 2, TIER_LABELS[2]
+
+    # NO_SIGNAL with no refutation run yet (or PENDING_VERIFICATION, though
+    # that's held out before reaching here in practice).
+    return 3, TIER_LABELS[3]
+
+
+PREFILTER_LOG_PATH = os.path.join(PIPELINE_DIR, "prefilter-log.jsonl")
+
+
+def load_prefilter_map() -> dict:
+    """slug -> latest prefilter-log.jsonl entry. Display only -- the
+    pre-filter is deliberately observe-only (prefilter_observe.py's own
+    docstring: fails open, gates nothing) -- this never affects points or
+    tier, only what real, already-collected signal is shown alongside an
+    entry. 2026-08-31, leaderboard rearchitecture (COA 2)."""
+    if not os.path.exists(PREFILTER_LOG_PATH):
+        return {}
+    latest = {}
+    with open(PREFILTER_LOG_PATH, "r", encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if not line:
+                continue
+            rec = json.loads(line)
+            slug = rec.get("slug")
+            if slug:
+                latest[slug] = rec  # file is append-only chronological; later wins
+    return latest
+
+
+def compute_prefilter_correlation(entries, prefilter_map) -> dict:
+    """Real, LIVE join of prefilter-log.jsonl against the ledger by slug --
+    computed fresh every run, never hardcoded, so it can't go stale as the
+    ledger grows. This is the actual Phase B question the PRD and whitepaper
+    have flagged as unmeasured; first computed 2026-08-31 (session control
+    check), now a standing part of every leaderboard regeneration."""
+    by_slug = {e.get("hypothesis_slug"): e for e in entries}
+
+    def outcome_quality(verdict, refv):
+        if verdict in ("COLLISION", "ADJACENT_ACTIVE"):
+            return "good"
+        if verdict == "NO_SIGNAL":
+            if refv == "SURVIVES":
+                return "good"
+            if refv == "REFUTED":
+                return "bad"
+            return None  # still pending -- excluded from the rate, not counted either way
+        return None
+
+    from collections import defaultdict, Counter
+    pair_type_tab = defaultdict(Counter)
+    rec_tab = defaultdict(Counter)
+    for slug, p in prefilter_map.items():
+        e = by_slug.get(slug)
+        if not e:
+            continue
+        oq = outcome_quality(e.get("verdict"), e.get("refutation_verdict"))
+        if oq is None:
+            continue
+        pt = p.get("pair_type")
+        if pt:
+            pair_type_tab[pt][oq] += 1
+        rec = p.get("recommendation")
+        if rec:
+            rec_tab[rec][oq] += 1
+
+    def to_rows(tab):
+        rows = []
+        for k, counts in tab.items():
+            total = sum(counts.values())
+            if not total:
+                continue
+            good = counts.get("good", 0)
+            rows.append((k, total, good, round(100 * good / total, 1)))
+        rows.sort(key=lambda r: -r[3])
+        return rows
+
+    return {"pair_type": to_rows(pair_type_tab), "recommendation": to_rows(rec_tab)}
+
+
+def compute_mode_performance(entries) -> list:
+    """Real, live per-mode stats (avg points under the current, self-report-
+    excluded formula; NO_SIGNAL rate). Previously computed only privately
+    inside audit_agent.py's proposal-grounding snapshot -- surfaced on the
+    public leaderboard for the first time 2026-08-31 (COA 4)."""
+    from collections import defaultdict
+    by_mode_points = defaultdict(list)
+    by_mode_no_signal = defaultdict(int)
+    for e in entries:
+        mode = e.get("mode") or ("case-study" if e.get("source") == "rosetta-stone-case-study" else "other")
+        points, badges, breakdown, held = score_entry(e)
+        if held:
+            continue
+        by_mode_points[mode].append(points)
+        if e.get("verdict") == "NO_SIGNAL":
+            by_mode_no_signal[mode] += 1
+    rows = []
+    for mode, pts in by_mode_points.items():
+        n = len(pts)
+        avg = round(sum(pts) / n, 1) if n else 0
+        nsr = round(by_mode_no_signal[mode] / n, 2) if n else 0
+        rows.append((mode, n, avg, nsr))
+    rows.sort(key=lambda r: -r[2])
+    return rows
+
+
 def outreach_shortlist(entries, limit: int = 10):
     """COA 5 + COA 1 + COA 2d: ADJACENT_ACTIVE preferred, no self-report,
     deprioritize flagged janusian / twice-failed honesty checks, and soft-demote
     leads that have not passed sharpen → re-verify (do not hard-drop)."""
     rows = []
     for rec in entries:
-        points, badges, breakdown, held = score_entry(rec, include_self_report=False)
+        points, badges, breakdown, held = score_entry(rec)  # self-report already excluded by default
         if held:
             continue
         if rec.get("verdict") != "ADJACENT_ACTIVE":
@@ -295,10 +464,26 @@ def outreach_shortlist(entries, limit: int = 10):
 
 
 def render_leaderboard(entries):
+    prefilter_map = load_prefilter_map()
+
     scored = []
     held_out = []
     for rec in entries:
         points, badges, breakdown, held_out_reason = score_entry(rec)
+        if held_out_reason:
+            row = {
+                "key": key_for(rec),
+                "domains": rec.get("domains", []),
+                "verdict": rec.get("verdict", ""),
+                "points": points,
+                "badges": badges,
+                "breakdown": breakdown,
+            }
+            held_out.append((row, held_out_reason))
+            continue
+        tier_rank, tier_label = tier_for(rec)
+        slug = rec.get("hypothesis_slug") or rec.get("slug") or key_for(rec)
+        pf = prefilter_map.get(slug)
         row = {
             "key": key_for(rec),
             "domains": rec.get("domains", []),
@@ -306,13 +491,15 @@ def render_leaderboard(entries):
             "points": points,
             "badges": badges,
             "breakdown": breakdown,
+            "tier_rank": tier_rank,
+            "tier_label": tier_label,
+            "pair_type": pf.get("pair_type") if pf else None,
         }
-        if held_out_reason:
-            held_out.append((row, held_out_reason))
-        else:
-            scored.append(row)
+        scored.append(row)
 
-    scored.sort(key=lambda r: r["points"], reverse=True)
+    # Tier first (real confidence signal), points as the tie-breaker within
+    # a tier only -- see tier_for()'s docstring for the bug this replaces.
+    scored.sort(key=lambda r: (r["tier_rank"], -r["points"]))
 
     lines = []
     lines.append("# Eureka Engine — Leaderboard")
@@ -321,17 +508,66 @@ def render_leaderboard(entries):
                   f"{len(scored)} scored, {len(held_out)} held out). "
                   "Do not hand-edit this file — re-run `python3 score_hypotheses.py`.")
     lines.append("")
-    lines.append("Points are tied to what an outcome reveals about real potential, not to phase "
-                  "completion — see `score_hypotheses.py`'s own docstring for the full schema.")
+    lines.append("Ranked by **confidence tier** first, points as a tie-breaker within a tier only "
+                  "— see `score_hypotheses.py`'s `tier_for()` docstring for the real bug this replaced "
+                  "(a refuted claim could outrank a genuine survivor under flat points). Self-reported "
+                  "novelty is shown per entry as context but is not scored (near-zero predictive signal, "
+                  "Failure 5). Tiers, high to low confidence: " +
+                  " → ".join(TIER_LABELS[i] for i in range(5)) + ".")
     lines.append("")
+
+    # COA 4 — mode performance, real and live, not hardcoded.
+    mode_perf = compute_mode_performance(entries)
+    if mode_perf:
+        lines.append("## Department performance")
+        lines.append("")
+        lines.append("Per-mode averages, computed fresh from the live ledger every run — not a "
+                      "one-time snapshot. A high NO_SIGNAL rate isn't a mode failing; it's that "
+                      "mode's real base rate for reaching a novel, unresolved claim.")
+        lines.append("")
+        lines.append("| Mode | n | Avg points | NO_SIGNAL rate |")
+        lines.append("|---|---|---|---|")
+        for mode, n, avg, nsr in mode_perf:
+            lines.append(f"| {mode} | {n} | {avg:+.1f} | {100*nsr:.0f}% |")
+        lines.append("")
+
+    # COA 2 — pre-filter / pair-type correlation, real and live.
+    corr = compute_prefilter_correlation(entries, prefilter_map)
+    if corr["pair_type"] or corr["recommendation"]:
+        lines.append("## Pre-filter signal (Phase 0.5, observe-only)")
+        lines.append("")
+        lines.append("The composability pre-filter never gates generation — it only logs a signal "
+                      "(see `prefilter_observe.py`). This is that signal's real, live correlation with "
+                      "downstream outcome, joined by slug against the ledger fresh every run — not a "
+                      "one-time control-test result.")
+        lines.append("")
+        if corr["pair_type"]:
+            lines.append("**By pair type:**")
+            lines.append("")
+            lines.append("| Pair type | n | Good outcome |")
+            lines.append("|---|---|---|")
+            for k, total, good, rate in corr["pair_type"]:
+                lines.append(f"| {k} | {total} | {rate}% |")
+            lines.append("")
+        if corr["recommendation"]:
+            lines.append("**By pre-filter recommendation:**")
+            lines.append("")
+            lines.append("| Recommendation | n | Good outcome |")
+            lines.append("|---|---|---|")
+            for k, total, good, rate in corr["recommendation"]:
+                lines.append(f"| {k} | {total} | {rate}% |")
+            lines.append("")
+
     lines.append("## Ranking")
     lines.append("")
-    lines.append("| Rank | Pairing | Points | Verdict | Badges |")
-    lines.append("|---|---|---|---|---|")
+    lines.append("| Rank | Tier | Pairing | Points | Verdict | Pair type | Badges |")
+    lines.append("|---|---|---|---|---|---|---|")
     for i, row in enumerate(scored, 1):
         domains_str = " × ".join(row["domains"]) if row["domains"] else row["key"]
         badges_str = " ".join(row["badges"]) if row["badges"] else "—"
-        lines.append(f"| {i} | {domains_str} | **{row['points']:+d}** | {row['verdict']} | {badges_str} |")
+        pt = row["pair_type"] or "—"
+        lines.append(f"| {i} | {row['tier_label']} | {domains_str} | **{row['points']:+d}** | "
+                      f"{row['verdict']} | {pt} | {badges_str} |")
     lines.append("")
 
     if held_out:
@@ -363,7 +599,7 @@ def render_leaderboard(entries):
     lines.append("")
     for row in scored:
         domains_str = " × ".join(row["domains"]) if row["domains"] else row["key"]
-        lines.append(f"### {domains_str} — {row['points']:+d}")
+        lines.append(f"### {domains_str} — {row['tier_label']} ({row['points']:+d})")
         lines.append("")
         for b in row["breakdown"]:
             lines.append(f"- {b}")
