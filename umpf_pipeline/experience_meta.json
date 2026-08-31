@@ -7,16 +7,16 @@
       "no_signal_rate": 0.15
     },
     {
+      "mode": "janusian",
+      "n": 214,
+      "avg_points": 10.7,
+      "no_signal_rate": 0.07
+    },
+    {
       "mode": "homospatial",
       "n": 244,
       "avg_points": 10.6,
       "no_signal_rate": 0.36
-    },
-    {
-      "mode": "janusian",
-      "n": 196,
-      "avg_points": 9.1,
-      "no_signal_rate": 0.08
     },
     {
       "mode": "case-study",

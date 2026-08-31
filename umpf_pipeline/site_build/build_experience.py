@@ -242,6 +242,13 @@ header.top .backlink:hover { border-bottom-color: var(--gold); }
   letter-spacing: 0.03em;
 }
 .meta-table td:first-child { color: var(--text); }
+.mode-drilldown {
+  color: var(--gold);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--gold);
+  cursor: pointer;
+}
+.mode-drilldown:hover { border-bottom-style: solid; }
 .meta-table + .meta-table { margin-top: 12px; }
 
 .row {
@@ -522,7 +529,11 @@ footer.foot {
         'it\'s that mode\'s real base rate for reaching a novel, unresolved claim.</p>' +
         '<table class="meta-table"><tr><th>Mode</th><th>n</th><th>Avg pts</th><th>NO_SIGNAL rate</th></tr>' +
         modePerf.map(function (r) {
-          return '<tr><td>' + (MODE_LABEL[r.mode] || r.mode) + '</td><td>' + r.n + '</td><td>' +
+          var clickable = (r.mode === 'bisociation' || r.mode === 'janusian' || r.mode === 'homospatial');
+          var modeCell = clickable
+            ? '<td><a href="#" class="mode-drilldown" onclick="window.__filterByMode(\'' + r.mode + '\'); return false;" title="Show only ' + (MODE_LABEL[r.mode] || r.mode) + ' entries">' + (MODE_LABEL[r.mode] || r.mode) + '</a></td>'
+            : '<td>' + (MODE_LABEL[r.mode] || r.mode) + '</td>';
+          return '<tr>' + modeCell + '<td>' + r.n + '</td><td>' +
             (r.avg_points >= 0 ? '+' : '') + r.avg_points + '</td><td>' + Math.round(r.no_signal_rate * 100) + '%</td></tr>';
         }).join('') + '</table></div>';
     }
@@ -664,6 +675,19 @@ footer.foot {
   window.__toggleRow = function (id) {
     var el = document.getElementById(id);
     if (el) el.classList.toggle('open');
+  };
+
+  // Clickable drill-down from the Department Performance panel -- jumps the
+  // existing mode filter to one mode and scrolls to the results, rather than
+  // building a separate leaderboard per mode. The tier system and cross-mode
+  // ranking are deliberately shared; this gets per-mode browsing without
+  // duplicating that infrastructure. 2026-08-31.
+  window.__filterByMode = function (mode) {
+    var sel = document.getElementById('modeFilter');
+    sel.value = mode;
+    render();
+    var rows = document.getElementById('rows');
+    if (rows) rows.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
   document.getElementById('modeFilter').addEventListener('change', render);
