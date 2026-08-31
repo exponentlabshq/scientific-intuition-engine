@@ -127,6 +127,14 @@ def score_entry(rec, *, include_self_report: bool = False):
     elif rec.get("source") == "rosetta-stone-case-study":
         badges.append("📜 Pre-existing case study")
 
+    # 2026-08-31: real, historically-confirmed Nobel-linked discoveries, hand-
+    # authored for refutation-lens calibration (control-test-nobel-calibration.md),
+    # added to the public leaderboard by direct instruction. Distinct badge,
+    # additive to the mode badge above (not elif) -- these carry a real mode
+    # for comparability, but must never read as engine-generated.
+    if rec.get("source") == "nobel-calibration-ground-truth":
+        badges.append("🏆 Nobel Ground Truth (calibration benchmark, not engine-generated)")
+
     verdict = rec.get("verdict", "")
     if verdict == "PENDING_VERIFICATION":
         badges.append("⏳ Pending Verification")

@@ -2,9 +2,9 @@
   "mode_performance": [
     {
       "mode": "bisociation",
-      "n": 203,
-      "avg_points": 18.3,
-      "no_signal_rate": 0.16
+      "n": 216,
+      "avg_points": 18.0,
+      "no_signal_rate": 0.15
     },
     {
       "mode": "homospatial",

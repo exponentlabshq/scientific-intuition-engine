@@ -22231,5 +22231,478 @@
     "refutation_filename": null,
     "refutation_content": null,
     "refutation_independently_confirmed": false
+  },
+  {
+    "key": "nobel-ground-truth-kahneman_tversky",
+    "mode": "bisociation",
+    "source": "nobel-calibration-ground-truth",
+    "domains": [
+      "Kahneman & Tversky — psychology (cognitive bias)",
+      "Economics — rational-choice theory"
+    ],
+    "verdict": "COLLISION",
+    "points": 17,
+    "badges": [
+      "🧬 Bisociative",
+      "🏆 Nobel Ground Truth (calibration benchmark, not engine-generated)",
+      "🏛️ Established Department",
+      "🛡️ Survived the Gauntlet"
+    ],
+    "breakdown": [
+      "Phase 2 COLLISION (genuine): +5",
+      "Adversarial refutation survived (2-of-3): +12"
+    ],
+    "held_out_reason": null,
+    "tier_rank": 1,
+    "tier_label": "🛡️ Survived Refutation",
+    "pair_type": null,
+    "refutation_lens_version": "2026-08-31-v2",
+    "notes": "The hypothesis accurately describes Kahneman and Tversky's contributions, including the Allais Paradox and Prospect Theory, which challenge expected-utility theory's independence axiom and introduce loss aversion. This work was recognized with the 2002 Nobel Prize in Economic Sciences. ([nobelprize.org](https://www.nobelprize.org/prizes/economic-sciences/2002/press-release/Orne/?utm_source=openai)) Therefore, the hypothesis is confirmed as accurate.",
+    "self_reported_distance": null,
+    "self_reported_tension": null,
+    "hypothesis_filename": null,
+    "hypothesis_content": null,
+    "verification_filename": null,
+    "verification_content": null,
+    "refutation_filename": "refutations/nobel-ground-truth-kahneman_tversky-refutation.md",
+    "refutation_content": "# Adversarial Refutation: Bisociation — Kahneman & Tversky — Cognitive Bias × Rational-Choice Theory\n\n**Original**: `hypotheses/nobel-ground-truth-kahneman_tversky.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 2 of 3 survive → **SURVIVES** (promoted out of NO_SIGNAL)\n\n- **Coherence — SURVIVES.** The core claim rests on the shared term 'independence axiom,' which refers to the same formal principle in both psychology (as it relates to cognitive biases) and economics (as it pertains to rational-choice theory). While the mechanisms producing the observed behaviors differ between the two domains, the term itself denotes the same formal object, thus avoiding equivocation. The mapping between cognitive biases and rational-choice theory is coherent, as it highlights a structured departure from traditional economic models, supported by empirical evidence.\n- **Testability — SURVIVES.** The core claim names specific, checkable evidence in the form of the Allais paradox and Prospect Theory, both of which are well-documented and have been validated through empirical research. The claim clearly operationalizes the hypothesis by referencing the independence axiom of expected-utility theory and the structured departure from it, thus providing a concrete basis for testing and verification.\n- **Triviality — REFUTED.** The core claim states that human choices systematically violate a specific axiom of expected-utility theory due to loss aversion, formalized as Prospect Theory. When stripped of domain-specific vocabulary, the claim reduces to a general assertion about complex systems exhibiting predictable deviations from a theoretical model based on a specific mechanism (loss aversion). This generic formulation applies to many complex systems, thus failing the triviality test.\n\n## What survived, and why this matters\n\n2 of 3 independent lenses could not kill this claim. Per the promotion rule (2-of-3 survival), this hypothesis moves out of NO_SIGNAL — real signal the claim isn't vacuous, not proof it's correct. Still worth Phase 3 outreach consideration if a real researcher in the adjacent field can be identified.\n",
+    "refutation_independently_confirmed": true
+  },
+  {
+    "key": "nobel-ground-truth-watson_crick_franklin",
+    "mode": "bisociation",
+    "source": "nobel-calibration-ground-truth",
+    "domains": [
+      "Watson & Crick — molecular biology",
+      "Franklin — X-ray crystallography"
+    ],
+    "verdict": "COLLISION",
+    "points": -10,
+    "badges": [
+      "🧬 Bisociative",
+      "🏆 Nobel Ground Truth (calibration benchmark, not engine-generated)",
+      "🏛️ Established Department",
+      "💀 Refuted"
+    ],
+    "breakdown": [
+      "Phase 2 COLLISION (genuine): +5",
+      "Adversarial refutation REFUTED: -15",
+      "  independently confirmed (3 separate agents, full agreement)"
+    ],
+    "held_out_reason": null,
+    "tier_rank": 4,
+    "tier_label": "💀 Refuted / Rejected",
+    "pair_type": null,
+    "refutation_lens_version": "2026-08-31-v2",
+    "notes": "The hypothesis accurately describes the geometric constraints from Photo 51 that led to the double helix model of DNA, which was subsequently confirmed by the Meselson-Stahl experiment. The Nobel Prize awarded in 1962 to Watson, Crick, and Wilkins for this discovery further corroborates the claims. Therefore, the hypothesis aligns with established scientific knowledge and does not present new, unverified connections.",
+    "self_reported_distance": null,
+    "self_reported_tension": null,
+    "hypothesis_filename": null,
+    "hypothesis_content": null,
+    "verification_filename": null,
+    "verification_content": null,
+    "refutation_filename": "refutations/nobel-ground-truth-watson_crick_franklin-refutation.md",
+    "refutation_content": "# Adversarial Refutation: Bisociation — Watson & Crick — Molecular Biology × Franklin — X-Ray Crystallography\n\n**Original**: `hypotheses/nobel-ground-truth-watson_crick_franklin.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 1 of 3 survive → **REFUTED**\n\n- **Coherence — REFUTED.** The claim relies on the term 'double helix' to connect the geometric constraints from Franklin's X-ray diffraction pattern with the chemical structure of DNA. However, 'double helix' in the context of molecular biology refers specifically to the arrangement of nucleotides and their interactions, while in crystallography, it refers to the geometric representation of the diffraction pattern. These are not the same formal objects; the term is being used to conflate distinct meanings in each domain, leading to equivocation.\n- **Testability — SURVIVES.** The claim operationalizes the hypothesis by naming specific geometric constraints from Rosalind Franklin's X-ray diffraction pattern (Photo 51) that directly relate to the chemical structure of DNA. It also cites the Meselson-Stahl experiment (1958) as a distinct, independently-tested consequence of the proposed structure, providing a clear metric and rejection threshold. Thus, the claim is testable and not vague.\n- **Triviality — REFUTED.** The claim describes specific geometric constraints from Rosalind Franklin's X-ray diffraction pattern that lead to a unique chemical structure of DNA, which is a precise relationship rather than a general statement about complex systems. When stripped of domain-specific vocabulary, the claim does not reduce to something true of almost any two complex systems, as it relies on specific measurements and outcomes that do not apply broadly. The phrase being tested for genericness, 'the real geometric constraints in X-ray diffraction patterns uniquely constrain the chemical structure of a molecule,' is not a trivial statement applicable to all complex systems.\n\n## No steelman offered\n\nAll three lenses independently converged on REFUTED for this case. If revisited, it would need a genuinely tighter formulation, not a restatement of the same claim.\n",
+    "refutation_independently_confirmed": true
+  },
+  {
+    "key": "nobel-ground-truth-hopfield",
+    "mode": "bisociation",
+    "source": "nobel-calibration-ground-truth",
+    "domains": [
+      "Hopfield — statistical physics (energy landscapes)",
+      "Neural networks — associative memory"
+    ],
+    "verdict": "COLLISION",
+    "points": -10,
+    "badges": [
+      "🧬 Bisociative",
+      "🏆 Nobel Ground Truth (calibration benchmark, not engine-generated)",
+      "🏛️ Established Department",
+      "💀 Refuted"
+    ],
+    "breakdown": [
+      "Phase 2 COLLISION (genuine): +5",
+      "Adversarial refutation REFUTED: -15",
+      "  independently confirmed (3 separate agents, full agreement)"
+    ],
+    "held_out_reason": null,
+    "tier_rank": 4,
+    "tier_label": "💀 Refuted / Rejected",
+    "pair_type": null,
+    "refutation_lens_version": "2026-08-31-v2",
+    "notes": "The search results confirm that John Hopfield and Geoffrey Hinton were awarded the 2024 Nobel Prize in Physics for their work on artificial neural networks, which aligns with the core claim of the hypothesis. However, the specific assertion that Hopfield's network converges to a local minimum of an energy function identical to the Ising model's energy function is not directly supported by the provided sources. Therefore, while the general claim about their contributions is accurate, the exact details regarding the energy function require further verification.",
+    "self_reported_distance": null,
+    "self_reported_tension": null,
+    "hypothesis_filename": "nobel-ground-truth-hopfield.md",
+    "hypothesis_content": "# Historical Ground Truth: Hopfield — Statistical Physics × Neural Networks\n\n**Type**: real, historically-confirmed discovery — hand-authored calibration benchmark, **not generated by `hypothesis_engine.py`**\n**Mode framing**: Bisociation (the discovery is presented in this pipeline's own bisociation shape for comparability, not because it was produced by the generator)\n**Domains**: Hopfield — statistical physics (energy landscapes) × Neural networks — associative memory\n**Source**: `bisociation_gold_pairs.json` #53, expanded into a precise technical claim for refutation-lens calibration (2026-08-31)\n**Real-world attribution**: 2024 Nobel Prize in Physics (Hopfield, jointly with Hinton)\n\n---\n\n## The Core Claim\n\nA network of interconnected binary units, updated asynchronously, provably converges to a local minimum of an energy function with the exact mathematical form of the Ising model from statistical physics -- not an analogy to it, the same energy function -- and those energy minima function as content-addressable associative memories, retrievable from partial or noisy input. John Hopfield won the 2024 Nobel Prize in Physics for this, jointly with Geoffrey Hinton.\n\n---\n\n## Why this is on the leaderboard\n\nThis is not a hypothesis the Eureka Engine generated, and its presence here is not a claim of discovery. It is a real, already-known, Nobel-linked result, hand-written as a precise technical claim and run through this pipeline's own Phase 2 verification and Phase 2.5 adversarial refutation machinery — specifically to test whether that machinery can recognize a true, vindicated claim, not merely reject weak ones. Full methodology, all 13 cases, and the honest record of what changed across two rounds of lens fixes: `refutations/control-test-nobel-calibration.md` and `refutations/v2-full-ledger-recheck-2026-08-31.md`.\n",
+    "verification_filename": "nobel-ground-truth-hopfield-verification.md",
+    "verification_content": "# Verification: Bisociation — Hopfield — Statistical Physics × Neural Networks\n\n**Verifies**: `hypotheses/nobel-ground-truth-hopfield.md`\n**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)\n\n## Verdict: **COLLISION**\n\n## Queries\n\n\n## What was found\nJohn Hopfield and Geoffrey Hinton were jointly awarded the 2024 Nobel Prize in Physics for their foundational work in artificial neural networks. ([nobelprize.org](https://www.nobelprize.org/prizes/physics/2024/summary/%26nbsp/?utm_source=openai)) Hopfield developed an associative memory network capable of storing and reconstructing patterns, while Hinton created the Boltzmann machine, a network that autonomously identifies properties in data. ([nobelprize.org](https://www.nobelprize.org/prizes/physics/2024/press-release/?session_id=session-vikx8pb5k&utm_source=openai)) Both utilized principles from statistical physics to advance machine learning. ([scientificamerican.com](https://www.scientificamerican.com/article/nobel-prize-in-physics-awarded-for-breakthroughs-in-machine-learning/?utm_source=openai))\n\n## Reasoning\nThe search results confirm that John Hopfield and Geoffrey Hinton were awarded the 2024 Nobel Prize in Physics for their work on artificial neural networks, which aligns with the core claim of the hypothesis. However, the specific assertion that Hopfield's network converges to a local minimum of an energy function identical to the Ising model's energy function is not directly supported by the provided sources. Therefore, while the general claim about their contributions is accurate, the exact details regarding the energy function require further verification.\n",
+    "refutation_filename": "refutations/nobel-ground-truth-hopfield-refutation.md",
+    "refutation_content": "# Adversarial Refutation: Bisociation — Hopfield — Statistical Physics × Neural Networks\n\n**Original**: `hypotheses/nobel-ground-truth-hopfield.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 1 of 3 survive → **REFUTED**\n\n- **Coherence — REFUTED.** The claim relies on the term 'energy function' which, while it appears in both statistical physics and neural networks, denotes different underlying concepts. In statistical physics, the energy function describes the state of a physical system, while in neural networks, it represents a computational objective for optimization. Thus, the claim does not establish a genuine structural mapping but rather conflates two distinct referents, leading to equivocation.\n- **Testability — SURVIVES.** The core claim explicitly names the Hopfield network and its mathematical relationship to the Ising model, providing a specific, checkable piece of evidence. The claim asserts that the energy function of the Hopfield network is identical to that of the Ising model, which serves as the operationalized metric. The reference to the Nobel Prize further supports the claim's validity, as it indicates recognition of the foundational work in this area.\n- **Triviality — REFUTED.** The core claim states that a network of interconnected binary units converges to a local minimum of an energy function with the exact mathematical form of the Ising model, not merely an analogy. When stripped of domain-specific vocabulary, the claim reduces to a statement about two complex systems converging to a specific mathematical form, which is a trivial assertion applicable to many systems. This generic nature indicates that the claim lacks the necessary specificity to be considered novel or significant.\n\n## No steelman offered\n\nAll three lenses independently converged on REFUTED for this case. If revisited, it would need a genuinely tighter formulation, not a restatement of the same claim.\n",
+    "refutation_independently_confirmed": true
+  },
+  {
+    "key": "nobel-ground-truth-nash_evolution",
+    "mode": "bisociation",
+    "source": "nobel-calibration-ground-truth",
+    "domains": [
+      "Nash — game theory (equilibrium)",
+      "Evolutionary biology (selection)"
+    ],
+    "verdict": "COLLISION",
+    "points": 25,
+    "badges": [
+      "🧬 Bisociative",
+      "🏆 Nobel Ground Truth (calibration benchmark, not engine-generated)",
+      "🏛️ Established Department",
+      "🛡️ Survived the Gauntlet"
+    ],
+    "breakdown": [
+      "Phase 2 COLLISION (genuine): +5",
+      "Adversarial refutation survived (3-of-3): +20"
+    ],
+    "held_out_reason": null,
+    "tier_rank": 1,
+    "tier_label": "🛡️ Survived Refutation",
+    "pair_type": null,
+    "refutation_lens_version": "2026-08-31-v2",
+    "notes": "The hypothesis that an evolutionarily stable strategy (ESS) is a Nash equilibrium in evolutionary contexts has already been established by Maynard Smith and Price (1973). Their work demonstrated that ESSs are Nash equilibria, showing that stability in evolutionary biology can emerge from differential reproductive success without conscious strategic reasoning. ([plato.stanford.edu](https://plato.stanford.edu/archives/fall2003/entries/game-evolutionary/?utm_source=openai)) Therefore, the hypothesis has been verified and is not novel.",
+    "self_reported_distance": null,
+    "self_reported_tension": null,
+    "hypothesis_filename": null,
+    "hypothesis_content": null,
+    "verification_filename": null,
+    "verification_content": null,
+    "refutation_filename": "refutations/nobel-ground-truth-nash_evolution-refutation.md",
+    "refutation_content": "# Adversarial Refutation: Bisociation — Nash — Game Theory × Evolutionary Biology\n\n**Original**: `hypotheses/nobel-ground-truth-nash_evolution.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 3 of 3 survive → **SURVIVES** (promoted out of NO_SIGNAL)\n\n- **Coherence — SURVIVES.** The core claim identifies the term 'Nash equilibrium' as a shared formal object in both game theory and evolutionary biology. In both domains, it refers to a state where strategies are stable against deviations, whether through conscious reasoning in game theory or through differential reproductive success in evolutionary contexts. This demonstrates a coherent structural mapping without equivocation, as both domains utilize the same mathematical framework to describe stability, albeit under different mechanisms.\n- **Testability — SURVIVES.** The claim names the concept of 'evolutionarily stable strategy' (ESS) as introduced by Maynard Smith and Price in 1973, which is a specific, checkable theorem in evolutionary biology. This theorem operationalizes the hypothesis by establishing that an ESS is a Nash equilibrium, thus providing a clear metric, comparison condition, and rejection threshold. The claim is therefore not vague and is grounded in established theoretical frameworks.\n- **Triviality — SURVIVES.** The core claim maintains specificity by asserting that an evolutionarily stable strategy can exist independently of conscious decision-making while still being a Nash equilibrium. The phrase tested for genericness, 'A strategy can be evolutionarily stable -- resistant to invasion by any alternative strategy -- without any player consciously choosing it or reasoning strategically at all,' does not reduce to a trivial statement applicable to most complex systems, as it retains the unique relationship between evolutionary stability and Nash equilibria.\n\n## What survived, and why this matters\n\n3 of 3 independent lenses could not kill this claim. Per the promotion rule (2-of-3 survival), this hypothesis moves out of NO_SIGNAL — real signal the claim isn't vacuous, not proof it's correct. Still worth Phase 3 outreach consideration if a real researcher in the adjacent field can be identified.\n",
+    "refutation_independently_confirmed": true
+  },
+  {
+    "key": "nobel-ground-truth-planck",
+    "mode": "bisociation",
+    "source": "nobel-calibration-ground-truth",
+    "domains": [
+      "Planck — energy quantization",
+      "Thermodynamics — blackbody radiation"
+    ],
+    "verdict": "COLLISION",
+    "points": 17,
+    "badges": [
+      "🧬 Bisociative",
+      "🏆 Nobel Ground Truth (calibration benchmark, not engine-generated)",
+      "🏛️ Established Department",
+      "🛡️ Survived the Gauntlet"
+    ],
+    "breakdown": [
+      "Phase 2 COLLISION (genuine): +5",
+      "Adversarial refutation survived (2-of-3): +12"
+    ],
+    "held_out_reason": null,
+    "tier_rank": 1,
+    "tier_label": "🛡️ Survived Refutation",
+    "pair_type": null,
+    "refutation_lens_version": "2026-08-31-v2",
+    "notes": "The hypothesis accurately describes Planck's derivation of the blackbody radiation spectrum using energy quantization, a foundational result in quantum theory. This work has been extensively documented and recognized with the Nobel Prize in Physics 1918.",
+    "self_reported_distance": null,
+    "self_reported_tension": null,
+    "hypothesis_filename": "nobel-ground-truth-planck.md",
+    "hypothesis_content": "# Historical Ground Truth: Planck — Quantization × Thermodynamics\n\n**Type**: real, historically-confirmed discovery — hand-authored calibration benchmark, **not generated by `hypothesis_engine.py`**\n**Mode framing**: Bisociation (the discovery is presented in this pipeline's own bisociation shape for comparability, not because it was produced by the generator)\n**Domains**: Planck — energy quantization × Thermodynamics — blackbody radiation\n**Source**: `bisociation_gold_pairs.json` #17, expanded into a precise technical claim for refutation-lens calibration (2026-08-31)\n**Real-world attribution**: 1918 Nobel Prize in Physics (Planck)\n\n---\n\n## The Core Claim\n\nThe observed blackbody radiation spectrum cannot be derived from classical physics' assumption that energy exchange is continuous -- classical theory predicts an ultraviolet catastrophe that is not observed. Assuming instead that energy is exchanged only in discrete quanta (E = hf) exactly reproduces the real observed spectrum. Planck won the 1918 Nobel Prize in Physics for this, the founding result of quantum theory.\n\n---\n\n## Why this is on the leaderboard\n\nThis is not a hypothesis the Eureka Engine generated, and its presence here is not a claim of discovery. It is a real, already-known, Nobel-linked result, hand-written as a precise technical claim and run through this pipeline's own Phase 2 verification and Phase 2.5 adversarial refutation machinery — specifically to test whether that machinery can recognize a true, vindicated claim, not merely reject weak ones. Full methodology, all 13 cases, and the honest record of what changed across two rounds of lens fixes: `refutations/control-test-nobel-calibration.md` and `refutations/v2-full-ledger-recheck-2026-08-31.md`.\n",
+    "verification_filename": "nobel-ground-truth-planck-verification.md",
+    "verification_content": "# Verification: Bisociation — Planck — Quantization × Thermodynamics\n\n**Verifies**: `hypotheses/nobel-ground-truth-planck.md`\n**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)\n\n## Verdict: **COLLISION**\n\n## Queries\n\n\n## What was found\nMax Planck's 1900 derivation of the blackbody radiation spectrum by assuming energy quantization (E=hf) is well-documented. The Nobel Prize in Physics 1918 was awarded to Planck \"in recognition of the services he rendered to the advancement of Physics by his discovery of energy quanta.\"\n\n## Reasoning\nThe hypothesis accurately describes Planck's derivation of the blackbody radiation spectrum using energy quantization, a foundational result in quantum theory. This work has been extensively documented and recognized with the Nobel Prize in Physics 1918.\n",
+    "refutation_filename": "refutations/nobel-ground-truth-planck-refutation.md",
+    "refutation_content": "# Adversarial Refutation: Bisociation — Planck — Quantization × Thermodynamics\n\n**Original**: `hypotheses/nobel-ground-truth-planck.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 2 of 3 survive → **SURVIVES** (promoted out of NO_SIGNAL)\n\n- **Coherence — SURVIVES.** The core claim rests on the shared term 'energy exchange,' which refers to the same formal concept in both domains: the quantization of energy in Planck's theory and the thermodynamic behavior of blackbody radiation. In both contexts, energy exchange is treated as a discrete process, allowing for a coherent mapping between the two domains without equivocation. The claim successfully demonstrates how the introduction of quantization resolves the ultraviolet catastrophe, maintaining the integrity of both domains.\n- **Testability — SURVIVES.** The claim explicitly names a specific historical experiment and result, namely Planck's resolution of the ultraviolet catastrophe through the introduction of energy quanta (E = hf). This is a checkable piece of evidence that operationalizes the hypothesis, satisfying the testability lens without requiring additional metrics or thresholds.\n- **Triviality — REFUTED.** The core claim states that the observed blackbody radiation spectrum cannot be derived from classical physics' assumption of continuous energy exchange, and that quantized energy exchange reproduces the observed spectrum. When stripped of domain-specific vocabulary, this reduces to a statement about the behavior of energy exchange in complex systems. The phrase being tested for genericness is: 'The observed spectrum cannot be derived from the assumption that energy exchange is continuous.' This is a general statement that could apply to many complex systems, thus failing the triviality lens.\n\n## What survived, and why this matters\n\n2 of 3 independent lenses could not kill this claim. Per the promotion rule (2-of-3 survival), this hypothesis moves out of NO_SIGNAL — real signal the claim isn't vacuous, not proof it's correct. Still worth Phase 3 outreach consideration if a real researcher in the adjacent field can be identified.\n",
+    "refutation_independently_confirmed": true
+  },
+  {
+    "key": "nobel-ground-truth-jacob_monod",
+    "mode": "bisociation",
+    "source": "nobel-calibration-ground-truth",
+    "domains": [
+      "Jacob & Monod — genetics (gene regulation)",
+      "Control engineering — feedback systems"
+    ],
+    "verdict": "COLLISION",
+    "points": 17,
+    "badges": [
+      "🧬 Bisociative",
+      "🏆 Nobel Ground Truth (calibration benchmark, not engine-generated)",
+      "🏛️ Established Department",
+      "🛡️ Survived the Gauntlet"
+    ],
+    "breakdown": [
+      "Phase 2 COLLISION (genuine): +5",
+      "Adversarial refutation survived (2-of-3): +12"
+    ],
+    "held_out_reason": null,
+    "tier_rank": 1,
+    "tier_label": "🛡️ Survived Refutation",
+    "pair_type": null,
+    "refutation_lens_version": "2026-08-31-v2",
+    "notes": "The lac operon mechanism has been extensively studied and documented, with detailed explanations available in multiple reputable sources. This indicates that the specific connection between gene regulation in the lac operon and control engineering feedback systems has already been established and published.",
+    "self_reported_distance": null,
+    "self_reported_tension": null,
+    "hypothesis_filename": null,
+    "hypothesis_content": null,
+    "verification_filename": null,
+    "verification_content": null,
+    "refutation_filename": "refutations/nobel-ground-truth-jacob_monod-refutation.md",
+    "refutation_content": "# Adversarial Refutation: Bisociation — Jacob & Monod — Gene Regulation × Control Engineering\n\n**Original**: `hypotheses/nobel-ground-truth-jacob_monod.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 2 of 3 survive → **SURVIVES** (promoted out of NO_SIGNAL)\n\n- **Coherence — SURVIVES.** The core claim identifies a specific shared structure: the feedback control mechanism in both the lac operon and control engineering systems. In both domains, the term 'feedback' refers to a formal object that describes a system's response to changes in its environment, despite the underlying processes differing (molecular vs. engineering). This mapping does not equivocate on terms, as both domains utilize the same formal structure of feedback control, thus fulfilling the criteria for bisociation without equivocation.\n- **Testability — SURVIVES.** The core claim names a specific, checkable result from the work of Jacob, Monod, and Lwoff regarding the lac operon, which is a well-documented genetic control mechanism. This historical experiment and its findings serve as the operationalized metric, comparison condition, and rejection threshold for the hypothesis. The claim is thus testable and not vague, satisfying the criteria for the testability lens.\n- **Triviality — REFUTED.** The core claim describes a specific mechanism of gene regulation in E. coli, detailing the role of a repressor protein and its interaction with DNA. When stripped of domain-specific vocabulary, the claim reduces to a general statement about feedback control systems in complex biological processes, which is true of many systems beyond just genetics and control engineering. The phrase being tested for genericness is: 'a real molecular feedback-control circuit, formally identical to negative feedback in control engineering.' This is a broader statement that applies to various complex systems, thus failing the triviality lens.\n\n## What survived, and why this matters\n\n2 of 3 independent lenses could not kill this claim. Per the promotion rule (2-of-3 survival), this hypothesis moves out of NO_SIGNAL — real signal the claim isn't vacuous, not proof it's correct. Still worth Phase 3 outreach consideration if a real researcher in the adjacent field can be identified.\n",
+    "refutation_independently_confirmed": true
+  },
+  {
+    "key": "nobel-ground-truth-ostrom",
+    "mode": "bisociation",
+    "source": "nobel-calibration-ground-truth",
+    "domains": [
+      "Ostrom — institutional economics (commons governance)",
+      "Ecology — common-pool resource dynamics"
+    ],
+    "verdict": "COLLISION",
+    "points": 17,
+    "badges": [
+      "🧬 Bisociative",
+      "🏆 Nobel Ground Truth (calibration benchmark, not engine-generated)",
+      "🏛️ Established Department",
+      "🛡️ Survived the Gauntlet"
+    ],
+    "breakdown": [
+      "Phase 2 COLLISION (genuine): +5",
+      "Adversarial refutation survived (2-of-3): +12"
+    ],
+    "held_out_reason": null,
+    "tier_rank": 1,
+    "tier_label": "🛡️ Survived Refutation",
+    "pair_type": null,
+    "refutation_lens_version": "2026-08-31-v2",
+    "notes": "The hypothesis accurately reflects Ostrom's findings that local communities can self-organize to manage common-pool resources sustainably, countering the 'tragedy of the commons' narrative. This alignment indicates that the hypothesis has already been extensively explored and substantiated in existing literature.",
+    "self_reported_distance": null,
+    "self_reported_tension": null,
+    "hypothesis_filename": "nobel-ground-truth-ostrom.md",
+    "hypothesis_content": "# Historical Ground Truth: Ostrom — Commons Governance × Ecology\n\n**Type**: real, historically-confirmed discovery — hand-authored calibration benchmark, **not generated by `hypothesis_engine.py`**\n**Mode framing**: Bisociation (the discovery is presented in this pipeline's own bisociation shape for comparability, not because it was produced by the generator)\n**Domains**: Ostrom — institutional economics (commons governance) × Ecology — common-pool resource dynamics\n**Source**: `bisociation_gold_pairs.json` (held-out batch, 2026-08-31), expanded into a precise technical claim for refutation-lens calibration (2026-08-31)\n**Real-world attribution**: 2009 Nobel Prize in Economic Sciences (Ostrom)\n\n---\n\n## The Core Claim\n\nContrary to Garrett Hardin's 'tragedy of the commons' prediction that shared resources are inevitably overexploited absent private property or top-down state control, empirical field studies of real irrigation systems, fisheries, and forests found that local communities repeatedly self-organize durable governance institutions -- monitoring, graduated sanctions, low-cost conflict resolution -- that sustainably manage common-pool resources without either privatization or centralized regulation. Elinor Ostrom won the 2009 Nobel Prize in Economic Sciences for this analysis of economic governance, especially the commons.\n\n---\n\n## Why this is on the leaderboard\n\nThis is not a hypothesis the Eureka Engine generated, and its presence here is not a claim of discovery. It is a real, already-known, Nobel-linked result, hand-written as a precise technical claim and run through this pipeline's own Phase 2 verification and Phase 2.5 adversarial refutation machinery — specifically to test whether that machinery can recognize a true, vindicated claim, not merely reject weak ones. Full methodology, all 13 cases, and the honest record of what changed across two rounds of lens fixes: `refutations/control-test-nobel-calibration.md` and `refutations/v2-full-ledger-recheck-2026-08-31.md`.\n",
+    "verification_filename": "nobel-ground-truth-ostrom-verification.md",
+    "verification_content": "# Verification: Bisociation — Ostrom — Commons Governance × Ecology\n\n**Verifies**: `hypotheses/nobel-ground-truth-ostrom.md`\n**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)\n\n## Verdict: **COLLISION**\n\n## Queries\n\n\n## What was found\nElinor Ostrom's seminal work, \"Governing the Commons,\" presents extensive empirical studies demonstrating that local communities can effectively self-organize to manage common-pool resources without resorting to privatization or centralized regulation. ([openlibrary.org](https://openlibrary.org/books/OL21018446M/Governing_the_commons?utm_source=openai)) Ostrom identifies eight design principles that characterize successful community-based natural resource management, which have been empirically supported in various studies. ([portalrecerca.uab.cat](https://portalrecerca.uab.cat/en/publications/a-review-of-design-principles-for-community-based-natural-resourc/?utm_source=openai)) Additionally, her research highlights that self-governed irrigation systems can function effectively, challenging the assumption that external authorities are necessary for managing common-pool resources. ([aeaweb.org](https://www.aeaweb.org/articles?id=10.1257%2Fjep.7.4.93&utm_source=openai))\n\n## Reasoning\nThe hypothesis accurately reflects Ostrom's findings that local communities can self-organize to manage common-pool resources sustainably, countering the 'tragedy of the commons' narrative. This alignment indicates that the hypothesis has already been extensively explored and substantiated in existing literature.\n",
+    "refutation_filename": "refutations/nobel-ground-truth-ostrom-refutation.md",
+    "refutation_content": "# Adversarial Refutation: Bisociation — Ostrom — Commons Governance × Ecology\n\n**Original**: `hypotheses/nobel-ground-truth-ostrom.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 2 of 3 survive → **SURVIVES** (promoted out of NO_SIGNAL)\n\n- **Coherence — SURVIVES.** The core claim rests on the shared term 'governance,' which refers to the same formal object in both domains: the management of common-pool resources. In institutional economics, governance pertains to the rules and structures that facilitate collective action, while in ecology, it refers to the mechanisms that sustain resource use without depletion. Both domains analyze how communities organize themselves to manage shared resources effectively, demonstrating a coherent structural mapping without equivocation.\n- **Testability — SURVIVES.** The core claim references Elinor Ostrom's work, specifically her book 'Governing the Commons,' which provides empirical evidence and identifies design principles for effective governance of common-pool resources. This constitutes a specific, checkable piece of evidence that operationalizes the hypothesis, satisfying the testability lens. The claim is not vague and clearly outlines the mechanisms through which local communities can manage resources sustainably.\n- **Triviality — REFUTED.** The core claim asserts that local communities can sustainably manage common-pool resources through self-organized governance, which is a specific assertion about the mechanisms of governance in shared resource contexts. When stripped of domain-specific vocabulary, the claim reduces to a general statement about complex systems managing shared resources, which is true of many systems and lacks the specificity required to be a unique or novel insight. The phrase being tested for genericness is: 'local communities repeatedly self-organize durable governance institutions that sustainably manage common-pool resources without either privatization or centralized regulation.' This is indeed a broader statement applicable to various complex systems, thus failing the triviality test.\n\n## What survived, and why this matters\n\n2 of 3 independent lenses could not kill this claim. Per the promotion rule (2-of-3 survival), this hypothesis moves out of NO_SIGNAL — real signal the claim isn't vacuous, not proof it's correct. Still worth Phase 3 outreach consideration if a real researcher in the adjacent field can be identified.\n",
+    "refutation_independently_confirmed": true
+  },
+  {
+    "key": "nobel-ground-truth-simon",
+    "mode": "bisociation",
+    "source": "nobel-calibration-ground-truth",
+    "domains": [
+      "Simon — psychology (bounded rationality)",
+      "Computer science — heuristic search"
+    ],
+    "verdict": "COLLISION",
+    "points": 17,
+    "badges": [
+      "🧬 Bisociative",
+      "🏆 Nobel Ground Truth (calibration benchmark, not engine-generated)",
+      "🏛️ Established Department",
+      "🛡️ Survived the Gauntlet"
+    ],
+    "breakdown": [
+      "Phase 2 COLLISION (genuine): +5",
+      "Adversarial refutation survived (2-of-3): +12"
+    ],
+    "held_out_reason": null,
+    "tier_rank": 1,
+    "tier_label": "🛡️ Survived Refutation",
+    "pair_type": null,
+    "refutation_lens_version": "2026-08-31-v2",
+    "notes": "The search results confirm that Simon's theory of bounded rationality and his co-development of early AI programs like the 'Logic Theorist' are well-documented. This indicates that the hypothesis accurately reflects established knowledge, suggesting no new insights are being introduced.",
+    "self_reported_distance": null,
+    "self_reported_tension": null,
+    "hypothesis_filename": "nobel-ground-truth-simon.md",
+    "hypothesis_content": "# Historical Ground Truth: Simon — Bounded Rationality × Heuristic Search\n\n**Type**: real, historically-confirmed discovery — hand-authored calibration benchmark, **not generated by `hypothesis_engine.py`**\n**Mode framing**: Bisociation (the discovery is presented in this pipeline's own bisociation shape for comparability, not because it was produced by the generator)\n**Domains**: Simon — psychology (bounded rationality) × Computer science — heuristic search\n**Source**: `bisociation_gold_pairs.json` (held-out batch, 2026-08-31), expanded into a precise technical claim for refutation-lens calibration (2026-08-31)\n**Real-world attribution**: 1978 Nobel Prize in Economic Sciences (Simon)\n\n---\n\n## The Core Claim\n\nReal human and organizational decision-makers do not, and computationally cannot, optimize over the full space of possible alternatives to find a global-maximum choice; they 'satisfice' -- search a limited space using heuristics until an option meeting an acceptable threshold is found, then stop. This same bounded-search structure -- heuristic pruning of an intractably large search space to reach a good-enough solution within real time and memory limits -- is the literal design principle behind heuristic search algorithms in artificial intelligence, a link Simon made explicit while co-founding that field with Newell. Herbert Simon won the 1978 Nobel Prize in Economic Sciences for this theory of decision-making within economic organizations.\n\n---\n\n## Why this is on the leaderboard\n\nThis is not a hypothesis the Eureka Engine generated, and its presence here is not a claim of discovery. It is a real, already-known, Nobel-linked result, hand-written as a precise technical claim and run through this pipeline's own Phase 2 verification and Phase 2.5 adversarial refutation machinery — specifically to test whether that machinery can recognize a true, vindicated claim, not merely reject weak ones. Full methodology, all 13 cases, and the honest record of what changed across two rounds of lens fixes: `refutations/control-test-nobel-calibration.md` and `refutations/v2-full-ledger-recheck-2026-08-31.md`.\n",
+    "verification_filename": "nobel-ground-truth-simon-verification.md",
+    "verification_content": "# Verification: Bisociation — Simon — Bounded Rationality × Heuristic Search\n\n**Verifies**: `hypotheses/nobel-ground-truth-simon.md`\n**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)\n\n## Verdict: **COLLISION**\n\n## Queries\n\n\n## What was found\nHerbert Simon's concept of bounded rationality, introduced in 1955, posits that decision-makers satisfice—searching until they find an acceptable solution—due to cognitive and informational constraints. In the mid-1950s, Simon and Allen Newell co-developed the 'Logic Theorist,' an early AI program designed to mimic human problem-solving by proving mathematical theorems. This work laid the foundation for AI by demonstrating that machines could perform tasks requiring human-like reasoning. Simon's contributions to AI were recognized with the Turing Award in 1975, and he received the Nobel Prize in Economic Sciences in 1978 for his research into decision-making within economic organizations.\n\n## Reasoning\nThe search results confirm that Simon's theory of bounded rationality and his co-development of early AI programs like the 'Logic Theorist' are well-documented. This indicates that the hypothesis accurately reflects established knowledge, suggesting no new insights are being introduced.\n",
+    "refutation_filename": "refutations/nobel-ground-truth-simon-refutation.md",
+    "refutation_content": "# Adversarial Refutation: Bisociation — Simon — Bounded Rationality × Heuristic Search\n\n**Original**: `hypotheses/nobel-ground-truth-simon.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 2 of 3 survive → **SURVIVES** (promoted out of NO_SIGNAL)\n\n- **Coherence — SURVIVES.** The core claim effectively maps the concept of bounded rationality in psychology to heuristic search in computer science without equivocation. Both domains utilize the same underlying principle of limiting the search space to find satisfactory solutions rather than optimal ones, which is a shared formal structure. The terms 'bounded rationality' and 'heuristic search' refer to the same decision-making process under constraints, thus maintaining coherence in the bisociation.\n- **Testability — SURVIVES.** The core claim explicitly references Herbert Simon's concept of bounded rationality and its implications for decision-making, which is a named and checkable theory. Additionally, it connects this theory to the development of heuristic search algorithms in AI, citing Simon's collaboration with Newell and the creation of the 'Logic Theorist.' This provides a clear operationalization of the hypothesis, satisfying the testability criteria.\n- **Triviality — REFUTED.** The core claim states that decision-makers do not optimize over the full space of alternatives but instead satisfice by searching a limited space using heuristics. When stripped of domain-specific vocabulary, this reduces to a general statement about complex systems using limited resources to find satisfactory solutions, which is true of many systems beyond human decision-making and AI. The specific mechanisms of bounded rationality and heuristic search are lost in this generalization, making the claim trivial.\n\n## What survived, and why this matters\n\n2 of 3 independent lenses could not kill this claim. Per the promotion rule (2-of-3 survival), this hypothesis moves out of NO_SIGNAL — real signal the claim isn't vacuous, not proof it's correct. Still worth Phase 3 outreach consideration if a real researcher in the adjacent field can be identified.\n",
+    "refutation_independently_confirmed": true
+  },
+  {
+    "key": "nobel-ground-truth-coase",
+    "mode": "bisociation",
+    "source": "nobel-calibration-ground-truth",
+    "domains": [
+      "Coase — law and economics (transaction costs)",
+      "Property rights — resource allocation"
+    ],
+    "verdict": "ADJACENT_ACTIVE",
+    "points": 15,
+    "badges": [
+      "🧬 Bisociative",
+      "🏆 Nobel Ground Truth (calibration benchmark, not engine-generated)",
+      "🗺️ Frontier Research Group",
+      "💀 Refuted"
+    ],
+    "breakdown": [
+      "Phase 2 ADJACENT_ACTIVE: +30",
+      "Adversarial refutation REFUTED: -15",
+      "  independently confirmed (3 separate agents, full agreement)"
+    ],
+    "held_out_reason": null,
+    "tier_rank": 4,
+    "tier_label": "💀 Refuted / Rejected",
+    "pair_type": null,
+    "refutation_lens_version": "2026-08-31-v2",
+    "notes": "The recent research directly examines the relationship between property rights and transaction costs, confirming the relevance and application of Coase's theorem in contemporary economic analyses.",
+    "self_reported_distance": null,
+    "self_reported_tension": null,
+    "hypothesis_filename": "nobel-ground-truth-coase.md",
+    "hypothesis_content": "# Historical Ground Truth: Coase — Transaction Costs × Property Rights\n\n**Type**: real, historically-confirmed discovery — hand-authored calibration benchmark, **not generated by `hypothesis_engine.py`**\n**Mode framing**: Bisociation (the discovery is presented in this pipeline's own bisociation shape for comparability, not because it was produced by the generator)\n**Domains**: Coase — law and economics (transaction costs) × Property rights — resource allocation\n**Source**: `bisociation_gold_pairs.json` (held-out batch, 2026-08-31), expanded into a precise technical claim for refutation-lens calibration (2026-08-31)\n**Real-world attribution**: 1991 Nobel Prize in Economic Sciences (Coase)\n\n---\n\n## The Core Claim\n\nIn the absence of transaction costs, the initial legal assignment of a property right does not affect the efficiency of the final allocation of resources -- bargaining parties trade to the value-maximizing outcome regardless of who is initially granted the right (the Coase theorem); real-world transaction costs (negotiation, enforcement, information) are precisely what make the initial legal assignment of rights matter in practice, explaining why firms and legal institutions exist at all as ways to economize on those costs. Ronald Coase won the 1991 Nobel Prize in Economic Sciences for this discovery of the significance of transaction costs and property rights for the institutional structure of the economy.\n\n---\n\n## Why this is on the leaderboard\n\nThis is not a hypothesis the Eureka Engine generated, and its presence here is not a claim of discovery. It is a real, already-known, Nobel-linked result, hand-written as a precise technical claim and run through this pipeline's own Phase 2 verification and Phase 2.5 adversarial refutation machinery — specifically to test whether that machinery can recognize a true, vindicated claim, not merely reject weak ones. Full methodology, all 13 cases, and the honest record of what changed across two rounds of lens fixes: `refutations/control-test-nobel-calibration.md` and `refutations/v2-full-ledger-recheck-2026-08-31.md`.\n",
+    "verification_filename": "nobel-ground-truth-coase-verification.md",
+    "verification_content": "# Verification: Bisociation — Coase — Transaction Costs × Property Rights\n\n**Verifies**: `hypotheses/nobel-ground-truth-coase.md`\n**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)\n\n## Verdict: **ADJACENT_ACTIVE**\n\n## Queries\n\n\n## What was found\nRecent studies have explored the interplay between property rights and transaction costs, building upon Coase's foundational work. For instance, Guerriero (2023) examines how transaction costs influence the design of property rights, highlighting that higher transaction costs can lead to weaker property rights to balance trade-offs between exclusion and expropriation. ([link.springer.com](https://link.springer.com/article/10.1007/s10101-023-00290-9?utm_source=openai)) Similarly, Friesen et al. (2023) investigate how initially contestable property rights affect the efficiency of Coasean bargaining, finding that costly rent-seeking efforts to obtain property rights can significantly reduce the likelihood of achieving efficient outcomes. ([sciencedirect.com](https://www.sciencedirect.com/science/article/pii/S0095069623000608?utm_source=openai)) These studies align with Coase's assertion that transaction costs are crucial in determining the efficiency of resource allocation and the role of property rights in facilitating or hindering trade.\n\n## Reasoning\nThe recent research directly examines the relationship between property rights and transaction costs, confirming the relevance and application of Coase's theorem in contemporary economic analyses.\n",
+    "refutation_filename": "refutations/nobel-ground-truth-coase-refutation.md",
+    "refutation_content": "# Adversarial Refutation: Bisociation — Coase — Transaction Costs × Property Rights\n\n**Original**: `hypotheses/nobel-ground-truth-coase.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 1 of 3 survive → **REFUTED**\n\n- **Coherence — REFUTED.** The hypothesis relies on the term 'transaction costs,' which has different referents in the domains of law and economics versus resource allocation. In law and economics, transaction costs refer to the costs associated with negotiating and enforcing agreements, while in resource allocation, they may imply broader economic inefficiencies. This equivocation undermines the coherence of the claim, as it conflates distinct meanings of the term without establishing a genuine structural mapping.\n- **Testability — SURVIVES.** The hypothesis explicitly names the Coase theorem, which is a specific, checkable result in law and economics regarding transaction costs and property rights. This theorem serves as the operationalized metric, comparison condition, and rejection threshold, satisfying the testability lens. The claim is therefore not vague and can be empirically tested against the established framework of the Coase theorem.\n- **Triviality — REFUTED.** The core claim reduces to a statement about the relationship between initial assignments and efficiency in resource allocation, which is a common characteristic of many complex systems. Specifically, the phrase being tested for genericness is: 'In the absence of transaction costs, the initial legal assignment of a property right does not affect the efficiency of the final allocation of resources.' This is a general principle that can apply to various systems beyond the specific domains of law and economics, indicating that the claim lacks the necessary specificity to be considered novel.\n\n## No steelman offered\n\nAll three lenses independently converged on REFUTED for this case. If revisited, it would need a genuinely tighter formulation, not a restatement of the same claim.\n",
+    "refutation_independently_confirmed": true
+  },
+  {
+    "key": "nobel-ground-truth-hayek",
+    "mode": "bisociation",
+    "source": "nobel-calibration-ground-truth",
+    "domains": [
+      "Hayek — economics (dispersed knowledge)",
+      "Markets — price signal aggregation"
+    ],
+    "verdict": "ADJACENT_ACTIVE",
+    "points": 42,
+    "badges": [
+      "🧬 Bisociative",
+      "🏆 Nobel Ground Truth (calibration benchmark, not engine-generated)",
+      "🗺️ Frontier Research Group",
+      "🛡️ Survived the Gauntlet"
+    ],
+    "breakdown": [
+      "Phase 2 ADJACENT_ACTIVE: +30",
+      "Adversarial refutation survived (2-of-3): +12"
+    ],
+    "held_out_reason": null,
+    "tier_rank": 1,
+    "tier_label": "🛡️ Survived Refutation",
+    "pair_type": null,
+    "refutation_lens_version": "2026-08-31-v2",
+    "notes": "These studies directly engage with Hayek's ideas on dispersed knowledge and market price signals, indicating active research in this area. The presence of multiple recent publications suggests that the hypothesis is well-explored and not novel.",
+    "self_reported_distance": null,
+    "self_reported_tension": null,
+    "hypothesis_filename": "nobel-ground-truth-hayek.md",
+    "hypothesis_content": "# Historical Ground Truth: Hayek — Dispersed Knowledge × Market Price Signals\n\n**Type**: real, historically-confirmed discovery — hand-authored calibration benchmark, **not generated by `hypothesis_engine.py`**\n**Mode framing**: Bisociation (the discovery is presented in this pipeline's own bisociation shape for comparability, not because it was produced by the generator)\n**Domains**: Hayek — economics (dispersed knowledge) × Markets — price signal aggregation\n**Source**: `bisociation_gold_pairs.json` (held-out batch, 2026-08-31), expanded into a precise technical claim for refutation-lens calibration (2026-08-31)\n**Real-world attribution**: 1974 Nobel Prize in Economic Sciences (Hayek)\n\n---\n\n## The Core Claim\n\nThe economically relevant knowledge needed to allocate resources efficiently is not held by any single planner but is dispersed as fragmentary, time-and-place-specific information across millions of individual economic actors; a market price system functions as a decentralized information-aggregation and transmission mechanism, compressing this dispersed knowledge into a single signal -- the price -- without requiring any actor to know more than their own local circumstances plus the price. Friedrich Hayek won the 1974 Nobel Prize in Economic Sciences for pioneering work on the interdependence of economic, social, and institutional phenomena, this dispersed-knowledge account of markets central among it.\n\n---\n\n## Why this is on the leaderboard\n\nThis is not a hypothesis the Eureka Engine generated, and its presence here is not a claim of discovery. It is a real, already-known, Nobel-linked result, hand-written as a precise technical claim and run through this pipeline's own Phase 2 verification and Phase 2.5 adversarial refutation machinery — specifically to test whether that machinery can recognize a true, vindicated claim, not merely reject weak ones. Full methodology, all 13 cases, and the honest record of what changed across two rounds of lens fixes: `refutations/control-test-nobel-calibration.md` and `refutations/v2-full-ledger-recheck-2026-08-31.md`.\n",
+    "verification_filename": "nobel-ground-truth-hayek-verification.md",
+    "verification_content": "# Verification: Bisociation — Hayek — Dispersed Knowledge × Market Price Signals\n\n**Verifies**: `hypotheses/nobel-ground-truth-hayek.md`\n**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)\n\n## Verdict: **ADJACENT_ACTIVE**\n\n## Queries\n\n\n## What was found\nRecent studies have explored Hayek's concept of dispersed knowledge and its relation to market price signals. For instance, a 2022 study titled 'Testing the Hayek hypothesis: Recent theoretical and experimental evidence' examines Hayek's ideas through theoretical and experimental lenses. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/35834566/?utm_source=openai)) Another 2023 paper, 'Optimal information disclosure and market outcomes,' discusses how improved information affects market prices and welfare, aligning with Hayek's views on decentralized information processing. ([onlinelibrary.wiley.com](https://onlinelibrary.wiley.com/doi/full/10.3982/TE5104?utm_source=openai)) Additionally, a 2023 article titled 'Dispersed Information and Asset Prices' analyzes how noisy aggregation of dispersed information can explain various return anomalies, resonating with Hayek's perspective on market price signals. ([economics.yale.edu](https://economics.yale.edu/research/dispersed-information-and-asset-prices?utm_source=openai))\n\n## Reasoning\nThese studies directly engage with Hayek's ideas on dispersed knowledge and market price signals, indicating active research in this area. The presence of multiple recent publications suggests that the hypothesis is well-explored and not novel.\n",
+    "refutation_filename": "refutations/nobel-ground-truth-hayek-refutation.md",
+    "refutation_content": "# Adversarial Refutation: Bisociation — Hayek — Dispersed Knowledge × Market Price Signals\n\n**Original**: `hypotheses/nobel-ground-truth-hayek.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 2 of 3 survive → **SURVIVES** (promoted out of NO_SIGNAL)\n\n- **Coherence — SURVIVES.** The claim rests on the shared term 'dispersed knowledge,' which refers to the same formal concept in both economics and market theory. In Hayek's context, it denotes the fragmented information held by individuals, while in market theory, it describes how this information is aggregated through price signals. Both domains utilize the same underlying principle of decentralized information processing, thus avoiding equivocation.\n- **Testability — SURVIVES.** The claim references Friedrich Hayek's 1945 essay, 'The Use of Knowledge in Society,' which provides a specific, checkable piece of evidence supporting the hypothesis about dispersed knowledge and market price signals. This essay articulates the mechanism by which the price system aggregates dispersed knowledge, fulfilling the requirement for a named theorem or historical evidence that operationalizes the claim.\n- **Triviality — REFUTED.** The core claim states that the knowledge necessary for efficient resource allocation is dispersed among individuals and that the market price system aggregates this knowledge into a single signal. When stripped of domain-specific vocabulary, the claim reduces to a general assertion about complex systems where information is distributed and aggregated through a signaling mechanism. This is a common characteristic of many complex systems, making the claim trivial and not unique to Hayek's economic theory.\n\n## What survived, and why this matters\n\n2 of 3 independent lenses could not kill this claim. Per the promotion rule (2-of-3 survival), this hypothesis moves out of NO_SIGNAL — real signal the claim isn't vacuous, not proof it's correct. Still worth Phase 3 outreach consideration if a real researcher in the adjacent field can be identified.\n",
+    "refutation_independently_confirmed": true
+  },
+  {
+    "key": "nobel-ground-truth-becker",
+    "mode": "bisociation",
+    "source": "nobel-calibration-ground-truth",
+    "domains": [
+      "Becker — economics (rational choice)",
+      "Household behavior — family decision-making"
+    ],
+    "verdict": "COLLISION",
+    "points": -10,
+    "badges": [
+      "🧬 Bisociative",
+      "🏆 Nobel Ground Truth (calibration benchmark, not engine-generated)",
+      "🏛️ Established Department",
+      "💀 Refuted"
+    ],
+    "breakdown": [
+      "Phase 2 COLLISION (genuine): +5",
+      "Adversarial refutation REFUTED: -15",
+      "  independently confirmed (3 separate agents, full agreement)"
+    ],
+    "held_out_reason": null,
+    "tier_rank": 4,
+    "tier_label": "💀 Refuted / Rejected",
+    "pair_type": null,
+    "refutation_lens_version": "2026-08-31-v2",
+    "notes": "Becker's extensive research and recognition by the Nobel Prize committee confirm that the hypothesis accurately reflects his contributions to economics.",
+    "self_reported_distance": null,
+    "self_reported_tension": null,
+    "hypothesis_filename": "nobel-ground-truth-becker.md",
+    "hypothesis_content": "# Historical Ground Truth: Becker — Rational Choice × Household Behavior\n\n**Type**: real, historically-confirmed discovery — hand-authored calibration benchmark, **not generated by `hypothesis_engine.py`**\n**Mode framing**: Bisociation (the discovery is presented in this pipeline's own bisociation shape for comparability, not because it was produced by the generator)\n**Domains**: Becker — economics (rational choice) × Household behavior — family decision-making\n**Source**: `bisociation_gold_pairs.json` (held-out batch, 2026-08-31), expanded into a precise technical claim for refutation-lens calibration (2026-08-31)\n**Real-world attribution**: 1992 Nobel Prize in Economic Sciences (Becker)\n\n---\n\n## The Core Claim\n\nHousehold and family decisions traditionally treated as outside economic analysis -- marriage, fertility, division of labor within the household, time allocation to childrearing versus market work -- can be modeled using the same rational-choice, cost-benefit framework economists use for market behavior: individuals and households allocate scarce time and resources across competing uses to maximize a utility function, subject to real constraints (wages, prices, the value of time). Gary Becker won the 1992 Nobel Prize in Economic Sciences for extending the domain of microeconomic analysis to a wide range of human behavior and interaction, including nonmarket behavior.\n\n---\n\n## Why this is on the leaderboard\n\nThis is not a hypothesis the Eureka Engine generated, and its presence here is not a claim of discovery. It is a real, already-known, Nobel-linked result, hand-written as a precise technical claim and run through this pipeline's own Phase 2 verification and Phase 2.5 adversarial refutation machinery — specifically to test whether that machinery can recognize a true, vindicated claim, not merely reject weak ones. Full methodology, all 13 cases, and the honest record of what changed across two rounds of lens fixes: `refutations/control-test-nobel-calibration.md` and `refutations/v2-full-ledger-recheck-2026-08-31.md`.\n",
+    "verification_filename": "nobel-ground-truth-becker-verification.md",
+    "verification_content": "# Verification: Bisociation — Becker — Rational Choice × Household Behavior\n\n**Verifies**: `hypotheses/nobel-ground-truth-becker.md`\n**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)\n\n## Verdict: **COLLISION**\n\n## Queries\n\n\n## What was found\nGary S. Becker's work on rational choice theory and household behavior is well-documented. He was awarded the 1992 Nobel Prize in Economic Sciences for extending microeconomic analysis to a wide range of human behavior, including nonmarket behavior. His research applied economic theories to areas traditionally studied by sociology and demography, such as family decision-making, marriage, fertility, and the division of labor within households. Becker's approach modeled these behaviors using the same rational-choice framework economists use for market behavior, positing that individuals and households allocate scarce time and resources to maximize utility, subject to constraints like wages and prices.\n\n## Reasoning\nBecker's extensive research and recognition by the Nobel Prize committee confirm that the hypothesis accurately reflects his contributions to economics.\n",
+    "refutation_filename": "refutations/nobel-ground-truth-becker-refutation.md",
+    "refutation_content": "# Adversarial Refutation: Bisociation — Becker — Rational Choice × Household Behavior\n\n**Original**: `hypotheses/nobel-ground-truth-becker.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 1 of 3 survive → **REFUTED**\n\n- **Coherence — SURVIVES.** The core claim rests on the shared term 'rational choice,' which denotes the same formal object in both economics and household behavior: the framework of individuals maximizing utility under constraints. While the contexts differ—market behavior versus family decision-making—the underlying structure of decision-making remains consistent. Thus, there is no equivocation, as both domains utilize the same rational-choice model to analyze behavior.\n- **Testability — REFUTED.** The core claim does not operationalize a specific, testable prediction that can be empirically verified or falsified. While it references Becker's Nobel Prize and his contributions to economic analysis, it lacks a named metric, comparison condition, or rejection threshold that would allow for a clear experimental test. The claim remains vague in terms of how one would definitively test the application of rational choice theory to household behavior.\n- **Triviality — REFUTED.** The core claim reduces to a general statement about how complex systems allocate scarce resources to maximize utility under constraints. This is a common characteristic of many complex systems, not unique to Becker's application of rational choice to household behavior. The specific mechanisms and context of Becker's claim are lost when stripped of domain-specific vocabulary, making it a trivial assertion applicable to numerous systems.\n\n## No steelman offered\n\nAll three lenses independently converged on REFUTED for this case. If revisited, it would need a genuinely tighter formulation, not a restatement of the same claim.\n",
+    "refutation_independently_confirmed": true
+  },
+  {
+    "key": "nobel-ground-truth-feynman",
+    "mode": "bisociation",
+    "source": "nobel-calibration-ground-truth",
+    "domains": [
+      "Feynman — quantum mechanics",
+      "Computation — simulation"
+    ],
+    "verdict": "COLLISION",
+    "points": -10,
+    "badges": [
+      "🧬 Bisociative",
+      "🏆 Nobel Ground Truth (calibration benchmark, not engine-generated)",
+      "🏛️ Established Department",
+      "💀 Refuted"
+    ],
+    "breakdown": [
+      "Phase 2 COLLISION (genuine): +5",
+      "Adversarial refutation REFUTED: -15",
+      "  independently confirmed (3 separate agents, full agreement)"
+    ],
+    "held_out_reason": null,
+    "tier_rank": 4,
+    "tier_label": "💀 Refuted / Rejected",
+    "pair_type": null,
+    "refutation_lens_version": "2026-08-31-v2",
+    "notes": "The search results confirm that Feynman's 1981 proposal accurately describes the exponential scaling issue in classical simulations of quantum systems and introduces the concept of quantum computers to address this challenge. This foundational idea is well-documented and widely credited as the origin of the field of quantum computing.",
+    "self_reported_distance": null,
+    "self_reported_tension": null,
+    "hypothesis_filename": "nobel-ground-truth-feynman.md",
+    "hypothesis_content": "# Historical Ground Truth: Feynman — Quantum Mechanics × Computation\n\n**Type**: real, historically-confirmed discovery — hand-authored calibration benchmark, **not generated by `hypothesis_engine.py`**\n**Mode framing**: Bisociation (the discovery is presented in this pipeline's own bisociation shape for comparability, not because it was produced by the generator)\n**Domains**: Feynman — quantum mechanics × Computation — simulation\n**Source**: `bisociation_gold_pairs.json` (held-out batch, 2026-08-31), expanded into a precise technical claim for refutation-lens calibration (2026-08-31)\n**Real-world attribution**: 1965 Nobel Prize in Physics (Feynman, for QED -- NOT for the quantum-computation claim below; disclosed looser linkage, see core claim)\n\n---\n\n## The Core Claim\n\nClassical computers require computational resources that scale exponentially with the number of particles being simulated when modeling quantum-mechanical systems, because a quantum system's state space grows exponentially with its degrees of freedom; Feynman proposed (1981) that a computer built from quantum-mechanical components, obeying the same quantum rules as the system being simulated, could in principle simulate quantum systems with resources scaling only polynomially -- the founding proposal of quantum computing. NOTE, disclosed: Feynman's 1965 Nobel Prize in Physics was for quantum electrodynamics, not for this quantum-computation proposal specifically -- the computational insight is real, well-documented, and historically foundational (widely credited as the origin of the field), but is not itself the cited Nobel-winning work -- a real gap in the 'won a Nobel for this' pattern the other cases here share cleanly.\n\n---\n\n## Why this is on the leaderboard\n\nThis is not a hypothesis the Eureka Engine generated, and its presence here is not a claim of discovery. It is a real, already-known, Nobel-linked result, hand-written as a precise technical claim and run through this pipeline's own Phase 2 verification and Phase 2.5 adversarial refutation machinery — specifically to test whether that machinery can recognize a true, vindicated claim, not merely reject weak ones. Full methodology, all 13 cases, and the honest record of what changed across two rounds of lens fixes: `refutations/control-test-nobel-calibration.md` and `refutations/v2-full-ledger-recheck-2026-08-31.md`.\n",
+    "verification_filename": "nobel-ground-truth-feynman-verification.md",
+    "verification_content": "# Verification: Bisociation — Feynman — Quantum Mechanics × Computation\n\n**Verifies**: `hypotheses/nobel-ground-truth-feynman.md`\n**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)\n\n## Verdict: **COLLISION**\n\n## Queries\n\n\n## What was found\nRichard Feynman proposed in 1981 that classical computers struggle to simulate quantum systems efficiently due to the exponential growth of the state space with the number of particles. He suggested that quantum computers, operating under quantum mechanical principles, could simulate these systems with polynomial resource scaling. ([eulerfold.com](https://www.eulerfold.com/research-decoded/simulating-physics-feynman?utm_source=openai))\n\n## Reasoning\nThe search results confirm that Feynman's 1981 proposal accurately describes the exponential scaling issue in classical simulations of quantum systems and introduces the concept of quantum computers to address this challenge. This foundational idea is well-documented and widely credited as the origin of the field of quantum computing.\n",
+    "refutation_filename": "refutations/nobel-ground-truth-feynman-refutation.md",
+    "refutation_content": "# Adversarial Refutation: Bisociation — Feynman — Quantum Mechanics × Computation\n\n**Original**: `hypotheses/nobel-ground-truth-feynman.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 1 of 3 survive → **REFUTED**\n\n- **Coherence — REFUTED.** The core claim relies on the term 'quantum systems' which is used in both domains but denotes different referents. In quantum mechanics, it refers to physical systems governed by quantum laws, while in computation, it refers to the abstract representation of these systems in a computational framework. This equivocation undermines the coherence of the argument, as it conflates the physical properties of quantum systems with their computational representations, leading to a misunderstanding of the scaling implications.\n- **Testability — SURVIVES.** The core claim names a specific historical proposal by Richard Feynman from 1981 regarding the limitations of classical computers in simulating quantum systems and the potential of quantum computers to overcome these limitations. This proposal is well-documented and serves as a checkable piece of evidence that operationalizes the hypothesis, satisfying the testability lens.\n- **Triviality — REFUTED.** The claim reduces to a statement about the computational efficiency of systems based on their underlying mechanics, which is a common characteristic of many complex systems. Specifically, the phrase being tested is: 'Classical computers require computational resources that scale exponentially with the number of particles being simulated when modeling quantum-mechanical systems.' This is a general observation that can apply to various systems beyond quantum mechanics, thus failing to maintain the specificity required to avoid triviality.\n\n## No steelman offered\n\nAll three lenses independently converged on REFUTED for this case. If revisited, it would need a genuinely tighter formulation, not a restatement of the same claim.\n",
+    "refutation_independently_confirmed": true
+  },
+  {
+    "key": "nobel-ground-truth-einstein_maxwell",
+    "mode": "bisociation",
+    "source": "nobel-calibration-ground-truth",
+    "domains": [
+      "Einstein — special relativity",
+      "Maxwell — electromagnetism"
+    ],
+    "verdict": "ADJACENT_ACTIVE",
+    "points": 42,
+    "badges": [
+      "🧬 Bisociative",
+      "🏆 Nobel Ground Truth (calibration benchmark, not engine-generated)",
+      "🗺️ Frontier Research Group",
+      "🛡️ Survived the Gauntlet"
+    ],
+    "breakdown": [
+      "Phase 2 ADJACENT_ACTIVE: +30",
+      "Adversarial refutation survived (2-of-3): +12"
+    ],
+    "held_out_reason": null,
+    "tier_rank": 1,
+    "tier_label": "🛡️ Survived Refutation",
+    "pair_type": null,
+    "refutation_lens_version": "2026-08-31-v2",
+    "notes": "The search results confirm that Einstein's special relativity was developed to address the inconsistencies between Maxwell's equations and Galilean relativity, leading to the unification of electric and magnetic fields into a single electromagnetic field. The covariant form of Maxwell's equations using tensor calculus is also well-established. However, the exact derivation of special relativity from Maxwell's equations is not explicitly found in the provided sources.",
+    "self_reported_distance": null,
+    "self_reported_tension": null,
+    "hypothesis_filename": null,
+    "hypothesis_content": null,
+    "verification_filename": null,
+    "verification_content": null,
+    "refutation_filename": "refutations/nobel-ground-truth-einstein_maxwell-refutation.md",
+    "refutation_content": "# Adversarial Refutation: Bisociation — Einstein — Special Relativity × Maxwell — Electromagnetism\n\n**Original**: `hypotheses/nobel-ground-truth-einstein_maxwell.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 2 of 3 survive → **SURVIVES** (promoted out of NO_SIGNAL)\n\n- **Coherence — SURVIVES.** The core claim effectively maps the structural relationship between Maxwell's equations and Einstein's special relativity without equivocation. Both domains utilize the concept of 'frame-dependence' in a coherent manner: in electromagnetism, it refers to the invariance of the speed of light across reference frames, while in relativity, it pertains to the transformations of space and time measurements. The shared term 'frame-dependence' denotes the same formal relationship in both contexts, thus supporting the bisociation without conflating different meanings.\n- **Testability — SURVIVES.** The core claim references Einstein's 1905 paper 'On the Electrodynamics of Moving Bodies,' which is a specific, checkable historical document that operationalizes the hypothesis. This paper provides a clear derivation of special relativity from Maxwell's equations, establishing a direct link between the two domains. The claim is thus not vague and meets the criteria for testability.\n- **Triviality — REFUTED.** The claim reduces to a statement about the relationship between two theoretical frameworks, specifically that one framework (Maxwell's equations) necessitates modifications to another (Galilean relativity) to maintain consistency across reference frames. This is a common characteristic of many complex systems where adjustments in one system's parameters lead to the need for corresponding changes in another system's framework. The phrase being tested for genericness is: 'Maxwell's equations predict a fixed speed for electromagnetic waves in vacuum, independent of any reference frame.' This is a general statement that could apply to various pairs of complex systems, thus failing the triviality lens.\n\n## What survived, and why this matters\n\n2 of 3 independent lenses could not kill this claim. Per the promotion rule (2-of-3 survival), this hypothesis moves out of NO_SIGNAL — real signal the claim isn't vacuous, not proof it's correct. Still worth Phase 3 outreach consideration if a real researcher in the adjacent field can be identified.\n",
+    "refutation_independently_confirmed": true
   }
 ]
