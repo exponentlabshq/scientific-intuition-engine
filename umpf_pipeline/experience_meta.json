@@ -2,9 +2,9 @@
   "mode_performance": [
     {
       "mode": "bisociation",
-      "n": 216,
-      "avg_points": 18.0,
-      "no_signal_rate": 0.15
+      "n": 223,
+      "avg_points": 17.7,
+      "no_signal_rate": 0.14
     },
     {
       "mode": "homospatial",
@@ -29,35 +29,35 @@
     "pair_type": [
       {
         "key": "narrative-shaped",
-        "n": 88,
-        "good": 78,
-        "rate_pct": 88.6
+        "n": 91,
+        "good": 81,
+        "rate_pct": 89.0
       },
       {
         "key": "formalism-shaped",
-        "n": 8,
-        "good": 6,
-        "rate_pct": 75.0
+        "n": 11,
+        "good": 9,
+        "rate_pct": 81.8
       },
       {
         "key": "mixed-uncertain",
-        "n": 192,
-        "good": 136,
-        "rate_pct": 70.8
+        "n": 193,
+        "good": 137,
+        "rate_pct": 71.0
       }
     ],
     "recommendation": [
       {
         "key": "would_promote",
-        "n": 8,
-        "good": 7,
-        "rate_pct": 87.5
+        "n": 9,
+        "good": 8,
+        "rate_pct": 88.9
       },
       {
         "key": "would_deprioritize",
-        "n": 272,
-        "good": 207,
-        "rate_pct": 76.1
+        "n": 275,
+        "good": 210,
+        "rate_pct": 76.4
       }
     ]
   }

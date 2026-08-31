@@ -10592,3 +10592,106 @@
 {"timestamp": "2026-08-31T17:24:56.759623+00:00", "phase": "verification", "model": "gpt-4o-mini", "prompt_tokens": 8174, "completion_tokens": 190, "total_tokens": 8364, "hypothesis_slug": "nobel-ground-truth-becker"}
 {"timestamp": "2026-08-31T17:25:00.153864+00:00", "phase": "verification", "model": "gpt-4o-mini", "prompt_tokens": 8174, "completion_tokens": 180, "total_tokens": 8354, "hypothesis_slug": "nobel-ground-truth-feynman"}
 {"timestamp": "2026-08-31T17:25:03.511754+00:00", "phase": "verification", "model": "gpt-4o-mini", "prompt_tokens": 8174, "completion_tokens": 260, "total_tokens": 8434, "hypothesis_slug": "nobel-ground-truth-einstein_maxwell"}
+{"timestamp": "2026-08-31T17:32:54.938401+00:00", "phase": "generation", "model": "gpt-4o-mini", "prompt_tokens": 1706, "completion_tokens": 680, "total_tokens": 2386, "mode": "bisociation", "retry": false}
+{"timestamp": "2026-08-31T17:32:56.179311+00:00", "phase": "generation", "model": "gpt-4o-mini", "prompt_tokens": 1172, "completion_tokens": 41, "total_tokens": 1213, "mode": "bisociation", "retry": "queries"}
+{"timestamp": "2026-08-31T17:32:58.251828+00:00", "phase": "pair_type_classification", "model": "gpt-4o-mini", "prompt_tokens": 241, "completion_tokens": 56, "total_tokens": 297}
+{"timestamp": "2026-08-31T17:32:59.921785+00:00", "phase": "dialectic_a", "model": "gpt-4o-mini", "prompt_tokens": 506, "completion_tokens": 117, "total_tokens": 623}
+{"timestamp": "2026-08-31T17:33:01.001014+00:00", "phase": "dialectic_b", "model": "gpt-4o-mini", "prompt_tokens": 467, "completion_tokens": 72, "total_tokens": 539}
+{"timestamp": "2026-08-31T17:33:02.719118+00:00", "phase": "dialectic_a", "model": "gpt-4o-mini", "prompt_tokens": 796, "completion_tokens": 148, "total_tokens": 944}
+{"timestamp": "2026-08-31T17:33:03.958602+00:00", "phase": "dialectic_b", "model": "gpt-4o-mini", "prompt_tokens": 807, "completion_tokens": 82, "total_tokens": 889}
+{"timestamp": "2026-08-31T17:33:06.279570+00:00", "phase": "dialectic_a", "model": "gpt-4o-mini", "prompt_tokens": 1145, "completion_tokens": 150, "total_tokens": 1295}
+{"timestamp": "2026-08-31T17:33:07.763757+00:00", "phase": "dialectic_b", "model": "gpt-4o-mini", "prompt_tokens": 1157, "completion_tokens": 87, "total_tokens": 1244}
+{"timestamp": "2026-08-31T17:33:09.675589+00:00", "phase": "dialectic_a", "model": "gpt-4o-mini", "prompt_tokens": 1501, "completion_tokens": 156, "total_tokens": 1657}
+{"timestamp": "2026-08-31T17:33:10.822932+00:00", "phase": "dialectic_b", "model": "gpt-4o-mini", "prompt_tokens": 1523, "completion_tokens": 95, "total_tokens": 1618}
+{"timestamp": "2026-08-31T17:33:12.692024+00:00", "phase": "dialectic_a", "model": "gpt-4o-mini", "prompt_tokens": 1874, "completion_tokens": 184, "total_tokens": 2058}
+{"timestamp": "2026-08-31T17:33:13.929390+00:00", "phase": "dialectic_b", "model": "gpt-4o-mini", "prompt_tokens": 1944, "completion_tokens": 90, "total_tokens": 2034}
+{"timestamp": "2026-08-31T17:33:15.715876+00:00", "phase": "dialectic_a", "model": "gpt-4o-mini", "prompt_tokens": 2291, "completion_tokens": 163, "total_tokens": 2454}
+{"timestamp": "2026-08-31T17:33:17.181063+00:00", "phase": "dialectic_b", "model": "gpt-4o-mini", "prompt_tokens": 2326, "completion_tokens": 96, "total_tokens": 2422}
+{"timestamp": "2026-08-31T17:33:18.880942+00:00", "phase": "dialectic_a", "model": "gpt-4o-mini", "prompt_tokens": 2679, "completion_tokens": 154, "total_tokens": 2833}
+{"timestamp": "2026-08-31T17:33:20.299511+00:00", "phase": "dialectic_b", "model": "gpt-4o-mini", "prompt_tokens": 2694, "completion_tokens": 90, "total_tokens": 2784}
+{"timestamp": "2026-08-31T17:33:21.992455+00:00", "phase": "dialectic_a", "model": "gpt-4o-mini", "prompt_tokens": 3041, "completion_tokens": 153, "total_tokens": 3194}
+{"timestamp": "2026-08-31T17:33:23.217912+00:00", "phase": "dialectic_b", "model": "gpt-4o-mini", "prompt_tokens": 3056, "completion_tokens": 98, "total_tokens": 3154}
+{"timestamp": "2026-08-31T17:33:24.978374+00:00", "phase": "dialectic_a", "model": "gpt-4o-mini", "prompt_tokens": 3411, "completion_tokens": 168, "total_tokens": 3579}
+{"timestamp": "2026-08-31T17:33:26.154868+00:00", "phase": "dialectic_b", "model": "gpt-4o-mini", "prompt_tokens": 3453, "completion_tokens": 94, "total_tokens": 3547}
+{"timestamp": "2026-08-31T17:33:28.170618+00:00", "phase": "dialectic_a", "model": "gpt-4o-mini", "prompt_tokens": 3804, "completion_tokens": 154, "total_tokens": 3958}
+{"timestamp": "2026-08-31T17:33:29.409139+00:00", "phase": "dialectic_b", "model": "gpt-4o-mini", "prompt_tokens": 3822, "completion_tokens": 83, "total_tokens": 3905}
+{"timestamp": "2026-08-31T17:33:31.879846+00:00", "phase": "chain_verification", "model": "gpt-4o-mini", "prompt_tokens": 340, "completion_tokens": 91, "total_tokens": 431}
+{"timestamp": "2026-08-31T17:33:33.482821+00:00", "phase": "chain_verification", "model": "gpt-4o-mini", "prompt_tokens": 369, "completion_tokens": 103, "total_tokens": 472}
+{"timestamp": "2026-08-31T17:33:35.020333+00:00", "phase": "chain_verification", "model": "gpt-4o-mini", "prompt_tokens": 375, "completion_tokens": 96, "total_tokens": 471}
+{"timestamp": "2026-08-31T17:33:36.403947+00:00", "phase": "chain_verification", "model": "gpt-4o-mini", "prompt_tokens": 386, "completion_tokens": 90, "total_tokens": 476}
+{"timestamp": "2026-08-31T17:33:38.352155+00:00", "phase": "chain_verification", "model": "gpt-4o-mini", "prompt_tokens": 403, "completion_tokens": 141, "total_tokens": 544}
+{"timestamp": "2026-08-31T17:33:39.693232+00:00", "phase": "chain_verification", "model": "gpt-4o-mini", "prompt_tokens": 394, "completion_tokens": 87, "total_tokens": 481}
+{"timestamp": "2026-08-31T17:33:41.185531+00:00", "phase": "chain_verification", "model": "gpt-4o-mini", "prompt_tokens": 378, "completion_tokens": 102, "total_tokens": 480}
+{"timestamp": "2026-08-31T17:33:42.983250+00:00", "phase": "chain_verification", "model": "gpt-4o-mini", "prompt_tokens": 386, "completion_tokens": 120, "total_tokens": 506}
+{"timestamp": "2026-08-31T17:33:44.421549+00:00", "phase": "chain_verification", "model": "gpt-4o-mini", "prompt_tokens": 392, "completion_tokens": 74, "total_tokens": 466}
+{"timestamp": "2026-08-31T17:33:46.833930+00:00", "phase": "chain_verification", "model": "gpt-4o-mini", "prompt_tokens": 374, "completion_tokens": 141, "total_tokens": 515}
+{"timestamp": "2026-08-31T17:33:48.344683+00:00", "phase": "chain_specificity", "model": "gpt-4o-mini", "prompt_tokens": 246, "completion_tokens": 89, "total_tokens": 335}
+{"timestamp": "2026-08-31T17:33:52.284823+00:00", "phase": "verification", "model": "gpt-4o-mini", "prompt_tokens": 8174, "completion_tokens": 206, "total_tokens": 8380, "hypothesis_slug": "2026-08-31-marconi-x-telegraphy"}
+{"timestamp": "2026-08-31T17:33:54.428794+00:00", "phase": "refutation", "model": "gpt-4o-mini", "prompt_tokens": 2705, "completion_tokens": 99, "total_tokens": 2804, "hypothesis_slug": "2026-08-31-marconi-x-telegraphy", "lens": "coherence"}
+{"timestamp": "2026-08-31T17:33:56.225025+00:00", "phase": "refutation", "model": "gpt-4o-mini", "prompt_tokens": 2649, "completion_tokens": 83, "total_tokens": 2732, "hypothesis_slug": "2026-08-31-marconi-x-telegraphy", "lens": "testability"}
+{"timestamp": "2026-08-31T17:33:57.662955+00:00", "phase": "refutation", "model": "gpt-4o-mini", "prompt_tokens": 2626, "completion_tokens": 100, "total_tokens": 2726, "hypothesis_slug": "2026-08-31-marconi-x-telegraphy", "lens": "triviality"}
+{"timestamp": "2026-08-31T17:34:06.629921+00:00", "phase": "generation", "model": "gpt-4o-mini", "prompt_tokens": 1706, "completion_tokens": 625, "total_tokens": 2331, "mode": "bisociation", "retry": false}
+{"timestamp": "2026-08-31T17:34:07.621971+00:00", "phase": "generation", "model": "gpt-4o-mini", "prompt_tokens": 1173, "completion_tokens": 46, "total_tokens": 1219, "mode": "bisociation", "retry": "queries"}
+{"timestamp": "2026-08-31T17:34:10.201969+00:00", "phase": "pair_type_classification", "model": "gpt-4o-mini", "prompt_tokens": 241, "completion_tokens": 69, "total_tokens": 310}
+{"timestamp": "2026-08-31T17:34:12.133083+00:00", "phase": "dialectic_a", "model": "gpt-4o-mini", "prompt_tokens": 506, "completion_tokens": 138, "total_tokens": 644}
+{"timestamp": "2026-08-31T17:34:16.185081+00:00", "phase": "dialectic_b", "model": "gpt-4o-mini", "prompt_tokens": 496, "completion_tokens": 87, "total_tokens": 583}
+{"timestamp": "2026-08-31T17:34:17.921739+00:00", "phase": "dialectic_a", "model": "gpt-4o-mini", "prompt_tokens": 840, "completion_tokens": 149, "total_tokens": 989}
+{"timestamp": "2026-08-31T17:34:19.402054+00:00", "phase": "dialectic_b", "model": "gpt-4o-mini", "prompt_tokens": 855, "completion_tokens": 104, "total_tokens": 959}
+{"timestamp": "2026-08-31T17:34:21.182102+00:00", "phase": "dialectic_a", "model": "gpt-4o-mini", "prompt_tokens": 1217, "completion_tokens": 148, "total_tokens": 1365}
+{"timestamp": "2026-08-31T17:34:22.713212+00:00", "phase": "dialectic_b", "model": "gpt-4o-mini", "prompt_tokens": 1226, "completion_tokens": 103, "total_tokens": 1329}
+{"timestamp": "2026-08-31T17:34:24.341271+00:00", "phase": "dialectic_a", "model": "gpt-4o-mini", "prompt_tokens": 1587, "completion_tokens": 151, "total_tokens": 1738}
+{"timestamp": "2026-08-31T17:34:26.045747+00:00", "phase": "dialectic_b", "model": "gpt-4o-mini", "prompt_tokens": 1607, "completion_tokens": 121, "total_tokens": 1728}
+{"timestamp": "2026-08-31T17:34:27.846706+00:00", "phase": "dialectic_a", "model": "gpt-4o-mini", "prompt_tokens": 1983, "completion_tokens": 143, "total_tokens": 2126}
+{"timestamp": "2026-08-31T17:34:29.319922+00:00", "phase": "dialectic_b", "model": "gpt-4o-mini", "prompt_tokens": 1986, "completion_tokens": 106, "total_tokens": 2092}
+{"timestamp": "2026-08-31T17:34:30.985629+00:00", "phase": "dialectic_a", "model": "gpt-4o-mini", "prompt_tokens": 2350, "completion_tokens": 153, "total_tokens": 2503}
+{"timestamp": "2026-08-31T17:34:32.752545+00:00", "phase": "dialectic_b", "model": "gpt-4o-mini", "prompt_tokens": 2371, "completion_tokens": 124, "total_tokens": 2495}
+{"timestamp": "2026-08-31T17:34:34.341389+00:00", "phase": "dialectic_a", "model": "gpt-4o-mini", "prompt_tokens": 2750, "completion_tokens": 148, "total_tokens": 2898}
+{"timestamp": "2026-08-31T17:34:35.710667+00:00", "phase": "dialectic_b", "model": "gpt-4o-mini", "prompt_tokens": 2763, "completion_tokens": 108, "total_tokens": 2871}
+{"timestamp": "2026-08-31T17:34:37.405911+00:00", "phase": "dialectic_a", "model": "gpt-4o-mini", "prompt_tokens": 3127, "completion_tokens": 142, "total_tokens": 3269}
+{"timestamp": "2026-08-31T17:34:38.761173+00:00", "phase": "dialectic_b", "model": "gpt-4o-mini", "prompt_tokens": 3129, "completion_tokens": 112, "total_tokens": 3241}
+{"timestamp": "2026-08-31T17:34:40.330577+00:00", "phase": "dialectic_a", "model": "gpt-4o-mini", "prompt_tokens": 3496, "completion_tokens": 136, "total_tokens": 3632}
+{"timestamp": "2026-08-31T17:34:41.355477+00:00", "phase": "dialectic_b", "model": "gpt-4o-mini", "prompt_tokens": 3489, "completion_tokens": 60, "total_tokens": 3549}
+{"timestamp": "2026-08-31T17:34:43.148508+00:00", "phase": "chain_verification", "model": "gpt-4o-mini", "prompt_tokens": 334, "completion_tokens": 89, "total_tokens": 423}
+{"timestamp": "2026-08-31T17:34:44.760595+00:00", "phase": "chain_verification", "model": "gpt-4o-mini", "prompt_tokens": 364, "completion_tokens": 98, "total_tokens": 462}
+{"timestamp": "2026-08-31T17:34:46.470645+00:00", "phase": "chain_verification", "model": "gpt-4o-mini", "prompt_tokens": 363, "completion_tokens": 102, "total_tokens": 465}
+{"timestamp": "2026-08-31T17:34:48.825818+00:00", "phase": "chain_verification", "model": "gpt-4o-mini", "prompt_tokens": 381, "completion_tokens": 118, "total_tokens": 499}
+{"timestamp": "2026-08-31T17:34:50.487481+00:00", "phase": "chain_verification", "model": "gpt-4o-mini", "prompt_tokens": 361, "completion_tokens": 113, "total_tokens": 474}
+{"timestamp": "2026-08-31T17:34:52.143208+00:00", "phase": "chain_verification", "model": "gpt-4o-mini", "prompt_tokens": 382, "completion_tokens": 121, "total_tokens": 503}
+{"timestamp": "2026-08-31T17:34:54.157803+00:00", "phase": "chain_verification", "model": "gpt-4o-mini", "prompt_tokens": 369, "completion_tokens": 107, "total_tokens": 476}
+{"timestamp": "2026-08-31T17:34:55.590376+00:00", "phase": "chain_verification", "model": "gpt-4o-mini", "prompt_tokens": 366, "completion_tokens": 80, "total_tokens": 446}
+{"timestamp": "2026-08-31T17:34:58.546246+00:00", "phase": "chain_specificity", "model": "gpt-4o-mini", "prompt_tokens": 233, "completion_tokens": 88, "total_tokens": 321}
+{"timestamp": "2026-08-31T17:35:02.734474+00:00", "phase": "verification", "model": "gpt-4o-mini", "prompt_tokens": 8174, "completion_tokens": 264, "total_tokens": 8438, "hypothesis_slug": "2026-08-31-fleming-x-contamination"}
+{"timestamp": "2026-08-31T17:35:04.738803+00:00", "phase": "refutation", "model": "gpt-4o-mini", "prompt_tokens": 2777, "completion_tokens": 107, "total_tokens": 2884, "hypothesis_slug": "2026-08-31-fleming-x-contamination", "lens": "coherence"}
+{"timestamp": "2026-08-31T17:35:06.134641+00:00", "phase": "refutation", "model": "gpt-4o-mini", "prompt_tokens": 2721, "completion_tokens": 94, "total_tokens": 2815, "hypothesis_slug": "2026-08-31-fleming-x-contamination", "lens": "testability"}
+{"timestamp": "2026-08-31T17:35:07.530540+00:00", "phase": "refutation", "model": "gpt-4o-mini", "prompt_tokens": 2698, "completion_tokens": 93, "total_tokens": 2791, "hypothesis_slug": "2026-08-31-fleming-x-contamination", "lens": "triviality"}
+{"timestamp": "2026-08-31T17:35:16.976542+00:00", "phase": "generation", "model": "gpt-4o-mini", "prompt_tokens": 1709, "completion_tokens": 709, "total_tokens": 2418, "mode": "bisociation", "retry": false}
+{"timestamp": "2026-08-31T17:35:18.008203+00:00", "phase": "generation", "model": "gpt-4o-mini", "prompt_tokens": 1180, "completion_tokens": 52, "total_tokens": 1232, "mode": "bisociation", "retry": "queries"}
+{"timestamp": "2026-08-31T17:35:19.823464+00:00", "phase": "pair_type_classification", "model": "gpt-4o-mini", "prompt_tokens": 244, "completion_tokens": 58, "total_tokens": 302}
+{"timestamp": "2026-08-31T17:35:23.279388+00:00", "phase": "verification", "model": "gpt-4o-mini", "prompt_tokens": 8174, "completion_tokens": 134, "total_tokens": 8308, "hypothesis_slug": "2026-08-31-prigogine-x-complex-systems"}
+{"timestamp": "2026-08-31T17:35:33.493360+00:00", "phase": "generation", "model": "gpt-4o-mini", "prompt_tokens": 1711, "completion_tokens": 772, "total_tokens": 2483, "mode": "bisociation", "retry": false}
+{"timestamp": "2026-08-31T17:35:35.010253+00:00", "phase": "generation", "model": "gpt-4o-mini", "prompt_tokens": 1171, "completion_tokens": 38, "total_tokens": 1209, "mode": "bisociation", "retry": "queries"}
+{"timestamp": "2026-08-31T17:35:36.656325+00:00", "phase": "pair_type_classification", "model": "gpt-4o-mini", "prompt_tokens": 246, "completion_tokens": 60, "total_tokens": 306}
+{"timestamp": "2026-08-31T17:35:42.075193+00:00", "phase": "verification", "model": "gpt-4o-mini", "prompt_tokens": 8174, "completion_tokens": 453, "total_tokens": 8627, "hypothesis_slug": "2026-08-31-blackscholes-x-physics"}
+{"timestamp": "2026-08-31T17:35:43.909687+00:00", "phase": "refutation", "model": "gpt-4o-mini", "prompt_tokens": 2994, "completion_tokens": 102, "total_tokens": 3096, "hypothesis_slug": "2026-08-31-blackscholes-x-physics", "lens": "coherence"}
+{"timestamp": "2026-08-31T17:35:45.353572+00:00", "phase": "refutation", "model": "gpt-4o-mini", "prompt_tokens": 2938, "completion_tokens": 95, "total_tokens": 3033, "hypothesis_slug": "2026-08-31-blackscholes-x-physics", "lens": "testability"}
+{"timestamp": "2026-08-31T17:35:46.759087+00:00", "phase": "refutation", "model": "gpt-4o-mini", "prompt_tokens": 2915, "completion_tokens": 128, "total_tokens": 3043, "hypothesis_slug": "2026-08-31-blackscholes-x-physics", "lens": "triviality"}
+{"timestamp": "2026-08-31T17:35:55.906141+00:00", "phase": "generation", "model": "gpt-4o-mini", "prompt_tokens": 1708, "completion_tokens": 648, "total_tokens": 2356, "mode": "bisociation", "retry": false}
+{"timestamp": "2026-08-31T17:35:57.866469+00:00", "phase": "generation", "model": "gpt-4o-mini", "prompt_tokens": 1173, "completion_tokens": 41, "total_tokens": 1214, "mode": "bisociation", "retry": "queries"}
+{"timestamp": "2026-08-31T17:35:59.633675+00:00", "phase": "pair_type_classification", "model": "gpt-4o-mini", "prompt_tokens": 243, "completion_tokens": 62, "total_tokens": 305}
+{"timestamp": "2026-08-31T17:36:03.952622+00:00", "phase": "verification", "model": "gpt-4o-mini", "prompt_tokens": 8174, "completion_tokens": 168, "total_tokens": 8342, "hypothesis_slug": "2026-08-31-blackscholes-x-wiener-processes"}
+{"timestamp": "2026-08-31T17:36:16.119147+00:00", "phase": "generation", "model": "gpt-4o-mini", "prompt_tokens": 1708, "completion_tokens": 723, "total_tokens": 2431, "mode": "bisociation", "retry": false}
+{"timestamp": "2026-08-31T17:36:17.237996+00:00", "phase": "generation", "model": "gpt-4o-mini", "prompt_tokens": 1176, "completion_tokens": 40, "total_tokens": 1216, "mode": "bisociation", "retry": "queries"}
+{"timestamp": "2026-08-31T17:36:19.161647+00:00", "phase": "pair_type_classification", "model": "gpt-4o-mini", "prompt_tokens": 243, "completion_tokens": 66, "total_tokens": 309}
+{"timestamp": "2026-08-31T17:36:20.409800+00:00", "phase": "dialectic_a", "model": "gpt-4o-mini", "prompt_tokens": 508, "completion_tokens": 97, "total_tokens": 605}
+{"timestamp": "2026-08-31T17:36:21.699906+00:00", "phase": "dialectic_b", "model": "gpt-4o-mini", "prompt_tokens": 439, "completion_tokens": 63, "total_tokens": 502}
+{"timestamp": "2026-08-31T17:36:23.897214+00:00", "phase": "chain_specificity", "model": "gpt-4o-mini", "prompt_tokens": 226, "completion_tokens": 98, "total_tokens": 324}
+{"timestamp": "2026-08-31T17:36:28.013531+00:00", "phase": "verification", "model": "gpt-4o-mini", "prompt_tokens": 8174, "completion_tokens": 222, "total_tokens": 8396, "hypothesis_slug": "2026-08-31-nash-x-malthus"}
+{"timestamp": "2026-08-31T17:36:30.499180+00:00", "phase": "refutation", "model": "gpt-4o-mini", "prompt_tokens": 2753, "completion_tokens": 125, "total_tokens": 2878, "hypothesis_slug": "2026-08-31-nash-x-malthus", "lens": "coherence"}
+{"timestamp": "2026-08-31T17:36:31.820746+00:00", "phase": "refutation", "model": "gpt-4o-mini", "prompt_tokens": 2697, "completion_tokens": 94, "total_tokens": 2791, "hypothesis_slug": "2026-08-31-nash-x-malthus", "lens": "testability"}
+{"timestamp": "2026-08-31T17:36:34.001964+00:00", "phase": "refutation", "model": "gpt-4o-mini", "prompt_tokens": 2674, "completion_tokens": 118, "total_tokens": 2792, "hypothesis_slug": "2026-08-31-nash-x-malthus", "lens": "triviality"}
+{"timestamp": "2026-08-31T17:36:45.612776+00:00", "phase": "generation", "model": "gpt-4o-mini", "prompt_tokens": 1708, "completion_tokens": 763, "total_tokens": 2471, "mode": "bisociation", "retry": false}
+{"timestamp": "2026-08-31T17:36:47.934277+00:00", "phase": "pair_type_classification", "model": "gpt-4o-mini", "prompt_tokens": 243, "completion_tokens": 75, "total_tokens": 318}
+{"timestamp": "2026-08-31T17:36:49.783994+00:00", "phase": "dialectic_a", "model": "gpt-4o-mini", "prompt_tokens": 508, "completion_tokens": 136, "total_tokens": 644}
+{"timestamp": "2026-08-31T17:36:50.741493+00:00", "phase": "dialectic_b", "model": "gpt-4o-mini", "prompt_tokens": 485, "completion_tokens": 44, "total_tokens": 529}
+{"timestamp": "2026-08-31T17:36:52.707643+00:00", "phase": "chain_specificity", "model": "gpt-4o-mini", "prompt_tokens": 234, "completion_tokens": 101, "total_tokens": 335}
+{"timestamp": "2026-08-31T17:36:57.280415+00:00", "phase": "verification", "model": "gpt-4o-mini", "prompt_tokens": 8174, "completion_tokens": 227, "total_tokens": 8401, "hypothesis_slug": "2026-08-31-watson-crick-x-information-theory"}
