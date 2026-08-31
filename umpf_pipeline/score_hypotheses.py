@@ -169,17 +169,37 @@ def score_entry(rec, *, include_self_report: bool = False):
                 f"near-zero predictive signal, see Failure 5"
             )
 
-    # Phase 2 — the four-way verdict
+    # Phase 2 — the four-way verdict. This is DISCOVERY-CREDIT scoring --
+    # whether the pipeline itself surfaced something real. Ground-truth
+    # entries (source == nobel-calibration-ground-truth) don't earn this:
+    # they were hand-authored from an already-known discovery, not found by
+    # the engine, so awarding +30 ADJACENT_ACTIVE here would score a
+    # calibration specimen as if it were a candidate find. 2026-08-31, after
+    # real, independently-converging external critique (a real leaderboard
+    # entry pasted into a separate model, more than once, unprompted) flagged
+    # this as a category error: validity (does the claim hold up -- the
+    # refutation-survival points below, kept intact) and discovery credit
+    # (did the ENGINE find this -- zero for ground truth, by construction)
+    # are different questions; the old flat scoring conflated them. The real
+    # verdict and badge still show (Phase 2 verification is real, honest
+    # data either way), just with no points attached for ground truth.
     not_valid = rec.get("not_valid_bisociation", False)
+    is_ground_truth = rec.get("source") == "nobel-calibration-ground-truth"
     if verdict == "ADJACENT_ACTIVE":
-        points += 30
         badges.append("🗺️ Frontier Research Group")
-        breakdown.append("Phase 2 ADJACENT_ACTIVE: +30")
+        if is_ground_truth:
+            breakdown.append("Phase 2 ADJACENT_ACTIVE: +0 (ground truth — no discovery credit, see below)")
+        else:
+            points += 30
+            breakdown.append("Phase 2 ADJACENT_ACTIVE: +30")
     elif verdict == "COLLISION":
         if not_valid:
             points -= 5
             badges.append("🚫 Not a Valid Bisociation")
             breakdown.append("Phase 2 COLLISION (not a valid bisociation): -5")
+        elif is_ground_truth:
+            badges.append("🏛️ Established Department")
+            breakdown.append("Phase 2 COLLISION: +0 (ground truth — no discovery credit, see below)")
         else:
             points += 5
             badges.append("🏛️ Established Department")

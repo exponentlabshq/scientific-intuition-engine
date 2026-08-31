@@ -22868,7 +22868,7 @@
       "Economics — rational-choice theory"
     ],
     "verdict": "COLLISION",
-    "points": 17,
+    "points": 12,
     "badges": [
       "🧬 Bisociative",
       "🏆 Nobel Ground Truth (calibration benchmark, not engine-generated)",
@@ -22876,7 +22876,7 @@
       "🛡️ Survived the Gauntlet"
     ],
     "breakdown": [
-      "Phase 2 COLLISION (genuine): +5",
+      "Phase 2 COLLISION: +0 (ground truth — no discovery credit, see below)",
       "Adversarial refutation survived (2-of-3): +12"
     ],
     "held_out_reason": null,
@@ -22905,7 +22905,7 @@
       "Franklin — X-ray crystallography"
     ],
     "verdict": "COLLISION",
-    "points": 0,
+    "points": -5,
     "badges": [
       "🧬 Bisociative",
       "🏆 Nobel Ground Truth (calibration benchmark, not engine-generated)",
@@ -22913,7 +22913,7 @@
       "🌗 Contested (1-of-3)"
     ],
     "breakdown": [
-      "Phase 2 COLLISION (genuine): +5",
+      "Phase 2 COLLISION: +0 (ground truth — no discovery credit, see below)",
       "Adversarial refutation REFUTED, but a real near-miss (1-of-3 survive): -5",
       "  independently confirmed (3 separate agents, full agreement)"
     ],
@@ -22943,7 +22943,7 @@
       "Neural networks — associative memory"
     ],
     "verdict": "COLLISION",
-    "points": 0,
+    "points": -5,
     "badges": [
       "🧬 Bisociative",
       "🏆 Nobel Ground Truth (calibration benchmark, not engine-generated)",
@@ -22951,7 +22951,7 @@
       "🌗 Contested (1-of-3)"
     ],
     "breakdown": [
-      "Phase 2 COLLISION (genuine): +5",
+      "Phase 2 COLLISION: +0 (ground truth — no discovery credit, see below)",
       "Adversarial refutation REFUTED, but a real near-miss (1-of-3 survive): -5",
       "  independently confirmed (3 separate agents, full agreement)"
     ],
@@ -22981,7 +22981,7 @@
       "Evolutionary biology (selection)"
     ],
     "verdict": "COLLISION",
-    "points": 25,
+    "points": 20,
     "badges": [
       "🧬 Bisociative",
       "🏆 Nobel Ground Truth (calibration benchmark, not engine-generated)",
@@ -22989,7 +22989,7 @@
       "🛡️ Survived the Gauntlet"
     ],
     "breakdown": [
-      "Phase 2 COLLISION (genuine): +5",
+      "Phase 2 COLLISION: +0 (ground truth — no discovery credit, see below)",
       "Adversarial refutation survived (3-of-3): +20"
     ],
     "held_out_reason": null,
@@ -23018,7 +23018,7 @@
       "Thermodynamics — blackbody radiation"
     ],
     "verdict": "COLLISION",
-    "points": 17,
+    "points": 12,
     "badges": [
       "🧬 Bisociative",
       "🏆 Nobel Ground Truth (calibration benchmark, not engine-generated)",
@@ -23026,7 +23026,7 @@
       "🛡️ Survived the Gauntlet"
     ],
     "breakdown": [
-      "Phase 2 COLLISION (genuine): +5",
+      "Phase 2 COLLISION: +0 (ground truth — no discovery credit, see below)",
       "Adversarial refutation survived (2-of-3): +12"
     ],
     "held_out_reason": null,
@@ -23055,7 +23055,7 @@
       "Control engineering — feedback systems"
     ],
     "verdict": "COLLISION",
-    "points": 17,
+    "points": 12,
     "badges": [
       "🧬 Bisociative",
       "🏆 Nobel Ground Truth (calibration benchmark, not engine-generated)",
@@ -23063,7 +23063,7 @@
       "🛡️ Survived the Gauntlet"
     ],
     "breakdown": [
-      "Phase 2 COLLISION (genuine): +5",
+      "Phase 2 COLLISION: +0 (ground truth — no discovery credit, see below)",
       "Adversarial refutation survived (2-of-3): +12"
     ],
     "held_out_reason": null,
@@ -23092,7 +23092,7 @@
       "Ecology — common-pool resource dynamics"
     ],
     "verdict": "COLLISION",
-    "points": 17,
+    "points": 12,
     "badges": [
       "🧬 Bisociative",
       "🏆 Nobel Ground Truth (calibration benchmark, not engine-generated)",
@@ -23100,7 +23100,7 @@
       "🛡️ Survived the Gauntlet"
     ],
     "breakdown": [
-      "Phase 2 COLLISION (genuine): +5",
+      "Phase 2 COLLISION: +0 (ground truth — no discovery credit, see below)",
       "Adversarial refutation survived (2-of-3): +12"
     ],
     "held_out_reason": null,
@@ -23129,7 +23129,7 @@
       "Computer science — heuristic search"
     ],
     "verdict": "COLLISION",
-    "points": 17,
+    "points": 12,
     "badges": [
       "🧬 Bisociative",
       "🏆 Nobel Ground Truth (calibration benchmark, not engine-generated)",
@@ -23137,7 +23137,7 @@
       "🛡️ Survived the Gauntlet"
     ],
     "breakdown": [
-      "Phase 2 COLLISION (genuine): +5",
+      "Phase 2 COLLISION: +0 (ground truth — no discovery credit, see below)",
       "Adversarial refutation survived (2-of-3): +12"
     ],
     "held_out_reason": null,
@@ -23166,7 +23166,7 @@
       "Property rights — resource allocation"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 25,
+    "points": -5,
     "badges": [
       "🧬 Bisociative",
       "🏆 Nobel Ground Truth (calibration benchmark, not engine-generated)",
@@ -23174,7 +23174,7 @@
       "🌗 Contested (1-of-3)"
     ],
     "breakdown": [
-      "Phase 2 ADJACENT_ACTIVE: +30",
+      "Phase 2 ADJACENT_ACTIVE: +0 (ground truth — no discovery credit, see below)",
       "Adversarial refutation REFUTED, but a real near-miss (1-of-3 survive): -5",
       "  independently confirmed (3 separate agents, full agreement)"
     ],
@@ -23204,7 +23204,7 @@
       "Markets — price signal aggregation"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 42,
+    "points": 12,
     "badges": [
       "🧬 Bisociative",
       "🏆 Nobel Ground Truth (calibration benchmark, not engine-generated)",
@@ -23212,7 +23212,7 @@
       "🛡️ Survived the Gauntlet"
     ],
     "breakdown": [
-      "Phase 2 ADJACENT_ACTIVE: +30",
+      "Phase 2 ADJACENT_ACTIVE: +0 (ground truth — no discovery credit, see below)",
       "Adversarial refutation survived (2-of-3): +12"
     ],
     "held_out_reason": null,
@@ -23241,7 +23241,7 @@
       "Household behavior — family decision-making"
     ],
     "verdict": "COLLISION",
-    "points": 0,
+    "points": -5,
     "badges": [
       "🧬 Bisociative",
       "🏆 Nobel Ground Truth (calibration benchmark, not engine-generated)",
@@ -23249,7 +23249,7 @@
       "🌗 Contested (1-of-3)"
     ],
     "breakdown": [
-      "Phase 2 COLLISION (genuine): +5",
+      "Phase 2 COLLISION: +0 (ground truth — no discovery credit, see below)",
       "Adversarial refutation REFUTED, but a real near-miss (1-of-3 survive): -5",
       "  independently confirmed (3 separate agents, full agreement)"
     ],
@@ -23279,7 +23279,7 @@
       "Computation — simulation"
     ],
     "verdict": "COLLISION",
-    "points": 0,
+    "points": -5,
     "badges": [
       "🧬 Bisociative",
       "🏆 Nobel Ground Truth (calibration benchmark, not engine-generated)",
@@ -23287,7 +23287,7 @@
       "🌗 Contested (1-of-3)"
     ],
     "breakdown": [
-      "Phase 2 COLLISION (genuine): +5",
+      "Phase 2 COLLISION: +0 (ground truth — no discovery credit, see below)",
       "Adversarial refutation REFUTED, but a real near-miss (1-of-3 survive): -5",
       "  independently confirmed (3 separate agents, full agreement)"
     ],
@@ -23317,7 +23317,7 @@
       "Maxwell — electromagnetism"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 42,
+    "points": 12,
     "badges": [
       "🧬 Bisociative",
       "🏆 Nobel Ground Truth (calibration benchmark, not engine-generated)",
@@ -23325,7 +23325,7 @@
       "🛡️ Survived the Gauntlet"
     ],
     "breakdown": [
-      "Phase 2 ADJACENT_ACTIVE: +30",
+      "Phase 2 ADJACENT_ACTIVE: +0 (ground truth — no discovery credit, see below)",
       "Adversarial refutation survived (2-of-3): +12"
     ],
     "held_out_reason": null,
@@ -24162,6 +24162,700 @@
     "hypothesis_content": "# Janusian Hypothesis: Culinary arts — flavor pairing and Maillard reaction\n\n**Generated**: 2026-08-31\n**Framework**: UMPF Janusian Hypothesis Engine (Exponent Labs LLC)\n\n---\n\n## 1. The Domain\n\nIn culinary arts, flavor pairing refers to the idea that certain ingredients taste better together due to shared flavor compounds, while the Maillard reaction is a chemical reaction between amino acids and reducing sugars that gives browned food its distinctive flavor and color.\n\n## 2. The Proposition\n\nFlavor pairing is based on the shared chemical compounds between ingredients, which dictate which flavors will complement each other.\n\n## 3. The Inversion\n\nThe exact opposite is true: Flavor pairing is entirely arbitrary, and any combination of ingredients can create complementary flavors regardless of their chemical composition.\n\n## 4. The Simultaneous Hold\n\n> \"Flavor pairing is based on the shared chemical compounds between ingredients, which dictate which flavors will complement each other.\"\n> \"Flavor pairing is entirely arbitrary, and any combination of ingredients can create complementary flavors regardless of their chemical composition.\"\n> \"Both are true simultaneously.\"\n\n- **(A) Compromise**: Some flavor pairings work due to shared compounds, while others are based on cultural or personal preference, suggesting a mix of both.\n- **(B) Synthesis**: Flavor pairing is primarily determined by cultural traditions, which guide the combination of ingredients without regard to their chemical properties.\n- **(C) Paradox**: Both the chemical compatibility of ingredients and the arbitrary nature of flavor pairing are true simultaneously; the theory must accommodate both perspectives.\n\n(A) fails because it suggests that flavor pairing can be neatly categorized into shared compounds or personal preference, while (B) ignores the role of chemistry in flavor development; (C) holds because both chemical compatibility and arbitrary combinations can yield successful pairings in the same dish.\n\n## 5. The Hypothesis (The Third Thing)\n\n1. **Simultaneous-hold sentence (required):** Both the chemical basis for flavor pairing and the arbitrary nature of ingredient combinations are true simultaneously for the same culinary creation; the theory must contain both.\n2. **Falsifiable prediction:** If both flavor pairing based on shared compounds and arbitrary combinations hold simultaneously, then a dish created with chemically incompatible ingredients could still be rated highly by a diverse group of tasters, which would not be predicted by either truth held alone.\n\n## 6. Novelty & Testability Self-Critique\n\n- **Tension score (1-5)**: 4 — The assumption that flavor pairing is strictly based on shared chemical compounds is foundational in culinary science, making its inversion challenging.\n- **Testability**: Experimental taste tests comparing dishes made with chemically compatible versus incompatible ingredients could confirm or refute this hypothesis.\n- **Known prior art**: Research on flavor pairing by chefs and food scientists, such as the work of molecular gastronomy proponents, suggests a blend of chemical and subjective factors.\n- **Confidence this is worth a researcher's time**: Medium, as while there is significant anecdotal evidence, rigorous scientific validation is still developing.\n\n## 7. If This Doesn't Hold\n\nThe most likely reason this turns out to be a compromise or synthesis is that the subjective nature of taste may overshadow the chemical basis, leading to inconsistent results across different populations.\n\n## Search Queries\n\n1. \"flavor pairing theory\"\n2. \"Maillard reaction culinary science\"\n3. \"Hervé This molecular gastronomy\"\n4. \"food pairing based on chemistry\"\n5. \"food flavor compatibility research\"\n",
     "verification_filename": "2026-08-31-janusian-culinary-arts-verification.md",
     "verification_content": "# Verification: Janusian — Culinary arts — flavor pairing and Maillard reaction\n\n**Verifies**: `hypotheses/2026-08-31-janusian-culinary-arts.md`\n**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)\n\n## Verdict: **ADJACENT_ACTIVE**\n\n## Queries\n- `flavor pairing theory`\n- `Maillard reaction culinary science`\n- `Hervé This molecular gastronomy`\n- `food pairing based on chemistry`\n- `food flavor compatibility research`\n\n## What was found\nHervé This, a pioneer in molecular gastronomy, has extensively studied the chemical basis of flavor pairing and the Maillard reaction. His work, such as the article \"Molecular Gastronomy, a Scientific Look at Cooking,\" delves into how chemical interactions influence flavor combinations. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/19449900/?utm_source=openai)) Additionally, the study \"Flavor network and the principles of food pairing\" explores how shared flavor compounds affect ingredient compatibility, supporting the food pairing hypothesis. ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC3240947/?utm_source=openai))\n\n## Reasoning\nThe search results reveal active research by Hervé This on the chemical foundations of flavor pairing and the Maillard reaction, as well as studies on the principles of food pairing. This indicates that the hypothesis is situated within an active research area, with existing work addressing the chemical basis of flavor pairing and the Maillard reaction. However, the specific simultaneous-hold sentence and falsifiable prediction proposed in the hypothesis have not been directly addressed in the existing literature, suggesting that the exact connection has not been fully explored.\n",
+    "refutation_filename": null,
+    "refutation_content": null,
+    "refutation_independently_confirmed": false
+  },
+  {
+    "key": "2026-08-31-janusian-acoustics",
+    "mode": "janusian",
+    "source": null,
+    "domains": [
+      "Acoustics — resonance and standing waves"
+    ],
+    "verdict": "ADJACENT_ACTIVE",
+    "points": 15,
+    "badges": [
+      "🎭 Janusian",
+      "🗺️ Frontier Research Group",
+      "⚠️ Failed Honesty Check",
+      "🌗 Contested (1-of-3)"
+    ],
+    "breakdown": [
+      "Phase 1 self-report (5/5): not scored — near-zero predictive signal, see Failure 5",
+      "Phase 2 ADJACENT_ACTIVE: +30",
+      "Mechanical honesty check failed twice (disguised compromise, uncorrected): -10",
+      "Adversarial refutation REFUTED, but a real near-miss (1-of-3 survive): -5",
+      "  independently confirmed (3 separate agents, full agreement)"
+    ],
+    "held_out_reason": null,
+    "tier_rank": 5,
+    "tier_label": "💀 Refuted / Rejected",
+    "pair_type": null,
+    "refutation_gradient_pct": 33,
+    "refutation_lens_version": "2026-08-31-v3.1",
+    "notes": "The search results confirm that resonance can both amplify and suppress frequencies simultaneously, aligning with the core claim. This dual effect is observed in various acoustic environments, such as musical instruments and room acoustics. The presence of both amplification and suppression in the same instance indicates that the hypothesis is actively explored in current research.",
+    "self_reported_distance": null,
+    "self_reported_tension": 5,
+    "hypothesis_filename": "2026-08-31-janusian-acoustics.md",
+    "hypothesis_content": "# Janusian Hypothesis: Acoustics — resonance and standing waves\n\n**Generated**: 2026-08-31\n**Framework**: UMPF Janusian Hypothesis Engine (Exponent Labs LLC)\n\n---\n\n## 1. The Domain\n\nIn acoustics, resonance occurs when a system vibrates at its natural frequency, leading to amplified sound waves, while standing waves are patterns formed by the interference of two waves traveling in opposite directions, creating nodes and antinodes.\n\n## 2. The Proposition\n\nResonance amplifies sound by reinforcing specific frequencies in a medium.\n\n## 3. The Inversion\n\nThe exact opposite is true: Resonance diminishes sound by suppressing specific frequencies in a medium.\n\n## 4. The Simultaneous Hold\n\n> \"Resonance amplifies sound by reinforcing specific frequencies in a medium.\"\n> \"Resonance diminishes sound by suppressing specific frequencies in a medium.\"\n> \"Both are true simultaneously.\"\n\n- **(A) Compromise**: The effects of resonance and suppression can vary depending on the medium and conditions, leading to different outcomes in sound amplification.\n- **(B) Synthesis**: Resonance can amplify sound, but under certain conditions, it may also lead to diminished sound quality due to interference effects.\n- **(C) Paradox** (model's own honest assessment: genuine): In the same acoustic system, resonance can simultaneously amplify certain frequencies while also suppressing others due to interference effects; both phenomena occur at the same time within the same wave patterns.\n\nCompromise (A) fails because it suggests a context-split that does not hold for the same instance, while synthesis (B) resolves the contradiction instead of preserving it; both propositions can be true at once in the same scenario of wave interaction.\n\n## 5. The Hypothesis (The Third Thing)\n\n1. **Simultaneous-hold sentence (required):** Both resonance amplifies sound and resonance suppresses certain frequencies are true simultaneously for the same instance; the theory must contain both.\n2. **Falsifiable prediction:** If both resonance amplifies sound and resonance suppresses certain frequencies hold simultaneously, then specific frequencies will be both enhanced and diminished in amplitude at the same time in a controlled acoustic environment, which would not be predicted by either truth held alone.\n\n## 6. Novelty & Testability Self-Critique\n\n- **Tension score (1-5)**: 5 — The inversion challenges a foundational understanding of resonance in acoustics, which is typically accepted as amplifying sound.\n- **Testability**: Experimental setups involving controlled environments where resonance is measured alongside interference patterns could confirm or disprove this hypothesis.\n- **Known prior art**: Not verified.\n- **Confidence this is worth a researcher's time**: Medium, as the interplay between resonance and standing waves is complex and may not have been thoroughly explored.\n\n## 7. If This Doesn't Hold\n\nThe most likely reason this turns out to be a compromise or synthesis wearing paradox's clothing is that the conditions under which resonance occurs may not allow for simultaneous amplification and suppression in practice.\n\n## Search Queries\n\n1. \"acoustics resonance standing waves\"\n2. \"resonance sound amplification\"\n3. \"standing waves interference effects\"\n4. \"acoustic resonance suppression theory\"\n5. \"acoustics named theory OR framework OR researcher\"\n\n---\n\n**⚠️ Automated check failed twice:** §4/§5 still fail the Janusian same-instance test (context-split and/or missing simultaneous-hold signature) after one corrective retry, despite the model committing is_genuine_paradox=true. This may be a disguised compromise (A) or synthesis (B) mislabeled as paradox (C) — not a thesis-grade Janusian lead until rewritten.\n",
+    "verification_filename": "2026-08-31-janusian-acoustics-verification.md",
+    "verification_content": "# Verification: Janusian — Acoustics — resonance and standing waves\n\n**Verifies**: `hypotheses/2026-08-31-janusian-acoustics.md`\n**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)\n\n## Verdict: **ADJACENT_ACTIVE**\n\n## Queries\n- `acoustics resonance standing waves`\n- `resonance sound amplification`\n- `standing waves interference effects`\n- `acoustic resonance suppression theory`\n- `acoustics named theory OR framework OR researcher`\n\n## What was found\nThe phenomenon where resonance simultaneously amplifies and suppresses certain frequencies is well-documented in acoustics. In musical instruments, resonance enhances specific frequencies, while in rooms, standing waves can lead to both amplification and suppression of certain frequencies at different locations. ([cmtext.indiana.edu](https://cmtext.indiana.edu/acoustics/chapter1_resonance.php?utm_source=openai))\n\n## Reasoning\nThe search results confirm that resonance can both amplify and suppress frequencies simultaneously, aligning with the core claim. This dual effect is observed in various acoustic environments, such as musical instruments and room acoustics. The presence of both amplification and suppression in the same instance indicates that the hypothesis is actively explored in current research.\n",
+    "refutation_filename": "refutations/2026-08-31-janusian-acoustics-refutation.md",
+    "refutation_content": "# Adversarial Refutation: Janusian — Acoustics — resonance and standing waves\n\n**Original**: `hypotheses/2026-08-31-janusian-acoustics.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 1 of 3 survive → **REFUTED**\n\n- **Coherence — REFUTED.** The core claim relies on the term 'resonance,' which is used to denote both amplification and suppression of sound frequencies. In acoustics, resonance indeed refers to the phenomenon where certain frequencies are amplified while others are suppressed, depending on the context (e.g., musical instruments vs. room acoustics). However, the claim does not clearly delineate how these two effects can coexist in the same instance without equivocation. Specifically, it does not specify whether 'resonance' refers to the same underlying mechanism in both cases or if it is context-dependent, leading to potential confusion. Therefore, the claim does not survive the coherence lens due to this equivocation on the term 'resonance.'\n- **Testability — SURVIVES.** The core claim specifies that both amplification and suppression of sound frequencies occur simultaneously due to resonance, which is a well-documented phenomenon in acoustics. The falsifiable prediction operationalizes this by stating that specific frequencies will be enhanced and diminished in amplitude at the same time in a controlled environment, which can be tested through experimental setups measuring sound amplitude at various frequencies. This prediction is clear and allows for a definitive 'yes' or 'no' outcome based on experimental results, thus satisfying the testability criterion.\n- **Triviality — REFUTED.** The core claim states that both amplification and suppression of sound frequencies due to resonance can occur simultaneously. When stripped of domain-specific vocabulary, the claim reduces to a general statement about complex systems where opposing effects can coexist. The phrase being tested for genericness is: \"Both resonance amplifies sound and resonance suppresses certain frequencies are true simultaneously for the same instance; the theory must contain both.\" This statement is indeed generic and could apply to many complex systems, thus failing the triviality lens. Therefore, the claim does not survive this lens.\n\n## No steelman offered\n\nAll three lenses independently converged on REFUTED for this case. If revisited, it would need a genuinely tighter formulation, not a restatement of the same claim.\n",
+    "refutation_independently_confirmed": true
+  },
+  {
+    "key": "2026-08-31-janusian-aerospace-engineering",
+    "mode": "janusian",
+    "source": null,
+    "domains": [
+      "Aerospace engineering — aerodynamic stall"
+    ],
+    "verdict": "ADJACENT_ACTIVE",
+    "points": 15,
+    "badges": [
+      "🎭 Janusian",
+      "🗺️ Frontier Research Group",
+      "⚠️ Failed Honesty Check",
+      "🌗 Contested (1-of-3)"
+    ],
+    "breakdown": [
+      "Phase 1 self-report (5/5): not scored — near-zero predictive signal, see Failure 5",
+      "Phase 2 ADJACENT_ACTIVE: +30",
+      "Mechanical honesty check failed twice (disguised compromise, uncorrected): -10",
+      "Adversarial refutation REFUTED, but a real near-miss (1-of-3 survive): -5",
+      "  independently confirmed (3 separate agents, full agreement)"
+    ],
+    "held_out_reason": null,
+    "tier_rank": 5,
+    "tier_label": "💀 Refuted / Rejected",
+    "pair_type": null,
+    "refutation_gradient_pct": 33,
+    "refutation_lens_version": "2026-08-31-v3.1",
+    "notes": "The Prandtl lifting-line theory is a well-established model in aerodynamics, and its applications to wing roll, flapping, and tandem wing configurations are documented in the provided sources.",
+    "self_reported_distance": null,
+    "self_reported_tension": 5,
+    "hypothesis_filename": "2026-08-31-janusian-aerospace-engineering.md",
+    "hypothesis_content": "# Janusian Hypothesis: Aerospace engineering — aerodynamic stall\n\n**Generated**: 2026-08-31\n**Framework**: UMPF Janusian Hypothesis Engine (Exponent Labs LLC)\n\n---\n\n## 1. The Domain\n\nIn aerospace engineering, aerodynamic stall occurs when the airflow separates from the wing surface, causing a significant loss of lift and an increase in drag, often leading to a loss of control.\n\n## 2. The Proposition\n\nAerodynamic stall is a condition that can only occur at high angles of attack, where the wing is unable to generate sufficient lift due to airflow separation.\n\n## 3. The Inversion\n\nThe exact opposite is true: Aerodynamic stall can occur at low angles of attack, where the wing can still be generating lift despite airflow separation.\n\n## 4. The Simultaneous Hold\n\n> \"Aerodynamic stall is a condition that can only occur at high angles of attack, where the wing is unable to generate sufficient lift due to airflow separation.\"\n> \"Aerodynamic stall can occur at low angles of attack, where the wing can still be generating lift despite airflow separation.\"\n> \"Both are true simultaneously.\"\n\n- **(A) Compromise**: It depends on the specific conditions of flight; stall can occur at different angles of attack under varying circumstances.\n- **(B) Synthesis**: Stall can be managed by adjusting the angle of attack and other flight parameters, ensuring that it is avoided in all situations.\n- **(C) Paradox** (model's own honest assessment: genuine): Both high angles of attack can lead to stall due to airflow separation, and low angles of attack can also lead to stall despite some lift being generated; the theory must contain both.\n\nThe proposition and inversion cannot be reconciled into a compromise or synthesis because they represent fundamentally different mechanisms of stall that can occur simultaneously under the same flight conditions.\n\n## 5. The Hypothesis (The Third Thing)\n\n1. **Simultaneous-hold sentence (required):** Both high angles of attack leading to stall and low angles of attack leading to stall are true simultaneously for the same flight conditions; the theory must contain both.\n2. **Falsifiable prediction:** If both high angles of attack and low angles of attack can lead to stall, then we should observe stall incidents occurring at low angles of attack in controlled flight tests, which would not be predicted by considering only high angles of attack.\n\n## 6. Novelty & Testability Self-Critique\n\n- **Tension score (1-5)**: 5 — The assumption that stall only occurs at high angles of attack is foundational in aerodynamics, and inverting it challenges established principles of flight dynamics.\n- **Testability**: Controlled flight tests that measure lift and stall characteristics at various angles of attack, particularly at low angles, would confirm or refute this hypothesis.\n- **Known prior art**: Not verified.\n- **Confidence this is worth a researcher's time**: Medium, as while the inversion is theoretically plausible, empirical validation is required to establish its credibility.\n\n## 7. If This Doesn't Hold\n\nThe most likely reason this turns out to be a compromise is that low angles of attack may not lead to stall in practical scenarios, thus reinforcing traditional understanding of stall phenomena.\n\n## Search Queries\n\n1. \"aerodynamic stall named theories\"\n2. \"Prandtl lifting line theory stall\"\n3. \"aerospace engineering stall analysis\"\n4. \"aerodynamic stall characteristics and effects\"\n5. \"boundary layer theory and aerodynamic stall\"\n\n---\n\n**⚠️ Automated check failed twice:** no Search Query targets a specific named theory, framework, or researcher, even after one corrective retry. Verification may miss an existing collision with real prior art that a more specific search would have found — read this hypothesis's verdict with that in mind.\n",
+    "verification_filename": "2026-08-31-janusian-aerospace-engineering-verification.md",
+    "verification_content": "# Verification: Janusian — Aerospace engineering — aerodynamic stall\n\n**Verifies**: `hypotheses/2026-08-31-janusian-aerospace-engineering.md`\n**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)\n\n## Verdict: **ADJACENT_ACTIVE**\n\n## Queries\n- `aerodynamic stall named theories`\n- `Prandtl lifting line theory stall`\n- `aerospace engineering stall analysis`\n- `aerodynamic stall characteristics and effects`\n- `boundary layer theory and aerodynamic stall`\n\n## What was found\nThe Prandtl lifting-line theory, developed by Ludwig Prandtl, is a mathematical model that predicts lift distribution over a three-dimensional wing based on its geometry. ([innovationspace.ansys.com](https://innovationspace.ansys.com/courses/courses/aerodynamics-finite-wing-geometry/lessons/prandtl-lifting-theory-for-finite-wings-lesson-3/?utm_source=openai)) This theory has been applied to various aerodynamic analyses, including studies on wing roll and flapping. ([doi.org](https://doi.org/10.2514%2F1.C032399?utm_source=openai)) Additionally, the theory has been extended to study the aerodynamic characteristics of tandem wing configurations. ([onlinelibrary.wiley.com](https://onlinelibrary.wiley.com/doi/10.1155/2018/3104902?utm_source=openai))\n\n## Reasoning\nThe Prandtl lifting-line theory is a well-established model in aerodynamics, and its applications to wing roll, flapping, and tandem wing configurations are documented in the provided sources.\n",
+    "refutation_filename": "refutations/2026-08-31-janusian-aerospace-engineering-refutation.md",
+    "refutation_content": "# Adversarial Refutation: Janusian — Aerospace engineering — aerodynamic stall\n\n**Original**: `hypotheses/2026-08-31-janusian-aerospace-engineering.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 1 of 3 survive → **REFUTED**\n\n- **Coherence — REFUTED.** The core claim rests on the term 'stall,' which is used in both high and low angles of attack contexts. However, stall at high angles of attack typically refers to a loss of lift due to airflow separation, while stall at low angles of attack can involve different aerodynamic phenomena, such as changes in airflow dynamics or control surface effectiveness. These represent different underlying mechanisms rather than a single formal object or relationship, indicating equivocation. Therefore, the claim does not survive this lens as it conflates two distinct referents of 'stall.'\n- **Testability — SURVIVES.** The core claim presents a falsifiable prediction regarding aerodynamic stall, specifically that both high and low angles of attack can lead to stall under the same flight conditions. This prediction is operationalized through controlled flight tests that would observe stall incidents at low angles of attack, which is a clear metric. The reference to the Prandtl lifting-line theory provides a named theoretical framework that supports the claim, satisfying the requirement for a specific, checkable piece of evidence. Therefore, the claim is not vague or generic and survives this lens.\n- **Triviality — REFUTED.** Step 1: The full, precise claim states that both high angles of attack leading to stall and low angles of attack leading to stall are true simultaneously for the same flight conditions, and that the theory must contain both. Step 2: Replacing domain-specific terms, the claim becomes: Both high conditions leading to failure and low conditions leading to failure are true simultaneously for the same operational conditions; the theory must contain both. Step 3: This sentence describes a general principle that could apply to many complex systems, as it suggests that multiple conditions can lead to a failure state. Therefore, it reduces to something true of almost any two complex systems, indicating triviality. Step 4: The quoted phrase being tested for genericness is \"Both high conditions leading to failure and low conditions leading to failure are true simultaneously for the same operational conditions; the theory must contain both.\" This phrase is indeed shorter and vaguer than the original claim's specific context about aerodynamic stall. Thus, it fails the triviality lens. Overall, the claim does not survive this lens as it presents a trivial assertion about complex systems.\n\n## No steelman offered\n\nAll three lenses independently converged on REFUTED for this case. If revisited, it would need a genuinely tighter formulation, not a restatement of the same claim.\n",
+    "refutation_independently_confirmed": true
+  },
+  {
+    "key": "2026-08-31-janusian-agriculture-4",
+    "mode": "janusian",
+    "source": null,
+    "domains": [
+      "Agriculture — crop rotation and soil health"
+    ],
+    "verdict": "ADJACENT_ACTIVE",
+    "points": 5,
+    "badges": [
+      "🎭 Janusian",
+      "🗺️ Frontier Research Group",
+      "⚠️ Failed Honesty Check",
+      "💀 Refuted"
+    ],
+    "breakdown": [
+      "Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5",
+      "Phase 2 ADJACENT_ACTIVE: +30",
+      "Mechanical honesty check failed twice (disguised compromise, uncorrected): -10",
+      "Adversarial refutation REFUTED, unanimous (0-of-3 survive): -15",
+      "  independently confirmed (3 separate agents, full agreement)"
+    ],
+    "held_out_reason": null,
+    "tier_rank": 5,
+    "tier_label": "💀 Refuted / Rejected",
+    "pair_type": null,
+    "refutation_gradient_pct": 0,
+    "refutation_lens_version": "2026-08-31-v3.1",
+    "notes": "The meta-analysis supports the idea that crop rotation can enhance soil health, while the Iowa State University study presents evidence that crop rotation may not improve soil carbon content, indicating that both claims can be true simultaneously.",
+    "self_reported_distance": null,
+    "self_reported_tension": 4,
+    "hypothesis_filename": "2026-08-31-janusian-agriculture-4.md",
+    "hypothesis_content": "# Janusian Hypothesis: Agriculture — crop rotation and soil health\n\n**Generated**: 2026-08-31\n**Framework**: UMPF Janusian Hypothesis Engine (Exponent Labs LLC)\n\n---\n\n## 1. The Domain\n\nCrop rotation is a farming practice where different types of crops are grown in the same area across a sequence of seasons, which is believed to improve soil health and fertility. This practice helps in managing soil nutrients, preventing soil erosion, and reducing pest and disease cycles.\n\n## 2. The Proposition\n\nCrop rotation significantly improves soil health by enhancing nutrient availability and reducing soil degradation.\n\n## 3. The Inversion\n\nThe exact opposite is true: Crop rotation does not improve soil health and may even lead to nutrient depletion and increased soil degradation in certain conditions.\n\n## 4. The Simultaneous Hold\n\n> \"Crop rotation significantly improves soil health by enhancing nutrient availability and reducing soil degradation.\"\n> \"Crop rotation does not improve soil health and may even lead to nutrient depletion and increased soil degradation in certain conditions.\"\n> \"Both are true simultaneously.\"\n\n- **(A) Compromise**: The effectiveness of crop rotation on soil health varies depending on the specific crops used and local environmental conditions.\n- **(B) Synthesis**: Crop rotation is beneficial for soil health in most situations, but there are exceptions where it may not be effective.\n- **(C) Paradox** (model's own honest assessment: genuine): Both crop rotation improves soil health and crop rotation does not improve soil health are true simultaneously for the same crop rotation practice; the theory must contain both.\n\nCompromise (A) fails because it suggests a conditionality that undermines the absolute nature of both claims, while synthesis (B) resolves the contradiction rather than preserving it. The paradox holds because both claims can be true for the same crop rotation practice under varying conditions of soil type and crop selection.\n\n## 5. The Hypothesis (The Third Thing)\n\n1. **Simultaneous-hold sentence (required):** Both crop rotation improves soil health and crop rotation does not improve soil health are true simultaneously for the same crop rotation practice; the theory must contain both.\n2. **Falsifiable prediction:** If both crop rotation improves soil health and crop rotation does not improve soil health hold simultaneously, then specific crop combinations will show varying effects on soil health metrics, which would not be predicted by either truth held alone.\n\n## 6. Novelty & Testability Self-Critique\n\n- **Tension score (1-5)**: 4 — The inversion challenges a widely accepted agricultural practice, suggesting significant implications for farming methodologies.\n- **Testability**: Field experiments comparing soil health metrics across different crop rotation practices versus continuous cropping systems could confirm or disprove this hypothesis.\n- **Known prior art**: Not verified.\n- **Confidence this is worth a researcher's time**: Medium, as the complexity of soil health interactions and crop responses may yield variable results.\n\n## 7. If This Doesn't Hold\n\nThe most likely reason this turns out to be a compromise or synthesis wearing paradox's clothing is that the specific conditions under which crop rotation is applied are not adequately controlled or understood.\n\n## Search Queries\n\n1. \"crop rotation soil health theory\"\n2. \"impact of crop rotation on soil nutrients\"\n3. \"crop rotation benefits and drawbacks\"\n4. \"agricultural practices soil degradation\"\n5. \"crop rotation effects on soil microbiome OR agroecology framework\"\n\n---\n\n**⚠️ Automated check failed twice:** §4/§5 still fail the Janusian same-instance test (context-split and/or missing simultaneous-hold signature) after one corrective retry, despite the model committing is_genuine_paradox=true. This may be a disguised compromise (A) or synthesis (B) mislabeled as paradox (C) — not a thesis-grade Janusian lead until rewritten.\n",
+    "verification_filename": "2026-08-31-janusian-agriculture-4-verification.md",
+    "verification_content": "# Verification: Janusian — Agriculture — crop rotation and soil health\n\n**Verifies**: `hypotheses/2026-08-31-janusian-agriculture-4.md`\n**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)\n\n## Verdict: **ADJACENT_ACTIVE**\n\n## Queries\n- `crop rotation soil health theory`\n- `impact of crop rotation on soil nutrients`\n- `crop rotation benefits and drawbacks`\n- `agricultural practices soil degradation`\n- `crop rotation effects on soil microbiome OR agroecology framework`\n\n## What was found\nA meta-analysis published in September 2023 found that increasing crop diversity improved most soil physical health properties, including bulk density, aggregate stability, porosity, and saturated hydraulic conductivity. ([sciencedirect.com](https://www.sciencedirect.com/science/article/abs/pii/S0167198723001484?utm_source=openai)) However, a study by Iowa State University challenges the traditional belief that rotating crops fertilized with livestock manure increases soil carbon content, indicating that crop rotation may not significantly boost soil carbon levels. ([axios.com](https://www.axios.com/local/des-moines/2025/04/15/crop-rotation-assumptions-iowa-research-isu?utm_source=openai))\n\n## Reasoning\nThe meta-analysis supports the idea that crop rotation can enhance soil health, while the Iowa State University study presents evidence that crop rotation may not improve soil carbon content, indicating that both claims can be true simultaneously.\n",
+    "refutation_filename": "refutations/2026-08-31-janusian-agriculture-4-refutation.md",
+    "refutation_content": "# Adversarial Refutation: Janusian — Agriculture — crop rotation and soil health\n\n**Original**: `hypotheses/2026-08-31-janusian-agriculture-4.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 0 of 3 survive → **REFUTED**\n\n- **Coherence — REFUTED.** The core claim relies on the term 'crop rotation' to bridge two contradictory assertions about its effects on soil health. In domain A, 'crop rotation' refers to a practice that enhances soil health through increased diversity and nutrient cycling. In domain B, it is suggested that crop rotation does not improve soil carbon content, indicating a failure to enhance soil health in that specific context. These are two different referents: one emphasizes benefits while the other highlights limitations. Therefore, the claim does equivocate on the term 'crop rotation' by treating it as a singular concept while it denotes different outcomes in each context.\n- **Testability — REFUTED.** The core claim presents a simultaneous-hold sentence that asserts both the improvement and lack of improvement of soil health due to crop rotation can be true. However, the falsifiable prediction lacks a specific operationalization of metrics, comparison conditions, and rejection thresholds. While it mentions varying effects on soil health metrics, it does not specify what those metrics are, how they will be measured, or what constitutes a significant difference. Therefore, the prediction remains vague and does not allow for a clear experimental design to test it, leading to a conclusion of refutation on the testability lens.\n- **Triviality — REFUTED.** The core claim states that both 'crop rotation improves soil health' and 'crop rotation does not improve soil health' can be true simultaneously for the same practice. When stripped of domain-specific vocabulary, this reduces to a statement about the coexistence of contradictory effects in any complex system. The phrase being tested for genericness is: 'Both crop rotation improves soil health and crop rotation does not improve soil health are true simultaneously for the same crop rotation practice.' This statement is not unique to agriculture; it could apply to many complex systems where contradictory outcomes can coexist. Therefore, the claim is trivial and does not survive this lens.\n\n## No steelman offered\n\nAll three lenses independently converged on REFUTED for this case. If revisited, it would need a genuinely tighter formulation, not a restatement of the same claim.\n",
+    "refutation_independently_confirmed": true
+  },
+  {
+    "key": "2026-08-31-janusian-botany",
+    "mode": "janusian",
+    "source": null,
+    "domains": [
+      "Botany — phototropism and plant signaling"
+    ],
+    "verdict": "ADJACENT_ACTIVE",
+    "points": 30,
+    "badges": [
+      "🎭 Janusian",
+      "🗺️ Frontier Research Group"
+    ],
+    "breakdown": [
+      "Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5",
+      "Phase 2 ADJACENT_ACTIVE: +30"
+    ],
+    "held_out_reason": null,
+    "tier_rank": 2,
+    "tier_label": "🗺️ Verified, Unrefuted",
+    "pair_type": null,
+    "refutation_gradient_pct": null,
+    "refutation_lens_version": null,
+    "notes": "The search results reveal that both phototropic growth towards light and the potential for growth away from light due to internal signaling mechanisms are well-documented in plant biology. These findings suggest that the core claim of the hypothesis is already established in the scientific literature. Therefore, the hypothesis falls under the 'ADJACENT_ACTIVE' category, indicating that the specific connection proposed has been previously explored.",
+    "self_reported_distance": null,
+    "self_reported_tension": 4,
+    "hypothesis_filename": "2026-08-31-janusian-botany.md",
+    "hypothesis_content": "# Janusian Hypothesis: Botany — phototropism and plant signaling\n\n**Generated**: 2026-08-31\n**Framework**: UMPF Janusian Hypothesis Engine (Exponent Labs LLC)\n\n---\n\n## 1. The Domain\n\nPhototropism is the growth of plants in response to light direction, while plant signaling involves the internal communication mechanisms that allow plants to respond to environmental stimuli.\n\n## 2. The Proposition\n\nPlants grow towards light because they are solely driven by phototropic responses to maximize photosynthesis.\n\n## 3. The Inversion\n\nThe exact opposite is true: Plants do not always grow towards light; they can exhibit negative phototropism or grow in other directions based on various internal and external signals.\n\n## 4. The Simultaneous Hold\n\n> \"Plants grow towards light because they are solely driven by phototropic responses to maximize photosynthesis.\"\n> \"Plants do not always grow towards light; they can exhibit negative phototropism or grow in other directions based on various internal and external signals.\"\n> \"Both are true simultaneously.\"\n\n- **(A) Compromise**: Plants may grow towards light in some situations, but also exhibit different growth patterns depending on other factors.\n- **(B) Synthesis**: Plants primarily grow towards light, but their growth can be influenced by other signals that might redirect their growth path.\n- **(C) Paradox** (model's own honest assessment: genuine): Plants grow towards light due to phototropism, yet they can also grow away from light or in unexpected directions based on internal signaling mechanisms; both behaviors are true simultaneously for the same plant under varying conditions.\n\nThe proposition and inversion cannot be reconciled as a compromise or synthesis because they describe fundamentally opposing behaviors of the same plant under the same conditions, demonstrating a genuine paradox.\n\n## 5. The Hypothesis (The Third Thing)\n\n1. **Simultaneous-hold sentence (required):** Both the phototropic growth towards light and the potential for growth away from light due to internal signaling are true simultaneously for the same plant; the theory must contain both.\n2. **Falsifiable prediction:** If both the phototropic response and the signaling mechanisms hold simultaneously, then a plant could be observed growing towards light while simultaneously redirecting its growth away from light due to internal signals, which would not be predicted by either truth held alone.\n\n## 6. Novelty & Testability Self-Critique\n\n- **Tension score (1-5)**: 4 — The inversion challenges a widely accepted understanding of plant behavior, suggesting a complex interplay between growth direction and signaling that is not fully acknowledged in traditional botany.\n- **Testability**: Experimental observations can be conducted where plants are subjected to varying light conditions while manipulating their internal signaling pathways to see if they exhibit both growth towards and away from light.\n- **Known prior art**: Not verified; however, studies on plant signaling and growth patterns exist that may touch on this contradiction.\n- **Confidence this is worth a researcher's time**: Medium; while the paradox is compelling, further empirical studies are needed to fully explore and validate these simultaneous behaviors.\n\n## 7. If This Doesn't Hold\n\nThe most likely reason this turns out to be a compromise or synthesis is that the plant's growth direction could be overly simplified to a single dominant response rather than acknowledging the complexity of simultaneous signaling pathways.\n\n## Search Queries\n\n1. \"phototropism and plant signaling\"\n2. \"plant growth direction signaling mechanisms\"\n3. \"phototropism exceptions\"\n4. \"plant signaling pathways and growth\"\n5. \"phototropism theory OR framework OR researcher\"\n",
+    "verification_filename": "2026-08-31-janusian-botany-verification.md",
+    "verification_content": "# Verification: Janusian — Botany — phototropism and plant signaling\n\n**Verifies**: `hypotheses/2026-08-31-janusian-botany.md`\n**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)\n\n## Verdict: **ADJACENT_ACTIVE**\n\n## Queries\n- `phototropism and plant signaling`\n- `plant growth direction signaling mechanisms`\n- `phototropism exceptions`\n- `plant signaling pathways and growth`\n- `phototropism theory OR framework OR researcher`\n\n## What was found\nPhototropism enables plants to orient growth towards light, primarily mediated by blue-light photoreceptors called phototropins. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/23562459/?utm_source=openai)) Auxin, a plant hormone, plays a crucial role in phototropic responses by redistributing to the shaded side of the plant, promoting differential growth. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/24481074/?utm_source=openai)) Additionally, plants exhibit gravitropism, where roots grow away from light (negative phototropism) and stems grow towards light (positive phototropism), indicating complex signaling mechanisms. ([khanacademy.org](https://www.khanacademy.org/science/biology/ap-biology/ap-plant-biology/a/phototropism-photoperiodism?utm_source=openai))\n\n## Reasoning\nThe search results reveal that both phototropic growth towards light and the potential for growth away from light due to internal signaling mechanisms are well-documented in plant biology. These findings suggest that the core claim of the hypothesis is already established in the scientific literature. Therefore, the hypothesis falls under the 'ADJACENT_ACTIVE' category, indicating that the specific connection proposed has been previously explored.\n",
+    "refutation_filename": null,
+    "refutation_content": null,
+    "refutation_independently_confirmed": false
+  },
+  {
+    "key": "2026-08-31-janusian-computer-science",
+    "mode": "janusian",
+    "source": null,
+    "domains": [
+      "Computer science — compiler instruction scheduling"
+    ],
+    "verdict": "ADJACENT_ACTIVE",
+    "points": 40,
+    "badges": [
+      "🎭 Janusian",
+      "🗺️ Frontier Research Group",
+      "⚠️ Failed Honesty Check",
+      "🛡️ Survived the Gauntlet"
+    ],
+    "breakdown": [
+      "Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5",
+      "Phase 2 ADJACENT_ACTIVE: +30",
+      "Mechanical honesty check failed twice (disguised compromise, uncorrected): -10",
+      "Adversarial refutation survived (3-of-3): +20"
+    ],
+    "held_out_reason": null,
+    "tier_rank": 5,
+    "tier_label": "💀 Refuted / Rejected",
+    "pair_type": null,
+    "refutation_gradient_pct": 100,
+    "refutation_lens_version": "2026-08-31-v3.1",
+    "notes": "The search results confirm that instruction scheduling can both improve and degrade performance, aligning with the core claim. The cited sources provide evidence of this dual effect, supporting the hypothesis.",
+    "self_reported_distance": null,
+    "self_reported_tension": 4,
+    "hypothesis_filename": "2026-08-31-janusian-computer-science.md",
+    "hypothesis_content": "# Janusian Hypothesis: Computer science — compiler instruction scheduling\n\n**Generated**: 2026-08-31\n**Framework**: UMPF Janusian Hypothesis Engine (Exponent Labs LLC)\n\n---\n\n## 1. The Domain\n\nCompiler instruction scheduling is the process of reordering instructions in a program to improve performance, such as reducing execution time or increasing parallelism.\n\n## 2. The Proposition\n\nInstruction scheduling improves performance by minimizing execution time and maximizing resource utilization.\n\n## 3. The Inversion\n\nThe exact opposite is true: Instruction scheduling can degrade performance by introducing overhead and increasing complexity in resource management.\n\n## 4. The Simultaneous Hold\n\n> \"Instruction scheduling improves performance by minimizing execution time and maximizing resource utilization.\"\n> \"Instruction scheduling can degrade performance by introducing overhead and increasing complexity in resource management.\"\n> \"Both are true simultaneously.\"\n\n- **(A) Compromise**: It depends on the specific context and the type of program being compiled; different scheduling strategies may yield different results.\n- **(B) Synthesis**: In some cases, instruction scheduling may lead to better performance, while in others, it may not, depending on the architecture and workload.\n- **(C) Paradox** (model's own honest assessment: genuine): Both instruction scheduling improves performance by optimizing execution and can simultaneously degrade performance by adding overhead and complexity in the same compilation process; the theory must contain both.\n\nThe contradiction holds for the same instance of instruction scheduling in different scenarios, as the same scheduling decision can yield both improved and degraded performance depending on various factors, making it a genuine paradox rather than a compromise or synthesis.\n\n## 5. The Hypothesis (The Third Thing)\n\n1. **Simultaneous-hold sentence (required):** Both instruction scheduling improves performance and can simultaneously degrade performance for the same compilation process; the theory must contain both.\n2. **Falsifiable prediction:** If both instruction scheduling improves performance and degrades performance hold simultaneously, then there will be instances where a scheduled instruction set executes faster while also consuming more resources than an unscheduled set -- which would not be predicted by either truth held alone.\n\n## 6. Novelty & Testability Self-Critique\n\n- **Tension score (1-5)**: 4 — The assumption that instruction scheduling always improves performance is foundational in compiler design, making its inversion significant and potentially heretical.\n- **Testability**: Empirical analysis of various compiler outputs and performance metrics across different architectures and workloads could confirm or refute this hypothesis.\n- **Known prior art**: Not verified; however, literature on compiler optimization strategies may touch on similar contradictions.\n- **Confidence this is worth a researcher's time**: Medium; while the paradox is plausible, concrete examples may require extensive empirical validation.\n\n## 7. If This Doesn't Hold\n\nThe most likely reason this turns out to be a compromise or synthesis is that performance gains and losses are context-dependent, leading to a situation where the same scheduling strategy performs differently under varying conditions.\n\n## Search Queries\n\n1. \"instruction scheduling theory in compiler design\"\n2. \"research on compiler optimization techniques\"\n3. \"instruction scheduling algorithms performance evaluation\"\n4. \"compiler instruction scheduling frameworks\"\n5. \"instruction scheduling paradox in compiler theory\"\n\n---\n\n**⚠️ Automated check failed twice:** no Search Query targets a specific named theory, framework, or researcher, even after one corrective retry. Verification may miss an existing collision with real prior art that a more specific search would have found — read this hypothesis's verdict with that in mind.\n",
+    "verification_filename": "2026-08-31-janusian-computer-science-verification.md",
+    "verification_content": "# Verification: Janusian — Computer science — compiler instruction scheduling\n\n**Verifies**: `hypotheses/2026-08-31-janusian-computer-science.md`\n**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)\n\n## Verdict: **ADJACENT_ACTIVE**\n\n## Queries\n- `instruction scheduling theory in compiler design`\n- `research on compiler optimization techniques`\n- `instruction scheduling algorithms performance evaluation`\n- `compiler instruction scheduling frameworks`\n- `instruction scheduling paradox in compiler theory`\n\n## What was found\nInstruction scheduling is a compiler optimization technique aimed at improving instruction-level parallelism by reordering instructions to reduce pipeline stalls and enhance performance. ([en.wikipedia.org](https://en.wikipedia.org/wiki/Instruction_scheduling?utm_source=openai)) However, this process can also lead to increased resource consumption, as reordering may introduce additional dependencies or require more registers, potentially degrading performance. ([sciencedirect.com](https://www.sciencedirect.com/science/article/pii/S0743731597913290?utm_source=openai)) For instance, the paper \"Run-Time versus Compile-Time Instruction Scheduling in Superscalar (RISC) Processors: Performance and Trade-Off\" discusses how dynamic instruction scheduling can lead to higher resource usage and slower critical paths, even when only a part of the circuit exhibits dynamic behavior. ([sciencedirect.com](https://www.sciencedirect.com/science/article/pii/S0743731597913290?utm_source=openai))\n\n## Reasoning\nThe search results confirm that instruction scheduling can both improve and degrade performance, aligning with the core claim. The cited sources provide evidence of this dual effect, supporting the hypothesis.\n",
+    "refutation_filename": "refutations/2026-08-31-janusian-computer-science-refutation.md",
+    "refutation_content": "# Adversarial Refutation: Janusian — Computer science — compiler instruction scheduling\n\n**Original**: `hypotheses/2026-08-31-janusian-computer-science.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 3 of 3 survive → **SURVIVES** (promoted out of NO_SIGNAL)\n\n- **Coherence — SURVIVES.** The core claim rests on the term 'instruction scheduling,' which refers to the same formal object in both instances: the process of reordering instructions in a compiler to optimize performance. In both cases, the term denotes the same underlying mechanism, even though the outcomes can vary (improved performance vs. degraded performance). Therefore, there is no equivocation present, as the claim does not rely on conflating different meanings of the term. The hypothesis survives this lens as it accurately reflects the dual nature of instruction scheduling without misrepresenting the terms involved.\n- **Testability — SURVIVES.** The core claim presents a clear and specific falsifiable prediction regarding instruction scheduling in compiler design. It operationalizes the prediction by stating that there will be instances where a scheduled instruction set executes faster while consuming more resources than an unscheduled set. This prediction is directly testable through empirical evaluation of compiler performance metrics, such as execution time and resource consumption, thus satisfying the testability criteria. Therefore, the claim is not vague or generic, and it survives this lens.\n- **Triviality — SURVIVES.** The core claim states that instruction scheduling can both improve and degrade performance, which is a specific assertion about the behavior of a complex system (compilers). When stripped of domain-specific vocabulary, the claim reduces to a general statement about systems that can exhibit dual effects based on the same process. The phrase being tested for genericness is: \"Both instruction scheduling improves performance and can simultaneously degrade performance for the same compilation process; the theory must contain both.\" This statement is not trivially true of all complex systems, as it requires specific mechanisms of instruction scheduling and performance metrics that are not universally applicable. Therefore, the claim does not reduce to something true of almost any two complex systems, and it survives this lens.\n\n## What survived, and why this matters\n\n3 of 3 independent lenses could not kill this claim. Per the promotion rule (2-of-3 survival), this hypothesis moves out of NO_SIGNAL — real signal the claim isn't vacuous, not proof it's correct. Still worth Phase 3 outreach consideration if a real researcher in the adjacent field can be identified.\n",
+    "refutation_independently_confirmed": true
+  },
+  {
+    "key": "2026-08-31-janusian-finance",
+    "mode": "janusian",
+    "source": null,
+    "domains": [
+      "Finance — options pricing and volatility smile"
+    ],
+    "verdict": "COLLISION",
+    "points": -5,
+    "badges": [
+      "🎭 Janusian",
+      "🏛️ Established Department",
+      "⚠️ Failed Honesty Check"
+    ],
+    "breakdown": [
+      "Phase 1 self-report (5/5): not scored — near-zero predictive signal, see Failure 5",
+      "Phase 2 COLLISION (genuine): +5",
+      "Mechanical honesty check failed twice (disguised compromise, uncorrected): -10"
+    ],
+    "held_out_reason": null,
+    "tier_rank": 5,
+    "tier_label": "💀 Refuted / Rejected",
+    "pair_type": null,
+    "refutation_gradient_pct": null,
+    "refutation_lens_version": null,
+    "notes": "The hypothesis that both consistent and inconsistent implied volatility can occur simultaneously, leading to a volatility smile pattern, has been extensively studied and documented in financial literature. This indicates that the specific claim has already been explored, making the hypothesis not novel.",
+    "self_reported_distance": null,
+    "self_reported_tension": 5,
+    "hypothesis_filename": "2026-08-31-janusian-finance.md",
+    "hypothesis_content": "# Janusian Hypothesis: Finance — options pricing and volatility smile\n\n**Generated**: 2026-08-31\n**Framework**: UMPF Janusian Hypothesis Engine (Exponent Labs LLC)\n\n---\n\n## 1. The Domain\n\nIn finance, options pricing is influenced by various factors including the underlying asset's price and market volatility. The volatility smile describes the phenomenon where implied volatility varies with different strike prices and expiration dates, often showing higher volatility for deep in-the-money and out-of-the-money options compared to at-the-money options.\n\n## 2. The Proposition\n\nThe implied volatility of options is consistent across different strike prices and expiration dates, reflecting a uniform market perception of risk.\n\n## 3. The Inversion\n\nThe exact opposite is true: The implied volatility of options is inconsistent across different strike prices and expiration dates, indicating a varied market perception of risk.\n\n## 4. The Simultaneous Hold\n\n> \"The implied volatility of options is consistent across different strike prices and expiration dates, reflecting a uniform market perception of risk.\"\n> \"The implied volatility of options is inconsistent across different strike prices and expiration dates, indicating a varied market perception of risk.\"\n> \"Both are true simultaneously.\"\n\n- **(A) Compromise**: It depends on the specific strike price and expiration date; some options may have consistent implied volatility while others do not.\n- **(B) Synthesis**: The market perceives risk differently depending on the option's characteristics, leading to a mixed pattern of implied volatility across strike prices and expiration dates.\n- **(C) Paradox** (model's own honest assessment: genuine): The market's perception of risk is both uniform and varied simultaneously; options can exhibit consistent implied volatility for some strike prices while displaying a volatility smile for others, reflecting different risk assessments for the same underlying asset.\n\nCompromise (A) fails because it suggests a context-split where some options are treated uniformly while others are not, which does not capture the simultaneous nature of the volatility smile. Synthesis (B) fails as it implies a resolution that averages the two, rather than holding the contradiction of uniformity and variability at once.\n\n## 5. The Hypothesis (The Third Thing)\n\n1. **Simultaneous-hold sentence (required):** Both the implied volatility of options is consistent across some strike prices and inconsistent across others, true simultaneously for the same options; the theory must contain both.\n2. **Falsifiable prediction:** If both the implied volatility is consistent and inconsistent simultaneously, then we would observe a volatility smile pattern in the market that cannot be explained by a single uniform risk perception, leading to trading anomalies not predicted by standard models.\n\n## 6. Novelty & Testability Self-Critique\n\n- **Tension score (1-5)**: 5 — The inversion challenges a foundational assumption in options pricing theory, which traditionally posits uniformity in implied volatility across different options.\n- **Testability**: Empirical analysis of options market data can confirm or refute the presence of a volatility smile, as well as its implications for pricing models.\n- **Known prior art**: The volatility smile phenomenon is well-documented in financial literature, particularly in studies analyzing options pricing models such as the Black-Scholes model.\n- **Confidence this is worth a researcher's time**: High, as there is substantial empirical evidence and theoretical backing for the existence of volatility smiles in options markets.\n\n## 7. If This Doesn't Hold\n\nThe most likely reason this turns out to be a compromise or synthesis is if market conditions lead to a temporary uniformity in implied volatility, masking the underlying variability in risk perception.\n\n## Search Queries\n\n1. \"Black-Scholes model options pricing\"\n2. \"volatility smile phenomenon in options trading\"\n3. \"Friedman’s theory on market volatility\"\n4. \"Merton model and implied volatility\"\n5. \"research on options pricing and volatility skew\"\n\n---\n\n**⚠️ Automated check failed twice:** no Search Query targets a specific named theory, framework, or researcher, even after one corrective retry. Verification may miss an existing collision with real prior art that a more specific search would have found — read this hypothesis's verdict with that in mind.\n",
+    "verification_filename": "2026-08-31-janusian-finance-verification.md",
+    "verification_content": "# Verification: Janusian — Finance — options pricing and volatility smile\n\n**Verifies**: `hypotheses/2026-08-31-janusian-finance.md`\n**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)\n\n## Verdict: **COLLISION**\n\n## Queries\n- `Black-Scholes model options pricing`\n- `volatility smile phenomenon in options trading`\n- `Friedman’s theory on market volatility`\n- `Merton model and implied volatility`\n- `research on options pricing and volatility skew`\n\n## What was found\nThe volatility smile phenomenon, where implied volatility varies across different strike prices, contradicts the Black-Scholes model's assumption of constant volatility. Studies have shown that implied volatilities differ across strike prices and terms to expiration, leading to the development of alternative models to explain this behavior. ([econpapers.repec.org](https://econpapers.repec.org/RePEc%3Ataf%3Aeurjfi%3Av%3A7%3Ay%3A2001%3Ai%3A3%3Ap%3A198-230?utm_source=openai))\n\n## Reasoning\nThe hypothesis that both consistent and inconsistent implied volatility can occur simultaneously, leading to a volatility smile pattern, has been extensively studied and documented in financial literature. This indicates that the specific claim has already been explored, making the hypothesis not novel.\n",
+    "refutation_filename": null,
+    "refutation_content": null,
+    "refutation_independently_confirmed": false
+  },
+  {
+    "key": "2026-08-31-janusian-fisheries",
+    "mode": "janusian",
+    "source": null,
+    "domains": [
+      "Fisheries — stock recruitment dynamics"
+    ],
+    "verdict": "ADJACENT_ACTIVE",
+    "points": 32,
+    "badges": [
+      "🎭 Janusian",
+      "🗺️ Frontier Research Group",
+      "⚠️ Failed Honesty Check",
+      "🛡️ Survived the Gauntlet"
+    ],
+    "breakdown": [
+      "Phase 1 self-report (5/5): not scored — near-zero predictive signal, see Failure 5",
+      "Phase 2 ADJACENT_ACTIVE: +30",
+      "Mechanical honesty check failed twice (disguised compromise, uncorrected): -10",
+      "Adversarial refutation survived (2-of-3): +12"
+    ],
+    "held_out_reason": null,
+    "tier_rank": 5,
+    "tier_label": "💀 Refuted / Rejected",
+    "pair_type": null,
+    "refutation_gradient_pct": 67,
+    "refutation_lens_version": "2026-08-31-v3.1",
+    "notes": "The search results provide evidence that higher fish stock levels do not always lead to increased recruitment rates, and that recruitment can occur independently of stock size, aligning with the core claim that both higher fish stock levels and lower recruitment rates can coexist.",
+    "self_reported_distance": null,
+    "self_reported_tension": 5,
+    "hypothesis_filename": "2026-08-31-janusian-fisheries.md",
+    "hypothesis_content": "# Janusian Hypothesis: Fisheries — stock recruitment dynamics\n\n**Generated**: 2026-08-31\n**Framework**: UMPF Janusian Hypothesis Engine (Exponent Labs LLC)\n\n---\n\n## 1. The Domain\n\nFisheries management often relies on understanding how fish populations reproduce and grow, known as stock recruitment dynamics, to ensure sustainable harvesting.\n\n## 2. The Proposition\n\nHigher fish stock levels lead to increased recruitment rates, ensuring population sustainability and growth.\n\n## 3. The Inversion\n\nThe exact opposite is true: Higher fish stock levels can lead to decreased recruitment rates due to factors like overcrowding and resource competition.\n\n## 4. The Simultaneous Hold\n\n> \"Higher fish stock levels lead to increased recruitment rates, ensuring population sustainability and growth.\"\n> \"Higher fish stock levels can lead to decreased recruitment rates due to factors like overcrowding and resource competition.\"\n> \"Both are true simultaneously.\"\n\n- **(A) Compromise**: It depends on the specific species and environmental conditions; sometimes higher stocks can be beneficial, while in other cases they can be detrimental.\n- **(B) Synthesis**: In some cases, increased fish stocks will improve recruitment, while in others, they may hinder it due to ecological pressures.\n- **(C) Paradox** (model's own honest assessment: genuine): Both higher fish stock levels and lower recruitment rates can occur simultaneously for the same fish population; the theory must contain both.\n\nCompromise (A) fails because it suggests a situational dependency that does not capture the simultaneous nature of the contradiction, while synthesis (B) resolves the tension rather than holding it, which is essential for a genuine paradox.\n\n## 5. The Hypothesis (The Third Thing)\n\n1. **Simultaneous-hold sentence (required):** Both higher fish stock levels and lower recruitment rates are true simultaneously for the same fish population; the theory must contain both.\n2. **Falsifiable prediction:** If both higher fish stock levels and lower recruitment rates hold simultaneously, then we would observe a stable or declining fish population despite high stock levels, which would not be predicted by either truth held alone.\n\n## 6. Novelty & Testability Self-Critique\n\n- **Tension score (1-5)**: 5 — The assumption that higher stock levels always lead to better recruitment is a foundational premise in fisheries science, making its inversion highly contentious.\n- **Testability**: Longitudinal studies on various fish populations that analyze stock levels against recruitment rates could confirm or disprove this hypothesis.\n- **Known prior art**: Not verified; however, theories in ecology discuss similar dynamics regarding population density effects on recruitment.\n- **Confidence this is worth a researcher's time**: Medium; while the contradiction is plausible, empirical evidence may vary across species and environments.\n\n## 7. If This Doesn't Hold\n\nThe most likely reason this turns out to be a compromise or synthesis is that ecological interactions are too complex and context-dependent to yield a clear-cut paradox in every instance.\n\n## Search Queries\n\n1. \"fisheries stock recruitment dynamics theory\"\n2. \"Hjort's rule fish recruitment\"\n3. \"stock recruitment models in fisheries management\"\n4. \"density dependence in fish recruitment\"\n5. \"recruitment overfishing theory\"\n\n---\n\n**⚠️ Automated check failed twice:** no Search Query targets a specific named theory, framework, or researcher, even after one corrective retry. Verification may miss an existing collision with real prior art that a more specific search would have found — read this hypothesis's verdict with that in mind.\n",
+    "verification_filename": "2026-08-31-janusian-fisheries-verification.md",
+    "verification_content": "# Verification: Janusian — Fisheries — stock recruitment dynamics\n\n**Verifies**: `hypotheses/2026-08-31-janusian-fisheries.md`\n**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)\n\n## Verdict: **ADJACENT_ACTIVE**\n\n## Queries\n- `fisheries stock recruitment dynamics theory`\n- `Hjort's rule fish recruitment`\n- `stock recruitment models in fisheries management`\n- `density dependence in fish recruitment`\n- `recruitment overfishing theory`\n\n## What was found\n1. A meta-analysis examining recruitment dynamics in marine fisheries found that recruitment variability is not consistently related to spawning stock biomass, indicating that higher fish stock levels do not always lead to increased recruitment rates. ([onlinelibrary.wiley.com](https://onlinelibrary.wiley.com/doi/full/10.1111/faf.12083?utm_source=openai))\n\n2. A global meta-analysis revealed that recruitment is often independent of stock size and occurs in distinct environmental regimes, suggesting that both higher fish stock levels and lower recruitment rates can coexist. ([onlinelibrary.wiley.com](https://onlinelibrary.wiley.com/doi/10.1111/faf.12304?utm_source=openai))\n\n3. Research comparing marine and Great Lakes fish populations found that factors such as temperature, interspecific interactions, and spawner effects are crucial in explaining recruitment variability, with stock size alone being insufficient to predict recruitment outcomes. ([usgs.gov](https://www.usgs.gov/publications/mechanisms-driving-recruitment-variability-fish-comparisons-between-laurentian-great?utm_source=openai))\n\n## Reasoning\nThe search results provide evidence that higher fish stock levels do not always lead to increased recruitment rates, and that recruitment can occur independently of stock size, aligning with the core claim that both higher fish stock levels and lower recruitment rates can coexist.\n",
+    "refutation_filename": "refutations/2026-08-31-janusian-fisheries-refutation.md",
+    "refutation_content": "# Adversarial Refutation: Janusian — Fisheries — stock recruitment dynamics\n\n**Original**: `hypotheses/2026-08-31-janusian-fisheries.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 2 of 3 survive → **SURVIVES** (promoted out of NO_SIGNAL)\n\n- **Coherence — SURVIVES.** The core claim rests on the term 'recruitment rates,' which refers to the rate at which juvenile fish survive to join the adult population. In the context of fisheries, this term is consistently defined as a measure of population dynamics. The evidence from the meta-analyses indicates that higher stock levels can indeed coincide with lower recruitment rates, supporting the claim's assertion without equivocation. Therefore, the claim does not rely on different meanings of 'recruitment rates' across contexts, but rather on a coherent understanding of the term within the same domain. Thus, the claim survives this lens.\n- **Testability — SURVIVES.** The core claim presents a falsifiable prediction that can be operationalized through empirical observation of fish populations. Specifically, it asserts that if both higher stock levels and lower recruitment rates are true, we should observe a stable or declining population, which can be tested against real-world data. The findings from the meta-analyses support this by indicating that higher stock levels do not guarantee increased recruitment, thus providing a clear metric for testing the hypothesis. Therefore, the claim is not vague and is sufficiently operationalized.\n- **Triviality — REFUTED.** Step 1: The full, precise claim states that both higher fish stock levels and lower recruitment rates can be true simultaneously for the same fish population, and that this theory must include both aspects. Step 2: Replacing domain-specific terms, the claim becomes: \"Both higher levels of a resource and lower rates of replenishment are true simultaneously for the same population; the theory must contain both.\" Step 3: This sentence describes a relationship that could apply to many complex systems, such as ecosystems or economies, where resource levels and replenishment rates can vary independently. Therefore, it reduces to a generic statement about resource dynamics. Step 4: The quoted phrase \"Both higher levels of a resource and lower rates of replenishment are true simultaneously for the same population; the theory must contain both\" is indeed shorter and vaguer than the original claim, indicating a failure to maintain specificity. Thus, the claim is trivial. Overall, the claim does not survive the triviality lens.\n\n## What survived, and why this matters\n\n2 of 3 independent lenses could not kill this claim. Per the promotion rule (2-of-3 survival), this hypothesis moves out of NO_SIGNAL — real signal the claim isn't vacuous, not proof it's correct. Still worth Phase 3 outreach consideration if a real researcher in the adjacent field can be identified.\n",
+    "refutation_independently_confirmed": true
+  },
+  {
+    "key": "2026-08-31-janusian-history",
+    "mode": "janusian",
+    "source": null,
+    "domains": [
+      "History — path dependence in institutional change"
+    ],
+    "verdict": "ADJACENT_ACTIVE",
+    "points": 30,
+    "badges": [
+      "🎭 Janusian",
+      "🗺️ Frontier Research Group"
+    ],
+    "breakdown": [
+      "Phase 1 self-report (5/5): not scored — near-zero predictive signal, see Failure 5",
+      "Phase 2 ADJACENT_ACTIVE: +30"
+    ],
+    "held_out_reason": null,
+    "tier_rank": 2,
+    "tier_label": "🗺️ Verified, Unrefuted",
+    "pair_type": null,
+    "refutation_gradient_pct": null,
+    "refutation_lens_version": null,
+    "notes": "These studies explore the dynamics of institutional change, including the tension between historical path dependence and the capacity for independent evolution, aligning with the core claim of the hypothesis.",
+    "self_reported_distance": null,
+    "self_reported_tension": 5,
+    "hypothesis_filename": "2026-08-31-janusian-history.md",
+    "hypothesis_content": "# Janusian Hypothesis: History — path dependence in institutional change\n\n**Generated**: 2026-08-31\n**Framework**: UMPF Janusian Hypothesis Engine (Exponent Labs LLC)\n\n---\n\n## 1. The Domain\n\nPath dependence in institutional change refers to how historical events and decisions shape the trajectory of future developments in institutions, often leading to a limited set of outcomes based on past choices.\n\n## 2. The Proposition\n\nHistorical decisions create a fixed path that institutions must follow, leading to predictable and constrained outcomes in their evolution.\n\n## 3. The Inversion\n\nThe exact opposite is true: Historical decisions do not determine future paths; institutions can evolve in unpredictable ways, independent of their past choices.\n\n## 4. The Simultaneous Hold\n\n> \"Historical decisions create a fixed path that institutions must follow, leading to predictable and constrained outcomes in their evolution.\"\n> \"Historical decisions do not determine future paths; institutions can evolve in unpredictable ways, independent of their past choices.\"\n> \"Both are true simultaneously.\"\n\n- **(A) Compromise**: Both historical decisions and current contexts influence institutional change, but the impact varies by situation.\n- **(B) Synthesis**: Institutional change is primarily driven by current contexts rather than historical decisions, suggesting a break from past influences.\n- **(C) Paradox** (model's own honest assessment: genuine): Institutions are shaped by their historical paths while simultaneously having the capacity to diverge from those paths based on present circumstances; both influences coexist in the same instance of institutional evolution.\n\nThe proposition and inversion cannot be reconciled into a compromise or synthesis because they represent fundamentally opposing views on the influence of history versus present context, and both can be true simultaneously in the same instance of institutional change.\n\n## 5. The Hypothesis (The Third Thing)\n\n1. **Simultaneous-hold sentence (required):** Both the historical path dependence of institutions and their capacity for independent evolution are true simultaneously for the same instance of institutional change; the theory must contain both.\n2. **Falsifiable prediction:** If both historical decisions and independent present contexts influence institutional change simultaneously, then we should observe cases where institutions diverge from their historical paths due to contemporary pressures, which would not be predicted by either truth held alone.\n\n## 6. Novelty & Testability Self-Critique\n\n- **Tension score (1-5)**: 5 — The assumption that historical decisions strictly determine future paths is foundational in institutional theory, making its inversion highly contentious.\n- **Testability**: Empirical studies analyzing case studies of institutional change that examine both historical influences and present-day factors could confirm or refute this hypothesis.\n- **Known prior art**: Not verified.\n- **Confidence this is worth a researcher's time**: High, as the tension between historical path dependence and present influences is a well-discussed topic in institutional theory.\n\n## 7. If This Doesn't Hold\n\nThe most likely reason this turns out to be a compromise or synthesis is if the influence of historical decisions is found to be less significant than contemporary factors in most cases.\n\n## Search Queries\n\n1. \"path dependence in institutional change\"\n2. \"institutional change historical influence\"\n3. \"theories of institutional evolution\"\n4. \"current context in institutional change\"\n5. \"path dependence theory OR framework OR researcher\"\n",
+    "verification_filename": "2026-08-31-janusian-history-verification.md",
+    "verification_content": "# Verification: Janusian — History — path dependence in institutional change\n\n**Verifies**: `hypotheses/2026-08-31-janusian-history.md`\n**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)\n\n## Verdict: **ADJACENT_ACTIVE**\n\n## Queries\n- `path dependence in institutional change`\n- `institutional change historical influence`\n- `theories of institutional evolution`\n- `current context in institutional change`\n- `path dependence theory OR framework OR researcher`\n\n## What was found\nRixen and Viola (2014) developed a taxonomy of institutional change explanations, distinguishing between path dependence and other change mechanisms. ([journals.sagepub.com](https://journals.sagepub.com/doi/10.1177/0951629814531667?utm_source=openai)) Schneiberg (2007) examined how established institutional paths contain possibilities for transformation and off-path organization. ([papers.ssrn.com](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1095100&utm_source=openai)) Clemente et al. (2016) proposed a recursive model of institutional change, emphasizing the interplay between organizations and macro-level changes. ([journals.sagepub.com](https://journals.sagepub.com/doi/10.1177/1056492616656408?utm_source=openai))\n\n## Reasoning\nThese studies explore the dynamics of institutional change, including the tension between historical path dependence and the capacity for independent evolution, aligning with the core claim of the hypothesis.\n",
+    "refutation_filename": null,
+    "refutation_content": null,
+    "refutation_independently_confirmed": false
+  },
+  {
+    "key": "2026-08-31-janusian-logic",
+    "mode": "janusian",
+    "source": null,
+    "domains": [
+      "Logic — Gödel incompleteness and self-reference"
+    ],
+    "verdict": "COLLISION",
+    "points": -5,
+    "badges": [
+      "🎭 Janusian",
+      "🏛️ Established Department",
+      "⚠️ Failed Honesty Check"
+    ],
+    "breakdown": [
+      "Phase 1 self-report (5/5): not scored — near-zero predictive signal, see Failure 5",
+      "Phase 2 COLLISION (genuine): +5",
+      "Mechanical honesty check failed twice (disguised compromise, uncorrected): -10"
+    ],
+    "held_out_reason": null,
+    "tier_rank": 5,
+    "tier_label": "💀 Refuted / Rejected",
+    "pair_type": null,
+    "refutation_gradient_pct": null,
+    "refutation_lens_version": null,
+    "notes": "The hypothesis accurately describes the essence of Gödel's incompleteness theorems, which involve self-referential statements leading to true but unprovable propositions within a consistent formal system.",
+    "self_reported_distance": null,
+    "self_reported_tension": 5,
+    "hypothesis_filename": "2026-08-31-janusian-logic.md",
+    "hypothesis_content": "# Janusian Hypothesis: Logic — Gödel incompleteness and self-reference\n\n**Generated**: 2026-08-31\n**Framework**: UMPF Janusian Hypothesis Engine (Exponent Labs LLC)\n\n---\n\n## 1. The Domain\n\nIn the domain of logic, Gödel's incompleteness theorems demonstrate that within any sufficiently powerful formal system, there are propositions that cannot be proven or disproven within that system. This leads to implications about the limits of formal reasoning and self-reference in mathematical systems.\n\n## 2. The Proposition\n\nEvery consistent formal system can prove all true statements within its own framework.\n\n## 3. The Inversion\n\nThe exact opposite is true: There are true statements that cannot be proven within any consistent formal system.\n\n## 4. The Simultaneous Hold\n\n> \"Every consistent formal system can prove all true statements within its own framework.\"\n> \"There are true statements that cannot be proven within any consistent formal system.\"\n> \"Both are true simultaneously.\"\n\n- **(A) Compromise**: It depends on the specific formal system being considered; some may prove more than others.\n- **(B) Synthesis**: Some formal systems are inherently limited, but they can still provide valuable insights into the truths they can prove.\n- **(C) Paradox** (model's own honest assessment: genuine): Both the statement that every consistent formal system can prove all true statements and the statement that there are true statements that cannot be proven are true simultaneously for the same formal system; the theory must contain both.\n\nCompromise (A) fails because it suggests that all systems can prove all truths, which is contradicted by Gödel's findings, while synthesis (B) does not hold as it implies a resolution that overlooks the inherent limitations established by the theorems; thus, (C) holds for the same instance, demonstrating the paradox of provability and truth.\n\n## 5. The Hypothesis (The Third Thing)\n\n1. **Simultaneous-hold sentence (required):** Both the statement that every consistent formal system can prove all true statements and the statement that there are true statements that cannot be proven are true simultaneously for the same formal system; the theory must contain both.\n2. **Falsifiable prediction:** If both the proposition and inversion hold simultaneously, then there will exist a specific true statement that is demonstrably unprovable within the system, which would not be predicted by either truth held alone.\n\n## 6. Novelty & Testability Self-Critique\n\n- **Tension score (1-5)**: 5 — The inversion challenges a foundational premise of formal logic and mathematics, which traditionally assumes that all true statements can be proven within a consistent system.\n- **Testability**: The existence of a true but unprovable statement can be tested by examining specific formal systems and identifying statements that meet Gödel's criteria for undecidability.\n- **Known prior art**: Gödel's incompleteness theorems serve as a foundational work in this area, demonstrating the inherent limitations of formal systems.\n- **Confidence this is worth a researcher's time**: High, as the paradox is well-established in the literature of mathematical logic and has significant implications.\n\n## 7. If This Doesn't Hold\n\nThe most likely reason this turns out to be a compromise or synthesis wearing paradox's clothing is if the formal system in question is not sufficiently powerful to encapsulate the full implications of Gödel's theorems.\n\n## Search Queries\n\n1. \"Gödel's incompleteness theorems\"\n2. \"self-reference in Gödel's work\"\n3. \"Gödel's paradox and mathematical logic\"\n4. \"formal systems and incompleteness\"\n5. \"Gödel and Turing on self-reference\"\n\n---\n\n**⚠️ Automated check failed twice:** no Search Query targets a specific named theory, framework, or researcher, even after one corrective retry. Verification may miss an existing collision with real prior art that a more specific search would have found — read this hypothesis's verdict with that in mind.\n",
+    "verification_filename": "2026-08-31-janusian-logic-verification.md",
+    "verification_content": "# Verification: Janusian — Logic — Gödel incompleteness and self-reference\n\n**Verifies**: `hypotheses/2026-08-31-janusian-logic.md`\n**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)\n\n## Verdict: **COLLISION**\n\n## Queries\n- `Gödel's incompleteness theorems`\n- `self-reference in Gödel's work`\n- `Gödel's paradox and mathematical logic`\n- `formal systems and incompleteness`\n- `Gödel and Turing on self-reference`\n\n## What was found\nGödel's incompleteness theorems demonstrate that in any consistent formal system capable of expressing elementary arithmetic, there exist true statements that cannot be proven within the system. This is achieved through self-referential constructions, where a statement refers to its own unprovability. For instance, Gödel's first incompleteness theorem states that if first-order arithmetic is ω-consistent, then it is incomplete. ([plato.stanford.edu](https://plato.stanford.edu/entries/self-reference/?utm_source=openai))\n\n## Reasoning\nThe hypothesis accurately describes the essence of Gödel's incompleteness theorems, which involve self-referential statements leading to true but unprovable propositions within a consistent formal system.\n",
+    "refutation_filename": null,
+    "refutation_content": null,
+    "refutation_independently_confirmed": false
+  },
+  {
+    "key": "2026-08-31-janusian-marketing",
+    "mode": "janusian",
+    "source": null,
+    "domains": [
+      "Marketing — diffusion of innovation adoption curve"
+    ],
+    "verdict": "ADJACENT_ACTIVE",
+    "points": 30,
+    "badges": [
+      "🎭 Janusian",
+      "🗺️ Frontier Research Group"
+    ],
+    "breakdown": [
+      "Phase 1 self-report (5/5): not scored — near-zero predictive signal, see Failure 5",
+      "Phase 2 ADJACENT_ACTIVE: +30"
+    ],
+    "held_out_reason": null,
+    "tier_rank": 2,
+    "tier_label": "🗺️ Verified, Unrefuted",
+    "pair_type": null,
+    "refutation_gradient_pct": null,
+    "refutation_lens_version": null,
+    "notes": "The search results reveal that Rogers' theory outlines a sequential adoption process but also acknowledges instances where simultaneous adoption can occur, particularly when innovations are advantageous and compatible with existing values. This aligns with the hypothesis that both linear progression and simultaneous adoption can coexist for the same innovation.",
+    "self_reported_distance": null,
+    "self_reported_tension": 5,
+    "hypothesis_filename": "2026-08-31-janusian-marketing.md",
+    "hypothesis_content": "# Janusian Hypothesis: Marketing — diffusion of innovation adoption curve\n\n**Generated**: 2026-08-31\n**Framework**: UMPF Janusian Hypothesis Engine (Exponent Labs LLC)\n\n---\n\n## 1. The Domain\n\nThe diffusion of innovation adoption curve describes how different groups of consumers adopt new technologies or ideas over time, typically categorized into innovators, early adopters, early majority, late majority, and laggards.\n\n## 2. The Proposition\n\nThe adoption of innovations follows a predictable and linear progression through distinct categories of adopters, where each group adopts sequentially based on their characteristics and social influences.\n\n## 3. The Inversion\n\nThe exact opposite is true: The adoption of innovations does not follow a predictable or linear progression, as different groups can adopt simultaneously or out of the expected order based on unique circumstances and individual motivations.\n\n## 4. The Simultaneous Hold\n\n> \"The adoption of innovations follows a predictable and linear progression through distinct categories of adopters, where each group adopts sequentially based on their characteristics and social influences.\"\n> \"The adoption of innovations does not follow a predictable or linear progression, as different groups can adopt simultaneously or out of the expected order based on unique circumstances and individual motivations.\"\n> \"Both are true simultaneously.\"\n\n- **(A) Compromise**: It depends on the innovation and the context; some innovations may follow a linear path while others do not.\n- **(B) Synthesis**: The adoption process can be both linear and nonlinear, depending on the specific characteristics of the innovation and the target audience, leading to an average behavior across different cases.\n- **(C) Paradox** (model's own honest assessment: genuine): Both the adoption of innovations follows a linear progression through distinct categories and does not follow a linear progression, as simultaneous adoption can occur for the same innovation among different groups; the theory must contain both.\n\nCompromise (A) fails because it suggests a context-dependent resolution rather than holding both truths simultaneously, and synthesis (B) collapses the contradiction into a blended view rather than preserving the tension; thus, (C) holds for the same instance of innovation adoption.\n\n## 5. The Hypothesis (The Third Thing)\n\n1. **Simultaneous-hold sentence (required):** Both the linear progression of adoption categories and the simultaneous adoption of innovations are true simultaneously for the same innovation; the theory must contain both.\n2. **Falsifiable prediction:** If both the linear progression of adoption categories and the simultaneous adoption of innovations hold simultaneously, then we should observe instances where innovations are adopted by multiple groups at once, contradicting the expectation of sequential adoption based on category; this would not be predicted by either truth held alone.\n\n## 6. Novelty & Testability Self-Critique\n\n- **Tension score (1-5)**: 5 — The assumption of a linear progression in the adoption curve is foundational and widely accepted in marketing theory, making its inversion particularly challenging and potentially heretical.\n- **Testability**: Empirical studies tracking the adoption of specific innovations across different consumer segments could confirm or refute this hypothesis by demonstrating simultaneous adoption patterns.\n- **Known prior art**: Not verified.\n- **Confidence this is worth a researcher's time**: Medium, as while the paradox holds, the complexity of consumer behavior may lead to varied interpretations that complicate empirical validation.\n\n## 7. If This Doesn't Hold\n\nThe most likely reason this turns out to be a compromise or synthesis wearing paradox's clothing is that the observed adoption patterns could be influenced by external factors that do not align with the traditional linear model.\n\n## Search Queries\n\n1. \"Rogers' diffusion of innovations theory\"\n2. \"adoption curve in marketing\"\n3. \"innovation adoption lifecycle\"\n4. \"Everett Rogers framework\"\n5. \"consumer adoption of technology models\"\n",
+    "verification_filename": "2026-08-31-janusian-marketing-verification.md",
+    "verification_content": "# Verification: Janusian — Marketing — diffusion of innovation adoption curve\n\n**Verifies**: `hypotheses/2026-08-31-janusian-marketing.md`\n**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)\n\n## Verdict: **ADJACENT_ACTIVE**\n\n## Queries\n- `Rogers' diffusion of innovations theory`\n- `adoption curve in marketing`\n- `innovation adoption lifecycle`\n- `Everett Rogers framework`\n- `consumer adoption of technology models`\n\n## What was found\nRogers' Diffusion of Innovations Theory explains how new ideas and technologies spread through populations over time, categorizing adopters into Innovators, Early Adopters, Early Majority, Late Majority, and Laggards. ([imd.org](https://www.imd.org/blog/innovation/diffusion-of-innovation-theory/?utm_source=openai)) The theory posits that adoption follows an S-shaped curve, beginning slowly, accelerating as early adopters join, and then tapering off as laggards adopt. ([techtarget.com](https://www.techtarget.com/whatis/feature/Diffusion-of-innovations-theory-Definition-and-examples?utm_source=openai)) Research indicates that while the adoption process is generally sequential, certain innovations may experience simultaneous adoption across multiple groups, especially when they offer clear advantages and are compatible with existing values. ([research.cbs.dk](https://research.cbs.dk/en/publications/simultaneous-versus-sequential-complementarity-in-the-adoption-of/?utm_source=openai))\n\n## Reasoning\nThe search results reveal that Rogers' theory outlines a sequential adoption process but also acknowledges instances where simultaneous adoption can occur, particularly when innovations are advantageous and compatible with existing values. This aligns with the hypothesis that both linear progression and simultaneous adoption can coexist for the same innovation.\n",
+    "refutation_filename": null,
+    "refutation_content": null,
+    "refutation_independently_confirmed": false
+  },
+  {
+    "key": "2026-08-31-janusian-mathematics",
+    "mode": "janusian",
+    "source": null,
+    "domains": [
+      "Mathematics — topology — knot invariants"
+    ],
+    "verdict": "ADJACENT_ACTIVE",
+    "points": 32,
+    "badges": [
+      "🎭 Janusian",
+      "🗺️ Frontier Research Group",
+      "⚠️ Failed Honesty Check",
+      "🛡️ Survived the Gauntlet"
+    ],
+    "breakdown": [
+      "Phase 1 self-report (5/5): not scored — near-zero predictive signal, see Failure 5",
+      "Phase 2 ADJACENT_ACTIVE: +30",
+      "Mechanical honesty check failed twice (disguised compromise, uncorrected): -10",
+      "Adversarial refutation survived (2-of-3): +12"
+    ],
+    "held_out_reason": null,
+    "tier_rank": 5,
+    "tier_label": "💀 Refuted / Rejected",
+    "pair_type": null,
+    "refutation_gradient_pct": 67,
+    "refutation_lens_version": "2026-08-31-v3.1",
+    "notes": "The search results confirm that knot invariants are used to classify knots, but no single invariant can uniquely identify all knots, as different knots can share the same invariant values. This aligns with the core claim that both the classification of a specific knot by its invariants and the existence of different knots sharing those same invariant values are true simultaneously. The theory must contain both aspects, as demonstrated by the limitations of individual invariants in distinguishing all knots.",
+    "self_reported_distance": null,
+    "self_reported_tension": 5,
+    "hypothesis_filename": "2026-08-31-janusian-mathematics.md",
+    "hypothesis_content": "# Janusian Hypothesis: Mathematics — topology — knot invariants\n\n**Generated**: 2026-08-31\n**Framework**: UMPF Janusian Hypothesis Engine (Exponent Labs LLC)\n\n---\n\n## 1. The Domain\n\nIn topology, knot invariants are properties of knots that remain unchanged under continuous deformations, allowing mathematicians to classify and distinguish between different knots.\n\n## 2. The Proposition\n\nKnot invariants provide a definitive classification of knots, allowing each knot to be uniquely identified by its invariants.\n\n## 3. The Inversion\n\nThe exact opposite is true: Knot invariants do not provide a definitive classification of knots, as different knots can share the same invariant values.\n\n## 4. The Simultaneous Hold\n\n> \"Knot invariants provide a definitive classification of knots, allowing each knot to be uniquely identified by its invariants.\"\n> \"Knot invariants do not provide a definitive classification of knots, as different knots can share the same invariant values.\"\n> \"Both are true simultaneously.\"\n\n- **(A) Compromise**: It depends on the context; some knots can be classified by their invariants while others cannot.\n- **(B) Synthesis**: Knot invariants can classify some knots but fail to distinguish others, leading to a partial classification system.\n- **(C) Paradox** (model's own honest assessment: genuine): Knot invariants uniquely classify a specific knot while also being shared by another distinct knot; the theory must contain both truths simultaneously for the same knot instance.\n\n(A) fails because it suggests that knot classification is entirely context-dependent, which is not the case, and (B) fails because it implies that knot invariants are either fully effective or ineffective, ignoring their dual role in classification. Both aspects hold for the same instance of knots being analyzed.\n\n## 5. The Hypothesis (The Third Thing)\n\n1. **Simultaneous-hold sentence (required):** Both the classification of a specific knot by its invariants and the existence of a different knot sharing those same invariant values are true simultaneously for the same instance; the theory must contain both.\n2. **Falsifiable prediction:** If both knot invariants provide unique classifications and also fail to distinguish some knots, then there will be specific examples of knots that share invariant values yet are fundamentally different in structure, which would not be predicted by either truth held alone.\n\n## 6. Novelty & Testability Self-Critique\n\n- **Tension score (1-5)**: 5 — The inversion challenges a foundational premise of knot theory, which relies heavily on the effectiveness of invariants for classification.\n- **Testability**: Empirical studies can be conducted on specific knots to demonstrate cases where different knots yield the same invariants, thereby testing the effectiveness of knot invariants in classification.\n- **Known prior art**: Not verified.\n- **Confidence this is worth a researcher's time**: High, as the contradiction is central to ongoing discussions in knot theory and topology.\n\n## 7. If This Doesn't Hold\n\nThe most likely reason this turns out to be a compromise is that the classification system may not be as comprehensive as initially thought, revealing limitations in the use of invariants.\n\n## Search Queries\n\n1. \"knot invariants classification theory\"\n2. \"knot theory by Vaughan Jones\"\n3. \"mathematics of knot invariants\"\n4. \"topology knot invariants examples\"\n5. \"knot theory invariants limitations\"\n\n---\n\n**⚠️ Automated check failed twice:** §4/§5 still fail the Janusian same-instance test (context-split and/or missing simultaneous-hold signature) after one corrective retry, despite the model committing is_genuine_paradox=true. This may be a disguised compromise (A) or synthesis (B) mislabeled as paradox (C) — not a thesis-grade Janusian lead until rewritten.\n",
+    "verification_filename": "2026-08-31-janusian-mathematics-verification.md",
+    "verification_content": "# Verification: Janusian — Mathematics — topology — knot invariants\n\n**Verifies**: `hypotheses/2026-08-31-janusian-mathematics.md`\n**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)\n\n## Verdict: **ADJACENT_ACTIVE**\n\n## Queries\n- `knot invariants classification theory`\n- `knot theory by Vaughan Jones`\n- `mathematics of knot invariants`\n- `topology knot invariants examples`\n- `knot theory invariants limitations`\n\n## What was found\nKnot invariants are mathematical properties that remain unchanged under ambient isotopy, serving as tools to distinguish different knots. ([mathworld.wolfram.com](https://mathworld.wolfram.com/KnotInvariant.html?utm_source=openai)) Vaughan Jones introduced the Jones polynomial, a significant knot invariant, which has been instrumental in advancing knot theory. ([en.wikipedia.org](https://en.wikipedia.org/wiki/Vaughan_Jones?utm_source=openai)) However, no single knot invariant can uniquely classify all knots, as different knots can share the same invariant values. ([fiveable.me](https://fiveable.me/knot-theory/unit-3/concept-knot-invariants/study-guide/8EbOsTnpHQVNPH8D?utm_source=openai))\n\n## Reasoning\nThe search results confirm that knot invariants are used to classify knots, but no single invariant can uniquely identify all knots, as different knots can share the same invariant values. This aligns with the core claim that both the classification of a specific knot by its invariants and the existence of different knots sharing those same invariant values are true simultaneously. The theory must contain both aspects, as demonstrated by the limitations of individual invariants in distinguishing all knots.\n",
+    "refutation_filename": "refutations/2026-08-31-janusian-mathematics-refutation.md",
+    "refutation_content": "# Adversarial Refutation: Janusian — Mathematics — topology — knot invariants\n\n**Original**: `hypotheses/2026-08-31-janusian-mathematics.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 2 of 3 survive → **SURVIVES** (promoted out of NO_SIGNAL)\n\n- **Coherence — SURVIVES.** The core claim rests on the term 'knot invariants.' In both mathematical topology and knot theory, this term refers to specific properties that remain unchanged under isotopy, serving as classification tools. While different knots can share invariant values, the underlying mathematical structure of these invariants remains consistent across contexts. Therefore, the claim does not equivocate on the term; it accurately reflects the nature of knot invariants in topology. As such, the claim survives this lens.\n- **Testability — SURVIVES.** The core claim identifies a specific mathematical theory regarding knot invariants and their limitations in classification. It operationalizes the falsifiable prediction by asserting that there exist specific examples of knots that share invariant values yet are fundamentally different, which can be tested through mathematical examples. The claim is not vague; it directly addresses the relationship between knot invariants and their classification capabilities, making it testable. Therefore, the claim survives this lens.\n- **Triviality — REFUTED.** The core claim states that both the classification of a specific knot by its invariants and the existence of different knots sharing those same invariant values must be true simultaneously. When stripped of domain-specific vocabulary, this reduces to a statement about the classification of entities based on shared properties, which is a common characteristic of many complex systems. The phrase being tested for genericness is: \"Both the classification of a specific knot by its invariants and the existence of a different knot sharing those same invariant values are true simultaneously for the same instance; the theory must contain both.\" This statement is indeed generic and could apply to various systems beyond knot theory, indicating that the claim is trivial. Therefore, the claim does not survive this lens.\n\n## What survived, and why this matters\n\n2 of 3 independent lenses could not kill this claim. Per the promotion rule (2-of-3 survival), this hypothesis moves out of NO_SIGNAL — real signal the claim isn't vacuous, not proof it's correct. Still worth Phase 3 outreach consideration if a real researcher in the adjacent field can be identified.\n",
+    "refutation_independently_confirmed": true
+  },
+  {
+    "key": "2026-08-31-janusian-meteorology",
+    "mode": "janusian",
+    "source": null,
+    "domains": [
+      "Meteorology — supercell storm rotation"
+    ],
+    "verdict": "COLLISION",
+    "points": 5,
+    "badges": [
+      "🎭 Janusian",
+      "🏛️ Established Department"
+    ],
+    "breakdown": [
+      "Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5",
+      "Phase 2 COLLISION (genuine): +5"
+    ],
+    "held_out_reason": null,
+    "tier_rank": 2,
+    "tier_label": "🗺️ Verified, Unrefuted",
+    "pair_type": null,
+    "refutation_gradient_pct": null,
+    "refutation_lens_version": null,
+    "notes": "The hypothesis suggests that a single supercell storm can exhibit both counterclockwise and clockwise rotations simultaneously, which contradicts established meteorological principles. The mesocyclone's rotation direction is determined by large-scale atmospheric dynamics, and the occurrence of both rotational directions within the same storm is not supported by current scientific evidence.",
+    "self_reported_distance": null,
+    "self_reported_tension": 4,
+    "hypothesis_filename": "2026-08-31-janusian-meteorology.md",
+    "hypothesis_content": "# Janusian Hypothesis: Meteorology — supercell storm rotation\n\n**Generated**: 2026-08-31\n**Framework**: UMPF Janusian Hypothesis Engine (Exponent Labs LLC)\n\n---\n\n## 1. The Domain\n\nSupercell storms are a type of thunderstorm characterized by a rotating updraft, known as a mesocyclone, which can lead to severe weather phenomena such as tornadoes, hail, and heavy rainfall.\n\n## 2. The Proposition\n\nSupercell storms always exhibit a counterclockwise rotation in the Northern Hemisphere due to the Coriolis effect.\n\n## 3. The Inversion\n\nThe exact opposite is true: Supercell storms can exhibit clockwise rotation in the Northern Hemisphere under certain conditions, such as in the presence of strong environmental shear or unique storm dynamics.\n\n## 4. The Simultaneous Hold\n\n> \"Supercell storms always exhibit a counterclockwise rotation in the Northern Hemisphere due to the Coriolis effect.\"\n> \"Supercell storms can exhibit clockwise rotation in the Northern Hemisphere under certain conditions, such as in the presence of strong environmental shear or unique storm dynamics.\"\n> \"Both are true simultaneously.\"\n\n- **(A) Compromise**: In some cases, supercell storms may rotate counterclockwise, while in others they may rotate clockwise depending on specific atmospheric conditions.\n- **(B) Synthesis**: Supercell storms primarily rotate counterclockwise, but occasionally they can rotate clockwise due to rare atmospheric phenomena.\n- **(C) Paradox** (model's own honest assessment: genuine): Both supercell storms rotate counterclockwise due to the Coriolis effect and can also rotate clockwise under specific conditions; the theory must contain both.\n\nCompromise (A) fails because it suggests a clear distinction between the two types of rotation, while synthesis (B) implies a predominance of one rotation over the other, ignoring the validity of both states occurring simultaneously. (C) holds as both rotations can occur in the same storm system, depending on the atmospheric dynamics at play.\n\n## 5. The Hypothesis (The Third Thing)\n\n1. **Simultaneous-hold sentence (required):** Both counterclockwise and clockwise rotations of supercell storms are true simultaneously for the same storm; the theory must contain both.\n2. **Falsifiable prediction:** If both supercell storms exhibit counterclockwise and clockwise rotations simultaneously, then we should observe instances of supercells producing tornadoes with both rotational characteristics in the same atmospheric conditions, which would not be predicted by either truth held alone.\n\n## 6. Novelty & Testability Self-Critique\n\n- **Tension score (1-5)**: 4 — The inversion challenges a widely accepted understanding of storm dynamics, making it a significant premise in meteorology.\n- **Testability**: Field observations and radar data could confirm or refute the occurrence of clockwise rotating supercells in the Northern Hemisphere under specific conditions.\n- **Known prior art**: Research has documented instances of supercells exhibiting unusual rotation patterns, but specific studies may need verification.\n- **Confidence this is worth a researcher's time**: Medium; while the phenomenon is documented, the conditions leading to clockwise rotation need further exploration.\n\n## 7. If This Doesn't Hold\n\nThe most likely reason this turns out to be a compromise or synthesis is that the conditions for clockwise rotation are too rare or poorly understood, leading to a misinterpretation of storm behavior.\n\n## Search Queries\n\n1. \"supercell storm rotation theory\"\n2. \"supercell dynamics by Dr. Charles Doswell\"\n3. \"Coriolis effect in supercell storms\"\n4. \"Mesocyclone formation and supercell rotation\"\n5. \"supercell storm research frameworks\"\n",
+    "verification_filename": "2026-08-31-janusian-meteorology-verification.md",
+    "verification_content": "# Verification: Janusian — Meteorology — supercell storm rotation\n\n**Verifies**: `hypotheses/2026-08-31-janusian-meteorology.md`\n**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)\n\n## Verdict: **COLLISION**\n\n## Queries\n- `supercell storm rotation theory`\n- `supercell dynamics by Dr. Charles Doswell`\n- `Coriolis effect in supercell storms`\n- `Mesocyclone formation and supercell rotation`\n- `supercell storm research frameworks`\n\n## What was found\nSupercell thunderstorms are characterized by a persistent rotating updraft known as a mesocyclone, which typically rotates counterclockwise in the Northern Hemisphere due to the Coriolis effect. ([vortexintel.app](https://vortexintel.app/explained/supercell?utm_source=openai)) While most tornadoes associated with supercells also rotate counterclockwise, rare instances of clockwise (anticyclonic) tornadoes have been observed, but these are uncommon. ([weather.com](https://weather.com/science/weather-explainers/news/2026-03-13-ask-a-met-how-do-tornadoes-work?utm_source=openai)) The prevailing scientific understanding does not support the simultaneous existence of both counterclockwise and clockwise rotations within the same supercell storm.\n\n## Reasoning\nThe hypothesis suggests that a single supercell storm can exhibit both counterclockwise and clockwise rotations simultaneously, which contradicts established meteorological principles. The mesocyclone's rotation direction is determined by large-scale atmospheric dynamics, and the occurrence of both rotational directions within the same storm is not supported by current scientific evidence.\n",
+    "refutation_filename": null,
+    "refutation_content": null,
+    "refutation_independently_confirmed": false
+  },
+  {
+    "key": "2026-08-31-janusian-pharmacology",
+    "mode": "janusian",
+    "source": null,
+    "domains": [
+      "Pharmacology — drug receptor binding kinetics"
+    ],
+    "verdict": "ADJACENT_ACTIVE",
+    "points": 30,
+    "badges": [
+      "🎭 Janusian",
+      "🗺️ Frontier Research Group"
+    ],
+    "breakdown": [
+      "Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5",
+      "Phase 2 ADJACENT_ACTIVE: +30"
+    ],
+    "held_out_reason": null,
+    "tier_rank": 2,
+    "tier_label": "🗺️ Verified, Unrefuted",
+    "pair_type": null,
+    "refutation_gradient_pct": null,
+    "refutation_lens_version": null,
+    "notes": "The search results reveal active research on models that integrate multiple factors influencing drug-receptor interactions, aligning with the core claim that both concentration-affinity and multi-factor models can simultaneously describe drug binding kinetics. These findings suggest that the hypothesis is situated within an active and relevant research area.",
+    "self_reported_distance": null,
+    "self_reported_tension": 4,
+    "hypothesis_filename": "2026-08-31-janusian-pharmacology.md",
+    "hypothesis_content": "# Janusian Hypothesis: Pharmacology — drug receptor binding kinetics\n\n**Generated**: 2026-08-31\n**Framework**: UMPF Janusian Hypothesis Engine (Exponent Labs LLC)\n\n---\n\n## 1. The Domain\n\nIn pharmacology, drug receptor binding kinetics refers to the study of how drugs interact with their target receptors, including the rates of association and dissociation, which ultimately affect the drug's efficacy and duration of action.\n\n## 2. The Proposition\n\nThe rate at which a drug binds to its receptor is determined solely by the concentration of the drug and the affinity of the drug for the receptor.\n\n## 3. The Inversion\n\nThe exact opposite is true: The rate at which a drug binds to its receptor is not solely determined by the concentration of the drug or the affinity of the drug for the receptor; other factors also play a critical role.\n\n## 4. The Simultaneous Hold\n\n> \"The rate at which a drug binds to its receptor is determined solely by the concentration of the drug and the affinity of the drug for the receptor.\"\n> \"The rate at which a drug binds to its receptor is not solely determined by the concentration of the drug or the affinity of the drug for the receptor; other factors also play a critical role.\"\n> \"Both are true simultaneously.\"\n\n- **(A) Compromise**: The binding rate can vary depending on the specific conditions, such as the presence of other molecules or the cellular environment.\n- **(B) Synthesis**: The binding kinetics can be simplified to a model where concentration and affinity are the primary determinants, while other factors are secondary influences.\n- **(C) Paradox** (model's own honest assessment: genuine): Both the concentration-affinity model and the multi-factor model of drug binding kinetics are true simultaneously for the same drug-receptor interaction; the theory must contain both.\n\nThe compromise fails because it suggests a hierarchy of influences that does not account for scenarios where both concentration-affinity and additional factors equally impact binding kinetics at the same time; thus, (C) holds for the same instance.\n\n## 5. The Hypothesis (The Third Thing)\n\n1. **Simultaneous-hold sentence (required):** Both the concentration-affinity model and the multi-factor model of drug binding kinetics are true simultaneously for the same drug-receptor interaction; the theory must contain both.\n2. **Falsifiable prediction:** If both the concentration-affinity model and the multi-factor model hold simultaneously, then varying the concentration of a drug while altering other environmental factors should yield unpredictable changes in binding kinetics, which would not be predicted by either model held alone.\n\n## 6. Novelty & Testability Self-Critique\n\n- **Tension score (1-5)**: 4 — The assumption that binding kinetics are solely determined by concentration and affinity is foundational in pharmacology and challenges to it are often met with resistance.\n- **Testability**: Experimental studies measuring binding kinetics under varying concentrations while manipulating environmental factors could confirm or refute this hypothesis.\n- **Known prior art**: Not verified.\n- **Confidence this is worth a researcher's time**: Medium, as the interplay of various factors in drug binding is a developing area and may not be fully understood yet.\n\n## 7. If This Doesn't Hold\n\nThe most likely reason this turns out to be a compromise or synthesis wearing paradox's clothing is that the influence of additional factors may not be sufficiently recognized or quantified in existing models.\n\n## Search Queries\n\n1. \"drug receptor binding kinetics theory\"\n2. \"multi-factor model drug binding\"\n3. \"concentration affinity drug receptor interaction\"\n4. \"pharmacology drug binding studies\"\n5. \"drug receptor kinetics named theory OR framework OR researcher\"\n",
+    "verification_filename": "2026-08-31-janusian-pharmacology-verification.md",
+    "verification_content": "# Verification: Janusian — Pharmacology — drug receptor binding kinetics\n\n**Verifies**: `hypotheses/2026-08-31-janusian-pharmacology.md`\n**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)\n\n## Verdict: **ADJACENT_ACTIVE**\n\n## Queries\n- `drug receptor binding kinetics theory`\n- `multi-factor model drug binding`\n- `concentration affinity drug receptor interaction`\n- `pharmacology drug binding studies`\n- `drug receptor kinetics named theory OR framework OR researcher`\n\n## What was found\nAn extended model incorporating target turnover, ligand-target complex kinetics, and binding properties to describe drug-receptor interactions. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/34888714/?utm_source=openai))\n\nA multi-scale modeling approach to predict drug efficacy by analyzing drug binding kinetics. ([springerlink.fh-diploma.de](https://springerlink.fh-diploma.de/article/10.1007/s00018-019-03376-y?utm_source=openai))\n\nA comprehensive analysis of the influence of drug binding kinetics on drug action at molecular and systems levels. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/23478789/?utm_source=openai))\n\n## Reasoning\nThe search results reveal active research on models that integrate multiple factors influencing drug-receptor interactions, aligning with the core claim that both concentration-affinity and multi-factor models can simultaneously describe drug binding kinetics. These findings suggest that the hypothesis is situated within an active and relevant research area.\n",
+    "refutation_filename": null,
+    "refutation_content": null,
+    "refutation_independently_confirmed": false
+  },
+  {
+    "key": "2026-08-31-janusian-philosophy",
+    "mode": "janusian",
+    "source": null,
+    "domains": [
+      "Philosophy — epistemology — justified true belief"
+    ],
+    "verdict": "COLLISION",
+    "points": -5,
+    "badges": [
+      "🎭 Janusian",
+      "🏛️ Established Department",
+      "⚠️ Failed Honesty Check"
+    ],
+    "breakdown": [
+      "Phase 1 self-report (5/5): not scored — near-zero predictive signal, see Failure 5",
+      "Phase 2 COLLISION (genuine): +5",
+      "Mechanical honesty check failed twice (disguised compromise, uncorrected): -10"
+    ],
+    "held_out_reason": null,
+    "tier_rank": 5,
+    "tier_label": "💀 Refuted / Rejected",
+    "pair_type": null,
+    "refutation_gradient_pct": null,
+    "refutation_lens_version": null,
+    "notes": "The hypothesis posits a novel integration of the JTB theory with the concept of knowledge independent of justification or truth. However, the JTB theory already encompasses the idea that knowledge requires justification and truth, and the Gettier problem specifically addresses scenarios where justified true beliefs do not constitute knowledge. Therefore, the hypothesis does not introduce a new or unrecognized connection within the field of epistemology.",
+    "self_reported_distance": null,
+    "self_reported_tension": 5,
+    "hypothesis_filename": "2026-08-31-janusian-philosophy.md",
+    "hypothesis_content": "# Janusian Hypothesis: Philosophy — epistemology — justified true belief\n\n**Generated**: 2026-08-31\n**Framework**: UMPF Janusian Hypothesis Engine (Exponent Labs LLC)\n\n---\n\n## 1. The Domain\n\nIn epistemology, justified true belief is a traditional model for understanding knowledge, asserting that for someone to know a proposition, it must be true, they must believe it, and they must have justification for that belief.\n\n## 2. The Proposition\n\nKnowledge is defined as justified true belief, meaning that a belief must be both true and justified to count as knowledge.\n\n## 3. The Inversion\n\nThe exact opposite is true: Knowledge is not defined as justified true belief, implying that a belief can be considered knowledge without being justified or true.\n\n## 4. The Simultaneous Hold\n\n> \"Knowledge is defined as justified true belief, meaning that a belief must be both true and justified to count as knowledge.\"\n> \"Knowledge is not defined as justified true belief, implying that a belief can be considered knowledge without being justified or true.\"\n> \"Both are true simultaneously.\"\n\n- **(A) Compromise**: It depends on the context; sometimes knowledge can be justified true belief, while in other contexts it may not require justification or truth.\n- **(B) Synthesis**: Knowledge can be seen as a fluid concept that incorporates both justified true belief and other forms of belief that do not require justification or truth.\n- **(C) Paradox** (model's own honest assessment: genuine): Both knowledge as justified true belief and knowledge as independent of justification or truth are true simultaneously; the theory must contain both.\n\nCompromise (A) and synthesis (B) fail because they resolve the contradiction rather than preserving it; both propositions must coexist without dilution, demonstrating the complexity of knowledge.\n\n## 5. The Hypothesis (The Third Thing)\n\n1. **Simultaneous-hold sentence (required):** Both knowledge as justified true belief and knowledge as independent of justification or truth are true simultaneously for the same instance; the theory must contain both.\n2. **Falsifiable prediction:** If both knowledge as justified true belief and knowledge as independent of justification or truth hold simultaneously, then we should find instances where beliefs are accepted as knowledge despite lacking justification or truth, which would not be predicted by either truth held alone.\n\n## 6. Novelty & Testability Self-Critique\n\n- **Tension score (1-5)**: 5 — The inversion challenges a foundational premise of epistemology, as justified true belief has been a long-standing definition of knowledge.\n- **Testability**: Empirical studies on cases of belief acceptance in knowledge claims, particularly in philosophical debates or real-world applications of knowledge, could confirm or refute this hypothesis.\n- **Known prior art**: Not verified.\n- **Confidence this is worth a researcher's time**: High, as the tension between these two definitions of knowledge has significant implications for epistemology and philosophical discourse.\n\n## 7. If This Doesn't Hold\n\nThe most likely reason this turns out to be a compromise or synthesis is that the definitions of knowledge may not be as rigidly opposed as they appear, allowing for a more nuanced understanding of knowledge.\n\n## Search Queries\n\n1. \"justified true belief theory\"\n2. \"Gettier problem epistemology\"\n3. \"knowledge as justified true belief\"\n4. \"epistemology theories of knowledge\"\n5. \"Plato's definition of knowledge\"\n\n---\n\n**⚠️ Automated check failed twice:** no Search Query targets a specific named theory, framework, or researcher, even after one corrective retry. Verification may miss an existing collision with real prior art that a more specific search would have found — read this hypothesis's verdict with that in mind.\n",
+    "verification_filename": "2026-08-31-janusian-philosophy-verification.md",
+    "verification_content": "# Verification: Janusian — Philosophy — epistemology — justified true belief\n\n**Verifies**: `hypotheses/2026-08-31-janusian-philosophy.md`\n**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)\n\n## Verdict: **COLLISION**\n\n## Queries\n- `justified true belief theory`\n- `Gettier problem epistemology`\n- `knowledge as justified true belief`\n- `epistemology theories of knowledge`\n- `Plato's definition of knowledge`\n\n## What was found\nThe tripartite analysis of knowledge as justified true belief (JTB) is a foundational concept in epistemology, stating that for someone to know a proposition, it must be true, they must believe it, and they must be justified in believing it. This definition has been central to discussions in epistemology, as detailed in the Stanford Encyclopedia of Philosophy. However, Edmund Gettier's 1963 paper \"Is Justified True Belief Knowledge?\" presented cases where individuals had justified true beliefs that were not knowledge, challenging the adequacy of the JTB definition. This issue is further explored in the Stanford Encyclopedia of Philosophy's entry on the analysis of knowledge.\n\n## Reasoning\nThe hypothesis posits a novel integration of the JTB theory with the concept of knowledge independent of justification or truth. However, the JTB theory already encompasses the idea that knowledge requires justification and truth, and the Gettier problem specifically addresses scenarios where justified true beliefs do not constitute knowledge. Therefore, the hypothesis does not introduce a new or unrecognized connection within the field of epistemology.\n",
+    "refutation_filename": null,
+    "refutation_content": null,
+    "refutation_independently_confirmed": false
+  },
+  {
+    "key": "2026-08-31-janusian-social-psychology",
+    "mode": "janusian",
+    "source": null,
+    "domains": [
+      "Social psychology — conformity and groupthink"
+    ],
+    "verdict": "ADJACENT_ACTIVE",
+    "points": 5,
+    "badges": [
+      "🎭 Janusian",
+      "🗺️ Frontier Research Group",
+      "⚠️ Failed Honesty Check",
+      "💀 Refuted"
+    ],
+    "breakdown": [
+      "Phase 1 self-report (5/5): not scored — near-zero predictive signal, see Failure 5",
+      "Phase 2 ADJACENT_ACTIVE: +30",
+      "Mechanical honesty check failed twice (disguised compromise, uncorrected): -10",
+      "Adversarial refutation REFUTED, unanimous (0-of-3 survive): -15",
+      "  independently confirmed (3 separate agents, full agreement)"
+    ],
+    "held_out_reason": null,
+    "tier_rank": 5,
+    "tier_label": "💀 Refuted / Rejected",
+    "pair_type": null,
+    "refutation_gradient_pct": 0,
+    "refutation_lens_version": "2026-08-31-v3.1",
+    "notes": "The search results indicate that existing research addresses the simultaneous occurrence of conformity and resistance to group norms, aligning with the hypothesis's core claim. This suggests that the proposed theory is not novel but rather an extension of current understanding in social psychology.",
+    "self_reported_distance": null,
+    "self_reported_tension": 5,
+    "hypothesis_filename": "2026-08-31-janusian-social-psychology.md",
+    "hypothesis_content": "# Janusian Hypothesis: Social psychology — conformity and groupthink\n\n**Generated**: 2026-08-31\n**Framework**: UMPF Janusian Hypothesis Engine (Exponent Labs LLC)\n\n---\n\n## 1. The Domain\n\nSocial psychology studies how individuals' thoughts, feelings, and behaviors are influenced by the presence of others. Conformity refers to the tendency to align one's attitudes and behaviors with those of a group, while groupthink is a phenomenon where the desire for harmony or conformity in a group results in irrational or dysfunctional decision-making.\n\n## 2. The Proposition\n\nIndividuals conform to group norms and opinions, leading to a consensus that reflects the majority view.\n\n## 3. The Inversion\n\nThe exact opposite is true: Individuals resist group norms and opinions, leading to a diversity of views that reflects individual beliefs.\n\n## 4. The Simultaneous Hold\n\n> \"Individuals conform to group norms and opinions, leading to a consensus that reflects the majority view.\"\n> \"Individuals resist group norms and opinions, leading to a diversity of views that reflects individual beliefs.\"\n> \"Both are true simultaneously.\"\n\n- **(A) Compromise**: It depends on the context; sometimes individuals conform, and other times they resist, depending on the situation.\n- **(B) Synthesis**: In many cases, individuals conform to group norms while still holding personal beliefs, creating a blend of conformity and individuality.\n- **(C) Paradox** (model's own honest assessment: genuine): Both conformity and resistance to group norms are true simultaneously for the same individual; the theory must contain both.\n\nCompromise (A) fails because it suggests a situational dependence rather than a simultaneous occurrence, while synthesis (B) implies a blending that does not capture the essence of both phenomena being true at once for the same instance.\n\n## 5. The Hypothesis (The Third Thing)\n\n1. **Simultaneous-hold sentence (required):** Both conformity to group norms and resistance to those norms are true simultaneously for the same individual; the theory must contain both.\n2. **Falsifiable prediction:** If both conformity and resistance to group norms hold simultaneously, then individuals will exhibit behaviors that align with group norms in some situations while openly challenging them in others, leading to unpredictable group dynamics that would not be predicted by either conformity or resistance alone.\n\n## 6. Novelty & Testability Self-Critique\n\n- **Tension score (1-5)**: 5 — The inversion challenges a foundational assumption in social psychology regarding the nature of group influence and individual agency.\n- **Testability**: Experimental studies on group dynamics and decision-making can be designed to observe instances where individuals conform and resist simultaneously, such as in jury deliberations or group discussions.\n- **Known prior art**: Not verified; however, some literature discusses the duality of individual agency within group contexts, but specific contradictions may not be explicitly stated.\n- **Confidence this is worth a researcher's time**: High; the interplay of conformity and resistance is a well-explored area in social psychology, suggesting a rich field for exploration.\n\n## 7. If This Doesn't Hold\n\nThe most likely reason this turns out to be a compromise or synthesis is that individuals may conform in some contexts while resisting in others, without a true simultaneous occurrence of both behaviors.\n\n## Search Queries\n\n1. \"Asch conformity experiments\"\n2. \"Janis groupthink theory\"\n3. \"social influence conformity research\"\n4. \"individuality vs conformity social psychology\"\n5. \"Cialdini principles of influence\"\n\n---\n\n**⚠️ Automated check failed twice:** no Search Query targets a specific named theory, framework, or researcher, even after one corrective retry. Verification may miss an existing collision with real prior art that a more specific search would have found — read this hypothesis's verdict with that in mind.\n",
+    "verification_filename": "2026-08-31-janusian-social-psychology-verification.md",
+    "verification_content": "# Verification: Janusian — Social psychology — conformity and groupthink\n\n**Verifies**: `hypotheses/2026-08-31-janusian-social-psychology.md`\n**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)\n\n## Verdict: **ADJACENT_ACTIVE**\n\n## Queries\n- `Asch conformity experiments`\n- `Janis groupthink theory`\n- `social influence conformity research`\n- `individuality vs conformity social psychology`\n- `Cialdini principles of influence`\n\n## What was found\nResearch on social psychology has extensively examined the interplay between conformity and resistance to group norms. Solomon Asch's experiments demonstrated that individuals often conform to group judgments, even when they are incorrect, due to normative social influence—the desire to fit in and avoid rejection. Conversely, Irving Janis's theory of groupthink highlights how cohesive groups may suppress dissent to maintain harmony, leading to poor decision-making. Studies have also explored the dynamics of conformity and nonconformity in opinion formation, revealing that individuals can simultaneously conform to group norms while resisting them, resulting in complex group behaviors. ([cognitivepsychology.com](https://www.cognitivepsychology.com/Asch_Conformity_Experiment?utm_source=openai))\n\n## Reasoning\nThe search results indicate that existing research addresses the simultaneous occurrence of conformity and resistance to group norms, aligning with the hypothesis's core claim. This suggests that the proposed theory is not novel but rather an extension of current understanding in social psychology.\n",
+    "refutation_filename": "refutations/2026-08-31-janusian-social-psychology-refutation.md",
+    "refutation_content": "# Adversarial Refutation: Janusian — Social psychology — conformity and groupthink\n\n**Original**: `hypotheses/2026-08-31-janusian-social-psychology.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 0 of 3 survive → **REFUTED**\n\n- **Coherence — REFUTED.** The core claim rests on the term 'conformity,' which is used in both contexts of group norms and individual resistance. In social psychology, conformity typically refers to the alignment of individual behavior with group norms, while resistance implies a deviation from those norms. These are not merely different mechanisms but represent fundamentally different behaviors. Therefore, the claim does not establish a coherent structural mapping between the two concepts, as it conflates distinct referents: conformity as alignment and resistance as deviation. This equivocation undermines the claim's coherence.\n- **Testability — REFUTED.** The core claim of the hypothesis does not specify a named experiment, dataset, or theorem that operationalizes the prediction regarding simultaneous conformity and resistance. While the Asch conformity experiments and Janis's groupthink theory are mentioned, they are not directly linked to a specific, testable prediction that can be clearly measured or rejected. The prediction itself remains vague, lacking a defined metric or rejection threshold, which makes it difficult to conduct a clean experiment that could yield a definitive 'no.' Therefore, the claim is not sufficiently operationalized for testability.\n- **Triviality — REFUTED.** The core claim states that both conformity and resistance to group norms can coexist within the same individual, which is a concept that can be generalized to many complex systems involving social dynamics. The phrase being tested for genericness is: \"Both conformity to group norms and resistance to those norms are true simultaneously for the same individual; the theory must contain both.\" This statement describes a fundamental aspect of human behavior that can apply to various social contexts, making it a trivial observation rather than a novel insight. Therefore, the claim does not survive the triviality lens.\n\n## No steelman offered\n\nAll three lenses independently converged on REFUTED for this case. If revisited, it would need a genuinely tighter formulation, not a restatement of the same claim.\n",
+    "refutation_independently_confirmed": true
+  },
+  {
+    "key": "2026-08-31-janusian-sociology",
+    "mode": "janusian",
+    "source": null,
+    "domains": [
+      "Sociology — social network diffusion of innovation"
+    ],
+    "verdict": "ADJACENT_ACTIVE",
+    "points": 30,
+    "badges": [
+      "🎭 Janusian",
+      "🗺️ Frontier Research Group"
+    ],
+    "breakdown": [
+      "Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5",
+      "Phase 2 ADJACENT_ACTIVE: +30"
+    ],
+    "held_out_reason": null,
+    "tier_rank": 2,
+    "tier_label": "🗺️ Verified, Unrefuted",
+    "pair_type": null,
+    "refutation_gradient_pct": null,
+    "refutation_lens_version": null,
+    "notes": "The search results reveal active research on the diffusion of innovations through social networks, focusing on both early and late adopters. These studies provide insights into how innovations spread within social networks and the dynamics between different adopter categories. This indicates that the hypothesis is situated within an active and relevant research area.",
+    "self_reported_distance": null,
+    "self_reported_tension": 4,
+    "hypothesis_filename": "2026-08-31-janusian-sociology.md",
+    "hypothesis_content": "# Janusian Hypothesis: Sociology — social network diffusion of innovation\n\n**Generated**: 2026-08-31\n**Framework**: UMPF Janusian Hypothesis Engine (Exponent Labs LLC)\n\n---\n\n## 1. The Domain\n\nIn sociology, the diffusion of innovation refers to how new ideas, technologies, or practices spread within and between social networks. This process is influenced by various factors such as communication channels, social systems, and the characteristics of the innovation itself.\n\n## 2. The Proposition\n\nInnovations spread through social networks primarily via early adopters who influence the majority.\n\n## 3. The Inversion\n\nThe exact opposite is true: Innovations spread through social networks primarily via late adopters who resist change until they see widespread acceptance.\n\n## 4. The Simultaneous Hold\n\n> \"Innovations spread through social networks primarily via early adopters who influence the majority.\"\n> \"Innovations spread through social networks primarily via late adopters who resist change until they see widespread acceptance.\"\n> \"Both are true simultaneously.\"\n\n- **(A) Compromise**: It depends on the context; sometimes early adopters are crucial, while other times late adopters play a significant role.\n- **(B) Synthesis**: The spread of innovation is a gradual process that balances the influence of both early and late adopters over time.\n- **(C) Paradox** (model's own honest assessment: genuine): Both early adopters and late adopters are crucial for the diffusion of innovation simultaneously; the theory must contain both.\n\nCompromise (A) fails because it suggests a context-dependent resolution rather than a simultaneous truth, and synthesis (B) averages the roles without acknowledging their contradictory nature; both roles are essential in the same diffusion process, not just in separate contexts.\n\n## 5. The Hypothesis (The Third Thing)\n\n1. **Simultaneous-hold sentence (required):** Both early adopters and late adopters are true simultaneously for the same diffusion process; the theory must contain both.\n2. **Falsifiable prediction:** If both early adopters and late adopters hold true simultaneously, then we would observe instances where innovations gain traction due to late adopters mimicking early adopters' behaviors after initial resistance, leading to a sudden surge in adoption rates that would not be predicted by focusing solely on early adopters.\n\n## 6. Novelty & Testability Self-Critique\n\n- **Tension score (1-5)**: 4 — The assumption about early adopters being the primary drivers of innovation diffusion is foundational in sociology, making the inversion significant and challenging to accept.\n- **Testability**: Data from longitudinal studies tracking the adoption rates of innovations across different social networks could confirm or refute this hypothesis, particularly focusing on the timing and influence of both early and late adopters.\n- **Known prior art**: Not verified.\n- **Confidence this is worth a researcher's time**: Medium, as the interplay between early and late adopters is a nuanced area that requires further exploration.\n\n## 7. If This Doesn't Hold\n\nThe most likely reason this turns out to be a compromise or synthesis is that the roles of early and late adopters may not be as distinctly separate as proposed, leading to a blended influence that does not support a true paradox.\n\n## Search Queries\n\n1. \"diffusion of innovation sociology\"\n2. \"early adopters vs late adopters in innovation\"\n3. \"social network influence on innovation adoption\"\n4. \"theory of diffusion of innovations\"\n5. \"Everett Rogers diffusion theory\"\n",
+    "verification_filename": "2026-08-31-janusian-sociology-verification.md",
+    "verification_content": "# Verification: Janusian — Sociology — social network diffusion of innovation\n\n**Verifies**: `hypotheses/2026-08-31-janusian-sociology.md`\n**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)\n\n## Verdict: **ADJACENT_ACTIVE**\n\n## Queries\n- `diffusion of innovation sociology`\n- `early adopters vs late adopters in innovation`\n- `social network influence on innovation adoption`\n- `theory of diffusion of innovations`\n- `Everett Rogers diffusion theory`\n\n## What was found\nGondal's 2023 review discusses how social networks influence innovation diffusion, highlighting the roles of early and late adopters. ([doi.org](https://doi.org/10.1111%2Fsoc4.13084?utm_source=openai)) Valente's 1996 study introduces a social network threshold model, categorizing adopters into early adopters, early majority, late majority, and laggards. ([sciencedirect.com](https://www.sciencedirect.com/science/article/pii/0378873395002561?utm_source=openai)) Memedovich et al.'s 2024 study applies diffusion of innovations framework to characterize diffusion groups and effectively reach late adopters. ([doi.org](https://doi.org/10.1136/bmjph-2024-000926?utm_source=openai))\n\n## Reasoning\nThe search results reveal active research on the diffusion of innovations through social networks, focusing on both early and late adopters. These studies provide insights into how innovations spread within social networks and the dynamics between different adopter categories. This indicates that the hypothesis is situated within an active and relevant research area.\n",
+    "refutation_filename": null,
+    "refutation_content": null,
+    "refutation_independently_confirmed": false
+  },
+  {
+    "key": "2026-08-31-janusian-textile-engineering",
+    "mode": "janusian",
+    "source": null,
+    "domains": [
+      "Textile engineering — weave structure and tensile strength"
+    ],
+    "verdict": "ADJACENT_ACTIVE",
+    "points": 5,
+    "badges": [
+      "🎭 Janusian",
+      "🗺️ Frontier Research Group",
+      "⚠️ Failed Honesty Check",
+      "💀 Refuted"
+    ],
+    "breakdown": [
+      "Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5",
+      "Phase 2 ADJACENT_ACTIVE: +30",
+      "Mechanical honesty check failed twice (disguised compromise, uncorrected): -10",
+      "Adversarial refutation REFUTED, unanimous (0-of-3 survive): -15",
+      "  independently confirmed (3 separate agents, full agreement)"
+    ],
+    "held_out_reason": null,
+    "tier_rank": 5,
+    "tier_label": "💀 Refuted / Rejected",
+    "pair_type": null,
+    "refutation_gradient_pct": 0,
+    "refutation_lens_version": "2026-08-31-v3.1",
+    "notes": "The study provides insights into how various weave structures impact tensile strength, aligning with the hypothesis's focus on the relationship between weave structure and tensile strength. However, it does not specifically address the simultaneous occurrence of both stronger and weaker weave structures exhibiting high tensile strength, nor does it predict scenarios where a weaker weave outperforms a stronger one in tensile strength. Therefore, while the research is relevant, it does not directly support the hypothesis's core claim.",
+    "self_reported_distance": null,
+    "self_reported_tension": 4,
+    "hypothesis_filename": "2026-08-31-janusian-textile-engineering.md",
+    "hypothesis_content": "# Janusian Hypothesis: Textile engineering — weave structure and tensile strength\n\n**Generated**: 2026-08-31\n**Framework**: UMPF Janusian Hypothesis Engine (Exponent Labs LLC)\n\n---\n\n## 1. The Domain\n\nIn textile engineering, the weave structure of a fabric significantly influences its tensile strength, which is the ability of the material to withstand tension without breaking.\n\n## 2. The Proposition\n\nThe weave structure of a fabric determines its tensile strength in a linear manner, meaning that a stronger weave always results in higher tensile strength.\n\n## 3. The Inversion\n\nThe exact opposite is true: The weave structure of a fabric does not determine its tensile strength in a linear manner; a weaker weave can sometimes exhibit higher tensile strength due to other material properties or treatments.\n\n## 4. The Simultaneous Hold\n\n> \"The weave structure of a fabric determines its tensile strength in a linear manner, meaning that a stronger weave always results in higher tensile strength.\"\n> \"The weave structure of a fabric does not determine its tensile strength in a linear manner; a weaker weave can sometimes exhibit higher tensile strength due to other material properties or treatments.\"\n> \"Both are true simultaneously.\"\n\n- **(A) Compromise**: The relationship between weave structure and tensile strength depends on various factors, such as fiber type and treatment, so both can apply differently in various cases.\n- **(B) Synthesis**: The weave structure and tensile strength can be understood as two separate factors that influence each other, but one is not inherently stronger than the other in all situations.\n- **(C) Paradox** (model's own honest assessment: genuine): Both the weave structure and tensile strength are true simultaneously for the same fabric; the theory must contain both.\n\nThe compromise fails because it suggests a context-split where one factor is dependent on another, while the synthesis does not address the simultaneous truth of both statements regarding the same instance of fabric; thus, the paradox holds.\n\n## 5. The Hypothesis (The Third Thing)\n\n1. **Simultaneous-hold sentence (required):** Both a stronger weave structure and a weaker weave structure can exhibit high tensile strength simultaneously for the same fabric; the theory must contain both.\n2. **Falsifiable prediction:** If both the weave structure and tensile strength hold simultaneously, then specific fabrics could be tested to show that a weaker weave can outperform a stronger weave in tensile strength, which would not be predicted by either truth held alone.\n\n## 6. Novelty & Testability Self-Critique\n\n- **Tension score (1-5)**: 4 — The assumption that weave structure directly determines tensile strength is foundational in textile engineering, making its inversion significant and potentially heretical.\n- **Testability**: Experimental testing of various fabrics with differing weave structures to measure tensile strength under controlled conditions could confirm or disprove this hypothesis.\n- **Known prior art**: Not verified.\n- **Confidence this is worth a researcher's time**: Medium, as while the contradiction is plausible, the existing literature may not explicitly address this nuanced relationship.\n\n## 7. If This Doesn't Hold\n\nThe most likely reason this turns out to be a compromise is that the influence of weave structure on tensile strength may be more complex than initially assumed, leading to a situation where both cannot be true simultaneously in a straightforward manner.\n\n## Search Queries\n\n1. \"textile engineering weave structure tensile strength\"\n2. \"tensile strength in woven fabrics theory\"\n3. \"weave structure tensile strength relationship\"\n4. \"textile engineering researchers on weave and strength\"\n5. \"woven fabric tensile strength named theories\"\n\n---\n\n**⚠️ Automated check failed twice:** no Search Query targets a specific named theory, framework, or researcher, even after one corrective retry. Verification may miss an existing collision with real prior art that a more specific search would have found — read this hypothesis's verdict with that in mind.\n",
+    "verification_filename": "2026-08-31-janusian-textile-engineering-verification.md",
+    "verification_content": "# Verification: Janusian — Textile engineering — weave structure and tensile strength\n\n**Verifies**: `hypotheses/2026-08-31-janusian-textile-engineering.md`\n**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)\n\n## Verdict: **ADJACENT_ACTIVE**\n\n## Queries\n- `textile engineering weave structure tensile strength`\n- `tensile strength in woven fabrics theory`\n- `weave structure tensile strength relationship`\n- `textile engineering researchers on weave and strength`\n- `woven fabric tensile strength named theories`\n\n## What was found\nA study titled 'Materials, Weaving Parameters, and Tensile Responses of Woven Textiles' discusses how different weave structures, such as plain, twill, and satin, influence the tensile strength of fabrics. The research indicates that the tensile strength of woven textiles is affected by the textile structure, material composition, and weaving parameters. ([doi.org](https://doi.org/10.3390/macromol3030037?utm_source=openai))\n\n## Reasoning\nThe study provides insights into how various weave structures impact tensile strength, aligning with the hypothesis's focus on the relationship between weave structure and tensile strength. However, it does not specifically address the simultaneous occurrence of both stronger and weaker weave structures exhibiting high tensile strength, nor does it predict scenarios where a weaker weave outperforms a stronger one in tensile strength. Therefore, while the research is relevant, it does not directly support the hypothesis's core claim.\n",
+    "refutation_filename": "refutations/2026-08-31-janusian-textile-engineering-refutation.md",
+    "refutation_content": "# Adversarial Refutation: Janusian — Textile engineering — weave structure and tensile strength\n\n**Original**: `hypotheses/2026-08-31-janusian-textile-engineering.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 0 of 3 survive → **REFUTED**\n\n- **Coherence — REFUTED.** The core claim relies on the simultaneous existence of both stronger and weaker weave structures exhibiting high tensile strength, which is a nuanced assertion. However, the literature reviewed does not provide evidence for this simultaneous occurrence or the prediction that a weaker weave can outperform a stronger one in tensile strength. The terms 'stronger weave structure' and 'weaker weave structure' do not have clearly defined, consistent meanings across the domains of textile engineering, leading to potential equivocation. Thus, the claim does not survive the coherence lens.\n- **Testability — REFUTED.** The core claim of the hypothesis lacks a specific, operationalized metric for testing the simultaneous occurrence of stronger and weaker weave structures exhibiting high tensile strength. While the study mentioned provides relevant insights into the relationship between weave structure and tensile strength, it does not operationalize the prediction that a weaker weave can outperform a stronger weave in tensile strength. This vagueness renders the hypothesis unfalsifiable as it does not provide a clear experimental design or rejection threshold. Therefore, the claim is refuted on the testability lens.\n- **Triviality — REFUTED.** The core claim states that both stronger and weaker weave structures can exhibit high tensile strength simultaneously, which is a specific assertion about the relationship between weave structure and tensile strength. When stripped of domain-specific vocabulary, the claim reduces to a statement about two structural configurations of a material exhibiting a property (tensile strength) that is typically expected to correlate with one configuration being stronger than the other. This reduction reveals a triviality, as many complex systems can exhibit counterintuitive properties where weaker configurations outperform stronger ones. Therefore, the claim does not survive the triviality lens.\n\n## No steelman offered\n\nAll three lenses independently converged on REFUTED for this case. If revisited, it would need a genuinely tighter formulation, not a restatement of the same claim.\n",
+    "refutation_independently_confirmed": true
+  },
+  {
+    "key": "2026-08-31-janusian-toxicology",
+    "mode": "janusian",
+    "source": null,
+    "domains": [
+      "Toxicology — dose-response curves"
+    ],
+    "verdict": "ADJACENT_ACTIVE",
+    "points": 5,
+    "badges": [
+      "🎭 Janusian",
+      "🗺️ Frontier Research Group",
+      "⚠️ Failed Honesty Check",
+      "💀 Refuted"
+    ],
+    "breakdown": [
+      "Phase 1 self-report (5/5): not scored — near-zero predictive signal, see Failure 5",
+      "Phase 2 ADJACENT_ACTIVE: +30",
+      "Mechanical honesty check failed twice (disguised compromise, uncorrected): -10",
+      "Adversarial refutation REFUTED, unanimous (0-of-3 survive): -15",
+      "  independently confirmed (3 separate agents, full agreement)"
+    ],
+    "held_out_reason": null,
+    "tier_rank": 5,
+    "tier_label": "💀 Refuted / Rejected",
+    "pair_type": null,
+    "refutation_gradient_pct": 0,
+    "refutation_lens_version": "2026-08-31-v3.1",
+    "notes": "The findings support the hypothesis by illustrating that both higher and lower doses can lead to different toxic effects, aligning with the concept of hormesis and the established dose-response relationship in toxicology.",
+    "self_reported_distance": null,
+    "self_reported_tension": 5,
+    "hypothesis_filename": "2026-08-31-janusian-toxicology.md",
+    "hypothesis_content": "# Janusian Hypothesis: Toxicology — dose-response curves\n\n**Generated**: 2026-08-31\n**Framework**: UMPF Janusian Hypothesis Engine (Exponent Labs LLC)\n\n---\n\n## 1. The Domain\n\nIn toxicology, dose-response curves illustrate the relationship between the dose of a substance and the magnitude of its toxic effect on an organism. These curves help researchers understand how varying amounts of a toxin can produce different levels of biological response.\n\n## 2. The Proposition\n\nHigher doses of a toxic substance always lead to greater toxic effects.\n\n## 3. The Inversion\n\nThe exact opposite is true: Lower doses of a toxic substance can lead to greater toxic effects than higher doses.\n\n## 4. The Simultaneous Hold\n\n> \"Higher doses of a toxic substance always lead to greater toxic effects.\"\n> \"Lower doses of a toxic substance can lead to greater toxic effects than higher doses.\"\n> \"Both are true simultaneously.\"\n\n- **(A) Compromise**: The effects of a toxic substance can vary based on the dose, but typically higher doses are more harmful.\n- **(B) Synthesis**: Higher doses generally produce more harm, but there are exceptions where lower doses can be equally or more harmful due to various factors.\n- **(C) Paradox** (model's own honest assessment: genuine): Both higher doses can lead to greater toxic effects and lower doses can also lead to greater toxic effects simultaneously; the theory must contain both.\n\nCompromise (A) fails because it suggests a general trend without acknowledging the specific instances where low doses can be more harmful, and synthesis (B) averages the two approaches without recognizing the inherent contradiction in the same instance.\n\n## 5. The Hypothesis (The Third Thing)\n\n1. **Simultaneous-hold sentence (required):** Both higher doses of a toxic substance produce greater toxic effects and lower doses can produce greater toxic effects simultaneously for the same exposure; the theory must contain both.\n2. **Falsifiable prediction:** If both higher doses and lower doses can lead to greater toxic effects simultaneously, then specific biological responses should show variability in toxicity that cannot be predicted by dose alone, revealing unexpected toxicity patterns based on factors like individual susceptibility or environmental conditions.\n\n## 6. Novelty & Testability Self-Critique\n\n- **Tension score (1-5)**: 5 — The assumption that higher doses always lead to greater effects is foundational in toxicology and inverting it challenges established paradigms.\n- **Testability**: Experimental studies on dose-response relationships could confirm or refute this hypothesis by measuring the effects of varying doses on different organisms under controlled conditions.\n- **Known prior art**: Not verified; however, concepts like hormesis suggest that low doses of certain toxins can have beneficial effects, which aligns with this contradiction.\n- **Confidence this is worth a researcher's time**: High; the contradiction is well-supported by emerging research in toxicology.\n\n## 7. If This Doesn't Hold\n\nThe most likely reason this turns out to be a compromise is that the effects of dose may vary significantly based on individual biological differences or specific environmental contexts, which may not be adequately captured in the general assumption.\n\n## Search Queries\n\n1. \"dose-response relationship toxicology theory\"\n2. \"hormesis theory toxicology\"\n3. \"threshold model dose-response curves\"\n4. \"linear no-threshold model toxicology\"\n5. \"Paracelsus toxicity dose-response framework\"\n\n---\n\n**⚠️ Automated check failed twice:** no Search Query targets a specific named theory, framework, or researcher, even after one corrective retry. Verification may miss an existing collision with real prior art that a more specific search would have found — read this hypothesis's verdict with that in mind.\n",
+    "verification_filename": "2026-08-31-janusian-toxicology-verification.md",
+    "verification_content": "# Verification: Janusian — Toxicology — dose-response curves\n\n**Verifies**: `hypotheses/2026-08-31-janusian-toxicology.md`\n**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)\n\n## Verdict: **ADJACENT_ACTIVE**\n\n## Queries\n- `dose-response relationship toxicology theory`\n- `hormesis theory toxicology`\n- `threshold model dose-response curves`\n- `linear no-threshold model toxicology`\n- `Paracelsus toxicity dose-response framework`\n\n## What was found\nThe concept of hormesis describes a biphasic dose-response relationship, where low doses of a substance can stimulate beneficial effects, while higher doses are inhibitory or toxic. This phenomenon has been observed across various biological systems and is considered a general biological principle. ([pubs.acs.org](https://pubs.acs.org/doi/10.1021/acs.chemrestox.2c00032?utm_source=openai)) Additionally, the dose-response relationship in toxicology is fundamental, correlating exposures with changes in body functions or health, and is based on observed data from experimental studies. ([chem.libretexts.org](https://chem.libretexts.org/Bookshelves/Environmental_Chemistry/Toxicology_MSDT/6%3A_Principles_of_Toxicology/Section_2%3A_Dose_and_Dose_Response/2.2%3A_The_Dose_Response_Relationship?utm_source=openai))\n\n## Reasoning\nThe findings support the hypothesis by illustrating that both higher and lower doses can lead to different toxic effects, aligning with the concept of hormesis and the established dose-response relationship in toxicology.\n",
+    "refutation_filename": "refutations/2026-08-31-janusian-toxicology-refutation.md",
+    "refutation_content": "# Adversarial Refutation: Janusian — Toxicology — dose-response curves\n\n**Original**: `hypotheses/2026-08-31-janusian-toxicology.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 0 of 3 survive → **REFUTED**\n\n- **Coherence — REFUTED.** The core claim relies on the term 'toxic effects' to describe outcomes from both higher and lower doses of a toxic substance. In toxicology, higher doses typically correlate with increased toxicity, while lower doses can sometimes produce unexpected effects, as seen in hormesis. However, the term 'toxic effects' does not denote the same formal object in both contexts; higher doses lead to predictable toxic effects, while lower doses can lead to beneficial or unexpected responses. Thus, the claim does not maintain coherence as it conflates two different referents of toxicity without clear delineation. Therefore, this is a case of equivocation.\n- **Testability — REFUTED.** The core claim presents a specific, falsifiable prediction regarding dose-response relationships in toxicology, particularly emphasizing the simultaneous effects of both higher and lower doses. The mention of variability in toxicity based on individual susceptibility or environmental conditions provides a clear operationalization of the hypothesis. However, while the claim references established concepts like hormesis, it does not explicitly name a specific experiment, dataset, or theorem that would serve as a definitive metric or rejection threshold. Therefore, the claim lacks the necessary specificity to be fully testable as required by the testability lens.\n- **Triviality — REFUTED.** The core claim states that both higher and lower doses of a toxic substance can produce greater toxic effects simultaneously, which is a specific assertion about dose-response relationships in toxicology. When stripped of domain-specific vocabulary, the claim reduces to a statement about the variability of effects based on dose, which is a common characteristic of many complex systems. The phrase being tested for genericness is: \"both higher doses and lower doses can lead to greater toxic effects simultaneously.\" This is a broad assertion that could apply to various complex systems, indicating that the claim is trivial and does not hold up under scrutiny. Therefore, the claim does not survive this lens.\n\n## No steelman offered\n\nAll three lenses independently converged on REFUTED for this case. If revisited, it would need a genuinely tighter formulation, not a restatement of the same claim.\n",
+    "refutation_independently_confirmed": true
+  },
+  {
+    "key": "2026-08-31-janusian-viticulture",
+    "mode": "janusian",
+    "source": null,
+    "domains": [
+      "Viticulture — terroir and grape ripening"
+    ],
+    "verdict": "ADJACENT_ACTIVE",
+    "points": 30,
+    "badges": [
+      "🎭 Janusian",
+      "🗺️ Frontier Research Group"
+    ],
+    "breakdown": [
+      "Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5",
+      "Phase 2 ADJACENT_ACTIVE: +30"
+    ],
+    "held_out_reason": null,
+    "tier_rank": 2,
+    "tier_label": "🗺️ Verified, Unrefuted",
+    "pair_type": null,
+    "refutation_gradient_pct": null,
+    "refutation_lens_version": null,
+    "notes": "The search results reveal that both terroir and grapevine genetics are integral to grape ripening and wine characteristics. The concept of terroir includes the interaction between environmental factors and grapevine genetics, influencing grape ripening and wine characteristics. Studies have shown that terroir, defined as an interactive cultivated ecosystem including climate, soil, and the vine, significantly affects vine growth, grape ripening, and wine sensory attributes. ([sciencedirect.com](https://www.sciencedirect.com/science/article/pii/B9780081020678000051?utm_source=openai)) Additionally, research indicates that soil-related terroir factors, such as soil temperature, water supply, and mineral content, impact vine development and grape ripening, thereby affecting wine quality. ([doi.org](https://doi.org/10.20870/oeno-one.2018.52.2.2208?utm_source=openai)) Furthermore, the genetic makeup of grapevines contributes to the expression of terroir, with different grape varieties responding uniquely to their growing environment, affecting grape ripening and wine characteristics. ([wines.network](https://wines.network/understanding-wine-regions-and-terroir-explained/?utm_source=openai)) This indicates that the hypothesis is supported by existing research, as both terroir and grapevine genetics are recognized as simultaneous factors influencing grape ripening and wine characteristics.",
+    "self_reported_distance": null,
+    "self_reported_tension": 4,
+    "hypothesis_filename": "2026-08-31-janusian-viticulture.md",
+    "hypothesis_content": "# Janusian Hypothesis: Viticulture — terroir and grape ripening\n\n**Generated**: 2026-08-31\n**Framework**: UMPF Janusian Hypothesis Engine (Exponent Labs LLC)\n\n---\n\n## 1. The Domain\n\nViticulture involves the cultivation of grapevines for winemaking, where factors such as soil, climate, and topography (terroir) significantly influence grape ripening and the resulting wine characteristics.\n\n## 2. The Proposition\n\nThe terroir of a vineyard is the primary determinant of grape ripening and wine quality.\n\n## 3. The Inversion\n\nThe exact opposite is true: Grape ripening and wine quality are determined solely by the grapevine's genetic factors, independent of terroir.\n\n## 4. The Simultaneous Hold\n\n> \"The terroir of a vineyard is the primary determinant of grape ripening and wine quality.\"\n> \"Grape ripening and wine quality are determined solely by the grapevine's genetic factors, independent of terroir.\"\n> \"Both are true simultaneously.\"\n\n- **(A) Compromise**: The influence of terroir and genetic factors varies by region, so both can be important in different contexts.\n- **(B) Synthesis**: Terroir and genetic factors together influence grape ripening, with one being more significant depending on the specific conditions.\n- **(C) Paradox** (model's own honest assessment: genuine): Both the terroir and the genetic makeup of the grapevine simultaneously determine grape ripening and wine quality for the same vineyard; the theory must contain both.\n\nCompromise (A) fails because it suggests a context-split rather than a simultaneous hold, while synthesis (B) resolves the contradiction rather than preserving it. The paradox (C) holds as both factors are essential for the same instance of grape ripening.\n\n## 5. The Hypothesis (The Third Thing)\n\n1. **Simultaneous-hold sentence (required):** Both the terroir and the genetic makeup of the grapevine are true simultaneously for the same vineyard; the theory must contain both.\n2. **Falsifiable prediction:** If both the terroir and genetic factors hold simultaneously, then specific wines from the same vineyard will exhibit unique characteristics that cannot be explained by either factor alone.\n\n## 6. Novelty & Testability Self-Critique\n\n- **Tension score (1-5)**: 4 — The assumption about terroir being the primary determinant is foundational in viticulture, making its inversion significant but not heretical.\n- **Testability**: Experimental studies comparing wines from the same grape variety grown in different terroirs and genetic variations could confirm or refute this hypothesis.\n- **Known prior art**: Not verified.\n- **Confidence this is worth a researcher's time**: Medium, as there is a substantial body of research on terroir and grape genetics, but the exact interplay remains complex and underexplored.\n\n## 7. If This Doesn't Hold\n\nThe most likely reason this turns out to be a compromise or synthesis is that the influence of terroir and genetic factors may not be as distinct as proposed, leading to a blended understanding rather than a true paradox.\n\n## Search Queries\n\n1. \"terroir influence on grape ripening\"\n2. \"genetic factors in viticulture\"\n3. \"terroir vs genetic grape characteristics\"\n4. \"grape ripening determinants\"\n5. \"viticulture named theory OR framework OR researcher\"\n",
+    "verification_filename": "2026-08-31-janusian-viticulture-verification.md",
+    "verification_content": "# Verification: Janusian — Viticulture — terroir and grape ripening\n\n**Verifies**: `hypotheses/2026-08-31-janusian-viticulture.md`\n**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)\n\n## Verdict: **ADJACENT_ACTIVE**\n\n## Queries\n- `terroir influence on grape ripening`\n- `genetic factors in viticulture`\n- `terroir vs genetic grape characteristics`\n- `grape ripening determinants`\n- `viticulture named theory OR framework OR researcher`\n\n## What was found\nThe concept of terroir encompasses the interaction between environmental factors and grapevine genetics, influencing grape ripening and wine characteristics. Studies have shown that terroir, defined as an interactive cultivated ecosystem including climate, soil, and the vine, significantly affects vine growth, grape ripening, and wine sensory attributes. ([sciencedirect.com](https://www.sciencedirect.com/science/article/pii/B9780081020678000051?utm_source=openai)) Additionally, research indicates that soil-related terroir factors, such as soil temperature, water supply, and mineral content, impact vine development and grape ripening, thereby affecting wine quality. ([doi.org](https://doi.org/10.20870/oeno-one.2018.52.2.2208?utm_source=openai)) Furthermore, the genetic makeup of grapevines contributes to the expression of terroir, with different grape varieties responding uniquely to their growing environment, affecting grape ripening and wine characteristics. ([wines.network](https://wines.network/understanding-wine-regions-and-terroir-explained/?utm_source=openai))\n\n## Reasoning\nThe search results reveal that both terroir and grapevine genetics are integral to grape ripening and wine characteristics. The concept of terroir includes the interaction between environmental factors and grapevine genetics, influencing grape ripening and wine characteristics. Studies have shown that terroir, defined as an interactive cultivated ecosystem including climate, soil, and the vine, significantly affects vine growth, grape ripening, and wine sensory attributes. ([sciencedirect.com](https://www.sciencedirect.com/science/article/pii/B9780081020678000051?utm_source=openai)) Additionally, research indicates that soil-related terroir factors, such as soil temperature, water supply, and mineral content, impact vine development and grape ripening, thereby affecting wine quality. ([doi.org](https://doi.org/10.20870/oeno-one.2018.52.2.2208?utm_source=openai)) Furthermore, the genetic makeup of grapevines contributes to the expression of terroir, with different grape varieties responding uniquely to their growing environment, affecting grape ripening and wine characteristics. ([wines.network](https://wines.network/understanding-wine-regions-and-terroir-explained/?utm_source=openai)) This indicates that the hypothesis is supported by existing research, as both terroir and grapevine genetics are recognized as simultaneous factors influencing grape ripening and wine characteristics.\n",
     "refutation_filename": null,
     "refutation_content": null,
     "refutation_independently_confirmed": false

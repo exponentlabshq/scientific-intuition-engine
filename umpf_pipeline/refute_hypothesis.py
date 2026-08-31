@@ -90,7 +90,7 @@ REFUTATION_MODEL = "gpt-4o-mini"  # switched 2026-08-30, after this stayed on gp
                               # for the full validation record and the cost-measurement bug
                               # that prompted testing this in the first place.
 
-LENS_VERSION = "2026-08-31-v3"  # bumped each time LENS_QUESTIONS' rubric text
+LENS_VERSION = "2026-08-31-v3.1"  # bumped each time LENS_QUESTIONS' rubric text
     # materially changes calibration behavior (not cosmetic edits). "v2" =
     # the second, more general rewrite (explicit numbered decision
     # procedures + multiple worked examples + named anti-patterns), real-
@@ -104,7 +104,13 @@ LENS_VERSION = "2026-08-31-v3"  # bumped each time LENS_QUESTIONS' rubric text
     # SHAPE sounds generic even when its precise content was correctly kept
     # intact per v2's own Steps 1-4 -- a new Step 5 added specifically to
     # test historical non-obviousness / genuine new explanatory power,
-    # which v2 never asked for. Written into every new ledger entry's
+    # which v2 never asked for. "v3.1" = removed the separate model-supplied
+    # "verdict" field entirely (see LENS_SCHEMA above) after the v3 fresh
+    # held-out test caught two more real, confirmed reasoning/verdict
+    # mismatches on top of the ones the shared instruction was supposed to
+    # have already fixed -- the verdict is now mechanically computed from a
+    # single boolean field ordered after reasoning in the schema, removing
+    # the second channel the inconsistency was hiding in. Written into every new ledger entry's
     # refutation_lens_version field so a REFUTED verdict's provenance is
     # checkable: entries predating v3 were produced under lens text since
     # found to have these two further gaps -- disclosed, not silently
@@ -115,12 +121,29 @@ LENS_VERSION = "2026-08-31-v3"  # bumped each time LENS_QUESTIONS' rubric text
 LENS_SCHEMA = {
     "type": "object",
     "properties": {
-        "verdict": {"type": "string", "enum": ["REFUTED", "SURVIVES"]},
-        "reasoning": {"type": "string", "description": "2-4 sentences, terse peer-reviewer style."},
+        "reasoning": {"type": "string", "description": "2-4 sentences, terse peer-reviewer style. Write this FIRST, before deciding claim_survives_this_lens -- your conclusion must follow from what you argue here, not the other way around."},
+        "claim_survives_this_lens": {"type": "boolean", "description": "Set this from what your reasoning above actually concluded, not from habit. true = your reasoning found the claim is NOT vague/generic/equivocal (whichever this lens tests), i.e. it survives. false = your reasoning found a real, specific flaw. Do not default to false out of habitual closing phrasing if your own analysis above concluded otherwise."},
     },
-    "required": ["verdict", "reasoning"],
+    "required": ["reasoning", "claim_survives_this_lens"],
     "additionalProperties": False,
 }
+# 2026-08-31-v3: removed the separate "verdict" enum field entirely, after
+# real, confirmed evidence (twice, on fresh held-out cases: McClintock and
+# Marshall/Warren, see control-test-nobel-calibration.md's sixth follow-up)
+# that a shared prompt instruction telling the model to "set verdict from
+# your own reasoning, not from habit" was not reliably followed -- the
+# reasoning field explicitly concluded the claim was NOT trivial, and a
+# separately-asked "verdict" field still said REFUTED. This is the same
+# lesson this project has already learned twice elsewhere (Failure 1/2's
+# soft self-checks getting talked past): a second, independent field is a
+# second channel for the same inconsistency to hide in, no matter how
+# strongly worded the instruction connecting them is. The fix removes the
+# redundant channel: the model commits to a single boolean, ordered after
+# its own reasoning in the schema so it is (by OpenAI's structured-output
+# generation order) genuinely written second, and run_lens() below computes
+# the actual REFUTED/SURVIVES verdict string mechanically from that boolean
+# -- there is no longer a second field for the model's own verdict to
+# disagree with.
 # 2026-08-31: strict schema, replacing {"type": "json_object"} (loose mode --
 # guarantees syntactically valid JSON, not that "verdict" is REFUTED/SURVIVES
 # or that "reasoning" exists at all). No documented production failure has
@@ -347,16 +370,17 @@ def run_lens(lens_name: str, question: str, rubric: str, title: str, mode: str,
         f"other two reviewers found, and you must not assume there are other reviewers — "
         f"evaluate entirely on your own.\n\n"
         f"YOUR LENS IS {lens_name.upper()} ONLY. {question}\n\n"
-        f"Default to REFUTED under genuine uncertainty — a hypothesis wrongly killed costs "
-        f"nothing; a hollow one wrongly promoted costs someone real research time later.\n\n"
-        f"CRITICAL — set verdict from your own reasoning, not from habit: write your reasoning "
-        f"first, THEN check what it actually concluded before setting verdict. If your reasoning "
-        f"concludes the claim is NOT vague, NOT generic, NOT equivocal, or DOES hold up — "
-        f"verdict must be SURVIVES, even if your closing sentence uses a phrase like 'fails the "
-        f"[lens] test' out of habit. That phrase is ambiguous and has caused real, disclosed "
-        f"verdict/reasoning mismatches before (2026-08-31, see "
-        f"refutations/control-test-nobel-calibration.md) — trust what you actually argued, not "
-        f"a boilerplate closing line that contradicts it.\n\n"
+        f"Default to REFUTED (claim_survives_this_lens = false) under genuine uncertainty — a "
+        f"hypothesis wrongly killed costs nothing; a hollow one wrongly promoted costs someone "
+        f"real research time later.\n\n"
+        f"CRITICAL — there is no separate 'verdict' field. claim_survives_this_lens IS the "
+        f"verdict, computed directly from it, so it must genuinely follow from your reasoning "
+        f"field, not from a habitual closing phrase. If your reasoning concludes the claim is "
+        f"NOT vague, NOT generic, NOT equivocal, or DOES hold up, claim_survives_this_lens must "
+        f"be true — even if you feel like writing something that sounds like 'fails the [lens] "
+        f"test' out of habit. Real, disclosed cases of exactly this mismatch have already "
+        f"happened twice (2026-08-31, see refutations/control-test-nobel-calibration.md) — set "
+        f"the boolean from what you actually argued above, not from a boilerplate instinct.\n\n"
         f"This is the same rubric this pipeline has applied by hand in every prior refutation "
         f"round:\n\n--- FULL RUBRIC (for context; you are applying only your one lens above) ---\n{rubric}"
     )
@@ -376,7 +400,12 @@ def run_lens(lens_name: str, question: str, rubric: str, title: str, mode: str,
         response_format={"type": "json_schema", "json_schema": {"name": "lens_verdict", "schema": LENS_SCHEMA, "strict": True}},
     )
     log_usage("refutation", REFUTATION_MODEL, resp.usage, hypothesis_slug=slug, extra={"lens": lens_name})
-    return json.loads(resp.choices[0].message.content)
+    data = json.loads(resp.choices[0].message.content)
+    # Mechanically derived, not model-supplied -- see LENS_SCHEMA's 2026-08-31-v3
+    # note above for why there is no longer a separate "verdict" field to
+    # disagree with the reasoning that produced it.
+    return {"verdict": "SURVIVES" if data["claim_survives_this_lens"] else "REFUTED",
+            "reasoning": data["reasoning"]}
 
 
 def write_refutation_md(slug: str, title: str, mode: str, lens_results: dict, verdict: str, survives: int) -> str:

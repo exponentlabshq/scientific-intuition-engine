@@ -535,7 +535,8 @@ JANUSIAN_SCHEMA = {
         "inversion": {"type": "string", "description": "The exact opposite, stated directly, no hedging ('on the other hand', 'it could also be')."},
         "compromise_option": {"type": "string", "description": "(A) The hedge version: 'it depends,' 'both apply differently.' This is what genuine Janusian output must NOT be."},
         "synthesis_option": {"type": "string", "description": "(B) A resolution that quietly picks a side or averages the two -- also not genuinely Janusian."},
-        "paradox_option": {"type": "string", "description": "(C) A claim true BECAUSE both proposition and inversion are true at once, for the SAME instance -- not different instances in different contexts/subpopulations. This is the one that matters. Zero context-split language (depending on, in some contexts, different types of, etc)."},
+        "is_genuine_paradox": {"type": "boolean", "description": "Commit to this BEFORE writing paradox_option, honestly: true only if you can state a real, same-instance contradiction per Rothenberg's bar (Einstein motion/rest, Bohr wave/particle -- one instance, both poles true, no context-split). false if, after genuine effort, this domain does not support one -- most domains don't, and that is a legitimate, common answer, not a failure. 2026-08-31: added after real data showed a soft 'say so honestly if you can't find one' instruction in the retry prompt was never once used across 91 real flagged cases -- the model always kept forcing a paradox-shaped answer even when its own if_doesnt_hold field, in every one of those 91 cases, already knew better. This field makes the honest decline a structural choice instead of a buried option, mirroring this project's own established lesson that a soft self-check gets talked past and a mechanical one does not."},
+        "paradox_option": {"type": "string", "description": "(C) If is_genuine_paradox is true: a claim true BECAUSE both proposition and inversion are true at once, for the SAME instance -- not different instances in different contexts/subpopulations. Zero context-split language (depending on, in some contexts, different types of, etc). If is_genuine_paradox is false: say so plainly here instead -- e.g. 'No genuine same-instance paradox found; proposition and inversion apply to different [instances/conditions/contexts], which is a real compromise (A), not a paradox (C).' Do not force paradox-shaped language you don't believe."},
         "why_not_compromise_synthesis": {"type": "string", "description": "State explicitly why (A) and (B) fail to actually be Janusian, and confirm (C) holds for the same instance, same time."},
         "simultaneous_hold_sentence": {"type": "string", "description": "Exact shape: 'Both [pole A] and [pole B] are true simultaneously for the same [instance]; the theory must contain both.'"},
         "falsifiable_prediction": {"type": "string", "description": "Exact shape: 'If both [proposition] and [inversion] hold simultaneously, then [specific, checkable prediction] -- which would not be predicted by either truth held alone.'"},
@@ -551,7 +552,7 @@ JANUSIAN_SCHEMA = {
         },
     },
     "required": ["domain_description", "proposition", "inversion", "compromise_option", "synthesis_option",
-                 "paradox_option", "why_not_compromise_synthesis", "simultaneous_hold_sentence",
+                 "is_genuine_paradox", "paradox_option", "why_not_compromise_synthesis", "simultaneous_hold_sentence",
                  "falsifiable_prediction", "tension_score", "tension_score_reasoning", "testability",
                  "known_prior_art", "confidence_worth_time", "if_doesnt_hold", "search_queries"],
     "additionalProperties": False,
@@ -712,7 +713,7 @@ The exact opposite is true: {d['inversion']}
 
 - **(A) Compromise**: {d['compromise_option']}
 - **(B) Synthesis**: {d['synthesis_option']}
-- **(C) Paradox**: {d['paradox_option']}
+- **(C) Paradox** (model's own honest assessment: {'genuine' if d['is_genuine_paradox'] else 'NOT genuine -- declined honestly, see below'}): {d['paradox_option']}
 
 {d['why_not_compromise_synthesis']}
 
@@ -922,61 +923,120 @@ def run_hypothesis(domain_a: str, domain_b: str = None, model: str = "gpt-4o-min
             print("  ✅ §2–§4 passed the Homospatial fusion check on the first attempt.")
 
     if mode == "janusian":
-        section4_text = " ".join([data["compromise_option"], data["synthesis_option"],
-                                   data["paradox_option"], data["why_not_compromise_synthesis"]])
-        violations = _find_context_split_phrases(section4_text)
-        full_text = section4_text + " " + data["simultaneous_hold_sentence"] + " " + data["falsifiable_prediction"]
-        has_hold_form = bool(re.search(
-            r"(both (are )?true|simultaneously|at (the )?same time|same instance|"
-            r"mutually exclusive|two necessary faces|apparent(ly)? opposite|"
-            r"incompatible things are true)", full_text, re.IGNORECASE,
-        ))
-        if violations or not has_hold_form:
-            reason = []
-            if violations:
-                reason.append(f"context-split language ({', '.join(violations)})")
-            if not has_hold_form:
-                reason.append("missing simultaneous-hold signature language")
-            print(f"  ⚠️  Janusian simultaneous-hold failed same-instance check ({'; '.join(reason)}) — retrying once...")
-            correction = (
-                f"Your paradox_option/why_not_compromise_synthesis/simultaneous_hold_sentence fields failed "
-                f"the Janusian simultaneous-hold check: {'; '.join(reason)}.\n"
-                f"paradox_option as written: \"{data['paradox_option'][:600]}\"\n\n"
-                "Return the FULL corrected object again (same schema). Rothenberg's bar: actively conceive "
-                "two contradictory ideas *simultaneously* for the SAME instance — not '[A] in context 1, "
-                "[B] in context 2.' paradox_option must state both poles true at once (Einstein motion/rest, "
-                "Bohr wave/particle). simultaneous_hold_sentence must be: 'Both [pole A] and [pole B] are "
-                "true simultaneously for the same [instance]; the theory must contain both.' Zero "
-                "context-split language. If you cannot find a genuine same-instance paradox, say so honestly "
-                "in if_doesnt_hold rather than dressing a compromise as paradox_option."
+        if not data["is_genuine_paradox"]:
+            # 2026-08-31: real, honest decline -- the model committed, via the
+            # schema's own required boolean (not a soft escape-hatch buried in
+            # a paragraph), to NOT having found a genuine same-instance
+            # paradox for this domain. Real data (91 real flagged cases,
+            # before this field existed) showed the old soft instruction was
+            # never once used -- the model always kept forcing a paradox-
+            # shaped answer even when its own if_doesnt_hold field already
+            # knew better. Do not retry here: retrying would just pressure a
+            # manufactured answer out of a model that already told us
+            # honestly there isn't one. Do not use "may be a disguised
+            # compromise" language either -- that wrongly implies dishonesty
+            # when the model did the opposite of that.
+            print("  ℹ️  Janusian: model honestly found no genuine same-instance paradox for this domain (is_genuine_paradox=false) — not retrying.")
+            honesty_flags.append(
+                "**ℹ️ No genuine same-instance paradox found (model's own honest assessment):** "
+                "the model explicitly declined to force a paradox-shaped answer for this domain "
+                "rather than dress a compromise as paradox_option — a real, legitimate "
+                "non-result, not a disguised compromise. See §7 for its own account of why."
             )
-            messages.append({"role": "assistant", "content": json.dumps(data)})
-            messages.append({"role": "user", "content": correction})
-            resp2 = call_with_retry(client.chat.completions.create, model=model, messages=messages, temperature=0.4,
-                                     response_format={"type": "json_schema", "json_schema": {"name": schema_name, "schema": schema, "strict": True}})
-            log_usage("generation", model, resp2.usage, extra={"mode": mode, "retry": True})
-            data = json.loads(resp2.choices[0].message.content)
-            section4_text2 = " ".join([data["compromise_option"], data["synthesis_option"],
-                                        data["paradox_option"], data["why_not_compromise_synthesis"]])
-            remaining = _find_context_split_phrases(section4_text2)
-            full_text2 = section4_text2 + " " + data["simultaneous_hold_sentence"] + " " + data["falsifiable_prediction"]
-            hold_ok = bool(re.search(
+        else:
+            # 2026-08-31: real bug found and fixed while smoke-testing the
+            # is_genuine_paradox field above -- this scan was checking
+            # compromise_option (A) and why_not_compromise_synthesis for
+            # context-split language, but (A) is SCHEMA-REQUIRED to contain
+            # exactly that hedge language ("(A) The hedge version: 'it
+            # depends,' 'both apply differently.'" -- it's the deliberate
+            # foil paradox_option is contrasted against), and
+            # why_not_compromise_synthesis legitimately needs to quote and
+            # reject that same language to explain why (A)/(B) fail. Scanning
+            # the combined blob meant a genuinely clean paradox_option could
+            # still trip the check purely because field (A) was doing its
+            # job -- confirmed live: 'Acoustics — resonance' generated a
+            # clean, real same-instance paradox in (C) with zero
+            # context-split language, and still failed this check because
+            # (A) said 'depending on the medium and conditions,' exactly as
+            # its own schema description asks it to. Only the claim that
+            # actually matters -- paradox_option and simultaneous_hold_sentence
+            # -- gets scanned for context-split language now.
+            section_to_scan = data["paradox_option"] + " " + data["simultaneous_hold_sentence"]
+            violations = _find_context_split_phrases(section_to_scan)
+            full_text = (data["compromise_option"] + " " + data["synthesis_option"] + " " +
+                         data["paradox_option"] + " " + data["why_not_compromise_synthesis"] + " " +
+                         data["simultaneous_hold_sentence"] + " " + data["falsifiable_prediction"])
+            has_hold_form = bool(re.search(
                 r"(both (are )?true|simultaneously|at (the )?same time|same instance|"
                 r"mutually exclusive|two necessary faces|apparent(ly)? opposite|"
-                r"incompatible things are true)", full_text2, re.IGNORECASE,
+                r"incompatible things are true)", full_text, re.IGNORECASE,
             ))
-            if remaining or not hold_ok:
-                print("  ⚠️  Retry still failed Janusian same-instance check — flagging in output.")
-                honesty_flags.append(
-                    "**⚠️ Automated check failed twice:** §4/§5 still fail the Janusian same-instance "
-                    "test (context-split and/or missing simultaneous-hold signature) after one corrective "
-                    "retry. This may be a disguised compromise (A) or synthesis (B) mislabeled as paradox "
-                    "(C) — not a thesis-grade Janusian lead until rewritten."
+            if violations or not has_hold_form:
+                reason = []
+                if violations:
+                    reason.append(f"context-split language ({', '.join(violations)})")
+                if not has_hold_form:
+                    reason.append("missing simultaneous-hold signature language")
+                print(f"  ⚠️  Janusian simultaneous-hold failed same-instance check ({'; '.join(reason)}) — retrying once...")
+                correction = (
+                    f"Your paradox_option/why_not_compromise_synthesis/simultaneous_hold_sentence fields failed "
+                    f"the Janusian simultaneous-hold check: {'; '.join(reason)}.\n"
+                    f"paradox_option as written: \"{data['paradox_option'][:600]}\"\n\n"
+                    "Return the FULL corrected object again (same schema). Rothenberg's bar: actively conceive "
+                    "two contradictory ideas *simultaneously* for the SAME instance — not '[A] in context 1, "
+                    "[B] in context 2.' paradox_option must state both poles true at once (Einstein motion/rest, "
+                    "Bohr wave/particle). simultaneous_hold_sentence must be: 'Both [pole A] and [pole B] are "
+                    "true simultaneously for the same [instance]; the theory must contain both.' Zero "
+                    "context-split language. If, on reflection, you don't actually believe this is a genuine "
+                    "same-instance paradox, it's fine to set is_genuine_paradox to false and say so honestly in "
+                    "paradox_option instead of forcing one — that is a legitimate, complete answer here."
                 )
+                messages.append({"role": "assistant", "content": json.dumps(data)})
+                messages.append({"role": "user", "content": correction})
+                resp2 = call_with_retry(client.chat.completions.create, model=model, messages=messages, temperature=0.4,
+                                         response_format={"type": "json_schema", "json_schema": {"name": schema_name, "schema": schema, "strict": True}})
+                log_usage("generation", model, resp2.usage, extra={"mode": mode, "retry": True})
+                data = json.loads(resp2.choices[0].message.content)
+                if not data["is_genuine_paradox"]:
+                    # Honest capitulation on retry -- real, legitimate outcome,
+                    # not a second failure. Same non-accusatory handling as the
+                    # first-attempt decline above.
+                    print("  ℹ️  Janusian: model honestly declined on retry (is_genuine_paradox=false) — not a disguised compromise.")
+                    honesty_flags.append(
+                        "**ℹ️ No genuine same-instance paradox found (model's own honest assessment, after one retry):** "
+                        "the model explicitly declined to force a paradox-shaped answer for this domain "
+                        "rather than dress a compromise as paradox_option — a real, legitimate non-result, "
+                        "not a disguised compromise. See §7 for its own account of why."
+                    )
+                else:
+                    # Same fix as the first-attempt scan above -- only the
+                    # claim that actually matters gets checked for
+                    # context-split language, not the deliberately-hedgy
+                    # foil fields.
+                    section_to_scan2 = data["paradox_option"] + " " + data["simultaneous_hold_sentence"]
+                    remaining = _find_context_split_phrases(section_to_scan2)
+                    full_text2 = (data["compromise_option"] + " " + data["synthesis_option"] + " " +
+                                  data["paradox_option"] + " " + data["why_not_compromise_synthesis"] + " " +
+                                  data["simultaneous_hold_sentence"] + " " + data["falsifiable_prediction"])
+                    hold_ok = bool(re.search(
+                        r"(both (are )?true|simultaneously|at (the )?same time|same instance|"
+                        r"mutually exclusive|two necessary faces|apparent(ly)? opposite|"
+                        r"incompatible things are true)", full_text2, re.IGNORECASE,
+                    ))
+                    if remaining or not hold_ok:
+                        print("  ⚠️  Retry still failed Janusian same-instance check — flagging in output.")
+                        honesty_flags.append(
+                            "**⚠️ Automated check failed twice:** §4/§5 still fail the Janusian same-instance "
+                            "test (context-split and/or missing simultaneous-hold signature) after one corrective "
+                            "retry, despite the model committing is_genuine_paradox=true. This may be a "
+                            "disguised compromise (A) or synthesis (B) mislabeled as paradox (C) — not a "
+                            "thesis-grade Janusian lead until rewritten."
+                        )
+                    else:
+                        print("  ✅ Retry passed — Janusian simultaneous-hold clean.")
             else:
-                print("  ✅ Retry passed — Janusian simultaneous-hold clean.")
-        else:
-            print("  ✅ §4/§5 passed the Janusian same-instance mechanical check on the first attempt.")
+                print("  ✅ §4/§5 passed the Janusian same-instance mechanical check on the first attempt.")
 
     # Named-entity search-query check -- operates on the real search_queries
     # array directly now, not a regex-extracted markdown block. Targeted

@@ -395,6 +395,9 @@ footer.colophon {
     <h3>A sixth tier, from the gradient described in Section 7</h3>
     <p>Once the real 0/1/2/3-of-3 refutation tally was exposed rather than collapsed to a binary (Section 7), a sixth tier followed naturally: <strong>Contested</strong>, for a real 1-of-3 near-miss, sitting between Pending and Refuted/Rejected &mdash; genuinely tested and leaning negative, but not a unanimous rejection. A separate, definitive negative signal (a factual failure, an invalid pairing, a researcher's real dismissal, the mechanical honesty-check flag) still overrides this and lands an entry in the worst tier regardless of how close refutation came; a near-miss vote does not launder a real disqualifier. Points themselves were graduated the same way &mdash; 0-of-3 stays the worst outcome, 1-of-3 a smaller, real penalty rather than an identical one.</p>
 
+    <h3>Discovery credit, separated from validity</h3>
+    <p>A real, independent critique surfaced a category error in how the ground-truth entries (Section 12) were being scored: Phase 2's ADJACENT_ACTIVE/COLLISION points exist to reward the engine for <em>finding</em> real, fertile territory &mdash; but a hand-authored, already-known Nobel discovery didn't get found by anything, so awarding it the same +30 or +5 "discovery credit" as a genuine engine candidate made a calibration specimen look like a novel find. Fixed directly: ground-truth entries now score zero Phase 2 discovery-credit points, while their refutation-survival points &mdash; the actual validity question this whole exercise exists to test &mdash; are untouched. The real effect: Nash's entry, for example, now shows +20 instead of +25, Hayek +12 instead of +42 &mdash; honestly lower numbers that no longer read as if the engine discovered them, while the tier system (Section 11 above) still correctly ranks them above the engine's own unrefuted output, on the real, separate, epistemic grounds that vindicated science surviving adversarial scrutiny outranks an untested candidate regardless of either one's raw point total.</p>
+
     <p>Two more real, live signals are now surfaced on the leaderboard for the first time, both computed fresh on every regeneration rather than hardcoded:</p>
 
     <div class="table-wrap">
@@ -477,7 +480,7 @@ footer.colophon {
         <tr><td>Janusian</td><td class="num">177</td><td class="num">+8.2</td><td class="num">9%</td></tr>
       </table>
     </div>
-    <p>Bisociation now shows the strongest average score of the three real generation modes and the lowest NO_SIGNAL rate after Janusian; homospatial's NO_SIGNAL rate (36%) remains the highest of the three, a real, disclosed property of that mode rather than a bug still being chased (Section 16, Failure 4). Points here reflect the corrected, self-report-excluded formula described in Section 11 &mdash; not directly comparable to any average reported in an earlier version of this document.</p>
+    <p>Bisociation now shows the strongest average score of the three real generation modes and the lowest NO_SIGNAL rate after Janusian; homospatial's NO_SIGNAL rate (36%) remains the highest of the three &mdash; a real, disclosed property of that mode, distinct from the Janusian same-instance check bug corrected in Section 16 (Failure 4), which turned out not to be a mode property at all. Points here reflect the corrected, self-report-excluded formula described in Section 11 &mdash; not directly comparable to any average reported in an earlier version of this document.</p>
 
     <h3>Top of the leaderboard</h3>
     <div class="table-wrap">
@@ -497,7 +500,7 @@ footer.colophon {
 
   <section id="postmortem">
     <h2><span class="num">16</span>Postmortem</h2>
-    <p>Eighteen real failures have now been found along the way &mdash; seventeen fixed, one (Failure 4) caught mechanically but not reliably corrected, a real property of the affected mode rather than a bug still being chased &mdash; reported in full rather than smoothed away, since they are the clearest evidence for what actually made this pipeline trustworthy.</p>
+    <p>Eighteen real failures have now been found along the way &mdash; all eighteen now fixed, including Failure 4, corrected in this same rewrite after this report's own earlier characterization of it as "a real property of the mode" turned out to be wrong &mdash; reported in full rather than smoothed away, since they are the clearest evidence for what actually made this pipeline trustworthy.</p>
 
     <h3>Failure 1 &mdash; Janusian's soft self-check got talked past</h3>
     <p>All three of the first round of Janusian generations labeled a disguised compromise ("beneficial in context A, detrimental in context B") as a genuine paradox. A mechanical same-instance test was added to the prompt; the same three domains regenerated with measurable improvement, 2 of 3 clearly passing.</p>
@@ -509,8 +512,8 @@ footer.colophon {
     <h3>Failure 3 &mdash; a real resource constraint, and its actual fix</h3>
     <p>An early web-search budget was exhausted mid-batch; remaining verdicts were recorded as <code>PENDING_VERIFICATION</code> rather than fabricated or dropped. The durable fix &mdash; a standalone unattended verification script &mdash; has since been proven at real production scale.</p>
 
-    <h3>Failure 4 &mdash; the same-instance test lets the same failure through, reliably, on Janusian specifically (caught mechanically; not reliably corrected)</h3>
-    <p>Homospatial's mechanical comparison-word scan retry-fixes cleanly 89% of the time it fires. Janusian's equivalent same-instance check fires just as reliably, but its one-shot correction succeeds only 20% of the time. Read plainly: a real property of the mode meeting real domains, not an engineering gap worth continuing to chase &mdash; many domains simply don't support a genuine same-instance paradox. Every hypothesis that stays flagged and lands ADJACENT_ACTIVE is swept into adversarial refutation instead, which has caught every one of them on the merits.</p>
+    <h3>Failure 4 &mdash; the same-instance check was scanning the wrong fields, and this report's own earlier characterization of it was wrong (now fixed)</h3>
+    <p>Every earlier version of this report characterized Janusian's poor same-instance retry-fix rate (20%, against homospatial's 89%) as "a real property of the mode meeting real domains" &mdash; many domains simply don't support a genuine same-instance paradox, not an engineering gap worth chasing. That characterization was wrong, and is corrected here rather than left standing, the same discipline Failure 14 already applied to this report's own cost numbers. While smoke-testing an unrelated fix, the mechanical check's real implementation was found scanning the combined text of all four options &mdash; compromise (A), synthesis (B), paradox (C), and the field explaining why (A)/(B) fail &mdash; for context-split language ("depending on," "in some contexts"). But option (A) is schema-required to contain exactly that hedge language; it is the deliberate foil paradox_option is contrasted against. A genuinely clean paradox_option could still trip the check purely because field (A) was doing its job. Confirmed live: a real generation on "Acoustics &mdash; resonance" produced a clean same-instance paradox in (C) with zero context-split language, and still failed the check because (A) correctly said "depending on the medium and conditions." Fixed to scan only paradox_option and the simultaneous-hold sentence &mdash; the claim that actually matters, not its deliberate foil. Run against two real batches totaling 16 fresh Janusian generations after the fix: <strong>16 of 16 passed the mechanical check on the first attempt, zero retries needed</strong> &mdash; a dramatic, real reversal of the historical 20% rate, and real, direct evidence this was a fixable engineering bug the whole time, not a property of the mode.</p>
 
     <h3>Failure 5 &mdash; a silent scoring bug, found while investigating something else entirely</h3>
     <p>The function extracting a hypothesis's self-reported novelty score had two real bugs &mdash; a wrong section number for two of three modes, and a regex capturing the first digit of a range rather than the real value after the colon. All 39 ledger entries this script had ever scored were wrong; all were corrected from their real source files. The honest finding once the data was actually correct: the self-report score carries almost no real signal at all &mdash; directly informing this week's decision to exclude it from the main leaderboard score too (Section 11).</p>
@@ -574,7 +577,6 @@ footer.colophon {
 
     <h3>By design, not a gap &mdash; won't fully close, on purpose</h3>
     <ul>
-      <li><strong>Janusian's mechanical same-instance check only retry-fixes 20% of the time it fires.</strong> Read as a real property of Janusian meeting real domains (Section 16, Failure 4), not an engineering gap still being chased.</li>
       <li><strong>The self-audit agent observes and proposes; it does not adopt.</strong> Section 10 explains why a human review gate stayed a hard constraint even after a fourth proposal was adopted &mdash; adoption itself was still a deliberate human act, not the gate loosening.</li>
       <li><strong>Verification and refutation remain a check on plausibility, not a substitute for an experiment.</strong> Nothing in this pipeline runs a real test of any hypothesis against the physical or social world. That check is the entire value proposition described in Section 3; it is not, and was never meant to be, the experiment itself.</li>
     </ul>
@@ -587,6 +589,7 @@ footer.colophon {
     <h3>Resolved this week (kept here for the record, not deleted)</h3>
     <ul>
       <li><strong>Whether refutation can ever say SURVIVES on a true claim</strong> &mdash; the central open question named in every prior version of this report &mdash; is resolved, with real texture: yes, 61.5% of the time on validated ground truth, while still correctly rejecting 291 of 291 real generated candidates.</li>
+      <li><strong>Janusian's same-instance check reliability</strong> is resolved (Section 16, Failure 4) &mdash; the low retry-fix rate was a real, fixable bug in what the check scanned, not a property of the mode as every earlier version of this report claimed. 16 of 16 fresh generations passed on the first attempt after the fix.</li>
       <li><strong>The Janusian domain pool's exhaustion</strong> is resolved with a real, permanent fix (Section 8), not a stopgap.</li>
       <li><strong>The self-report scoring inconsistency and the flat-points tier bug</strong> (Section 11, Failures 15&ndash;16) are both fixed and verified against real ledger data.</li>
     </ul>

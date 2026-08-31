@@ -1,0 +1,14 @@
+# Adversarial Refutation: Janusian — Computer science — compiler instruction scheduling
+
+**Original**: `hypotheses/2026-08-31-janusian-computer-science.md`
+**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost
+
+## Tally: 3 of 3 survive → **SURVIVES** (promoted out of NO_SIGNAL)
+
+- **Coherence — SURVIVES.** The core claim rests on the term 'instruction scheduling,' which refers to the same formal object in both instances: the process of reordering instructions in a compiler to optimize performance. In both cases, the term denotes the same underlying mechanism, even though the outcomes can vary (improved performance vs. degraded performance). Therefore, there is no equivocation present, as the claim does not rely on conflating different meanings of the term. The hypothesis survives this lens as it accurately reflects the dual nature of instruction scheduling without misrepresenting the terms involved.
+- **Testability — SURVIVES.** The core claim presents a clear and specific falsifiable prediction regarding instruction scheduling in compiler design. It operationalizes the prediction by stating that there will be instances where a scheduled instruction set executes faster while consuming more resources than an unscheduled set. This prediction is directly testable through empirical evaluation of compiler performance metrics, such as execution time and resource consumption, thus satisfying the testability criteria. Therefore, the claim is not vague or generic, and it survives this lens.
+- **Triviality — SURVIVES.** The core claim states that instruction scheduling can both improve and degrade performance, which is a specific assertion about the behavior of a complex system (compilers). When stripped of domain-specific vocabulary, the claim reduces to a general statement about systems that can exhibit dual effects based on the same process. The phrase being tested for genericness is: "Both instruction scheduling improves performance and can simultaneously degrade performance for the same compilation process; the theory must contain both." This statement is not trivially true of all complex systems, as it requires specific mechanisms of instruction scheduling and performance metrics that are not universally applicable. Therefore, the claim does not reduce to something true of almost any two complex systems, and it survives this lens.
+
+## What survived, and why this matters
+
+3 of 3 independent lenses could not kill this claim. Per the promotion rule (2-of-3 survival), this hypothesis moves out of NO_SIGNAL — real signal the claim isn't vacuous, not proof it's correct. Still worth Phase 3 outreach consideration if a real researcher in the adjacent field can be identified.
