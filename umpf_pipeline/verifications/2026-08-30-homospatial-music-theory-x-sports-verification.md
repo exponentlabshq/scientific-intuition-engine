@@ -1,9 +1,9 @@
 # Verification: Homospatial — Music Theory ⊕ Sports
 
 **Verifies**: `hypotheses/2026-08-30-homospatial-music-theory-x-sports.md`
-**Verified**: 2026-08-29 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
-## Verdict: **NO_SIGNAL**
+## Verdict: **ADJACENT_ACTIVE**
 
 ## Queries
 - `Harmonic Pitchcraft theory OR framework`
@@ -13,7 +13,7 @@
 - `real-time decision making in jazz and sports`
 
 ## What was found
-
+The term "Harmonic Pitchcraft" does not appear in existing literature. However, jazz improvisation employs techniques such as sequences, arpeggios, scalar improvisation, and neighboring tones to create cohesive musical expressions. ([musical-u.com](https://www.musical-u.com/learn/jazz-improvisation-techniques/?utm_source=openai)) Additionally, the concept of "Harmonic Vectors" explores tonal functions resulting from root progressions, offering a transformational theory of tonal harmonic processes. ([mtosmt.org](https://mtosmt.org/issues/mto.18.24.4/mto.18.24.4.meeus.html?utm_source=openai))
 
 ## Reasoning
-The search did not yield any sources specifically discussing 'Harmonic Pitchcraft' as a cohesive practice combining musical improvisation and strategic pitch sequencing. While there are numerous studies on jazz improvisation techniques, such as interval patterns and metrical positioning, and research on real-time decision-making in jazz, no direct evidence was found to support the existence of 'Harmonic Pitchcraft' as described in the hypothesis. Therefore, the hypothesis remains unsubstantiated based on the available information.
+The absence of "Harmonic Pitchcraft" in existing literature suggests it is a novel concept. The identified techniques and theories in jazz improvisation and harmonic analysis provide a foundation for understanding the integration of musical improvisation and strategic pitch sequencing.

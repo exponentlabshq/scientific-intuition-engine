@@ -1,7 +1,7 @@
 # Verification: Janusian — Control theory — Kalman filtering
 
 **Verifies**: `hypotheses/2026-08-29-janusian-control-theory-2.md`
-**Verified**: 2026-08-29 · **Method**: Tavily search + GPT-4o classification (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
 ## Verdict: **COLLISION**
 
@@ -13,7 +13,7 @@
 - `Control theory named researcher OR framework`
 
 ## What was found
-The search results revealed extensive research on nonlinear Kalman filters, including the extended Kalman filter (EKF) and unscented Kalman filter (UKF), which address the challenges of applying Kalman filtering to nonlinear systems. Sources such as 'Nonlinear Kalman Filters' (https://isif.org/files/isif/2024-01/Nonlinear%20Kalman%20Filters.pdf) and 'Unscented Filtering and Nonlinear Estimation' (https://www.cs.ubc.ca/~murphyk/Papers/Julier_Uhlmann_mar04.pdf) discuss these methods in detail, highlighting their ability to handle nonlinear dynamics and Gaussian noise, which directly relates to the hypothesis's core claim.
+1. "The Filter-Tracking Paradox: Fundamental Limits of Deterministic Integrity Monitoring in a Validated GNSS/INS Fusion Testbed" by David Tom Foss. 2. "Kalman Filtering Error Due to Inaccuracy in Filter’s Initial Condition" by Z. Gajic and J. Boka. 3. "A Fresh Look at the Kalman Filter" by Jeffrey Humpherys, Preston Redd, and Jeremy West.
 
 ## Reasoning
-The hypothesis suggests that Kalman filtering can simultaneously exhibit high fidelity and significant error due to the unpredictable nature of noise and system dynamics in nonlinear systems. However, the search results show that this issue has been extensively addressed by existing nonlinear Kalman filter techniques like EKF and UKF, which are designed to manage the complexities of nonlinear dynamics and Gaussian noise. This indicates that the hypothesis is not novel, as the specific connection between nonlinear system modeling, Gaussian noise, and Kalman filtering has already been explored and documented in the literature.
+The first source discusses the Filter-Tracking Paradox, highlighting limitations in Kalman filter-based fault detection in multi-sensor fusion systems. The second source examines errors in Kalman filtering due to inaccuracies in initial conditions. The third source provides a comprehensive overview of the Kalman filter, including its applications and limitations.

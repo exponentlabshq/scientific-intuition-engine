@@ -3,13 +3,13 @@
 **Verifies**: `hypotheses/nobel-ground-truth-ostrom.md`
 **Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
-## Verdict: **COLLISION**
+## Verdict: **ADJACENT_ACTIVE**
 
 ## Queries
-
+- `Ostrom — Commons Governance Ecology connection research`
 
 ## What was found
-Elinor Ostrom's seminal work, "Governing the Commons," presents extensive empirical studies demonstrating that local communities can effectively self-organize to manage common-pool resources without resorting to privatization or centralized regulation. ([openlibrary.org](https://openlibrary.org/books/OL21018446M/Governing_the_commons?utm_source=openai)) Ostrom identifies eight design principles that characterize successful community-based natural resource management, which have been empirically supported in various studies. ([portalrecerca.uab.cat](https://portalrecerca.uab.cat/en/publications/a-review-of-design-principles-for-community-based-natural-resourc/?utm_source=openai)) Additionally, her research highlights that self-governed irrigation systems can function effectively, challenging the assumption that external authorities are necessary for managing common-pool resources. ([aeaweb.org](https://www.aeaweb.org/articles?id=10.1257%2Fjep.7.4.93&utm_source=openai))
+Elinor Ostrom's work on commons governance has been applied to ecological contexts in several studies. For instance, a study titled "Explaining success and failure in the commons: the configural nature of Ostrom's institutional design principles" examines how Ostrom's principles can be applied to ecological commons. ([thecommonsjournal.org](https://thecommonsjournal.org/articles/10.18352/ijc.634?utm_source=openai)) Another study, "Social–ecological systems and adaptive governance of the commons," discusses the integration of Ostrom's framework with ecological systems. ([esj-journals.onlinelibrary.wiley.com](https://esj-journals.onlinelibrary.wiley.com/doi/10.1007/s11284-006-0074-0?utm_source=openai)) Additionally, "Ostrom's governance principles and sustainable financing of fish reserves" applies her principles to the management of fish reserves, highlighting their relevance in ecological governance. ([research-portal.uu.nl](https://research-portal.uu.nl/en/publications/ostroms-governance-principles-and-sustainable-financing-of-fish-r/?utm_source=openai))
 
 ## Reasoning
-The hypothesis accurately reflects Ostrom's findings that local communities can self-organize to manage common-pool resources sustainably, countering the 'tragedy of the commons' narrative. This alignment indicates that the hypothesis has already been extensively explored and substantiated in existing literature.
+These studies demonstrate the application of Ostrom's commons governance principles to ecological contexts, indicating an active area of research.

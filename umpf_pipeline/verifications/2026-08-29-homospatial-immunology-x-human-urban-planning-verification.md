@@ -1,9 +1,9 @@
 # Verification: Homospatial — Adaptive Immune Memory ⊕ Human Urban Planning
 
 **Verifies**: `hypotheses/2026-08-29-homospatial-immunology-x-human-urban-planning.md`
-**Verified**: 2026-08-28 · **Method**: Tavily search + GPT-4o classification (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
-## Verdict: **COLLISION**
+## Verdict: **ADJACENT_ACTIVE**
 
 ## Queries
 - `urban planning adaptive strategies historical data resilience`
@@ -13,7 +13,12 @@
 - `integration of immunology principles in urban development`
 
 ## What was found
-The concept of 'Urban Immunity' as a framework for urban governance and resilience is already explored in sources such as 'Development of a data-driven urban immunity assessment model' (https://pmc.ncbi.nlm.nih.gov/articles/PMC12158983) and 'Development of a data-driven urban immunity assessment model' (https://www.frontiersin.org/journals/public-health/articles/10.3389/fpubh.2025.1609641/full). These sources discuss the urban immune response, integrating adaptive immune principles into urban planning, and developing models for urban governance under public health emergencies.
+Adaptive Urban Planning: A Hybrid Framework for Balanced City Development
+([arxiv.org](https://arxiv.org/abs/2412.15349?utm_source=openai))
+Urban Resilience: From Global Vision to Local Practice
+([urban.org](https://www.urban.org/research/publication/urban-resilience-global-vision-local-practice?utm_source=openai))
+Urban Resilience
+([nber.org](https://www.nber.org/papers/w29261?utm_source=openai))
 
 ## Reasoning
-The hypothesis of 'Urban Immunity' as a dynamic urban planning framework that uses historical data and adaptive responses is already present in existing literature. The sources found describe similar frameworks that incorporate immunological principles into urban planning, specifically addressing urban resilience and governance in response to public health emergencies. This indicates that the hypothesis is not novel, as the structural connection between adaptive immune memory and urban planning has already been made.
+The search results reveal active research in adaptive urban planning frameworks that integrate historical data and adaptive responses to enhance urban resilience. For instance, the study "Adaptive Urban Planning: A Hybrid Framework for Balanced City Development" discusses a two-tier approach combining deterministic optimization with community-specific planning agents to achieve balanced urban development. Additionally, the "Urban Resilience: From Global Vision to Local Practice" report evaluates the 100 Resilient Cities program, highlighting the importance of resilience strategies in urban planning. These findings indicate that the concept of "Urban Immunity" aligns with current research efforts in adaptive urban planning.

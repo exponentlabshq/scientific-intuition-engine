@@ -3,7 +3,7 @@
 **Verifies**: `hypotheses/2026-08-31-janusian-astronomy.md`
 **Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
-## Verdict: **COLLISION**
+## Verdict: **NO_SIGNAL**
 
 ## Queries
 - `stellar nucleosynthesis theory`
@@ -13,7 +13,10 @@
 - `element formation in stars and planets named theory OR framework`
 
 ## What was found
-The hypothesis that both stars and planets are primary sources of elements heavier than hydrogen and helium created through nuclear processes is already established in astrophysics. Stellar nucleosynthesis describes how stars synthesize elements up to iron, while supernova nucleosynthesis and neutron star mergers produce heavier elements. These elements are then incorporated into planetary systems, including Earth, through processes like accretion and differentiation. This understanding is well-documented in sources such as the Wikipedia article on stellar nucleosynthesis ([en.wikipedia.org](https://en.wikipedia.org/wiki/Stellar_nucleosynthesis?utm_source=openai)) and the Nature Index on nucleosynthesis processes in stellar evolution ([nature.com](https://www.nature.com/nature-index/topics/l4/nucleosynthesis-processes-in-stellar-evolution?utm_source=openai)).
+1. "Nucleosynthesis Processes in Stellar Evolution" – Nature Index. ([nature.com](https://www.nature.com/nature-index/topics/l4/nucleosynthesis-processes-in-stellar-evolution?utm_source=openai))
+2. "Stellar Nucleosynthesis: r-Process, Kilonovae" – Orbit Codex. ([orbitcodex.com](https://orbitcodex.com/knowledge-base/stellar-nucleosynthesis?utm_source=openai))
+3. "Stellar Nucleosynthesis" – Wikipedia. ([en.wikipedia.org](https://en.wikipedia.org/wiki/Stellar_nucleosynthesis?utm_source=openai))
+4. "Nucleosynthesis" – NASA's Cosmicopia. ([cosmicopia.gsfc.nasa.gov](https://cosmicopia.gsfc.nasa.gov/nucleo.html?utm_source=openai))
 
 ## Reasoning
-The proposed hypothesis has been extensively studied and documented in existing scientific literature, indicating that the connection between stellar nucleosynthesis and planetary element formation is already well-established.
+The search results provide detailed information on stellar nucleosynthesis processes, including the synthesis of elements up to iron in stars and the production of heavier elements through neutron-capture processes like the s-process and r-process. ([nature.com](https://www.nature.com/nature-index/topics/l4/nucleosynthesis-processes-in-stellar-evolution?utm_source=openai)) However, they do not directly address the specific hypothesis that both stars and planets are primary sources of elements heavier than hydrogen and helium created through nuclear processes for the same cosmic phenomena.

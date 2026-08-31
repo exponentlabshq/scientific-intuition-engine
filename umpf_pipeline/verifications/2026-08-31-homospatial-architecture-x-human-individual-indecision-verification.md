@@ -13,7 +13,7 @@
 - `Real-time decision-making in construction projects`
 
 ## What was found
-The term 'Decisional Architecture' is used in various contexts, such as organizational decision-making frameworks and AI implementation strategies, but not specifically in architectural design or construction processes. Research indicates that indecision in construction can lead to operational inefficiencies and increased costs, but there is no evidence of a framework integrating architectural design with human decision-making processes in real-time.
+The Decision Architecture Framework by Hugo Moen focuses on improving organizational decision-making under uncertainty. ([hugomoen.no](https://www.hugomoen.no/en/frameworks/decision-architecture-framework?utm_source=openai)) The Institutional Decision Architecture paper by Antonio Buda examines structural decision systems in complex organizations. ([isrframework.org](https://isrframework.org/research-series/fp-02?utm_source=openai)) The EI&DA™ Method by Sofche Jovanovska explores how executive identity shapes strategic decisions. ([eida-method.com](https://www.eida-method.com/?utm_source=openai))
 
 ## Reasoning
-The search did not yield any sources discussing a framework that combines architectural design and construction processes with human decision-making dynamics in real-time, as described in the hypothesis.
+These sources discuss frameworks for decision-making in organizational contexts, but they do not specifically address the integration of architectural design with human decision-making processes in construction projects.

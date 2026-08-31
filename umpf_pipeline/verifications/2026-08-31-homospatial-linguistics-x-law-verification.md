@@ -13,7 +13,7 @@
 - `language emergence in legal contexts`
 
 ## What was found
-
+1. "The Sociohistorical Context of Creole Genesis" discusses the emergence of creole languages in specific sociohistorical settings. ([onlinelibrary.wiley.com](https://onlinelibrary.wiley.com/doi/abs/10.1002/9781444305982.ch14?utm_source=openai)) 2. "Competition, Selection, and the Role of Congruence in Creole Genesis and Development" examines how congruent features from source languages influence creole formation. ([doi.org](https://doi.org/10.1353%2Flan.2020.0005?utm_source=openai)) 3. "PACTUM" in Merriam-Webster defines it as an informal agreement in Roman law, often unenforceable. ([merriam-webster.com](https://www.merriam-webster.com/dictionary/pactum?utm_source=openai))
 
 ## Reasoning
-No specific references to 'Lexicon Pactum' or its direct application in creole genesis and contract law were found. The term 'pactum' in Roman law refers to informal agreements, but no evidence links this to creole language formation or contract law.
+The search results provide information on creole genesis and the concept of 'pactum' in Roman law. However, there is no direct evidence of a concept called 'Lexicon Pactum' that merges these ideas into a unique language form arising from the fusion of multiple languages through social negotiation, functioning as a comprehensive system of communication and agreement.

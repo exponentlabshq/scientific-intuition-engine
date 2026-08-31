@@ -13,7 +13,10 @@
 - `geology contradictions in plate tectonics`
 
 ## What was found
-
+1. 'What Causes Tectonic Plates to Move' – Geology In
+2. 'What Drives Tectonic Plate Movement Explained' – ScienceInsights
+3. 'Mechanisms for Plate Motion' – Geosciences LibreTexts
+4. 'What causes earthquakes?' – British Geological Survey
 
 ## Reasoning
-The search did not yield any sources directly addressing the specific claim that tectonic plates both move and do not move due to mantle convection currents simultaneously for the same geological event. While mantle convection is widely recognized as a primary driver of plate movement, alternative mechanisms such as slab pull and ridge push also contribute to tectonic activity. However, no evidence was found supporting the simultaneous occurrence of both movement and non-movement due to convection currents in the same event, making the hypothesis unsubstantiated.
+The search results provide detailed explanations of the mechanisms driving tectonic plate movement, including mantle convection, slab pull, and ridge push. These sources discuss how convection currents in the mantle contribute to plate movement, as well as other forces like slab pull and ridge push. However, they do not support the simultaneous occurrence of both plate movement due to convection currents and the absence of such movement for the same geological event, as proposed in the hypothesis.

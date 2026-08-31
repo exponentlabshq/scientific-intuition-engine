@@ -1,9 +1,9 @@
 # Verification: Homospatial — Game Theory Nash Bargaining ⊕ Human Social Network Dynamics
 
 **Verifies**: `hypotheses/2026-08-29-homospatial-game-theory-x-human-social-network-dynamics.md`
-**Verified**: 2026-08-29 · **Method**: Tavily search + GPT-4o classification (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
-## Verdict: **COLLISION**
+## Verdict: **ADJACENT_ACTIVE**
 
 ## Queries
 - `impact of social networks on negotiation outcomes`
@@ -13,7 +13,9 @@
 - `empirical studies on negotiation strategies in social networks`
 
 ## What was found
-Several sources discuss the integration of social networks into bargaining and negotiation processes, effectively covering the concept of Social Bargaining Dynamics. For example, 'Bargaining Solutions in a Social Network' (https://www.cis.upenn.edu/~mkearns/papers/bargain.pdf) and 'Balanced Outcomes in Social Exchange Networks' (https://www.cs.cornell.edu/home/kleinber/stoc08-exchange.pdf) both extend the Nash bargaining solution to social network contexts.
+A Nash bargaining model for simple exchange networks ([sciencedirect.com](https://www.sciencedirect.com/science/article/abs/pii/S0378873304000711?utm_source=openai))
+Bargaining dynamics in exchange networks ([gsb.stanford.edu](https://www.gsb.stanford.edu/faculty-research/publications/bargaining-dynamics-exchange-networks?utm_source=openai))
+An Exploration of a Model of Social Networks and Multilateral Negotiations ([scholarsarchive.byu.edu](https://scholarsarchive.byu.edu/facpub/8617/?utm_source=openai))
 
 ## Reasoning
-The hypothesis posits a negotiation framework where social networks influence bargaining outcomes, termed Social Bargaining Dynamics. However, existing research, such as the works by Braun and Gautschi, and Cook and Yamagishi, already explore how social networks impact bargaining solutions, effectively covering the same conceptual ground. This indicates that the hypothesis is not novel, as the specific connection between Nash bargaining and social network dynamics has been previously established.
+The search results reveal that the interplay between social networks and negotiation outcomes has been explored in various studies. For instance, a model combining the generalized Nash bargaining solution with network structures predicts profit splits in exchange networks, highlighting the influence of relational features and network positions on outcomes ([sciencedirect.com](https://www.sciencedirect.com/science/article/abs/pii/S0378873304000711?utm_source=openai)). Additionally, research on bargaining dynamics in exchange networks demonstrates that when a balanced outcome exists, the dynamics converge rapidly to such an outcome ([gsb.stanford.edu](https://www.gsb.stanford.edu/faculty-research/publications/bargaining-dynamics-exchange-networks?utm_source=openai)). Furthermore, a study on multilateral negotiations indicates that negotiators' perceptions of coalition building and their centrality within the network uniquely affect their problem-solving approaches and satisfaction with outcomes ([scholarsarchive.byu.edu](https://scholarsarchive.byu.edu/facpub/8617/?utm_source=openai)). These findings collectively support the concept of "Social Bargaining Dynamics," where negotiation strategies and outcomes are shaped by both individual preferences and the intricate web of social relationships among participants.

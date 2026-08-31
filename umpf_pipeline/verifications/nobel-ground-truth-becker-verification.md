@@ -6,10 +6,10 @@
 ## Verdict: **COLLISION**
 
 ## Queries
-
+- `Becker — Rational Choice Household Behavior connection research`
 
 ## What was found
-Gary S. Becker's work on rational choice theory and household behavior is well-documented. He was awarded the 1992 Nobel Prize in Economic Sciences for extending microeconomic analysis to a wide range of human behavior, including nonmarket behavior. His research applied economic theories to areas traditionally studied by sociology and demography, such as family decision-making, marriage, fertility, and the division of labor within households. Becker's approach modeled these behaviors using the same rational-choice framework economists use for market behavior, positing that individuals and households allocate scarce time and resources to maximize utility, subject to constraints like wages and prices.
+Gary Becker's seminal work, 'A Theory of the Allocation of Time' (1965), revolutionized household behavior modeling by integrating time use with consumption decisions. This framework laid the foundation for modern collective household models, as discussed in 'Gary Becker's A Theory of the Allocation of Time' by Chiappori and Lewbel (2015). ([academic.oup.com](https://academic.oup.com/ej/article/125/583/410/5076992?utm_source=openai)) Becker's contributions to family and household economics are further explored in the NBER working paper 'Gary Becker's Contributions to Family and Household Economics' by Pollak (2002). ([nber.org](https://www.nber.org/papers/w9232?utm_source=openai))
 
 ## Reasoning
-Becker's extensive research and recognition by the Nobel Prize committee confirm that the hypothesis accurately reflects his contributions to economics.
+Becker's integration of rational choice theory with household behavior has been extensively studied, with his foundational work leading to the development of collective household models. The NBER working paper by Pollak (2002) provides a comprehensive overview of Becker's influence in this field.

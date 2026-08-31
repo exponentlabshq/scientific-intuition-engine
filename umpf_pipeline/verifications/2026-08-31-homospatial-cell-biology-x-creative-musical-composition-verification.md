@@ -3,7 +3,7 @@
 **Verifies**: `hypotheses/2026-08-31-homospatial-cell-biology-x-creative-musical-composition.md`
 **Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
-## Verdict: **NO_SIGNAL**
+## Verdict: **ADJACENT_ACTIVE**
 
 ## Queries
 - `protein folding chaperones in cell biology`
@@ -13,7 +13,7 @@
 - `Composition Chaperone theory OR framework OR researcher`
 
 ## What was found
-No existing research or frameworks specifically termed 'Composition Chaperone' in the context of creative musical composition were identified. While parallels can be drawn between the guiding roles of protein folding chaperones in cellular processes and the structuring role of compositional techniques in music, no direct application of the 'Composition Chaperone' concept to music composition was found.
+1. "Chaperone-assisted protein folding in the cell cytoplasm" by W. A. Houry, published in Current Protein & Pept. Sci. in 2001. 2. "The Creative Process in Musical Composition: An Introspective Account" by Liane Gabora, published in 2016. 3. "Chaperones | Functions & Types" video by Hussain Biology, published in 2017.
 
 ## Reasoning
-The search did not yield any references to a 'Composition Chaperone' theory or framework in music composition. Although the analogy between protein folding chaperones and compositional structuring is conceptually interesting, it appears to be a novel idea without existing literature support.
+The first two sources provide detailed information on protein folding chaperones and the creative process in musical composition, respectively. The video offers a concise overview of chaperones, which may be useful for understanding their functions.

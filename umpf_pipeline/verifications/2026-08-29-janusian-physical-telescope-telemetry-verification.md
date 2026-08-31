@@ -1,9 +1,9 @@
 # Verification: Janusian — Physical Telescope Telemetry
 
 **Verifies**: `hypotheses/2026-08-29-janusian-physical-telescope-telemetry.md`
-**Verified**: 2026-08-29 · **Method**: Tavily search + GPT-4o classification (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
-## Verdict: **NO_SIGNAL**
+## Verdict: **ADJACENT_ACTIVE**
 
 ## Queries
 - `accuracy of physical telescope telemetry in astronomy`
@@ -13,7 +13,7 @@
 - `data interpretation frameworks in astronomy named theory OR researcher`
 
 ## What was found
-The search results included various studies on the accuracy and reliability of telescope telemetry data, such as 'Telemetry is a Sensor: Opportunistic Wavefront Estimation for the James Webb Space Telescope' (https://arxiv.org/html/2608.07357) and 'Integrated turbulence parameters' estimation from NAOMI adaptive optics telemetry data' (https://www.aanda.org/articles/aa/abs/2023/10/aa46952-23/aa46952-23.html). However, none of the results specifically addressed the hypothesis of simultaneously consistent and inconsistent datasets leading to contradictory conclusions.
+An AI tool developed by ESA researchers identified over 1,300 unusual cosmic objects in the Hubble Space Telescope's archives, with 800 previously unseen. ([livescience.com](https://www.livescience.com/space/astronomy/ai-tool-reveals-hundreds-of-anomalies-in-hubble-telescope-archives-and-some-defy-classification?utm_source=openai)) The Hubble Space Telescope's fine guidance sensors have demonstrated high performance, meeting or exceeding original requirements for dynamic pointing errors and photometric repeatability. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/20820301/?utm_source=openai)) A study published in *The Astrophysical Journal Letters* found that images from the Zwicky Transient Facility telescope increasingly show streaks caused by SpaceX's Starlink satellites, with 5,301 such streaks recorded between November 2019 and September 2021. ([axios.com](https://www.axios.com/2022/01/18/spacex-starlink-streaks-images?utm_source=openai))
 
 ## Reasoning
-The hypothesis suggests a paradoxical situation where telescope telemetry data can be both consistent and inconsistent, leading to contradictory interpretations. The search results did not provide evidence of this specific paradox or any active research directly addressing such a scenario. The results focused on the accuracy and challenges of interpreting telemetry data but did not explore the simultaneous consistency and inconsistency aspect. Therefore, the search did not surface any specifically relevant research or bridging material, resulting in a NO_SIGNAL verdict.
+The findings highlight that while physical telescope telemetry can provide consistent datasets, external factors such as satellite interference can introduce anomalies, leading to conflicting conclusions from the same data. This underscores the importance of considering both the reliability of the telemetry system and the potential for external influences when interpreting astronomical data.

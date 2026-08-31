@@ -1,9 +1,9 @@
 # Verification: Bisociation — Fluid Dynamics × Physical Telescope Telemetry
 
 **Verifies**: `hypotheses/2026-08-29-fluid-dynamics-x-physical-telescope-telemetry.md`
-**Verified**: 2026-08-29 · **Method**: Tavily search + GPT-4o classification (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
-## Verdict: **COLLISION**
+## Verdict: **ADJACENT_ACTIVE**
 
 ## Queries
 - `Kolmogorov turbulence theory telescope performance`
@@ -13,7 +13,9 @@
 - `turbulence prediction in atmospheric science`
 
 ## What was found
-The search results reveal that the Kolmogorov turbulence theory is extensively applied to describe the effects of atmospheric turbulence on telescope performance, particularly in adaptive optics systems. This is evident in sources such as 'Effect of atmospheric turbulence on the telescope image (seeing error)' (https://www.telescope-optics.net/induced.htm) and 'The Kolmogorov model of turbulence' (https://lambda.gsfc.nasa.gov/product/websites/AMI/mrao.cam.ac.uk/telescopes/coast/theses/rnt/node5.html). These sources discuss the application of fluid dynamics principles, specifically turbulence, to understand and mitigate atmospheric interference in telescope telemetry.
+1. "Effects of wind-driven telescope vibrations on measurements of turbulent angle-of-arrival fluctuations." ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/25090200/?utm_source=openai))
+2. "Atmospheric scintillation in astronomical photometry." ([academic.oup.com](https://academic.oup.com/mnras/article/452/2/1707/1067913?utm_source=openai))
+3. "Limitations to the standard Kolmogorov model of turbulence." ([telescope-optics.net](https://www.telescope-optics.net/kolmogorov_limitations.htm?utm_source=openai))
 
 ## Reasoning
-The hypothesis proposes a mapping between fluid dynamics and telescope telemetry, specifically linking turbulence in fluids to atmospheric interference in telescopes. The search results show that this connection is already well-established in the field, particularly through the use of the Kolmogorov turbulence model to address atmospheric effects on telescopes. This indicates that the hypothesis is not novel, as the specific structural connection it claims has already been made in existing research.
+The search results reveal that atmospheric turbulence, as described by Kolmogorov's theory, significantly impacts telescope performance. ([academic.oup.com](https://academic.oup.com/mnras/article/452/2/1707/1067913?utm_source=openai)) Additionally, wind-induced vibrations can further affect measurements of turbulent fluctuations. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/25090200/?utm_source=openai)) These findings suggest that the proposed mapping between fluid dynamics and telescope telemetry is supported by existing research.

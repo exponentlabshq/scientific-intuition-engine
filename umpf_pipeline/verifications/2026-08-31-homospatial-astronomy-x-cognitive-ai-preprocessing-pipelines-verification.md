@@ -13,7 +13,13 @@
 - `Gravitational lensing applications in machine learning`
 
 ## What was found
-The term 'Lensed Data Visualization' does not appear in the search results. While gravitational lensing is a well-studied phenomenon in astronomy, its direct application to data visualization or cognitive AI preprocessing pipelines is not evident. The search results primarily focus on gravitational lensing in the context of astrophysics and gravitational waves, without linking it to data visualization or AI preprocessing.
+An information-theoretic framework for visualization. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/20975160/?utm_source=openai))
+
+Understanding visualization: a formal approach using category theory and semiotics. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/23559513/?utm_source=openai))
+
+A framework to improve causal inferences from visualizations using counterfactual operators. ([journals.sagepub.com](https://journals.sagepub.com/doi/10.1177/14738716241265120?utm_source=openai))
+
+Big Data Visualization Through the Lens of Peirce’s Visual Sign Theory. ([digitalcommons.usf.edu](https://digitalcommons.usf.edu/si_facpub/673/?utm_source=openai))
 
 ## Reasoning
-The absence of 'Lensed Data Visualization' in the search results, coupled with the lack of direct connections between gravitational lensing and data visualization or AI preprocessing, suggests that this specific concept is not currently established in the literature.
+The search results reveal that while there are established frameworks in data visualization, such as those based on information theory, category theory, and semiotics, none specifically address the concept of 'Lensed Data Visualization' or its application of gravitational lensing principles to data preprocessing. The term 'Lensed Data Visualization' appears to be a novel concept without direct precedent in existing literature.

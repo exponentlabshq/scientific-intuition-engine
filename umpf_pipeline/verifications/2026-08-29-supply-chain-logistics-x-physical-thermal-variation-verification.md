@@ -1,9 +1,9 @@
 # Verification: Bisociation — Supply Chain Logistics × Physical Thermal Variation
 
 **Verifies**: `hypotheses/2026-08-29-supply-chain-logistics-x-physical-thermal-variation.md`
-**Verified**: 2026-08-29 · **Method**: Tavily search + GPT-4o classification (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
-## Verdict: **NO_SIGNAL**
+## Verdict: **ADJACENT_ACTIVE**
 
 ## Queries
 - `bullwhip effect supply chain logistics temperature fluctuations`
@@ -13,7 +13,9 @@
 - `interdisciplinary studies bullwhip effect thermal systems`
 
 ## What was found
-The search results primarily focused on the bullwhip effect in supply chain logistics and its implications, with some mentions of temperature effects on supply chains, but no specific connection between supply chain logistics and physical thermal variation as proposed in the hypothesis.
+1. "The Bullwhip Effect in Supply Chains" by Lee, Padmanabhan, and Whang (1997) discusses how demand fluctuations lead to amplified order variability upstream in supply chains. ([courses.ischool.berkeley.edu](https://courses.ischool.berkeley.edu/i290-4/s03/readings/bullwhip.htm?utm_source=openai))
+2. "Bullwhip Effect in Supply Chains" by the Chartered Institute of Procurement & Supply (CIPS) outlines causes like demand forecast updates and order batching. ([1prd-dxp.cips.org](https://1prd-dxp.cips.org/intelligence-hub/operations-management/bullwhip-effect?utm_source=openai))
+3. "Bullwhip Effect in logistics: causes and how to prevent it" by AR Racking explores how small demand changes can lead to significant upstream variability. ([ar-racking.com](https://www.ar-racking.com/gb/blog/bullwhip-effect-in-logistics-causes-and-how-to-prevent-it/?utm_source=openai))
 
 ## Reasoning
-The search results did not reveal any specific research or bridging field that directly connects supply chain logistics with physical thermal variation in the manner described by the hypothesis. While there are discussions on the bullwhip effect and temperature management in supply chains, these do not establish the proposed mapping between uncertainty in demand signals and temperature readings, or between inventory levels and material states. The findings do not support the hypothesis's core claim of a strong feedback loop between these domains, resulting in a NO_SIGNAL verdict.
+The search results provide detailed explanations of the bullwhip effect in supply chains, including its causes and impacts, which are directly relevant to the proposed mapping between supply chain logistics and thermal variation.

@@ -13,9 +13,9 @@
 - `Network theory in urban planning`
 
 ## What was found
-A Network Model for Urban Planning ([ideas.repec.org](https://ideas.repec.org/a/spr/joptap/v209y2026i1d10.1007_s10957-026-02949-9.html?utm_source=openai))
-Network Analysis of ‘Urban Systems’: Potential, Challenges, and Pitfalls ([onlinelibrary.wiley.com](https://onlinelibrary.wiley.com/doi/full/10.1111/tesg.12392?utm_source=openai))
-UrbanSim ([cloud.urbansim.com](https://cloud.urbansim.com/docs/general/documentation/urbansim.html?utm_source=openai))
+Curio: A Dataflow-Based Framework for Collaborative Urban Visual Analytics ([www-new.evl.uic.edu](https://www-new.evl.uic.edu/news/2024/2024-01-01-2844/?utm_source=openai))
+Urbanite: A Dataflow-Based Framework for Human-AI Interactive Alignment in Urban Visual Analytics ([researchgate.net](https://www.researchgate.net/publication/394439070_Urbanite_A_Dataflow-Based_Framework_for_Human-AI_Interactive_Alignment_in_Urban_Visual_Analytics?utm_source=openai))
+DataFlow: An LLM-Driven Framework for Unified Data Preparation and Workflow Automation in the Era of Data-Centric AI ([arxiv.org](https://arxiv.org/abs/2512.16676?utm_source=openai))
 
 ## Reasoning
-The search results reveal research on integrating network theory into urban planning, such as the development of a network model for urban planning ([ideas.repec.org](https://ideas.repec.org/a/spr/joptap/v209y2026i1d10.1007_s10957-026-02949-9.html?utm_source=openai)) and the application of network analysis to urban systems ([onlinelibrary.wiley.com](https://onlinelibrary.wiley.com/doi/full/10.1111/tesg.12392?utm_source=openai)). Additionally, UrbanSim is a microsimulation land use model designed to analyze the effects of land use policies and infrastructure investments on urban development ([cloud.urbansim.com](https://cloud.urbansim.com/docs/general/documentation/urbansim.html?utm_source=openai)). However, there is no direct evidence of a system called 'Urban Dataflow Management' that integrates land use and data packet management principles.
+The search results reveal frameworks like Curio and Urbanite that utilize dataflow models for urban visual analytics, focusing on collaborative design and implementation of visual analytics components. However, these frameworks primarily address data visualization and analysis rather than integrating urban planning with data packet management. The term "Urban Dataflow Management" as a system governing urban environments by combining land use and data packet management does not appear in the search results.

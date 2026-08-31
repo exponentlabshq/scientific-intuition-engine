@@ -13,7 +13,9 @@
 - `agricultural principles in city design`
 
 ## What was found
-No existing theory or system specifically termed 'Agro-Urban Flow System' was identified. While integrating urban planning with agricultural practices like crop rotation is a recognized concept, the specific framework proposed in the hypothesis does not appear in current literature.
+Integrating urban and peri-urban agriculture in planning systems. Barriers, policy tools and recommendations ([tandfonline.com](https://www.tandfonline.com/doi/abs/10.1080/02697459.2025.2472115?utm_source=openai))
+Crop Rotation Planning Procedure ([sare.org](https://www.sare.org/publications/crop-rotation-on-organic-farms/a-crop-rotation-planning-procedure/?utm_source=openai))
+Crop Rotation ([unccd.int](https://www.unccd.int/land-and-life/sds/toolbox/crop-rotation?utm_source=openai))
 
 ## Reasoning
-The search did not yield any references to a system called 'Agro-Urban Flow System' or a framework that integrates urban traffic management with agricultural cycles in the manner described. Existing studies focus on urban agriculture and sustainable city planning but do not combine traffic flow optimization with crop rotation principles as suggested.
+The search results reveal research on integrating urban and peri-urban agriculture into planning systems, emphasizing the importance of crop rotation for soil health and productivity. However, there is no direct evidence of a concept termed 'Agro-Urban Flow System' that harmonizes traffic management with agricultural cycles. The existing literature does not describe a system that transforms streets into living ecosystems supporting both transportation and agriculture.

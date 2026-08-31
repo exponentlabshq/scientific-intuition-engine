@@ -13,7 +13,9 @@
 - `Quantum mechanics and decision-making in sports`
 
 ## What was found
-No direct references to a 'Quantum Pitch Sequence' methodology were found. While quantum mechanics has been applied to sports analytics, such as using quantum computing for sports prediction ([datadiamond.app](https://www.datadiamond.app/docs/quantum?utm_source=openai)), there is no evidence of its application to baseball pitch sequencing. Studies on pitch sequencing focus on optimizing pitch selection and location to improve performance, but do not incorporate quantum principles. For example, research on pitch sequence complexity and long-term pitcher performance ([mdpi.com](https://www.mdpi.com/2075-4663/3/1/40?utm_source=openai)) and modeling strikeout rates based on pitch predictability ([journals.sagepub.com](https://journals.sagepub.com/doi/10.3233/JSA-170103?utm_source=openai)) do not reference quantum mechanics.
+Pitch Sequence Complexity and Long-Term Pitcher Performance ([mdpi.com](https://www.mdpi.com/2075-4663/3/1/40?utm_source=openai))
+Using PITCHf/x to model the dependence of strikeout rate on the predictability of pitch sequences ([journals.sagepub.com](https://journals.sagepub.com/doi/10.3233/JSA-170103?utm_source=openai))
+Counterfactual Optimization of Baseball Pitch Sequences and Estimation of Its Impact on Season-Level Statistics ([researchgate.net](https://www.researchgate.net/publication/407172458_Counterfactual_Optimization_of_Baseball_Pitch_Sequences_and_Estimation_of_Its_Impact_on_Season-Level_Statistics?utm_source=openai))
 
 ## Reasoning
-The search did not yield any sources discussing the integration of quantum mechanics into baseball pitch sequencing, indicating that the proposed 'Quantum Pitch Sequence' methodology is not currently established in the field.
+The search results reveal that while there is extensive research on pitch sequencing in baseball, including studies on its complexity, predictability, and optimization, there is no evidence of a concept termed 'Quantum Pitch Sequence' or the application of quantum physics principles to baseball pitching strategies. The existing literature focuses on statistical and machine learning models to analyze and optimize pitch sequences, without incorporating quantum mechanics.

@@ -1,9 +1,9 @@
 # Verification: Bisociation — Astronomy × Telecommunications
 
 **Verifies**: `hypotheses/2026-08-29-astronomy-x-telecommunications.md`
-**Verified**: 2026-08-29 · **Method**: Tavily search + GPT-4o classification (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
-## Verdict: **NO_SIGNAL**
+## Verdict: **ADJACENT_ACTIVE**
 
 ## Queries
 - `gravitational lensing modeling packet routing`
@@ -13,7 +13,7 @@
 - `complex systems in astronomy and telecommunications named theory OR framework OR researcher`
 
 ## What was found
-The search results did not surface any specific research or frameworks directly connecting the uncertainty in visibility of celestial objects with uncertainty in packet delivery, nor evolving light paths with evolving packet routes. The results primarily focused on gravitational lensing models and network routing optimization separately, without a direct link between the two domains.
+The search revealed a study titled 'Improved routing strategy based on gravitational field theory' that proposes a routing strategy considering node attractions in transmission processes using gravitational field theory. ([researchgate.net](https://www.researchgate.net/publication/282841753_Improved_routing_strategy_based_on_gravitational_field_theory?utm_source=openai))
 
 ## Reasoning
-The search results did not reveal any specific bridging research or frameworks that connect the domains of astronomy and telecommunications in the manner proposed by the hypothesis. The results were either focused on gravitational lensing in astronomy or on network routing in telecommunications, but no specific connection between the two was found. Additionally, the results related to complex systems were generic and did not provide a specific bridge between the two domains, falling into the umbrella-trap rule. Therefore, the verdict is NO_SIGNAL.
+This study introduces a routing strategy based on gravitational field theory, which conceptually aligns with the proposed mapping between gravitational effects on light and routing protocols managing packet flows.

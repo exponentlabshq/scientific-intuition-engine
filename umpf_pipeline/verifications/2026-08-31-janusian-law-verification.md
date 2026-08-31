@@ -3,7 +3,7 @@
 **Verifies**: `hypotheses/2026-08-31-janusian-law.md`
 **Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
-## Verdict: **COLLISION**
+## Verdict: **ADJACENT_ACTIVE**
 
 ## Queries
 - `contract law offer acceptance implied agreement`
@@ -13,7 +13,7 @@
 - `contract formation named theory OR framework OR researcher`
 
 ## What was found
-The concept of contracts being formed without explicit offers or acceptances is well-established in contract law, particularly through the doctrines of implied-in-fact and implied-in-law contracts. An implied-in-fact contract arises when parties' conduct indicates a mutual agreement, even without explicit words. For example, if a customer orders a meal at a restaurant, it's understood that they will pay for the meal upon completion. An implied-in-law contract, or quasi-contract, is imposed by law to prevent unjust enrichment, even if no actual agreement exists. For instance, if a person receives emergency medical services while unconscious, they are typically required to pay for those services upon recovery, as the law assumes they would have agreed to the services had they been able to consent. These doctrines demonstrate that contracts can be legally binding without clear offers and acceptances, aligning with the hypothesis that both explicit and implicit agreements can coexist within contract law.
+Implied acceptance in contract law means a party has agreed to a contract’s terms through conduct rather than words. ([legalclarity.org](https://legalclarity.org/what-is-implied-acceptance-in-contract-law/?utm_source=openai)) Acceptance isn't always communicated by words; sometimes actions suffice. ([nolo.com](https://www.nolo.com/legal-encyclopedia/acceptance-of-contract-offers-32651.html?utm_source=openai)) An implied-in-fact contract consists of obligations arising from a mutual agreement and intent to promise where the agreement and promise have not been expressed in words. ([law.cornell.edu](https://www.law.cornell.edu/wex/contract_implied_in_fact?utm_source=openai))
 
 ## Reasoning
-The search results confirm that contract law recognizes the formation of contracts without explicit offers or acceptances through implied-in-fact and implied-in-law contracts. This directly supports the hypothesis that both clear offers and acceptances, as well as the absence of such requirements, can simultaneously apply to the same contract.
+The search results provide information on implied acceptance and implied-in-fact contracts, which involve contract formation without explicit offers or acceptances. This supports the hypothesis that both clear offer and acceptance, as well as the absence of such requirements, can simultaneously apply in contract formation.

@@ -3,7 +3,7 @@
 **Verifies**: `hypotheses/2026-08-31-janusian-philosophy.md`
 **Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
-## Verdict: **COLLISION**
+## Verdict: **ADJACENT_ACTIVE**
 
 ## Queries
 - `justified true belief theory`
@@ -13,7 +13,13 @@
 - `Plato's definition of knowledge`
 
 ## What was found
-The tripartite analysis of knowledge as justified true belief (JTB) is a foundational concept in epistemology, stating that for someone to know a proposition, it must be true, they must believe it, and they must be justified in believing it. This definition has been central to discussions in epistemology, as detailed in the Stanford Encyclopedia of Philosophy. However, Edmund Gettier's 1963 paper "Is Justified True Belief Knowledge?" presented cases where individuals had justified true beliefs that were not knowledge, challenging the adequacy of the JTB definition. This issue is further explored in the Stanford Encyclopedia of Philosophy's entry on the analysis of knowledge.
+1. **Gettier Problem**: Edmund Gettier's 1963 paper, "Is Justified True Belief Knowledge?", presents counterexamples where individuals have justified true beliefs that are not considered knowledge, challenging the traditional tripartite definition. ([rep.routledge.com](https://www.rep.routledge.com/articles/thematic/gettier-problems/v-2/sections/the-gettier-problem?utm_source=openai))
+
+2. **Responses to Gettier**: Philosophers have proposed various responses to the Gettier problem, including reliabilism, tracking theories, and virtue epistemology, aiming to refine the definition of knowledge beyond justified true belief. ([doi.org](https://doi.org/10.1007/s11098-014-0385-x?utm_source=openai))
+
+3. **Knowledge as Justified True Belief**: The tripartite analysis defines knowledge as a belief that is true and justified, but Gettier cases demonstrate that this definition may not be sufficient. ([plato.stanford.edu](https://plato.stanford.edu/entries/knowledge-analysis/?utm_source=openai))
+
+4. **Gettier Problem Explained**: A video explanation of the Gettier problem, discussing how justified true belief can fail to constitute knowledge. ([youtube.com](https://www.youtube.com/watch?v=QJ6XEEmGrvg&utm_source=openai))
 
 ## Reasoning
-The hypothesis posits a novel integration of the JTB theory with the concept of knowledge independent of justification or truth. However, the JTB theory already encompasses the idea that knowledge requires justification and truth, and the Gettier problem specifically addresses scenarios where justified true beliefs do not constitute knowledge. Therefore, the hypothesis does not introduce a new or unrecognized connection within the field of epistemology.
+The search results provide detailed information on the Gettier problem, responses to it, and the traditional tripartite analysis of knowledge. The video explanation offers a visual and accessible overview of the topic.

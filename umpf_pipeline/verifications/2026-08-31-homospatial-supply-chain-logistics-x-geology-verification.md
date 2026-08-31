@@ -13,7 +13,7 @@
 - `inventory fluctuations geological layers`
 
 ## What was found
-The bullwhip effect describes how small fluctuations in consumer demand can lead to larger variations in orders and inventory levels upstream in the supply chain. ([techtarget.com](https://www.techtarget.com/enterprise-software/definition/What-is-the-bullwhip-effect?utm_source=openai)) Sedimentary layering in geology refers to the deposition of successive layers of sediment over time, forming distinct strata that record Earth's geological history. ([en.wikipedia.org](https://en.wikipedia.org/wiki/Bullwhip_effect?utm_source=openai)) However, there is no existing concept or framework termed "Inventory Stratigraphy" that directly correlates the bullwhip effect with sedimentary layering.
+1. "What is the Bullwhip Effect?" from TechTarget. 2. "Information Distortion in a Supply Chain: The Bullwhip Effect" from Stanford Graduate School of Business. 3. "The Bullwhip Effect on Supply Chains" from The Geography of Transport Systems.
 
 ## Reasoning
-While both the bullwhip effect and sedimentary layering involve the amplification and recording of changes over time, there is no established framework or concept that directly connects these two phenomena. The proposed term "Inventory Stratigraphy" does not appear in current literature or research.
+The search results provide detailed explanations of the bullwhip effect in supply chain logistics, including its definition, causes, and impacts. However, there is no mention of 'Inventory Stratigraphy' or any framework that represents fluctuations in supply chain demand as physical layers of inventory.

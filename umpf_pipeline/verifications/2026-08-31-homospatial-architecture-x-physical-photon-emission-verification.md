@@ -13,7 +13,9 @@
 - `prefabricated buildings with integrated lighting systems`
 
 ## What was found
-The Glowtile by Leucos is a modular lighting system that transforms ceramic tiles into illuminated wall installations. ([trendhunter.com](https://www.trendhunter.com/trends/glowtile?utm_source=openai)) The Lightframe LED System by Architen Landrell integrates LED lighting into fabric panels, simulating daylight and maintaining constant lux levels. ([architen.com](https://www.architen.com/products/lightframe-led-system/?utm_source=openai)) The Infinity Cloud SOL Series by EOSLight offers a modular ceiling fixture designed to create seamless illuminated surfaces with minimal visible joints. ([eoslight.com](https://eoslight.com/product/infinity-cloud-sol-series/?utm_source=openai))
+Integrated Modular Wall Systems for Modular Buildings ([gsmodular.com](https://gsmodular.com/integrated-modular-wall-systems/?utm_source=openai))
+Lighting Integrated in Prefabricated Systems ([domusweb.it](https://www.domusweb.it/en/Advertorial/lighting-integrated-in-prefabricated-systems.html?utm_source=openai))
+Spark™ Light-Emitting Panels ([sensitile.com](https://www.sensitile.com/materials/families/spark/?utm_source=openai))
 
 ## Reasoning
-These examples demonstrate the integration of modular construction with light-emitting materials in architectural design, aligning with the concept of LuminoModular Architecture.
+The search results reveal that prefabricated construction can incorporate integrated lighting systems, such as modular wall assemblies with built-in lighting ([gsmodular.com](https://gsmodular.com/integrated-modular-wall-systems/?utm_source=openai)) and lighting integrated into prefabricated systems ([domusweb.it](https://www.domusweb.it/en/Advertorial/lighting-integrated-in-prefabricated-systems.html?utm_source=openai)). Additionally, materials like Spark™ panels offer light-emitting capabilities ([sensitile.com](https://www.sensitile.com/materials/families/spark/?utm_source=openai)). However, there is no direct evidence of prefabricated modules that emit photons in response to energy inputs, as proposed in the LuminoModular Architecture concept.

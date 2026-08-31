@@ -1,9 +1,9 @@
 # Verification: Bisociation — Organizational Theory — Self-Organizing Teams × Finance (Human & Social Systems)
 
 **Verifies**: `hypotheses/2026-08-29-organizational-theory-x-finance.md`
-**Verified**: 2026-08-29 · **Method**: Tavily search + GPT-4o classification (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
-## Verdict: **NO_SIGNAL**
+## Verdict: **ADJACENT_ACTIVE**
 
 ## Queries
 - `impact of self-organizing teams on transaction success in finance`
@@ -13,7 +13,7 @@
 - `self-organization in finance and its outcomes`
 
 ## What was found
-The search results did not surface any direct connection between self-organizing teams in organizational theory and transaction success in finance. The results primarily discussed self-organizing teams in various contexts (e.g., agile success, adaptive management) and general principles of self-organization in economic systems, but none specifically linked these to financial transaction outcomes or regulatory coordination in finance.
+1. "Adhocracy in Finance: Definition, Application, and Pros & Cons - SuperMoney" (https://www.supermoney.com/encyclopedia/adhocracy) 2. "What Is Agile Finance? An Expert Guide - Simply iCard Consulting" (https://simplyicard.com/what-is-agile-finance-an-expert-guide/) 3. "Viisi: Transforming Financial Services with a Holacratic Approach - Corporate Rebels" (https://www.corporate-rebels.com/blog/viisi-transforming-financial-services-with-a-holacratic-approach)
 
 ## Reasoning
-The hypothesis posits a mapping between self-organizing teams and financial transaction success, but the search results did not provide evidence of this specific connection. While there is discussion of self-organization in both domains, the results do not bridge the two in the manner hypothesized. The findings are too generic and do not meet the criteria for ADJACENT_ACTIVE, as they do not provide a specific, non-generic bridge between the domains.
+The search results reveal that self-organizing principles, such as adhocracy and agile methodologies, are being applied in the finance sector to enhance adaptability and responsiveness. For instance, Viisi, a financial services company, has adopted a holacratic approach, emphasizing self-management and decentralized decision-making. Similarly, the concept of adhocracy in finance promotes individual initiative and self-organization, diverging from traditional hierarchical structures. These examples demonstrate that self-organizing principles are being implemented in financial contexts, aligning with the proposed mapping of team dynamics to portfolio evolution in response to market context.

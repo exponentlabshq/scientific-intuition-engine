@@ -15,11 +15,11 @@
 ## What was found
 1. "A Survey on Data Quality for Dependable Monitoring in Wireless Sensor Networks" discusses how increasing sensor density can improve data accuracy but may also introduce noise, affecting data quality. ([mdpi.com](https://www.mdpi.com/1424-8220/17/9/2010?utm_source=openai))
 
-2. "Semantic Description of Quality of Data in Sensor Networks" highlights that higher sensor density can lead to data overload, potentially reducing data accuracy due to increased noise. ([mdpi.com](https://www.mdpi.com/1424-8220/21/19/6462?utm_source=openai))
+2. "Semantic Description of Quality of Data in Sensor Networks" highlights that while denser sensor networks can enhance data accuracy, they may also lead to data inconsistencies due to increased noise. ([mdpi.com](https://www.mdpi.com/1424-8220/21/19/6462?utm_source=openai))
 
-3. "On the Optimal Density for Real-Time Data Gathering of Spatio-Temporal Processes in Sensor Networks" examines the balance between sensor density and data accuracy, noting that excessive sensor density can lead to data redundancy and potential inaccuracies. ([researchgate.net](https://www.researchgate.net/publication/4149833_On_the_Optimal_Density_for_Real-Time_Data_Gathering_of_Spatio-Temporal_Processes_in_Sensor_Networks?utm_source=openai))
+3. "On the Optimal Density for Real-Time Data Gathering of Spatio-Temporal Processes in Sensor Networks" examines the trade-off between sensor density and data accuracy, noting that higher sensor density can improve data accuracy but may also increase data conflicts. ([researchgate.net](https://www.researchgate.net/publication/4149833_On_the_Optimal_Density_for_Real-Time_Data_Gathering_of_Spatio-Temporal_Processes_in_Sensor_Networks?utm_source=openai))
 
-4. "Aggregation in Sensor Networks: An Energy–Accuracy Trade-Off" explores how increasing sensor density can enhance data accuracy but may also lead to higher energy consumption and potential data overload. ([sciencedirect.com](https://www.sciencedirect.com/science/article/abs/pii/S157087050300009X?utm_source=openai))
+4. "Aggregation in Sensor Networks: An Energy–Accuracy Trade-Off" explores how increasing sensor density can enhance data accuracy but may also lead to data inconsistencies due to noise. ([sciencedirect.com](https://www.sciencedirect.com/science/article/abs/pii/S157087050300009X?utm_source=openai))
 
 ## Reasoning
-The cited sources provide evidence that increasing sensor density can simultaneously enhance data accuracy and introduce noise, leading to potential data overload and reduced accuracy. This supports the core claim that both effects must be considered in sensor network theory.
+The cited sources provide evidence that increasing sensor density can simultaneously enhance data accuracy and introduce noise, leading to data inconsistencies. This supports the core claim that both effects must be considered in sensor network theory.

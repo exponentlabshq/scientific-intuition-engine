@@ -3,7 +3,7 @@
 **Verifies**: `hypotheses/2026-08-31-homospatial-neuroscience-x-telecommunications.md`
 **Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
-## Verdict: **ADJACENT_ACTIVE**
+## Verdict: **NO_SIGNAL**
 
 ## Queries
 - `Neuro-Coding Optimization theory OR framework`
@@ -13,7 +13,9 @@
 - `error-correcting codes in biological neural networks`
 
 ## What was found
-1. "Functional Error Correction for Robust Neural Networks" discusses using error-correcting codes to protect neural network weights from noise-induced degradation. ([cris.technion.ac.il](https://cris.technion.ac.il/en/publications/functional-error-correction-for-robust-neural-networks/?utm_source=openai)) 2. "The Information Theory of Developmental Pruning: Optimizing Global Network Architectures Using Local Synaptic Rules" explores how synaptic pruning optimizes neural network architectures by removing less important connections. ([journals.plos.org](https://journals.plos.org/ploscompbiol/article?id=10.1371%2Fjournal.pcbi.1009458&utm_source=openai)) 3. "Synaptic Pruning: A Biological Inspiration for Deep Learning Regularization" presents a magnitude-based synaptic pruning method that removes low-importance connections during training, enhancing model performance. ([arxiv.org](https://arxiv.org/abs/2508.09330?utm_source=openai))
+A unifying framework from neural superposition to sparse interpretable codes ([nature.com](https://www.nature.com/articles/s42256-026-01259-z?utm_source=openai))
+The information theory of developmental pruning: Optimizing global network architectures using local synaptic rules ([research.ed.ac.uk](https://www.research.ed.ac.uk/en/publications/the-information-theory-of-developmental-pruning-optimizing-global/?utm_source=openai))
+Synaptic Pruning: A Biological Inspiration for Deep Learning Regularization ([arxiv.org](https://arxiv.org/abs/2508.09330?utm_source=openai))
 
 ## Reasoning
-The search results reveal research on integrating error correction and synaptic pruning principles to enhance neural network performance. The first source focuses on error correction in neural networks, the second on synaptic pruning for network optimization, and the third on applying pruning methods inspired by biological processes to deep learning. These findings suggest that the proposed concept of Neuro-Coding Optimization, which combines synaptic pruning and error-correcting codes to optimize neural and digital communication pathways, is an active area of research.
+The search results reveal research on synaptic pruning and its application in optimizing neural networks, such as the study on developmental pruning optimizing network architectures using local synaptic rules ([research.ed.ac.uk](https://www.research.ed.ac.uk/en/publications/the-information-theory-of-developmental-pruning-optimizing-global/?utm_source=openai)). Additionally, the concept of synaptic pruning as a biological inspiration for deep learning regularization is explored ([arxiv.org](https://arxiv.org/abs/2508.09330?utm_source=openai)). However, there is no direct evidence of a framework integrating synaptic pruning with error-correcting codes to form 'Neuro-Coding Optimization.'

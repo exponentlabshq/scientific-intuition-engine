@@ -3,7 +3,7 @@
 **Verifies**: `hypotheses/2026-08-31-homospatial-social-systems-x-physical-chemical-reaction-networks.md`
 **Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
-## Verdict: **NO_SIGNAL**
+## Verdict: **ADJACENT_ACTIVE**
 
 ## Queries
 - `Sociochemical Nexus theory OR framework`
@@ -13,7 +13,7 @@
 - `cultural evolution and reaction network analogy`
 
 ## What was found
-No references to a 'Sociochemical Nexus' theory or framework were found. The search results primarily discuss chemical reaction networks and their applications in various fields, such as circuit theory and prebiotic analysis. Additionally, frameworks like the 'nexus social-ecological system framework' (NexSESF) address the interconnections between food, water, and energy systems but do not integrate social systems with chemical reaction networks. ([sciencedirect.com](https://www.sciencedirect.com/science/article/pii/S1462901122000168?utm_source=openai))
+The 'nexus social-ecological system framework (NexSESF)' integrates social and ecological components to manage interconnected systems like food, water, and energy. ([sciencedirect.com](https://www.sciencedirect.com/science/article/pii/S1462901122000168?utm_source=openai)) Chemical reaction networks (CRNs) are studied in Chemical Reaction Network Theory (CRNT), focusing on the dynamics of chemical reactions. ([reaction-networks.net](https://www.reaction-networks.net/wiki/Chemical_reaction_networks?utm_source=openai)) A study titled 'An ecological framework for the analysis of prebiotic chemical reaction networks' examines the dynamics of chemical networks in early life forms. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/32800733/?utm_source=openai))
 
 ## Reasoning
-The search did not yield any information on a 'Sociochemical Nexus' theory or framework, indicating that this specific concept is not currently recognized or established in the literature.
+The NexSESF framework addresses the integration of social and ecological systems, which is conceptually related to the idea of combining social systems with chemical reaction networks. The study on prebiotic chemical reaction networks explores the dynamics of chemical networks in early life forms, providing insights into the behavior of chemical systems.

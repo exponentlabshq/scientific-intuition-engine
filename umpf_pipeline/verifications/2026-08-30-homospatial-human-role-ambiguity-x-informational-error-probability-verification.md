@@ -1,9 +1,9 @@
 # Verification: Homospatial — Human Role Ambiguity ⊕ Informational Error Probability
 
 **Verifies**: `hypotheses/2026-08-30-homospatial-human-role-ambiguity-x-informational-error-probability.md`
-**Verified**: 2026-08-30 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
-## Verdict: **NO_SIGNAL**
+## Verdict: **ADJACENT_ACTIVE**
 
 ## Queries
 - `Role-Error Nexus theory OR framework`
@@ -13,7 +13,7 @@
 - `information theory in social dynamics research`
 
 ## What was found
-No existing theory or framework specifically named 'Role-Error Nexus' was identified. Research indicates that role ambiguity in organizations is linked to increased human errors and decreased job performance. For instance, a study found that role ambiguity negatively affects job satisfaction and performance, with a correlation coefficient of -0.21. ([doi.org](https://doi.org/10.1177/014920630002600104?utm_source=openai)) Additionally, role ambiguity has been associated with higher levels of burnout and turnover. ([evanslearninglabs.com](https://www.evanslearninglabs.com/articles/role-clarity-ambiguity-performance.php?utm_source=openai)) These findings suggest that the 'Role-Error Nexus' concept aligns with existing research on the impact of role ambiguity on organizational performance.
+Studies have demonstrated that role ambiguity and role conflict can lead to increased organizational conflicts, reduced performance, and higher turnover rates. For instance, research indicates that role ambiguity is negatively associated with job satisfaction and organizational commitment, while positively associated with tension, anxiety, and propensity to leave. ([evanslearninglabs.com](https://www.evanslearninglabs.com/articles/role-clarity-ambiguity-performance.php?utm_source=openai)) Additionally, role ambiguity has been linked to increased organizational conflicts, including role, task, and relationship conflicts. ([kci.go.kr](https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002843567&utm_source=openai))
 
 ## Reasoning
-The search did not uncover a specific framework or theory named 'Role-Error Nexus.' However, existing literature supports the idea that role ambiguity contributes to increased human errors and decreased job performance, aligning with the proposed concept.
+The findings from these studies support the core claim that the Role-Error Nexus, characterized by ambiguous human roles and high probabilities of informational errors, leads to a continuous cycle of confusion and inefficiency within organizations.

@@ -13,7 +13,7 @@
 - `architecture and neuroscience integration`
 
 ## What was found
-The term "Cognitecture" is used in various contexts, including AI orchestration and cognitive architecture, but not in the context of integrating load-bearing structures with cognitive processing capabilities in architecture. No sources were found discussing a responsive architectural system that dynamically adjusts its form and function based on real-time data inputs.
+The term 'Cognitecture' is used in various contexts, including AI orchestration and bounded delegation, as detailed on the Cognitecture website. ([cognitecture.org](https://cognitecture.org/?utm_source=openai)) Additionally, the Cognitio Emergens Framework integrates formal, mathematical, and conceptual models to explain the emergence of cognition across diverse scales and systems. ([emergentmind.com](https://www.emergentmind.com/topics/cognitio-emergens-framework?utm_source=openai)) However, there is no evidence of a concept or system termed 'Cognitecture' that integrates load-bearing structural design in architecture with cognitive processing capabilities.
 
 ## Reasoning
-The search did not yield any information on a concept or system that combines load-bearing structural design with cognitive processing to create a dynamically responsive architectural environment.
+The search results reveal that 'Cognitecture' is associated with AI orchestration and bounded delegation, but not with the integration of architectural design and cognitive processing.

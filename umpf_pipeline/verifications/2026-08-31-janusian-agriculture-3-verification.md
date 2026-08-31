@@ -3,7 +3,7 @@
 **Verifies**: `hypotheses/2026-08-31-janusian-agriculture-3.md`
 **Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
-## Verdict: **COLLISION**
+## Verdict: **NO_SIGNAL**
 
 ## Queries
 - `crop rotation soil health benefits`
@@ -13,7 +13,9 @@
 - `crop rotation theory OR framework OR researcher`
 
 ## What was found
-Crop rotation and monoculture are established agricultural practices with well-documented effects on soil health and crop yields. Crop rotation involves planting different crops in sequence on the same field, enhancing soil fertility and reducing pest cycles. Monoculture, the practice of growing a single crop species over large areas, can lead to soil degradation and increased vulnerability to pests. ([ers.usda.gov](https://www.ers.usda.gov/topics/farm-practices-management/crop-livestock-practices/soil-tillage-and-crop-rotation?utm_source=openai))
+1. "Crop rotations synergize yield, nutrition, and revenue: a meta-analysis" (2025) – ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/41162380/?utm_source=openai))
+2. "Crop Rotation: Complete Guide To Soil Health & Sustainable Yield" (2024) – ([cultivationag.com](https://cultivationag.com/crop-rotation/?utm_source=openai))
+3. "Crop Rotation: A Sustainable Practice for Soil and Water Conservation" (2025) – ([agriculture.institute](https://agriculture.institute/rain-fed-farming/crop-rotation-soil-water-conservation/?utm_source=openai))
 
 ## Reasoning
-The hypothesis that both crop rotation and monoculture can simultaneously apply to the same field contradicts established agricultural practices and research findings. Crop rotation and monoculture are mutually exclusive methods; implementing both simultaneously is not feasible. Therefore, the hypothesis is not novel and has been previously addressed in agricultural science.
+The search results provide evidence supporting the benefits of crop rotation for soil health and agricultural productivity. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/41162380/?utm_source=openai)) ([cultivationag.com](https://cultivationag.com/crop-rotation/?utm_source=openai)) ([agriculture.institute](https://agriculture.institute/rain-fed-farming/crop-rotation-soil-water-conservation/?utm_source=openai)) However, there is no evidence supporting the simultaneous use of crop rotation and monoculture on the same field, nor any studies indicating that combining these practices leads to improved soil metrics and yields beyond what is achieved by either method alone.

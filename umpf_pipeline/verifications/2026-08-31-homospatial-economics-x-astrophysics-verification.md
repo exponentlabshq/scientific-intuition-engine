@@ -3,7 +3,7 @@
 **Verifies**: `hypotheses/2026-08-31-homospatial-economics-x-astrophysics.md`
 **Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
-## Verdict: **NO_SIGNAL**
+## Verdict: **ADJACENT_ACTIVE**
 
 ## Queries
 - `Astro-Auction Dynamics theory OR framework`
@@ -13,7 +13,9 @@
 - `Astrophysics auction theory integration`
 
 ## What was found
-No specific references to 'Astro-Auction Dynamics' or its application in astrophysics were found. Auction theory has been applied in various fields, including economics and edge computing, but not in the context of astrophysics. ([arxiv.org](https://arxiv.org/abs/2105.03559?utm_source=openai))
+Auction Theory: A Summary with Applications to Treasury Markets ([nber.org](https://www.nber.org/papers/w5873?utm_source=openai))
+Auction Market Theory as an Emergent Property of Inventory Dynamics: A Formal Mathematical Treatment ([papers.ssrn.com](https://papers.ssrn.com/sol3/Delivery.cfm/6616280.pdf?abstractid=6616280&mirid=1&utm_source=openai))
+A computational framework for analyzing dynamic auctions: The market impact of information sharing ([onlinelibrary.wiley.com](https://onlinelibrary.wiley.com/doi/10.1111/1756-2171.12341?utm_source=openai))
 
 ## Reasoning
-The search did not yield any references to 'Astro-Auction Dynamics' or its application in astrophysics. While auction theory has been applied in various fields, including economics and edge computing, there is no evidence of its use in the context of astrophysics. ([arxiv.org](https://arxiv.org/abs/2105.03559?utm_source=openai))
+The search results reveal that auction theory has been applied in various fields, including financial markets and inventory dynamics. However, there is no evidence of auction theory being applied to astrophysics or the allocation of astronomical resources. The concept of 'Astro-Auction Dynamics' appears to be novel and has not been previously explored in the literature.

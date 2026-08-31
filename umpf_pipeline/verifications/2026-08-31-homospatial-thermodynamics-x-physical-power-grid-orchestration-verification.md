@@ -13,7 +13,15 @@
 - `Entropy management in energy systems`
 
 ## What was found
-The term "Entropic Grid Dynamics" does not appear in current literature. While frameworks like Entropic Dynamics and the Entropic Governance Framework apply thermodynamic principles to various systems, including networks and governance, they do not specifically address power grid orchestration. Additionally, studies on integrating power grids with behind-the-meter devices focus on thermal and electrical dynamics but do not incorporate entropy management. ([mdpi.com](https://www.mdpi.com/1099-4300/17/9/6110?utm_source=openai))
+The Entropic Governance Framework (EGF) provides a physics-grounded foundation for reasoning about governance, sustainability, and allocation under real physical limits. ([entropicgovernance.org](https://entropicgovernance.org/?utm_source=openai))
+
+A study titled "Thermal and electric multidomain dynamic model for integration of power grid distribution with behind-the-meter devices" discusses the integration of power grid distribution with behind-the-meter devices, focusing on thermal and electric dynamics. ([ornl.gov](https://www.ornl.gov/publication/thermal-and-electric-multidomain-dynamic-model-integration-power-grid-distribution?utm_source=openai))
+
+An article titled "Entropic Dynamics" discusses a framework in which dynamical laws are derived as an application of entropic methods of inference. ([mdpi.com](https://www.mdpi.com/1099-4300/17/9/6110?utm_source=openai))
 
 ## Reasoning
-The absence of the term "Entropic Grid Dynamics" in existing literature suggests that this specific concept has not been previously explored. While related frameworks and studies exist, they do not directly address the integration of thermodynamic principles, particularly entropy management, into power grid orchestration. Therefore, the hypothesis introduces a novel approach that has not been previously documented.
+The Entropic Governance Framework (EGF) provides a physics-grounded foundation for reasoning about governance, sustainability, and allocation under real physical limits. ([entropicgovernance.org](https://entropicgovernance.org/?utm_source=openai))
+
+A study titled "Thermal and electric multidomain dynamic model for integration of power grid distribution with behind-the-meter devices" discusses the integration of power grid distribution with behind-the-meter devices, focusing on thermal and electric dynamics. ([ornl.gov](https://www.ornl.gov/publication/thermal-and-electric-multidomain-dynamic-model-integration-power-grid-distribution?utm_source=openai))
+
+An article titled "Entropic Dynamics" discusses a framework in which dynamical laws are derived as an application of entropic methods of inference. ([mdpi.com](https://www.mdpi.com/1099-4300/17/9/6110?utm_source=openai))

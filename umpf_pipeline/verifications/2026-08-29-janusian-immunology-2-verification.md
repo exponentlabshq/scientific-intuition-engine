@@ -1,9 +1,9 @@
 # Verification: Janusian — Immunology — Innate Immune Response
 
 **Verifies**: `hypotheses/2026-08-29-janusian-immunology-2.md`
-**Verified**: 2026-08-29 · **Method**: Tavily search + GPT-4o classification (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
-## Verdict: **COLLISION**
+## Verdict: **ADJACENT_ACTIVE**
 
 ## Queries
 - `innate immune response and adaptive immune response interaction`
@@ -13,7 +13,7 @@
 - `role of innate immunity in adaptive immune system activation`
 
 ## What was found
-Multiple sources discuss the bidirectional communication and interaction between the innate and adaptive immune systems, such as 'Bidirectional Communication Between the Innate and Adaptive Immune Systems' (https://www.annualreviews.org/content/journals/10.1146/annurev-immunol-083122-040624) and 'Innate control of Adaptive Immunity and Adaptive Instruction of Innate Immunity: Bi-Directional flow of information' (https://pmc.ncbi.nlm.nih.gov/articles/PMC8648974/).
+The interaction between innate and adaptive immune responses is well-documented. The innate immune system serves as the body's first line of defense, utilizing pattern recognition receptors like Toll-like receptors to detect pathogens and initiate rapid response mechanisms. Following this initial response, adaptive immunity provides highly specific and sustained killing of pathogens via B cells, T cells, and antibodies. Traditionally, it has been assumed that innate immunity activates adaptive immunity; however, recent studies have revealed more complex interactions. ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC11401974/?utm_source=openai))
 
 ## Reasoning
-The hypothesis posits that the effectiveness of the innate immune response varies based on the presence of prior adaptive immunity, which is a result of the simultaneous independent and conjunctive operation of the innate immune response. The search results reveal extensive existing research on the interaction and bidirectional communication between the innate and adaptive immune systems, indicating that this connection is already well-established in the literature. Therefore, the hypothesis does not present a novel connection, leading to a COLLISION verdict.
+The search results confirm that the innate immune response operates both independently and in conjunction with the adaptive immune response. The innate immune system provides an immediate, nonspecific defense against pathogens, while the adaptive immune system offers a more specific and sustained response. The interaction between these systems is complex, with the innate immune system not only activating but also modulating the adaptive immune response. ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC11401974/?utm_source=openai))

@@ -3,7 +3,7 @@
 **Verifies**: `hypotheses/2026-08-31-janusian-behavioral-psychology.md`
 **Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
-## Verdict: **COLLISION**
+## Verdict: **ADJACENT_ACTIVE**
 
 ## Queries
 - `operant conditioning randomness in behavior modification`
@@ -13,7 +13,9 @@
 - `behavioral psychology named theory OR framework OR researcher`
 
 ## What was found
-B.F. Skinner's experiments, such as the 'Superstition in the Pigeon' study, demonstrated that behaviors can be reinforced by coincidental events, leading to superstitious behaviors. Skinner noted that 'a given consequence may depend upon a series of events which are not easily predicted. We do not always win at cards or dice, because the contingencies are so remotely determined that we call them “chance.”' ([bfskinner.org](https://www.bfskinner.org/science-and-human-behavior-chapter-6-shaping-and-maintaining-operant-behavior-quote-10/?utm_source=openai))
+Operant Conditioning (Skinner) Explained | Psychology.com ([psychology.com](https://psychology.com/concepts/operant-conditioning?utm_source=openai))
+Operant Conditioning In Psychology: B.F. Skinner Theory | Simply Psychology ([simplypsychology.org](https://www.simplypsychology.org/operant-conditioning.html?utm_source=openai))
+Operant Conditioning by BF Skinner, Edward Thorndike | The Behavior Institute ([besci.org](https://besci.org/models/operant-conditioning?utm_source=openai))
 
 ## Reasoning
-The search results reveal that Skinner's work already addresses the interplay between operant conditioning and randomness, indicating that the hypothesis has been previously explored.
+Operant conditioning, as developed by B.F. Skinner, posits that behavior is shaped by its consequences—reinforcements or punishments—that increase or decrease the likelihood of a behavior's recurrence. Skinner's experiments, such as those involving pigeons developing rituals in response to food delivery, demonstrate how behaviors can be influenced by reinforcement schedules and the timing of rewards. ([simplypsychology.org](https://www.simplypsychology.org/operant-conditioning.html?utm_source=openai)) Additionally, Skinner acknowledged that some behaviors are reinforced intermittently, with consequences that may not be easily predicted, referring to them as 'chance.' ([bfskinner.org](https://www.bfskinner.org/science-and-human-behavior-chapter-6-shaping-and-maintaining-operant-behavior-quote-10/?utm_source=openai)) This suggests that operant conditioning accounts for both structured influences and elements of randomness in behavior modification.

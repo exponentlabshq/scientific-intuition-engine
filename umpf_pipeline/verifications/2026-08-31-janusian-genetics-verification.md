@@ -3,7 +3,7 @@
 **Verifies**: `hypotheses/2026-08-31-janusian-genetics.md`
 **Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
-## Verdict: **COLLISION**
+## Verdict: **ADJACENT_ACTIVE**
 
 ## Queries
 - `Mendelian inheritance theory`
@@ -13,7 +13,11 @@
 - `Mendelian genetics named theory OR framework`
 
 ## What was found
-Genetic linkage is a phenomenon where genes located close together on the same chromosome tend to be inherited together, leading to deviations from Mendel's Law of Independent Assortment. This results in unexpected phenotypic ratios that cannot be predicted by independent assortment alone. For example, in a dihybrid cross involving linked genes, the expected 9:3:3:1 ratio may be altered, with certain combinations of traits appearing more frequently than others. ([nature.com](https://www.nature.com/scitable/topicpage/discovery-and-types-of-genetic-linkage-500/?utm_source=openai))
+1. 'Chromosomal Theory and Genetic Linkage' - Biology LibreTexts
+2. 'Genetic Linkage' - Wikipedia
+3. 'Genetic Linkage & Mapping' - Khan Academy
+4. 'Genetic Linkage Explained' - Everything Explained
+5. 'Genetic Linkage' - Nature Scitable
 
 ## Reasoning
-The search results confirm that genetic linkage leads to deviations from Mendel's Law of Independent Assortment, resulting in unexpected phenotypic ratios. This directly supports the core claim of the hypothesis. Therefore, the hypothesis is not novel, as the concept of genetic linkage causing deviations from Mendelian ratios is well-established in genetics.
+The search results provide foundational information on Mendelian inheritance and genetic linkage, including definitions, historical context, and explanations of how linked genes deviate from Mendel's laws. These sources collectively support the understanding that both independent assortment and genetic linkage can occur simultaneously, leading to complex inheritance patterns.

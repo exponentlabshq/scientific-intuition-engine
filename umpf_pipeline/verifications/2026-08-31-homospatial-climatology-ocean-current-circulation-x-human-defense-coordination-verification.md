@@ -13,7 +13,9 @@
 - `interdisciplinary approaches in climate and defense research`
 
 ## What was found
-No specific references to 'Thermo-Defense Dynamics' theory or framework were found. However, ocean currents significantly influence global weather patterns, sea levels, and marine ecosystems. For instance, the Atlantic Meridional Overturning Circulation (AMOC) plays a crucial role in regulating Earth's climate by redistributing heat. Changes in ocean circulation can lead to altered weather patterns and sea-level rise. Additionally, ocean currents are vital for marine ecosystems, transporting nutrients that support fisheries and biodiversity. While these insights highlight the importance of ocean currents, no direct connection to human defense coordination was identified.
+1. "Ocean Circulation" by the National Oceanography Centre: Discusses how ocean currents influence weather, sea level, and marine ecosystems. ([noc.ac.uk](https://www.noc.ac.uk/our-work/climate/understanding-climate/ocean-circulation?utm_source=openai))
+2. "Arctic Ice Melt Is Changing Ocean Currents" by NASA: Explores how melting Arctic ice affects ocean currents and climate. ([nasa.gov](https://www.nasa.gov/centers-and-facilities/jpl/arctic-ice-melt-is-changing-ocean-currents/?utm_source=openai))
+3. "Functional Thermo-dynamics: A Generalization of Dynamic Density Functional Theory to Non-Isothermal Situations" by Anero et al.: Presents a generalization of Density Functional Theory to non-equilibrium non-isothermal situations. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/23883009/?utm_source=openai))
 
 ## Reasoning
-The search did not yield information on a unified system integrating ocean current circulation with human defense coordination, indicating that 'Thermo-Defense Dynamics' is not an established concept in current research.
+The search results provide information on ocean circulation's impact on climate and ecosystems, as well as a study on functional thermodynamics. However, there is no direct evidence of a unified system called "Thermo-Defense Dynamics" integrating ocean current circulation with human defense coordination.

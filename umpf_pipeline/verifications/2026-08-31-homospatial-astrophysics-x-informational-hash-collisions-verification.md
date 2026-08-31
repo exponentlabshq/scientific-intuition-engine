@@ -13,7 +13,7 @@
 - `collisions in data measurement validation`
 
 ## What was found
-No references to an 'Astrohash Integrity Framework' were found in the search results. The concept of applying hashing principles to ensure the uniqueness and accuracy of astronomical data is not currently established in the field. While hashing techniques are widely used in computer science for data integrity, their direct application to astrophysical data analysis is not documented. Therefore, the proposed 'Astrohash Integrity Framework' appears to be a novel concept without existing support in the current literature.
+The concept of applying hashing principles to astronomical data analysis is not currently established in the field. Hash functions are widely used in computer science for data integrity and security, but their direct application to astrophysics, particularly for ensuring the uniqueness and accuracy of telescope readings, is not documented. While hash collisions are a known phenomenon in computing, their relevance to astronomical data analysis remains unexplored. ([en.wikipedia.org](https://en.wikipedia.org/wiki/Hash_collision?utm_source=openai))
 
 ## Reasoning
-The search did not yield any information on the 'Astrohash Integrity Framework' or similar applications of hashing in astrophysics, indicating that this is a new and unverified idea.
+The search did not yield any sources discussing the application of hashing principles to astronomical data analysis or the concept of an 'Astrohash Integrity Framework.' Hash functions are primarily used in computer science for data integrity and security, but their direct application to astrophysics, particularly for ensuring the uniqueness and accuracy of telescope readings, is not documented. The absence of relevant sources indicates that this is not an active area of research.

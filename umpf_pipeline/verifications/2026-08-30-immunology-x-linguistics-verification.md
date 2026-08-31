@@ -1,7 +1,7 @@
 # Verification: Bisociation — Immunology × Linguistics
 
 **Verifies**: `hypotheses/2026-08-30-immunology-x-linguistics.md`
-**Verified**: 2026-08-30 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
 ## Verdict: **NO_SIGNAL**
 
@@ -13,7 +13,7 @@
 - `evolutionary linguistics named theory OR framework OR researcher`
 
 ## What was found
-No direct studies or frameworks explicitly mapping immunological processes to linguistic phenomena were identified. While both fields involve complex adaptive systems, no specific research bridges the proposed mapping.
+1. 'The immune response after noise damage in the cochlea is characterized by a heterogeneous mix of adaptive and innate immune cells' (Scientific Reports, 2020). 2. 'Sound Change and Phonological Evolution' (LearnlyAI). 3. 'The Role of Phonology in Phonetic Change' (Annual Review of Linguistics, 2017).
 
 ## Reasoning
-The search did not yield any studies or frameworks that directly map immunological processes to linguistic phenomena. Although both fields involve complex adaptive systems, no specific research bridges the proposed mapping.
+The search results reveal studies on immune responses to cochlear damage and discussions on phonological evolution, but no direct evidence linking immunology and linguistics. The bridging material is generic, as it pertains to general concepts in both fields without establishing a specific connection.

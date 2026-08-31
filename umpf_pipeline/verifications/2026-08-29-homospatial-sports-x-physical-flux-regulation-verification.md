@@ -1,9 +1,9 @@
 # Verification: Homospatial — Basketball Pick-and-Roll Offense ⊕ Physical Flux Regulation
 
 **Verifies**: `hypotheses/2026-08-29-homospatial-sports-x-physical-flux-regulation.md`
-**Verified**: 2026-08-29 · **Method**: Tavily search + GPT-4o classification (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
-## Verdict: **NO_SIGNAL**
+## Verdict: **COLLISION**
 
 ## Queries
 - `Dynamic Flux Offense basketball strategy analysis`
@@ -13,7 +13,7 @@
 - `Systems theory in sports strategy development`
 
 ## What was found
-The search results included various discussions on basketball offensive strategies such as the motion offense and flex offense, as well as general concepts of adaptive strategies and feedback loops in sports. However, none of the results specifically addressed a 'Dynamic Flux Offense' or a direct connection between basketball pick-and-roll offense and physical flux regulation.
+WizzyDigital's Dynamic Offense Playbook emphasizes dynamic spacing, timing, and read-based decision-making to stretch defenses and create open shots. ([wizzydigital.org](https://wizzydigital.org/wizzydigital-basketball-dynamic-nature-offense-constantly-stretches/?utm_source=openai)) The Flex Offense is a continuity system built around repeating patterns of cross-screens and down-screens, producing layups and mid-range jumpers without relying on isolation talent. ([basketball-assistant.com](https://www.basketball-assistant.com/plays/flex-continuity?utm_source=openai)) The Motion Offense is a fluid system based on constant player movement, spacing, and teamwork, encouraging players to read the defense and make quick decisions. ([basketballcoachweekly.net](https://www.basketballcoachweekly.net/basketball-tactics/understanding-the-motion-offense-in-basketball-strategy-key-concepts-and-drills?utm_source=openai))
 
 ## Reasoning
-The hypothesis suggests a novel basketball strategy called 'Dynamic Flux Offense' that integrates concepts from physical flux regulation. The search did not reveal any existing research or strategies that explicitly make this connection. While there are discussions on adaptive strategies and feedback loops in sports, these are generic and do not specifically relate to the proposed hypothesis. Therefore, the search results do not provide evidence of active research directly relevant to the hypothesis, leading to a NO_SIGNAL verdict.
+The search results reveal that while there are established basketball strategies emphasizing dynamic, adaptive, and fluid offensive systems—such as WizzyDigital's Dynamic Offense, the Flex Offense, and the Motion Offense—there is no specific mention of a strategy termed 'Dynamic Flux Offense.' These existing strategies share similarities with the proposed 'Dynamic Flux Offense,' indicating that the concept may already be explored under different names.

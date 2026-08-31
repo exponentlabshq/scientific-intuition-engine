@@ -1,9 +1,9 @@
 # Verification: Janusian — Urban planning — zoning and land use
 
 **Verifies**: `hypotheses/2026-08-29-janusian-urban-planning.md`
-**Verified**: 2026-08-28 · **Method**: Tavily search + GPT-4o classification (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
-## Verdict: **NO_SIGNAL**
+## Verdict: **ADJACENT_ACTIVE**
 
 ## Queries
 - `Impact of zoning regulations on urban land use patterns`
@@ -13,7 +13,7 @@
 - `Effects of zoning on innovation in urban development`
 
 ## What was found
-The search results provided various insights into zoning and land use, including the impact of zoning on urban development, housing affordability, and segregation. However, none of the results directly addressed the hypothesis that zoning regulations simultaneously lead to both organized development and chaotic land use patterns.
+Studies indicate that zoning regulations can both promote organized development and, under certain conditions, lead to chaotic land use patterns. For instance, in Greater Boston, stringent zoning laws have been linked to increased housing prices and reduced construction, suggesting that overregulation may hinder development. ([cato.org](https://www.cato.org/research-briefs-economic-policy/effects-zoning-regulations-greater-boston?utm_source=openai)) Conversely, the absence of zoning regulations can result in unplanned, chaotic development, as seen in rural areas where developers exploit the lack of oversight to bypass city construction bans and regulations. ([tomshardware.com](https://www.tomshardware.com/tech-industry/artificial-intelligence/ai-data-center-developers-target-rural-territory-to-bypass-city-construction-bans-and-regulations-rural-locations-allow-sites-to-bypass-city-council-approvals-rezoning-votes-land-use-reviews-and-reduce-public-scrutiny?utm_source=openai))
 
 ## Reasoning
-The hypothesis suggests a paradoxical relationship where zoning regulations both maintain order and cause chaos in urban land use. The search results did not provide evidence of this specific dual effect. While there are discussions on the impacts of zoning, such as on housing affordability and segregation, these do not directly support or refute the simultaneous occurrence of organized and chaotic patterns as proposed. Therefore, the search did not yield specifically relevant evidence to support the hypothesis, resulting in a NO_SIGNAL verdict.
+The findings demonstrate that zoning regulations can lead to both organized development and chaotic land use patterns, supporting the hypothesis that both truths can hold simultaneously.

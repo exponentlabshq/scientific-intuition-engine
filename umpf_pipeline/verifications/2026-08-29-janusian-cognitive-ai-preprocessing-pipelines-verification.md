@@ -1,9 +1,9 @@
 # Verification: Janusian — Cognitive AI Preprocessing Pipelines
 
 **Verifies**: `hypotheses/2026-08-29-janusian-cognitive-ai-preprocessing-pipelines.md`
-**Verified**: 2026-08-28 · **Method**: Tavily search + GPT-4o classification (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
-## Verdict: **NO_SIGNAL**
+## Verdict: **ADJACENT_ACTIVE**
 
 ## Queries
 - `impact of preprocessing on cognitive AI model performance`
@@ -13,7 +13,7 @@
 - `case studies on preprocessing in cognitive AI pipelines`
 
 ## What was found
-The search results primarily discuss the importance and impact of data preprocessing on AI model performance, emphasizing its role in improving accuracy, reducing noise, and enhancing generalization. However, none of the results specifically address the hypothesis that preprocessing steps can simultaneously be essential and unnecessary, leading to unpredictable performance variations based on dataset and model architecture characteristics.
+A study titled 'How EEG preprocessing shapes decoding performance' published in Communications Biology in July 2025 examined the impact of various preprocessing steps on EEG-based decoding performance. The researchers systematically varied key preprocessing steps, such as filtering, referencing, baseline interval, detrending, and multiple artifact correction steps, and found that preprocessing choices influenced decoding performance considerably. All artifact correction steps reduced decoding performance across all experiments and models, while higher high-pass filter cutoffs consistently enhanced decoding. ([nature.com](https://www.nature.com/articles/s42003-025-08464-3?utm_source=openai))
 
 ## Reasoning
-The hypothesis suggests a paradoxical situation where preprocessing is both essential and unnecessary, affecting cognitive AI model performance unpredictably. The search results do not provide evidence or discussion on this specific paradox. They focus on the general benefits of preprocessing and its impact on model performance, without addressing the simultaneous necessity and redundancy of preprocessing steps. Therefore, the search does not surface any specifically relevant research or discussion on the exact functor claimed by the hypothesis, resulting in a NO_SIGNAL verdict.
+The study provides empirical evidence that the effectiveness of preprocessing steps in cognitive AI models, specifically EEG-based decoding, varies based on the specific characteristics of the dataset and model architecture. This supports the hypothesis that the performance of cognitive AI models can vary unpredictably depending on these factors.

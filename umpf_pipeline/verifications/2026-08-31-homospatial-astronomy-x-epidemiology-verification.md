@@ -13,7 +13,7 @@
 - `Collective immunity in populations and stellar energy production`
 
 ## What was found
-No specific references to 'Nucleo-immunity' theory or framework were found. ([astro.cornell.edu](https://astro.cornell.edu/research/astrobiology?utm_source=openai))
+No existing theory or framework named 'Nucleo-immunity' was identified in the provided search results. The search did not yield any interdisciplinary studies specifically connecting stellar nucleosynthesis with herd immunity thresholds. While interdisciplinary research is common in fields like epidemiology and astrophysics, no direct link between these two domains was found. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/30642641/?utm_source=openai))
 
 ## Reasoning
-The search did not yield any references to the 'Nucleo-immunity' theory or framework, indicating that this specific concept is not currently recognized or established in the scientific literature.
+The search did not uncover any existing theory or framework named 'Nucleo-immunity' or any interdisciplinary studies specifically connecting stellar nucleosynthesis with herd immunity thresholds. While interdisciplinary research is common in fields like epidemiology and astrophysics, no direct link between these two domains was found.

@@ -1,9 +1,9 @@
 # Verification: Janusian — Informational Bit Flips
 
 **Verifies**: `hypotheses/2026-08-30-janusian-informational-bit-flips.md`
-**Verified**: 2026-08-30 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
-## Verdict: **COLLISION**
+## Verdict: **NO_SIGNAL**
 
 ## Queries
 - `bit flips detrimental to information integrity`
@@ -13,7 +13,26 @@
 - `data reliability error correction bit flips`
 
 ## What was found
-The hypothesis that both bit flips compromise and enhance the integrity of information simultaneously has been explored in existing research. For instance, a study by the Technical University of Munich discusses how bit flips can lead to silent data corruption, yet error correction mechanisms can detect and correct these errors, thereby enhancing data integrity. ([portal.fis.tum.de](https://portal.fis.tum.de/en/publications/memory-confidentiality-and-integrity-flipping-bits-in-hardware/?utm_source=openai)) Similarly, research from Oak Ridge National Laboratory examines the impact of single bit flips on floating-point arithmetic, highlighting the importance of error correction to maintain computational accuracy. ([ornl.gov](https://www.ornl.gov/publication/quantifying-impact-single-bit-flips-floating-point-arithmetic-0?utm_source=openai)) These studies demonstrate that while bit flips can compromise data integrity, error correction mechanisms can mitigate these effects, aligning with the hypothesis's core claim.
+1. **Bit Flips and Data Integrity:**
+   - *Mozilla Engineer's Findings:* A Mozilla engineer revealed that up to 15% of Firefox crashes may be caused by memory bit flips, highlighting the significant impact of bit flips on data integrity. ([tomshardware.com](https://www.tomshardware.com/pc-components/ram/bit-flips-cause-up-to-15-percent-of-firefox-crashes-asserts-mozilla-engineer-figure-inferred-from-470-000-auto-submitted-crash-reports?utm_source=openai))
+   - *Bit Rot Definition:* Bit rot, also known as data decay, refers to the gradual corruption of digital information over time due to bit flips, leading to partial or complete data loss. ([datacore.com](https://www.datacore.com/glossary/bit-rot/?utm_source=openai))
+
+2. **Error Correction Mechanisms:**
+   - *IEEE Overview:* Error correction is a branch of information theory and communication engineering focused on detecting and repairing errors that arise when data is transmitted over noisy channels or stored in unreliable media. ([technav.ieee.org](https://technav.ieee.org/area/error-correction/?utm_source=openai))
+   - *SpotSDC Visualization System:* SpotSDC is a visualization system designed to analyze a program's resilience to silent data corruption, providing insights into the impact of bit flips on data integrity. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/32746251/?utm_source=openai))
+
+3. **Bit Flips in Quantum Computing:**
+   - *Bit Preservation Challenges:* Research indicates that bit preservation is not a solved problem, with storage systems failing to meet preservation requirements by many orders of magnitude. ([digipres.org](https://www.digipres.org/publications/ipres/ipres-2008/papers/bit-preservation-a-solved-problem/?utm_source=openai))
+   - *Quantum Computing Vulnerabilities:* Quantum computing systems are susceptible to bit flips due to noise, which can be harnessed as a programmable feature to study and improve error correction strategies. ([livescience.com](https://www.livescience.com/technology/quantum/new-chip-harnesses-quantum-computings-biggest-weakness-and-tries-to-turn-it-into-a-strength?utm_source=openai))
+
+**Reasoning:**
+The search results provide evidence that bit flips compromise data integrity across various computing domains, including classical computing and quantum systems. Error correction mechanisms are essential for mitigating these effects, as they detect and repair errors caused by bit flips. The challenges in bit preservation and the vulnerabilities in quantum computing systems further underscore the need for effective error correction strategies to enhance data reliability.
+
+**Bridging Material Is Generic:**
+The bridging material discusses general concepts of bit flips and error correction mechanisms without specific focus on the interplay between bit flips compromising and enhancing data integrity simultaneously. Therefore, it does not support the hypothesis's claim that both effects occur simultaneously.
+
+**Verdict:**
+NO_SIGNAL
 
 ## Reasoning
-The search results reveal that existing research has already established the dual role of bit flips in compromising and enhancing information integrity through error correction mechanisms. This indicates that the hypothesis has been previously explored, making it a collision with existing knowledge.
+The search results provide evidence that bit flips compromise data integrity across various computing domains, including classical computing and quantum systems. Error correction mechanisms are essential for mitigating these effects, as they detect and repair errors caused by bit flips. The challenges in bit preservation and the vulnerabilities in quantum computing systems further underscore the need for effective error correction strategies to enhance data reliability.

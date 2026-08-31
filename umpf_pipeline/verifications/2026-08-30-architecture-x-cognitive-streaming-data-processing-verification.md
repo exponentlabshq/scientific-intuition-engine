@@ -13,13 +13,7 @@
 - `modular architecture theory OR framework OR researcher`
 
 ## What was found
-1. Modular construction enhances productivity and efficiency by prefabricating standardized building components off-site, leading to faster assembly and reduced on-site labor. ([weforum.org](https://www.weforum.org/stories/2025/01/modular-construction-productivity-circularity/?utm_source=openai))
-
-2. Cognitive systems, including the human brain, exhibit modularity, with distinct networks supporting various cognitive functions. ([sciencedirect.com](https://www.sciencedirect.com/science/article/pii/S0149763426002411?utm_source=openai))
-
-3. Large Language Models (LLMs) have developed modular architectures that mirror the human brain, with distinct neurons recruited for different cognitive tasks. ([arxiv.org](https://arxiv.org/abs/2608.13567?utm_source=openai))
-
-4. Nonmodular architectures in cognitive systems, based on active inference, demonstrate robustness to unknown external inputs, suggesting flexibility in system design. ([arxiv.org](https://arxiv.org/abs/1903.09542?utm_source=openai))
+1. "How modular construction drives productivity and circularity" discusses how modular construction, characterized by off-site prefabrication of standardized building components, enhances efficiency and allows for dynamic reconfiguration based on external inputs. ([weforum.org](https://www.weforum.org/stories/2025/01/modular-construction-productivity-circularity/?utm_source=openai)) 2. "Modular Cognitive Architecture Emerges in Large Language Models" explores how large language models develop modular architectures that mirror the human brain, with distinct networks supporting various cognitive functions, allowing for flexible assembly and dynamic reconfiguration. ([arxiv.org](https://arxiv.org/abs/2608.13567?utm_source=openai)) 3. "Flexible modularity in the human brain: How network architecture reconfigures over time" examines how the human brain's modular network architecture reconfigures over time, supporting dynamic reconfiguration based on external inputs. ([sciencedirect.com](https://www.sciencedirect.com/science/article/pii/S0149763426002411?utm_source=openai))
 
 ## Reasoning
-The search results provide evidence of modularity in both architecture and cognitive systems, supporting the proposed mapping between modular components in architecture and modular processing units in cognitive streaming data systems. The concept of flexible assembly and dynamic reconfiguration is evident in both domains, with modular construction allowing for efficient assembly and cognitive systems exhibiting adaptability to external inputs.
+The first source discusses modular construction's efficiency and flexibility, aligning with the claim that modular components in architecture correspond to modular processing units in cognitive streaming data systems. The second and third sources provide insights into modular architectures in cognitive systems, supporting the idea of dynamic reconfiguration based on external inputs.
