@@ -31,7 +31,7 @@ Option 1 requires real editorial judgment about what belongs in the domain pool 
 
 ## Promotion checklist (manual — nothing below happens automatically)
 
-- [ ] A human read this proposal and picked one of the three options above (or a different one)
-- [ ] If Option 1: new domains were hand-reviewed before being added to `domains.json`
-- [ ] If Option 2: `mode_weights.json` was hand-edited to reflect the temporary rebalance, citing this proposal in the commit
-- [ ] If Option 3: `hypothesis_engine.py`'s Janusian domain-selection logic was changed deliberately, and the change is documented as a real policy shift, not a silent fallback
+- [x] A human read this proposal and picked Option 1 (2026-08-31) — the only genuine permanent fix among the three; Option 2 is an explicit stopgap, Option 3 trades away Janusian's novelty guarantee
+- [x] Option 1: 50 new domains hand-reviewed for real accuracy, non-duplication, and genuine breadth before being added to `domains.json` — pool 59 → 109, remaining un-janused 0 → 52; verified with a real smoke-test generation (`--mode janusian --autonomous --count 2`), both hypotheses run to completion
+- [ ] Option 2: not taken
+- [ ] Option 3: not taken

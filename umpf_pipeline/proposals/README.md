@@ -12,6 +12,8 @@ proposes, a person decides.
 | `2026-08-29-proposal-002.md` | — | Never written (README was once counted as a proposal; numbering skipped) |
 | `2026-08-29-proposal-003.md` | **REJECTED / SUPERSEDED** | Self-report not predictive of NO_SIGNAL once extraction bugs fixed |
 | `2026-08-29-correction-to-proposal-003.md` | **Canonical write-up** | Why 003 dies; real win was fixing `extract_self_score()` |
+| `2026-08-31-proposal-004.md` | **unreviewed** | Token-usage efficiency heuristic; not yet promoted |
+| `2026-08-31-proposal-005-janusian-domain-pool-exhausted.md` | **ADOPTED (Option 1)** | 50 new domains added to `domains.json` directly; verified with a real smoke-test generation. Options 2/3 not taken. |
 
 ## What this directory is
 
