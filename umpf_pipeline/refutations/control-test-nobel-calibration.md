@@ -64,3 +64,34 @@ Every case correctly landed COLLISION on verification — real prior art unambig
 **Loophole check, re-run with all three fixes active:** the genuinely speculative Identity Compression hypothesis (no real historical evidence to cite) was refuted 0-of-3 again, for real, distinct reasons matching its actual flaws (a genuine equivocation on "representation," no historical test to cite, a claim that genuinely does reduce to something generic). The fixes made the lenses more accurate at recognizing real vindication, not more lenient toward unvindicated claims.
 
 **Deliberately not chased further today:** continuing to tune Coherence/Triviality until all 5 survive would be exactly the kind of "keep tuning until it looks nice" discipline this project has explicitly avoided elsewhere (the outreach-sharpening concreteness gate's real calibration failure is the standing precedent for why). 3 of 5, with the remaining 2 diagnosed honestly rather than forced, is where this stops for now.
+
+## Third follow-up (2026-08-31): held-out validation — the fix does not reliably generalize
+
+**The real methodological problem with the 3-of-5 result above:** it was measured on the exact same 5 cases used to diagnose the three bugs. That is not a clean validation — it is closer to tuning on the test set. A real test of whether the fix generalizes requires a fresh, non-overlapping batch that had zero role in shaping the fix.
+
+**Method:** 8 new pairs from `bisociation_gold_pairs.json` (ids 69, 79, 57, 24, 26, 78, 62, 16 — none overlapping the original 5's ids 56/2/53/23/17), selected purely on real Nobel-linkage strength, not on predicted outcome: Jacob & Monod (Nobel Medicine 1965, lac operon as literal feedback-control circuit), Ostrom (Nobel Econ 2009, commons governance), Simon (Nobel Econ 1978, bounded rationality → heuristic search), Coase (Nobel Econ 1991, transaction costs / property rights), Hayek (Nobel Econ 1974, dispersed knowledge / price signals), Becker (Nobel Econ 1992, rational choice extended to household behavior), plus two disclosed looser fits — Feynman (Nobel Physics 1965 was for QED, not his 1981 quantum-computation proposal) and Einstein (Nobel Physics 1921 was for the photoelectric effect, not relativity) — included and flagged rather than excluded, matching how Planck's own looseness was handled in the original 5. Same direct `classify()`/`run_lens()` methodology, no ledger writes. Script: `/tmp/held_out_nobel_test.py` (throwaway, not committed).
+
+**Result: 2 of 8 survived (25%), down from 3 of 5 (60%) on the diagnostic set.**
+
+| Case | Verify | Coherence | Testability | Triviality | Tally |
+|---|---|---|---|---|---|
+| Jacob & Monod | ADJACENT_ACTIVE | REFUTED | REFUTED | REFUTED | 0/3 |
+| Ostrom | COLLISION | REFUTED | SURVIVES | REFUTED | 1/3 |
+| Simon | COLLISION | SURVIVES | REFUTED | SURVIVES | **2/3 SURVIVES** |
+| Coase | COLLISION | REFUTED | REFUTED | REFUTED | 0/3 |
+| Hayek | COLLISION | SURVIVES | SURVIVES | REFUTED | **2/3 SURVIVES** |
+| Becker | COLLISION | SURVIVES | REFUTED | REFUTED | 1/3 |
+| Feynman (flagged) | COLLISION | REFUTED | REFUTED | REFUTED | 0/3 |
+| Einstein/Maxwell (flagged) | COLLISION | REFUTED | REFUTED | REFUTED | 0/3 |
+
+**Why, in the lenses' own words — the exact same three bug patterns recurring, largely unfixed:**
+
+Coherence on Jacob & Monod, whose claim explicitly states the mapping is "formally identical... not a metaphor": *"it relies on the term 'feedback' which has different meanings in each domain... this equivocation undermines the claim's coherence."* The lens never engaged with the claim's own assertion of formal identity — it pattern-matched "different domain, different implications" straight to equivocation, the exact confusion the Nash fix was supposed to close.
+
+Testability on Coase, whose claim cites an actual theorem: *"lacks a specific, operationalized prediction... does not provide a named metric, comparison condition, or rejection threshold for empirical testing."* A mathematical theorem is exactly the class of evidence the fix was written to recognize as sufficient on its own — the instruction did not transfer to a new case in the same category.
+
+Triviality on Becker: *"reduces to the assertion that complex systems can be analyzed through a uniform decision-making model... making the hypothesis overly generic."* The precise claim (rational-choice cost-benefit modeling of household time allocation) was paraphrased down to "complex systems" before being tested — the exact paraphrase-then-refute pattern the fix targeted.
+
+**What this means, stated plainly:** the fix is real — it worked on the cases it was diagnosed from, and the 3-of-5 result was not fabricated. But held out on fresh material selected the same way, it degrades from 60% to 25%, with the same three original bug patterns visibly still firing in the lenses' own reasoning. This is evidence the fix corrected the *lenses' behavior on those 5 specific examples* more than it corrected the *underlying rule* — a real, disclosed form of overfitting to the diagnostic set, not a generalized calibration improvement. The whitepaper's "first survivors in the project's history" framing (Section 14) is not false — it accurately describes what happened on the 5 cases tested — but read next to this held-out result, it overstates how much the underlying problem was actually closed.
+
+**Not yet decided:** whether to attempt a second, more general fix round using this new, more diverse evidence (a genuine principle — recognizing formal-structure identity despite domain-local vocabulary differences, recognizing any named theorem/historical result regardless of phrasing, distinguishing precise-claim-genericness from paraphrase-genericness — rather than another round of case-specific patching), or to stop here and carry this as a disclosed, real limitation. Flagged for a decision rather than decided unilaterally, since it directly affects a claim already shipped in the published whitepaper.
