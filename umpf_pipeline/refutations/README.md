@@ -18,7 +18,17 @@ deliberate, matching this project's standing adversarial-verify discipline elsew
    it equivocate on a term across the two domains (using one word for two different
    underlying mechanisms and treating that as a match)?
 2. **Testability lens** — is the falsifiable prediction actually operationalized, or is
-   it vague enough that no real experiment could ever return a "no"?
+   it vague enough that no real experiment could ever return a "no"? A claim can satisfy
+   this in the past tense, not only the future tense: if it names a specific, real,
+   checkable historical experiment, dataset, or observation that already tested it, that
+   counts as operationalized — the named result is the metric, "the named result does not
+   hold" is the rejection threshold. A vague appeal to consensus or authority ("this is
+   well established") does not count; the cited historical test must be specific and
+   checkable, or this lens still refutes on the merits. (2026-08-31, after control test 3
+   found this lens rejecting real, historically-confirmed claims — Meselson-Stahl, the
+   observed blackbody spectrum, a Nobel committee's own citation — for lacking a
+   future-tense experimental design that had, in each case, already run and already
+   returned its result decades ago. See `refutations/control-test-nobel-calibration.md`.)
 3. **Triviality lens** — strip the domain-specific vocabulary. Does the claim reduce to
    something true of almost any two complex systems (the same umbrella-trap failure
    mode Phase 2's own rubric already guards against, applied one level deeper)?
