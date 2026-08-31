@@ -22,33 +22,45 @@ deliberate, matching this project's standing adversarial-verify discipline elsew
    mechanisms, same structure is the discovery, not a disguised flaw). And for
    bisociation mode specifically, do not require the two domains to fuse into one
    entity — that is homospatial's bar, not bisociation's, which requires each domain
-   to stay itself. (2026-08-31, after control test 3 found this lens refuting a real
-   evolutionarily-stable-strategy/Nash-equilibrium claim for having different
-   mechanisms in each domain — conscious reasoning vs. blind selection — when that is
-   precisely the real result: the same equilibrium condition emerges from either. See
-   `refutations/control-test-nobel-calibration.md`.)
+   to stay itself. Real equivocation requires naming two different REFERENTS for the
+   same term; "this term carries different implications/context in each field" is not
+   evidence of equivocation by itself — that is just the ordinary fact that two
+   different fields exist. (2026-08-31, after control test 3 found this lens refuting a
+   real evolutionarily-stable-strategy/Nash-equilibrium claim for having different
+   mechanisms in each domain when that is precisely the real result; extended
+   2026-08-31 after a held-out batch of 8 fresh cases found the same mistake
+   recurring — Jacob & Monod's lac operon, Coase's transaction costs — at a 25%
+   survival rate, down from the original fix's 60% on the diagnostic cases it was
+   built from. See `refutations/control-test-nobel-calibration.md`.)
 2. **Testability lens** — is the falsifiable prediction actually operationalized, or is
    it vague enough that no real experiment could ever return a "no"? A claim can satisfy
    this in the past tense, not only the future tense: if it names a specific, real,
-   checkable historical experiment, dataset, or observation that already tested it, that
-   counts as operationalized — the named result is the metric, "the named result does not
-   hold" is the rejection threshold. A vague appeal to consensus or authority ("this is
-   well established") does not count; the cited historical test must be specific and
+   checkable historical experiment, dataset, observation, or mathematical theorem/proof
+   that already settled it, that counts as operationalized on its own — regardless of
+   sentence structure or which field it's phrased in — with no additional future-tense
+   metric/comparison/threshold required on top. A vague appeal to consensus or authority
+   ("this is well established") does not count; the cited evidence must be specific and
    checkable, or this lens still refutes on the merits. (2026-08-31, after control test 3
-   found this lens rejecting real, historically-confirmed claims — Meselson-Stahl, the
-   observed blackbody spectrum, a Nobel committee's own citation — for lacking a
-   future-tense experimental design that had, in each case, already run and already
-   returned its result decades ago. See `refutations/control-test-nobel-calibration.md`.)
+   found this lens rejecting real, historically-confirmed claims for lacking a
+   future-tense experimental design that had already run and returned its result decades
+   ago; extended 2026-08-31 after a held-out batch found the same mistake recurring even
+   against a literally-named theorem — the Coase theorem was refuted for "lacking a named
+   metric, comparison condition, or rejection threshold," which naming the theorem
+   already satisfies. See `refutations/control-test-nobel-calibration.md`.)
 3. **Triviality lens** — strip the domain-specific vocabulary. Does the claim reduce to
    something true of almost any two complex systems (the same umbrella-trap failure
    mode Phase 2's own rubric already guards against, applied one level deeper)?
    "Strip the vocabulary" means keep the precise relationship, formula, or mechanism
    exactly as specific as stated and only swap the domain names — it does not mean
    compress the claim into a vaguer paraphrase and then test whether that paraphrase
-   is generic. (2026-08-31, after control test 3 found this lens restating Hopfield's
-   exact claim — the same energy function as the Ising model, not an analogy — as
-   "systems converging to local minima," then correctly calling that weaker restatement
-   generic. The claim actually made was never tested. See
+   is generic. Self-check: quote the exact phrase being tested for genericness back
+   verbatim — if it is shorter or vaguer than the claim's own most specific noun
+   phrase, it was paraphrased, not stripped, and the verdict is invalid until redone
+   on the actual claim. (2026-08-31, after control test 3 found this lens restating
+   Hopfield's exact claim as "systems converging to local minima," then correctly
+   calling that weaker restatement generic; extended 2026-08-31 after a held-out batch
+   found the same mistake recurring on Becker's household-economics claim, restated
+   as "complex systems... uniform decision-making model" before being refuted. See
    `refutations/control-test-nobel-calibration.md`.)
 
 **Promotion rule:** a claim needs 2-of-3 lenses to find it survives (fails to refute)

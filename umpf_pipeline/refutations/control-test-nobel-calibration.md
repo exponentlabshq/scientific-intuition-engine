@@ -95,3 +95,35 @@ Triviality on Becker: *"reduces to the assertion that complex systems can be ana
 **What this means, stated plainly:** the fix is real — it worked on the cases it was diagnosed from, and the 3-of-5 result was not fabricated. But held out on fresh material selected the same way, it degrades from 60% to 25%, with the same three original bug patterns visibly still firing in the lenses' own reasoning. This is evidence the fix corrected the *lenses' behavior on those 5 specific examples* more than it corrected the *underlying rule* — a real, disclosed form of overfitting to the diagnostic set, not a generalized calibration improvement. The whitepaper's "first survivors in the project's history" framing (Section 14) is not false — it accurately describes what happened on the 5 cases tested — but read next to this held-out result, it overstates how much the underlying problem was actually closed.
 
 **Not yet decided:** whether to attempt a second, more general fix round using this new, more diverse evidence (a genuine principle — recognizing formal-structure identity despite domain-local vocabulary differences, recognizing any named theorem/historical result regardless of phrasing, distinguishing precise-claim-genericness from paraphrase-genericness — rather than another round of case-specific patching), or to stop here and carry this as a disclosed, real limitation. Flagged for a decision rather than decided unilaterally, since it directly affects a claim already shipped in the published whitepaper.
+
+## Fourth follow-up (2026-08-31): a second, more general fix — real, substantial improvement, still imperfect
+
+Michael chose to attempt the second fix. Diagnosis of the held-out failures above pointed to a specific root cause, not three unrelated bugs: each 2026-08-31 fix was written around a single worked example (Nash for Coherence, Meselson-Stahl/Hopfield-Ising for Testability, Hopfield for Triviality), so the model appeared to be pattern-matching "does this look like that specific example" rather than internalizing a transferable rule.
+
+**The rewrite:** all three `LENS_QUESTIONS` entries (and the matching `refutations/README.md` rubric) were restructured to lead with an explicit, numbered, mechanically-followable decision procedure — not a single worked example — plus multiple diverse worked examples spanning different fields (not one), plus an explicit named anti-pattern pulled directly from the held-out failures themselves (e.g., Triviality's rubric now names "Becker's household-economics claim, restated as 'complex systems... uniform decision-making model'" as a real thing not to do; Testability's names "the Coase theorem was refuted for lacking a metric... naming the theorem already satisfies that" explicitly).
+
+**Re-test: all 13 real cases (the original 5 + the held-out 8) as one combined set**, since none were used to write the second fix (which was built from *why* the first fix failed, not by re-reading these cases' text). Script: `/tmp/combined_13_retest.py`.
+
+**Result: 8 of 13 survived (61.5%)** — up from 25% (2 of 8) on the held-out set under the first fix, and now comparable to (slightly above) the original diagnostic set's 60% (3 of 5) — measured this time on a real, non-cherry-picked, cross-checked sample more than double the size.
+
+| Case | First fix | Second fix | Change |
+|---|---|---|---|
+| Kahneman-Tversky | SURVIVES (2/3) | SURVIVES (2/3) | unchanged |
+| Watson/Crick/Franklin | REFUTED | REFUTED (1/3) | unchanged |
+| Hopfield | SURVIVES (2/3) | **REFUTED (1/3)** | **regressed** |
+| Nash/evolution | SURVIVES (3/3) | SURVIVES (3/3) | unchanged, unanimous both times |
+| Planck | REFUTED | **SURVIVES (2/3)** | **flipped** |
+| Jacob & Monod | REFUTED (0/3) | **SURVIVES (2/3)** | **flipped** |
+| Ostrom | REFUTED (1/3) | **SURVIVES (2/3)** | **flipped** |
+| Simon | SURVIVES (2/3) | SURVIVES (2/3) | unchanged |
+| Coase | REFUTED (0/3) | REFUTED (1/3) | improved, still refuted |
+| Hayek | SURVIVES (2/3) | SURVIVES (2/3) | unchanged |
+| Becker | REFUTED (1/3) | REFUTED (1/3) | unchanged |
+| Feynman (flagged) | REFUTED (0/3) | REFUTED (1/3) | improved, still refuted |
+| Einstein/Maxwell (flagged) | REFUTED (0/3) | **SURVIVES (2/3)** | **flipped** |
+
+**Net: 4 flips to SURVIVES, 1 real regression, 3 unresolved failures unchanged, 5 unchanged survivors.** This is honest, substantial, validated progress — the earlier 25% held-out result was real evidence of overfitting, and this rewrite closed most of that gap on a sample large enough to trust the direction, not just the diagnostic set's original 5.
+
+**Not perfect, and one finding worth naming plainly — the Hopfield regression:** Triviality's reasoning on the re-test: *"the claim reduces to a statement about two complex systems converging to a specific mathematical form, which is a trivial assertion applicable to many systems."* This is close to a verbatim repeat of "systems converging to local minima" — the exact anti-pattern the rewritten rubric names Hopfield as the counter-example for, word for word, in the instruction the model was just given. Even an explicit, named, this-exact-case warning did not prevent the same failure on a re-run. Coherence on the same case similarly re-asserted "different underlying concepts... conflates two distinct referents" without engaging the claim's own explicit statement of formal identity. Read together with the project's own prior documented finding elsewhere (temperature=0.1, not 0, produces real run-to-run variance on identical inputs), this is likely a mix of genuine stochastic variance and a real, honest ceiling on how much a rubric's text alone can guarantee — no rewrite of instructions fully eliminates the chance that a given run doesn't follow them.
+
+**Deliberately not chased further:** re-running Hopfield alone to see if it flips back, or writing a third round of rubric text narrowly aimed at this one regression, would be exactly the "keep tuning until it looks nice" pattern this project has explicitly avoided twice already in this same file. 8 of 13 (61.5%), validated on a real held-out-clean combined sample, with the residual failures named honestly rather than hidden, is where this round stops.
