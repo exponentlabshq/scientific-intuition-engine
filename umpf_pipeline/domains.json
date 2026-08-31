@@ -796,6 +796,66 @@
     [
       "Music — sample-based hip-hop production",
       "Informational Load Balancing"
+    ],
+    [
+      "Knowledge Systems (Cognitive & Pattern Recognition Systems) — Atomic: Data interpretation uncertain, Model output ambiguous, Multiple insights; Domain: Knowledge evolves, Historical context, Log insights; Control: Distributed analysis, Parallel computation, Atomic integration; Orchestration: Knowledge deployment coordination",
+      "Informational Scientific Experiment Orchestration"
+    ],
+    [
+      "Human Team Collaboration",
+      "Physical Flux Regulation"
+    ],
+    [
+      "Informational Error Probability",
+      "Physical Immune System"
+    ],
+    [
+      "Behavioral psychology — habit formation loops",
+      "Informational Sensor Networks"
+    ],
+    [
+      "Cognitive Swarm Intelligence",
+      "Human Trust Variance"
+    ],
+    [
+      "Quantum Physics (Physical & Natural Systems) — Atomic: Particle position uncertain, Measurement binary, Superposition states; Domain: Quantum system evolves, Physical laws context, Log measurements; Control: Measurement apparatus, Parallel quantum processes, Atomic wavefunction collapse; Orchestration: Universal law coordination, Theoretical vs experimental environments",
+      "Informational Signal Jitter"
+    ],
+    [
+      "Creative Musical Motif Deviation",
+      "Informational Bit Flips"
+    ],
+    [
+      "Economics — auction theory",
+      "Informational Ledger State Evolution"
+    ],
+    [
+      "Agriculture — crop rotation and soil health",
+      "Creative Narrative Arc Development"
+    ],
+    [
+      "Creative Artistic Arrangement",
+      "Informational Distributed Consensus"
+    ],
+    [
+      "Cell biology — mitochondrial energy production",
+      "Human Social Network Dynamics"
+    ],
+    [
+      "Education (Information & Intelligence Systems) — Atomic: Assignment grade uncertain, Learning succeeds/fails, Multiple styles; Domain: Student knowledge evolves, Educational standards, Log progress; Control: External assessment systems, Concurrent learning paths, Atomic grade updates; Orchestration: Curriculum coordination, Practice vs real-world environments",
+      "Physical Magnetic Field Control"
+    ],
+    [
+      "Finance (Human & Social Systems) — Atomic: Transaction succeeds/fails, Account lookup missing, Multiple positions; Domain: Portfolio evolves, Market context, Audit logging; Control: External trades & APIs, Streaming market data, Atomic account updates; Orchestration: Regulatory coordination, Simulation vs live trading",
+      "Informational Database Sharding"
+    ],
+    [
+      "Astronomy — gravitational lensing",
+      "Architecture (Creative & Performance Systems) — Atomic: Building permits approved/denied, Material availability uncertain, Multiple design options; Domain: Building construction progresses, Building codes, Log construction events; Control: Building inspections & permits, Concurrent construction, Atomic structural updates; Orchestration: City planning coordination, Design vs construction environments"
+    ],
+    [
+      "Urban planning — zoning and land use",
+      "Physical Power Grid Orchestration"
     ]
   ],
   "already_janused": [
@@ -959,7 +1019,15 @@
     "Music theory — counterpoint and voice leading",
     "Physical Chemical Reaction Networks",
     "Physical Acoustic Resonance",
-    "Sports Athletics (Creative & Performance Systems) — Atomic: Performance succeeds/fails, Opponent capabilities unknown, Multiple strategic approaches; Domain: Athletic performance evolves, Sports rules, Log training sessions; Control: Performance monitoring, Concurrent team coordination, Atomic score updates; Orchestration: Sports federation coordination, Training vs championship environments"
+    "Sports Athletics (Creative & Performance Systems) — Atomic: Performance succeeds/fails, Opponent capabilities unknown, Multiple strategic approaches; Domain: Athletic performance evolves, Sports rules, Log training sessions; Control: Performance monitoring, Concurrent team coordination, Atomic score updates; Orchestration: Sports federation coordination, Training vs championship environments",
+    "Neuroscience — synaptic pruning",
+    "Informational Packet Buffer Management",
+    "Thermodynamics — entropy and irreversibility",
+    "Learning Systems (Cognitive & Pattern Recognition Systems) — Atomic: Learning outcomes uncertain, Skill acquisition succeeds/fails, Multiple learning states; Domain: Learning progresses, Educational context, Log development; Control: External learning resources, Parallel skill development, Atomic knowledge updates; Orchestration: Individual vs collective learning coordination",
+    "Creative Artistic Arrangement",
+    "Immunology — innate immune response",
+    "Informational Mobile System Coordination",
+    "Human Social Network Dynamics"
   ],
   "already_homospatial": [
     [
@@ -1837,6 +1905,78 @@
     [
       "Telecommunications — error-correcting codes",
       "Informational Ledger State Evolution"
+    ],
+    [
+      "Cognitive Development (Information & Intelligence Systems) — Atomic: Learning outcome uncertain, Skill acquisition succeeds/fails, Multiple learning paths; Domain: Cognitive skills evolve, Learning context, Log development milestones; Control: External learning resources, Parallel skill development, Atomic knowledge integration; Orchestration: Learning system coordination, Practice vs application environments",
+      "Informational Bit Flips"
+    ],
+    [
+      "Informational Error Probability",
+      "Physical Thermal Variation"
+    ],
+    [
+      "Human Social Influence",
+      "Physical Mechanical Vibration"
+    ],
+    [
+      "Cell biology — protein folding chaperones",
+      "Informational Software Version Control"
+    ],
+    [
+      "Architecture (Creative & Performance Systems) — Atomic: Building permits approved/denied, Material availability uncertain, Multiple design options; Domain: Building construction progresses, Building codes, Log construction events; Control: Building inspections & permits, Concurrent construction, Atomic structural updates; Orchestration: City planning coordination, Design vs construction environments",
+      "Human Learning Uncertainty"
+    ],
+    [
+      "Finance (Human & Social Systems) — Atomic: Transaction succeeds/fails, Account lookup missing, Multiple positions; Domain: Portfolio evolves, Market context, Audit logging; Control: External trades & APIs, Streaming market data, Atomic account updates; Orchestration: Regulatory coordination, Simulation vs live trading",
+      "Physical Magnetic Fluctuation"
+    ],
+    [
+      "Cross Domain Pattern Recognition (Cognitive & Pattern Recognition Systems) — Atomic: Pattern recognition uncertain, Mapping valid/invalid, Multiple domain analogies; Domain: Cross-domain understanding evolves, Universal monadic patterns, Log successful transfers; Control: Multiple data sources, Parallel analysis, Atomic synthesis; Orchestration: Cross-domain coordination & system integration",
+      "Creative Narrative Arc Development"
+    ],
+    [
+      "Geology — sedimentary layering and stratigraphy",
+      "Epidemiology — herd immunity thresholds"
+    ],
+    [
+      "Informational Backup Systems",
+      "Physical Acoustic Resonance"
+    ],
+    [
+      "Immunology — innate immune response",
+      "Informational Sensor Networks"
+    ],
+    [
+      "Chemistry — catalysis and reaction pathways",
+      "Cognitive Development (Information & Intelligence Systems) — Atomic: Learning outcome uncertain, Skill acquisition succeeds/fails, Multiple learning paths; Domain: Cognitive skills evolve, Learning context, Log development milestones; Control: External learning resources, Parallel skill development, Atomic knowledge integration; Orchestration: Learning system coordination, Practice vs application environments"
+    ],
+    [
+      "Human Meeting Participation",
+      "Informational Sensor Networks"
+    ],
+    [
+      "Sports — basketball pick-and-roll offense",
+      "Human Emotional Fluctuation"
+    ],
+    [
+      "Physical Chemical Reaction Networks",
+      "Physical Magnetic Fluctuation"
+    ],
+    [
+      "Supply chain logistics — bullwhip effect",
+      "Geology — sedimentary layering and stratigraphy"
+    ],
+    [
+      "Informational Database State",
+      "Physical Gear System Mechanics"
+    ],
+    [
+      "Cell biology — protein folding chaperones",
+      "Sports Athletics (Creative & Performance Systems) — Atomic: Performance succeeds/fails, Opponent capabilities unknown, Multiple strategic approaches; Domain: Athletic performance evolves, Sports rules, Log training sessions; Control: Performance monitoring, Concurrent team coordination, Atomic score updates; Orchestration: Sports federation coordination, Training vs championship environments"
+    ],
+    [
+      "Creative Inspiration Variability",
+      "Informational Packet Buffer Management"
     ]
   ],
   "domain_pool": [
