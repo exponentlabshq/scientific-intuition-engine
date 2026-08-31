@@ -31,7 +31,13 @@ deliberate, matching this project's standing adversarial-verify discipline elsew
    2026-08-31 after a held-out batch of 8 fresh cases found the same mistake
    recurring — Jacob & Monod's lac operon, Coase's transaction costs — at a 25%
    survival rate, down from the original fix's 60% on the diagnostic cases it was
-   built from. See `refutations/control-test-nobel-calibration.md`.)
+   built from. Extended again 2026-08-31 (v3) after an independent second-model
+   review of all 13 real Nobel cases found a stronger, related case this still
+   missed: not just different-mechanism-same-structure, but a claim stating the
+   SAME LITERAL OBJECT is used (Hopfield's energy function IS the Ising
+   Hamiltonian, not an analogy) — take that at face value as literal identity,
+   the strongest form of coherence, not a claim to second-guess. See
+   `refutations/control-test-nobel-calibration.md`.)
 2. **Testability lens** — is the falsifiable prediction actually operationalized, or is
    it vague enough that no real experiment could ever return a "no"? A claim can satisfy
    this in the past tense, not only the future tense: if it names a specific, real,
@@ -60,7 +66,16 @@ deliberate, matching this project's standing adversarial-verify discipline elsew
    Hopfield's exact claim as "systems converging to local minima," then correctly
    calling that weaker restatement generic; extended 2026-08-31 after a held-out batch
    found the same mistake recurring on Becker's household-economics claim, restated
-   as "complex systems... uniform decision-making model" before being refuted. See
+   as "complex systems... uniform decision-making model" before being refuted.
+   Extended again 2026-08-31 (v3) after an independent second-model review found a
+   deeper, distinct bug even when the claim's precise wording was correctly kept
+   intact: refuting a claim because its ABSTRACT SHAPE sounds generic, which is not
+   the same thing as its specific content being trivial (nearly every deep law has
+   a simple abstract form once known). Added a further test: would an expert in
+   either source domain, BEFORE this connection was established, have already
+   treated it as obvious or assumed? If establishing it required real, non-obvious
+   work — a new derivation, a real experiment, overturning a prior consensus — it
+   is not trivial regardless of how generic its summary sounds. See
    `refutations/control-test-nobel-calibration.md`.)
 
 **Promotion rule:** a claim needs 2-of-3 lenses to find it survives (fails to refute)

@@ -90,20 +90,27 @@ REFUTATION_MODEL = "gpt-4o-mini"  # switched 2026-08-30, after this stayed on gp
                               # for the full validation record and the cost-measurement bug
                               # that prompted testing this in the first place.
 
-LENS_VERSION = "2026-08-31-v2"  # bumped each time LENS_QUESTIONS' rubric text
+LENS_VERSION = "2026-08-31-v3"  # bumped each time LENS_QUESTIONS' rubric text
     # materially changes calibration behavior (not cosmetic edits). "v2" =
     # the second, more general rewrite (explicit numbered decision
     # procedures + multiple worked examples + named anti-patterns), real-
     # tested at 8-of-13 (61.5%) on a held-out Nobel-linked set -- see
-    # refutations/control-test-nobel-calibration.md. Written into every new
-    # ledger entry's refutation_lens_version field (leaderboard rearchitecture,
-    # 2026-08-31) so a REFUTED verdict's provenance is checkable: the 274
-    # real REFUTED entries in the ledger as of this date predate v2 entirely
-    # (no field at all) and were produced under lens text since found to
-    # under-recognize genuine survivors on held-out testing -- disclosed on
-    # the public leaderboard as pre-v2, not silently treated as equivalent
-    # to a v2 verdict. Re-running those 274 under v2 is a real, separate,
-    # costly decision, not something bumping this constant does on its own.
+    # refutations/control-test-nobel-calibration.md. "v3" = a real, second
+    # independent-model review of all 13 Nobel-linked cases (not this
+    # project's own reasoning) found two further, distinct real bugs v2
+    # didn't close: Coherence still flagging equivocation on a LITERALLY
+    # identical shared object (not just Nash's different-mechanism-same-
+    # structure case), and Triviality still refuting a claim whose ABSTRACT
+    # SHAPE sounds generic even when its precise content was correctly kept
+    # intact per v2's own Steps 1-4 -- a new Step 5 added specifically to
+    # test historical non-obviousness / genuine new explanatory power,
+    # which v2 never asked for. Written into every new ledger entry's
+    # refutation_lens_version field so a REFUTED verdict's provenance is
+    # checkable: entries predating v3 were produced under lens text since
+    # found to have these two further gaps -- disclosed, not silently
+    # treated as equivalent to a v3 verdict. Re-running older entries under
+    # v3 is a real, separate, costly decision, not something bumping this
+    # constant does on its own.
 
 LENS_SCHEMA = {
     "type": "object",
@@ -170,7 +177,29 @@ LENS_QUESTIONS = {
         "domains to fuse into one entity, name a single chimera, or stop being separately "
         "identifiable. That is homospatial's bar, not bisociation's — bisociation's own doctrine "
         "requires each domain to \"stay itself,\" connected by a mapping, not merged. Refuting a "
-        "bisociation claim for \"not constituting a genuine fusion\" is a category error."
+        "bisociation claim for \"not constituting a genuine fusion\" is a category error.\n\n"
+        "2026-08-31-v3 addendum, after an independent second-model review of all 13 real "
+        "Nobel-linked cases found this lens still flagging equivocation on a STRONGER case Step "
+        "2 didn't spell out clearly enough: not just 'different mechanisms, same formal object' "
+        "(Nash), but the SAME LITERAL OBJECT — the claim states outright that both domains use "
+        "the exact same equation, theorem, or physical structure, not an analogous one. If the "
+        "claim says 'the exact same mathematical form,' 'not an analogy to it,' 'the identical "
+        "Hamiltonian,' or equivalent — take that at face value as literal identity, the "
+        "strongest possible form of coherence, not a claim to independently second-guess. Real "
+        "cases this lens got wrong under the v2 wording: Hopfield's network energy function IS "
+        "the Ising Hamiltonian, not merely shaped like it — flagging 'energy function' as "
+        "equivocal because physics and neural networks are different fields misses that the "
+        "claim explicitly asserts mathematical identity, not analogy. Watson/Crick/Franklin's "
+        "'double helix' names one real molecular geometry that X-ray diffraction measured and "
+        "genetic base-pairing explains — not two different senses of the phrase. Coase's "
+        "'transaction costs' is the same formal economic-cost concept whether the dispute is a "
+        "factory boundary or a fishing right — real institutional variety is not a different "
+        "meaning of the term. Feynman's 'quantum system' refers uniformly to one physical notion "
+        "(a system whose state lives in an exponentially large Hilbert space) throughout the "
+        "claim, not two. In each of these, ask Step 3's question plainly — can you name two "
+        "actually different referents? — and if the honest answer is no, the term names one "
+        "thing used consistently, and this is not equivocation regardless of how different the "
+        "two fields otherwise are."
     ),
     "testability": (
         "Is the falsifiable prediction actually operationalized — a named metric, comparison "
@@ -249,7 +278,45 @@ LENS_QUESTIONS = {
         "dropped). For a genuinely exact, narrow, provable identity (the same equation, the "
         "same formula, a specific named theorem or mechanism, held to its full original "
         "specificity per Steps 1-2), the honest answer to Step 3 is usually no, and that is "
-        "real, load-bearing specificity, not triviality dressed up in domain vocabulary."
+        "real, load-bearing specificity, not triviality dressed up in domain vocabulary.\n\n"
+        "2026-08-31-v3 addendum, after an independent second-model review found this lens "
+        "STILL refuting real Nobel-linked claims as trivial even when Steps 1-4 above were "
+        "followed correctly and the precise claim was kept intact — a distinct, deeper bug "
+        "Steps 1-4 alone do not close. The remaining mistake: treating 'this claim's ABSTRACT "
+        "SHAPE is common' as if it were the same thing as 'this claim's SPECIFIC CONTENT is "
+        "trivial.' It is not. Nearly every deep scientific law has a simple, generic-sounding "
+        "abstract form once stated plainly — natural selection is just 'variation plus "
+        "selection produces differential survival'; Newton's second law is just 'force equals "
+        "mass times acceleration.' That a law's FORM can be stated briefly and abstractly is "
+        "not evidence against its depth — it is what a real discovery usually looks like once "
+        "it is already known. Do not refute a claim as trivial merely because, correctly kept "
+        "precise, it can still be summarized in one abstract-sounding sentence.\n"
+        "  STEP 5, the one that actually distinguishes genuine triviality from a real discovery "
+        "that happens to have a simple form — run this in addition to Steps 1-4, not instead of "
+        "them: ask whether an expert already working in EITHER source domain, BEFORE this "
+        "specific connection was established, would have already treated it as an obvious, "
+        "assumed, or definitional fact requiring no real work to state. If establishing the "
+        "connection required deriving a new result, running a real experiment, overturning a "
+        "prior consensus, or noticing something genuinely not previously stated — even if the "
+        "resulting claim can now be summarized simply — it is NOT trivial, regardless of how "
+        "generic its abstract shape sounds when paraphrased. Only call a claim trivial if the "
+        "honest answer to Step 5 is that yes, this was already obvious or assumed beforehand, "
+        "or the claim is tautological/definitional (true by the meaning of its own words, "
+        "adding no real content).\n"
+        "  Worked examples for Step 5, several, not one: Hayek's claim — that markets aggregate "
+        "dispersed local knowledge into a compressed price signal WITHOUT requiring any actor to "
+        "know more than their own local circumstances plus the price — was a real, non-obvious "
+        "economic insight that overturned central-planning assumptions of its era; 'distributed "
+        "information gets aggregated by a signal' is a fair one-sentence summary of its abstract "
+        "shape, but that shape being statable briefly does not make the specific no-central-"
+        "knowledge-required mechanism trivial. Coase's theorem was a real, counterintuitive "
+        "result specifically because it showed transaction costs, not the initial legal "
+        "assignment of rights, determine efficiency — economists before Coase did not already "
+        "assume this. Feynman's proposal to build a computer that itself obeys quantum "
+        "mechanics, to exploit rather than merely suffer from exponential state-space scaling, "
+        "was a genuine, non-obvious inversion nobody had proposed before 1981 — 'exponential "
+        "scaling is common to complex systems' is true and irrelevant; the claim is not about "
+        "scaling being generic, it is about a specific, novel way to exploit it."
     ),
 }
 

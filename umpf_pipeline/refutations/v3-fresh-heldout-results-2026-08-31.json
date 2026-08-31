@@ -1,0 +1,82 @@
+[
+  {
+    "id": "mcclintock_transposons",
+    "verify_verdict": "COLLISION",
+    "lens_results": {
+      "coherence": "SURVIVES",
+      "testability": "SURVIVES",
+      "triviality": "REFUTED"
+    },
+    "survives": 2,
+    "refutation_verdict": "SURVIVES",
+    "lens_reasoning": {
+      "coherence": "The core claim identifies a specific shared term, 'dynamic reconfiguration,' which refers to the same formal concept of genetic elements relocating within a genome in genetics and the reconfiguration of information systems. Both domains describe a process where elements can change their position and influence surrounding structures, maintaining the same underlying principle of dynamic change. Thus, there is no equivocation on the term, and the mapping between the two domains is coherent.",
+      "testability": "The core claim names a specific historical experiment conducted by Barbara McClintock, detailing her discovery of transposable elements through observable changes in maize pigmentation patterns. This provides a clear, checkable piece of evidence that operationalizes the hypothesis, satisfying the testability lens. The claim is not vague, as it directly references a well-documented scientific finding that has been validated and recognized with a Nobel Prize.",
+      "triviality": "The core claim states that specific genetic elements can relocate and influence nearby genes, which is a specific mechanism tied to genetics and not a generalizable principle applicable to most complex systems. The phrase being tested for genericness, 'specific genetic elements can physically excise themselves and relocate to new positions on a chromosome,' is not a trivial statement about complex systems; it describes a unique biological process that does not apply broadly across different domains."
+    }
+  },
+  {
+    "id": "marshall_warren_h_pylori",
+    "verify_verdict": "COLLISION",
+    "lens_results": {
+      "coherence": "SURVIVES",
+      "testability": "SURVIVES",
+      "triviality": "REFUTED"
+    },
+    "survives": 2,
+    "refutation_verdict": "SURVIVES",
+    "lens_reasoning": {
+      "coherence": "The core claim rests on the term 'causal mechanism,' which refers to the same formal relationship in both gastroenterology and microbiology: the identification of a specific pathogen (H. pylori) as the cause of a disease (peptic ulcers). While the underlying processes differ (bacterial infection vs. acid/stress), the term denotes the same formal object in both domains. Thus, there is no equivocation, and the claim holds up under scrutiny.",
+      "testability": "The core claim names specific, checkable evidence, including the discovery of Helicobacter pylori and the self-experimentation conducted by Barry Marshall in 1984. These events are well-documented and provide a clear operationalization of the hypothesis, demonstrating a causal mechanism for peptic ulcer disease. The Nobel Prize awarded to Marshall and Warren further validates the significance of their findings, satisfying the testability lens.",
+      "triviality": "The core claim reduces to a specific assertion about a bacterium causing a disease, which is not a trivial statement applicable to most complex systems. The claim's specificity regarding Helicobacter pylori's role in peptic ulcers and the experimental evidence provided by Marshall's self-experimentation indicates that this was a novel and non-obvious discovery, not something that would be assumed or trivial in the context of other complex systems."
+    }
+  },
+  {
+    "id": "mitchell_chemiosmosis",
+    "verify_verdict": "COLLISION",
+    "lens_results": {
+      "coherence": "SURVIVES",
+      "testability": "SURVIVES",
+      "triviality": "REFUTED"
+    },
+    "survives": 2,
+    "refutation_verdict": "SURVIVES",
+    "lens_reasoning": {
+      "coherence": "The core claim rests on the term 'electrochemical gradient,' which refers to the same formal object in both cell biology and electrochemistry: a potential energy difference created by the distribution of ions across a membrane. In both domains, this gradient is a measurable and defined phenomenon that drives energy transfer processes. The claim does not equivocate on this term, as it consistently refers to the same underlying concept, thus fulfilling the coherence requirement.",
+      "testability": "The core claim names a specific, checkable historical experiment that confirmed Peter Mitchell's chemiosmotic hypothesis, specifically the demonstration that artificially imposed pH gradients could drive ATP synthesis independently of electron transport. This provides a clear metric (ATP synthesis), a comparison condition (with and without electron transport), and an implicit rejection threshold (the hypothesis is false if ATP synthesis does not occur under the specified conditions). Thus, the claim is operationalized and testable.",
+      "triviality": "The core claim reduces to a statement about energy transfer mechanisms in complex systems, specifically that energy can be stored in a gradient and released to drive a process. This is a generic principle applicable to many systems, such as batteries or capacitors, and does not retain the specificity of the original claim regarding ATP synthesis and the role of ATP synthase. The phrase being tested for genericness is: 'cells instead pump protons across a membrane to build up a real, physical electrochemical gradient.' This is a broader concept that could apply to various systems, thus failing to demonstrate the unique significance of Mitchell's hypothesis."
+    }
+  },
+  {
+    "id": "prusiner_prions",
+    "verify_verdict": "COLLISION",
+    "lens_results": {
+      "coherence": "SURVIVES",
+      "testability": "SURVIVES",
+      "triviality": "SURVIVES"
+    },
+    "survives": 3,
+    "refutation_verdict": "SURVIVES",
+    "lens_reasoning": {
+      "coherence": "The core claim rests on the term 'infectious agent,' which refers to a self-propagating entity in both molecular biology and protein chemistry. In molecular biology, this term typically denotes agents that require nucleic acids for replication, while in protein chemistry, it refers to prions that propagate through misfolding without genetic material. However, the claim explicitly states that prions represent a new category of infectious agents, thus establishing a coherent mapping between the two domains without equivocation. The argument holds up when both referents are stated side by side, confirming that the term is used consistently in the context of the claim.",
+      "testability": "The core claim names a specific, checkable piece of evidence: Stanley Prusiner's discovery of prions, which is well-documented and recognized by the Nobel Prize awarded in 1997. This discovery provides a clear operationalization of the hypothesis, as it directly addresses the falsifiable prediction regarding the nature of infectious agents and their requirement for genetic material. The claim is not vague and is supported by historical experimental evidence.",
+      "triviality": "The core claim maintains specificity by detailing the unique mechanism of prion propagation, which is not merely a generic assertion about complex systems. The phrase being tested for genericness, 'an infectious agent can propagate without genetic material,' does not reduce to a triviality applicable to most complex systems, as it describes a specific biological phenomenon that contradicts established principles in molecular biology. Furthermore, the claim required substantial experimental validation and faced significant skepticism, indicating it was not an obvious or assumed fact prior to Prusiner's work."
+    }
+  },
+  {
+    "id": "alvarez_kt_extinction",
+    "verify_verdict": "COLLISION",
+    "lens_results": {
+      "coherence": "SURVIVES",
+      "testability": "SURVIVES",
+      "triviality": "REFUTED"
+    },
+    "survives": 2,
+    "refutation_verdict": "SURVIVES",
+    "lens_reasoning": {
+      "coherence": "The core claim rests on the application of neutron activation analysis, a specific measurement technique from particle physics, to detect iridium concentrations in geological strata. This technique is used consistently in both domains to quantify the same formal object: the concentration of iridium. The claim does not equivocate on terms; it clearly identifies the same measurement methodology applied to different contexts, thus demonstrating a genuine bisociation without equivocation.",
+      "testability": "The core claim names a specific, real, checkable piece of evidence: the application of neutron activation analysis to measure iridium concentrations in Cretaceous-Tertiary boundary sediments. This method and its findings are well-documented and have been confirmed by subsequent studies, providing a clear metric (iridium concentration), a comparison condition (background levels in Earth's crust), and a rejection threshold (significantly higher levels indicating an asteroid impact). Thus, the claim is operationalized and testable.",
+      "triviality": "The core claim describes a specific application of a measurement technique from particle physics to a paleontological question, asserting that iridium concentrations in a specific geological layer support the asteroid impact hypothesis. However, when stripped of domain-specific vocabulary, the claim reduces to a general assertion about the application of quantitative measurement techniques to establish causation in complex systems, which is a trivial observation applicable to many fields. The specific details of the iridium measurement and its implications do not hold unique significance beyond the general principle of using empirical data to challenge existing assumptions."
+    }
+  }
+]
