@@ -1,0 +1,28 @@
+# Full-Ledger Recheck — Every Pre-v2 REFUTED Entry Under the Fixed Lenses
+
+**Date:** 2026-08-31
+**Purpose:** `control-test-nobel-calibration.md` validated the v2 refutation-lens fix against real, historically-vindicated Nobel-linked ground truth (8-of-13 SURVIVES, 61.5%, on a held-out set). That result answers "can the lens recognize a true claim." It does not answer the separate, practical question this report closes: **of the 274 real hypotheses this pipeline has generated and refuted across its history, how many were refuted by lens logic since found to have real, diagnosed bugs — and does re-checking them under the fix change anything?**
+
+## Method
+
+271 of the 274 real pre-v2 REFUTED ledger entries (3 excluded — pre-existing rosetta-stone case studies identified by a different field, `case_study` not `hypothesis_slug`, living in a directory `refute_one()` doesn't search; a real, disclosed, structural exclusion, not a judgment call). Each re-run through `refute_one(slug, rubric, dry_run=True)` — the same function `refute_hypothesis.py` uses for real, unattended production refutation, called with `dry_run=True` so nothing was written to the ledger or `refutations/` during the check itself. No re-verification: each case reused its own real, existing Phase 2 verification note (`load_verification_note()`), exactly as production refutation does. Run in Fibonacci-sized batches (1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 39) per direct instruction — small batches first so a real problem surfaces cheap before committing to the full run. Script: `/tmp/rerun_274_fibonacci.py` (throwaway, not committed, matching every other control-test harness this session).
+
+**Real cost:** 271 × 3 lens calls = 813 real gpt-4o-mini completions. **Real time: 1,438 seconds (~24 minutes).** Dollar cost consistent with the ~$0.24 estimate given before running (not independently re-measured from `token_usage.jsonl` in this pass — the estimate was built from this exact call shape and rate beforehand).
+
+## Result: 0 of 271 flipped to SURVIVES. Every single one, unanimous 0-of-3.
+
+Not close calls that missed the 2-of-3 promotion threshold — the distribution of survives-count across all 271 cases is `{0: 271}`. Not one lens, on any one of 271 real generated hypotheses, returned SURVIVES even once. Zero errors across the full run.
+
+## What this does and does not mean
+
+**This is not a contradiction of the held-out validation — it's the other half of the same finding, and it's the expected result, stated in advance.** Before this run started, the honest calibration expectation given was explicit: *"these 274 are this pipeline's own generated, unvindicated candidate hypotheses — the same population as the 20 fresh candidates run under v2 earlier today, which went 0-of-20 survived, correctly... framing this as 'recovering buried gold' would be overclaiming."* That prediction held exactly. Combined with today's earlier 0-of-20 fresh-candidate check, this pipeline's v2-fixed lenses have now been run against **291 real, generated, unvindicated candidates and correctly refuted every one** — while separately, on real historically-vindicated ground truth, recognizing 61.5% of genuine discoveries as SURVIVES. That is the shape a working discriminator is supposed to have: high true-negative rate on weak claims, real, non-zero true-positive rate on strong ones — not a mechanism that says REFUTED to everything (which the old, pre-fix lenses were functionally indistinguishable from, at 0-of-245 for the project's entire prior history) and not a mechanism that got lenient across the board to manufacture survivors.
+
+**What this resolves:** the real, live ledger's 0-of-274 refutation-survival record is now independently re-confirmed under the fixed lenses, not just carried forward from whatever logic happened to be live when each entry was originally checked. The record was never wrong because of the bugs the v2 fix closed — none of the 274 real cases this pipeline has actually generated turn out to have been a Nash- or Hopfield-shaped false negative sitting in the ledger.
+
+**What this does not resolve, and was never going to:** whether this pipeline's generation stage produces hypotheses capable of reaching SURVIVES at all remains a separate, open question this recheck doesn't touch — Phase 3's real researcher-outreach test (three real sends, 21-day clock still running as of this report) is the actual test of that, not refutation recalibration.
+
+## Ledger update — provenance only, no verdicts changed
+
+271 real ledger lines (279 raw lines, including 7 already-superseded duplicate entries for slugs re-verified more than once historically — harmless, since `ledger.py`'s `load_latest_entries()` already reads only the current line per slug) now carry `refutation_lens_version: "2026-08-31-v2"` and a `refutation_v2_recheck_note` field. `refutation_verdict` itself was not touched on any line — still `REFUTED` everywhere it was REFUTED before. This closes the exact gap the provenance field was built for (leaderboard rearchitecture, same date): a REFUTED entry on the public leaderboard is no longer ambiguous between "never checked under the current lens logic" and "checked and confirmed" — every real entry now reads one or the other, honestly.
+
+Script: `/tmp/tag_271_confirmed.py` (throwaway, not committed). Verified before trusting: `git diff --stat` showed exactly 279 insertions / 279 deletions on `verification-log.jsonl` (line-for-line, nothing else touched); every one of the 677 total ledger lines still parses as valid JSON; every tagged entry's `refutation_verdict` spot-checked still `REFUTED`.
