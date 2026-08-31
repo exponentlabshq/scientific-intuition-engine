@@ -10898,3 +10898,10 @@
 {"timestamp": "2026-08-31T17:49:07.374530+00:00", "phase": "refutation", "model": "gpt-4o-mini", "prompt_tokens": 2749, "completion_tokens": 88, "total_tokens": 2837, "hypothesis_slug": "2026-08-31-music-theory-x-linguistics", "lens": "testability"}
 {"timestamp": "2026-08-31T17:49:09.421803+00:00", "phase": "refutation", "model": "gpt-4o-mini", "prompt_tokens": 2726, "completion_tokens": 110, "total_tokens": 2836, "hypothesis_slug": "2026-08-31-music-theory-x-linguistics", "lens": "triviality"}
 {"timestamp": "2026-08-31T17:49:11.348546+00:00", "phase": "audit_observation", "model": "gpt-4o-mini", "prompt_tokens": 2773, "completion_tokens": 39, "total_tokens": 2812}
+{"timestamp": "2026-08-31T17:56:42.876540+00:00", "phase": "generation", "model": "gpt-4o-mini", "prompt_tokens": 2016, "completion_tokens": 480, "total_tokens": 2496, "mode": "janusian", "retry": false}
+{"timestamp": "2026-08-31T17:56:47.788085+00:00", "phase": "generation", "model": "gpt-4o-mini", "prompt_tokens": 2714, "completion_tokens": 495, "total_tokens": 3209, "mode": "janusian", "retry": true}
+{"timestamp": "2026-08-31T17:56:48.857881+00:00", "phase": "generation", "model": "gpt-4o-mini", "prompt_tokens": 2257, "completion_tokens": 35, "total_tokens": 2292, "mode": "janusian", "retry": "queries"}
+{"timestamp": "2026-08-31T17:56:53.208222+00:00", "phase": "generation", "model": "gpt-4o-mini", "prompt_tokens": 2018, "completion_tokens": 519, "total_tokens": 2537, "mode": "janusian", "retry": false}
+{"timestamp": "2026-08-31T17:56:54.122983+00:00", "phase": "generation", "model": "gpt-4o-mini", "prompt_tokens": 1564, "completion_tokens": 35, "total_tokens": 1599, "mode": "janusian", "retry": "queries"}
+{"timestamp": "2026-08-31T17:57:07.490409+00:00", "phase": "verification", "model": "gpt-4o-mini", "prompt_tokens": 8174, "completion_tokens": 230, "total_tokens": 8404, "hypothesis_slug": "2026-08-31-janusian-genetics"}
+{"timestamp": "2026-08-31T17:57:12.450546+00:00", "phase": "verification", "model": "gpt-4o-mini", "prompt_tokens": 8174, "completion_tokens": 288, "total_tokens": 8462, "hypothesis_slug": "2026-08-31-janusian-culinary-arts"}
