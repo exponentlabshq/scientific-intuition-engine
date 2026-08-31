@@ -15,8 +15,18 @@ to **refuted** when uncertain (not defaulting to survival — the asymmetry is
 deliberate, matching this project's standing adversarial-verify discipline elsewhere):
 
 1. **Coherence lens** — is the claimed structural mapping actually well-formed, or does
-   it equivocate on a term across the two domains (using one word for two different
-   underlying mechanisms and treating that as a match)?
+   it equivocate on a term across the two domains (using one word for two genuinely
+   different MEANINGS and treating that as a match)? Do not confuse this with two
+   domains having different underlying mechanisms that produce the same formal
+   structure — that is not equivocation, it is what bisociation is (different
+   mechanisms, same structure is the discovery, not a disguised flaw). And for
+   bisociation mode specifically, do not require the two domains to fuse into one
+   entity — that is homospatial's bar, not bisociation's, which requires each domain
+   to stay itself. (2026-08-31, after control test 3 found this lens refuting a real
+   evolutionarily-stable-strategy/Nash-equilibrium claim for having different
+   mechanisms in each domain — conscious reasoning vs. blind selection — when that is
+   precisely the real result: the same equilibrium condition emerges from either. See
+   `refutations/control-test-nobel-calibration.md`.)
 2. **Testability lens** — is the falsifiable prediction actually operationalized, or is
    it vague enough that no real experiment could ever return a "no"? A claim can satisfy
    this in the past tense, not only the future tense: if it names a specific, real,
@@ -32,6 +42,14 @@ deliberate, matching this project's standing adversarial-verify discipline elsew
 3. **Triviality lens** — strip the domain-specific vocabulary. Does the claim reduce to
    something true of almost any two complex systems (the same umbrella-trap failure
    mode Phase 2's own rubric already guards against, applied one level deeper)?
+   "Strip the vocabulary" means keep the precise relationship, formula, or mechanism
+   exactly as specific as stated and only swap the domain names — it does not mean
+   compress the claim into a vaguer paraphrase and then test whether that paraphrase
+   is generic. (2026-08-31, after control test 3 found this lens restating Hopfield's
+   exact claim — the same energy function as the Ising model, not an analogy — as
+   "systems converging to local minima," then correctly calling that weaker restatement
+   generic. The claim actually made was never tested. See
+   `refutations/control-test-nobel-calibration.md`.)
 
 **Promotion rule:** a claim needs 2-of-3 lenses to find it survives (fails to refute)
 to move out of NO_SIGNAL. Otherwise: **REFUTED** — a new, distinct outcome from
