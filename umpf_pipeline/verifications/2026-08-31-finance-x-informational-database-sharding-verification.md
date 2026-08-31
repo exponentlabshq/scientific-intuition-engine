@@ -13,7 +13,9 @@
 - `distributed systems theory OR framework OR researcher`
 
 ## What was found
-1. 'Database Sharding Explained: When, Why, and How to Do It Right' discusses the impact of transaction success or failure on data distribution and query performance in sharded databases. ([jarviix.com](https://jarviix.com/tech/database-sharding-explained?utm_source=openai)) 2. 'Cross-Shard Query Degradation' examines how cross-shard queries can affect system performance, highlighting the importance of transaction success in data distribution. ([dbraven.com](https://www.dbraven.com/knowledge/failure-modes/cross_shard_query_degradation?utm_source=openai)) 3. 'Database Sharding & Read-Replica Architecture for E-Commerce' provides a real-world example of how transaction failures can impact data distribution and query performance in a sharded database. ([modracx.com](https://www.modracx.com/blog/database-sharding-scaling/?utm_source=openai))
+1. 'Database Sharding Explained: When, Why, and How to Do It Right' by Jarviix
+2. 'Database Sharding: A Comprehensive Guide for 2025' by Shadecoder
+3. 'Database Sharding & Read-Replica Architecture for E-Commerce' by MODRACX
 
 ## Reasoning
-The search results reveal active research and discussions on how transaction success or failure influences data distribution and query orchestration in sharded databases. These findings align with the core claim of the hypothesis, indicating that the proposed connections are actively explored in current research.
+The search results provide detailed discussions on database sharding, its implementation, and associated challenges, which are pertinent to the hypothesis connecting transaction success/failure in finance to data distribution and query orchestration in database systems.

@@ -13,7 +13,7 @@
 - `urban traffic optimization and telecommunications convergence`
 
 ## What was found
-Traffic flow theory, including models like the kinematic wave theory, and packet switching, developed by Paul Baran and Donald Davies, are foundational in their respective fields. ([researchgate.net](https://www.researchgate.net/publication/248146380_Traffic_Flow_Theory_A_State-of-the-Art_Report?utm_source=openai)) While both involve dynamic optimization under uncertainty, specific mappings between urban planning and telecommunications are not directly established.
+Dynamic Traffic Assignment (DTA) models, such as DynaMIT 2.0, utilize real-time data to predict and manage traffic flow, employing optimization algorithms to adjust to changing conditions. ([its.mit.edu](https://www.its.mit.edu/pd-mitsim-copy?utm_source=openai)) In telecommunications, routing optimization techniques, including graph algorithms and deep reinforcement learning, dynamically adjust data paths to enhance network performance and reliability. ([mdpi.com](https://www.mdpi.com/2071-1050/16/21/9239?utm_source=openai)) Both fields employ dynamic optimization under uncertainty, adapting flow management strategies in real-time to improve system efficiency.
 
 ## Reasoning
-The search revealed foundational theories in both urban planning and telecommunications, but no direct mappings between the two domains were found. This suggests that while both fields involve dynamic optimization under uncertainty, the proposed mapping may be novel and worth investigating further.
+The search results reveal that both urban traffic management and telecommunications routing employ dynamic optimization strategies to adapt to real-time conditions, indicating a parallel in their approaches to managing flow under uncertainty.

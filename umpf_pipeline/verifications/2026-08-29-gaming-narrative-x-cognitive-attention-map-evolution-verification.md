@@ -1,7 +1,7 @@
 # Verification: Bisociation — Gaming Narrative × Cognitive Attention Map Evolution
 
 **Verifies**: `hypotheses/2026-08-29-gaming-narrative-x-cognitive-attention-map-evolution.md`
-**Verified**: 2026-08-29 · **Method**: Tavily search + GPT-4o classification (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
 ## Verdict: **ADJACENT_ACTIVE**
 
@@ -13,7 +13,7 @@
 - `attention mapping theory OR framework`
 
 ## What was found
-Research on cognitive maps and attention dynamics in gaming and decision-making contexts, such as 'Cognitive Maps of Decision-Makers in a Complex Game' (https://www.jstor.org/stable/2581872) and 'Study: Video Game Players Show Enhanced Brain Activity, Decision-Making Skill' (https://news.gsu.edu/2022/07/11/study-video-game-players-show-enhanced-brain-activity-decision-making-skill).
+Research indicates that narrative engagement in video games can influence attentional focus. Studies have shown that during suspenseful moments in narratives, attentional focus narrows, enhancing memory retention of those events. ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC8379980/?utm_source=openai)) Additionally, video games have been found to create sustained attentional selection away from task-irrelevant features, suggesting that game narratives can guide attention effectively. ([link.springer.com](https://link.springer.com/article/10.3758/s13414-020-02122-y?utm_source=openai))
 
 ## Reasoning
-The search results reveal active research on cognitive maps and attention dynamics in gaming contexts, which are relevant to the hypothesis. However, the specific mapping of gaming narrative elements to cognitive attention map evolution as proposed in the hypothesis is not directly addressed in the literature. The presence of related research indicates a fertile area for exploration, but the exact structural connection remains uncharted, thus fitting the ADJACENT_ACTIVE category.
+The findings support the hypothesis that player choices in gaming narratives can directly influence cognitive attention patterns, indicating a structural relationship between player agency and attention dynamics.

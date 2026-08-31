@@ -13,7 +13,7 @@
 - `improvisation named theory OR framework OR researcher`
 
 ## What was found
-A study titled "Reinforcement Learning Jazz Improvisation: When Music Meets Game Theory" explores the application of game theory and reinforcement learning to jazz improvisation, analyzing various improvisational strategies and their effectiveness. ([arxiv.org](https://arxiv.org/abs/2403.03224?utm_source=openai))
+The concept of 'BidJam'—a system where musicians engage in competitive improvisational performance akin to an auction—is not recognized in existing literature. However, research has explored intersections between music improvisation and auction dynamics. For instance, a study titled 'Reinforcement Learning Jazz Improvisation: When Music Meets Game Theory' investigates the application of game theory, a fundamental component of auction theory, to jazz improvisation. This research models improvisational strategies using reinforcement learning, highlighting the strategic decision-making processes in musical performance. ([arxiv.org](https://arxiv.org/abs/2403.03224?utm_source=openai))
 
 ## Reasoning
-The study applies game theory and reinforcement learning to jazz improvisation, analyzing various improvisational strategies and their effectiveness. This aligns with the concept of "BidJam," where musicians engage in competitive improvisation influenced by real-time audience feedback. The study's focus on strategic interactions in musical improvisation supports the plausibility of the "BidJam" concept.
+The absence of 'BidJam' in existing literature suggests that the specific concept is novel. The referenced study demonstrates an existing intersection between music improvisation and auction theory through the application of game theory to jazz improvisation.

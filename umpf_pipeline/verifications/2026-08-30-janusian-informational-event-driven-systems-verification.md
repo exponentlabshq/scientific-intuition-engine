@@ -1,7 +1,7 @@
 # Verification: Janusian — Informational Event-Driven Systems
 
 **Verifies**: `hypotheses/2026-08-30-janusian-informational-event-driven-systems.md`
-**Verified**: 2026-08-30 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
 ## Verdict: **ADJACENT_ACTIVE**
 
@@ -13,7 +13,13 @@
 - `Rothenberg paradox event-driven systems`
 
 ## What was found
-IBM Research has developed a proactive event-driven architecture called SPEEDD, which integrates complex event processing, real-time decision-making, and visualization to autonomously forecast future states and make decisions without explicit user requests. ([research.ibm.com](https://research.ibm.com/publications/extending-event-driven-architecture-for-proactive-systems?utm_source=openai)) Additionally, a 2011 paper by Engel and Etzion introduces a conceptual architecture for proactive event-driven computing, emphasizing the ability to mitigate or eliminate undesired future events by applying prediction and automated decision-making technologies. ([research.ibm.com](https://research.ibm.com/publications/towards-proactive-event-driven-computing?utm_source=openai))
+IBM Research has developed a proactive event-driven architecture called SPEEDD, which integrates complex event processing, real-time decision-making, and visualization to autonomously forecast future states and make decisions without explicit user requests. ([research.ibm.com](https://research.ibm.com/publications/extending-event-driven-architecture-for-proactive-systems?utm_source=openai))
+
+In 2011, IBM introduced a conceptual architecture for proactive event-driven computing, extending traditional event processing to include predictive and proactive agents capable of forecasting uncertain future events and determining optimal actions. ([research.ibm.com](https://research.ibm.com/publications/towards-proactive-event-driven-computing?utm_source=openai))
+
+A 2012 study by IBM presented a model for proactive event-driven computing, focusing on predicting and reacting to future events before they occur, exemplified through a condition-based maintenance application. ([research.ibm.com](https://research.ibm.com/publications/a-basic-model-for-proactive-event-driven-computing?utm_source=openai))
+
+In 2018, a study proposed an event-driven approach for predictive and proactive management of Service Level Agreement (SLA) violations in the Cloud of Things, utilizing event calculus and Bayesian networks to model future states and manage SLA compliance proactively. ([sciencedirect.com](https://www.sciencedirect.com/science/article/abs/pii/S0167739X1732280X?utm_source=openai))
 
 ## Reasoning
-The SPEEDD architecture and the 2011 paper by Engel and Etzion both explore proactive event-driven computing, aligning with the hypothesis's claim that event-driven systems can be both reactive and proactive simultaneously. These sources provide concrete examples of systems that not only react to events but also predict and act on future events based on internal analysis, supporting the hypothesis's prediction.
+The cited works demonstrate the development and application of proactive event-driven architectures and systems, aligning with the hypothesis that event-driven systems can be both reactive and proactive simultaneously.

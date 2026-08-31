@@ -13,7 +13,15 @@
 - `Albert Bandura social learning theory and social systems`
 
 ## What was found
-Research indicates that social systems exhibit both predictable patterns and unpredictable outcomes. Studies on online social interactions reveal that while the timing and location of interactions are highly predictable, the specific individuals involved are less so. ([nature.com](https://www.nature.com/articles/srep00633?utm_source=openai)) Additionally, the theory of self-organized criticality explains how social systems can experience periods of stability followed by sudden, unpredictable changes, aligning with the concept of punctuated equilibrium. ([journals.sagepub.com](https://journals.sagepub.com/doi/abs/10.1177/20597991221100427?utm_source=openai)) These findings suggest that social systems can be both stable and unstable simultaneously, supporting the hypothesis that they are inherently unstable due to unpredictable human interactions and evolving cultural norms, yet also stable due to predictable patterns and fixed cultural norms.
+1. **Stability and Instability in Social Systems**: The article "Network Instability in Times of Stability" examines how personal networks undergo changes in response to major life events, highlighting the dynamic nature of social systems. ([onlinelibrary.wiley.com](https://onlinelibrary.wiley.com/doi/10.1111/socf.12499?utm_source=openai))
+
+2. **Predictable Patterns in Human Interactions**: The study "How Random are Online Social Interactions?" analyzes the predictability of online human behavior, revealing that while individual actions are highly predictable, interactions with others are less so. ([nature.com](https://www.nature.com/articles/srep00633?utm_source=openai))
+
+3. **Cultural Norms and Social Network Dynamics**: The paper "The kindness of strangers: on the social significance of evanescent interaction" explores how brief, informal exchanges between strangers can influence social dynamics, emphasizing the role of cultural norms in shaping these interactions. ([link.springer.com](https://link.springer.com/article/10.1007/s11186-026-09739-2?utm_source=openai))
+
+4. **Theories of Social Systems Stability and Instability**: The article "Managing Complexity in Socio-Economic Systems" discusses the inherent complexities and instabilities within socio-economic systems, providing insights into the balance between stability and instability in social structures. ([cambridge.org](https://www.cambridge.org/core/journals/european-review/article/managing-complexity-in-socioeconomic-systems/196C6867FD9A4444E4D03D3559387D93?utm_source=openai))
+
+These sources collectively support the hypothesis that social systems exhibit both stable and unstable characteristics due to predictable patterns and evolving cultural norms.
 
 ## Reasoning
-The search results provide evidence of both predictable and unpredictable elements within social systems, aligning with the hypothesis that social systems can be simultaneously stable and unstable. The findings from studies on online social interactions and self-organized criticality support this dual nature of social systems.
+The selected articles provide empirical evidence and theoretical discussions on the dual nature of social systems, highlighting both their stability and instability.

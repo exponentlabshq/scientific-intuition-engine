@@ -1,7 +1,7 @@
 # Verification: Bisociation — Thermodynamics × Informational Signal Jitter
 
 **Verifies**: `hypotheses/2026-08-29-thermodynamics-x-informational-signal-jitter.md`
-**Verified**: 2026-08-29 · **Method**: Tavily search + GPT-4o classification (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
 ## Verdict: **ADJACENT_ACTIVE**
 
@@ -13,7 +13,9 @@
 - `Shannon's entropy in communication systems`
 
 ## What was found
-The search results revealed active research on the relationship between entropy and jitter in signal processing, as well as discussions on thermodynamic principles in information theory. For example, the paper 'Jitter Estimation with High Accuracy for Oscillator-Based ...' discusses entropy evaluation methods that consider jitter as a crucial parameter (https://eprint.iacr.org/2018/961.pdf). Additionally, 'Entropy: From Thermodynamics to Information Processing' (https://pmc.ncbi.nlm.nih.gov/articles/PMC8534765) explores the connection between thermodynamic entropy and information processing, highlighting irreversibility in both contexts.
+1. "Thermodynamics of Computations with Absolute Irreversibility, Unidirectional Transitions, and Stochastic Computation Times" (Phys. Rev. X, 2024) discusses the thermodynamic aspects of computation, including irreversibility and entropy production. ([journals.aps.org](https://journals.aps.org/prx/abstract/10.1103/PhysRevX.14.021026?utm_source=openai))
+2. "On Entropy and Bit Patterns of Ring Oscillator Jitter" (arXiv, 2021) examines the relationship between entropy and jitter in ring oscillators, relevant to signal processing. ([arxiv.org](https://arxiv.org/abs/2102.02196?utm_source=openai))
+3. "Information-theoretical bound of the irreversibility in thermal relaxation processes" (arXiv, 2019) establishes an information-theoretical bound on entropy production in thermal relaxation processes. ([arxiv.org](https://arxiv.org/abs/1902.04857?utm_source=openai))
 
 ## Reasoning
-The hypothesis posits a mapping between thermodynamic concepts and informational signal jitter. The search results show active research in both domains, particularly in how entropy and jitter are related in signal processing, and how thermodynamic principles apply to information theory. However, the exact functor mapping proposed in the hypothesis (e.g., energy exchange to signal timing control) was not directly found in the literature, indicating that while the domains are actively researched, the specific bisociation remains unexplored. This supports an ADJACENT_ACTIVE verdict, as the hypothesis is near fertile research territory but not yet fully realized in existing work.
+The first source discusses thermodynamic irreversibility and entropy production in computational processes, aligning with the claim of a direct relationship between increasing disorder (entropy) and irreversibility. The second source examines the relationship between entropy and jitter in ring oscillators, relevant to signal processing, supporting the claim of a direct relationship between jitter and error propagation. The third source establishes an information-theoretical bound on entropy production in thermal relaxation processes, further supporting the claim of a direct relationship between increasing disorder (entropy) and irreversibility.

@@ -3,7 +3,7 @@
 **Verifies**: `hypotheses/2026-08-31-janusian-military-strategy.md`
 **Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
-## Verdict: **ADJACENT_ACTIVE**
+## Verdict: **COLLISION**
 
 ## Queries
 - `military strategy intelligence effectiveness case studies`
@@ -13,7 +13,13 @@
 - `military strategy named theories OR frameworks OR researchers`
 
 ## What was found
-The U.S. Army's Mission Command Training Program (MCTP) emphasizes the necessity of a comprehensive operational framework for effective command and control, highlighting that incomplete frameworks can lead to confusion and missed opportunities. ([army.mil](https://www.army.mil/article/274300/fy_23_mission_command_training_in_large_scale_combat_operation_key_observations?utm_source=openai))
+The article "INTELLIGENCE & RISK: VICKSBURG, GUADALCANAL, IRAQ" discusses the critical role of intelligence in military operations, emphasizing that misinterpreting intelligence can lead to catastrophic consequences. ([warroom.armywarcollege.edu](https://warroom.armywarcollege.edu/articles/intel-risk-3cases/?utm_source=openai))
+
+The article "Anatomy of Success: On Strategic Intelligence and Its Relevance" examines cases where strategic intelligence was effectively utilized, highlighting the importance of a clear national strategy and a functional consumer-producer relationship for actionable intelligence. ([link.springer.com](https://link.springer.com/chapter/10.1007/978-3-032-11892-9_5?utm_source=openai))
+
+The article "Command and Control: The Warfighter's Glue" emphasizes that command and control (C2) is essential for coordinating military operations, ensuring that all facets of an operation adhere to each other. ([usni.org](https://www.usni.org/magazines/proceedings/2013/january/command-and-control-warfighters-glue?utm_source=openai))
+
+The article "Exercising Command and Control in an Era of Persistent Conflict" discusses the importance of mission command as the preferred method for exercising command and control, especially in complex and uncertain operational environments. ([army.mil](https://www.army.mil/article-amp/38412/exercising_command_and_control_in_an_era_of_persistent_conflict?utm_source=openai))
 
 ## Reasoning
-The MCTP's focus on the importance of a complete operational framework for command and control aligns with the hypothesis's assertion that both effective command and control require accurate intelligence. The emphasis on comprehensive planning and adaptability in the MCTP's approach supports the idea that military operations conducted under conditions of uncertainty can achieve success rates comparable to those with clear intelligence. This indicates that the hypothesis is situated within active research and practice in military strategy, particularly concerning the integration of intelligence and command and control in uncertain environments.
+The provided articles collectively underscore the critical importance of intelligence in military operations and the necessity of effective command and control (C2) systems. They highlight that misinterpreting intelligence can lead to catastrophic consequences, and that a clear national strategy and functional consumer-producer relationship are essential for actionable intelligence. Additionally, they emphasize that C2 is vital for coordinating military operations, ensuring that all facets of an operation adhere to each other, and that mission command is the preferred method for exercising C2 in complex and uncertain environments.

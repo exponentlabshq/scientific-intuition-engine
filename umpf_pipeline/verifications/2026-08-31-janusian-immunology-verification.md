@@ -13,7 +13,7 @@
 - `longitudinal studies on adaptive immunity`
 
 ## What was found
-Studies on waning immunity after vaccination, such as those on SARS-CoV-2 and measles, demonstrate both enduring and transient aspects of adaptive immune memory. For instance, a systematic review found that immunity against measles declined by 9.7% per year after the first vaccine dose and 4.8% per year after the second dose, indicating both stability and instability in immune responses. ([academic.oup.com](https://academic.oup.com/aje/article/192/8/1379/7080124?utm_source=openai))
+Studies have observed both rapid waning and sustained memory responses in adaptive immunity post-vaccination. For instance, research on SARS-CoV-2 mRNA vaccines indicates that while antibody levels decline over time, memory B and T cells persist, providing long-term protection. ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC9893859/?utm_source=openai)) Similarly, a study on BNT162b2 mRNA vaccination found that while cellular immune responses decrease, robust memory responses remain for at least several months. ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC9968837/?utm_source=openai))
 
 ## Reasoning
-The search revealed research on the dual nature of adaptive immune memory, with evidence of both stable and transient responses, aligning with the hypothesis's claim.
+These findings demonstrate that adaptive immune memory can be both stable and enduring, as well as unstable and transient, within the same immune response. This dual nature aligns with the proposed theory.

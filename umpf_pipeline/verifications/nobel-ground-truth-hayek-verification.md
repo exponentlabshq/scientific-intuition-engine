@@ -6,10 +6,10 @@
 ## Verdict: **ADJACENT_ACTIVE**
 
 ## Queries
-
+- `Hayek — Dispersed Knowledge Market Price Signals connection research`
 
 ## What was found
-Recent studies have explored Hayek's concept of dispersed knowledge and its relation to market price signals. For instance, a 2022 study titled 'Testing the Hayek hypothesis: Recent theoretical and experimental evidence' examines Hayek's ideas through theoretical and experimental lenses. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/35834566/?utm_source=openai)) Another 2023 paper, 'Optimal information disclosure and market outcomes,' discusses how improved information affects market prices and welfare, aligning with Hayek's views on decentralized information processing. ([onlinelibrary.wiley.com](https://onlinelibrary.wiley.com/doi/full/10.3982/TE5104?utm_source=openai)) Additionally, a 2023 article titled 'Dispersed Information and Asset Prices' analyzes how noisy aggregation of dispersed information can explain various return anomalies, resonating with Hayek's perspective on market price signals. ([economics.yale.edu](https://economics.yale.edu/research/dispersed-information-and-asset-prices?utm_source=openai))
+The Hayek hypothesis posits that market prices coordinate decentralized information, enabling gains from trade despite dispersed knowledge. Al-Ubaydli et al. (2022) provide theoretical and experimental support for this hypothesis, demonstrating that market experience increases realized gains from trade. ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC9282548/?utm_source=openai)) Lubashevskiy and Lubashevsky (2024) model a hierarchical supply mesomarket, illustrating Hayek's knowledge problem and the informational role of money flow. ([papers.ssrn.com](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4920533&utm_source=openai)) Hellwig and Venkateswaran (2024) examine how dispersed information and nominal rigidities affect monetary business cycles, highlighting the role of market prices in coordinating decentralized information. ([nber.org](https://www.nber.org/papers/w33215?utm_source=openai))
 
 ## Reasoning
-These studies directly engage with Hayek's ideas on dispersed knowledge and market price signals, indicating active research in this area. The presence of multiple recent publications suggests that the hypothesis is well-explored and not novel.
+The cited studies directly investigate the relationship between Hayek's concept of dispersed knowledge and the role of market price signals in coordinating decentralized information. They provide empirical and theoretical evidence supporting the claim that market prices effectively aggregate dispersed knowledge, facilitating efficient market coordination.

@@ -1,7 +1,7 @@
 # Verification: Janusian — Creative Idea Uncertainty
 
 **Verifies**: `hypotheses/2026-08-30-janusian-creative-idea-uncertainty.md`
-**Verified**: 2026-08-30 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
 ## Verdict: **ADJACENT_ACTIVE**
 
@@ -13,7 +13,7 @@
 - `Amabile creativity theory uncertainty`
 
 ## What was found
-The book 'Uncertainty: A Catalyst for Creativity, Learning and Development' explores the role of uncertainty in creativity, learning, and development. ([link.springer.com](https://link.springer.com/book/10.1007/978-3-030-98729-9?utm_source=openai)) The Uncertainty Driven Action (UDA) model unifies perspectives on design activity by focusing on uncertainty perception. ([cambridge.org](https://www.cambridge.org/core/journals/design-science/article/uncertainty-driven-action-uda-model-a-foundation-for-unifying-perspectives-on-design-activity/CDA79270F2C59AEDD7A1DDA4C51316F2?utm_source=openai)) Research indicates that self-uncertainty can enhance creative generation among individualists. ([journals.sagepub.com](https://journals.sagepub.com/doi/10.1177/0146167214535640?utm_source=openai))
+The book "Uncertainty: A Catalyst for Creativity, Learning and Development" explores the role of uncertainty in creativity, learning, and development. ([link.springer.com](https://link.springer.com/book/10.1007/978-3-030-98729-9?utm_source=openai)) The article "Creativity is motivated by novelty. Curiosity is triggered by uncertainty" discusses how uncertainty can trigger curiosity, which in turn motivates creativity. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/38770851/?utm_source=openai)) The study "A (Creative) Portrait of the Uncertain Individual" examines how self-uncertainty enhances creative generation among individualists. ([journals.sagepub.com](https://journals.sagepub.com/doi/10.1177/0146167214535640?utm_source=openai))
 
 ## Reasoning
-The search results reveal active research on the interplay between uncertainty and creativity, including theoretical frameworks and empirical studies. However, they do not provide a theory that explicitly posits both uncertainty and certainty as simultaneously true in the same creative process, nor do they predict creative outputs that are both innovative and structured. Therefore, the hypothesis is in the 'ADJACENT_ACTIVE' category, indicating that while related research exists, the specific claim has not been directly addressed.
+These sources provide evidence that uncertainty plays a significant role in fostering creativity, supporting the hypothesis that both uncertainty and certainty can coexist in the creative process.

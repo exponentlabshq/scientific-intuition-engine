@@ -1,9 +1,9 @@
 # Verification: Homospatial — Urban Planning ⊕ Informational Packet Buffer Management
 
 **Verifies**: `hypotheses/2026-08-29-homospatial-urban-planning-x-informational-packet-buffer-management.md`
-**Verified**: 2026-08-29 · **Method**: Tavily search + GPT-4o classification (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
-## Verdict: **ADJACENT_ACTIVE**
+## Verdict: **NO_SIGNAL**
 
 ## Queries
 - `Urban Dataflow Management framework`
@@ -13,7 +13,9 @@
 - `Network theory in urban planning`
 
 ## What was found
-The search results revealed active research in dataflow-based frameworks for urban analytics, such as the Curio and Urbanite projects (https://github.com/urban-toolkit/curio, https://github.com/urban-toolkit/urbanite/), which focus on collaborative urban visual analytics using dataflow principles. Additionally, there are studies on integrating IoT and data management in smart cities (https://doi.org/10.1051/e3sconf/202671801016/pdf, https://doi.org/10.1145/3716637), which align with the concept of using real-time data for urban planning.
+A Network Model for Urban Planning ([ideas.repec.org](https://ideas.repec.org/a/spr/joptap/v209y2026i1d10.1007_s10957-026-02949-9.html?utm_source=openai))
+Network Analysis of ‘Urban Systems’: Potential, Challenges, and Pitfalls ([onlinelibrary.wiley.com](https://onlinelibrary.wiley.com/doi/full/10.1111/tesg.12392?utm_source=openai))
+UrbanSim ([cloud.urbansim.com](https://cloud.urbansim.com/docs/general/documentation/urbansim.html?utm_source=openai))
 
 ## Reasoning
-The hypothesis suggests a novel integration of urban planning and data packet management principles to create a responsive urban environment. While the exact concept of 'Urban Dataflow Management' as described is not found, there is significant research activity in related areas such as dataflow frameworks for urban analytics and IoT-driven decision systems in smart cities. These areas are specifically relevant to the hypothesis, indicating active research near the proposed domains, but the exact connection remains unexplored, fitting the ADJACENT_ACTIVE category.
+The search results reveal research on integrating network theory into urban planning, such as the development of a network model for urban planning ([ideas.repec.org](https://ideas.repec.org/a/spr/joptap/v209y2026i1d10.1007_s10957-026-02949-9.html?utm_source=openai)) and the application of network analysis to urban systems ([onlinelibrary.wiley.com](https://onlinelibrary.wiley.com/doi/full/10.1111/tesg.12392?utm_source=openai)). Additionally, UrbanSim is a microsimulation land use model designed to analyze the effects of land use policies and infrastructure investments on urban development ([cloud.urbansim.com](https://cloud.urbansim.com/docs/general/documentation/urbansim.html?utm_source=openai)). However, there is no direct evidence of a system called 'Urban Dataflow Management' that integrates land use and data packet management principles.

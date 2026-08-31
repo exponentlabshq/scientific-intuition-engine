@@ -13,7 +13,7 @@
 - `Cognitive attention mechanisms in natural language processing`
 
 ## What was found
-A study titled "Bridging between Cognitive Processing Signals and Linguistic Features via a Unified Attentional Network" proposes a framework that maps cognitive processing signals to linguistic features using an attentional network. ([ojs.aaai.org](https://ojs.aaai.org/index.php/AAAI/article/view/19878?utm_source=openai))
+The paper "Bridging between Cognitive Processing Signals and Linguistic Features via a Unified Attentional Network" by Yuqi Ren and Deyi Xiong presents a framework that maps cognitive processing signals to linguistic features using a unified attentional network. ([ojs.aaai.org](https://ojs.aaai.org/index.php/AAAI/article/view/19878?utm_source=openai))
 
 ## Reasoning
-The study presents a framework that integrates cognitive processing signals with linguistic features through an attentional network, aligning with the concept of a Cognitive Linguistic Attention System (CLAS). This indicates active research in the area of combining cognitive attention mechanisms with linguistic processing.
+This framework aligns with the concept of integrating cognitive attention mechanisms with linguistic processing to enhance language understanding.

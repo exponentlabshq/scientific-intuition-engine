@@ -1,0 +1,14 @@
+# Adversarial Refutation: Janusian — Physics — optics — diffraction and interference patterns
+
+**Original**: `hypotheses/2026-08-31-janusian-physics.md`
+**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost
+
+## Tally: 0 of 3 survive → **REFUTED**
+
+- **Coherence — REFUTED.** The core claim relies on the term 'simultaneously' to assert that both wave and particle behaviors of light can coexist and produce observable phenomena. However, the claim does not clearly define what 'predictable diffraction patterns' and 'random fluctuations' mean in this context, leading to ambiguity. The two behaviors are often treated as context-dependent rather than as genuinely simultaneous occurrences, which suggests equivocation on the term 'simultaneously.' Therefore, I can identify two different referents: wave behavior leading to predictable patterns and particle behavior leading to randomness, which are not the same formal object. Thus, the claim does not survive this lens.
+- **Testability — REFUTED.** The core claim presents a falsifiable prediction regarding the simultaneous observation of predictable diffraction patterns and random fluctuations in intensity. However, it lacks a specific, named experiment or dataset that operationalizes this prediction. While wave-particle duality is a well-established concept, the claim does not provide a concrete metric, comparison condition, or rejection threshold that would allow for a clear experimental test of the hypothesis as stated. Therefore, it remains vague and does not meet the criteria for testability.
+- **Triviality — REFUTED.** The core claim states that both wave and particle behaviors of light must be true simultaneously, leading to observable phenomena that include predictable diffraction patterns and random fluctuations. When stripped of domain-specific vocabulary, the claim reduces to a general assertion about complex systems exhibiting dual behaviors that can lead to both predictable and unpredictable outcomes. This is a common characteristic of many complex systems, such as in various fields of science where dualities or competing behaviors coexist. Therefore, the claim is generic and does not present a novel insight. The exact phrase being tested for genericness is: 'both the wave behavior of light leading to predictable diffraction patterns and the particle behavior of light leading to unpredictability are true simultaneously for the same light wave.' This phrase is indeed broader and more generic than the specific claim, indicating triviality.
+
+## No steelman offered
+
+All three lenses independently converged on REFUTED for this case. If revisited, it would need a genuinely tighter formulation, not a restatement of the same claim.

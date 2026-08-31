@@ -1,7 +1,7 @@
 # Verification: Homospatial — Ecology ⊕ Creative Inspiration Variability
 
 **Verifies**: `hypotheses/2026-08-30-homospatial-ecology-x-creative-inspiration-variability.md`
-**Verified**: 2026-08-30 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
 ## Verdict: **ADJACENT_ACTIVE**
 
@@ -13,7 +13,7 @@
 - `creative inspiration variability and ecological systems`
 
 ## What was found
-The 'Creative Ecosystem Dynamics' concept aligns with existing frameworks that integrate ecological principles into creativity studies. For instance, the 'Creative Greenhouse' framework emphasizes designing environments that foster creative resilience, highlighting the role of environmental conditions in creative development. ([onlinelibrary.wiley.com](https://onlinelibrary.wiley.com/doi/10.1002/jocb.70130?utm_source=openai)) Additionally, the 'An Ecological Approach to Creativity in Making' paper discusses how creativity emerges through the continuous interaction between individuals and their environments, underscoring the dynamic nature of creative processes. ([sciencedirect.com](https://www.sciencedirect.com/science/article/pii/S0732118X17301265?utm_source=openai))
+An ecological approach to creativity in making ([sciencedirect.com](https://www.sciencedirect.com/science/article/pii/S0732118X17301265?utm_source=openai)), Creative Practices Embodied, Embedded, and Enacted in Architectural Settings: Toward an Ecological Model of Creativity ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/26779087/?utm_source=openai)), The Creative Greenhouse: A Systems-Ecological Framework for Designing Environments That Cultivate Creative Resilience ([onlinelibrary.wiley.com](https://onlinelibrary.wiley.com/doi/10.1002/jocb.70130?utm_source=openai))
 
 ## Reasoning
-The search results reveal that the 'Creative Ecosystem Dynamics' concept is closely related to existing frameworks that apply ecological models to creativity. These frameworks explore how environmental factors and interactions influence creative processes, supporting the hypothesis's core claim. Therefore, the hypothesis is classified as ADJACENT_ACTIVE, indicating that while the specific term may not be widely used, the underlying idea is actively explored in current research.
+The search results reveal frameworks that integrate ecological principles into creativity studies, such as the 'Creative Greenhouse' model, which emphasizes environmental factors in fostering creative resilience. These frameworks align with the concept of 'Creative Ecosystem Dynamics,' highlighting the interplay between generative inspiration and critical evaluation in a self-regulating system.

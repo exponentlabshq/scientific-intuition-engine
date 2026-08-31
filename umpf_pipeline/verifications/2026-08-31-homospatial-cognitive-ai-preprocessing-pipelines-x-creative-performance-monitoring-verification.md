@@ -13,7 +13,9 @@
 - `Adaptive creativity systems in AI`
 
 ## What was found
-The Dynamic Creativity Framework (DCF) offers a theoretical perspective on creativity, emphasizing its dynamic nature and the interplay between emotional and cognitive components in creative performance. ([doi.org](https://doi.org/10.1027/1016-9040/a000473?utm_source=openai)) Additionally, the Creativity Diamond framework outlines a process involving divergent and convergent thinking phases to aid creativity. ([mdpi.com](https://www.mdpi.com/2079-3200/10/4/73?utm_source=openai)) These frameworks align with the concept of 'Creative Data Dynamics,' focusing on the continuous evaluation and adaptation of creative outputs based on real-time insights.
+The Creativity Diamond—A Framework to Aid Creativity ([mdpi.com](https://www.mdpi.com/2079-3200/10/4/73?utm_source=openai))
+The Dynamic Creativity Framework: Theoretical and Empirical Investigations ([doi.org](https://doi.org/10.1027/1016-9040/a000473?utm_source=openai))
+Cognitive State Dynamics Model (ICSD): a state-based view of innovation ([isheainstitute.org](https://isheainstitute.org/en/work/cognitive-state-dynamics-model-icsd-a-state-based-view-of-innovation/?utm_source=openai))
 
 ## Reasoning
-The DCF and Creativity Diamond frameworks provide theoretical foundations that closely relate to the proposed 'Creative Data Dynamics' system, which processes input data while concurrently evaluating and adapting creative outputs based on real-time insights.
+The search results reveal frameworks that integrate cognitive processes with creative performance monitoring, such as the Creativity Diamond and the Dynamic Creativity Framework. These models emphasize the dynamic and adaptive nature of creativity, aligning with the concept of 'Creative Data Dynamics' as a system that processes input data while concurrently evaluating and adapting creative outputs based on real-time insights. Additionally, the Cognitive State Dynamics Model offers a state-based view of innovation, further supporting the idea of continuous refinement and optimization in creative environments.

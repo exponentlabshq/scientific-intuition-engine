@@ -13,7 +13,7 @@
 - `creative inspiration variability named theory OR framework OR researcher`
 
 ## What was found
-Studies indicate that team autonomy can influence creativity, but its impact varies. For instance, research suggests that while individual autonomy positively affects personal creativity, its effect on team creativity is less clear. Additionally, a study found that both high team member autonomy and high task interdependence can benefit team creativity, but an imbalance between the two can undermine this effect. ([papers.ssrn.com](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2896186&utm_source=openai))
+A study titled "Managing the trade-off between autonomy and task interdependence in creative teams: The role of organizational-level cultural control" examines how autonomy and task interdependence affect team creativity. The research indicates that while both high autonomy and high task interdependence can enhance team creativity, an increase in one can diminish the positive impact of the other. The authors suggest that organizational-level cultural control can help balance these factors to optimize creative performance. ([sciencedirect.com](https://www.sciencedirect.com/science/article/pii/S0361368222000149?utm_source=openai))
 
 ## Reasoning
-The search results reveal that while autonomy is linked to creativity, the relationship is complex and context-dependent. This suggests that the proposed mapping between organizational theory and creative inspiration variability is plausible but requires further empirical validation.
+This study provides evidence that autonomy influences team creativity, supporting the hypothesis that autonomy leads to variability in creative outcomes.

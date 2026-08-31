@@ -3,7 +3,7 @@
 **Verifies**: `hypotheses/2026-08-31-homospatial-cognitive-ai-attention-x-informational-software-version-control.md`
 **Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
-## Verdict: **ADJACENT_ACTIVE**
+## Verdict: **NO_SIGNAL**
 
 ## Queries
 - `Adaptive Attention Control System theory OR framework`
@@ -13,7 +13,7 @@
 - `Attention mechanisms in information management systems`
 
 ## What was found
-Adaptive Attention Adjustment (AAA) is a design pattern using closed-loop feedback to monitor attention and dynamically adjust interfaces or computational weighting. ([emergentmind.com](https://www.emergentmind.com/topics/adaptive-attention-adjustment-aaa?utm_source=openai)) CTX is a Cognitive Version Control System for AI agents, offering a persistent cognitive layer that transforms transient agent activities like chats and prompts into durable, versioned cognitive artifacts. ([mcpmarket.com](https://mcpmarket.com/server/ctx-2?utm_source=openai))
+1. 'An Adaptive View of Attentional Control' by Brian A. Anderson discusses attentional control mechanisms in cognitive science. 2. 'Adaptive Attention Gain Rule' from The Encyclopedia of Abstractions outlines a control rule for processing gain modulation. 3. 'CTX: AI Cognitive Version Control for Agent Reasoning & Memory' describes a cognitive version control system for AI agents.
 
 ## Reasoning
-While there is no direct reference to an 'Adaptive Attention Control System (AACS)' in the current literature, related concepts such as Adaptive Attention Adjustment (AAA) and cognitive version control systems like CTX are actively being researched. AAA focuses on dynamically adjusting attention mechanisms, and CTX provides structured version control for AI reasoning. These areas of research are adjacent to the proposed AACS, indicating active exploration in integrating attention mechanisms with version control in AI systems.
+The first two sources delve into attentional control mechanisms, while the third focuses on cognitive version control in AI agents. These areas are related but distinct, with no direct evidence supporting the specific integration proposed in the hypothesis.

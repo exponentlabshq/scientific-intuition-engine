@@ -1,7 +1,7 @@
 # Verification: Bisociation — Chemistry × Creative Album Production Orchestration
 
 **Verifies**: `hypotheses/2026-08-29-chemistry-x-creative-album-production-orchestration.md`
-**Verified**: 2026-08-29 · **Method**: Tavily search + GPT-4o classification (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
 ## Verdict: **ADJACENT_ACTIVE**
 
@@ -13,7 +13,7 @@
 - `collaborative creativity in album production OR music industry`
 
 ## What was found
-The search results revealed active research and creative exploration at the intersection of chemistry and music, particularly through the concept of molecular sonification and the use of music as a medium for representing molecular structures. Notable examples include 'Molecular Sonification for Molecule to Music Information Transfer' (https://chemrxiv.org/doi/pdf/10.26434/chemrxiv-2022-g7xkl) and 'Molecules to Music: Music as a Medium of Structure Representation in Chemistry' (https://graphite.ucsd.edu/2024/08/17/molecules-to-music-music-as-a-medium-of-structure-representation-in-chemistry-2).
+1. Researchers have explored translating molecular structures into musical compositions, enabling the conversion of protein structures into musical passages. ([news.mit.edu](https://news.mit.edu/2019/translating-proteins-music-0626?utm_source=openai)) 2. Studies have examined the principles and implementations of dissipative (dynamic) self-assembly, focusing on how isolated components can autonomously organize into ordered structures. ([pubs.acs.org](https://pubs.acs.org/doi/abs/10.1021/jp054153q?utm_source=openai)) 3. Research on self-assembly under continuous flow conditions highlights the ability to control the formation of complex molecular and nanoscale architectures, offering advantages in scalable production and precise regulation of size and morphology. ([pubs.rsc.org](https://pubs.rsc.org/en/content/articlehtml/2025/cc/d5cc01809a?utm_source=openai))
 
 ## Reasoning
-The hypothesis posits a mapping between chemistry and creative album production orchestration, focusing on structural and interactional parallels. The search results did not show an exact pre-existing mapping as proposed, but they did reveal active research in related areas, such as molecular sonification and the use of music to represent molecular structures. These findings indicate that there is specific, relevant research activity near the domains of chemistry and music production, supporting the hypothesis as ADJACENT_ACTIVE.
+The search results reveal interdisciplinary research that connects chemistry and music production. The translation of molecular structures into musical compositions demonstrates a direct mapping between chemical interactions and musical elements. Additionally, studies on self-assembly principles in chemistry, such as those under continuous flow conditions, provide insights into the organization and assembly processes that can be analogous to creative collaboration in music production. These findings suggest that the proposed mapping between chemistry and creative album production orchestration is supported by existing research.

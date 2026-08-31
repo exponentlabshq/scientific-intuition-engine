@@ -1,7 +1,7 @@
 # Verification: Janusian — Informational Sensor Networks
 
 **Verifies**: `hypotheses/2026-08-30-janusian-informational-sensor-networks.md`
-**Verified**: 2026-08-30 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
 ## Verdict: **ADJACENT_ACTIVE**
 
@@ -13,7 +13,13 @@
 - `informational sensor networks named theory OR framework OR researcher`
 
 ## What was found
-Research indicates that increasing sensor density can improve data accuracy by reducing the average distance between sensors and signal sources, thereby enhancing the signal-to-noise ratio (SNR). However, higher sensor density can also introduce challenges such as increased energy consumption, potential interference, and data redundancy, which may degrade data quality. Studies have explored the trade-offs between sensor density and data accuracy, highlighting the need for optimal sensor placement to balance coverage and data quality. Additionally, the impact of sensor overload on data quality has been examined, with findings suggesting that excessive sensor density can lead to network congestion and data inconsistencies. These insights align with the hypothesis that both increasing sensor quantity and decreasing data accuracy can occur simultaneously within the same network, leading to conflicting data interpretations.
+1. "A Survey on Data Quality for Dependable Monitoring in Wireless Sensor Networks" discusses how increasing sensor density can improve data accuracy but may also introduce noise, affecting data quality. ([mdpi.com](https://www.mdpi.com/1424-8220/17/9/2010?utm_source=openai))
+
+2. "Semantic Description of Quality of Data in Sensor Networks" highlights that higher sensor density can lead to data overload, potentially reducing data accuracy due to increased noise. ([mdpi.com](https://www.mdpi.com/1424-8220/21/19/6462?utm_source=openai))
+
+3. "On the Optimal Density for Real-Time Data Gathering of Spatio-Temporal Processes in Sensor Networks" examines the balance between sensor density and data accuracy, noting that excessive sensor density can lead to data redundancy and potential inaccuracies. ([researchgate.net](https://www.researchgate.net/publication/4149833_On_the_Optimal_Density_for_Real-Time_Data_Gathering_of_Spatio-Temporal_Processes_in_Sensor_Networks?utm_source=openai))
+
+4. "Aggregation in Sensor Networks: An Energy–Accuracy Trade-Off" explores how increasing sensor density can enhance data accuracy but may also lead to higher energy consumption and potential data overload. ([sciencedirect.com](https://www.sciencedirect.com/science/article/abs/pii/S157087050300009X?utm_source=openai))
 
 ## Reasoning
-The search results provide evidence of research examining the relationship between sensor density and data accuracy, as well as the challenges associated with sensor overload. This indicates that the hypothesis is situated within an active research area, with studies addressing the complexities of balancing sensor quantity and data quality in sensor networks.
+The cited sources provide evidence that increasing sensor density can simultaneously enhance data accuracy and introduce noise, leading to potential data overload and reduced accuracy. This supports the core claim that both effects must be considered in sensor network theory.

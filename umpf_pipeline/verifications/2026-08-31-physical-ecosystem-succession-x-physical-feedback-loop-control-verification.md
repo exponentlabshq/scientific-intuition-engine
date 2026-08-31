@@ -13,7 +13,13 @@
 - `Holling's Adaptive Cycle theory OR framework in ecological systems`
 
 ## What was found
-Research indicates that feedback loops are integral to ecological succession, driving changes in plant communities following disturbances. These loops involve interactions between species and their environment, leading to shifts in species composition over time. ([onlinelibrary.wiley.com](https://onlinelibrary.wiley.com/doi/full/10.1111/brv.13051?utm_source=openai)) Additionally, studies on system stability in ecological models highlight the role of feedback cycles in determining community stability. ([usgs.gov](https://www.usgs.gov/publications/sensitivity-system-stability-model-structure?utm_source=openai)) While these findings suggest parallels between ecological succession and feedback control systems, a direct mapping between the two domains has not been explicitly established.
+The study "Feedback loops drive ecological succession: towards a unified conceptual framework" discusses how plant-environment feedback dynamics drive directional changes in plant communities following disturbances. ([onlinelibrary.wiley.com](https://onlinelibrary.wiley.com/doi/full/10.1111/brv.13051?utm_source=openai))
+
+The article "Sensitivity of system stability to model structure" examines how feedback cycles within ecological communities influence their stability. ([pubs.usgs.gov](https://pubs.usgs.gov/publication/70034744?utm_source=openai))
+
+The paper "Distributed delays stabilize ecological feedback systems" explores how distributed delays in predator-prey models can enhance the stability of ecological systems. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/15904194/?utm_source=openai))
+
+The research "Factors contributing to chaos in population feedback systems" investigates how nonlinear interactions and delayed feedback can lead to chaotic dynamics in ecological systems. ([sciencedirect.com](https://www.sciencedirect.com/science/article/pii/030438009090072O?utm_source=openai))
 
 ## Reasoning
-The search results reveal active research on feedback loops in ecological succession and their impact on system stability. However, they do not provide evidence of a direct mapping between ecological succession and feedback control systems, indicating that the proposed hypothesis is in the 'ADJACENT_ACTIVE' category.
+The cited studies provide insights into how feedback loops and system structures influence the stability and dynamics of ecological communities, aligning with the proposed mapping between ecological succession and feedback control systems.

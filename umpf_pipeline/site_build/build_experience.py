@@ -491,10 +491,27 @@ footer.foot {
   }
 
   function computeStats() {
+    // 2026-08-31: "refuted" was checking e.verdict for a literal "refuted"
+    // value that can never occur there -- verdict is always one of Phase 2's
+    // four canonical buckets (adjacent_active/collision/no_signal/
+    // fact_check_fail). Whether a claim was actually refuted lives in the
+    // tier system instead: tier_rank 4 ("Contested") is a real 1-of-3
+    // refutation near-miss, still a REFUTED overall verdict; tier_rank 5
+    // ("Refuted / Rejected") covers the rest of the definitive negative
+    // outcomes. This tile was structurally guaranteed to read 0 regardless
+    // of how many real refutations existed -- confirmed live: real count is
+    // ~300, not 0. "pending_verification" is a separate, smaller gap: the
+    // real PENDING_VERIFICATION ledger entries aren't exported into this
+    // page's data at all (assemble_experience_data.py excludes them
+    // upstream), so there is nothing in DATA for this tile to count --
+    // left at 0 here deliberately rather than faking a client-side fix for
+    // a source-data gap; see whitepaper Limitations.
     var counts = { total: DATA.length, adjacent_active: 0, collision: 0, refuted: 0, pending_verification: 0 };
     DATA.forEach(function (e) {
       var v = (e.verdict || '').toLowerCase();
-      if (counts.hasOwnProperty(v)) counts[v]++;
+      if (v === 'adjacent_active') counts.adjacent_active++;
+      else if (v === 'collision') counts.collision++;
+      if (e.tier_rank === 4 || e.tier_rank === 5) counts.refuted++;
     });
     return counts;
   }

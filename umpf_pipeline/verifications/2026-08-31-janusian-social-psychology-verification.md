@@ -13,7 +13,13 @@
 - `Cialdini principles of influence`
 
 ## What was found
-Research on social psychology has extensively examined the interplay between conformity and resistance to group norms. Solomon Asch's experiments demonstrated that individuals often conform to group judgments, even when they are incorrect, due to normative social influence—the desire to fit in and avoid rejection. Conversely, Irving Janis's theory of groupthink highlights how cohesive groups may suppress dissent to maintain harmony, leading to poor decision-making. Studies have also explored the dynamics of conformity and nonconformity in opinion formation, revealing that individuals can simultaneously conform to group norms while resisting them, resulting in complex group behaviors. ([cognitivepsychology.com](https://www.cognitivepsychology.com/Asch_Conformity_Experiment?utm_source=openai))
+1. **Asch Conformity Experiments**: Solomon Asch's studies demonstrated that individuals often conform to group norms, even when they conflict with personal beliefs. ([simplypsychology.org](https://www.simplypsychology.org/asch-conformity.html?utm_source=openai))
+
+2. **Social Influence: Compliance and Conformity**: Cialdini and Goldstein's review discusses how social influence processes, including conformity, operate subtly and outside of awareness. ([doi.org](https://doi.org/10.1146/annurev.psych.55.090902.142015?utm_source=openai))
+
+3. **Social Conformity Despite Individual Preferences for Distinctiveness**: Smaldino and Epstein's study shows that individuals seeking distinctiveness can still lead to complete social conformity. ([arxiv.org](https://arxiv.org/abs/1407.7908?utm_source=openai))
+
+4. **Social Influences in Opinion Dynamics: the Role of Conformity**: Javarone's research models how conformity and nonconformity affect opinion dynamics in social networks. ([arxiv.org](https://arxiv.org/abs/1401.0839?utm_source=openai))
 
 ## Reasoning
-The search results indicate that existing research addresses the simultaneous occurrence of conformity and resistance to group norms, aligning with the hypothesis's core claim. This suggests that the proposed theory is not novel but rather an extension of current understanding in social psychology.
+The search results provide evidence of both conformity to group norms and individual resistance to those norms. Asch's experiments illustrate conformity, while Smaldino and Epstein's study shows that individuals seeking distinctiveness can still conform. Javarone's research models the interplay between conformity and nonconformity in social networks, supporting the hypothesis that individuals can simultaneously conform and resist group norms.

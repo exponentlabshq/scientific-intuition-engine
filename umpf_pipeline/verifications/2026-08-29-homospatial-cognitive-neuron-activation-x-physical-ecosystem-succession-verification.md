@@ -1,7 +1,7 @@
 # Verification: Homospatial — Cognitive Neuron Activation ⊕ Physical Ecosystem Succession
 
 **Verifies**: `hypotheses/2026-08-29-homospatial-cognitive-neuron-activation-x-physical-ecosystem-succession.md`
-**Verified**: 2026-08-29 · **Method**: Tavily search + GPT-4o classification (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
 ## Verdict: **ADJACENT_ACTIVE**
 
@@ -13,7 +13,9 @@
 - `neural networks ecological models`
 
 ## What was found
-The search results revealed active research in cognitive ecology and neuroecology, which integrate cognitive processes with ecological principles. For example, the Wikipedia entry on Cognitive Ecology (https://en.wikipedia.org/wiki/Cognitive_ecology) discusses the integration of cognitive phenomena with ecological contexts, and the article 'Integrating cognitive ecology and social neuroscience' (https://sites.utexas.edu/evoneuro/wp-content/uploads/sites/5940/2024/12/wallace_etal_2021_curr_opi_neurobio.pdf) highlights ongoing integration efforts between cognitive ecology and social neuroscience.
+The Axioms of Noo-Ecology: A Unified Framework for Cognitive, Social, and Civilizational Dynamics by Guorui He ([papers.ssrn.com](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5747483&utm_source=openai))
+Beyond neurons and spikes: cognon, the hierarchical dynamical unit of thought ([link.springer.com](https://link.springer.com/article/10.1007/s11571-023-09987-3?utm_source=openai))
+Neural hierarchical models of ecological populations ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/31970895/?utm_source=openai))
 
 ## Reasoning
-The hypothesis proposes a novel integration of cognitive processes and ecological succession into a framework called Cognitive Ecosystem Dynamics. While no exact match for this framework was found, there is significant research activity in related areas such as cognitive ecology and neuroecology, which explore similar integrations of cognition and ecological principles. These fields are specifically relevant as they bridge cognitive processes with ecological contexts, indicating fertile ground for further exploration of the proposed hypothesis.
+The Axioms of Noo-Ecology presents a unified framework for understanding complex systems, including cognitive and ecological dynamics. The concept of 'cognon' introduces a hierarchical dynamical unit of thought, which may relate to the proposed 'Cognitive Ecosystem Dynamics.' Additionally, neural hierarchical models have been applied to ecological populations, suggesting parallels between neural activation patterns and ecological succession.

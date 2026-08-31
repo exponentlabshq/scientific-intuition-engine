@@ -1,7 +1,7 @@
 # Verification: Homospatial — Supply Chain Logistics ⊕ Cryptography
 
 **Verifies**: `hypotheses/2026-08-30-homospatial-supply-chain-logistics-x-cryptography.md`
-**Verified**: 2026-08-30 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
 ## Verdict: **ADJACENT_ACTIVE**
 
@@ -13,7 +13,14 @@
 - `supply chain confidentiality techniques`
 
 ## What was found
-CPHAR is a protocol that uses cryptographic seals and hardware attestation to provide tamper-evident proof of physical reserves, ensuring the integrity of inventory without revealing specific contents. ([cphar.org](https://cphar.org/?utm_source=openai)) TraceChain offers a verifiable data layer for supply chains, utilizing cryptographic proofs to ensure data integrity without exposing sensitive information. ([tracechain.ca](https://tracechain.ca/?utm_source=openai)) A recent IEEE paper discusses a zk-Rollup-based privacy-preserving identity and transaction verification system that leverages Zero-Knowledge Proofs to ensure trust without revealing confidential data. ([doi.org](https://doi.org/10.1109/ICCCT63501.2025.11019766?utm_source=openai))
+CPHAR — Cryptographic Proof of Hardware-Attested Reserves
+([cphar.org](https://cphar.org/?utm_source=openai))
+
+TraceChain - Blockchain-Powered Supply Chain Transparency
+([tracechain.ca](https://tracechain.ca/?utm_source=openai))
+
+Supply Chain Assurance
+([iridia.com](https://www.iridia.com/?utm_source=openai))
 
 ## Reasoning
-The search results reveal active research and applications in integrating cryptographic techniques, particularly zero-knowledge proofs, into supply chain logistics to enhance confidentiality and integrity. These developments align with the proposed concept of Confidential Supply Verification (CSV), indicating that the hypothesis is situated within an active and relevant research area.
+The search results reveal existing frameworks and protocols that integrate cryptographic techniques into supply chain logistics to ensure confidentiality and integrity. CPHAR provides cryptographic proof of hardware-attested reserves, TraceChain offers blockchain-powered supply chain transparency, and Supply Chain Assurance focuses on end-to-end supply chain security. These solutions align with the concept of Confidential Supply Verification (CSV), which aims to authenticate inventory readiness without disclosing specific contents or quantities.

@@ -13,7 +13,9 @@
 - `linguistic corpora in translation accuracy`
 
 ## What was found
-Studies on translation ambiguity and accuracy, such as "Translation ambiguity in and out of context" (Applied Psycholinguistics, 2010) and "Determinants of translation ambiguity: A within and cross-language comparison" (Linguistic Approaches to Bilingualism, 2016), explore how context and language-specific factors influence translation outcomes, leading to both precise meanings and inherent ambiguities in translated texts.
+Translation ambiguity in and out of context ([cambridge.org](https://www.cambridge.org/core/journals/applied-psycholinguistics/article/abs/translation-ambiguity-in-and-out-of-context/869B908588BAA77B197161FA6E78EA9C?utm_source=openai))
+Translation semantic variability: How semantic relatedness affects learning of translation-ambiguous words ([cambridge.org](https://www.cambridge.org/core/journals/bilingualism-language-and-cognition/article/abs/translation-semantic-variability-how-semantic-relatedness-affects-learning-of-translationambiguous-words/6B10059E0691BC47483C486994F34518?utm_source=openai))
+Determinants of translation ambiguity: A within and cross-language comparison ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/27882188/?utm_source=openai))
 
 ## Reasoning
-The search results reveal active research on translation ambiguity and accuracy, indicating that the hypothesis is situated within an active research area. However, the exact functor proposed in the hypothesis has not been explicitly addressed in the existing literature, suggesting that the hypothesis is novel and worth investigating.
+The provided sources discuss the prevalence and causes of translation ambiguity, including semantic variability and factors influencing translation accuracy. They also explore how these ambiguities affect language processing and learning. This aligns with the hypothesis that translation can be both accurate and inaccurate simultaneously, leading to texts that reveal both precise meanings and inherent ambiguities.

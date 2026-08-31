@@ -3,7 +3,7 @@
 **Verifies**: `hypotheses/2026-08-31-homospatial-geology-x-epidemiology.md`
 **Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
-## Verdict: **ADJACENT_ACTIVE**
+## Verdict: **NO_SIGNAL**
 
 ## Queries
 - `Immuno-stratigraphy framework`
@@ -13,7 +13,11 @@
 - `geology and epidemiology fusion framework`
 
 ## What was found
-The 'Immune Architecture' framework presents a layered model of immune function, emphasizing tissue surveillance, recruitment, and adaptive immunity. ([immunearchitecture.com](https://www.immunearchitecture.com/?utm_source=openai)) Additionally, the 'Immuno-epidemiological model of two-stage epidemic growth' explores how varying immune responses influence epidemic dynamics. ([arxiv.org](https://arxiv.org/abs/2003.14152?utm_source=openai))
+The 'Immune Architecture' framework presents a layered model of immune function, comprising distinct layers that reflect the evolutionary development of immune responses. ([immunearchitecture.com](https://www.immunearchitecture.com/?utm_source=openai)) This model emphasizes the sequential activation of immune layers, from innate tissue regulation to adaptive immunity. While this framework offers a structured representation of immune responses, it does not specifically address community immunity or herd immunity thresholds.
+
+In the field of epidemiology, herd immunity thresholds are critical for understanding the level of immunity required within a population to prevent disease spread. However, there is no established framework that directly correlates sedimentary layering concepts with epidemiological models of herd immunity.
+
+The proposed concept of 'Immuno-stratigraphy'—a structured representation of community immunity with distinct layers indicating specific immunity levels—does not appear to be a recognized or established framework in the current scientific literature.
 
 ## Reasoning
-While these frameworks incorporate layered structures to describe immune responses and their impact on disease spread, they do not specifically define 'Immuno-stratigraphy' as a structured representation of community immunity with distinct layers indicating specific immunity levels. Therefore, the concept of Immuno-stratigraphy remains an active area for further research and development.
+The 'Immune Architecture' framework provides a layered model of immune function but does not specifically address community immunity or herd immunity thresholds. There is no established framework that directly correlates sedimentary layering concepts with epidemiological models of herd immunity. The proposed 'Immuno-stratigraphy' concept does not appear in the current scientific literature.

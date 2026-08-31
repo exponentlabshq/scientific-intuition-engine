@@ -1,7 +1,7 @@
 # Verification: Homospatial — Neuroscience ⊕ Law
 
 **Verifies**: `hypotheses/2026-08-29-homospatial-neuroscience-x-law.md`
-**Verified**: 2026-08-29 · **Method**: Tavily search + GPT-4o classification (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
 ## Verdict: **ADJACENT_ACTIVE**
 
@@ -13,7 +13,7 @@
 - `neural efficiency and legal clarity`
 
 ## What was found
-The search results revealed active research in 'Proactive Contract Theory' which involves preventive and promotive dimensions in contracts (sources [1], [2], [3]). Additionally, there is research on 'iterative refinement' in legal contracts, which aligns with the concept of systematically refining contracts (sources [6], [7], [8]). Furthermore, there is exploration of the intersection between neuroscience and law, which could provide a novel perspective on contract law (sources [11], [12], [13]).
+The term "Prunactive Contracts" does not appear in existing literature. However, the concept of iterative refinement in contract drafting is well-established. Legal professionals often engage in successive revisions to enhance clarity and precision in contract language. For instance, an article from the American Bar Association discusses how iterative refinement uses successive drafts to sharpen language and close gaps. ([americanbar.org](https://www.americanbar.org/groups/real_property_trust_estate/resources/probate-property/2026-july-august/becoming-director-artificial-intelligence-through-prompt-engineering/?utm_source=openai)) Additionally, the book "The Moral Conflict of Law and Neuroscience" explores the intersection of neuroscience and contract law, examining how neuroscientific insights can inform contract theory. ([doi.org](https://doi.org/10.7208/chicago/9780226513676.003.0007?utm_source=openai))
 
 ## Reasoning
-The hypothesis of 'Prunactive Contracts' as a self-optimizing legal agreement system is not directly found in the search results. However, there is relevant research activity in 'Proactive Contract Theory' and 'iterative refinement' in legal contracts, which are closely related to the idea of refining and optimizing contracts. Additionally, the intersection of neuroscience and law provides a fertile ground for novel approaches to legal agreements. These findings indicate that while the exact concept of 'Prunactive Contracts' is not established, there is active research in adjacent areas that could support the development of such a concept.
+While "Prunactive Contracts" is not a recognized term, the principles of iterative refinement in contract drafting and the application of neuroscience to contract law theory are well-documented. These concepts align with the core claim of Prunactive Contracts as self-optimizing legal agreements that evolve for efficiency and precision.

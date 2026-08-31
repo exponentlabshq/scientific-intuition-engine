@@ -1,7 +1,7 @@
 # Verification: Bisociation — Education (Information & Intelligence Systems) × Human Meeting Participation
 
 **Verifies**: `hypotheses/2026-08-30-education-x-human-meeting-participation.md`
-**Verified**: 2026-08-30 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
 ## Verdict: **ADJACENT_ACTIVE**
 
@@ -13,7 +13,7 @@
 - `adaptive learning theory" OR "real-time feedback theory" OR "David Kolb`
 
 ## What was found
-Real-time feedback tools like Decisions and PulseRoom enhance meeting effectiveness by capturing live inputs and providing instant insights, leading to improved decision-making outcomes. In education, real-time feedback methods, such as adaptive polls and surveys, are utilized to assess student engagement and participation, facilitating immediate adjustments to teaching strategies. Research indicates that real-time feedback based on nonverbal cues can positively influence social dynamics in small group meetings, enhancing participant engagement and satisfaction. Additionally, studies on real-time decision intelligence in meetings demonstrate that providing data-driven insights during discussions can improve decision quality and speed. These findings suggest that integrating real-time feedback mechanisms in both educational settings and human meetings can lead to more effective engagement and decision-making processes.
+Real-time feedback in meetings enhances decision-making outcomes by capturing live input, visualizing alignment, and providing decision artifacts. ([pulseroom.app](https://pulseroom.app/?utm_source=openai)) Tools like Wooclap and StageTools facilitate real-time engagement and documentation, improving meeting effectiveness. ([wooclap.com](https://wooclap.com/en/meetings/?utm_source=openai)) Research indicates that real-time feedback based on multimodal cues can positively influence social dynamics in small group meetings. ([research.tue.nl](https://research.tue.nl/en/publications/real-time-feedback-based-on-multimodal-cues-to-enhance-social-dyn/?utm_source=openai))
 
 ## Reasoning
-The search results reveal active research and applications in both education and human meeting participation that utilize real-time feedback to enhance engagement and decision-making. This indicates that the proposed mapping between educational assessment methods and meeting participation dynamics is supported by current developments in both domains.
+The search results provide evidence that real-time feedback mechanisms in meetings can improve decision-making outcomes by capturing live input, visualizing alignment, and providing decision artifacts. Tools like Wooclap and StageTools facilitate real-time engagement and documentation, enhancing meeting effectiveness. Additionally, research indicates that real-time feedback based on multimodal cues can positively influence social dynamics in small group meetings.

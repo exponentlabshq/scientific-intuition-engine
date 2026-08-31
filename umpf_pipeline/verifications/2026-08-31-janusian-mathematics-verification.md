@@ -13,7 +13,9 @@
 - `knot theory invariants limitations`
 
 ## What was found
-Knot invariants are mathematical properties that remain unchanged under ambient isotopy, serving as tools to distinguish different knots. ([mathworld.wolfram.com](https://mathworld.wolfram.com/KnotInvariant.html?utm_source=openai)) Vaughan Jones introduced the Jones polynomial, a significant knot invariant, which has been instrumental in advancing knot theory. ([en.wikipedia.org](https://en.wikipedia.org/wiki/Vaughan_Jones?utm_source=openai)) However, no single knot invariant can uniquely classify all knots, as different knots can share the same invariant values. ([fiveable.me](https://fiveable.me/knot-theory/unit-3/concept-knot-invariants/study-guide/8EbOsTnpHQVNPH8D?utm_source=openai))
+Knot Invariant -- from Wolfram MathWorld ([mathworld.wolfram.com](https://mathworld.wolfram.com/KnotInvariant.html?utm_source=openai))
+Knot Theory | JSTOR ([jstor.org](https://www.jstor.org/stable/10.4169/j.ctt5hh90k?utm_source=openai))
+Knot invariant explained ([everything.explained.today](https://everything.explained.today/Knot_invariant/?utm_source=openai))
 
 ## Reasoning
-The search results confirm that knot invariants are used to classify knots, but no single invariant can uniquely identify all knots, as different knots can share the same invariant values. This aligns with the core claim that both the classification of a specific knot by its invariants and the existence of different knots sharing those same invariant values are true simultaneously. The theory must contain both aspects, as demonstrated by the limitations of individual invariants in distinguishing all knots.
+Knot invariants are mathematical properties that remain unchanged under ambient isotopy, serving as tools to distinguish different knots. However, no single invariant can uniquely classify all knots, as some distinct knots may share identical invariant values. This phenomenon indicates that while knot invariants are essential for classification, they have limitations in distinguishing all knots.

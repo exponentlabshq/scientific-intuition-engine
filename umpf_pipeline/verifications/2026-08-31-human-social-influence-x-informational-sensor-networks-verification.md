@@ -13,7 +13,9 @@
 - `social influence named theory OR framework OR researcher`
 
 ## What was found
-Research on collective behavior in social networks and sensor networks reveals structural similarities. Studies on social influence dynamics in networks, such as those by Harris et al. (2013), explore how individual behaviors propagate through interconnected nodes, leading to collective outcomes. Similarly, research by Pei et al. (2015) investigates the use of excitable sensor networks to detect and influence spreading behaviors, highlighting the role of sensor interactions in monitoring and controlling network-wide phenomena. These studies suggest that both human social networks and sensor networks exhibit dynamics where individual components influence collective behavior through shared communication mechanisms.
+Influence Dynamics in Social Networks ([nature.com](https://www.nature.com/nature-index/topics/l4/influence-dynamics-in-social-networks?utm_source=openai))
+Cooperative Behavior Cascades in Human Social Networks ([doi.org](https://doi.org/10.1073/pnas.0913149107?utm_source=openai))
+Detecting the Influence of Spreading in Social Networks with Excitable Sensor Networks ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/25950181/?utm_source=openai))
 
 ## Reasoning
-The search results indicate active research in both human social networks and sensor networks, focusing on how individual components influence collective behavior through shared communication mechanisms. This aligns with the proposed mapping in the hypothesis, suggesting that the functor holds and the hypothesis is in the ADJACENT_ACTIVE category.
+The search results reveal active research in both human social influence and informational sensor networks. Studies on influence dynamics in social networks and cooperative behavior cascades highlight how individual actions can collectively influence group behavior. Additionally, research on excitable sensor networks demonstrates how sensor communications can detect and influence spreading behaviors within networks. These findings suggest that the proposed mapping between human social influence and informational sensor networks is supported by current research.

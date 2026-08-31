@@ -1,7 +1,7 @@
 # Verification: Homospatial — Urban Planning ⊕ Architecture (Creative & Performance Systems)
 
 **Verifies**: `hypotheses/2026-08-30-homospatial-urban-planning-x-architecture.md`
-**Verified**: 2026-08-30 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
 ## Verdict: **ADJACENT_ACTIVE**
 
@@ -13,7 +13,7 @@
 - `urban planning efficiency in architectural design`
 
 ## What was found
-The 'Urban Nexus' framework integrates energy, water, food, and waste systems to enhance urban sustainability. ([sciencedirect.com](https://www.sciencedirect.com/science/article/pii/B9780081020746000322?utm_source=openai)) The 'City as the Nexus' model examines the interplay between state, market, societal, and geospatial factors in urban development. ([sciencedirect.com](https://www.sciencedirect.com/science/article/abs/pii/S026427511530010X?utm_source=openai)) Adaptive urban planning frameworks aim to balance city-wide infrastructure needs with localized demographic preferences. ([arxiv.org](https://arxiv.org/abs/2412.15349?utm_source=openai))
+The 'Urban Nexus' framework integrates urban planning with other sectors like energy, water, food, and waste to enhance resource efficiency and sustainability. ([sciencedirect.com](https://www.sciencedirect.com/science/article/pii/B9780081020746000322?utm_source=openai)) The 'City as the Nexus' model examines how state, market, societal, and geospatial factors shape urban development. ([sciencedirect.com](https://www.sciencedirect.com/science/article/abs/pii/S026427511530010X?utm_source=openai)) Integrated urban planning emphasizes collaborative management processes to create more equitable, sustainable, and efficient cities. ([shiftcities.org](https://www.shiftcities.org/topic/integrated-urban-planning?utm_source=openai))
 
 ## Reasoning
-While the 'Urban Architecture Nexus' is not an established term, existing frameworks like the 'Urban Nexus' and 'City as the Nexus' models address the integration of various urban systems and factors, aligning with the core claim of integrating urban planning and architectural processes into a cohesive operational system.
+The search results reveal frameworks and models that integrate urban planning with other sectors, aligning with the core claim of the 'Urban Architecture Nexus' as a cohesive system combining urban planning and architectural processes.

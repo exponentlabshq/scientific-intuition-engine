@@ -1,7 +1,7 @@
 # Verification: Janusian — Culinary Arts (Creative & Performance Systems)
 
 **Verifies**: `hypotheses/2026-08-29-janusian-culinary-arts.md`
-**Verified**: 2026-08-29 · **Method**: Tavily search + GPT-4o classification (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
 ## Verdict: **ADJACENT_ACTIVE**
 
@@ -13,7 +13,13 @@
 - `Perception of quality in dishes prepared with strict recipes versus creative methods`
 
 ## What was found
-The search results revealed active discussions and research on the balance between recipe adherence and improvisation in culinary arts, such as the importance of improvisation in culinary education (source 1), the role of improvisation in enhancing creativity (source 5), and the impact of creativity on restaurant success (source 8). However, no specific study directly addressed the hypothesis that both adherence and improvisation simultaneously affect dish quality based on diner expectations and context.
+A study titled "Culinary Creativity Under Pressure: A Narrative Review of Its Possibilities and Pitfalls" discusses the balance between novelty and utility in culinary creativity, emphasizing the importance of both adherence to recipes and improvisation. ([doi.org](https://doi.org/10.1016/j.ijgfs.2026.101451?utm_source=openai))
+
+Another article, "Creativity and Innovation in the Restaurant Sector: Supply-Side Processes and Barriers to Implementation," examines how restaurants implement innovations, including the integration of creativity and adherence to traditional methods. ([sciencedirect.com](https://www.sciencedirect.com/science/article/pii/S2211973619300406?utm_source=openai))
+
+Additionally, "The Formulation and Evaluation of Culinary Success Factors (CSFs) That Determine the Palatability of Food" identifies key factors influencing dish palatability, such as the balance of flavor components and the presence of umami, which can be affected by both strict recipe adherence and creative improvisation. ([onlinelibrary.wiley.com](https://onlinelibrary.wiley.com/doi/full/10.1111/j.1471-5740.2004.00097.x?utm_source=openai))
+
+These sources collectively suggest that the interplay between strict recipe adherence and creative improvisation significantly influences a dish's perceived quality, aligning with the core claim that both factors simultaneously impact the dining experience.
 
 ## Reasoning
-The hypothesis posits a dual influence of recipe adherence and improvisation on dish quality, contingent on diner expectations and context. While the search results show active research on the individual roles of recipe adherence and improvisation, as well as the importance of creativity in culinary success, they do not directly address the simultaneous influence of both factors as proposed. This indicates that the hypothesis is in a fertile area with relevant research activity but remains untested in its specific form, thus fitting the ADJACENT_ACTIVE category.
+The cited studies provide evidence that both strict adherence to recipes and creative improvisation play crucial roles in determining a dish's quality. This supports the core claim that the perceived quality of a dish is influenced by the interplay between these two factors.

@@ -13,7 +13,13 @@
 - `climate models named theory OR framework OR researcher`
 
 ## What was found
-Studies have identified limitations in climate models, such as their inability to fully replicate observed atmospheric variability and challenges in simulating recent multi-decadal changes in surface temperature. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/12097020/?utm_source=openai)) Additionally, a 'signal-to-noise paradox' has been observed, where models show higher correlation with observed variability than expected from their low signal-to-noise ratios. ([nature.com](https://www.nature.com/articles/s41612-018-0038-4?utm_source=openai)) These findings suggest that while climate models are valuable tools, they have inherent uncertainties and may not always provide consistent predictions across different scenarios.
+A study published in *Nature Climate and Atmospheric Science* discusses a 'signal-to-noise paradox' in climate science, highlighting inconsistencies between the low strength of predictable signals in climate models and the relatively high level of agreement they exhibit with observed atmospheric variability. ([nature.com](https://www.nature.com/articles/s41612-018-0038-4?utm_source=openai))
+
+An article from *The Atlantic* examines how climate models struggle to predict local and extreme climate impacts, noting that while global models capture general warming trends, specific phenomena like intense heatwaves are outpacing model expectations. ([theatlantic.com](https://www.theatlantic.com/science/archive/2025/01/climate-models-earth/681207/?utm_source=openai))
+
+A report from *Live Science* reveals that climate models significantly underestimate Earth's energy imbalance—the difference between solar energy absorbed by the planet and the energy radiated back into space—suggesting that models are missing key components, such as accurate representations of cloud-aerosol interactions. ([livescience.com](https://www.livescience.com/planet-earth/climate-change/earths-energy-imbalance-is-much-more-extreme-than-climate-models-show-but-scientists-arent-sure-why?utm_source=openai))
+
+An article from *Le Monde* discusses the critical yet enigmatic role of clouds in climate change, noting that while low-level clouds reflect sunlight and cool the Earth, high clouds like cirrus contribute to warming by trapping heat. ([lemonde.fr](https://www.lemonde.fr/en/environment/article/2025/05/06/a-key-and-enigmatic-player-in-global-warming-clouds_6740982_114.html?utm_source=openai))
 
 ## Reasoning
-The search results reveal active research addressing the limitations and uncertainties inherent in climate models, indicating that the hypothesis is situated within an active and relevant research area.
+The sources provide evidence of inconsistencies and limitations in climate models, such as the 'signal-to-noise paradox' and underestimation of Earth's energy imbalance, which align with the hypothesis's claim that climate models can simultaneously provide valid and invalid predictions for the same instance.

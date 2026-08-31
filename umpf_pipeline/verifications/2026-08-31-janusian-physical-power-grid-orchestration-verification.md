@@ -13,7 +13,13 @@
 - `power grid orchestration theories OR frameworks`
 
 ## What was found
-Research on hybrid AC/DC microgrid control systems, such as the study 'Hybrid AC/DC Microgrid Control and Management Systems' published in Nature Index, discusses integrating both centralized and decentralized control strategies to enhance stability and reliability. The paper outlines hierarchical control structures comprising primary, secondary, and tertiary layers, each employing different control methods to manage energy flows and system stability. Additionally, the article 'A Taxonomy of Robust Control Techniques for Hybrid AC/DC Microgrids' in MDPI reviews various control techniques, including both centralized and decentralized approaches, highlighting their roles in maintaining system stability and reliability. These findings suggest that hybrid control systems, combining centralized and decentralized methods, are actively researched to improve power grid performance, aligning with the hypothesis that such systems can enhance stability and reliability metrics compared to single-approach systems.
+1. Ahlqvist, V., Holmberg, P., & Tangerås, T. (2022). A survey comparing centralized and decentralized electricity markets. *Energy Strategy Reviews*, 40, 100812.
+
+2. Meegahapola, L., Bu, S., & Gu, M. (2022). Hybrid AC/DC Power Grids: Stability and Control Aspects. Springer Nature.
+
+3. Schäfer, B., Grabow, C., Auer, S., et al. (2015). Taming Instabilities in Power Grid Networks by Decentralized Control. *arXiv preprint*.
+
+4. Hines, P. D. H., Blumsack, S., & Schläpfer, M. (2015). Centralized versus Decentralized Infrastructure Networks. *arXiv preprint*.
 
 ## Reasoning
-The search results reveal active research into hybrid control systems that integrate both centralized and decentralized strategies to improve power grid stability and reliability. This aligns with the hypothesis's claim that implementing a hybrid control system will demonstrate improved metrics compared to systems relying solely on one approach.
+The search results provide insights into the interplay between centralized and decentralized control systems in power grids. Ahlqvist et al. (2022) compare centralized and decentralized electricity markets, highlighting the trade-offs between efficiency and rent extraction. Meegahapola et al. (2022) discuss hybrid AC/DC power grids, focusing on stability and control aspects. Schäfer et al. (2015) explore decentralized control methods to enhance power grid stability. Hines et al. (2015) analyze the conditions under which centralized or decentralized infrastructure networks are optimal. These sources collectively support the hypothesis that integrating both centralized and decentralized control systems can improve power grid stability and reliability.

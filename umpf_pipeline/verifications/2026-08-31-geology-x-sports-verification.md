@@ -3,7 +3,7 @@
 **Verifies**: `hypotheses/2026-08-31-geology-x-sports.md`
 **Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
-## Verdict: **ADJACENT_ACTIVE**
+## Verdict: **NO_SIGNAL**
 
 ## Queries
 - `plate tectonics stress release models applied to sports strategy`
@@ -13,7 +13,10 @@
 - `game theory named theory OR framework OR researcher in sports strategy`
 
 ## What was found
-Game theory has been applied to sports strategy, including baseball pitch selection and football play-calling, to analyze decision-making processes. ([nber.org](https://www.nber.org/digest/oct09/game-theory-and-major-league-sports?utm_source=openai)) Sequential game dynamics have been studied in sports networks, showing how bounded rationality leads to subgame perfect equilibria. ([nature.com](https://www.nature.com/articles/s41598-026-62459-6?utm_source=openai))
+1. 'Baseball, An Extensive-Form Game-Theoretic Duel' by Sebastian E. Ferrando and Eli Kohn (2026) – ([arxiv.org](https://arxiv.org/abs/2607.29041?utm_source=openai))
+2. 'Counterfactual Optimization of Baseball Pitch Sequences and Estimation of Its Impact on Season-Level Statistics' by Ryota Takamido and Hiroki Nakamoto (2026) – ([arxiv.org](https://arxiv.org/abs/2606.17345?utm_source=openai))
+3. 'Structure of Pitch-Pattern Motifs in Major League Baseball' by Youngjai Park et al. (2026) – ([arxiv.org](https://arxiv.org/abs/2601.11904?utm_source=openai))
+4. 'Neural Sabermetrics with World Model: Play-by-play Predictive Modeling with Large Language Model' by Young Jin Ahn et al. (2026) – ([arxiv.org](https://arxiv.org/abs/2602.07030?utm_source=openai))
 
 ## Reasoning
-The application of game theory to sports strategy indicates that the proposed mapping from geological events to sports interactions is plausible. However, the specific analogy between plate tectonics stress release and pitch sequencing, as well as the pitcher-batter interaction mirroring plate boundary interactions, lacks direct evidence in the current literature.
+The search results reveal active research in modeling baseball pitch sequencing using game theory and machine learning, indicating a dynamic field of study. However, there is no evidence of research applying geological stress release models to sports strategy, suggesting a lack of direct overlap between the two domains.

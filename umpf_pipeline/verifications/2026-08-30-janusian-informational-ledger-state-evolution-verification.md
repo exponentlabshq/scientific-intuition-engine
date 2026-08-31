@@ -1,7 +1,7 @@
 # Verification: Janusian — Informational Ledger State Evolution
 
 **Verifies**: `hypotheses/2026-08-30-janusian-informational-ledger-state-evolution.md`
-**Verified**: 2026-08-30 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
 ## Verdict: **ADJACENT_ACTIVE**
 
@@ -13,7 +13,13 @@
 - `mutable blockchain frameworks OR theories OR researchers`
 
 ## What was found
-Research on blockchain mutability and its impact on trust and integrity includes: 1. A study titled "Blockchain Mutability: Challenges and Proposed Solutions" discusses the challenges and proposed solutions for mutable blockchains, focusing on compliance with regulations like the GDPR's "Right to be Forgotten" provision. ([arxiv.org](https://arxiv.org/abs/1907.07099?utm_source=openai)) 2. "Towards Verifiable Mutability for Blockchains" presents a concept for a mutable blockchain structure that allows for the removal of certain blocks while maintaining the blockchain's verifiability property. ([arxiv.org](https://arxiv.org/abs/2106.15935?utm_source=openai)) 3. "Immutability Does Not Guarantee Trust: A Formal and Logical Refutation" argues that immutability does not inherently guarantee trust, emphasizing the need for additional mechanisms to ensure data integrity and trustworthiness. ([arxiv.org](https://arxiv.org/abs/2507.08844?utm_source=openai))
+1. "Defining DLT Immutability: A Qualitative Survey of Node Operators" discusses the limits of immutability in permissionless public blockchain systems, highlighting that strict immutability is neither possible nor observed in these networks. ([arxiv.org](https://arxiv.org/abs/2507.02413?utm_source=openai))
+
+2. "Immutability Does Not Guarantee Trust: A Formal and Logical Refutation" argues that immutability does not inherently ensure correctness, fairness, or credibility, emphasizing that immutable data can still be incorrect or misleading. ([arxiv.org](https://arxiv.org/abs/2507.08844?utm_source=openai))
+
+3. "Blockchain Mutability: Challenges and Proposed Solutions" reviews various approaches to introduce mutability in blockchains to comply with regulations like the GDPR's "Right to be Forgotten," while preserving security. ([arxiv.org](https://arxiv.org/abs/1907.07099?utm_source=openai))
+
+4. "Towards Verifiable Mutability for Blockchains" presents a concept for a mutable blockchain structure that allows the removal of certain blocks while maintaining verifiability, applicable to both permissioned and permissionless blockchains. ([arxiv.org](https://arxiv.org/abs/2106.15935?utm_source=openai))
 
 ## Reasoning
-The search results reveal active research addressing the balance between immutability and mutability in blockchain systems, and their implications for trust and integrity. These studies explore the feasibility and impact of mutable blockchains, aligning with the hypothesis's focus on the coexistence of immutability and data alteration capabilities in informational ledgers.
+The search results reveal active research addressing the coexistence of immutability and mutability in blockchain systems, directly aligning with the hypothesis's core claim. These studies explore the theoretical and practical aspects of integrating both properties to enhance ledger integrity and user trust.

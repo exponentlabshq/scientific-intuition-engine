@@ -1,7 +1,7 @@
 # Verification: Homospatial — Linguistics — Creole Genesis ⊕ Cognitive Model Adaptation
 
 **Verifies**: `hypotheses/2026-08-29-homospatial-linguistics-x-cognitive-model-adaptation.md`
-**Verified**: 2026-08-29 · **Method**: Tavily search + GPT-4o classification (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
 ## Verdict: **ADJACENT_ACTIVE**
 
@@ -13,7 +13,7 @@
 - `Conceptual blending theory OR framework OR researcher`
 
 ## What was found
-Research on cognitive processes in creole genesis and cognitive flexibility in language development was found, but no direct mention of 'Cognitolect' or the specific interaction between creole structures and cognitive adaptation as described in the hypothesis.
+The term 'Cognitolect' does not appear in existing literature. However, studies have explored the relationship between language and cognitive flexibility. Research indicates that language-specific cognitive flexibility is linked to code-switching habits and interactional context, while domain-general cognitive flexibility is not. ([tandfonline.com](https://www.tandfonline.com/doi/abs/10.1080/20445911.2024.2365463?utm_source=openai)) Additionally, the development of cognitive control, including cognitive flexibility, is influenced by language abilities. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/25164047/?utm_source=openai)) These findings suggest that language evolution and cognitive processes are interconnected, supporting the plausibility of the proposed concept of Cognitolect.
 
 ## Reasoning
-The search results show active research in both creole genesis and cognitive model adaptation. For instance, sources like 'Creole Genesis and the Acquisition of Grammar' (https://eric.ed.gov?id=ED429455) and 'Creolization versus code-switching: An agent-based cognitive model' (https://aclanthology.org/2025.cmcl-1.25.pdf) discuss cognitive processes in creole formation. Additionally, studies on cognitive flexibility in language, such as 'The development of cognitive flexibility and language abilities' (https://www.academia.edu/2440324/The_development_of_cognitive_flexibility_and_language_abilities), indicate relevant cognitive research. However, the specific concept of 'Cognitolect' as a linguistic system combining these elements is not found, indicating the hypothesis is novel but adjacent to active research.
+The absence of the term 'Cognitolect' in existing literature indicates that it is a novel concept. However, related research on language and cognitive flexibility supports the plausibility of this concept.

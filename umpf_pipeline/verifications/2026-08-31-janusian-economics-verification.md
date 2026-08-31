@@ -13,7 +13,11 @@
 - `market microstructure theory named frameworks OR researchers`
 
 ## What was found
-Studies have examined how noise trading affects informational efficiency in order-driven markets, indicating that noise trading can harm price efficiency, especially in large liquid stocks. ([sciencedirect.com](https://www.sciencedirect.com/science/article/abs/pii/S0927538X21001128?utm_source=openai)) Additionally, research on limit order books has explored the interplay between market efficiency and inefficiency, suggesting that market inefficiencies can play a role in market-clearing processes. ([sciencedirect.com](https://www.sciencedirect.com/science/article/abs/pii/S0304405X08001451?utm_source=openai))
+"A Market-Clearing Role for Inefficiency on a Limit Order Book" by Jeremy Large ([sciencedirect.com](https://www.sciencedirect.com/science/article/abs/pii/S0304405X08001451?utm_source=openai))
+
+"How Noise Trading Affects Informational Efficiency: Evidence from an Order-Driven Market" by Hengbin Zhang and Petko S. Kalev ([sciencedirect.com](https://www.sciencedirect.com/science/article/abs/pii/S0927538X21001128?utm_source=openai))
+
+"Day Traders, Noise, and Cost of Immediacy" by Manoj Dalvi, Prachi Deuskar, Lawrence R. Glosten, and Ravi Jagannathan ([nber.org](https://www.nber.org/papers/w31127?utm_source=openai))
 
 ## Reasoning
-The search results reveal active research on the dual nature of order books, encompassing both market efficiency and inefficiency. This aligns with the hypothesis's core claim that the order book reflects both market efficiency and inefficiency simultaneously. The findings support the hypothesis's assertion and suggest that the theory must account for both aspects.
+The cited works examine the dual role of order books in reflecting both market efficiency and inefficiency. Jeremy Large's study discusses how market inefficiencies adjust to balance supply and demand for liquidity, leading to bid-ask spreads that reflect both efficiency and inefficiency. Zhang and Kalev's research investigates the impact of noise trading on informational efficiency in order-driven markets, highlighting how such trading can introduce inefficiencies. Dalvi et al.'s paper analyzes the role of day traders (identified as noise traders) in affecting market liquidity and trading costs, further illustrating the interplay between efficiency and inefficiency in order books.

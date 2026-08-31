@@ -1,7 +1,7 @@
 # Verification: Janusian — Human Team Collaboration
 
 **Verifies**: `hypotheses/2026-08-30-janusian-human-team-collaboration.md`
-**Verified**: 2026-08-30 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
 ## Verdict: **ADJACENT_ACTIVE**
 
@@ -13,7 +13,9 @@
 - `research on team performance metrics conflict cooperation`
 
 ## What was found
-Research indicates that both effective and ineffective collaboration can coexist within the same team, influencing innovation outcomes. For instance, a study published in the Academy of Management Proceedings found that relationship conflict suppresses information exchange, while task conflict, when managed appropriately, can lead to increased innovation. ([journals.aom.org](https://journals.aom.org/doi/10.5465/ambpp.2014.13818abstract?utm_source=openai)) Additionally, research from HEC Paris suggests that task-related disagreements involving critical team members can boost creativity, provided the team shares common goals and is reflective. ([hec.edu](https://www.hec.edu/en/dare/strategy-leadership/not-all-team-fights-kill-creativity?utm_source=openai))
+1. "Not All Team Fights Kill Creativity" by HEC Paris: ([hec.edu](https://www.hec.edu/en/dare/strategy-leadership/not-all-team-fights-kill-creativity?utm_source=openai))
+2. "Why Some Conflict Is Essential for Innovation" by ITPro: ([itpro.com](https://www.itpro.com/business/business-strategy/why-some-conflict-is-essential-for-innovation?utm_source=openai))
+3. "When Too Little or Too Much Hurts: Evidence for a Curvilinear Relationship Between Task Conflict and Innovation in Teams" by Carsten K. W. De Dreu: ([journals.sagepub.com](https://journals.sagepub.com/doi/10.1177/0149206305277795?utm_source=openai))
 
 ## Reasoning
-The search results reveal that existing research acknowledges the simultaneous presence of both effective and ineffective collaboration within teams, and how this dynamic can influence innovation outcomes. This aligns with the hypothesis's core claim and its falsifiable prediction, indicating that the hypothesis is situated within an active research area.
+The search results provide evidence that both effective and ineffective collaboration can coexist within the same team, and that a balance of task-related conflict can enhance innovation. ([hec.edu](https://www.hec.edu/en/dare/strategy-leadership/not-all-team-fights-kill-creativity?utm_source=openai)) ([itpro.com](https://www.itpro.com/business/business-strategy/why-some-conflict-is-essential-for-innovation?utm_source=openai)) ([journals.sagepub.com](https://journals.sagepub.com/doi/10.1177/0149206305277795?utm_source=openai))

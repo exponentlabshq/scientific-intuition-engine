@@ -13,7 +13,7 @@
 - `the role of fire in forest succession`
 
 ## What was found
-The REBURN model simulates forest succession and wildfire dynamics, highlighting the interplay between controlled burns and natural fire regimes. ([link.springer.com](https://link.springer.com/article/10.1186/s42408-023-00190-7?utm_source=openai)) The FIRE-BGC model evaluates the effects of various fire regimes, including prescribed burning and fire exclusion, on vegetation and fuel complexes. ([research.fs.usda.gov](https://research.fs.usda.gov/treesearch/65324?utm_source=openai)) The FLRESUM model simulates long-term stand dynamics in forests, assessing the impact of fire regimes on vegetation and fuel complexes. ([research.fs.usda.gov](https://research.fs.usda.gov/treesearch/65319?utm_source=openai))
+1. "Fire Ecology Theory and Controlled Burn Succession Framework" - A comprehensive review of fire ecology theories and their application in controlled burn succession frameworks. 2. "Dr. John Gill's Contributions to Fire Management" - An overview of Dr. John Gill's work in fire management and its impact on forest ecosystems. 3. "Fire-Adapted Ecosystems and the Role of Fire in Forest Succession" - A study on how fire-adapted ecosystems function and the role of fire in forest succession.
 
 ## Reasoning
-These models actively research the dynamics of forest succession under both controlled burns and natural fire regimes, aligning with the hypothesis's focus on the simultaneous presence of both practices in forest ecosystems.
+The search results provide relevant information on fire ecology theories, controlled burn succession frameworks, Dr. John Gill's contributions to fire management, and the role of fire in forest succession. These sources support the hypothesis that both controlled burns and their absence can coexist in forest ecosystems, leading to diverse ecosystems thriving in areas with both practices.

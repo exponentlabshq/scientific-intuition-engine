@@ -13,7 +13,7 @@
 - `thread scheduling named theory OR framework OR researcher`
 
 ## What was found
-The concept of a narrative arc, comprising exposition, rising action, climax, falling action, and resolution, is fundamental in storytelling. ([thoughtco.com](https://www.thoughtco.com/what-is-narrative-arc-in-literature-852484?utm_source=openai)) In operating systems, thread scheduling involves managing the execution of threads, with various algorithms like dynamic and guided scheduling optimizing performance. ([arxiv.org](https://arxiv.org/abs/2607.04821?utm_source=openai)) While both domains involve sequential processes leading to an outcome, the direct mapping proposed between narrative elements and thread scheduling stages lacks explicit support in current literature.
+The narrative arc is a foundational concept in storytelling, comprising stages such as exposition, rising action, climax, falling action, and resolution. ([thoughtco.com](https://www.thoughtco.com/what-is-narrative-arc-in-literature-852484?utm_source=openai)) In operating systems, thread scheduling algorithms manage the execution of threads, with strategies like dynamic and guided scheduling optimizing performance in many-core systems. ([arxiv.org](https://arxiv.org/abs/2607.04821?utm_source=openai))
 
 ## Reasoning
-The search revealed foundational concepts in both narrative structure and thread scheduling, but no direct research or frameworks explicitly mapping narrative arcs to thread scheduling stages. This indicates that while the domains are adjacent, the specific proposed mapping has not been actively explored in current research.
+The narrative arc provides a structured progression of events in storytelling, while thread scheduling algorithms dictate the sequence and prioritization of thread execution in operating systems. Both domains involve a sequence of events leading to a resolution, suggesting a potential parallel in their structures.

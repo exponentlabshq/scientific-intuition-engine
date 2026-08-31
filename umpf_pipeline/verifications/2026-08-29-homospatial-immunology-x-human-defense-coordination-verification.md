@@ -1,7 +1,7 @@
 # Verification: Homospatial — Adaptive Immune Memory ⊕ Human Defense Coordination
 
 **Verifies**: `hypotheses/2026-08-29-homospatial-immunology-x-human-defense-coordination.md`
-**Verified**: 2026-08-29 · **Method**: Tavily search + GPT-4o classification (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
 ## Verdict: **ADJACENT_ACTIVE**
 
@@ -13,7 +13,9 @@
 - `integration of immune memory and human defense systems`
 
 ## What was found
-The search results surfaced several relevant articles discussing the integration of immune memory and neural signaling, such as 'A body–brain circuit that regulates body inflammatory responses' (https://www.nature.com/articles/s41586-024-07469-y) and 'Reflex control of immunity' (https://www.nature.com/articles/nri2566). These articles discuss the interaction between the immune system and neural pathways, which is closely related to the hypothesis of ImmunoCoordination.
+The Unified Immunity Theory (UIT): A Bayesian Model Selection Framework for Systemic Immunity ([papers.ssrn.com](https://papers.ssrn.com/sol3/Delivery.cfm/5933874.pdf?abstractid=5933874&mirid=1&utm_source=openai))
+Immune Architecture — A Layered Framework for Immune Function ([immunearchitecture.com](https://www.immunearchitecture.com/?utm_source=openai))
+An integrative systems biology view of host-pathogen interactions: The regulation of immunity and homeostasis is concomitant, flexible, and smart ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC9904014/?utm_source=openai))
 
 ## Reasoning
-The hypothesis of ImmunoCoordination suggests a novel integration of immune memory with neural signaling to enhance the body's defense mechanisms. While no source directly describes this exact concept, several articles discuss related topics, such as the body-brain axis regulating immune responses and neural reflexes modulating the immune system. These findings indicate active research in the area of immune-neural integration, supporting the hypothesis as ADJACENT_ACTIVE.
+The search revealed frameworks and theories that integrate immune responses with other physiological systems, aligning with the concept of ImmunoCoordination. The Unified Immunity Theory (UIT) presents a Bayesian model selection framework for systemic immunity, suggesting a central role of the nervous system in immune regulation. Immune Architecture proposes a layered framework for immune function, emphasizing the organization and coordination of immune responses. The integrative systems biology view discusses the regulation of immunity and homeostasis, highlighting the flexibility and adaptability of immune responses. These findings support the plausibility of ImmunoCoordination as a physiological system integrating immune memory with neural signaling to enhance defense mechanisms.

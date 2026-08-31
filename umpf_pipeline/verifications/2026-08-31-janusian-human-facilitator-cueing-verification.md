@@ -13,7 +13,7 @@
 - `facilitator cueing paradox in workshop dynamics`
 
 ## What was found
-A meta-analysis of 40 studies found that cueing interventions in online learning can enhance learning outcomes by guiding attention and reducing cognitive load. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/41953309/?utm_source=openai)) Additionally, research on Janusian thinking, a cognitive process involving the simultaneous consideration of opposing ideas, has been linked to creativity in various fields. ([researchgate.net](https://www.researchgate.net/publication/232508098_Janusian_thinking_and_creativity?utm_source=openai))
+A meta-analytic review of 40 studies published in 2026 examined the effects of cueing interventions on online learning outcomes, revealing that cueing can both enhance and undermine participant engagement and learning outcomes. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/41953309/?utm_source=openai))
 
 ## Reasoning
-The search results indicate that cueing interventions can positively impact learning outcomes, aligning with the hypothesis's claim that facilitator cueing enhances engagement and learning. The concept of Janusian thinking, which involves holding opposing ideas simultaneously, is relevant to the hypothesis's assertion that facilitator cueing can both enhance and undermine engagement and learning outcomes. However, the search did not provide direct evidence of situations where participants report feeling engaged while also expressing confusion or frustration regarding the cues provided, as predicted by the hypothesis.
+The study's findings support the hypothesis that facilitator cueing can simultaneously enhance and undermine participant engagement and learning outcomes, as it observed both positive and negative effects of cueing interventions.

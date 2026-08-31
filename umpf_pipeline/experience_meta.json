@@ -1,28 +1,28 @@
 {
   "mode_performance": [
     {
-      "mode": "bisociation",
-      "n": 228,
-      "avg_points": 16.9,
-      "no_signal_rate": 0.15
-    },
-    {
       "mode": "janusian",
       "n": 214,
-      "avg_points": 16.4,
-      "no_signal_rate": 0.07
+      "avg_points": 14.5,
+      "no_signal_rate": 0.11
     },
     {
-      "mode": "homospatial",
-      "n": 244,
-      "avg_points": 10.6,
-      "no_signal_rate": 0.36
+      "mode": "bisociation",
+      "n": 228,
+      "avg_points": 9.0,
+      "no_signal_rate": 0.33
     },
     {
       "mode": "case-study",
       "n": 12,
       "avg_points": 8.8,
       "no_signal_rate": 0.25
+    },
+    {
+      "mode": "homospatial",
+      "n": 244,
+      "avg_points": 3.8,
+      "no_signal_rate": 0.48
     }
   ],
   "prefilter_correlation": {
@@ -30,34 +30,34 @@
       {
         "key": "narrative-shaped",
         "n": 96,
-        "good": 84,
-        "rate_pct": 87.5
+        "good": 66,
+        "rate_pct": 68.8
       },
       {
         "key": "formalism-shaped",
         "n": 11,
-        "good": 9,
-        "rate_pct": 81.8
+        "good": 7,
+        "rate_pct": 63.6
       },
       {
         "key": "mixed-uncertain",
-        "n": 199,
-        "good": 140,
-        "rate_pct": 70.4
+        "n": 198,
+        "good": 104,
+        "rate_pct": 52.5
       }
     ],
     "recommendation": [
       {
         "key": "would_promote",
         "n": 9,
-        "good": 8,
-        "rate_pct": 88.9
+        "good": 7,
+        "rate_pct": 77.8
       },
       {
         "key": "would_deprioritize",
-        "n": 286,
-        "good": 216,
-        "rate_pct": 75.5
+        "n": 285,
+        "good": 163,
+        "rate_pct": 57.2
       }
     ]
   }

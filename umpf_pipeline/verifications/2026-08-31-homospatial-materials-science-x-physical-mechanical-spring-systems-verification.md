@@ -3,7 +3,7 @@
 **Verifies**: `hypotheses/2026-08-31-homospatial-materials-science-x-physical-mechanical-spring-systems.md`
 **Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
-## Verdict: **ADJACENT_ACTIVE**
+## Verdict: **NO_SIGNAL**
 
 ## Queries
 - `Thermoelastic Phase Material theory OR framework`
@@ -13,7 +13,9 @@
 - `Smart materials phase transitions and spring behavior`
 
 ## What was found
-Research on thermoelastic materials, which combine thermal and mechanical properties, has been explored in various contexts. For instance, studies on thermoelastic solids under uniaxial strain have examined the dynamics of phase transitions within these materials. ([cambridge.org](https://www.cambridge.org/core/books/evolution-of-phase-transitions/dynamics-of-phase-transitions-in-uniaxially-strained-thermoelastic-solids/5C9CFEFDC284EFDAED9BA8008E74F2AB?utm_source=openai)) Additionally, the concept of generalized thermoelasticity in complex media has been developed to better understand the coupling between temperature and mechanical deformation, particularly in functionally graded materials and nanostructures. ([nature.com](https://www.nature.com/nature-index/topics/l4/generalized-thermoelasticity-in-complex-media?utm_source=openai))
+Active Mechanical Metamaterials and Construction Principles ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC8728820/?utm_source=openai))
+Phase-Change Materials: Fundamentals & Uses ([emergentmind.com](https://www.emergentmind.com/topics/phase-change-materials-pcms?utm_source=openai))
+Phase-Transforming Metamaterial with Magnetic Interactions ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC8740733/?utm_source=openai))
 
 ## Reasoning
-While there is no direct reference to a "Thermoelastic Phase Material" as defined in the hypothesis, the existing research on thermoelastic materials and phase transitions in mechanical systems indicates active exploration in this area. This suggests that the proposed concept is adjacent to current research, warranting further investigation.
+The search results reveal that while phase-change materials (PCMs) and active mechanical metamaterials both involve phase transitions and energy storage, there is no specific mention of a "Thermoelastic Phase Material" as a unified concept combining these characteristics. The term "Thermoelastic Phase Material" does not appear in the provided sources, indicating that this specific fusion of concepts may not be established in current research.

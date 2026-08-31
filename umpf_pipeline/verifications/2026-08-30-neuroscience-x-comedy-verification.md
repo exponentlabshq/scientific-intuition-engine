@@ -1,7 +1,7 @@
 # Verification: Bisociation — Neuroscience × Comedy
 
 **Verifies**: `hypotheses/2026-08-30-neuroscience-x-comedy.md`
-**Verified**: 2026-08-30 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
 ## Verdict: **ADJACENT_ACTIVE**
 
@@ -13,7 +13,7 @@
 - `cognitive flexibility named theory OR framework OR researcher`
 
 ## What was found
-Studies on cortical map reorganization during skill acquisition and consolidation, such as those by Yin et al. (2009) and Kleim et al. (2004), demonstrate that learning new skills leads to dynamic changes in neural activity and connectivity. In the realm of comedy, research into crowd work and improvisation highlights how comedians adapt their performances based on audience feedback, engaging in spontaneous interactions that influence the direction of their routines. These findings suggest that both domains involve adaptive processes driven by external stimuli resulting in functional changes in output, aligning with the proposed mapping of cortical map reorganization to a comedian's adaptability in performance.
+1. 'Plasticity of Cortical Maps: Multiple Triggers for Adaptive Reorganization following Brain Damage and Spinal Cord Injury' by Christian Xerri. 2. 'Dynamic Reorganization of Striatal Circuits during the Acquisition and Consolidation of a Skill' by Henry H. Yin et al. 3. 'Perceptual Learning Directs Auditory Cortical Map Reorganization through Top-Down Influences' by Daniel B. Polley et al.
 
 ## Reasoning
-The search results reveal active research in both neuroscience and comedy that supports the proposed mapping. In neuroscience, studies on cortical map reorganization during skill acquisition and consolidation demonstrate that learning new skills leads to dynamic changes in neural activity and connectivity. In the realm of comedy, research into crowd work and improvisation highlights how comedians adapt their performances based on audience feedback, engaging in spontaneous interactions that influence the direction of their routines. These findings suggest that both domains involve adaptive processes driven by external stimuli resulting in functional changes in output, aligning with the proposed mapping of cortical map reorganization to a comedian's adaptability in performance.
+The first source discusses how sensory and motor representations in cortical maps are dynamically maintained and reorganized in response to external stimuli, such as brain damage or spinal cord injury. The second source examines how learning new skills leads to changes in neural activity within the striatum, indicating adaptability in response to new information. The third source explores how perceptual learning can direct reorganization in auditory cortical maps through top-down influences, highlighting the brain's capacity to adapt based on experience.

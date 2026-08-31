@@ -13,7 +13,9 @@
 - `quantum mechanics and information theory frameworks`
 
 ## What was found
-Quantum error correction (QEC) is a technique that protects quantum information from errors due to environmental interactions and imperfections in quantum operations. ([learn.microsoft.com](https://learn.microsoft.com/en-in/azure/quantum/concepts-error-correction?utm_source=openai)) QEC encodes logical qubits into multiple physical qubits, allowing for the detection and correction of errors without measuring the logical qubit itself. ([physweb.com](https://www.physweb.com/learn/qic/error-correction?utm_source=openai)) Recent advancements include Nvidia's Ising models, which enhance quantum computing through improved processor calibration and error correction decoding. ([tomshardware.com](https://www.tomshardware.com/tech-industry/artificial-intelligence/nvidia-releases-ising-open-ai-models?utm_source=openai))
+Quantum Error Correction Codes - Azure Quantum | Microsoft Learn ([learn.microsoft.com](https://learn.microsoft.com/en-us/azure/quantum/concepts-error-correction?utm_source=openai))
+Quantum Error Correction — Quantum Information & Computing | PhysWeb ([physweb.com](https://www.physweb.com/learn/qic/error-correction?utm_source=openai))
+Quantum Error Correction and Fault Tolerant Quantum Computing | Springer Nature Link ([doi.org](https://doi.org/10.1007/978-0-387-30440-3_435?utm_source=openai))
 
 ## Reasoning
-The search results reveal active research in quantum error correction, which addresses the challenges of error detection and correction in quantum systems. This directly relates to the proposed functor, as both quantum systems and signal transmissions require mechanisms to manage uncertainty and errors in their state evolution and outcomes.
+Quantum error correction (QEC) is a field dedicated to protecting quantum information from errors due to noise and decoherence. QEC codes work by encoding logical qubits into multiple physical qubits, allowing for the detection and correction of errors without directly measuring the logical qubit, which would collapse its state. This redundancy enables the preservation of quantum information over time and through operations. The referenced sources provide comprehensive overviews of QEC principles, types of errors, and specific codes like the three-qubit code.

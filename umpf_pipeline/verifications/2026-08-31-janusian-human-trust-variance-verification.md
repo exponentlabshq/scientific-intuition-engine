@@ -13,7 +13,13 @@
 - `Trust as a stable trait versus a variable state`
 
 ## What was found
-Research indicates that trust is both stable and variable, influenced by individual differences and contextual factors. Studies show that trust evaluations are shaped more by environmental factors than by genetic predispositions. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/32341163/?utm_source=openai)) Additionally, trust levels vary across different environments, with factors such as relational distance and human ecology playing significant roles. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/33252977/?utm_source=openai)) These findings suggest that individuals can maintain consistent trust levels in long-term relationships while exhibiting fluctuating trust in new or unfamiliar interactions.
+A meta-analysis titled "How and why humans trust: A meta-analysis and elaborated model" examines factors influencing interpersonal trust, including individual differences and environmental factors. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/37051611/?utm_source=openai))
+
+The article "Building Trust in Relationships: The Psychology of What Actually Works" discusses how trust forms incrementally through consistent behaviors and the importance of vulnerability and reciprocity in trust-building. ([simplypsychology.com](https://www.simplypsychology.com/articles/relationships-trust-building-guide?utm_source=openai))
+
+The study "Individual differences in trust evaluations are shaped mostly by environments, not genes" suggests that trust evaluations are primarily influenced by environmental factors rather than genetic predispositions. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/32341163/?utm_source=openai))
+
+The research "Trust, variability in relationship evaluations, and relationship processes" explores how trust varies in relationships and the processes that influence these variations. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/20565183/?utm_source=openai))
 
 ## Reasoning
-The search results reveal that trust is influenced by both stable individual differences and variable contextual factors, supporting the hypothesis that trust can be both stable and variable simultaneously.
+The provided sources offer insights into the variability and stability of trust in human interactions, supporting the hypothesis that trust can be both inherently variable and stable within the same individual across different contexts.

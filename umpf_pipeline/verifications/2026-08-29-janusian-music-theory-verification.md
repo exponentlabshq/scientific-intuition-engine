@@ -1,7 +1,7 @@
 # Verification: Janusian — Music theory — jazz improvisation over changes
 
 **Verifies**: `hypotheses/2026-08-29-janusian-music-theory.md`
-**Verified**: 2026-08-29 · **Method**: Tavily search + GPT-4o classification (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
 ## Verdict: **ADJACENT_ACTIVE**
 
@@ -13,7 +13,7 @@
 - `Albert Murray jazz improvisation framework`
 
 ## What was found
-The search results revealed active research and discussions around the dual nature of jazz improvisation, which involves both spontaneity and structured elements. Sources like 'The Myth of Improvisation' (https://vi-control.net/community/threads/the-myth-of-improvisation.164813) and 'What is Jazz Improvisation? A Guide to Spontaneous Musical Expression' (https://jazzaspensnowmass.org/what-is-jazz-improvisation) discuss the balance between spontaneous creativity and mechanical structure in jazz improvisation. Additionally, 'Creativity in Music: The Brain Dynamics of Jazz Improvisation' (https://pmc.ncbi.nlm.nih.gov/articles/PMC12645261) explores the brain dynamics involved in jazz improvisation, highlighting the complex interplay between creativity and structure.
+1. "The Perception of Musical Spontaneity in Improvised and Imitated Jazz Performances" (PMC3125527) explores how listeners perceive spontaneity in jazz improvisations, highlighting the balance between spontaneous creation and learned patterns. 2. "Practice makes too perfect: fluctuations in loudness indicate spontaneity in musical improvisation" (Practice makes too perfect) examines how variations in loudness during jazz improvisation reflect the performer's uncertainty and spontaneity. 3. "Neural Substrates of Spontaneous Musical Performance: An fMRI Study of Jazz Improvisation" (PMC2244806) investigates the brain regions activated during jazz improvisation, emphasizing the interplay between spontaneous creativity and structured musical knowledge. 4. "Is Jazz Improvisation really Improvised? Here’s The Truth" (Is Improvising Really Improvising?) discusses the misconception that jazz improvisation is entirely spontaneous, emphasizing the role of practice and theoretical knowledge in improvisational performance.
 
 ## Reasoning
-The hypothesis posits that jazz musicians can simultaneously exhibit innovative creativity and rigid adherence to structure in their performances. The search results support the existence of active research and discourse around this duality in jazz improvisation, with multiple sources discussing the balance between spontaneity and structure. However, no source explicitly makes the exact connection proposed by the hypothesis, indicating that while the territory is fertile and relevant, the specific hypothesis remains novel. This aligns with the ADJACENT_ACTIVE verdict, as there is active research near the domains but not the exact connection.
+These sources collectively support the hypothesis that jazz musicians integrate both spontaneous creativity and adherence to structured chord changes in their performances. They highlight the complex interplay between improvisational spontaneity and the mechanical aspects of jazz, demonstrating that musicians' improvisations are not purely spontaneous but are influenced by learned patterns and theoretical knowledge.

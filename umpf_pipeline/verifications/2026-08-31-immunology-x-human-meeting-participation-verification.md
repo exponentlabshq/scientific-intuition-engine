@@ -3,7 +3,7 @@
 **Verifies**: `hypotheses/2026-08-31-immunology-x-human-meeting-participation.md`
 **Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
-## Verdict: **ADJACENT_ACTIVE**
+## Verdict: **NO_SIGNAL**
 
 ## Queries
 - `immunology innate immune response urgency`
@@ -13,7 +13,12 @@
 - `adaptive leadership theory OR framework OR researcher`
 
 ## What was found
-Research on innate immune responses highlights the rapid activation of pattern recognition receptors (PRRs) upon pathogen detection, leading to immediate inflammatory responses. This swift reaction is crucial for controlling infections during the early stages. In human meetings, designing engaging sessions involves clarifying purposes, addressing participant emotions, and selecting activities that promote desired behaviors, aiming to enhance participant engagement and meeting effectiveness. These parallels suggest that uncertainties in both domains—pathogen presence and participant engagement—prompt immediate, adaptive responses to guide subsequent actions.
+1. 'Innate Immunity' by Abcam: Overview of innate immune system components and their rapid response to pathogens. ([abcam.com](https://www.abcam.com/en-us/technical-resources/research-areas/immunology-and-infectious-disease/innate-immunity?utm_source=openai))
+2. 'Principles of innate and adaptive immunity' in Immunobiology: Discusses the role of innate immunity in the early defense against infections. ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/books/NBK27090/?utm_source=openai))
+3. 'The Innate Immune Response' by Cell Signaling Technology: Details on pattern recognition receptors and their role in pathogen detection. ([awsprod-www.cellsignal.com](https://awsprod-www.cellsignal.com/science-resources/innate-immune-response?utm_source=openai))
+4. 'Design Engaging Meetings' by Stanford d.school: Provides strategies for creating effective and engaging meetings. ([dschool.stanford.edu](https://dschool.stanford.edu/tools/design-engaging-meetings?utm_source=openai))
 
 ## Reasoning
-The innate immune system's rapid response to pathogen detection through PRRs and the design of engaging meetings to address participant uncertainties both involve immediate, adaptive actions aimed at guiding subsequent behaviors. This parallel indicates an active area of research exploring how uncertainties in both domains influence their evolving states and interactions.
+The search results provide detailed information on innate immunity, including its components, mechanisms, and rapid response to pathogens. Additionally, strategies for designing engaging meetings are available, which may offer insights into participant engagement and meeting dynamics.
+
+[Mechanically overridden 2026-08-31: the model's own bridging_material_is_generic flag was true (the cited evidence would return the same hit for most other, unrelated domain pairs — the rubric's umbrella-trap disqualifier) while the model separately wrote ADJACENT_ACTIVE. Verdict corrected to NO_SIGNAL in code rather than trusted as written; see Failure 19, whitepaper.]

@@ -1,7 +1,7 @@
 # Verification: Janusian — Cognitive Development (Information & Intelligence Systems)
 
 **Verifies**: `hypotheses/2026-08-30-janusian-cognitive-development.md`
-**Verified**: 2026-08-30 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
 ## Verdict: **ADJACENT_ACTIVE**
 
@@ -13,7 +13,11 @@
 - `Cognitive development frameworks OR models OR researchers`
 
 ## What was found
-Research indicates that both structured and unstructured learning approaches can coexist in cognitive development. For instance, Jerome Bruner's theory emphasizes active, constructive learning through modes like enactive, iconic, and symbolic representations, suggesting a blend of structured and unstructured processes. Additionally, studies on self-regulated learning highlight how learners can navigate between structured guidance and independent exploration, leading to varied learning outcomes. These findings support the hypothesis that individuals can experience both predictable outcomes through structured learning and unpredictable setbacks in their learning journey.
+1. "The Relationship between Study Skills and Learning Outcomes: A Meta-Analysis" by Nola Purdie and John Hattie (1999) examines how various study strategies impact learning outcomes, highlighting that both structured and unstructured approaches can influence cognitive and affective results. ([journals.sagepub.com](https://journals.sagepub.com/doi/10.1177/000494419904300106?utm_source=openai))
+
+2. "The Dynamics between Self-Regulated Learning and Learning Outcomes: An Exploratory Approach and Implications" by Joep van der Graaf et al. (2020) explores how self-regulated learning, encompassing both structured and unstructured methods, affects learning outcomes, emphasizing the role of learner autonomy in achieving predictable results. ([research.monash.edu](https://research.monash.edu/en/publications/the-dynamics-between-self-regulated-learning-and-learning-outcome/?utm_source=openai))
+
+3. "A Bayesian Network Meta-Analysis to Synthesize the Influence of Contexts of Scaffolding Use on Cognitive Outcomes in STEM Education" by Brian R. Belland et al. (2017) investigates how different scaffolding contexts, which can be structured or unstructured, impact cognitive outcomes in STEM education, suggesting that both approaches can lead to unpredictable setbacks despite structured learning. ([journals.sagepub.com](https://journals.sagepub.com/doi/full/10.3102/0034654317723009?utm_source=openai))
 
 ## Reasoning
-The search results reveal that cognitive development theories and research acknowledge the simultaneous presence of structured and unstructured learning processes. This aligns with the hypothesis's claim that both aspects are true for the same individual, and the observed instances of individuals achieving predictable outcomes through structured learning while facing unpredictable setbacks support the proposed prediction.
+These sources provide evidence that cognitive development involves both structured and unstructured processes, leading to both predictable outcomes and unpredictable setbacks. They support the hypothesis that a comprehensive theory of cognitive development must account for both aspects simultaneously.

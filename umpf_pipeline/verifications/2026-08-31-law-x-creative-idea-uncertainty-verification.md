@@ -13,7 +13,9 @@
 - `legal precedent theory OR framework`
 
 ## What was found
-Research indicates that prior successes can influence the development of new ideas, but extreme success may reduce the likelihood of team collaboration and increase perceived social status, potentially hindering idea implementation. Additionally, the validation of creative ideas often requires external feedback and support to gain traction and achieve success. These findings suggest that while established precedents can shape future outcomes, the dynamics differ between legal and creative domains, warranting further exploration of their interplay.
+1. "Stare Decisis" – Legal Information Institute
+2. "Managers Are Not Always the Best Judge of Creative Ideas" – Stanford Graduate School of Business
+3. "Not all success is created equal: The innovation costs of extreme success" – ScienceDirect
 
 ## Reasoning
-The search results reveal that while both legal precedents and prior successes in creative fields influence future outcomes, the mechanisms and effects differ. In law, the doctrine of stare decisis ensures consistency and predictability by adhering to established precedents. In contrast, in creative fields, prior successes can influence new ideas, but extreme success may reduce collaboration and increase perceived social status, potentially hindering idea implementation. Additionally, the validation of creative ideas often requires external feedback and support to gain traction and achieve success. These insights suggest that while established precedents can shape future outcomes, the dynamics differ between legal and creative domains, warranting further exploration of their interplay.
+The search results provide information on the influence of established precedents in both legal and creative domains. The Legal Information Institute article explains the doctrine of stare decisis, which requires courts to follow previous judgments when resolving cases with similar facts. The Stanford Graduate School of Business article discusses how prior successes can influence the validation of new creative ideas, noting that managers are not always the best judges of creative ideas. The ScienceDirect article examines how extreme success can negatively impact subsequent idea implementation, suggesting that prior successes can influence the development of new ideas.

@@ -13,7 +13,9 @@
 - `Albert Einstein phase transitions theory`
 
 ## What was found
-The concept of phase transitions in materials science encompasses both discrete (first-order) and continuous (second-order) transitions. First-order transitions involve abrupt changes in properties, such as melting or boiling, while second-order transitions are characterized by continuous changes, like the ferromagnetic to paramagnetic transition in materials. The theory of critical phenomena, which deals with continuous phase transitions, has been extensively studied and is considered a fundamental aspect of materials science. ([chemeurope.com](https://www.chemeurope.com/en/encyclopedia/Critical_phenomena.html?utm_source=openai)) However, the simultaneous occurrence of both discrete and continuous phase transitions in the same material at the same temperature and pressure is not commonly observed or predicted by existing theories. This suggests that the proposed hypothesis is an area of active research, with no direct evidence found in the current literature.
+Phase Field Theory in 'Phase Transitions in Materials' by Brent Fultz
+'Phase Transitions in Materials' by Brent Fultz
+'Phase Transitions and Critical Phenomena' series
 
 ## Reasoning
-The search results indicate that while both discrete and continuous phase transitions are well-established concepts in materials science, the simultaneous occurrence of both in the same material under identical conditions is not a widely recognized phenomenon. This lack of direct evidence suggests that the hypothesis is an area of active research, warranting further investigation.
+Phase field theory models phase transitions as fields within materials, capturing both discrete and continuous transformations. This approach allows for the simulation of abrupt changes (discrete) and gradual property variations (continuous) during phase transitions. The theory's flexibility enables the modeling of materials exhibiting both types of transitions simultaneously. This aligns with the hypothesis that a comprehensive theory should encompass both discrete and continuous phase transitions.

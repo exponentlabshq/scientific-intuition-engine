@@ -1,0 +1,14 @@
+# Adversarial Refutation: Homospatial — Informational Scientific Experiment Orchestration ⊕ Physical Magnetic Fluctuation
+
+**Original**: `hypotheses/2026-08-29-homospatial-informational-scientific-experiment-orchestration-x-physical-magnetic-fluctuation.md`
+**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost
+
+## Tally: 0 of 3 survive → **REFUTED**
+
+- **Coherence — REFUTED.** The core claim of 'Magneto-Experimental Orchestration' relies on the term 'orchestration' to imply a fusion of two distinct domains: informational scientific experiment management and physical magnetic fluctuation. However, 'orchestration' in the context of scientific experiments typically refers to the management of processes and data, while in the context of magnetic fluctuations, it refers to the physical phenomena of magnetic fields. These are not the same formal objects or relationships; they represent different referents. Therefore, the claim exhibits equivocation on the term 'orchestration' as it conflates distinct meanings across the two domains, failing to establish a coherent fusion. Thus, the claim does not survive this lens.
+- **Testability — REFUTED.** The core claim introduces a novel concept, Magneto-Experimental Orchestration, but does not reference any specific, checkable evidence or established theorem that operationalizes its predictions. While it describes a system that integrates magnetic data into experimental design, it lacks a named experiment, dataset, or mathematical proof that could validate or invalidate the claim. Therefore, it remains vague and does not meet the criteria for testability, as it does not provide a clear metric, comparison condition, or rejection threshold.
+- **Triviality — REFUTED.** The core claim describes a specific system that autonomously integrates real-time magnetic field data into scientific experimentation. When stripped of domain-specific vocabulary, the claim reduces to a general assertion about a system that adapts experimental parameters based on fluctuating environmental data. This is a common characteristic of many complex systems, making the claim trivial. The exact phrase being tested for genericness is: "a system that autonomously manages scientific experiments by integrating real-time magnetic field data into the design and execution of experiments." This phrase is indeed broader and more generic than the specific mechanisms described in the original claim, indicating that it does not hold up under scrutiny.
+
+## No steelman offered
+
+All three lenses independently converged on REFUTED for this case. If revisited, it would need a genuinely tighter formulation, not a restatement of the same claim.

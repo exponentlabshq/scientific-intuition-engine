@@ -3,7 +3,7 @@
 **Verifies**: `hypotheses/2026-08-31-epigenetics-x-cognitive-concept-drift.md`
 **Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
-## Verdict: **ADJACENT_ACTIVE**
+## Verdict: **NO_SIGNAL**
 
 ## Queries
 - `epigenetics environmental influence gene expression changes`
@@ -13,7 +13,9 @@
 - `Jean Piaget cognitive development theory OR framework`
 
 ## What was found
-Epigenetics studies how environmental factors influence gene expression without altering DNA sequence, affecting health and development. Cognitive concept drift refers to changes in cognitive processes over time due to new information or experiences. Research indicates that environmental exposures can lead to epigenetic modifications, influencing gene expression and potentially affecting cognitive functions. However, direct studies linking epigenetics to cognitive concept drift are limited, suggesting an area for further exploration.
+1. "Epigenetics, Health, and Disease | Genomics and Your Health | CDC" (https://www.cdc.gov/genomics-and-health/epigenetics/index.html)
+2. "Epigenetics and the environment: emerging patterns and implications" (https://www.nature.com/articles/nrg3142)
+3. "Epigenetics: How Behavior and Environment Influence Gene Function" (https://www.youtube.com/watch?v=_lSieNTrGDw)
 
 ## Reasoning
-The search revealed substantial research on how environmental factors impact gene expression through epigenetic mechanisms, such as DNA methylation and histone modifications. Additionally, studies on cognitive concept drift highlight how new information can lead to changes in cognitive processes. While both domains involve changes due to external influences, direct connections between epigenetics and cognitive concept drift are not well-established, indicating active research potential.
+The search results provide substantial information on how environmental factors influence gene expression through epigenetic mechanisms, such as DNA methylation and histone modification. These findings align with the proposed mapping of environmental influences on gene expression in the Atomic Layer. However, the search results do not provide information on cognitive concept drift mechanisms, which are essential for verifying the proposed mapping.

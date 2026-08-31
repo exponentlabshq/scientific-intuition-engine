@@ -13,7 +13,13 @@
 - `Quantum ecology research`
 
 ## What was found
-A 2024 study titled 'Quantum Algorithms for Optimizing Mycorrhizal Inoculants Using Mycoponics: A Novel Framework for Nutrient Transfer and Protein Discovery in Precision Agriculture' explores the integration of quantum algorithms with mycorrhizal networks to enhance nutrient transfer and protein discovery in agriculture. ([arxiv.org](https://arxiv.org/abs/2410.18149?utm_source=openai))
+"Quantum Algorithms for Optimizing Mycorrhizal Inoculants Using Mycoponics: A Novel Framework for Nutrient Transfer and Protein Discovery in Precision Agriculture" ([arxiv.org](https://arxiv.org/abs/2410.18149?utm_source=openai))
+
+"Temporal tracking of quantum-dot apatite across in vitro mycorrhizal networks shows how host demand can influence fungal nutrient transfer strategies" ([nature.com](https://www.nature.com/articles/s41396-020-00786-w?utm_source=openai))
+
+"Quantum entanglement and coherence in plant signaling networks: a theoretical framework" ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/41501507/?utm_source=openai))
 
 ## Reasoning
-The study presents a framework that combines quantum algorithms with mycorrhizal networks, aligning with the concept of 'Quantum Mycorrhiza' as a cohesive system integrating nutrient distribution and information exchange among plants through fungal networks. This indicates active research in the area of mycorrhizal networks and quantum systems integration, supporting the hypothesis's exploration.
+The search results reveal research that integrates quantum principles with mycorrhizal networks. The study titled "Quantum Algorithms for Optimizing Mycorrhizal Inoculants Using Mycoponics: A Novel Framework for Nutrient Transfer and Protein Discovery in Precision Agriculture" proposes a framework combining quantum algorithms with mycorrhizal inoculants to enhance nutrient transfer and protein discovery in agriculture. Another study, "Temporal tracking of quantum-dot apatite across in vitro mycorrhizal networks shows how host demand can influence fungal nutrient transfer strategies," investigates how quantum-dot labeling can track nutrient transfer in mycorrhizal networks, highlighting the influence of host plant demand on nutrient transfer strategies. Additionally, "Quantum entanglement and coherence in plant signaling networks: a theoretical framework" discusses the potential role of quantum entanglement and coherence in plant signaling, suggesting that quantum effects may play a role in plant communication and signaling networks.
+
+These findings indicate active research exploring the intersection of quantum physics and mycorrhizal networks, aligning with the concept of "Quantum Mycorrhiza" as a cohesive system integrating nutrient distribution and information exchange among plants through fungal networks, operating under principles of uncertainty and dynamic potential.

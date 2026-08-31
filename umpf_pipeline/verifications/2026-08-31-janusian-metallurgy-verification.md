@@ -13,7 +13,13 @@
 - `metallurgy named theory OR framework OR researcher`
 
 ## What was found
-Studies have shown that grain refinement can simultaneously enhance strength and reduce ductility in metals. For instance, ultrafine-grained steels exhibit increased strength but decreased ductility compared to their coarse-grained counterparts. Additionally, annealing processes can lead to hardening in ultrafine-grained and nanocrystalline materials, further complicating the relationship between grain size and mechanical properties. ([onlinelibrary.wiley.com](https://onlinelibrary.wiley.com/doi/full/10.1002/adem.201900507?utm_source=openai))
+1. "Annealing-Induced Hardening in Ultrafine-Grained and Nanocrystalline Materials" by Jenő Gubicza discusses how annealing can lead to hardening in ultrafine-grained materials, challenging the typical view that annealing softens metals. ([onlinelibrary.wiley.com](https://onlinelibrary.wiley.com/doi/full/10.1002/adem.201900507?utm_source=openai))
+
+2. "Increasing the strength of nanocrystalline steels by annealing: Is segregation necessary?" explores how annealing can strengthen nanocrystalline steels, with mechanisms including solute segregation to grain boundaries. ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC4235774/?utm_source=openai))
+
+3. "Grain Refinement Assisted by Deformation Enhanced Precipitates through Thermomechanical Treatment of AA7055 Al Alloy" examines how thermomechanical treatments can refine grain structure and enhance plasticity in aluminum alloys. ([mdpi.com](https://www.mdpi.com/2075-4701/10/5/594?utm_source=openai))
+
+4. "Fine-grained alloys by thermomechanical processing" reviews methods for producing fine-grained alloys through thermomechanical processing, highlighting the balance between strength and ductility. ([sciencedirect.com](https://www.sciencedirect.com/science/article/abs/pii/S1359028600000206?utm_source=openai))
 
 ## Reasoning
-The search results indicate that grain refinement can both improve strength and decrease ductility in metals, aligning with the core claim. However, the specific prediction that certain alloys will exhibit both increased strength and decreased ductility under the same conditions of grain refinement is not directly addressed in the provided sources. Therefore, while the core claim is supported, the exact prediction remains unverified.
+The cited sources provide evidence that both grain refinement and annealing can simultaneously improve strength and ductility in metals, depending on specific conditions and alloy compositions. This supports the hypothesis that both grain refinement can improve strength and grain refinement can weaken metals are true simultaneously for the same metal.

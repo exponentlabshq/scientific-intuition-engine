@@ -1,7 +1,7 @@
 # Verification: Janusian — Architecture — load-bearing structural design
 
 **Verifies**: `hypotheses/2026-08-30-janusian-architecture.md`
-**Verified**: 2026-08-30 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
 ## Verdict: **ADJACENT_ACTIVE**
 
@@ -13,7 +13,7 @@
 - `Frank Gehry architecture theory OR framework OR researcher`
 
 ## What was found
-The concept of 'Strong Structures' in architecture, as discussed by Arthur Rüegg, refers to load-bearing structures that not only fulfill their functional role but also serve as a medium for architectural expression. This approach emphasizes the integration of structural elements into the building's aesthetic identity, blurring the lines between strength and fragility. Additionally, the article 'Fragile by Design: Can Buildings Learn to Bend Without Breaking?' explores the adaptability of buildings, highlighting the importance of structures that can bend without breaking, which aligns with the idea of combining load-bearing capacity with aesthetic delicacy. These discussions suggest that the simultaneous embrace of structural strength and aesthetic fragility is an active area of architectural research and practice.
+1. "The art of structural relation: Kazuo Shinohara’s 'strong structures' design thinking" (https://www.tandfonline.com/doi/full/10.1080/13467581.2023.2182633) 2. "Redefining Structural Art: A Neuroaesthetics Perspective on the Art of Structural Design" (https://link.springer.com/article/10.1007/s44150-022-00027-y) 3. "Material relationship influences structural integrity and aesthetics of a building." (https://www.thearchinsight.com/2024/10/material-relationship-influences.html)
 
 ## Reasoning
-The search results reveal active research and discourse on integrating load-bearing capacity with aesthetic fragility in architectural design. The 'Strong Structures' concept and the exploration of adaptable, resilient buildings indicate that the hypothesis is situated within current architectural theory and practice, making it a relevant and active area of investigation.
+The search results reveal that the integration of load-bearing capacity and aesthetic fragility in architectural design is an active area of research. For instance, Kazuo Shinohara's concept of "strong structures" emphasizes the expressive potential of load-bearing elements, suggesting that structural components can simultaneously convey strength and fragility. Additionally, discussions on the relationship between material choices and structural aesthetics highlight how different materials can influence both the perceived delicacy and the actual load-bearing capacity of a building. These findings indicate that the hypothesis is situated within current architectural discourse, where the interplay between structural integrity and aesthetic fragility is being actively explored.

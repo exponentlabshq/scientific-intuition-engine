@@ -1,9 +1,9 @@
 # Verification: Bisociation — Baseball Pitch Sequencing × Human Social Influence
 
 **Verifies**: `hypotheses/2026-08-30-sports-x-human-social-influence.md`
-**Verified**: 2026-08-30 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
-## Verdict: **ADJACENT_ACTIVE**
+## Verdict: **NO_SIGNAL**
 
 ## Queries
 - `baseball pitch sequencing strategy analysis`
@@ -13,7 +13,7 @@
 - `influence techniques named theory OR framework OR researcher`
 
 ## What was found
-Studies on social influence in decision-making, such as "The Neural Substrates of Social Influence on Decision Making" (PLOS One, 2013) and "Neural Mechanisms of Social Influence on Value-Based Decision-Making" (SSRN, 2026), explore how social context affects decision processes. In baseball, research like "Decoding MLB Pitch Sequencing Strategies via Directed Graph Embeddings" (Sloan Sports Conference, 2026) analyzes pitch sequencing strategies. Additionally, "Counterfactual Optimization of Baseball Pitch Sequences and Estimation of Its Impact on Season-Level Statistics" (arXiv, 2026) examines the impact of pitch sequencing on performance.
+Sequence Baseball offers tools for analyzing pitch sequencing strategies, including interactive 3D visualizations and live game intelligence. ([sequencebaseball.com](https://www.sequencebaseball.com/?utm_source=openai)) Studies have examined the neural mechanisms of social influence on value-based decision-making, highlighting how social context shapes subjective value computations. ([papers.ssrn.com](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6502500&utm_source=openai)) Research has also explored the neural substrates of social influence on decision-making, identifying brain regions involved in processing social cues. ([journals.plos.org](https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0052630&utm_source=openai))
 
 ## Reasoning
-While there is active research in both domains—social influence on decision-making and baseball pitch sequencing—the specific mapping proposed in the hypothesis has not been directly explored. The existing studies provide foundational knowledge in each area, indicating that the proposed connection is novel and worth investigating.
+The search results provide information on pitch sequencing strategies in baseball and the neural mechanisms of social influence on decision-making. However, they do not directly address the proposed mapping between baseball pitch sequencing and human social influence.

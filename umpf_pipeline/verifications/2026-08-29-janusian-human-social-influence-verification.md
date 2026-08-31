@@ -1,7 +1,7 @@
 # Verification: Janusian — Human Social Influence
 
 **Verifies**: `hypotheses/2026-08-29-janusian-human-social-influence.md`
-**Verified**: 2026-08-29 · **Method**: Tavily search + GPT-4o classification (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
 ## Verdict: **ADJACENT_ACTIVE**
 
@@ -13,7 +13,7 @@
 - `Asch conformity experiments and individual resistance`
 
 ## What was found
-The search results revealed active research on social influence theories, including Social Influence Theory (SIT) and Social Influence Network Theory, which explore how social influence induces behavior change and opinion shifts within groups. Additionally, research on conformity and resistance, such as the Asch conformity experiments, highlights the tension between conforming to group norms and maintaining individual defiance. These studies suggest mechanisms by which individuals navigate social pressures, aligning with the hypothesis's focus on simultaneous conformity and defiance.
+Deutsch and Gerard's (1955) theory distinguishes between normative and informational social influence, explaining how individuals conform to group norms either to be accepted or to gain accurate information. ([simplypsychology.org](https://www.simplypsychology.org/conformity.html?utm_source=openai)) Bibb Latané's Social Impact Theory (1981) posits that social influence is a function of the strength, immediacy, and number of sources present. ([simplypsychology.org](https://www.simplypsychology.org/social-impact-theory.html?utm_source=openai)) Solomon Asch's (1951) experiments demonstrated that individuals often conform to group pressure, even when the group is clearly wrong, highlighting the tension between personal judgment and group consensus. ([simplypsychology.org](https://www.simplypsychology.org/asch-conformity.html?utm_source=openai))
 
 ## Reasoning
-The hypothesis posits that individuals can exhibit both conformity and defiance in the same social interaction. The search results show active research in related areas, such as Social Influence Theory and conformity studies, which explore how social influence affects behavior and the conditions under which individuals conform or resist. However, no specific theory or framework directly addresses the simultaneous occurrence of both conformity and defiance in a single interaction, indicating that the hypothesis is adjacent to active research but not yet fully explored. This supports an ADJACENT_ACTIVE verdict, as the hypothesis is in a fertile area of research without being directly covered by existing theories.
+The cited theories and experiments provide foundational insights into how individuals navigate the interplay between conforming to group norms and maintaining personal individuality. Deutsch and Gerard's theory offers a framework for understanding the motivations behind conformity, while Latané's Social Impact Theory quantifies the factors influencing social influence. Asch's experiments empirically demonstrate the challenges individuals face when balancing personal beliefs with group pressure.

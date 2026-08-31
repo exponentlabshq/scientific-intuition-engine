@@ -1,7 +1,7 @@
 # Verification: Bisociation — Fluid Dynamics × Knowledge Systems
 
 **Verifies**: `hypotheses/2026-08-30-fluid-dynamics-x-knowledge-systems.md`
-**Verified**: 2026-08-30 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
 ## Verdict: **ADJACENT_ACTIVE**
 
@@ -13,7 +13,7 @@
 - `historical context in knowledge evolution`
 
 ## What was found
-Research on the transition from laminar to turbulent flow in fluid dynamics, as well as studies on the evolution of knowledge based on historical context, indicate that both domains involve complex systems governed by underlying principles of uncertainty and integration. In fluid dynamics, the transition from laminar to turbulent flow is characterized by a shift from orderly, smooth flow to chaotic, irregular motion, influenced by factors such as flow velocity and viscosity. Similarly, in knowledge systems, the evolution of knowledge is influenced by historical context, with new information and experiences leading to changes in understanding and behavior. Both domains exhibit complex behaviors that emerge from the interplay of various factors, leading to transitions between different states governed by principles of uncertainty and integration.
+The transition from laminar to turbulent flow in fluid dynamics is characterized by a critical Reynolds number, typically around 2,300, where flow shifts from smooth to chaotic. ([engineeringtoolbox.com](https://www.engineeringtoolbox.com/laminar-transitional-turbulent-flow-d_577.html?utm_source=openai)) In knowledge systems, ambiguity in model outputs often arises due to complex, nonlinear interactions within the system, leading to unpredictable or unclear results. ([papiro.unizar.es](https://papiro.unizar.es/ojs/index.php/rc51-jos/en/article/view/1047?utm_source=openai)) Distributed analysis in cognitive systems involves multiple agents or processes working concurrently to process information, enhancing the system's ability to handle complex tasks. ([complexsystems.org](https://complexsystems.org/?utm_source=openai)) Complex systems theory, as discussed by Rolando García, provides a framework for understanding how complex interactions lead to emergent behaviors in systems, applicable to both fluid dynamics and knowledge systems. ([papiro.unizar.es](https://papiro.unizar.es/ojs/index.php/rc51-jos/en/article/view/1047?utm_source=openai))
 
 ## Reasoning
-The search results provide evidence of research in both fluid dynamics and knowledge systems that align with the proposed mapping. In fluid dynamics, studies on the transition from laminar to turbulent flow highlight the shift from orderly to chaotic behavior, influenced by factors such as flow velocity and viscosity. In knowledge systems, research on the evolution of knowledge based on historical context demonstrates how new information and experiences lead to changes in understanding and behavior. These findings suggest that both domains involve complex systems governed by underlying principles of uncertainty and integration, supporting the proposed mapping.
+The search results provide specific information on the transition from laminar to turbulent flow, the nature of ambiguity in knowledge systems, and the role of distributed analysis in cognitive systems. Additionally, they reference complex systems theory, which can bridge the two domains.

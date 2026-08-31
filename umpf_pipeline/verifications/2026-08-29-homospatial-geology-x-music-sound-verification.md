@@ -1,7 +1,7 @@
 # Verification: Homospatial — Geology ⊕ Music Sound
 
 **Verifies**: `hypotheses/2026-08-29-homospatial-geology-x-music-sound.md`
-**Verified**: 2026-08-29 · **Method**: Tavily search + GPT-4o classification (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
 ## Verdict: **ADJACENT_ACTIVE**
 
@@ -13,7 +13,9 @@
 - `Layered musical composition as geological record`
 
 ## What was found
-The search results revealed active research and creative projects that explore the intersection of geology and music, such as 'Geomusic' which uses geological data to create musical compositions (https://www.musicasencantadas.com/en/other-works/music-and-geology) and a web app that converts geological strata data into music (https://gc.copernicus.org/articles/9/1/2026). Additionally, there are studies on audience interaction and feedback in live performances, which relate to the dynamic and evolving nature of 'Stratamusic' (https://etd.ohiolink.edu/acprod/odb_etd/ws/send_file/send?accession=marhonors1430070781&disposition=inline).
+"Sedimentary Rock!" – a web app that converts geological strata data into music ([gc.copernicus.org](https://gc.copernicus.org/articles/9/1/2026/gc-9-1-2026-metrics.html?utm_source=openai))
+"Geysir: musical translation of geological noise" by Christopher Luna-Mega and Jon Gomez ([scholarworks.sjsu.edu](https://scholarworks.sjsu.edu/faculty_rsca/2112/?utm_source=openai))
+"Music and Geology" – musical compositions created from scientific data related to climatic changes extracted from stratigraphic columns ([musicasencantadas.com](https://www.musicasencantadas.com/en/other-works/music-and-geology/?utm_source=openai))
 
 ## Reasoning
-The hypothesis of 'Stratamusic' as a system where musical compositions evolve like geological strata finds adjacent active research in the form of 'Geomusic' and other projects that blend geological data with music. These projects do not exactly replicate the 'Stratamusic' concept but indicate a fertile area of exploration at the intersection of geology and music. The studies on audience interaction further support the dynamic aspect of 'Stratamusic', showing that the concept is novel but grounded in related active research areas.
+The search results reveal existing projects that translate geological data into musical compositions, such as "Sedimentary Rock!" and "Geysir," which convert geological strata and noise into music. Additionally, "Music and Geology" involves creating music from climatic data in stratigraphic columns. These initiatives demonstrate the application of geological concepts to music composition, aligning with the idea of structuring musical compositions as layered sedimentary deposits.

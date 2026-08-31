@@ -13,7 +13,10 @@
 - `supply chain resilience just-in-time inventory challenges`
 
 ## What was found
-A behavioral case study of Just-in-Time implementation in an electronics firm highlighted both positive outcomes and challenges, including issues with performance evaluation systems leading to a 'push' rather than 'pull' environment. ([sciencedirect.com](https://www.sciencedirect.com/science/article/pii/027269639190023Q?utm_source=openai))
+1. "A behavioral case study of Just-in-Time implementation" (1991) – Examines positive and negative aspects of JIT in an electronics firm. ([sciencedirect.com](https://www.sciencedirect.com/science/article/pii/027269639190023Q?utm_source=openai))
+2. "From Just-in-Time, to Just-in-Case, to Just-in-Worst-Case: Simple Models of a Global Supply Chain under Uncertain Aggregate Shocks" (2021) – Discusses JIT's efficiency and potential inefficiencies under demand uncertainty. ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC8592086/?utm_source=openai))
+3. "Inventory Problems at Nike" (2004) – Analyzes Nike's supply chain issues due to JIT and demand fluctuations. ([ibscdc.org](https://www.ibscdc.org/Case_Studies/Operations/Operations/Inventory%20Problems%20at%20Nike-Operations%20Case%20Study.htm?utm_source=openai))
+4. "The Surprising Thing That Could Help Ease Inflation" (2022) – Highlights how the "bullwhip effect" from demand shifts leads to excess inventory, illustrating JIT's vulnerabilities. ([time.com](https://time.com/6193041/inflation-bullwhip-excess-inventory/?utm_source=openai))
 
 ## Reasoning
-The study provides evidence of both efficiency gains and inefficiencies arising from Just-in-Time implementation, aligning with the hypothesis's core claim. However, it does not directly address the specific prediction regarding the impact of sudden demand increases on operations.
+The search results provide case studies and analyses demonstrating that JIT systems can simultaneously enhance efficiency and lead to inefficiencies, especially under fluctuating demand conditions. These findings support the hypothesis's core claim and its falsifiable prediction.

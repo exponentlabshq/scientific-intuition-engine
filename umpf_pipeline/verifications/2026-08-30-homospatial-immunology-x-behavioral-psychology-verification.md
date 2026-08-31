@@ -1,7 +1,7 @@
 # Verification: Homospatial — Immunology ⊕ Behavioral Psychology
 
 **Verifies**: `hypotheses/2026-08-30-homospatial-immunology-x-behavioral-psychology.md`
-**Verified**: 2026-08-30 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
 ## Verdict: **ADJACENT_ACTIVE**
 
@@ -13,7 +13,7 @@
 - `feedback loops in immunology and psychology`
 
 ## What was found
-Studies have demonstrated that the immune system exhibits learning-like behaviors, such as the ability to adapt its responses based on previous encounters with pathogens. For instance, research has shown that the adaptive immune system can mount pathogen-specific responses against a vast world of evolving pathogens, with the humoral immune system learning about an antigen after exposure to it through a mutation-selection evolutionary process, resulting in more potent responses than those that emerge initially. ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC13251631/?utm_source=openai)) Additionally, the concept of Pavlovian conditioning has been applied to the immune system, revealing that immune responses can be conditioned by associating a neutral stimulus with an immunological response, leading to altered immune functions. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/7920010/?utm_source=openai)) These findings suggest that while the specific term "Immuno-Learning System" is not widely used, the idea of the immune system adapting and learning from past experiences is an active area of research.
+The concept of an "Immuno-Learning System" as a self-optimizing mechanism in immunology is not established in current scientific literature. However, there are studies exploring the intersection of immunology and behavioral psychology, particularly focusing on how conditioning processes can influence immune responses. Research has demonstrated that the central nervous system can modulate immune functions through associative learning, such as classical and operant conditioning. For instance, studies have shown that immune responses can be conditioned by pairing a neutral stimulus with an immunomodulating agent, leading to alterations in immune responses upon reexposure to the conditioned stimulus. ([cambridge.org](https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/abs/cnsimmune-system-interactions-conditioning-phenomena/9EDBFDAE6E36CB4B96B1DD353C5963AB?utm_source=openai)) Additionally, the activation of the reward system has been found to enhance both innate and adaptive immunity, indicating a link between psychological processes and immune function. ([nature.com](https://www.nature.com/articles/nm.4133?utm_source=openai))
 
 ## Reasoning
-The search results indicate that the concept of the immune system adapting and learning from past experiences is an active area of research, with studies demonstrating learning-like behaviors in immune responses. However, the specific term "Immuno-Learning System" is not widely used in the literature. Therefore, the hypothesis is classified as ADJACENT_ACTIVE, as it aligns with current research but is not a widely recognized framework.
+While the specific "Immuno-Learning System" is not a recognized framework, existing research indicates that immune responses can be influenced by learning and conditioning processes, bridging immunology and behavioral psychology.

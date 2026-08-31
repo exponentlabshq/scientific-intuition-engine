@@ -3,7 +3,7 @@
 **Verifies**: `hypotheses/2026-08-31-culinary-arts-x-human-individual-indecision.md`
 **Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
-## Verdict: **ADJACENT_ACTIVE**
+## Verdict: **NO_SIGNAL**
 
 ## Queries
 - `culinary decision-making frameworks`
@@ -13,7 +13,7 @@
 - `contextual decision-making in culinary practices`
 
 ## What was found
-Herbert Simon's decision-making theory, including bounded rationality and satisficing, is applied in culinary decision-making frameworks. For example, the CookingSense project integrates multidisciplinary culinary knowledge to support decision-making in cooking processes. Additionally, Simon's three-phase decision-making process—intelligence, design, and choice—is relevant to culinary arts, where chefs assess situations, plan recipes, and make choices under constraints.
+1. "Herbert Simon's Decision-Making Approach: Investigation of Cognitive Processes in Experts" by Guillermo Campitelli and Fernand Gobet (2010). 2. "The Decision-Making Process According to Herbert A. Simon" from PubAdmin.Institute. 3. "Herbert Simon: Father of Artificial Intelligence" by UBS Global.
 
 ## Reasoning
-The search results indicate that Simon's decision-making theory, particularly concepts like bounded rationality and satisficing, are applied in culinary decision-making frameworks. For instance, the CookingSense project integrates multidisciplinary culinary knowledge to support decision-making in cooking processes. Additionally, Simon's three-phase decision-making process—intelligence, design, and choice—is relevant to culinary arts, where chefs assess situations, plan recipes, and make choices under constraints. This suggests that the proposed mapping between culinary arts and individual indecision aligns with existing research.
+The search results provide insights into Herbert Simon's decision-making theory, particularly his concept of bounded rationality and satisficing, which are relevant to understanding decision-making processes in culinary arts. However, there is no direct evidence connecting these concepts to the specific mapping proposed in the hypothesis.

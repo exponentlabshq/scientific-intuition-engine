@@ -1,9 +1,9 @@
 # Verification: Janusian — Physical Flux Regulation
 
 **Verifies**: `hypotheses/2026-08-29-janusian-physical-flux-regulation.md`
-**Verified**: 2026-08-28 · **Method**: Tavily search + GPT-4o classification (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
-## Verdict: **ADJACENT_ACTIVE**
+## Verdict: **NO_SIGNAL**
 
 ## Queries
 - `dynamic stability in physical systems equilibrium disequilibrium`
@@ -13,7 +13,7 @@
 - `thermodynamic cycles equilibrium fluctuations`
 
 ## What was found
-The search results revealed active research on dynamic stability in physical systems, equilibrium and disequilibrium coexistence, and fluctuations in thermodynamic systems. Notably, sources like 'Unifying Dynamical and Structural Stability of Equilibriums' (https://arxiv.org/html/1605.02725v1) and 'Self-sustained non-equilibrium co-existence of fluid and solid' (https://www.nature.com/articles/s41598-022-17939-w) discuss related concepts of stability and coexistence in physical systems, but do not directly address the simultaneous holding of equilibrium and disequilibrium as described in the hypothesis.
+The concept of dynamic equilibrium, where opposing processes occur simultaneously at equal rates, leading to a system whose observable properties remain constant over time despite ongoing microscopic activity, is well-established in physics and thermodynamics. ([technav.ieee.org](https://technav.ieee.org/topic/dynamic-equilibrium/?utm_source=openai)) Additionally, the theory of fluctuations in nonequilibrium systems, which extends the study of fluctuations to nonlinear systems far from equilibrium, has been explored. ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC389361/?page=0&utm_source=openai)) However, the specific claim that the coexistence of equilibrium and disequilibrium in a physical system results in dynamic stability characterized by fluctuations maintaining overall balance, which would not be predicted by either state held alone, does not appear to be directly supported by existing literature.
 
 ## Reasoning
-The hypothesis suggests a novel concept where equilibrium and disequilibrium coexist to create dynamic stability, which is not directly covered in the search results. However, there is active research on related topics such as dynamic stability and coexistence of equilibrium and disequilibrium in physical systems, indicating fertile ground for further exploration. The specific functor of simultaneous equilibrium and disequilibrium leading to dynamic stability is not explicitly found, thus placing the hypothesis in the ADJACENT_ACTIVE category.
+While dynamic equilibrium and fluctuations in nonequilibrium systems are well-documented, the specific assertion that simultaneous equilibrium and disequilibrium lead to dynamic stability characterized by balancing fluctuations is not directly found in the provided sources.

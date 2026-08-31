@@ -1,9 +1,9 @@
 # Verification: Bisociation — Cell Biology × Human Trust Variance
 
 **Verifies**: `hypotheses/2026-08-30-cell-biology-x-human-trust-variance.md`
-**Verified**: 2026-08-30 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
-## Verdict: **ADJACENT_ACTIVE**
+## Verdict: **NO_SIGNAL**
 
 ## Queries
 - `protein folding chaperones and social trust dynamics`
@@ -13,7 +13,9 @@
 - `interventions improving trust and protein folding efficiency`
 
 ## What was found
-Research on protein folding chaperones and social trust dynamics reveals parallels in guiding mechanisms. Chaperones assist in protein folding by stabilizing non-native proteins, preventing aggregation, and providing favorable conditions for folding. Similarly, social cues guide trust evolution by influencing individuals' perceptions and behaviors, fostering cohesive social networks. Both systems involve entities that actively influence the correct formation of structures to prevent dysfunction, highlighting a potential analogy between molecular biology and human trust dynamics.
+1. "Protein folding while chaperone bound is dependent on weak interactions" ([nature.com](https://www.nature.com/articles/s41467-019-12774-6?utm_source=openai))
+2. "Chaperone-Mediated Protein Folding" ([journals.physiology.org](https://journals.physiology.org/doi/full/10.1152/physrev.1999.79.2.425?doi=10.1152%2Fphysrev.1999.79.2.425&utm_source=openai))
+3. "Protein folding and denaturation" ([khanacademy.org](https://www.khanacademy.org/science/biology/macromolecules/proteins-and-amino-acids/a/protein-folding-and-denaturation?utm_source=openai))
 
 ## Reasoning
-The search results indicate that chaperones play a crucial role in guiding protein folding, preventing misfolding and aggregation. In human relationships, social cues similarly guide trust evolution, influencing individuals' behaviors and fostering cohesive social networks. This parallel suggests that the proposed mapping between protein folding mechanisms and human trust dynamics is supported by existing research, placing the hypothesis in the 'ADJACENT_ACTIVE' category.
+The search results provide detailed information on protein folding mechanisms, particularly focusing on the role of chaperones in guiding protein folding and preventing misfolding. However, there is no direct evidence or discussion connecting these biological processes to human trust dynamics or social cues guiding trust evolution.

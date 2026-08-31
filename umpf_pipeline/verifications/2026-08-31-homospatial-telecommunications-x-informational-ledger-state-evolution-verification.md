@@ -13,7 +13,9 @@
 - `Error-Correcting Ledger System named theory OR framework OR researcher`
 
 ## What was found
-Research on integrating error-correcting codes into blockchain systems to enhance data integrity and storage efficiency. For instance, Stanford University's Tse Lab explores the application of error-correcting codes to improve blockchain resilience and performance. ([tselab.stanford.edu](https://tselab.stanford.edu/research/blockchains-decentralized-systems/coding-for-blockchains/?utm_source=openai)) Additionally, Nokia has proposed a distributed error correction coding scheme for low-storage blockchain systems, aiming to reduce memory requirements for blockchain nodes. ([nokia.com](https://www.nokia.com/bell-labs/publications-and-media/publications/distributed-error-correction-coding-scheme-for-low-storage-blockchain-systems/?utm_source=openai))
+Error Correcting Codes for Blockchains
+Distributed Error Correction Coding Scheme for Low Storage Blockchain Systems
+Analysis of a Blockchain Protocol Based on LDPC Codes
 
 ## Reasoning
-The concept of an 'Error-Correcting Ledger System' aligns with ongoing research into incorporating error-correcting codes into blockchain technology to enhance data integrity and storage efficiency. While the exact term 'Error-Correcting Ledger System' is not widely used, the underlying idea is actively being explored in the field.
+Research indicates that error-correcting codes are being applied to blockchain systems to enhance data integrity and reduce storage requirements. For instance, Stanford University's Tse Lab explores the use of error-correcting codes to improve blockchain resilience and performance. Similarly, Nokia has proposed a distributed error correction coding scheme to reduce memory requirements in blockchain nodes. Additionally, a study analyzing a blockchain protocol based on LDPC codes highlights the application of error-correcting codes in blockchain contexts.

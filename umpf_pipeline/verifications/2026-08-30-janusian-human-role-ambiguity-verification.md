@@ -1,7 +1,7 @@
 # Verification: Janusian — Human Role Ambiguity
 
 **Verifies**: `hypotheses/2026-08-30-janusian-human-role-ambiguity.md`
-**Verified**: 2026-08-30 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
 ## Verdict: **ADJACENT_ACTIVE**
 
@@ -13,7 +13,22 @@
 - `organizational behavior role ambiguity studies`
 
 ## What was found
-Studies indicate that role ambiguity is generally associated with decreased job satisfaction and performance. For instance, a meta-analysis by Abramis (1994) found a significant negative relationship between role ambiguity and job performance. ([journals.sagepub.com](https://journals.sagepub.com/doi/10.2466/pr0.1994.75.3f.1411?utm_source=openai)) Similarly, Tubre and Collins (2000) reported a negative correlation between role ambiguity and job performance. ([doi.org](https://doi.org/10.1177/014920630002600104?utm_source=openai)) However, some research suggests that role ambiguity can have positive effects under certain conditions. For example, a study by Mañas et al. (2019) found that role ambiguity can positively influence the Job Demands-Resources (JD-R) motivational process when performance recognition is present. ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC7655775/?utm_source=openai)) Additionally, the concept of organizational paradoxes, where contradictory demands coexist, has been explored in the context of role ambiguity. Smith and Lewis (2011) proposed a dynamic equilibrium model of organizing that depicts how cyclical responses to paradoxical tensions enable sustainability and peak performance. ([doi.org](https://doi.org/10.5465/amr.2009.0223?utm_source=openai)) These findings suggest that while role ambiguity is often linked to negative outcomes, there are contexts where it can have positive effects, aligning with the hypothesis that both negative and positive impacts can occur simultaneously.
+A study titled "The Relationship between Role Ambiguity and Workers’ Creativity during the COVID-19 Pandemic in China" examines how role ambiguity affects employee creativity, noting that role ambiguity can have both positive and negative effects on creativity. ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC9737936/?utm_source=openai))
+
+Another study, "Role stressors, job satisfaction, and employee creativity: The cross-level moderating role of social media use within teams," explores how role stressors, including role ambiguity, influence employee creativity, with job satisfaction partially mediating the role ambiguity-employee creativity linkage. ([sciencedirect.com](https://www.sciencedirect.com/science/article/pii/S0378720620302500?utm_source=openai))
+
+Additionally, "A Meta-Analytic Test of the Challenge Stressor–Hindrance Stressor Framework: An Explanation for Inconsistent Relationships Among Stressors and Performance" discusses how challenge stressors, which can include role ambiguity, have a positive direct effect on performance, while hindrance stressors have a negative direct effect. ([journals.aom.org](https://journals.aom.org/doi/10.5465/AMJ.2005.18803921?utm_source=openai))
+
+These studies collectively suggest that role ambiguity can simultaneously have both positive and negative impacts on performance and creativity, supporting the core claim of the hypothesis.
+
+The bridging material is specific to the domains of role ambiguity and performance/creativity, as it directly addresses how role ambiguity influences these outcomes.
+
+Therefore, the verdict is ADJACENT_ACTIVE.
+
+
+## Highlights:
+- ["AI isn't killing creativity": why job roles are the real threat to creative agencies](https://www.creativebloq.com/professional-development/creative-careers/ai-isnt-killing-creativity-why-job-roles-are-the-real-threat-to-creative-agencies?utm_source=openai), Published on Wednesday, March 04
+- [Axios Finish Line - The silent killer: toxic ambiguity](https://www.axios.com/2023/05/05/toxic-ambiguity?utm_source=openai), Published on Thursday, May 04
 
 ## Reasoning
-The search results reveal that role ambiguity is typically associated with negative outcomes like decreased job satisfaction and performance. However, certain studies indicate that under specific conditions, role ambiguity can have positive effects, such as enhancing the JD-R motivational process when performance recognition is present. Additionally, the concept of organizational paradoxes, where contradictory demands coexist, has been explored in the context of role ambiguity, suggesting that both negative and positive impacts can occur simultaneously. This aligns with the hypothesis that human role ambiguity can simultaneously have both negative and positive impacts on performance for the same individuals and groups.
+The search results provide studies that examine the dual impact of role ambiguity on performance and creativity, aligning with the hypothesis's core claim.

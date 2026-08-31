@@ -13,7 +13,11 @@
 - `basketball strategy emotional awareness`
 
 ## What was found
-Studies have examined the influence of in-game emotions on basketball performance, highlighting that happiness can predict successful game involvement, while anger and embarrassment may lead to increased unsuccessful involvement. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/24533498/?utm_source=openai)) Additionally, research indicates that emotional balance, achieved by harmonizing emotional intensity with play demands, is crucial for optimal performance. ([active.com](https://www.active.com/basketball/articles/emotional-balance-f?utm_source=openai)) These findings suggest that integrating emotional awareness into basketball strategies, such as the pick-and-roll offense, could enhance team dynamics and performance.
+The influence of in-game emotions on basketball performance. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/24533498/?utm_source=openai))
+
+Emotional Balance in basketball. ([active.com](https://www.active.com/basketball/articles/emotional-balance-f?utm_source=openai))
+
+Coaches' Mind Games: Harnessing Technical Fouls for Psychological Momentum in Basketball. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/37998651/?utm_source=openai))
 
 ## Reasoning
-The search revealed studies on the impact of emotions on basketball performance, indicating that emotional states influence game outcomes. While these studies do not specifically address the integration of emotional awareness into basketball strategies like the pick-and-roll offense, they provide a foundation for exploring such connections. Therefore, the hypothesis is in the 'ADJACENT_ACTIVE' category, as it proposes a novel application of existing research on emotions in sports performance.
+The search results provide evidence that emotions significantly influence basketball performance, with happiness linked to increased successful game involvement and negative emotions like anger and embarrassment associated with decreased performance. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/24533498/?utm_source=openai)) Additionally, the concept of emotional balance in basketball highlights the importance of managing emotional intensity to optimize performance. ([active.com](https://www.active.com/basketball/articles/emotional-balance-f?utm_source=openai)) Furthermore, strategies such as leveraging technical fouls for psychological momentum demonstrate the impact of emotional dynamics on game outcomes. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/37998651/?utm_source=openai))

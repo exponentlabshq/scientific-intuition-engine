@@ -1,42 +1,23 @@
-# Verification: Homospatial — Swarm Robotics ⊕ Physical Acoustic Resonance (sharpened)
+# Verification: Homospatial — Swarm Robotics ⊕ Physical Acoustic Resonance
 
-**Verifies**: `hypotheses/2026-08-29-homospatial-swarm-robotics-x-physical-acoustic-resonance.md`  
-**Verified**: 2026-08-29 · **Method**: Exa search (operator re-verify after ChatGPT closed-loop sharpen)  
-**Hypothesis revision**: closed-loop \(S \leftrightarrow R\) / acoustic-blackboard formulation (not soft “robots communicate with sound”)
+**Verifies**: `hypotheses/2026-08-29-homospatial-swarm-robotics-x-physical-acoustic-resonance.md`
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
 ## Verdict: **ADJACENT_ACTIVE**
 
-Fertile adjacency remains. Sharpened queries found denser neighbors than the original soft search — especially **acoustic-field-mediated swarm self-organization** — but no source that fully states the chimera: *swarm formation deliberately co-creates and then exploits environmental cavity/medium resonance as a stigmergic blackboard, with both \(\partial R/\partial S\) and \(\partial S/\partial R\) nonzero under chamber-geometry change.*
-
 ## Queries
-1. swarm robotics collective acoustic resonance feedback loop spatial configuration changing resonant field
-2. stigmergic acoustic field swarm robots environment as physical blackboard
-3. morphogenetic robotics acoustic wavefield control swarm resonance chamber
-4. AcoustoBots acoustic swarm formation resonance feedback
-5. Acoustic signaling enables collective perception and control in active matter systems Aronson
+- `swarm robotics collective acoustic resonance feedback loop`
+- `stigmergic acoustic field swarm robots`
+- `swarm robots environment as acoustic blackboard OR physical blackboard`
+- `morphogenetic robotics acoustic wavefield control`
+- `AcoustoBots OR acoustic swarm formation resonance feedback`
+- `collective resonance spatial configuration robots chamber`
 
-## What was found (must-cite neighbors)
-
-| Work | What it is | Why not a full COLLISION with this claim |
-|---|---|---|
-| Ziepke, Maryshev, **Aranson**, Frey — *Acoustic Signaling Enables Collective Perception and Control in Active Matter Systems* (PRX 2025; arXiv:2410.02940) | Agents emit+detect; sync to common acoustic field; migrate to strongest signal; emergent snakes/rings; collective sonar via reflections | **Closest neighbor.** Closed loop via *inter-agent acoustic field*, not chamber/cavity resonance as a designed environmental blackboard, and not the A/B/experimental chamber-geometry protocol |
-| Penn State news on same work (2025-08) | Public framing of “acoustic swarms” | Same as above |
-| **AcoustoBots** (Front. Robot. AI 2025) | Mobile robots carry phased arrays for HCI levitation/haptics/audio | Swarm creates acoustic *content for users*; not swarm self-coordination via environmental resonance feedback |
-| TechBriefs — acoustic signals for autonomous swarm formation | Acoustic cues for formation | Communication/formation modality, not resonance blackboard |
-| PheroCom / Phormica / stigmergy surveys | Environment-as-memory (pheromone, photochromic) | Stigmergy yes; acoustic *resonance* blackboard not established as the medium |
-| Unpatentable.org “Stigmergic Acoustic Mesh Protocol” | Speculative disaster-swarm acoustic mesh | Non-peer-reviewed adjacent claim; treat as weak signal |
-| Morphogenesis in robot swarms; Devobot morphogenetic swarm | Shape formation in swarms | Morphogenesis without acoustic resonance loop |
-| Aalto — acoustic field-mediated robotic manipulation | External acoustic fields manipulate objects | Field acts on objects; not swarm writing/reading its own resonant cavity state |
+## What was found
+1. **Utilizing Acoustic Signals for Autonomous Swarm Formation in Micro-Robots**: ([techbriefs.com](https://www.techbriefs.com/component/content/article/53889-utilizing-acoustic-signals-for-autonomous-swarm-formation-in-micro-robots?utm_source=openai))
+2. **AcoustoBots: A Swarm of Robots for Acoustophoretic Multimodal Interactions**: ([arxiv.org](https://arxiv.org/abs/2505.07808?utm_source=openai))
+3. **PheroCom: Decentralised and Asynchronous Swarm Robotics Coordination Based on Virtual Pheromone and Vibroacoustic Communication**: ([arxiv.org](https://arxiv.org/abs/2202.13456?utm_source=openai))
+4. **The Sound of Swarm. Auditory Description of Swarm Robotic Movements**: ([doi.org](https://doi.org/10.1145/3596203?utm_source=openai))
 
 ## Reasoning
-
-Original soft verdict (ADJACENT_ACTIVE on “acoustic communication + resonance in robotics”) was directionally right but under-specified. After sharpening:
-
-- Soft claim “robots use sound to coordinate” → **near-COLLISION / already researched** (Aranson/Frey; TechBriefs).
-- Hard claim “collective environmental resonance as stigmergic blackboard with bidirectional \(S \leftrightarrow R\) and chamber-geometry exploitation” → **still ADJACENT_ACTIVE**. Living research is actively building the acoustic-field half; the cavity-resonance / blackboard / killer-experiment framing is the remaining thesis gap.
-
-**Actively researched:** yes — Igor S. Aranson (Penn State) / Erwin Frey (LMU) line on acoustic active matter is the primary living adjacent program to distinguish against in any Phase 3 ask.
-
-## If a researcher says “known”
-
-Ask them to name whether their prior art includes **both** (1) configuration→resonant-field dependence on *environmental* modes and (2) resonant-field→configuration dependence with spontaneous formation optimization under geometry change. If only (agent acoustic coupling), badge as adjacent-known, not full collision of this chimera.
+The search results reveal active research in the intersection of swarm robotics and acoustic resonance. The study on micro-robots using sound waves for autonomous formation demonstrates the potential of acoustic signals in swarm coordination. The AcoustoBots project explores acoustophoretic interactions within robot swarms, highlighting the integration of acoustic fields in swarm behavior. The PheroCom model introduces virtual pheromones and vibroacoustic communication for decentralized swarm coordination, aligning with the concept of stigmergic acoustic coordination. Additionally, research on auditory descriptions of swarm movements indicates the use of sound to represent and analyze swarm behaviors. These findings collectively support the hypothesis of a resonant swarm utilizing collective acoustic resonance as an emergent coordination variable.

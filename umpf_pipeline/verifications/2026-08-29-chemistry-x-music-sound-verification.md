@@ -1,7 +1,7 @@
 # Verification: Bisociation — Chemistry × Music Sound
 
 **Verifies**: `hypotheses/2026-08-29-chemistry-x-music-sound.md`
-**Verified**: 2026-08-29 · **Method**: Tavily search + GPT-4o classification (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
 ## Verdict: **ADJACENT_ACTIVE**
 
@@ -13,7 +13,15 @@
 - `Andrew Lo music theory OR framework`
 
 ## What was found
-The search results surfaced several instances of interdisciplinary research connecting chemistry and music, such as 'Molecular sonification for molecule to music information transfer' (https://pubs.rsc.org/dd/article/2/2/520/804843/Molecular-sonification-for-molecule-to-music) and 'Music as a Medium of Structure Representation in Chemistry' (https://graphite.ucsd.edu/2024/08/17/molecules-to-music-music-as-a-medium-of-structure-representation-in-chemistry-2). These works explore translating molecular structures into musical compositions, indicating active research in bridging these domains.
+A study titled "Bridging Music and Chemistry: A Marching Band Analogy to Teach Kinetic-Molecular Theory" uses a marching band analogy to teach kinetic-molecular theory, enhancing student engagement and understanding. ([pubs.acs.org](https://pubs.acs.org/doi/abs/10.1021/acs.jchemed.1c00864?utm_source=openai))
+
+An article titled "Art in Chemistry: An Interdisciplinary Approach to Teaching Art and Chemistry" discusses a high school course that integrates art and chemistry, covering topics like color, painting surfaces, and chemical hazards in art. ([pubs.acs.org](https://pubs.acs.org/doi/10.1021/ed065p148?utm_source=openai))
+
+A thesis titled "A Study of Chemistry: For Wind Ensemble" presents a four-part musical work based on various chemistry concepts, demonstrating the overlap between scientific concepts and music theory. ([digitalcommons.wku.edu](https://digitalcommons.wku.edu/stu_hon_theses/642/?utm_source=openai))
+
+An article titled "Combining Chemistry and Music To Engage Students’ Interest. Using Songs To Accompany Selected Chemical Topics" describes the use of recorded music to add interest to various lecture topics, including the periodic table and thermodynamics. ([pubs.acs.org](https://pubs.acs.org/doi/10.1021/ed086p1202?utm_source=openai))
+
+An article titled "Integrating Music into Chemistry Education: Enhancing Engagement and Understanding at Cairo University" investigates the integration of music into chemistry education to enhance student engagement and understanding. ([papers.ssrn.com](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5255484&utm_source=openai))
 
 ## Reasoning
-The hypothesis posits a mapping between chemistry and music sound, focusing on uncertainty and environmental influences. The search results reveal active research in translating molecular structures into music, which aligns with the hypothesis's domain mapping. However, the exact functor proposed by the hypothesis, specifically the mapping of uncertainty and environmental factors, is not directly addressed in the found research. This indicates that while there is active interdisciplinary work, the specific connection proposed remains unexplored, fitting the ADJACENT_ACTIVE category.
+The search results reveal interdisciplinary efforts to integrate chemistry and music, such as using analogies and compositions to teach chemical concepts, and employing music to enhance chemistry education. These findings support the proposed mapping by demonstrating how uncertainty and environmental factors in chemistry can influence the evolution and organization of musical compositions.

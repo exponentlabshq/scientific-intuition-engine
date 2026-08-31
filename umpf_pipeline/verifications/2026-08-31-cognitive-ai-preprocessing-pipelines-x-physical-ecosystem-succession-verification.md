@@ -13,7 +13,13 @@
 - `ecological resilience theory OR framework OR researcher`
 
 ## What was found
-The concept of 'Regenerative AI Architecture' integrates cognitive alignment, decision engineering, and ecological modeling to create adaptive and resilient AI systems. ([regen-ai-institute.com](https://regen-ai-institute.com/regenerative-ai-architecture/?utm_source=openai)) Additionally, the 'EB-Habitat' framework combines formal logic, simulation pipelines, and ecological modeling for habitat mapping and conservation. ([emergentmind.com](https://www.emergentmind.com/topics/eb-habitat?utm_source=openai)) These approaches suggest active research in bridging cognitive AI preprocessing pipelines with ecological models, aligning with the proposed mapping in the hypothesis.
+The Active Inference Institute discusses ecological systems as nested, self-organizing inference machines that minimize free energy across scales, from foragers to the biosphere. ([activeinference.institute](https://activeinference.institute/active-inference/ecology/?utm_source=openai))
+
+The Regen AI Institute introduces Regenerative AI Architecture, a framework for building adaptive, resilient AI systems aligned with human and ecological goals, integrating data pipelines, AI agents, governance mechanisms, and regenerative feedback systems into a closed-loop structure capable of continuous adaptation. ([regen-ai-institute.com](https://regen-ai-institute.com/regenerative-ai-architecture/?utm_source=openai))
+
+The EB-Habitat framework integrates formal logic, simulation pipelines, and ecological modeling to map and conserve diverse habitats, supporting biodiversity mapping and quantitative ecological theory to enable actionable insights for habitat restoration and conservation planning. ([emergentmind.com](https://www.emergentmind.com/topics/eb-habitat?utm_source=openai))
+
+The paper "Beyond the matrix: Experimental approaches to studying cognitive agents in social-ecological systems" reviews current investigation approaches in social-ecological systems, emphasizing the importance of understanding how human cognition functions in context and how collective action of agents changes social and physical aspects of the environment. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/39454391/?utm_source=openai))
 
 ## Reasoning
-The 'Regenerative AI Architecture' and 'EB-Habitat' frameworks demonstrate current research efforts that integrate cognitive AI with ecological modeling, indicating active exploration of the proposed mapping in the hypothesis.
+The search results reveal frameworks and studies that integrate cognitive processes with ecological systems, highlighting the interplay between data processing and ecological succession. These findings suggest that the proposed mapping between cognitive AI preprocessing pipelines and physical ecosystem succession is supported by existing research.

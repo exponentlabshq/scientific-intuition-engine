@@ -1,7 +1,7 @@
 # Verification: Homospatial — Cognitive AI Hyperparameter Orchestration ⊕ Creative Improvisation Adjustment
 
 **Verifies**: `hypotheses/2026-08-30-homospatial-cognitive-ai-hyperparameter-orchestration-x-creative-improvisation-adjustment.md`
-**Verified**: 2026-08-30 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
 ## Verdict: **ADJACENT_ACTIVE**
 
@@ -13,7 +13,9 @@
 - `creative improvisation in artificial intelligence`
 
 ## What was found
-The concept of 'Adaptive Creative Intelligence' aligns with existing research in adaptive intelligence and creativity. For instance, the 'Triad of Intelligence' model introduces Cognitive, Emotional, and Integrative Intelligence as interdependent domains within an adaptive regulatory system. ([sciencedirect.com](https://www.sciencedirect.com/science/article/abs/pii/S0732118X26000048?utm_source=openai)) Additionally, the 'Dynamic Creativity Framework' explores the interplay between cognitive, emotional, and integrative aspects in creative processes. ([doi.org](https://doi.org/10.1027/1016-9040/a000473?utm_source=openai)) These frameworks suggest that integrating adaptive learning with creative processes is an active area of research, supporting the plausibility of the proposed 'Adaptive Creative Intelligence' system.
+The Dynamic Creativity Framework: Theoretical and Empirical Investigations ([doi.org](https://doi.org/10.1027/1016-9040/a000473?utm_source=openai))
+A Theory of Adaptive Intelligence and Its Relation to General Intelligence ([mdpi.com](https://www.mdpi.com/2079-3200/7/4/23?utm_source=openai))
+Adaptive Cognitive Fit: Artificial Intelligence Augmented Management of Information Facets and Representations ([arxiv.org](https://arxiv.org/abs/2204.11405?utm_source=openai))
 
 ## Reasoning
-The search results reveal that the integration of adaptive learning and creativity is a current research focus, indicating that the proposed 'Adaptive Creative Intelligence' is an active area of study.
+The search results reveal several frameworks and theories related to adaptive intelligence and creativity, such as the Dynamic Creativity Framework, the Theory of Adaptive Intelligence, and the Adaptive Cognitive Fit framework. However, none of these sources specifically mention a system named "Adaptive Creative Intelligence" that integrates cognitive AI hyperparameter orchestration with creative improvisation adjustment. Therefore, the hypothesis appears to be novel, with no direct prior art found.

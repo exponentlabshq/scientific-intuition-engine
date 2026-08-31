@@ -1,7 +1,7 @@
 # Verification: Homospatial — Comedy ⊕ Cognitive AI Hyperparameter Orchestration
 
 **Verifies**: `hypotheses/2026-08-29-homospatial-comedy-x-cognitive-ai-hyperparameter-orchestration.md`
-**Verified**: 2026-08-29 · **Method**: Tavily search + GPT-4o classification (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
 ## Verdict: **ADJACENT_ACTIVE**
 
@@ -13,7 +13,11 @@
 - `AI hyperparameter tuning in entertainment`
 
 ## What was found
-The search results revealed active research in humor generation and AI, such as the 'THInC: A Theory-Driven Framework for Computational Humor Detection' (https://arxiv.org/pdf/2409.01232) and 'Context-Adaptive Humor Rewriting: A First-Order Logic Framework Using Large Language Models' (https://ojs.aaai.org/index.php/AAAI-SS/article/download/42592/50152/46693). Additionally, real-time audience feedback in AI content generation is discussed in 'How Real-Time AI Feedback Transforms Event Experiences' (https://www.snapsight.com/en/resources/blog/how-real-time-ai-feedback-transforms-event-experiences).
+HumorGen: Cognitive Synergy for Humor Generation in Large Language Models via Persona-Based Distillation ([arxiv.org](https://arxiv.org/abs/2604.09629?utm_source=openai))
+
+HUMORCHAIN: Theory-Guided Multi-Stage Reasoning for Interpretable Multimodal Humor Generation ([arxiv.org](https://arxiv.org/abs/2511.21732?utm_source=openai))
+
+Humor intelligence: Production, perception, prediction, and measurement. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/38056403/?utm_source=openai))
 
 ## Reasoning
-The hypothesis suggests a novel integration of comedy and AI hyperparameter orchestration through real-time audience feedback, termed Humor-Driven Adaptive Intelligence (HDAI). While no exact match for HDAI was found, there is active research in related areas such as computational humor frameworks and real-time AI feedback systems. These indicate a fertile area of research adjacent to the hypothesis, supporting the ADJACENT_ACTIVE verdict.
+The search results reveal active research in humor generation within AI, focusing on integrating cognitive theories and multimodal data to enhance humor production. For instance, the 'HumorGen' framework employs a Mixture-of-Thought approach with cognitive personas to generate diverse comedic perspectives. Similarly, 'HUMORCHAIN' integrates visual semantic parsing with humor and psychology-based reasoning for multimodal humor generation. Additionally, the concept of 'Humor Intelligence' is explored, emphasizing the production, perception, and prediction of humor. These developments indicate a growing field of AI-driven humor generation, aligning with the proposed concept of Humor-Driven Adaptive Intelligence (HDAI).

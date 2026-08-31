@@ -1,9 +1,9 @@
 # Verification: Bisociation — Human Learning Uncertainty × Physical Quantum Measurement
 
 **Verifies**: `hypotheses/2026-08-30-human-learning-uncertainty-x-physical-quantum-measurement.md`
-**Verified**: 2026-08-30 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
-## Verdict: **ADJACENT_ACTIVE**
+## Verdict: **NO_SIGNAL**
 
 ## Queries
 - `quantum measurement uncertainty and human learning`
@@ -13,7 +13,13 @@
 - `uncertainty in learning processes and quantum states`
 
 ## What was found
-Quantum feedback mechanisms, such as measurement-based feedback and coherent feedback, are utilized to stabilize quantum systems and control their evolution. ([nature.com](https://www.nature.com/nature-index/topics/l4/quantum-coherence-and-feedback-mechanisms-in-cavity-systems?utm_source=openai)) In human learning, feedback loops are essential for guiding future actions based on performance outcomes. ([teachthought.com](https://www.teachthought.com/learning-posts/what-is-a-feedback-loop-for-learning/?utm_source=openai)) While both domains involve feedback interactions leading to refined understanding or outcomes, the specific mapping between human learning uncertainty and physical quantum measurement remains an open area for exploration.
+1. "Closed-Loop and Robust Control of Quantum Systems" discusses feedback control methods in quantum systems, including measurement-based control and coherent-feedback control. ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC3749599/?utm_source=openai))
+
+2. "Feedback Loops in Systems Theory: Types and Functions" provides an overview of feedback loops, including positive and negative feedback, and their applications in various systems. ([systemstheoryauthority.com](https://systemstheoryauthority.com/feedback-loops?utm_source=openai))
+
+3. "Measurement-Based Feedback Quantum Control with Deep Reinforcement Learning for a Double-Well Nonlinear Potential" explores the use of deep reinforcement learning in quantum control, particularly for nonlinear systems. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/34797162/?utm_source=openai))
+
+4. "Quantum Measurement Statistics as Bayesian Uncertainty Estimators for Physics-Constrained Learning" examines the use of quantum measurement statistics in uncertainty quantification for physics-informed learning. ([arxiv.org](https://arxiv.org/abs/2604.10896?utm_source=openai))
 
 ## Reasoning
-The search results reveal active research in both quantum feedback mechanisms and feedback loops in human learning, indicating a fertile area for interdisciplinary exploration. However, the exact mapping between human learning uncertainty and physical quantum measurement has not been established, suggesting the hypothesis is in the ADJACENT_ACTIVE category.
+The search results reveal active research in both human learning and quantum measurement, particularly focusing on feedback loops and uncertainty quantification. However, there is no direct evidence of a mapping between human learning uncertainty and physical quantum measurement. The bridging material found is generic and would likely appear in many other domain pairs, making it insufficient to support the hypothesis.

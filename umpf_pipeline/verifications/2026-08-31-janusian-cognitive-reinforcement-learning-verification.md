@@ -13,7 +13,9 @@
 - `Cognitive psychology named theory OR framework OR researcher`
 
 ## What was found
-Studies on cognitive load theory highlight that both excessive and insufficient cognitive load can impede learning efficiency. Research on reinforcement learning indicates that increased incentives can sometimes decrease performance, especially when reinforcement cues are present. ([sciencedirect.com](https://www.sciencedirect.com/science/article/pii/S0165176521004511?utm_source=openai))
+The reinforcement paradox: Monetary incentives and Bayesian updating ([sciencedirect.com](https://www.sciencedirect.com/science/article/pii/S0165176521004511?utm_source=openai))
+Cognitive load theory, educational research, and instructional design: some food for thought ([link.springer.com](https://link.springer.com/article/10.1007/s11251-009-9110-0?utm_source=openai))
+Cognitive load, affect, and regulatory strategies: a more integrated model ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC13254164/?utm_source=openai))
 
 ## Reasoning
-The search results reveal that cognitive load theory and reinforcement learning research acknowledge that factors can both enhance and hinder learning efficiency. However, they do not directly address the simultaneous occurrence of these effects within the same learning instance, nor do they predict scenarios where agents achieve high performance while experiencing confusion due to cognitive overload. This suggests that the hypothesis is in the 'ADJACENT_ACTIVE' category, indicating active research in related areas but not directly confirming the specific claim.
+The reinforcement paradox explores how increased incentives can sometimes decrease performance in Bayesian updating tasks, highlighting a complex relationship between cognitive processes and learning efficiency. Cognitive load theory examines how managing cognitive load can enhance learning efficiency, while also acknowledging that excessive load can hinder learning. The integrated model of cognitive load, affect, and regulatory strategies suggests that both enhancing and hindering factors can simultaneously influence learning outcomes.

@@ -3,7 +3,7 @@
 **Verifies**: `hypotheses/2026-08-31-homospatial-sports-x-informational-protocol-coordination.md`
 **Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
-## Verdict: **ADJACENT_ACTIVE**
+## Verdict: **COLLISION**
 
 ## Queries
 - `Pitch Protocol Dynamics theory OR framework`
@@ -13,7 +13,7 @@
 - `communication protocols in competitive sports`
 
 ## What was found
-Studies have analyzed baseball pitch sequences using probabilistic models and machine learning to predict pitch outcomes and optimize strategies. For instance, research by Yoshihara and Takahashi employed a probabilistic topic model to examine pitch sequences, highlighting the importance of understanding pitch trends based on various factors. ([papers.ssrn.com](https://papers.ssrn.com/sol3/Delivery.cfm/SSRN_ID3964244_code3330282.pdf?abstractid=3728430&mirid=1&utm_source=openai)) Additionally, Healey and Zhao developed a model using PITCHf/x data to assess the impact of pitch sequence predictability on strikeout rates, emphasizing the strategic significance of pitch sequencing. ([journals.sagepub.com](https://journals.sagepub.com/doi/full/10.3233/JSA-170103?utm_source=openai)) These studies underscore the relevance of analyzing pitch sequences to inform real-time decision-making and strategy adaptation in baseball.
+"Pitch Sequences in Baseball: Analysis Using a Probabilistic Topic Model" by Keisuke Yoshihara and Kei Takahashi ([papers.ssrn.com](https://papers.ssrn.com/sol3/Delivery.cfm/SSRN_ID3964244_code3330282.pdf?abstractid=3728430&mirid=1&utm_source=openai)); "Using PITCHf/x to model the dependence of strikeout rate on the predictability of pitch sequences" by Glenn Healey and Shiyuan Zhao ([journals.sagepub.com](https://journals.sagepub.com/doi/full/10.3233/JSA-170103?utm_source=openai)); "Counterfactual Optimization of Baseball Pitch Sequences and Estimation of Its Impact on Season-Level Statistics" by Ryota Takamido and Hiroki Nakamoto ([arxiv.org](https://arxiv.org/abs/2606.17345?utm_source=openai)); "Structure of Pitch-Pattern Motifs in Major League Baseball" by Youngjai Park et al. ([arxiv.org](https://arxiv.org/abs/2601.11904?utm_source=openai))
 
 ## Reasoning
-The search results reveal active research in analyzing baseball pitch sequences using advanced models and data analytics, aligning with the concept of 'Pitch Protocol Dynamics' as a communication framework between pitcher and batter. This indicates that the hypothesis is situated within an active research area, though the exact term 'Pitch Protocol Dynamics' is not commonly used.
+The search results reveal active research on baseball pitch sequencing, including analyses using probabilistic models, PITCHf/x data, and counterfactual optimization. However, there is no direct mention of "Pitch Protocol Dynamics" as a communication framework where each pitch serves as a coded message and the batter's responses inform subsequent pitches. The existing studies focus on statistical analyses and optimization of pitch sequences but do not describe a unified system that enhances the tactical interplay between pitcher and batter as proposed in the hypothesis.

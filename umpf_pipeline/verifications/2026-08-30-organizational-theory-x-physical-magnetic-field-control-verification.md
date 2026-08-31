@@ -1,7 +1,7 @@
 # Verification: Bisociation — Organizational Theory × Physical Magnetic Field Control
 
 **Verifies**: `hypotheses/2026-08-30-organizational-theory-x-physical-magnetic-field-control.md`
-**Verified**: 2026-08-30 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
 ## Verdict: **ADJACENT_ACTIVE**
 
@@ -13,7 +13,9 @@
 - `collective intelligence magnetic systems`
 
 ## What was found
-Research on self-organizing systems and emergent behavior in both organizational theory and physical systems like magnetic fields. For example, studies on self-organizing teams highlight characteristics such as distributed control, continuous adaptation, emergent structure, feedback, and resilience. ([agile42.com](https://www.agile42.com/en/blog/self-organizing-teams?utm_source=openai)) Similarly, research on emergent inductance in spiral magnets demonstrates how local interactions can lead to global electromagnetic responses. ([nature.com](https://www.nature.com/articles/s42005-021-00765-3?utm_source=openai))
+Self-Organizing System - Emergent Wiki
+Self-Organizing Teams: A Complete Guide - agile42
+Electromagnetic response in spiral magnets and emergent inductance
 
 ## Reasoning
-The search results reveal active research in both organizational theory and physical magnetic field control, focusing on emergent behaviors and self-organization. This indicates that the proposed mapping between these domains is plausible and worth further exploration.
+The search results provide information on self-organizing systems and emergent behavior in both organizational and physical contexts. The Emergent Wiki article discusses self-organizing systems across various domains, including physics and social theory. The agile42 guide outlines characteristics of self-organizing teams, emphasizing distributed control and emergent structure. The study on spiral magnets explores emergent inductance in magnetic systems. These sources suggest that emergent properties arise from local interactions in both organizational and physical systems, supporting the proposed mapping.

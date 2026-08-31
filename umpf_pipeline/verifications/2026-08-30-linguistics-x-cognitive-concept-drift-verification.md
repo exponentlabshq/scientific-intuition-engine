@@ -1,7 +1,7 @@
 # Verification: Bisociation — Linguistics × Cognitive Concept Drift
 
 **Verifies**: `hypotheses/2026-08-30-linguistics-x-cognitive-concept-drift.md`
-**Verified**: 2026-08-30 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
 ## Verdict: **ADJACENT_ACTIVE**
 
@@ -13,7 +13,9 @@
 - `contextual influences on language change and cognition`
 
 ## What was found
-A stochastic model studying phonetic changes as an evolutionary process driven by social interactions between two groups with different phonological systems. ([journals.aps.org](https://journals.aps.org/pre/abstract/10.1103/PhysRevE.101.022312?utm_source=openai)) The life cycle of phonological processes, explaining how sound changes develop over time, from their beginnings in the pressures of speaking and hearing to their final resting-place as a lexical or morphological pattern. ([journals.ed.ac.uk](https://journals.ed.ac.uk/pihph/article/view/1691?utm_source=openai)) The emergence of phonological dispersion through interaction, an exploratory secondary analysis of a communicative game. ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC10244737/?utm_source=openai))
+1. "Model for phonetic changes driven by social interactions" (https://pubmed.ncbi.nlm.nih.gov/32168696/)
+2. "The emergence of phonological dispersion through interaction: an exploratory secondary analysis of a communicative game" (https://pmc.ncbi.nlm.nih.gov/articles/PMC10244737/)
+3. "Drift as a Driver of Language Change: An Artificial Language Experiment." (https://pubmed.ncbi.nlm.nih.gov/36083286/)
 
 ## Reasoning
-The search results reveal active research in the intersection of linguistics and cognitive concept drift, particularly focusing on phonetic changes driven by social interactions and the life cycle of phonological processes. These studies explore how language evolves over time through social interactions and cognitive processes, aligning with the proposed mapping in the hypothesis. The specific mapping of variations in pronunciation to variations in concept recognition, and the evolution of language state to cognitive state, are not directly addressed in the found research, indicating that the exact correspondence proposed in the hypothesis has not been previously established.
+The search results reveal studies that model phonetic changes as evolutionary processes driven by social interactions, such as the stochastic model by Chacoma et al. (2020) ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/32168696/?utm_source=openai)), and the emergence of phonological dispersion through interaction analyzed by Roberts and Clark (2023) ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC10244737/?utm_source=openai)). Additionally, the study by Ventura et al. (2022) explores drift as a driver of language change in artificial language experiments ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/36083286/?utm_source=openai)). These findings suggest that both linguistic sound changes and cognitive concept drift can be influenced by social interactions and evolutionary processes, supporting the proposed mapping between the two domains.

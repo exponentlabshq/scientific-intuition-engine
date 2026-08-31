@@ -1,7 +1,7 @@
 # Verification: Bisociation — Cross Domain Pattern Recognition × Human Role Ambiguity
 
 **Verifies**: `hypotheses/2026-08-30-cross-domain-pattern-recognition-x-human-role-ambiguity.md`
-**Verified**: 2026-08-30 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
 ## Verdict: **ADJACENT_ACTIVE**
 
@@ -13,7 +13,9 @@
 - `Ambiguity in social roles cognitive science`
 
 ## What was found
-Adaptive Role Identity Alignment (ARIA) theory explores how individuals adapt their role identities under ambiguity, emphasizing the reconciliation of identity standards and interpreted role meanings to facilitate discretionary action. ([papers.ssrn.com](https://papers.ssrn.com/sol3/Delivery.cfm/6845880.pdf?abstractid=6845880&mirid=1&utm_source=openai)) Additionally, research on cross-domain pattern classification, such as the study on distribution adaptation based on evidence theory, addresses challenges in transferring knowledge across domains, which is pertinent to understanding how patterns in one context can inform role definitions in another. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/34936566/?utm_source=openai))
+Adaptive Role Identity Alignment (ARIA): A Mechanism Theory of Discretionary Action Under Ambiguity by Jerae Perez
+Cross-Domain Pattern Classification With Distribution Adaptation Based on Evidence Theory - PubMed
+Unified Cross-domain Classification via Geometric and Statistical Adaptations - ScienceDirect
 
 ## Reasoning
-The ARIA theory provides a framework for understanding how individuals navigate role ambiguity, aligning with the proposed mapping of uncertainty in pattern validity to uncertainty in role definitions. The cross-domain pattern classification research offers insights into how knowledge integration across domains can inform role integration, aligning with the proposed mapping of integrating knowledge across domains to integrating individual roles. These findings indicate active research in areas related to the proposed hypothesis, suggesting its relevance and potential for further exploration.
+The search results reveal research that connects cross-domain pattern recognition with human role ambiguity. The ARIA theory discusses how individuals adapt their role identities under ambiguity, which aligns with the concept of evolving role definitions. The study on cross-domain pattern classification addresses the adaptation of patterns across different domains, which can be related to the integration of knowledge across domains. The unified cross-domain classification research focuses on adapting classification models across domains, which can be associated with the integration of individual roles.

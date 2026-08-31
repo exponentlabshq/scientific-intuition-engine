@@ -13,7 +13,13 @@
 - `algorithmic trading frameworks OR theories OR researchers`
 
 ## What was found
-Algorithmic art involves creating art through computational processes, where artists design systems that generate outputs based on predefined rules, emphasizing process over direct manipulation. ([bvdart.nl](https://bvdart.nl/en/concepts/algorithmic-art?utm_source=openai)) In algorithmic trading, strategies like trend following, mean reversion, and scalping utilize algorithms to execute trades based on market data, aiming to optimize financial returns. ([oanda.com](https://www.oanda.com/eu-en/blog/what-is-algorithmic-trading?utm_source=openai)) Both fields involve designing systems that process inputs to produce desired outputs, highlighting the intersection of creative arrangement and algorithmic execution.
+1. 'Financialization of Art' by Mark Taylor explores the integration of financial principles into the art market, highlighting how art becomes a commodity within financial systems. ([papers.ssrn.com](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2208046&utm_source=openai))
+
+2. 'Algorithmic Art: Process as Medium' discusses how artists design systems where algorithms generate art, emphasizing the role of process over direct manipulation. ([bvdart.nl](https://bvdart.nl/en/concepts/algorithmic-art?utm_source=openai))
+
+3. 'Art Meets AI Algorithms' details a collaboration where AI algorithms are applied to art, illustrating the intersection of technology and creative expression. ([ieor.columbia.edu](https://ieor.columbia.edu/news/art-meets-ai-algorithms?utm_source=openai))
+
+4. 'Toward Modeling Creative Processes for Algorithmic Painting' proposes a framework for computational modeling of artistic painting algorithms, inspired by human creative practices. ([arxiv.org](https://arxiv.org/abs/2205.01605?utm_source=openai))
 
 ## Reasoning
-The concept of algorithmic art, where artists design systems to generate outputs based on predefined rules, parallels the design of trading algorithms that process market data to execute trades. This intersection illustrates the application of creative arrangement principles in algorithmic systems, bridging the domains of artistic composition and financial trading algorithms.
+The search results provide insights into the intersection of art and algorithmic processes, as well as the integration of financial principles into the art market. These findings are directly relevant to the proposed mapping between creative artistic arrangement and human financial trading algorithms.

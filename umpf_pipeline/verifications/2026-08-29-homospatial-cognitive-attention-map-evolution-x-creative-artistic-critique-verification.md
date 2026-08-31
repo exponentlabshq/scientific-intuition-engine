@@ -1,7 +1,7 @@
 # Verification: Homospatial — Cognitive Attention Map Evolution ⊕ Creative Artistic Critique
 
 **Verifies**: `hypotheses/2026-08-29-homospatial-cognitive-attention-map-evolution-x-creative-artistic-critique.md`
-**Verified**: 2026-08-29 · **Method**: Tavily search + GPT-4o classification (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
 ## Verdict: **ADJACENT_ACTIVE**
 
@@ -13,7 +13,13 @@
 - `Attention maps and their evolution in response to art criticism`
 
 ## What was found
-The search results revealed active research in the intersection of cognitive attention mapping and artistic critique, such as the concept of cognitive mapping in art (sources [1], [2]), and studies on how art perception is influenced by critique and attention (sources [6], [9], [10]). Additionally, there are discussions on the neuroscience of attention in response to artistic evaluation (sources [11], [13], [14]).
+A study titled "Art Expertise Reduces Influence of Visual Salience on Fixation in Viewing Abstract-Paintings" published in PLOS One examines how art expertise affects visual attention during the viewing of abstract paintings. ([journals.plos.org](https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0117696&utm_source=openai))
+
+Another study, "Do aesthetic judgements and sensory sensitivity predict attention to visual art? A wearable eye-tracking study in an art gallery," published in Art & Perception, investigates how aesthetic judgments and sensory sensitivity influence gaze and attention to visual art. ([research.tilburguniversity.edu](https://research.tilburguniversity.edu/en/publications/do-aesthetic-judgements-and-sensory-sensitivity-predict-attention/?utm_source=openai))
+
+Additionally, "Viewing of figurative paintings affects pseudoneglect as measured by line bisection," published in Attention, Perception, & Psychophysics, explores how viewing figurative paintings influences spatial attention biases. ([boa.unimib.it](https://boa.unimib.it/handle/10281/296357?utm_source=openai))
+
+These studies collectively suggest that art expertise, aesthetic judgments, and the nature of the artwork can influence visual attention and perception, supporting the concept of Critique-Enhanced Attention Mapping (CEAM).
 
 ## Reasoning
-While no source directly describes the Critique-Enhanced Attention Mapping (CEAM) framework, there is significant research activity in related areas. The studies on cognitive mapping in art and the influence of critique on attention allocation suggest a fertile ground for the proposed hypothesis. The presence of these studies indicates that the domains are actively researched, but the specific integration of attention map evolution with artistic critique as described in CEAM has not been explicitly addressed, making this hypothesis adjacent to active research.
+The cited studies provide empirical evidence that art expertise, aesthetic judgments, and the nature of the artwork influence visual attention and perception, aligning with the concept of Critique-Enhanced Attention Mapping (CEAM).

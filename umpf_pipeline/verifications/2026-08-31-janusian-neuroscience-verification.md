@@ -13,7 +13,7 @@
 - `Hebbian theory synaptic pruning implications`
 
 ## What was found
-Research indicates that synaptic pruning is essential for brain development, enhancing learning and memory by eliminating unused connections. However, excessive pruning has been linked to cognitive deficits, such as those observed in schizophrenia. Studies suggest that both insufficient and excessive pruning can lead to developmental issues, highlighting the delicate balance required for optimal cognitive function.
+Synaptic pruning is a natural process where the brain eliminates extra synapses, enhancing neural efficiency. ([my.clevelandclinic.org](https://my.clevelandclinic.org/health/articles/synaptic-pruning?utm_source=openai)) However, excessive pruning has been linked to cognitive deficits, as seen in schizophrenia. ([healthline.com](https://www.healthline.com/health/synaptic-pruning?utm_source=openai)) Conversely, insufficient pruning may lead to developmental issues, such as autism spectrum disorder. ([medicalnewstoday.com](https://www.medicalnewstoday.com/articles/synaptic-pruning?utm_source=openai))
 
 ## Reasoning
-The search results confirm that synaptic pruning is crucial for effective brain development, but excessive pruning can harm cognitive function, aligning with the hypothesis's core claim.
+The search results indicate that synaptic pruning is essential for brain development, but both excessive and insufficient pruning can lead to cognitive deficits, supporting the hypothesis that both statements can be true simultaneously.

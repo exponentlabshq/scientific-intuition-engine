@@ -1,7 +1,7 @@
 # Verification: Janusian — Human Committee Formation
 
 **Verifies**: `hypotheses/2026-08-30-janusian-human-committee-formation.md`
-**Verified**: 2026-08-30 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
 ## Verdict: **ADJACENT_ACTIVE**
 
@@ -13,7 +13,9 @@
 - `committee formation theories OR frameworks OR researchers`
 
 ## What was found
-Research indicates that combining consensus-building and hierarchical decision-making can enhance committee effectiveness. For instance, a study found that introducing a hierarchical decision-making structure improved consensus formation, leading to collective opinions closer to the true average of individual opinions. ([arxiv.org](https://arxiv.org/abs/1204.0015?utm_source=openai)) Additionally, a model demonstrated that a single-leader hierarchy reduced consensus time and the impact of group size on decision-making. ([arxiv.org](https://arxiv.org/abs/1907.01927?utm_source=openai))
+The Decision-Making Grid: A Model of Decision-Making Styles ([cmr.berkeley.edu](https://cmr.berkeley.edu/1964/02/7-2-the-decision-making-grid-a-model-of-decision-making-styles/?utm_source=openai))
+Committee Decisions under Majority Rule: An Experimental Study ([cambridge.org](https://www.cambridge.org/core/journals/american-political-science-review/article/abs/committee-decisions-under-majority-rule-an-experimental-study/F3C180DD7E8E31A1FABC516151FE9B5F?utm_source=openai))
+Nominal Versus Interacting Group Processes for Committee Decision-Making Effectiveness ([journals.aom.org](https://journals.aom.org/doi/10.5465/255307?utm_source=openai))
 
 ## Reasoning
-The search results reveal that integrating consensus-building with hierarchical decision-making structures can lead to more effective committee outcomes, aligning with the hypothesis's prediction.
+The search results reveal that both consensus-building and hierarchical decision-making are studied in committee contexts. For instance, the Decision-Making Grid model discusses various decision-making styles, including consensus and hierarchical approaches. Additionally, studies like "Committee Decisions under Majority Rule: An Experimental Study" and "Nominal Versus Interacting Group Processes for Committee Decision-Making Effectiveness" explore how different decision-making processes impact committee outcomes. These findings suggest that committees can effectively integrate both consensus-building and hierarchical decision-making to achieve optimal results.

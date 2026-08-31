@@ -1,7 +1,7 @@
 # Verification: Janusian — Gaming Narrative (Creative & Performance Systems)
 
 **Verifies**: `hypotheses/2026-08-30-janusian-gaming-narrative.md`
-**Verified**: 2026-08-29 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
 ## Verdict: **ADJACENT_ACTIVE**
 
@@ -13,7 +13,7 @@
 - `narrative-driven games player agency analysis`
 
 ## What was found
-The search revealed several articles discussing the impact of player agency on narrative progression in video games. For instance, an article from PlayStation Universe highlights how modern games like 'The Witcher 3' and 'Detroit: Become Human' allow players to shape the course and actions of the game, making the storytelling more interactive and personalized. ([psu.com](https://www.psu.com/news/the-impact-of-player-choice-on-video-game-narratives/?utm_source=openai)) Similarly, an article from Entertainment Resource & Marketing Association discusses how player choices in games like 'The Witcher 3' and 'Baldur’s Gate 3' can affect character relationships, world states, and ultimate endings, transforming players from passive observers into active architects of their own stories. ([erma.org](https://erma.org/how-player-actions-shape-story-paths-in-todays-video-games/?utm_source=openai))
+The Expanse: Osiris Reborn emphasizes player choices that significantly influence character development and story outcomes. ([gamesradar.com](https://www.gamesradar.com/games/action-rpg/the-expanse-rpg-gets-even-more-mass-effect-with-choices-that-define-the-character-you-play-devs-say-but-you-only-have-one-chance-to-stay-on-everyones-good-side/?utm_source=openai)) Grand Theft Auto 6 aims to implement consequences that broadly influence the game world and storyline, surpassing previous titles. ([gamesradar.com](https://www.gamesradar.com/games/grand-theft-auto/gta-6-promises-big-consequences-for-your-actions-that-go-beyond-red-dead-redemption-2s-honor-system/?utm_source=openai)) Dragon Quest 7 Reimagined introduces a new ending based on player choices, offering a fresh narrative experience. ([gamesradar.com](https://www.gamesradar.com/games/dragon-quest/dragon-quest-7-reimagined-makes-the-original-jrpgs-choices-actually-matter-with-a-brand-new-possible-ending-thats-never-been-seen-before-in-previous-iterations/?utm_source=openai))
 
 ## Reasoning
-The search results indicate that while player agency significantly influences narrative progression in many games, there are instances where player choices have minimal impact on the overall narrative. This suggests that both aspects—player agency driving narrative progression and having little effect on narrative outcomes—can coexist within the same game experience. However, the exact balance between these elements varies across different games and is an area of ongoing research and development in the gaming industry.
+These examples illustrate that player agency can both drive narrative progression and, in some cases, have minimal impact on outcomes, depending on game design.

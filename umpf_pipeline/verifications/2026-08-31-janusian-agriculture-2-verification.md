@@ -13,7 +13,11 @@
 - `crop rotation theory OR framework OR researcher`
 
 ## What was found
-A study titled "Effects of Crop Rotation and Continuous Cropping on Soil Health and Crop Yields" discusses the impact of crop rotation and continuous cropping on soil health and crop yields. ([mdpi.com](https://www.mdpi.com/2077-0472/16/12/1354?utm_source=openai)) Another study, "Continuous Cropping Alters Multiple Biotic and Abiotic Indicators of Soil Health," examines how continuous cropping affects soil health indicators. ([mdpi.com](https://www.mdpi.com/2571-8789/4/4/59?utm_source=openai)) Additionally, research titled "Evaluating crop rotations around the world using satellite imagery and causal machine learning" analyzes the effects of crop rotations on crop yields. ([arxiv.org](https://arxiv.org/abs/2506.02384?utm_source=openai))
+A meta-analysis published in September 2023 in *Soil and Tillage Research* examined the impact of diversified crop rotations on soil physical health. The study found that increasing crop diversity significantly reduced bulk density, enhanced soil aggregation, improved porosity, and increased saturated hydraulic conductivity compared to less diverse systems. ([sciencedirect.com](https://www.sciencedirect.com/science/article/abs/pii/S0167198723001484?utm_source=openai))
+
+However, a 2025 study by Iowa State University challenges the traditional belief that rotating crops fertilized with livestock manure increases soil carbon content. Preliminary findings indicate that this practice does not significantly boost soil carbon levels, contrary to past assumptions. ([axios.com](https://www.axios.com/local/des-moines/2025/04/15/crop-rotation-assumptions-iowa-research-isu?utm_source=openai))
+
+These findings suggest that while crop rotation is generally beneficial for soil health, its impact on soil carbon sequestration may be less significant than previously thought.
 
 ## Reasoning
-The search results reveal active research on the effects of crop rotation and continuous cropping on soil health and crop yields. However, they do not provide evidence that both crop rotation is essential and not necessary for maintaining soil health can simultaneously hold true for the same agricultural field. Therefore, the hypothesis is in the "ADJACENT_ACTIVE" category, indicating that while related research exists, the specific claim has not been substantiated.
+The meta-analysis supports the claim that crop rotation enhances soil physical health, while the Iowa State University study challenges the assumption that crop rotation increases soil carbon content.

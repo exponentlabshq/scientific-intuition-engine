@@ -1,7 +1,7 @@
 # Verification: Janusian — Epidemiology — Herd Immunity Thresholds
 
 **Verifies**: `hypotheses/2026-08-29-janusian-epidemiology.md`
-**Verified**: 2026-08-29 · **Method**: Tavily search + GPT-4o classification (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
 ## Verdict: **ADJACENT_ACTIVE**
 
@@ -13,7 +13,7 @@
 - `case studies herd immunity effectiveness`
 
 ## What was found
-The search results indicate active research on the variability of herd immunity thresholds and their implications for vaccination campaigns. For example, the article 'The herd-immunity threshold must be updated for multi-vaccine strategies and multiple variants' (https://www.nature.com/articles/s41598-021-00083-2) discusses how herd immunity thresholds must be adjusted for different vaccines and variants, which aligns with the hypothesis's focus on variability and unpredictability in vaccination effectiveness. Additionally, 'Vaccines and Herd Immunity' (https://idcare.com/blog/vaccines-and-herd-immunity) highlights the challenges in achieving herd immunity for diseases like COVID-19 and whooping cough, further supporting the hypothesis's claim about unpredictable outbreaks.
+A study titled "A note on variable susceptibility, the herd-immunity threshold and modeling of infectious diseases" discusses how individual variations in susceptibility can affect the herd immunity threshold (HIT). ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/36791079/?utm_source=openai)) Another paper, "Herd immunity under individual variation and reinfection," explores how heterogeneity in susceptibility and exposure influences the HIT. ([arxiv.org](https://arxiv.org/abs/2008.00098?utm_source=openai)) Additionally, "Super-Spreaders Out, Super-Spreading In: The Effects of Infectiousness Heterogeneity and Lockdowns on Herd Immunity" examines how variations in infectiousness and susceptibility impact the HIT. ([arxiv.org](https://arxiv.org/abs/2101.09188?utm_source=openai))
 
 ## Reasoning
-The hypothesis suggests that the variability in herd immunity thresholds leads to unpredictable vaccination outcomes. The search results provide evidence of active research on this variability and its impact on vaccination campaigns, such as the need to update thresholds for different variants and the challenges in achieving herd immunity for specific diseases. This indicates that the hypothesis is in a fertile area of research, with specific studies addressing related issues, but the exact connection proposed by the hypothesis has not been explicitly made in the literature, thus fitting the ADJACENT_ACTIVE category.
+These studies provide evidence that the HIT is not a fixed value but varies due to individual differences in susceptibility and exposure. This variability can lead to unpredictable outbreaks, even in populations that appear to meet the HIT.

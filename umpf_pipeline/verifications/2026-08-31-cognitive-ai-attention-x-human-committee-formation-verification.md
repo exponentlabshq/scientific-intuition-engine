@@ -13,7 +13,13 @@
 - `Daniel Kahneman decision-making framework in committees`
 
 ## What was found
-The Attention Schema Theory (AST) in cognitive science posits that individuals manage their attention by creating a model of the attention itself, effectively allocating cognitive resources. Inspired by AST, the Attention Schema-based Attention Control (ASAC) approach integrates this concept into artificial neural networks, enhancing attention management in AI systems. ([arxiv.org](https://arxiv.org/abs/2509.16058?utm_source=openai)) Additionally, research on human decision-making under uncertainty has been explained by theoretical models based on prospect theory, a framework that was awarded the Nobel Prize in Economic Sciences. ([arxiv.org](https://arxiv.org/abs/1905.09397?utm_source=openai))
+1. 'Attention: Theory, Principles, Models and Applications' by Christopher Wickens discusses attention as a filter of selective attention that selects and admits channels of information from the environment to be processed. ([doi.org](https://doi.org/10.1080/10447318.2021.1874741?utm_source=openai))
+
+2. 'Decision-Making Models' by Judith Stein outlines various decision-making models, including consensus decision-making, which emphasizes collective agreement among committee members. ([hr.mit.edu](https://hr.mit.edu/learning-topics/teams/articles/models?utm_source=openai))
+
+3. 'Attention Schema-based Attention Control (ASAC): A Cognitive-Inspired Approach for Attention Management in Transformers' introduces ASAC, integrating the attention schema concept into artificial neural networks to enhance attention management. ([arxiv.org](https://arxiv.org/abs/2509.16058?utm_source=openai))
+
+4. 'Neural Mechanisms of Human Decision-Making' presents a computational model of the neural mechanisms underlying human decision-making, proposing a detailed model of the interaction between brain regions under a proposer-predictor-actor-critic framework. ([arxiv.org](https://arxiv.org/abs/1912.07660?utm_source=openai))
 
 ## Reasoning
-The Attention Schema Theory (AST) in cognitive science posits that individuals manage their attention by creating a model of the attention itself, effectively allocating cognitive resources. Inspired by AST, the Attention Schema-based Attention Control (ASAC) approach integrates this concept into artificial neural networks, enhancing attention management in AI systems. ([arxiv.org](https://arxiv.org/abs/2509.16058?utm_source=openai)) Additionally, research on human decision-making under uncertainty has been explained by theoretical models based on prospect theory, a framework that was awarded the Nobel Prize in Economic Sciences. ([arxiv.org](https://arxiv.org/abs/1905.09397?utm_source=openai))
+The first two sources provide foundational theories on attention mechanisms in cognitive science and decision-making models in human committees, respectively. The third and fourth sources offer advanced applications and computational models that bridge these domains, demonstrating the relevance of attention mechanisms in both AI and human decision-making processes.

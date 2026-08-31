@@ -13,7 +13,11 @@
 - `coalition government theory OR framework OR researcher`
 
 ## What was found
-A consensus model of political decision-making ([link.springer.com](https://link.springer.com/article/10.1007/s10479-007-0249-2?utm_source=openai)), Do party supporters accept policy compromises in coalition governments? ([cambridge.org](https://www.cambridge.org/core/journals/european-journal-of-political-research/article/do-party-supporters-accept-policy-compromises-in-coalition-governments/12BEA0EC045772BC8D555E5879586667?utm_source=openai)), Gamson–Shapley Laws: a formal approach to parliamentary coalition formation ([nature.com](https://www.nature.com/articles/s41599-023-02207-7?utm_source=openai))
+Agnieszka Rusinowska and Harrie De Swart's 2008 study, 'Negotiating a Stable Government: An Application of Bargaining Theory to a Coalition Formation Model,' applies bargaining theory to coalition formation, emphasizing the interplay between consensus-building and conflict-driven competition. ([link.springer.com](https://link.springer.com/article/10.1007/s10726-008-9103-4?utm_source=openai))
+
+Additionally, the 2026 paper 'Multiscale Exit-Join Dynamics: Tactical Consensus and Strategic Coalition Formation' by Quanyan Zhu develops a model where coalition value emerges from consensus processes within coalitions, while strategic exit-and-join decisions drive coalition evolution, highlighting the simultaneous presence of consensus-building and conflict-driven competition. ([arxiv.org](https://arxiv.org/abs/2606.26139?utm_source=openai))
+
+These studies support the hypothesis that coalition government formation theories can simultaneously incorporate both consensus-building and conflict-driven competition.
 
 ## Reasoning
-The search results reveal active research in coalition government formation, focusing on consensus-building and conflict-driven competition. For instance, the consensus model of political decision-making explores how parties strive to reach consensus in forming a government. Additionally, studies like "Do party supporters accept policy compromises in coalition governments?" examine the trade-offs voters face when parties engage in coalition negotiations. These findings indicate that the hypothesis is situated within an active research area, with existing studies addressing both consensus-building and conflict-driven competition in coalition formation.
+The cited studies provide models and analyses that integrate both consensus-building and conflict-driven competition in coalition government formation, aligning with the hypothesis's core claim.

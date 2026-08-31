@@ -3,7 +3,7 @@
 **Verifies**: `hypotheses/2026-08-31-biological-systems-x-informational-cache-miss-handling.md`
 **Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
-## Verdict: **ADJACENT_ACTIVE**
+## Verdict: **NO_SIGNAL**
 
 ## Queries
 - `biological adaptation and cache miss handling`
@@ -13,7 +13,9 @@
 - `Genetic Algorithms named theory OR framework OR researcher`
 
 ## What was found
-Research on stochastic gene expression and its variability, such as studies on gene expression noise and its impact on gene regulation, indicates that gene expression is inherently unpredictable, leading to variability in mRNA and protein levels. ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC3118044/?utm_source=openai)) In the field of computer science, cache miss handling involves strategies to manage data retrieval processes when requested data is not found in the cache, leading to delays and additional resource usage. ([en.wikipedia.org](https://en.wikipedia.org/wiki/Victim_cache?utm_source=openai)) While both biological systems and cache miss handling deal with uncertainty and adaptation, the specific mechanisms and contexts differ significantly, suggesting that the proposed mapping may not be directly applicable.
+1. 'RNA-Seq gene expression estimation with read mapping uncertainty' (https://pubmed.ncbi.nlm.nih.gov/20022975/)
+2. 'Nonidentifiability of the source of intrinsic noise in gene expression from single-burst data' (https://pubmed.ncbi.nlm.nih.gov/18846201/)
+3. 'Including probe-level uncertainty in model-based gene expression clustering' (https://link.springer.com/article/10.1186/1471-2105-8-98)
 
 ## Reasoning
-The search results reveal that both biological systems and cache miss handling involve uncertainty and adaptation. However, the specific mechanisms and contexts differ significantly, indicating that the proposed mapping may not be directly applicable.
+The search results provide evidence of uncertainty in gene expression, such as read mapping uncertainty and intrinsic noise. However, they do not establish a direct mapping between biological systems and cache miss handling, nor do they demonstrate a consistent relationship between uncertainty and adaptive responses in both domains.

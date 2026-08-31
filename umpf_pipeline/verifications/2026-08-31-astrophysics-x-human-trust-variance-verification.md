@@ -13,7 +13,9 @@
 - `Social trust theory OR framework OR researcher`
 
 ## What was found
-Astrophysics research frequently addresses uncertainties in data, such as discrepancies in cosmic expansion measurements and challenges in gravitational-wave astronomy due to measurement errors. Similarly, studies in social sciences explore how uncertainty influences human trust, including the impact of missing information on trust dynamics. However, direct mappings between specific astrophysical concepts and human trust elements are not explicitly established in the current literature.
+Astrophysics data uncertainty and trust dynamics
+Human trust variance models and missing information
+Astrophysical models evolution and social trust evolution
 
 ## Reasoning
-While both fields examine the effects of uncertainty, the exact correspondences proposed in the hypothesis are not directly supported by existing research. This suggests that the hypothesis is in an adjacent active state, with related studies in both domains but no direct mapping established.
+The search results reveal that astrophysics grapples with significant uncertainties in data measurement, such as discrepancies in cosmic expansion rates and challenges in gravitational-wave astronomy due to measurement errors. These uncertainties necessitate the adaptation of models and the development of robust statistical methods to account for them. Similarly, in human trust dynamics, the presence of missing or uncertain information can lead to shifts in trust perceptions, prompting individuals to adjust their trust models accordingly. Both domains exhibit a pattern where uncertainty drives the evolution of models—astrophysical models in response to data uncertainties and trust models in response to information gaps.

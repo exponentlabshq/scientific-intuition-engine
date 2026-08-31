@@ -3,7 +3,7 @@
 **Verifies**: `hypotheses/2026-08-31-homospatial-cell-biology-x-cross-domain-pattern-recognition.md`
 **Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
-## Verdict: **ADJACENT_ACTIVE**
+## Verdict: **NO_SIGNAL**
 
 ## Queries
 - `Cognitive Energetics theory OR framework`
@@ -13,7 +13,7 @@
 - `Integration of biochemical processes and cognitive systems`
 
 ## What was found
-Research indicates that mitochondrial function is crucial for cognitive processes, with studies showing that natural products can improve cognitive dysfunction by enhancing mitochondrial activity. Additionally, the brain's energy demands are substantial, with neurons consuming a significant amount of ATP for maintenance and function. However, there is no established framework or theory specifically termed "Cognitive Energetics" that integrates mitochondrial energy production with cognitive pattern recognition.
+The term "Cognitive Energetics" is used in various contexts, including a framework for sustained attention ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/42560880/?utm_source=openai)) and a concept in energy management systems ([arxiv.org](https://arxiv.org/abs/2608.24284?utm_source=openai)). However, there is no established theory or framework that specifically integrates mitochondrial energy production with cognitive pattern recognition under this name.
 
 ## Reasoning
-The search results reveal active research on the role of mitochondrial function in cognitive processes and the brain's energy demands. However, no specific framework or theory named "Cognitive Energetics" was found, indicating that while the individual components are studied, their integration into a cohesive system as proposed in the hypothesis is not currently established.
+The search results reveal that "Cognitive Energetics" is applied in different fields, such as psychology and energy management, but not in the context of combining mitochondrial energy production with cognitive pattern recognition.

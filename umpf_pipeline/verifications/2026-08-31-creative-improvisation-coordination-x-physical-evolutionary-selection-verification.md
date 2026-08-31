@@ -13,7 +13,11 @@
 - `complex systems in improvisation and evolution named theory OR framework OR researcher`
 
 ## What was found
-Research on emergent complexity in creative improvisation, such as dance and music, highlights how individual actions contribute to collective patterns. Studies on evolutionary adaptation mechanisms, including natural selection and genetic variation, provide insights into how individual traits influence population dynamics. These findings suggest that both domains involve complex interactions leading to emergent outcomes, supporting the proposed mapping between them.
+1. "Emergent Shared Intentions Support Coordination During Collective Musical Improvisations" by Louise Goupil et al. (2021) explores how shared intentions emerge during collective musical improvisations, fostering coordination beyond mere influence of shared information. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/33438231/?utm_source=openai))
+
+2. "Emergent Complexity via Multi-Agent Competition" by Trapit Bansal et al. (2017) discusses how competitive multi-agent environments can produce behaviors more complex than the environment itself, highlighting the emergence of complexity from individual contributions. ([arxiv.org](https://arxiv.org/abs/1710.03748?utm_source=openai))
+
+3. "Natural Selection and Adaptation" from Open Research Encyclopedia outlines the mechanisms of evolution, including natural selection, mutation, genetic drift, and gene flow, which collectively drive the adaptation and diversification of life. ([bynumpedia.com](https://bynumpedia.com/evolution/mechanisms-of-evolution.html?utm_source=openai))
 
 ## Reasoning
-The search results reveal active research in both creative improvisation and evolutionary adaptation mechanisms, indicating a fertile area for exploring parallels between individual contributions and emergent complexity in both domains.
+The first source discusses emergent coordination in collective musical improvisations, which aligns with the 'emerging performance state' in the proposed mapping. The second source addresses how individual behaviors in competitive environments can lead to complex outcomes, analogous to individual contributions leading to complex performance compositions. The third source provides foundational knowledge on evolutionary mechanisms, supporting the analogy between improvisation and evolutionary selection.

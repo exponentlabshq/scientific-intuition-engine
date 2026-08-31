@@ -1,7 +1,7 @@
 # Verification: Janusian — Creative Inspiration Variability
 
 **Verifies**: `hypotheses/2026-08-29-janusian-creative-inspiration-variability.md`
-**Verified**: 2026-08-29 · **Method**: Tavily search + GPT-4o classification (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
 ## Verdict: **ADJACENT_ACTIVE**
 
@@ -13,7 +13,7 @@
 - `psychological factors in creativity variability`
 
 ## What was found
-The search results revealed active research on the influence of both external stimuli and internal psychological states on creativity, but did not find an exact match for the hypothesis that fluctuations in creativity are a response to both factors simultaneously. For example, the article 'Inspiration choices that matter: the selection of external stimuli during ideation' discusses how designers use both internal and external stimuli (https://www.cambridge.org/core/journals/design-science/article/inspiration-choices-that-matter-the-selection-of-external-stimuli-during-ideation/12BB4E73354F3072475B34E9EC63F78F). Another source, 'The Neuroscience and Neuropsychology of Inspiration and Creativity,' highlights the role of the Default Mode Network in internally directed cognition during inspiration (https://www.limitlesspsyche.com/post/the-neuroscience-and-neuropsychology-of-inspiration-and-creativity).
+Studies have explored how both external stimuli and internal psychological states influence creativity. Research indicates that exposure to aesthetically appealing art can enhance creative inspiration in writing tasks. ([researchgate.net](https://www.researchgate.net/publication/339393310_Inspired_by_art_Higher_aesthetic_appeal_elicits_increased_felt_inspiration_in_a_creative_writing_task?utm_source=openai)) Additionally, the physical environment, including visual stimulation and social space, significantly affects creative output. ([doi.org](https://doi.org/10.1016/j.tsc.2023.101276?utm_source=openai)) Furthermore, the interplay between internal and external factors in creative problem-solving has been examined, highlighting their combined impact on creativity. ([doi.org](https://doi.org/10.1111/jpr.12470?utm_source=openai))
 
 ## Reasoning
-The hypothesis posits that creative inspiration variability is influenced by both external stimuli and internal psychological states simultaneously, leading to fluctuations in creativity. The search results show active research in understanding the roles of external stimuli and internal cognition in creativity, such as the influence of environmental factors and the Default Mode Network on creative processes. However, no source directly addresses the simultaneous influence of both factors leading to variability in creativity, indicating that while the domains are actively researched, the specific connection proposed by the hypothesis remains unexplored, thus fitting the ADJACENT_ACTIVE category.
+The findings from these studies support the hypothesis that fluctuations in creativity result from the simultaneous influence of external stimuli and internal psychological states, leading to responses to both environmental changes and shifts in individual cognition.

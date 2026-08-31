@@ -1,9 +1,9 @@
 # Verification: Homospatial — Fluid Dynamics ⊕ Human Emotional Fluctuation
 
 **Verifies**: `hypotheses/2026-08-29-homospatial-fluid-dynamics-x-human-emotional-fluctuation.md`
-**Verified**: 2026-08-29 · **Method**: Tavily search + GPT-4o classification (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
-## Verdict: **ADJACENT_ACTIVE**
+## Verdict: **FACT_CHECK_FAIL**
 
 ## Queries
 - `Emotional regulation and fluid dynamics correlation`
@@ -13,7 +13,7 @@
 - `Emotifluidity concept in emotional psychology`
 
 ## What was found
-Several sources discuss the analogy between emotional dynamics and fluid dynamics, such as the LinkedIn post by Raghu Arya and the Medium article by Khalid Saqr, which explore emotions behaving like fluids under varying pressures and the potential for interdisciplinary research between psychology and fluid dynamics.
+The concept of 'Emotifluidity'—a dynamic emotional state characterized by seamless transitions between stable and turbulent emotional experiences—is not recognized in existing psychological literature. While fluid dynamics principles have been applied metaphorically to psychological processes, such as in the study 'Nonlinear Dynamics in Psychology' by Stephen J. Guastello, which explores the application of nonlinear dynamical systems theory to psychological phenomena ([epublications.marquette.edu](https://epublications.marquette.edu/psych_fac/341/?utm_source=openai)), there is no established concept or term like 'Emotifluidity' in the field. Therefore, the hypothesis introducing 'Emotifluidity' as a novel construct does not align with current psychological theories or terminology.
 
 ## Reasoning
-The search results reveal active research and discussion around the analogy between emotional dynamics and fluid dynamics, suggesting a fertile area for further exploration. However, the specific concept of 'Emotifluidity' as described in the hypothesis does not appear to be directly addressed in existing literature, indicating that while the domains are actively researched, the exact connection proposed remains novel.
+The search did not yield any references to 'Emotifluidity' or similar constructs in psychological literature, indicating that this concept is not recognized or established in the field.

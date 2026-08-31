@@ -1,7 +1,7 @@
 # Verification: Homospatial — Law ⊕ Informational Database State
 
 **Verifies**: `hypotheses/2026-08-29-homospatial-law-x-informational-database-state.md`
-**Verified**: 2026-08-28 · **Method**: Tavily search + GPT-4o classification (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
 ## Verdict: **ADJACENT_ACTIVE**
 
@@ -13,7 +13,7 @@
 - `evolution of common law through database models`
 
 ## What was found
-The search results revealed active research and development in the areas of legal precedent databases and AI-powered legal research tools, such as Aloi and NexLaw, which transform legal data into structured insights for decision-making (sources 6, 8). Additionally, there is ongoing exploration of dynamic legal frameworks and data-informed legal systems that integrate empirical data to inform policy-making (sources 12, 14).
+The Legal Information Institute defines stare decisis as the doctrine that courts will adhere to precedent in making their decisions. ([law.cornell.edu](https://www.law.cornell.edu/wex/stare_decisis?utm_source=openai)) LegalClarity explains that stare decisis is the legal doctrine that requires courts to follow earlier judicial decisions when the same legal question arises again. ([legalclarity.org](https://legalclarity.org/what-is-stare-decisis-and-how-does-it-work/?utm_source=openai)) LegalClarity also notes that stare decisis keeps courts consistent by binding them to past rulings. ([legalclarity.org](https://legalclarity.org/what-is-the-doctrine-of-stare-decisis-used-for/?utm_source=openai))
 
 ## Reasoning
-While the exact concept of a 'Judicial Knowledgebase' as described in the hypothesis was not found, there is significant activity in related areas. The development of AI-powered legal databases and dynamic legal frameworks indicates active research near the domains of law and informational database state. These efforts align with the hypothesis's core idea of a dynamic, data-driven legal system, suggesting that the territory is fertile for further exploration, even if the specific connection proposed has not been explicitly made.
+The provided search results confirm the definition and application of stare decisis, supporting the claim that it is a fundamental principle in the legal system.

@@ -1,7 +1,7 @@
 # Verification: Bisociation — Biological Systems × Creative Musical Motif Deviation
 
 **Verifies**: `hypotheses/2026-08-29-biological-systems-x-creative-musical-motif-deviation.md`
-**Verified**: 2026-08-29 · **Method**: Tavily search + GPT-4o classification (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
 ## Verdict: **ADJACENT_ACTIVE**
 
@@ -13,7 +13,13 @@
 - `evolutionary music theory OR named theory OR framework`
 
 ## What was found
-Research on the genetic basis of musical creativity and the use of evolutionary algorithms in music composition suggests active exploration of biological and musical intersections. Sources like 'Sensogenomics and the Biological Background Underlying Musical Stimuli' (https://www.mdpi.com/2073-4425/12/9/1454) and 'Motifs, Phrases, and Beyond: The Modelling of Structure in Symbolic Music Generation' (https://arxiv.org/html/2403.07995v1) indicate ongoing research in these areas.
+1. "The Role of Canalization and Plasticity in the Evolution of Musical Creativity" discusses how genetic and cultural factors influence musical creativity, highlighting the interplay between genetic predispositions and environmental factors in shaping musical abilities. ([frontiersin.org](https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2021.607887/full?utm_source=openai))
+
+2. "Creative Activities in Music – A Genome-Wide Linkage Analysis" identifies genetic loci associated with musical creativity, suggesting a genetic basis for musical abilities. ([journals.plos.org](https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0148679&utm_source=openai))
+
+3. "Statistical Evolutionary Laws in Music Styles" analyzes the evolution of musical styles, finding statistical laws governing the steady changes in music characteristics over time. ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC6831699/?utm_source=openai))
+
+4. "Evolution of Musical Motifs in Polyphonic Passages" examines how musical motifs evolve in polyphonic music, providing insights into the development and transformation of motifs in musical compositions. ([researchportal.helsinki.fi](https://researchportal.helsinki.fi/en/publications/evolution-of-musical-motifs-in-polyphonic-passages/?utm_source=openai))
 
 ## Reasoning
-The search results reveal active research in both domains: the genetic basis of musical creativity and the application of evolutionary algorithms to music composition. These findings suggest a fertile area of study at the intersection of biological systems and musical motif evolution, but do not directly replicate the specific hypothesis of mapping gene expression uncertainty to musical motif deviation. Thus, the hypothesis is adjacent to active research, indicating potential for novel exploration.
+The search results provide evidence of research exploring the connections between biological systems and creative musical motif deviation. The first two sources discuss genetic influences on musical creativity, while the third examines the statistical evolution of musical styles, and the fourth focuses on the evolution of musical motifs in polyphonic passages. These findings support the proposed mapping between biological systems and creative musical motif deviation.

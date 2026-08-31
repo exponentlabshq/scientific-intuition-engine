@@ -1,9 +1,9 @@
 # Verification: Homospatial — Coalition Government Formation ⊕ Climate Science
 
 **Verifies**: `hypotheses/2026-08-30-homospatial-political-science-x-climate-science.md`
-**Verified**: 2026-08-30 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
-## Verdict: **ADJACENT_ACTIVE**
+## Verdict: **NO_SIGNAL**
 
 ## Queries
 - `Eco-Political Synergy framework`
@@ -13,7 +13,9 @@
 - `Climate governance theory OR framework OR researcher`
 
 ## What was found
-Adaptive governance frameworks, such as those discussed in 'Adaptive Governance and Climate Change' by Brunner and Lynch, emphasize decentralized decision-making and continuous adaptation to environmental changes. These frameworks align with the concept of Eco-Political Synergy, where political coalitions function as adaptive units informed by real-time climate data. Additionally, the article 'Adaptive Governance, Uncertainty, and Risk: Policy Framing and Responses to Climate Change, Drought, and Flood' by Hurlbert and Gupta explores how adaptive governance can enhance policy responses to climate-related challenges, supporting the idea of integrating scientific insights into governance structures. Furthermore, the study 'Balancing Stability and Flexibility in Adaptive Governance: An Analysis of Tools Available in U.S. Environmental Law' examines how adaptive governance can balance the need for flexibility with stability, which is crucial for effective climate policy adaptation. These sources collectively support the viability of Eco-Political Synergy as a governance framework that integrates adaptive governance principles with climate science to inform policy decisions.
+Adaptive Governance and Climate Change | Springer Nature Link (https://link.springer.com/book/10.1007/978-1-935704-01-0)
+Adaptive Governance, Uncertainty, and Risk: Policy Framing and Responses to Climate Change, Drought, and Flood. (https://pubmed.ncbi.nlm.nih.gov/26630544/)
+Balancing stability and flexibility in adaptive governance: An analysis of tools available in U.S. environmental law | U.S. Geological Survey (https://www.usgs.gov/node/69560)
 
 ## Reasoning
-The search results reveal active research on adaptive governance frameworks that incorporate real-time climate data and scenario modeling to inform policy decisions. These frameworks align with the proposed concept of Eco-Political Synergy, indicating that the hypothesis is situated within an active and relevant research area.
+The search results reveal that adaptive governance frameworks, which emphasize decentralized decision-making and flexibility, are well-established in climate change policy. However, the specific concept of 'Eco-Political Synergy' as a governance framework where political coalitions operate as adaptive units utilizing real-time climate data and scenario modeling to inform policy decisions does not appear in the current literature.

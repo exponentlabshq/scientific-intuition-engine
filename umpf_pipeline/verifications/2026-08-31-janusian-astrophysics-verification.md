@@ -13,7 +13,11 @@
 - `observational astronomy data limitations`
 
 ## What was found
-Studies have identified instances where astronomical data, such as measurements of cosmic expansion, exhibit inconsistencies due to factors like interstellar dust contamination. ([cfa.harvard.edu](https://www.cfa.harvard.edu/news/bicep2-and-planck-joint-study-gravitational-waves-remain-elusive?utm_source=openai)) Additionally, the proliferation of artificial satellites has introduced significant light pollution, further complicating the accuracy of telescope observations. ([space.com](https://www.space.com/astronomy/the-growing-number-of-satellites-in-orbit-could-soon-make-telescopes-obsolete-for-astronomy-this-would-obviously-be-catastrophic?utm_source=openai))
+1. "Measurement errors and scaling relations in astrophysics: a review" by S. Andreon and M. A. Hurn discusses methods for handling measurement errors in astronomical data. ([arxiv.org](https://arxiv.org/abs/1210.6232?utm_source=openai))
+
+2. "Fundamental Theoretical Bias in Gravitational Wave Astrophysics and the Parameterized Post-Einsteinian Framework" by Nicolas Yunes and Frans Pretorius examines biases in gravitational wave astrophysics and proposes a framework to address them. ([arxiv.org](https://arxiv.org/abs/0909.3328?utm_source=openai))
+
+3. "Provenance of astronomical data" by Mathieu Servillat emphasizes the importance of data provenance in ensuring the quality and reliability of astronomical observations. ([arxiv.org](https://arxiv.org/abs/2204.11486?utm_source=openai))
 
 ## Reasoning
-The presence of both valid and invalid measurements in telescope data is a recognized challenge in astrophysics, leading to conflicting interpretations of astronomical events. This aligns with the hypothesis that such discrepancies can result in multiple, sometimes contradictory, conclusions about the same phenomena.
+The search results provide relevant information on measurement errors, theoretical biases, and data provenance in astrophysics, aligning with the core claim's focus on the validity and reliability of telescope measurements.

@@ -1,15 +1,21 @@
 # Verification: Bisociation — Einstein — Special Relativity × Maxwell — Electromagnetism
 
-**Verifies**: `hypotheses/nobel-ground-truth-einstein_maxwell.md`
+**Verifies**: `hypotheses/nobel-ground-truth-einstein-maxwell.md`
 **Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
 ## Verdict: **ADJACENT_ACTIVE**
 
 ## Queries
-
+- `Einstein — Special Relativity Maxwell — Electromagnetism connection research`
 
 ## What was found
-Einstein's special theory of relativity was developed to resolve inconsistencies between Maxwell's equations and Galilean relativity, particularly the constancy of the speed of light. This led to the unification of electric and magnetic fields into a single electromagnetic field, with transformations between electric and magnetic fields depending on the observer's frame of reference. ([en.wikipedia.org](https://en.wikipedia.org/wiki/Special_relativity?utm_source=openai)) Maxwell's equations are consistent with special relativity, and their covariant form is expressed using tensor calculus. ([en.wikipedia.org](https://en.wikipedia.org/wiki/Relativistic_electromagnetism?utm_source=openai))
+A 2022 study by Osaka University experimentally demonstrated the contraction of the electric field around an electron beam moving at near-light speed, confirming Einstein's prediction of electric field contraction in special relativity. ([phys.org](https://phys.org/news/2022-10-einstein-homework-special-relativity-electromagnetism.html?utm_source=openai))
+
+A 1993 paper by Gambini and Pullin proposed a unification of electromagnetism and general relativity using loop representations, suggesting a unified viewpoint of Einstein-Maxwell fields. ([repository.lsu.edu](https://repository.lsu.edu/physics_astronomy_pubs/4452/?utm_source=openai))
+
+A 2008 article by Allan D. Pierce derived Maxwell's equations by applying the covariance requirements of special relativity to Newton's laws, establishing a connection between Maxwell's equations, Newton's laws, and special relativity. ([researchgate.net](https://www.researchgate.net/publication/1742120_Derivation_of_Maxwell%27s_Equations_via_the_Covariance_Requirements_of_the_Special_Theory_of_Relativity_Starting_with_Newton%27s_Laws?utm_source=openai))
+
+A 2006 paper by Herbert Dingle analyzed the mutual consistency of Maxwell-Lorentz electromagnetic theory and special relativity, suggesting that modifications to the correspondence rules between mathematical structures and experience could lead to agreement with alternative relativity theories. ([cambridge.org](https://www.cambridge.org/core/journals/philosophy-of-science/article/abs/relativity-and-electromagnetism-an-epistemological-appraisal/E497638A801A6C8C35B64DC5E574A61B?utm_source=openai))
 
 ## Reasoning
-The search results confirm that Einstein's special relativity was developed to address the inconsistencies between Maxwell's equations and Galilean relativity, leading to the unification of electric and magnetic fields into a single electromagnetic field. The covariant form of Maxwell's equations using tensor calculus is also well-established. However, the exact derivation of special relativity from Maxwell's equations is not explicitly found in the provided sources.
+The findings include experimental confirmations of Einstein's predictions, theoretical unifications of electromagnetism and relativity, derivations of Maxwell's equations from special relativity, and analyses of the consistency between electromagnetic theory and relativity.

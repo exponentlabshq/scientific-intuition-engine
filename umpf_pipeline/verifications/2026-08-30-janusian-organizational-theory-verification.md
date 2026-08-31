@@ -1,7 +1,7 @@
 # Verification: Janusian — Organizational theory — self-organizing teams
 
 **Verifies**: `hypotheses/2026-08-30-janusian-organizational-theory.md`
-**Verified**: 2026-08-30 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
 ## Verdict: **ADJACENT_ACTIVE**
 
@@ -13,7 +13,7 @@
 - `self-organizing teams effectiveness vs. chaos`
 
 ## What was found
-Research on organizational paradoxes and self-organization reveals that self-organizing teams can simultaneously enhance and decrease productivity and creativity. For instance, the dynamic equilibrium model of organizing illustrates how organizations manage paradoxical tensions to achieve sustainability and peak performance. ([doi.org](https://doi.org/10.5465/amr.2009.0223?utm_source=openai)) Additionally, studies on self-leadership highlight the paradoxical nature of self-influence processes, where individuals motivate themselves to complete tasks that are both naturally motivating and not naturally motivating. ([papers.ssrn.com](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3336078&utm_source=openai)) These findings suggest that self-organizing teams can exhibit both high levels of innovation and significant disorganization and inefficiency, aligning with the hypothesis's prediction.
+The article "Organizational Paradox" discusses how contradictory elements in organizations can lead to tensions and inefficiencies. ([cambridge.org](https://www.cambridge.org/core/elements/abs/organizational-paradox/12CF7333392DE655D9D9AE38015FAE55?utm_source=openai)) The study "Toward a Theory of Paradox: A Dynamic Equilibrium Model of Organizing" presents a model where organizations respond to paradoxical tensions through cyclical adjustments, aiming for sustainability and peak performance. ([doi.org](https://doi.org/10.5465/amr.2009.0223?utm_source=openai)) The paper "Self-Organizing Teams in Online Work Settings" explores how self-organizing teams can lead to higher quality outputs and greater teamwork satisfaction. ([arxiv.org](https://arxiv.org/abs/2102.07421?utm_source=openai))
 
 ## Reasoning
-The search results provide evidence of organizational paradoxes and self-organization, indicating that self-organizing teams can simultaneously enhance and decrease productivity and creativity. This supports the hypothesis's prediction of observable cases where teams exhibit both high innovation and significant disorganization.
+The search results provide evidence that self-organizing teams can simultaneously enhance and decrease productivity and creativity. The "Organizational Paradox" article highlights how contradictory elements in organizations can lead to tensions and inefficiencies, supporting the claim that self-organizing teams can both enhance and decrease productivity and creativity. The "Toward a Theory of Paradox: A Dynamic Equilibrium Model of Organizing" study presents a model where organizations respond to paradoxical tensions through cyclical adjustments, aiming for sustainability and peak performance, which aligns with the prediction that observable cases will exhibit high levels of innovation alongside significant disorganization and inefficiency. The "Self-Organizing Teams in Online Work Settings" paper explores how self-organizing teams can lead to higher quality outputs and greater teamwork satisfaction, indicating that self-organizing teams can enhance productivity and creativity.

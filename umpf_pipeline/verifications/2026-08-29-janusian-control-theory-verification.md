@@ -1,7 +1,7 @@
 # Verification: Janusian — Control theory — PID feedback loops
 
 **Verifies**: `hypotheses/2026-08-29-janusian-control-theory.md`
-**Verified**: 2026-08-29 · **Method**: Tavily search + GPT-4o classification (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
 ## Verdict: **ADJACENT_ACTIVE**
 
@@ -13,7 +13,9 @@
 - `Real-time PID control system performance analysis`
 
 ## What was found
-The search results reveal active research on PID controller stability and instability under varying parameters, highlighting challenges in parameter tuning and the impact of nonlinear dynamics and time-varying parameters on system stability. For example, sources discuss gain scheduling and robust PID design methodologies to address stability concerns (e.g., https://eureka.patsnap.com/report-how-does-a-pid-controller-improve-system-stability).
+1. "Stabilization of Unstable Second-Order Delay Plants under PID Control: A Nyquist Curve Analysis" ([mdpi.com](https://www.mdpi.com/2076-0825/10/9/227?utm_source=openai))
+2. "PID controller" ([en.wikipedia.org](https://en.wikipedia.org/wiki/PID_controller?utm_source=openai))
+3. "Overshoot Elimination for Control Systems with Parametric Uncertainty via a PID Controller" ([mdpi.com](https://www.mdpi.com/2073-8994/12/7/1092?utm_source=openai))
 
 ## Reasoning
-The hypothesis suggests a novel scenario where PID controllers can simultaneously stabilize and destabilize a system due to real-time parameter variations. While the search results do not directly confirm this specific scenario, they do indicate active research on related challenges, such as parameter tuning complexity and the effects of nonlinear dynamics on PID stability. These findings suggest that the hypothesis is adjacent to active research areas, but the exact connection proposed has not been explicitly drawn in the literature.
+The search results provide information on PID controller stability, including analyses of stabilization conditions and the impact of parameter variations on system behavior. ([mdpi.com](https://www.mdpi.com/2076-0825/10/9/227?utm_source=openai)) ([mdpi.com](https://www.mdpi.com/2073-8994/12/7/1092?utm_source=openai)) ([en.wikipedia.org](https://en.wikipedia.org/wiki/PID_controller?utm_source=openai))

@@ -1,7 +1,7 @@
 # Verification: Janusian — Informational Database State
 
 **Verifies**: `hypotheses/2026-08-29-janusian-informational-database-state.md`
-**Verified**: 2026-08-29 · **Method**: Tavily search + GPT-4o classification (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
 ## Verdict: **ADJACENT_ACTIVE**
 
@@ -13,7 +13,9 @@
 - `paradox of static and dynamic states in database management`
 
 ## What was found
-The search results revealed active research and discussions around the dynamic behavior of databases in real-time applications, such as dynamic graph databases handling out-of-order updates (source 1), real-time database synchronization (source 4), and streaming databases processing continuous data streams (source 5). Additionally, there is exploration of consistency models in distributed systems (source 11), which relates to the hypothesis's focus on unexpected inconsistencies in data retrieval and state representation.
+HAL: Dynamic Graph Databases with Out-of-order Updates ([researchportal.ip-paris.fr](https://researchportal.ip-paris.fr/fr/publications/dynamic-graph-databases-with-out-of-order-updates/?utm_source=openai))
+Static vs. Dynamic Indexing in Master Data Management ([techtarget.com](https://www.techtarget.com/data-technologies/tip/How-to-build-a-master-data-index-Static-vs-dynamic-indexing?utm_source=openai))
+Providing Real-Time Response, State Recency, and Temporal Consistency in Databases for Rapidly Changing Environments ([sciencedirect.com](https://www.sciencedirect.com/science/article/abs/pii/S0306437997000112?utm_source=openai))
 
 ## Reasoning
-The hypothesis suggests that databases being both static and dynamic could lead to unexpected inconsistencies. The search results show active research in dynamic database behavior and consistency models, which are relevant to the hypothesis's focus on real-time applications and potential inconsistencies. However, no source directly addresses the paradoxical nature of databases being both static and dynamic simultaneously, indicating that the exact connection proposed by the hypothesis has not been explicitly made in existing research. Therefore, the hypothesis is in an ADJACENT_ACTIVE state, with relevant but not identical research activity.
+The search results reveal that databases can exhibit both static and dynamic behaviors, especially in real-time applications. For instance, HAL, a dynamic graph database, efficiently handles out-of-order updates, which is crucial for real-time data processing. Additionally, the concept of static versus dynamic indexing in master data management highlights the trade-offs between performance and flexibility in database systems. Furthermore, research on providing real-time response and temporal consistency in databases for rapidly changing environments underscores the challenges of maintaining data consistency in dynamic contexts. These findings suggest that the simultaneous existence of static and dynamic states in databases can lead to unexpected inconsistencies in data retrieval and state representation, as the system must reconcile the inherent contradictions between maintaining a consistent state and accommodating continuous changes.

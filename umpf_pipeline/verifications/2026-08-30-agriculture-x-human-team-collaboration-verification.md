@@ -1,9 +1,9 @@
 # Verification: Bisociation — Agriculture × Human Team Collaboration
 
 **Verifies**: `hypotheses/2026-08-30-agriculture-x-human-team-collaboration.md`
-**Verified**: 2026-08-29 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
-## Verdict: **ADJACENT_ACTIVE**
+## Verdict: **NO_SIGNAL**
 
 ## Queries
 - `adaptive practices in agriculture and team dynamics`
@@ -13,7 +13,21 @@
 - `feedback loops in team collaboration named theory OR framework OR researcher`
 
 ## What was found
-Research on team dynamics and feedback processes, such as the study "Modeling the Feedback Process in Teams: A Field Study of Teamwork" by Potosky et al., explores how teams exchange feedback to achieve effective collaboration. ([pure.psu.edu](https://pure.psu.edu/en/publications/modeling-the-feedback-process-in-teams-a-field-study-of-teamwork/?utm_source=openai)) Additionally, frameworks like Theory U, Divergence-Convergence Diamond, and Strategic Doing support collaborative leadership through iterative cycles of sense-making, decision-making, and action-taking. ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC10320853/?utm_source=openai)) These frameworks and studies provide insights into team dynamics and feedback mechanisms, which are relevant to understanding human team collaboration.
+The OODA loop (Observe, Orient, Decide, Act) is a decision-making model developed by U.S. Air Force Colonel John Boyd in the 1970s, emphasizing rapid adaptation to changing environments. ([en.wikipedia.org](https://en.wikipedia.org/wiki/OODA_loop?utm_source=openai))
+
+The LaFasto–Larsen Five Dynamics of Teamwork and Collaboration framework identifies five interlocking dynamics that contribute to team effectiveness:
+
+1. **Team Member**: Individual behaviors and capabilities.
+2. **Team Relationships**: Trust, respect, and communication among members.
+3. **Team Problem Solving**: Defining problems, making decisions, and executing solutions.
+4. **Team Leadership**: Enabling focus, standards, and momentum.
+5. **Organizational Environment**: Surrounding systems, culture, and senior support.
+
+This framework serves as both a diagnostic and design guide for team effectiveness and collaboration. ([umbrex.com](https://umbrex.com/resources/frameworks/organization-frameworks/lafasto-larsen-five-dynamics-of-teamwork-and-collaboration/?utm_source=openai))
+
+The OODA loop and the LaFasto–Larsen Five Dynamics of Teamwork and Collaboration are both frameworks that address decision-making and team dynamics. The OODA loop focuses on individual decision-making processes, while the LaFasto–Larsen framework emphasizes collective team behaviors and structures. Both frameworks highlight the importance of adaptability and effective communication in achieving desired outcomes.
 
 ## Reasoning
-The search results reveal active research on team dynamics and feedback processes, indicating that the proposed mapping between agriculture and human team collaboration is not entirely novel. However, the specific connections drawn in the hypothesis have not been directly established in the existing literature, suggesting that the hypothesis is in the ADJACENT_ACTIVE category.
+The OODA loop and the LaFasto–Larsen Five Dynamics of Teamwork and Collaboration are both frameworks that address decision-making and team dynamics. The OODA loop focuses on individual decision-making processes, while the LaFasto–Larsen framework emphasizes collective team behaviors and structures. Both frameworks highlight the importance of adaptability and effective communication in achieving desired outcomes.
+
+[Mechanically overridden 2026-08-31: the model's own bridging_material_is_generic flag was true (the cited evidence would return the same hit for most other, unrelated domain pairs — the rubric's umbrella-trap disqualifier) while the model separately wrote ADJACENT_ACTIVE. Verdict corrected to NO_SIGNAL in code rather than trusted as written; see Failure 19, whitepaper.]

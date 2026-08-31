@@ -13,7 +13,9 @@
 - `farm ecosystem evolution and agricultural knowledge`
 
 ## What was found
-Studies indicate that climate variability accounts for approximately one-third of global crop yield variability, with significant regional differences. For instance, in the US Midwest, meteorological fluctuations significantly influence long-term crop yield patterns, affecting both conventional and organic farming systems. Additionally, research highlights that while organic farming offers environmental benefits, it may increase variability in crop yields compared to conventional methods. These findings suggest that while agricultural outcomes can be influenced by management of environmental variables and resource allocation, they cannot be entirely controlled or predicted, aligning with the proposed hypothesis.
+1. "Drivers of within-field spatial and temporal variability of crop yield across the US Midwest" (Scientific Reports, 2018) ([nature.com](https://www.nature.com/articles/s41598-018-32779-3?utm_source=openai))
+2. "Meteorological fluctuations define long-term crop yield patterns in conventional and organic production systems" (Scientific Reports, 2017) ([nature.com](https://www.nature.com/articles/s41598-017-00775-8?utm_source=openai))
+3. "Climate variation explains a third of global crop yield variability" (PubMed Central, 2015) ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC4354156/?utm_source=openai))
 
 ## Reasoning
-The search results provide evidence that both aspects of the hypothesis hold true: agricultural outcomes can be influenced by management practices, but they cannot be entirely controlled or predicted due to inherent variability, particularly from climate factors.
+The search results provide evidence that both environmental management and inherent unpredictability influence crop yields. Studies highlight that meteorological fluctuations significantly impact yield patterns, and that climate variability accounts for a substantial portion of yield variability. These findings support the hypothesis that agricultural outcomes can be both controlled and unpredictable.

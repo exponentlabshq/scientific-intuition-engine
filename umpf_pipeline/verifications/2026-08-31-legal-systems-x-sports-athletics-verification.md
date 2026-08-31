@@ -13,7 +13,10 @@
 - `sports performance evolution theory OR framework`
 
 ## What was found
-Research on the evolution of legal systems and athletic training methods, adaptation in legal precedents and sports performance, and interdisciplinary studies on law and sports performance. For example, the article "Rules Limiting Athletic Performance or Prohibiting Athletic Participation for Health Reasons: Legal and Ethical Considerations" discusses the balance between maximizing athletic performance and ensuring health and safety, highlighting the complex interplay between legal regulations and athletic performance. ([journals.ku.edu](https://journals.ku.edu/jis/article/view/10006?utm_source=openai))
+1. 'The History and Evolution of Athletic Training Education in the United States' – A comprehensive review of the development of athletic training education in the U.S. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/16558550/?utm_source=openai))
+2. 'The Role of Precedent in Sports Law: Establishing Legal Standards' – An exploration of how judicial precedents influence sports law decisions ([lawslearned.com](https://lawslearned.com/precedent-in-sports-law/?utm_source=openai))
+3. 'Sports in the Courts: the Role of Sports References in Judicial Opinions' – An analysis of the use of sports analogies in legal opinions ([scholarship.law.missouri.edu](https://scholarship.law.missouri.edu/facpubs/4/?utm_source=openai))
+4. 'Rules Limiting Athletic Performance or Prohibiting Athletic Participation for Health Reasons: Legal and Ethical Considerations' – A discussion on the balance between athletic performance and health regulations in sports ([journals.ku.edu](https://journals.ku.edu/jis/article/view/10006?utm_source=openai))
 
 ## Reasoning
-The search results reveal active research and discussions on the evolution of legal systems and athletic training methods, as well as the adaptation in legal precedents and sports performance. These findings indicate that the proposed mapping between legal systems and sports athletics is an area of active research, with existing studies exploring similar themes.
+The search results provide insights into the evolution of athletic training education and the role of legal precedents in sports law, which are pertinent to the proposed mapping between legal systems and sports athletics. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/16558550/?utm_source=openai))

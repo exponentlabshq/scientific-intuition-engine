@@ -13,7 +13,11 @@
 - `Cognitive load and facilitator cueing research`
 
 ## What was found
-The Cognitive Interview Technique, developed by Geiselman et al. (1985), is a semi-structured interviewing method designed to maximize accurate information recall by cooperative eyewitnesses without increasing errors. It utilizes four main techniques: reinstating the context, reporting everything, changing the order, and changing perspective. These techniques aim to stimulate various retrieval cues to unlock different memory routes. ([simplypsychology.org](https://www.simplypsychology.org/cognitive-interview.html?utm_source=openai))
+The Cognitive Interview Technique is a semi-structured interviewing method designed to maximize accurate information recall by cooperative eyewitnesses, without increasing errors. ([simplypsychology.org](https://www.simplypsychology.org/cognitive-interview.html?utm_source=openai))
+
+Theories of Forgetting in Psychology discuss retrieval failure, where information is in long-term memory but cannot be accessed due to missing retrieval cues. ([simplypsychology.org](https://www.simplypsychology.org/forgetting.html?utm_source=openai))
+
+Parsing as a Cue-Based Retrieval Model develops a psycholinguistic parser that combines cue-based memory systems with transition-based parsing to model reading and predict online behavioral measures. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/34379334/?utm_source=openai))
 
 ## Reasoning
-The Cognitive Interview Technique employs specific facilitator prompts to enhance memory retrieval, aligning with the concept of a 'Cognitive Cue Retrieval System' that integrates prompts to guide participants in accessing relevant information during discussions. This indicates active research in the area of facilitator cueing and information retrieval efficiency.
+The Cognitive Interview Technique and theories of forgetting provide insights into how facilitators can enhance information retrieval by employing specific cues and understanding the role of context in memory recall. The cue-based retrieval model offers a framework for integrating prompts that actively engage participants' cognitive resources, facilitating a seamless flow of ideas and minimizing knowledge gaps.

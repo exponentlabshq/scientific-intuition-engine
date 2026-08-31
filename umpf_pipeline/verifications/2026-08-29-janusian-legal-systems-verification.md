@@ -1,7 +1,7 @@
 # Verification: Janusian — Legal Systems
 
 **Verifies**: `hypotheses/2026-08-29-janusian-legal-systems.md`
-**Verified**: 2026-08-29 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
 ## Verdict: **ADJACENT_ACTIVE**
 
@@ -13,7 +13,13 @@
 - `legal systems paradox win lose outcomes`
 
 ## What was found
-Legal indeterminacy theory, as discussed by Brian Leiter, posits that the law is indeterminate, meaning that the class of legal reasons is indeterminate. This theory suggests that legal outcomes can be both definitively determined and ambiguous simultaneously for the same case. Additionally, the concept of legal realism, which emphasizes that legal outcomes are often influenced by factors beyond the application of law to facts, supports the idea that legal outcomes can be both clear and ambiguous at the same time. This aligns with the hypothesis that both definitive and ambiguous legal outcomes can coexist in the same case, and that instances where a ruling is perceived as clear yet is later challenged or reinterpreted can reveal underlying complexities, as neither truth alone would predict. ([cambridge.org](https://www.cambridge.org/core/journals/legal-theory/article/legal-indeterminacy/EF75AE51DF911A47CE95E42CB657D84A?utm_source=openai))
+Brian Leiter's article 'Legal Indeterminacy' discusses the concept of indeterminacy in law, stating that the law is indeterminate when any outcome can be justified based on legitimate sources and interpretive operations. ([cambridge.org](https://www.cambridge.org/core/journals/legal-theory/article/legal-indeterminacy/EF75AE51DF911A47CE95E42CB657D84A?utm_source=openai))
+
+Abigail R. Moncrieff's paper 'A Quantum Theory of Legal Indeterminacy' revisits and rehabilitates the Realists' indeterminacy thesis, arguing that it has been widely misunderstood by modern neoformalists and critics. ([papers.ssrn.com](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6145746&utm_source=openai))
+
+Ward Farnsworth, Dustin F. Guzior, and Anup Malani's study 'Ambiguity About Ambiguity: An Empirical Inquiry into Legal Interpretation' investigates the nature of ambiguity in legal texts and how it affects judicial interpretation. ([academic.oup.com](https://academic.oup.com/jla/article/2/1/257/846838?utm_source=openai))
+
+Kent Greenawalt's article 'Vagueness and Judicial Responses to Legal Indeterminacy' examines how vagueness in legal language leads to indeterminacy and how judges respond to such challenges. ([cambridge.org](https://www.cambridge.org/core/journals/legal-theory/article/vagueness-and-judicial-responses-to-legal-indeterminacy/B0BB994F011FC19959437657143A70DD?utm_source=openai))
 
 ## Reasoning
-The search results reveal that legal indeterminacy theory and legal realism both support the idea that legal outcomes can be both definitively determined and ambiguous simultaneously for the same case. This aligns with the hypothesis's core claim and its falsifiable prediction, indicating that the hypothesis is adjacent to active research in the field of legal systems.
+The cited works provide substantial evidence supporting the claim that legal outcomes can be both definitively determined and ambiguous simultaneously. They explore the indeterminacy inherent in legal systems and how ambiguity influences judicial interpretation and decision-making.

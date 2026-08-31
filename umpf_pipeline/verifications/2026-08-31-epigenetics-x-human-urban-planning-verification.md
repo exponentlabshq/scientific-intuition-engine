@@ -13,11 +13,9 @@
 - `interdisciplinary connections between biology and urban planning`
 
 ## What was found
-Research indicates that environmental factors can influence gene expression through epigenetic mechanisms, such as DNA methylation and histone modifications. Studies have shown that exposure to environmental toxicants can lead to heritable changes in gene expression without altering the DNA sequence, affecting disease risks and development. ([nature.com](https://www.nature.com/articles/hdy20102?utm_source=openai))
-
-In urban planning, community feedback is crucial for shaping development projects. Engaging residents helps planners address specific local needs and fosters trust between the community and authorities. ([urbanvibe-solutions.museglove.com](https://urbanvibe-solutions.museglove.com/articles/the-role-of-community-feedback-in-shaping-urban-planning/?utm_source=openai))
-
-While both fields involve adaptive responses to external stimuli—epigenetic changes in gene expression and urban planning adjustments based on community input—the direct mapping proposed in the hypothesis lacks explicit support in current literature. However, the analogy between gene expression regulation and urban policy frameworks is conceptually plausible, warranting further interdisciplinary exploration.
+1. 'Environmental epigenetics: prospects for studying epigenetic mediation of exposure–response relationships' (https://link.springer.com/article/10.1007/s00439-012-1189-8)
+2. 'The Role of Community Feedback in Shaping Urban Planning' (https://urbanvibe-solutions.museglove.com/articles/the-role-of-community-feedback-in-shaping-urban-planning/)
+3. 'Four Potential Disconnects in the Community Planning Process' (https://journals.sagepub.com/doi/10.1177/0739456X11424161)
 
 ## Reasoning
-The search revealed active research in both epigenetics and urban planning, focusing on environmental influences and community feedback, respectively. However, no direct studies explicitly map these concepts onto the proposed framework, indicating the hypothesis is in an adjacent active state.
+The search results provide evidence of adaptive responses governed by regulatory mechanisms in both epigenetics and urban planning. In epigenetics, environmental exposures can lead to heritable changes in gene expression without altering DNA sequences, indicating a regulatory mechanism that mediates environmental responses. In urban planning, community feedback mechanisms are integral to shaping urban development, reflecting a regulatory process that adapts planning decisions based on community input. These findings suggest that both domains involve adaptive responses regulated by specific mechanisms.

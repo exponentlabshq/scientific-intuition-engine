@@ -13,7 +13,11 @@
 - `the role of color in composition according to Wassily Kandinsky`
 
 ## What was found
-Johannes Itten's color theory encompasses both harmonious and disharmonious color combinations, emphasizing their simultaneous presence in artworks. He identified seven types of color contrast, including contrast by hue, value, temperature, complements, saturation, and extension, which can be used to create both harmony and disharmony. Itten's work at the Bauhaus, particularly his 'preliminary course,' taught students to explore these contrasts to achieve desired aesthetic effects. His color wheel, developed during his tenure at the Bauhaus, illustrates these principles by positioning primary, secondary, and tertiary colors to demonstrate their relationships and contrasts.
+1. Johannes Itten's color theory, developed during his tenure at the Bauhaus from 1919 to 1923, introduced a twelve-part color wheel comprising primary, secondary, and tertiary colors. ([getty.edu](https://www.getty.edu/research/exhibitions_events/exhibitions/bauhaus/new_artist/form_color/color/?utm_source=openai))
+
+2. Itten identified seven types of color contrasts: hue, value, temperature, complement, simultaneous, saturation, and extension. ([en.wikipedia.org](https://en.wikipedia.org/wiki/Johannes_Itten?utm_source=openai))
+
+3. Contemporary research indicates that color harmony is largely universal, influenced by hue relationships, saturation, and intensity. ([arxiv.org](https://arxiv.org/abs/2310.00791?utm_source=openai))
 
 ## Reasoning
-Itten's comprehensive approach to color theory, which includes both harmonious and disharmonious contrasts, directly supports the hypothesis that both color harmony and disharmony can coexist in the same artwork. His educational methods at the Bauhaus encouraged students to experiment with these contrasts, aligning with the proposed prediction that such combinations lead to artworks perceived as both aesthetically pleasing and emotionally provocative.
+The search results provide foundational information on Johannes Itten's color theory, his identification of various color contrasts, and contemporary research on color harmony, all of which are pertinent to the hypothesis.

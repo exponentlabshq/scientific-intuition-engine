@@ -1,7 +1,7 @@
 # Verification: Janusian — Architecture (Creative & Performance Systems)
 
 **Verifies**: `hypotheses/2026-08-29-janusian-architecture.md`
-**Verified**: 2026-08-29 · **Method**: Tavily search + GPT-4o classification (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
 ## Verdict: **ADJACENT_ACTIVE**
 
@@ -13,7 +13,7 @@
 - `adaptive architecture named theory OR framework OR researcher`
 
 ## What was found
-The search results revealed active research and discussions around balancing building codes with innovative architectural designs, such as in 'Balancing Building Codes with Innovative Architectural Designs' (https://www.linkedin.com/advice/1/youre-juggling-building-codes-innovative-designs-how-flkyc) and 'Architects as Building Code Innovators' (https://arccadigest.org/architects-as-building-code-innovators). These sources discuss the challenges and opportunities in pushing past code boundaries to innovate, but do not specifically address the simultaneous adherence and disregard of codes as a mechanism for innovation.
+1. "Architects as Building Code Innovators" discusses how architects can use Alternative Materials and Methods Requests (AMMRs) to push design boundaries while adhering to code intent. ([arccadigest.org](https://arccadigest.org/architects-as-building-code-innovators/?utm_source=openai)) 2. "How Does Code Compliance Affect Innovation?" highlights that the slow pace of code development can hinder the adoption of new products and systems in homebuilding. ([ibacos.com](https://www.ibacos.com/post/how-does-code-compliance-affect-innovation?utm_source=openai)) 3. "A Generalized Adaptive Framework (GAF) for Automating Code Compliance Checking" presents a framework for automating code compliance, potentially facilitating innovative designs within code constraints. ([mdpi.com](https://www.mdpi.com/2075-5309/9/4/86?utm_source=openai))
 
 ## Reasoning
-The hypothesis suggests that holding both adherence to and disregard for building codes simultaneously can lead to innovative architectural designs. The search results show active research in balancing compliance with innovation, indicating a fertile area of study. However, none of the sources specifically address the simultaneous adherence and disregard of codes as a creative mechanism, which is the core claim of the hypothesis. Therefore, the hypothesis is adjacent to active research but not directly covered by existing literature, fitting the ADJACENT_ACTIVE category.
+The sources provide insights into how architects can innovate within or challenge building codes, and how automation tools can assist in this process.

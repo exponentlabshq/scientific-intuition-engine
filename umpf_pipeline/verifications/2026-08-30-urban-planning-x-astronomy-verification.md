@@ -1,7 +1,7 @@
 # Verification: Bisociation — Urban Planning × Astronomy
 
 **Verifies**: `hypotheses/2026-08-30-urban-planning-x-astronomy.md`
-**Verified**: 2026-08-29 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
 ## Verdict: **ADJACENT_ACTIVE**
 
@@ -13,7 +13,19 @@
 - `traffic optimization theory OR framework OR researcher`
 
 ## What was found
-Research in urban planning has developed traffic flow optimization models, such as the integration of predictive modeling, adaptive signal control, and distributed communication to enhance urban traffic systems. ([arxiv.org](https://arxiv.org/abs/2501.02008?utm_source=openai)) In astronomy, studies on stellar nucleosynthesis detail the processes by which stars synthesize elements through nuclear reactions, including the r-process and its role in producing heavy elements. ([orbitcodex.com](https://orbitcodex.com/knowledge-base/stellar-nucleosynthesis?utm_source=openai))
+Traffic flow optimization models in urban planning:
+
+- "A traffic control framework for urban networks based on within-day dynamic traffic flow models" discusses integrating dynamic models into urban traffic control. ([tandfonline.com](https://www.tandfonline.com/doi/abs/10.1080/23249935.2019.1692957?utm_source=openai))
+
+- "Traffic Signal Optimization: Combining Static and Dynamic Models" explores combining static and dynamic models for traffic signal optimization. ([pubsonline.informs.org](https://pubsonline.informs.org/doi/10.1287/trsc.2017.0760?utm_source=openai))
+
+Stellar nucleosynthesis energy distribution:
+
+- "Stellar Nucleosynthesis" provides an overview of how stars produce elements through nuclear fusion. ([en.wikipedia.org](https://en.wikipedia.org/wiki/Stellar_nucleosynthesis?utm_source=openai))
+
+- "Energy Generation in Stars and Nucleosynthesis" discusses the processes of energy generation and element formation in stars. ([cambridge.org](https://www.cambridge.org/core/books/abs/an-introduction-to-cosmochemistry/energy-generation-in-stars-and-nucleosynthesis/2026B55FA98583AEED9B5CB817DAF31D?utm_source=openai))
+
+These sources indicate that both urban traffic systems and stellar nucleosynthesis involve complex processes where optimization and systematic adjustments are crucial for desired outcomes.
 
 ## Reasoning
-While both urban traffic systems and stellar nucleosynthesis involve complex processes that can be optimized through systematic adjustments, the specific mappings proposed in the hypothesis—such as correlating uncertainty in traffic predictions with nucleosynthesis outcomes, or mapping traffic signal interactions to nuclear reaction interactions—are not directly supported by existing research. However, the presence of active research in both fields indicates a fertile area for interdisciplinary exploration, suggesting that the proposed mappings are plausible and warrant further investigation.
+The provided sources detail optimization strategies in urban traffic systems and the systematic processes in stellar nucleosynthesis, supporting the proposed mappings between urban planning and astronomy.

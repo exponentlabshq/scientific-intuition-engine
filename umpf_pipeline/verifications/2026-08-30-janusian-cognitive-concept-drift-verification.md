@@ -1,7 +1,7 @@
 # Verification: Janusian — Cognitive Concept Drift
 
 **Verifies**: `hypotheses/2026-08-30-janusian-cognitive-concept-drift.md`
-**Verified**: 2026-08-30 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
 ## Verdict: **ADJACENT_ACTIVE**
 
@@ -13,7 +13,7 @@
 - `conceptual change in psychology literature`
 
 ## What was found
-The concept of cognitive concept drift, which posits that cognitive concepts can be both stable and unstable simultaneously, is not widely recognized in existing literature. However, related research explores the stability and flexibility of cognitive structures. For instance, Dieciuc and Folstein (2019) discuss how typicality in categorization can be both stable and context-dependent, suggesting that cognitive structures can exhibit both stability and flexibility. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/30484081/?utm_source=openai)) Additionally, Blanchard et al. (2018) distinguish between 'breadth' and 'guidance' as forms of stability in causal generalizations, indicating that stability can manifest in different ways within cognitive processes. ([cognition.princeton.edu](https://cognition.princeton.edu/publications/stability-breadth-and-guidance?utm_source=openai)) These studies provide a foundation for understanding the dual nature of cognitive concepts, aligning with the proposed hypothesis of cognitive concept drift.
+The concept of 'cognitive concept drift' is not established in the literature. However, related research in cognitive psychology and education explores how individuals' concepts can change over time. For instance, studies on conceptual change in science education examine how students' misconceptions evolve into scientifically accurate understandings. ([researchgate.net](https://www.researchgate.net/publication/255659929_Conceptual_change_A_powerful_framework_for_improving_science_teaching_and_learning?utm_source=openai)) Additionally, research on representational drift in neuroscience investigates how neural representations of learned tasks can change over time, even after achieving expert performance. ([sciencedirect.com](https://www.sciencedirect.com/science/article/abs/pii/S0959438819300303?utm_source=openai)) These studies suggest that concepts can exhibit both stability and instability, supporting the idea that individuals may apply the same concept consistently in one context while interpreting it differently in another.
 
 ## Reasoning
-While the specific term 'cognitive concept drift' is not prevalent, existing research on the stability and flexibility of cognitive structures supports the idea that cognitive concepts can be both stable and unstable simultaneously. This indicates active research in related areas, making the hypothesis of cognitive concept drift an adjacent active concept.
+The search revealed that while 'cognitive concept drift' is not a recognized term, related research in cognitive psychology and neuroscience addresses the stability and change of concepts over time. This supports the hypothesis that individuals can apply the same concept consistently in one context while interpreting it differently in another.

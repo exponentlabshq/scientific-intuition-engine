@@ -3,7 +3,7 @@
 **Verifies**: `hypotheses/2026-08-31-homospatial-fluid-dynamics-x-creative-narrative-arc-development.md`
 **Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
-## Verdict: **ADJACENT_ACTIVE**
+## Verdict: **COLLISION**
 
 ## Queries
 - `Narrative Fluidity theory OR framework`
@@ -13,7 +13,7 @@
 - `Narrative engagement metrics and fluid dynamics`
 
 ## What was found
-A model of narrative circulation, Dramatica Theory, Narrative Information Theory, A Theory of Narrative, Narrative Design Theory, Sequentiality, Narrative paradigm, Narrativity, Theory of narrative thought, Narrative Frames
+A model of narrative circulation ([researchgate.net](https://www.researchgate.net/publication/228856704_A_model_of_narrative_circulation?utm_source=openai)), CLIENT NARRATIVES: A THEORETICAL PERSPECTIVE ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC2864083/?utm_source=openai)), Dramatica Theory ([dramatica.com](https://dramatica.com/theory/?utm_source=openai))
 
 ## Reasoning
-While "Narrative Fluidity" as a specific framework is not established, several theories and models explore the dynamic interplay of elements within narratives, akin to the proposed concept. For instance, Dramatica Theory views a complete story as an argument made through multiple perspectives, showing how structure, character, theme, and plot work as parts of one system. ([dramatica.com](https://dramatica.com/theory/?utm_source=openai)) Similarly, Narrative Information Theory provides an information-theoretic framework to measure narratives, offering tools to analyze and benchmark human- and AI-created stories. ([arxiv.org](https://arxiv.org/abs/2411.12907?utm_source=openai)) These existing frameworks suggest that the fusion of fluid dynamics and creative narrative arc development is an area of active research, with the exact concept of "Narrative Fluidity" yet to be fully defined.
+The search results reveal existing frameworks and theories that explore the dynamics of narrative structures, such as the 'model of narrative circulation' and 'Dramatica Theory', which analyze how narratives evolve and maintain coherence. Additionally, the 'CLIENT NARRATIVES: A THEORETICAL PERSPECTIVE' discusses different narrative structures, including linear and chaotic narratives, highlighting the interplay between order and disorder in storytelling. These findings suggest that the concept of 'Narrative Fluidity' is not novel, as similar ideas have been previously explored in narrative theory.

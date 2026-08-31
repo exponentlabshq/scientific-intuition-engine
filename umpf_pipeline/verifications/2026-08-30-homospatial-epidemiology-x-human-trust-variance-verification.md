@@ -1,9 +1,9 @@
 # Verification: Homospatial — Epidemiology — herd immunity thresholds ⊕ Human Trust Variance
 
 **Verifies**: `hypotheses/2026-08-30-homospatial-epidemiology-x-human-trust-variance.md`
-**Verified**: 2026-08-30 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
-## Verdict: **ADJACENT_ACTIVE**
+## Verdict: **NO_SIGNAL**
 
 ## Queries
 - `Trust-Enhanced Immunity Dynamics" theory OR framework`
@@ -13,7 +13,11 @@
 - `community trust and disease transmission`
 
 ## What was found
-Research indicates that trust in science and social consensus significantly influence vaccine confidence and uptake. Studies have shown that societal-level trust in science is related to vaccine confidence, and that education about local vaccination coverage and herd immunity can affect willingness to vaccinate. Additionally, the CDC's data highlights that adults who consider vaccines safe and important are more likely to get vaccinated, underscoring the role of trust in vaccination decisions. ([nature.com](https://www.nature.com/articles/s41562-021-01115-7?utm_source=openai))
+1. "Vaccination Uptake, Intent, and Confidence" by the CDC: ([cdc.gov](https://www.cdc.gov/respvaxview/dashboards/vaccination-behavioral-social-drivers.html?utm_source=openai))
+2. "A cross-level process theory of trust development in interorganizational relationships" by Schilke and Cook: ([journals.sagepub.com](https://journals.sagepub.com/doi/10.1177/1476127012472096?utm_source=openai))
+3. "On the benefits of explaining herd immunity in vaccine advocacy" by Betsch et al.: ([nature.com](https://www.nature.com/articles/s41562-017-0056?utm_source=openai))
 
 ## Reasoning
-While the specific term 'Trust-Enhanced Immunity Dynamics' is not widely recognized, existing research demonstrates a clear link between community trust and vaccination behaviors, which directly impact herd immunity. This suggests that the proposed concept aligns with current understanding in public health and epidemiology.
+The search results reveal that while there is substantial research on the individual components of the proposed "Trust-Enhanced Immunity Dynamics," such as the impact of trust on vaccination uptake and the concept of herd immunity, there is no existing framework or theory that explicitly integrates these elements into a unified system as described in the hypothesis.
+
+[Mechanically overridden 2026-08-31: the model's own bridging_material_is_generic flag was true (the cited evidence would return the same hit for most other, unrelated domain pairs — the rubric's umbrella-trap disqualifier) while the model separately wrote ADJACENT_ACTIVE. Verdict corrected to NO_SIGNAL in code rather than trusted as written; see Failure 19, whitepaper.]

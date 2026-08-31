@@ -13,7 +13,9 @@
 - `Nate McMillan pick-and-roll offense analysis`
 
 ## What was found
-Studies have analyzed the efficacy of the pick-and-roll offense in top-level European basketball teams, highlighting its effectiveness in creating scoring opportunities. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/28149375/?utm_source=openai)) Research has also examined the dynamics of the pick-and-roll in basketball through interviews with elite coaches, providing insights into its execution and strategic importance. ([frontiersin.org](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2022.801100/pdf?utm_source=openai))
+1. "Efficacy of the 'Pick and Roll' Offense in Top Level European Basketball Teams" (PubMed): ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/28149375/?utm_source=openai))
+2. "The Pick-and-Roll in Basketball From Deep Interviews of Elite Coaches: A Mixed Method Approach From Polar Coordinate Analysis" (Frontiers in Psychology): ([frontiersin.org](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2022.801100/pdf?utm_source=openai))
+3. "Optimal Strategy in Basketball" (arXiv): ([arxiv.org](https://arxiv.org/abs/1512.05652?utm_source=openai))
 
 ## Reasoning
-While these studies provide valuable insights into the effectiveness and strategic importance of the pick-and-roll offense, they do not specifically address the simultaneous presence of precise coordination and chaotic execution within the same play, nor do they examine the comparative performance of teams employing a mix of structured and unstructured plays. Therefore, the hypothesis remains in the 'ADJACENT_ACTIVE' category, indicating that related research exists but does not directly confirm the proposed connection.
+The search results provide studies and analyses on the effectiveness and strategic considerations of the pick-and-roll offense in basketball, including its efficacy in top-level European teams, insights from elite coaches, and optimal strategies in the sport.

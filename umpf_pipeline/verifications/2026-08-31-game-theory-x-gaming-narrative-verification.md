@@ -13,7 +13,13 @@
 - `Adaptive Narrative Framework OR player choice theory OR narrative engagement researcher`
 
 ## What was found
-Research on the iterated Prisoner's Dilemma (IPD) has been applied to video games, such as in the development of interactive applets that simulate repeated IPD scenarios. ([gametheory.net](https://www.gametheory.net/applets/prisoners.html?utm_source=openai)) Additionally, AI-driven NPCs in gaming narratives are being developed to adapt their behavior based on player choices, enhancing the dynamic interaction between players and the game world. ([peerdh.com](https://peerdh.com/blogs/programming-insights/ai-driven-npc-personality-adaptation-in-gaming-narratives?utm_source=openai))
+Rockstar Games' upcoming Grand Theft Auto 6 (GTA 6) is set to advance NPC interactions beyond those in Red Dead Redemption 2, with NPCs reacting in real-time to player actions such as eavesdropping or threatening behavior. ([gamesradar.com](https://www.gamesradar.com/games/grand-theft-auto/rockstar-lead-says-gta-6-takes-npc-interactions-much-further-than-red-dead-redemption-2-and-its-system-is-returning-and-evolved/?utm_source=openai))
+
+MiTale Ltd., in collaboration with IBM Quantum Computing, is developing C.L.A.Y. - The Last Redemption, an RPG that integrates quantum computing to generate maps, characters, and graphics, aiming to enhance player experiences with dynamically unique gameplay sessions. ([tomshardware.com](https://www.tomshardware.com/tech-industry/quantum-computing/quantum-computing-used-in-first-commercial-game-development-ibm-simulator-generated-maps-characters-and-graphics-in-c-l-a-y-rpg?utm_source=openai))
+
+In Fable, players can eliminate all NPCs in a settlement, leading to a temporary empty world until NPCs are repopulated, preserving gameplay systems that might otherwise be disrupted. ([techradar.com](https://www.techradar.com/gaming/if-you-kill-every-fable-npc-playground-games-says-the-world-will-stay-empty-for-some-time-before-being-repopulated-by-full-npcs?utm_source=openai))
+
+Bethesda's Skyrim features a Radiant AI system that allows NPCs to dynamically interact with the game world, responding to player actions like stealing or changing locations, enhancing the game's immersive experience. ([gamesradar.com](https://www.gamesradar.com/games/the-elder-scrolls/skyrim-npcs-are-only-as-complex-as-they-are-thanks-to-a-literal-napkin-drawing-that-todd-howard-doodled-reveals-ex-bethesda-dev-its-actually-a-napkin-story/?utm_source=openai))
 
 ## Reasoning
-The application of IPD in video games and the development of adaptive NPCs are specific instances where game theory principles are integrated into gaming narratives, aligning with the proposed mapping in the hypothesis.
+The search results provide examples of video games where NPC behavior adapts based on player choices, demonstrating the application of game theory principles in gaming narratives.

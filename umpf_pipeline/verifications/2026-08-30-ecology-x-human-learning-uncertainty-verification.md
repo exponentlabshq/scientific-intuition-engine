@@ -1,9 +1,9 @@
 # Verification: Bisociation — Ecology × Human Learning Uncertainty
 
 **Verifies**: `hypotheses/2026-08-30-ecology-x-human-learning-uncertainty.md`
-**Verified**: 2026-08-30 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
-## Verdict: **ADJACENT_ACTIVE**
+## Verdict: **NO_SIGNAL**
 
 ## Queries
 - `predator-prey dynamics feedback loops in ecology`
@@ -13,7 +13,13 @@
 - `Bandura social learning theory OR feedback mechanisms in learning`
 
 ## What was found
-Research indicates that feedback mechanisms in human learning, such as cognitive feedback and uncertainty, influence learner confidence levels. For instance, studies have shown that the human midbrain responds to cognitive feedback and uncertainty during classification learning, affecting learning outcomes. ([journals.physiology.org](https://journals.physiology.org/doi/full/10.1152/jn.01209.2003?utm_source=openai)) Additionally, the concept of eco-evolutionary feedbacks in ecology, where predator-prey interactions influence population dynamics, has been extensively studied. ([nature.com](https://www.nature.com/nature-index/topics/l4/predator-prey-dynamics-in-ecological-systems?utm_source=openai)) While these areas are actively researched, the specific analogy between predator-prey dynamics and learner confidence levels has not been directly established.
+Predator–prey dynamics represent a foundational pillar of ecology, encompassing interactions that range from the classic oscillations described by mathematical models to complex behavioural and evolutionary feedbacks in natural systems. ([nature.com](https://www.nature.com/nature-index/topics/l4/predator-prey-dynamics-in-ecological-systems?utm_source=openai))
+
+In human learning, uncertainty influences behavior and learning, with estimates of uncertainty improving behavioral performance. ([nature.com](https://www.nature.com/articles/nrn3289?utm_source=openai))
+
+Adaptive learning under expected and unexpected uncertainty requires the ability to estimate expected uncertainty (related to the variability of outcomes) and unexpected uncertainty (related to the variability of the environment). ([nature.com](https://www.nature.com/articles/s41583-019-0180-y?utm_source=openai))
+
+Understanding learning through uncertainty and bias sheds light on normative cognitive mechanisms that improve predictions under uncertainty. ([nature.com](https://www.nature.com/articles/s44271-025-00203-y?utm_source=openai))
 
 ## Reasoning
-The search results reveal active research in both ecology and human learning uncertainty, with studies on predator-prey dynamics and feedback mechanisms in learning. However, a direct mapping between these domains, as proposed in the hypothesis, is not evident in the current literature. This suggests that while the analogy is plausible, it has not been explicitly explored, indicating a fertile area for further investigation.
+The search results provide foundational information on predator–prey dynamics in ecology and the role of uncertainty in human learning. However, they do not establish a direct analogy between ecological feedback mechanisms and human learning uncertainty. The bridging material is generic, as it discusses general concepts of feedback and uncertainty without specifically connecting the two domains.

@@ -1,9 +1,9 @@
 # Verification: Bisociation — Linguistics × Cognitive AI Preprocessing Pipelines
 
 **Verifies**: `hypotheses/2026-08-30-linguistics-x-cognitive-ai-preprocessing-pipelines.md`
-**Verified**: 2026-08-29 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
-## Verdict: **ADJACENT_ACTIVE**
+## Verdict: **NO_SIGNAL**
 
 ## Queries
 - `historical sound change systematic transformation in linguistics`
@@ -13,7 +13,12 @@
 - `cognitive linguistics named theory OR framework OR researcher`
 
 ## What was found
-The search revealed several studies and methodologies that explore systematic transformations in both linguistics and AI preprocessing pipelines. In linguistics, the Neogrammarian Hypothesis posits that sound changes occur systematically and without exception, affecting all instances of a sound in a specified context. ([learnlyai.co.uk](https://learnlyai.co.uk/en/course-hub/arts-humanities/linguistics-language/historical-linguistics/sound-change-and-phonological-evolution?utm_source=openai)) In AI, feature extraction pipelines are designed to transform raw data into meaningful features through systematic processes like cleaning, normalization, and transformation, followed by techniques to derive relevant features. ([aimodels.fyi](https://www.aimodels.fyi/research-topics/feature-extraction-pipeline?utm_source=openai)) Additionally, studies on phonological change discuss how sound changes can be environmentally conditioned, affecting only certain sound environments, which parallels how data transformations in AI can be context-dependent. ([en.wikipedia.org](https://en.wikipedia.org/wiki/Sound_change?utm_source=openai)) These findings indicate active research in both fields on systematic transformations, supporting the proposed mapping between linguistics and cognitive AI preprocessing pipelines.
+1. 'Sound Change and Phonological Evolution' – LearnlyAI
+2. 'Feature extraction pipeline' – AI Research Papers
+3. 'What Is Feature Extraction?' – IBM
+4. 'Phonological change' – Wikipedia
 
 ## Reasoning
-The identified studies and methodologies in both linguistics and AI preprocessing pipelines demonstrate active research on systematic transformations, supporting the proposed mapping between the two domains.
+The search results provide information on systematic transformations in both linguistics and AI preprocessing pipelines. The first source discusses regular sound changes in linguistics, while the second and third sources detail feature extraction methods in AI. The fourth source offers a general overview of phonological change.
+
+[Mechanically overridden 2026-08-31: the model's own bridging_material_is_generic flag was true (the cited evidence would return the same hit for most other, unrelated domain pairs — the rubric's umbrella-trap disqualifier) while the model separately wrote ADJACENT_ACTIVE. Verdict corrected to NO_SIGNAL in code rather than trusted as written; see Failure 19, whitepaper.]

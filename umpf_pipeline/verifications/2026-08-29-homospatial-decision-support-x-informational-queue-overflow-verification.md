@@ -1,7 +1,7 @@
 # Verification: Homospatial — Decision Support Systems ⊕ Informational Queue Overflow
 
 **Verifies**: `hypotheses/2026-08-29-homospatial-decision-support-x-informational-queue-overflow.md`
-**Verified**: 2026-08-29 · **Method**: Tavily search + GPT-4o classification (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
 ## Verdict: **ADJACENT_ACTIVE**
 
@@ -13,7 +13,7 @@
 - `Cognitive processing under data saturation" literature`
 
 ## What was found
-Research on decision support systems and information overload, such as the study by Ulfert et al. (2022) on decision support systems with varying degrees of autonomy and their effects on information overload (https://pmc.ncbi.nlm.nih.gov/articles/PMC10322198), and studies on cognitive load theory and pattern recognition in high information environments, such as the overview of cognitive load theory on ScienceDirect (https://www.sciencedirect.com/topics/psychology/cognitive-load-theory).
+The term "Cognitive Overflow Management System" (COMS) does not appear in existing literature. However, research has explored the impact of information overload on decision-making within Decision Support Systems (DSS). A study by Roetzel and Fehrenbacher (2019) found that information overload adversely affects managerial performance and mediates the influence of system quality and deep structure usage on performance. ([research.monash.edu](https://research.monash.edu/en/publications/on-the-role-of-information-overload-in-information-systems-is-suc?utm_source=openai)) Additionally, Phillips-Wren and Adya (2020) identified information overload as a key stressor that impacts decision quality under stress. ([tandfonline.com](https://www.tandfonline.com/doi/abs/10.1080/12460125.2020.1768680?utm_source=openai))
 
 ## Reasoning
-The search results reveal active research in areas related to decision support systems and information overload, as well as cognitive load theory and pattern recognition, which are relevant to the hypothesis's focus on managing information overload through cognitive processing and pattern recognition. However, no specific framework or system exactly matching the 'Cognitive Overflow Management System' (COMS) was found, indicating that while the domains are actively researched, the specific integration proposed by the hypothesis remains unexplored.
+The absence of the specific term "Cognitive Overflow Management System" in existing literature suggests that the proposed concept is novel. However, related research indicates that information overload significantly affects decision-making processes within DSS.

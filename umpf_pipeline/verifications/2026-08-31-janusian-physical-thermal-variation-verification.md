@@ -13,7 +13,10 @@
 - `Thermodynamics named theory OR framework OR researcher`
 
 ## What was found
-Studies on the thermal properties of materials under varying temperatures, such as the NIST's evaluation of cryogenic material properties ([nist.gov](https://www.nist.gov/publications/properties-selected-materials-cryogenic-temperatures?utm_source=openai)), demonstrate that materials can exhibit both consistent and variable properties at specific temperatures due to other influencing factors. This aligns with the hypothesis that temperature can simultaneously be a uniform determinant and not a uniform determinant of physical properties.
+1. 'Thermal Properties of Solids Under Varying Conditions of Pressure and Temperature' – Indian Journal of Pure & Applied Physics (IJPAP) (https://or.niscpr.res.in/index.php/IJPAP/article/view/2265)
+2. 'Properties of Selected Materials at Cryogenic Temperatures' – NIST (https://www.nist.gov/publications/properties-selected-materials-cryogenic-temperatures)
+3. 'Thermal Properties of Materials — Conductivity, Expansion, Specific Heat' – A.J. Designer (https://www.ajdesigner.com/reference/thermal-properties/)
+4. 'Thermal Properties of Building Materials at Elevated Temperatures' – NRC Publications Archive (https://nrc-publications.canada.ca/eng/view/object/?id=8f7ad656-3cf6-44f4-8055-0ab92b7cc7c4)
 
 ## Reasoning
-The NIST study provides empirical data showing that materials can display both consistent and variable properties at specific temperatures, supporting the hypothesis that temperature can simultaneously be a uniform determinant and not a uniform determinant of physical properties.
+The search results provide studies and databases on how materials' thermal properties change under varying temperatures and pressures, supporting the claim that temperature can both uniformly and non-uniformly determine physical properties.

@@ -13,9 +13,28 @@
 - `Mobile systems coordination frameworks`
 
 ## What was found
-Centralized vs Decentralized Data Management: Complete Comparison 2026 | DataMgmt Node (https://datamgmtnode.cryptuon.com/articles/decentralized-vs-centralized-data-management/)
-Centralized vs Decentralized Data Management | Tamr (https://www.tamr.com/blog/centralized-decentralized-data-management)
-Centralized vs Decentralized Federated Learning: A trade-off performance analysis (https://arxiv.org/abs/2605.16089)
+1. **Centralized vs. Decentralized Coordination in Mobile Systems:**
+   - *Centralized Coordination:* A single controller manages all agents, collecting global state information and computing optimal actions for all subordinate agents. This approach offers global observability but can face scalability and fault tolerance issues. ([next.gr](https://www.next.gr/ai/autonomous-systems/training-ai-for-inter-device-coordination?utm_source=openai))
+   - *Decentralized Coordination:* Multiple local controllers operate autonomously, each making decisions based on local information. This method enhances scalability and resilience but may lead to coordination challenges and increased communication overhead. ([technav.ieee.org](https://technav.ieee.org/area/decentralized-control/?utm_source=openai))
+
+2. **Actor-Network Theory (ANT) in Mobile Systems:**
+   - ANT examines the interactions between human and non-human entities (actors) within a network, emphasizing the agency of all components. In mobile systems, ANT can be applied to understand how devices, users, and infrastructure coalesce to form a networked system.
+
+3. **Coordinating Multiple Self-Adaptive Systems:**
+   - The paper "Towards the Decentralized Coordination of Multiple Self-Adaptive Systems" discusses a decentralized coordination technique called CoADAPT. It introduces preference and consistency constraints to balance local and shared concerns, aiming to achieve both local goals and global objectives. ([arxiv.org](https://arxiv.org/abs/2310.17224?utm_source=openai))
+
+**Bridging Material Analysis:**
+The bridging material found is specific to the domains of centralized and decentralized coordination in mobile systems, as well as the application of Actor-Network Theory in this context. This material would not recur across most other, unrelated domain pairs, indicating that the bridging material is not generic.
+
+**Verdict:**
+ADJACENT_ACTIVE
+
+**Search Queries and Findings:**
+- *Centralized vs. Decentralized Coordination in Mobile Systems:* The search revealed discussions on centralized and decentralized coordination models in mobile systems, highlighting their respective advantages and challenges. ([next.gr](https://www.next.gr/ai/autonomous-systems/training-ai-for-inter-device-coordination?utm_source=openai))
+- *Actor-Network Theory in Mobile Systems:* The search provided insights into the application of Actor-Network Theory in understanding interactions within mobile systems.
+- *Coordinating Multiple Self-Adaptive Systems:* The search identified a paper discussing decentralized coordination techniques for multiple self-adaptive systems, introducing CoADAPT as a solution. ([arxiv.org](https://arxiv.org/abs/2310.17224?utm_source=openai))
+
+These findings support the hypothesis that both centralized and decentralized coordination approaches can be simultaneously true in mobile systems, leading to enhanced flexibility and efficiency.
 
 ## Reasoning
-The search results reveal active research and discussions on centralized and decentralized data management approaches, particularly in the context of mobile and distributed systems. For instance, the article "Centralized vs Decentralized Data Management: Complete Comparison 2026" provides a comprehensive analysis of these models, highlighting their advantages and disadvantages. Similarly, the paper "Centralized vs Decentralized Federated Learning: A trade-off performance analysis" examines the performance trade-offs between centralized and decentralized federated learning architectures. These findings indicate that the hypothesis is situated in a domain with ongoing research, suggesting that the proposed connection is both real and fertile, but not yet fully explored.
+The search results provide specific information on centralized and decentralized coordination in mobile systems, the application of Actor-Network Theory, and decentralized coordination techniques for self-adaptive systems. This material is directly relevant to the hypothesis and would not recur across most other, unrelated domain pairs, indicating that the bridging material is not generic.

@@ -1,7 +1,7 @@
 # Verification: Janusian — Physical Immune System
 
 **Verifies**: `hypotheses/2026-08-30-janusian-physical-immune-system.md`
-**Verified**: 2026-08-29 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
 ## Verdict: **ADJACENT_ACTIVE**
 
@@ -13,7 +13,7 @@
 - `Albert Rothenberg immune system contradiction`
 
 ## What was found
-Research indicates that autoimmune diseases involve immune responses that both protect against infections and cause tissue damage. For example, in rheumatoid arthritis, the immune system attacks joint tissues while also attempting to combat infections. Similarly, systemic lupus erythematosus (SLE) involves immune responses that can both protect against infections and cause tissue damage. These findings support the hypothesis that the immune system can simultaneously play protective and harmful roles in autoimmune diseases.
+1. The immune system's dual role as both protector and destroyer is well-documented. ([my.clevelandclinic.org](https://my.clevelandclinic.org/health/body/21196-immune-system?utm_source=openai)) 2. Autoimmune diseases exemplify this duality, where immune responses combat infections while causing tissue damage. ([hopkinsmedicine.org](https://www.hopkinsmedicine.org/health/wellness-and-prevention/autoimmune-disease-why-is-my-immune-system-attacking-itself?utm_source=openai)) 3. Research models, such as those by Blyuss and Nicholson, explore the dynamics of immune responses leading to autoimmunity. ([arxiv.org](https://arxiv.org/abs/1209.4487?utm_source=openai))
 
 ## Reasoning
-The search results reveal that autoimmune diseases are characterized by immune responses that both protect against infections and cause tissue damage. This aligns with the hypothesis that the immune system can simultaneously act as a protector and a destroyer in autoimmune responses.
+The sources confirm that the immune system simultaneously protects against pathogens and can cause tissue damage, as seen in autoimmune diseases. Research models further investigate these dynamics.

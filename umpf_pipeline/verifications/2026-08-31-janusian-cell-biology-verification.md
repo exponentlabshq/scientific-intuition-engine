@@ -13,7 +13,9 @@
 - `role of chaperones in protein folding literature`
 
 ## What was found
-Studies have demonstrated that certain proteins can fold correctly without chaperones under specific conditions. For instance, firefly luciferase was synthesized in an Escherichia coli cell-free translation system in a highly active state without the need for Hsp70 family chaperones. Additionally, research indicates that some soluble, misfolded proteins can bypass chaperones within cells, remaining soluble and functional over extended periods. These findings suggest that while chaperones are essential for proper protein folding in many contexts, there are instances where proteins can fold correctly without them, highlighting the complex interplay between chaperone-dependent and chaperone-independent folding mechanisms. ([onlinelibrary.wiley.com](https://onlinelibrary.wiley.com/doi/10.1110/ps.051752506?utm_source=openai))
+1. **Effective cotranslational folding of firefly luciferase without chaperones of the Hsp70 family**: ([onlinelibrary.wiley.com](https://onlinelibrary.wiley.com/doi/10.1110/ps.051752506?utm_source=openai))
+2. **Energy landscape of knotted protein folding**: ([doi.org](https://doi.org/doi%3A10.1073/pnas.1201804109?utm_source=openai))
+3. **How soluble misfolded proteins bypass chaperones at the molecular level**: ([nature.com](https://www.nature.com/articles/s41467-023-38962-z?utm_source=openai))
 
 ## Reasoning
-The search results reveal active research exploring both chaperone-dependent and chaperone-independent protein folding mechanisms. This indicates that the hypothesis addresses a relevant and ongoing area of scientific inquiry, with studies examining conditions under which proteins can fold correctly without chaperones, as well as the role of chaperones in facilitating proper folding.
+The search results provide evidence that certain proteins can fold correctly both in the presence and absence of chaperones, supporting the hypothesis that both conditions can occur simultaneously for the same proteins.

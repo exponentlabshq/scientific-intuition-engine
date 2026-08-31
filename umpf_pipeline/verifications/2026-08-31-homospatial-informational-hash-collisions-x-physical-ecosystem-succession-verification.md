@@ -13,7 +13,9 @@
 - `Data representation and species competition in ecosystems`
 
 ## What was found
-The concept of 'Hash Chemistry' involves minimalistic evolutionary models where deterministic hash functions assign scalar scores to entities of arbitrary size, leading to complex evolutionary dynamics. This framework has been extended to incorporate spatial locality and competitive interactions among replicating structures, enhancing its evolutionary dynamics. ([arxiv.org](https://arxiv.org/abs/2607.28219?utm_source=openai))
+"Hash Chemistry: Minimal Models for Evolutionary Growth of Complexity" by Ilya Horiguchi and Hiroki Sayama
+"The Multilayer Nature of Ecological Networks" by Shai Pilosof et al.
+"Iceberg Hashing: Optimizing Many Hash-Table Criteria at Once" by Michael A. Bender et al.
 
 ## Reasoning
-The 'Hash Chemistry' framework provides a computational model that mirrors certain aspects of ecological succession, such as adaptation and complexity growth. By integrating spatial locality and competitive interactions, it offers a dynamic system where entities evolve over time, akin to ecological processes. This aligns with the proposed 'Hash Ecosystem' concept, suggesting a novel intersection between information theory and ecological models.
+The search results reveal research that draws analogies between hashing processes and ecological systems. For instance, the paper "Hash Chemistry: Minimal Models for Evolutionary Growth of Complexity" explores how minimal systems can demonstrate mechanisms behind multiscale open-ended evolutionary dynamics, potentially offering insights into the dynamics of data inputs and their interactions. Additionally, "The Multilayer Nature of Ecological Networks" discusses the complexity of ecological systems, which could provide a framework for understanding the interactions within a 'Hash Ecosystem.' However, these studies do not explicitly define or use the term "Hash Ecosystem," indicating that while the analogy is present, the specific concept as described in the hypothesis is not established in the current literature.

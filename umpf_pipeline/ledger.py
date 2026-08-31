@@ -86,20 +86,50 @@ def read_raw_entries(path: str = None) -> list:
 
 def load_latest_entries(path: str = None) -> list:
     """The real, current state of the ledger: one VERIFICATION entry per
-    slug, the LAST one written for it -- non-verification events (outreach
-    status updates; see is_verification_record()) are skipped entirely for
-    this dedup, not treated as a competing "latest" record. Preserves each
-    surviving entry's first-seen position in the file, so rank/sort
-    behavior downstream that assumes roughly-chronological order doesn't
-    shuffle unexpectedly just because a correction happened to land later
-    for an early slug."""
-    latest_by_key = {}
+    slug, built by MERGING every record written for it, field by field --
+    non-verification events (outreach status updates; see
+    is_verification_record()) are skipped entirely for this dedup, not
+    treated as a competing "latest" record. Preserves each surviving
+    entry's first-seen position in the file, so rank/sort behavior
+    downstream that assumes roughly-chronological order doesn't shuffle
+    unexpectedly just because a correction happened to land later for an
+    early slug.
+
+    2026-08-31: fixed a real, second gap in this same "latest wins"
+    principle -- the first gap (is_verification_record, above) was about
+    which RECORDS should compete for "latest" at all. This one is about
+    what happens once one wins: a whole-record overwrite (latest_by_key[k]
+    = rec) silently discards any field the newest record simply doesn't
+    set, even when an older record for the same slug set it validly and
+    nothing has happened to invalidate it. Found for real, at real cost:
+    re-running Phase 2 verification on every ADJACENT_ACTIVE entry (the
+    umbrella-trap retroactive fix) wrote a fresh record for every slug it
+    touched, including slugs that had ALSO already gone through Phase 3
+    refutation via the "ADJACENT_ACTIVE that failed its own honesty check"
+    path -- verify_hypothesis.py's append_ledger_entry() has no reason to
+    know about or carry forward refutation_verdict/refutation_file/
+    refutation_survival_count/etc., so those fields were simply absent
+    from the new record. The whole-record overwrite then made every
+    downstream reader (this function, score_hypotheses.py, the whitepaper's
+    own headline numbers) treat 161 real entries -- including 9 of the
+    ledger's SURVIVES entries, Hayek and Einstein-Maxwell's Nobel
+    ground-truth calibration cases and the flagship unanimous 3-of-3
+    compiler-instruction-scheduling entry among them -- as never refuted.
+    Nothing was actually destroyed (the log is append-only; the real
+    refutation records are still physically present, just no longer
+    "latest") -- but every reader of load_latest_entries() was blind to
+    them until this fix. Merging field-by-field, instead of replacing the
+    whole record, means a field only changes when a later record actually
+    sets it -- an older record's field survives being "outrun" by a newer
+    record that was never trying to say anything about that field at all."""
+    merged_by_key = {}
     order = []
     for rec in read_raw_entries(path):
         if not is_verification_record(rec):
             continue
         k = key_for(rec)
-        if k not in latest_by_key:
+        if k not in merged_by_key:
             order.append(k)
-        latest_by_key[k] = rec  # a later VERIFICATION occurrence overwrites -- "latest wins"
-    return [latest_by_key[k] for k in order]
+            merged_by_key[k] = {}
+        merged_by_key[k].update(rec)  # only keys THIS record actually sets move forward
+    return [merged_by_key[k] for k in order]

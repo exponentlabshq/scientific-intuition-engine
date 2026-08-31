@@ -1,7 +1,7 @@
 # Verification: Homospatial — Informational Load Balancing ⊕ Physical Immune System
 
 **Verifies**: `hypotheses/2026-08-29-homospatial-informational-load-balancing-x-physical-immune-system.md`
-**Verified**: 2026-08-29 · **Method**: Tavily search + GPT-4o classification (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
 ## Verdict: **ADJACENT_ACTIVE**
 
@@ -13,7 +13,9 @@
 - `dynamic resource allocation in biological and computational systems`
 
 ## What was found
-The search results revealed active research in computational immunology and systems biology approaches to immune response, such as 'Multiscale information processing in the immune system' (https://pmc.ncbi.nlm.nih.gov/articles/PMC12319014) and 'Computational Immunology' (https://www.nimml.org/immunoinformatics). Additionally, there are studies on dynamic resource allocation in computational systems, like 'Dynamic Resource Allocation in Systems-of-Systems' (https://asmedigitalcollection.asme.org/mechanicaldesign/article/144/9/091711/1143333/Dynamic-Resource-Allocation-in-Systems-of-Systems).
+1. Immunoinformatics: Current trends and future directions. ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC7108239/?utm_source=openai))
+2. A guide to systems-level immunomics. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/36138185/?utm_source=openai))
+3. The Immune System Computes the State of the Body: Crowd Wisdom, Machine Learning, and Immune Cell Reference Repertoires Help Manage Inflammation. ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC6349705/?utm_source=openai))
 
 ## Reasoning
-The hypothesis proposes a novel integration of informational load balancing with the physical immune system, termed the Immuno-Informatic Response System (IIRS). While no direct evidence of this exact system was found, there is significant research activity in related areas such as computational immunology and dynamic resource allocation in computational systems. These fields are actively exploring the integration of information processing and immune response mechanisms, which aligns with the hypothesis's core claim. However, the specific concept of IIRS as described in the hypothesis does not appear to have been directly addressed in the literature, indicating that the hypothesis is adjacent to active research but not yet realized in the exact form proposed.
+The search results reveal that while the term 'Immuno-Informatic Response System (IIRS)' is not established in the literature, the integration of information systems and immune system concepts is an active area of research. Immunoinformatics combines computational methods with immunology to analyze complex immunological data, and systems-level immunomics aims to understand immune system functions through computational models. Additionally, studies have explored how the immune system computes the body's state using machine learning and reference repertoires. These findings suggest that the proposed IIRS concept aligns with ongoing research in immunoinformatics and systems immunology.

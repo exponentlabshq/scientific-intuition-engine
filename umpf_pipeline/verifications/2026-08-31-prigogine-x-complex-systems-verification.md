@@ -13,7 +13,15 @@
 - `emergent phenomena in thermodynamics and complex systems`
 
 ## What was found
-Ilya Prigogine's theory of dissipative structures explains how systems far from equilibrium can spontaneously form ordered structures through energy and matter exchanges. This concept has been applied to various complex systems, including biological processes and chemical reactions, demonstrating emergent behaviors resulting from local interactions and energy exchanges.
+Ilya Prigogine's work on dissipative structures and self-organization in non-equilibrium thermodynamics. ([onlinelibrary.wiley.com](https://onlinelibrary.wiley.com/doi/full/10.1002/anie.200390530?utm_source=openai))
+
+The Center for Complex Quantum Systems at the University of Texas, founded by Prigogine, focuses on complex systems and statistical mechanics. ([order.ph.utexas.edu](https://order.ph.utexas.edu/Prigogine.htm?utm_source=openai))
+
+Research on self-organization in dissipative structures and their role in the emergence of prebiotic cells. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/19758548/?utm_source=openai))
 
 ## Reasoning
-Prigogine's work on dissipative structures directly connects thermodynamic principles with the emergence of complex system behaviors, aligning with the core claim of the hypothesis.
+Prigogine's research on dissipative structures and self-organization in non-equilibrium thermodynamics directly connects thermodynamic processes to the emergence of complex system behaviors. ([onlinelibrary.wiley.com](https://onlinelibrary.wiley.com/doi/full/10.1002/anie.200390530?utm_source=openai))
+
+The Center for Complex Quantum Systems, established by Prigogine, continues to explore these intersections, indicating ongoing research in this area. ([order.ph.utexas.edu](https://order.ph.utexas.edu/Prigogine.htm?utm_source=openai))
+
+Studies on self-organization in dissipative structures further support the link between thermodynamic states and complex system states. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/19758548/?utm_source=openai))

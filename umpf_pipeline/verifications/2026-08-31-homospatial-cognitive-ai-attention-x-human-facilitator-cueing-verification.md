@@ -13,7 +13,7 @@
 - `Cognitive AI attention and human interaction studies`
 
 ## What was found
-Research on integrating human cueing into AI attention mechanisms is active. Studies have explored how gaze cues can direct attention in human-robot interactions, enhancing task performance. Additionally, research on exogenous attention in cognitive psychology examines how external cues involuntarily orient attention, which is relevant to AI systems incorporating human-like attention mechanisms. ([link.springer.com](https://link.springer.com/article/10.1007/s12369-018-0473-8?utm_source=openai))
+The concept of 'Cued Cognitive Attention' as a distinct theory or framework is not established in existing literature. However, related research explores how human cueing influences AI attention mechanisms. Studies have shown that AI agents modeled with human-like conversational behaviors, including interruptions and dynamic interactions, perform better in complex reasoning tasks. ([livescience.com](https://www.livescience.com/technology/artificial-intelligence/scientists-made-ai-agents-ruder-and-they-performed-better-at-complex-reasoning-tasks?utm_source=openai)) Additionally, research on gaze cueing indicates that directing attention through gaze hints can improve task-solving in human-robot interactions. ([link.springer.com](https://link.springer.com/article/10.1007/s12369-018-0473-8?utm_source=openai)) These findings suggest that integrating human cueing into AI attention processes can enhance collaborative outcomes.
 
 ## Reasoning
-The search revealed active research on integrating human cueing into AI attention mechanisms, indicating that the proposed concept of Cued Cognitive Attention is an emerging area of study.
+While 'Cued Cognitive Attention' is not a recognized term, existing studies demonstrate that human cues, such as conversational behaviors and gaze direction, can effectively guide AI attention, leading to improved performance in collaborative tasks.

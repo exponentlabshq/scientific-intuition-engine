@@ -76,14 +76,50 @@ VALID_VERDICTS = {"COLLISION", "ADJACENT_ACTIVE", "FACT_CHECK_FAIL", "NO_SIGNAL"
 # compatible with the web_search tool via direct live test before this
 # shipped, not assumed safe. With this, a well-formed response is guaranteed
 # by the API itself, not by asking nicely and retrying when it isn't.
+#
+# 2026-08-31-v2 (Failure 19, the umbrella-trap check): a real, independent-
+# model spot-check found gpt-4o-mini writing self-contradicting notes on real
+# ADJACENT_ACTIVE verdicts -- e.g. citing "real-time adaptation based on
+# feedback" as the bridging evidence, language the rubric's own umbrella-trap
+# rule already names as too generic to count. Root cause was the same
+# generation-order bug already found and fixed twice elsewhere in this
+# project (refute_hypothesis.py's LENS_SCHEMA, hypothesis_engine.py's
+# is_genuine_paradox): `verdict` was declared FIRST in this schema, so
+# strict structured-output generation committed to a verdict before writing
+# down what was actually found or why -- the "reasoning" field was a
+# post-hoc rationalization of an already-locked answer, not a real check.
+# Fixed the same way both prior instances were: (1) reordered so
+# what_was_found and reasoning are written first, grounding the model in the
+# real evidence before it judges anything; (2) added a new required boolean,
+# `bridging_material_is_generic`, forcing an explicit, structural
+# self-assessment against the rubric's own umbrella-trap test -- would this
+# same bridging material return the same hit for most other, unrelated
+# domain pairs? -- written before the final verdict, not folded silently
+# into free-text reasoning where a soft instruction can be talked past;
+# (3) `verdict` moved last. The calling code no longer trusts the model's
+# own verdict blindly even with this fix in place -- see the mechanical
+# override in classify()'s caller, the same "compute it, don't just ask for
+# it" discipline as the refutation lens's SURVIVES/REFUTED fix.
 VERIFY_SCHEMA = {
     "type": "object",
     "properties": {
-        "verdict": {"type": "string", "enum": sorted(VALID_VERDICTS)},
         "what_was_found": {"type": "string", "description": "3-4 sentences, concise -- real titles/URLs only, never invented."},
         "reasoning": {"type": "string"},
+        "bridging_material_is_generic": {
+            "type": "boolean",
+            "description": (
+                "The rubric's umbrella-trap test, answered directly: would the bridging "
+                "material cited in what_was_found/reasoning return the same hit for MOST "
+                "other, unrelated domain pairs (e.g. 'both are complex adaptive systems', "
+                "'both involve real-time adaptation', 'both are evolving fields')? true if "
+                "yes (generic -- this cannot support ADJACENT_ACTIVE even if you were about "
+                "to write that verdict). false only if the bridging material is specific to "
+                "these particular domains and would not recur across most other pairs."
+            ),
+        },
+        "verdict": {"type": "string", "enum": sorted(VALID_VERDICTS)},
     },
-    "required": ["verdict", "what_was_found", "reasoning"],
+    "required": ["what_was_found", "reasoning", "bridging_material_is_generic", "verdict"],
     "additionalProperties": False,
 }
 
@@ -204,6 +240,33 @@ def load_rubric() -> str:
         return f.read()
 
 
+def apply_umbrella_trap_override(data: dict) -> dict:
+    """2026-08-31-v2 (Failure 19): mechanical override, not a trusted ask --
+    same discipline as refute_hypothesis.py's SURVIVES/REFUTED computation.
+    A real independent-model spot-check found the model sometimes admits
+    (via bridging_material_is_generic) that its own cited evidence is
+    generic and still writes ADJACENT_ACTIVE anyway -- the schema fix makes
+    the admission structurally required, but does not by itself stop the
+    model from contradicting it. This closes that gap in code: if the model
+    says the bridging material is generic, the verdict is downgraded to
+    NO_SIGNAL regardless of what it wrote, and the override is disclosed
+    directly in the reasoning text so it's visible in both the .md file and
+    the ledger, not silently corrected."""
+    if data.get("bridging_material_is_generic") and data.get("verdict") == "ADJACENT_ACTIVE":
+        data["reasoning"] = (
+            data.get("reasoning", "")
+            + "\n\n[Mechanically overridden 2026-08-31: the model's own "
+            "bridging_material_is_generic flag was true (the cited evidence "
+            "would return the same hit for most other, unrelated domain "
+            "pairs — the rubric's umbrella-trap disqualifier) while the "
+            "model separately wrote ADJACENT_ACTIVE. Verdict corrected to "
+            "NO_SIGNAL in code rather than trusted as written; see Failure "
+            "19, whitepaper.]"
+        )
+        data["verdict"] = "NO_SIGNAL"
+    return data
+
+
 def classify(title, mode, domains, core_claim, queries, rubric, slug=None):
     """Single-call verification: OpenAI's Responses API `web_search` tool
     does real, live web search AND classification together. Replaces the
@@ -223,7 +286,13 @@ def classify(title, mode, domains, core_claim, queries, rubric, slug=None):
         "complex systems' bridge is NO_SIGNAL, not ADJACENT_ACTIVE. Cite "
         "real titles/URLs from what you actually find; never invent a "
         "source. Keep what_was_found to 3-4 sentences -- concise, not a "
-        "transcript of everything found.\n\n"
+        "transcript of everything found. Before you write a verdict, you "
+        "must answer bridging_material_is_generic honestly: would the same "
+        "bridging material you just cited turn up for most other, unrelated "
+        "domain pairs (e.g. 'real-time adaptation to feedback', 'both are "
+        "evolving fields', 'both value accuracy')? If yes, it cannot support "
+        "ADJACENT_ACTIVE, however research-sounding it reads — say so, even "
+        "if you were about to write ADJACENT_ACTIVE anyway.\n\n"
         f"--- RUBRIC ---\n{rubric}"
     )
     user_prompt = (
@@ -251,7 +320,7 @@ def classify(title, mode, domains, core_claim, queries, rubric, slug=None):
             text={"format": {"type": "json_schema", "name": "verification_verdict", "schema": VERIFY_SCHEMA, "strict": True}},
         )
         log_usage("verification", "gpt-4o-mini", resp.usage, hypothesis_slug=slug)
-        return json.loads(resp.output_text)
+        return apply_umbrella_trap_override(json.loads(resp.output_text))
     except Exception as e:
         print(f"    ! Verification call failed ({e}) — retrying once")
         resp = call_with_retry(
@@ -264,7 +333,7 @@ def classify(title, mode, domains, core_claim, queries, rubric, slug=None):
             text={"format": {"type": "json_schema", "name": "verification_verdict", "schema": VERIFY_SCHEMA, "strict": True}},
         )
         log_usage("verification", "gpt-4o-mini", resp.usage, hypothesis_slug=slug)
-        return json.loads(resp.output_text)
+        return apply_umbrella_trap_override(json.loads(resp.output_text))
 
 
 def write_verification_md(slug, title, mode, verdict, queries, result):
@@ -300,6 +369,8 @@ def append_ledger_entry(slug, mode, verdict, domains, self_score, result, querie
         "verified_date": date.today().isoformat(),
         "notes": result["reasoning"],
         "verification_method": "openai-web-search+gpt-4o-mini (unattended, verify_hypothesis.py)",
+        "verification_schema_version": "2026-08-31-v2",
+        "bridging_material_is_generic": result.get("bridging_material_is_generic"),
     }
     if mode == "janusian":
         entry["self_reported_tension"] = self_score

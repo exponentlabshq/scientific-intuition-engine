@@ -1,7 +1,7 @@
 # Verification: Janusian — Climatology — Ocean Current Circulation (Thermohaline)
 
 **Verifies**: `hypotheses/2026-08-30-janusian-climatology-ocean-current-circulation.md`
-**Verified**: 2026-08-30 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
 ## Verdict: **ADJACENT_ACTIVE**
 
@@ -13,7 +13,9 @@
 - `ocean current circulation named theory OR framework OR researcher`
 
 ## What was found
-Research indicates that thermohaline circulation (THC) exhibits both predictable and chaotic behaviors. Studies have shown that THC variability can be predictable over decadal timescales, with ensemble experiments suggesting predictability for approximately 1.5 to 7 years. However, the system's inherent nonlinearity and sensitivity to initial conditions introduce chaotic elements, leading to unpredictable variations over shorter timescales. This dual nature implies that while long-term trends may be forecasted, short-term fluctuations remain uncertain. ([researchgate.net](https://www.researchgate.net/publication/2219576_North_Atlantic_thermohaline_circulation_predictability_in_a_coupled_ocean-atmosphere_model?utm_source=openai))
+1. "Order and chaos in ocean current dynamics: numerical experiments" ([sciencedirect.com](https://www.sciencedirect.com/science/article/pii/037702659290017N?utm_source=openai))
+2. "The role of stochastic forcing on the behavior of thermohaline circulation." ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/19076412/?utm_source=openai))
+3. "Dynamics of the thermohaline circulation under uncertainty." ([sciencedirect.com](https://www.sciencedirect.com/science/article/pii/S0022247X0400294X?utm_source=openai))
 
 ## Reasoning
-The search results reveal that THC displays both predictable and chaotic characteristics, aligning with the hypothesis that its predictability and randomness coexist within the same oceanic system.
+The search results reveal that both the predictability and inherent randomness of thermohaline circulation are subjects of active research. Studies have explored how stochastic (random) forces influence the behavior of thermohaline circulation, indicating that these systems can exhibit both predictable and chaotic characteristics. For instance, research has shown that the thermohaline circulation's response to stochastic forcing depends on the geometry of the deterministically induced circulation, leading to time-dependent states influenced by chaotic dynamics. ([sciencedirect.com](https://www.sciencedirect.com/science/article/pii/037702659290017N?utm_source=openai)) Additionally, investigations into the thermohaline circulation under uncertainty have demonstrated that its asymptotic dynamics can be described by random attractors, highlighting the coexistence of order and chaos in these systems. ([sciencedirect.com](https://www.sciencedirect.com/science/article/pii/S0022247X0400294X?utm_source=openai))

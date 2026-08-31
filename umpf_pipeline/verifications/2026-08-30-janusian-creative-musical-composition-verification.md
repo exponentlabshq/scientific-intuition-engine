@@ -1,7 +1,7 @@
 # Verification: Janusian — Creative Musical Composition
 
 **Verifies**: `hypotheses/2026-08-30-janusian-creative-musical-composition.md`
-**Verified**: 2026-08-30 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
 ## Verdict: **ADJACENT_ACTIVE**
 
@@ -13,7 +13,13 @@
 - `musical composition techniques conscious subconscious`
 
 ## What was found
-Albert Rothenberg's concept of 'homospatial thinking' involves conceiving multiple entities occupying the same space, leading to new identities. This cognitive process plays a significant role in creativity across various fields, including music. ([researchgate.net](https://www.researchgate.net/publication/325821684_Creativity_and_the_Homospatial_Process?utm_source=openai)) Additionally, studies have shown that both conscious and subconscious processes contribute to musical creativity. For instance, statistical learning, an implicit cognitive function, is essential for producing and comprehending structured information like music. This suggests that creativity can emerge from subconscious conditions without deliberate intention. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/33958983/?utm_source=openai))
+1. "Statistical Properties of Musical Creativity: Roles of Hierarchy and Uncertainty in Statistical Learning" (PubMed): Discusses how statistical learning contributes to creativity, suggesting that creativity can emerge from implicit statistical knowledge in the brain. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/33958983/?utm_source=openai))
+
+2. "Subconscious Muses & Conscious Crafts: Unveiling the Dual Dynamics of Creativity in Writing" (SSRN): Explores the interplay between subconscious and conscious processes in creative writing, proposing a synergistic relationship between these psychological dimensions. ([papers.ssrn.com](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5125067&utm_source=openai))
+
+3. "Creativity and the Homospatial Process" (ResearchGate): Introduces the concept of "homospatial thinking," where two or more discrete entities occupy the same space, leading to new identities, and its role in the creative process across various fields, including music. ([researchgate.net](https://www.researchgate.net/publication/325821684_Creativity_and_the_Homospatial_Process?utm_source=openai))
+
+4. "Musical Creativity 'Revealed' in Brain Structure: Interplay between Motor, Default Mode, and Limbic Networks" (PMC): Examines the neural mechanisms involved in musical creativity, highlighting the interaction between different brain networks during music creation. ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC4757893/?utm_source=openai))
 
 ## Reasoning
-The search results reveal that while Rothenberg's 'homospatial thinking' and subconscious processes are recognized in the context of musical creativity, they do not directly support the specific claim that both conscious application of musical rules and subconscious impulses occur simultaneously in the same act of musical composition. Therefore, the hypothesis is in the 'ADJACENT_ACTIVE' category, indicating that related research exists but does not directly address the proposed claim.
+The search results provide evidence supporting the hypothesis that both conscious application of musical rules and subconscious impulses simultaneously influence musical composition. The studies highlight the dual dynamics of conscious and subconscious processes in creativity, the role of statistical learning in creative emergence, and the neural interplay during music creation.

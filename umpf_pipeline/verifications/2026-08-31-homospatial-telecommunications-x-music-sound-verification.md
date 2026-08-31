@@ -3,7 +3,7 @@
 **Verifies**: `hypotheses/2026-08-31-homospatial-telecommunications-x-music-sound.md`
 **Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
-## Verdict: **ADJACENT_ACTIVE**
+## Verdict: **NO_SIGNAL**
 
 ## Queries
 - `Harmonic Packet Network theory`
@@ -13,9 +13,13 @@
 - `audience feedback in live music performance`
 
 ## What was found
-Real-Time Language Model Jamming: A Case Study for Live Music Accompaniment Generation ([arxiv.org](https://arxiv.org/abs/2606.11886?utm_source=openai))
-Real-Time Music-to-Image Systems for Creative Inspiration in Music Creation ([arxiv.org](https://arxiv.org/abs/2407.05584?utm_source=openai))
-Real-time auralization for performers on virtual stages ([arxiv.org](https://arxiv.org/abs/2309.03149?utm_source=openai))
+The Telemidi platform enables real-time online music collaboration by transmitting MIDI performance data over the internet, minimizing latency to support synchronized interactions. ([telemidi.com](https://telemidi.com/?utm_source=openai))
+
+LoLa is a low-latency, high-quality audio/video transmission system developed for remote musical performances, allowing musicians to perform together over long distances with minimal delay. ([garr.it](https://www.garr.it/en/communities/music-and-art/lola?utm_source=openai))
+
+The paper "Implementation and optimization of Burg’s method for real-time packet loss concealment in networked music performance applications" discusses techniques to mitigate packet loss in networked music performances, ensuring audio quality during real-time interactions. ([link.springer.com](https://link.springer.com/article/10.1007/s00779-024-01806-8?utm_source=openai))
+
+The article "Networked Music Performance and Interactive Systems" explores real-time collaboration among musicians, audiences, and interactive devices across distributed networks, highlighting the challenges of temporal precision and expressive control. ([nature.com](https://www.nature.com/nature-index/topics/l4/networked-music-performance-and-interactive-systems?utm_source=openai))
 
 ## Reasoning
-The concept of a 'Harmonic Packet Network' aligns with existing research in real-time music performance systems that integrate live audience feedback and concurrent musician coordination. For instance, 'Real-Time Language Model Jamming: A Case Study for Live Music Accompaniment Generation' explores real-time synchronization in live music settings. Similarly, 'Real-Time Music-to-Image Systems for Creative Inspiration in Music Creation' investigates systems that respond to live musical input, and 'Real-time auralization for performers on virtual stages' focuses on real-time audio processing for virtual performances. These studies demonstrate active research in real-time, audience-responsive music systems, indicating that the 'Harmonic Packet Network' is an adjacent active area of research.
+The search results provide information on real-time music collaboration platforms and techniques to address challenges in networked music performances, such as latency and packet loss. However, there is no direct evidence of a system termed "Harmonic Packet Network" that processes musical notes as discrete packets for real-time transmission and synchronization.

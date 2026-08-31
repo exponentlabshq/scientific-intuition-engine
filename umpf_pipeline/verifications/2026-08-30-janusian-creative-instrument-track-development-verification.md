@@ -1,7 +1,7 @@
 # Verification: Janusian — Creative Instrument Track Development
 
 **Verifies**: `hypotheses/2026-08-30-janusian-creative-instrument-track-development.md`
-**Verified**: 2026-08-30 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
 ## Verdict: **ADJACENT_ACTIVE**
 
@@ -13,7 +13,7 @@
 - `collective creativity in music research Andrew Hargadon`
 
 ## What was found
-Research indicates that creativity in music composition involves both individual expression and adherence to collective trends. Studies highlight that musical creativity is not solely an individual endeavor but is deeply embedded in social and cultural contexts, emphasizing the importance of collaboration and shared experiences in the creative process. For instance, the article "Creativity Is Collective" discusses how personal experiences and character traits alone may not be enough to produce a prodigy, suggesting that societal interactions play a crucial role in fostering creativity. Similarly, the paper "Collaborative Musical Creativity: How Ensembles Coordinate Spontaneity" explores how ensembles coordinate spontaneity, underscoring the collective nature of musical creativity. These findings support the hypothesis that innovative tracks exhibit characteristics of both personal artistic choices and recognizable elements of popular trends, aligning with the proposed theory.
+1. "Creativity Is Collective" by S. Alexander Haslam, Inmaculada Adarves-Yorno, and Tom Postmes, published in Scientific American. 2. "Collaborative Musical Creativity: How Ensembles Coordinate Spontaneity" by Chaffin et al., published in Frontiers in Psychology. 3. "Creativity: An Individual or Collective Phenomenon? A Historical-Psychological Perspective" by Leonardo Barón-Birchenall et al., published in Creativity Research Journal.
 
 ## Reasoning
-The search results provide evidence that musical creativity is a blend of individual expression and collective influence, supporting the hypothesis that innovative tracks embody both personal artistic choices and popular trends.
+The search results provide evidence that both individual expression and collective trends play significant roles in music composition. The article "Creativity Is Collective" discusses how personal experiences and character traits alone may not be enough to produce a prodigy, emphasizing the importance of social interaction in creativity. The study "Collaborative Musical Creativity: How Ensembles Coordinate Spontaneity" examines how skilled musicians maintain control over their performances to make spontaneous interpretive decisions, highlighting the interplay between individual creativity and group dynamics. Additionally, "Creativity: An Individual or Collective Phenomenon? A Historical-Psychological Perspective" explores the evolution of creativity as both an individual and collective phenomenon, suggesting that creativity emerges through social interaction.

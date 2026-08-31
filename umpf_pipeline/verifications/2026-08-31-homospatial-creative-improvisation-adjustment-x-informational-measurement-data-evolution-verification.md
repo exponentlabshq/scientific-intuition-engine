@@ -13,7 +13,9 @@
 - `creative performance adjustment based on audience feedback`
 
 ## What was found
-FanRows is a browser-based platform that enables real-time, embodied sound interaction by mapping body movement to sound environments. ([fanrows.com](https://fanrows.com/?utm_source=openai)) Somax2 is a distributed co-creative system that performs live machine co-improvisation with musicians, adapting to their performance in real-time. ([journals.sagepub.com](https://journals.sagepub.com/doi/10.3233/FAIA230106?utm_source=openai)) Con Moto is a real-time generative music system for dance improvisation that translates camera motion data into movement parameters, controlling musical output. ([zenodo.org](https://zenodo.org/records/20784048?utm_source=openai))
+FanRows – Movement-Controlled Sound & Embodied Interaction
+H2H Music Improv: A Communication Model and Audio-Visual Dataset for Music Improvisation
+Somax2 – A Distributed Co-Creative System for Human-Machine Co-Improvisation
 
 ## Reasoning
-These systems exemplify the integration of real-time data analysis into creative improvisation, aligning with the concept of an 'Adaptive Creative Feedback Loop.' They demonstrate how audience feedback and evolving information can be seamlessly incorporated into performances, enhancing the interactive experience.
+The search results reveal several systems that integrate real-time data analysis into creative improvisation, aligning with the concept of an "Adaptive Creative Feedback Loop." For instance, FanRows enables body movement to continuously shape responsive sound environments, allowing performers to influence sound through their movements. Similarly, Somax2 is a multi-agent interactive system that performs live machine co-improvisation with musicians, adapting to their inputs in real-time. These examples demonstrate the convergence of creativity and data analysis in performance settings.

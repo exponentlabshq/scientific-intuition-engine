@@ -13,7 +13,14 @@
 - `feedback loops in healthcare named theory OR framework OR researcher`
 
 ## What was found
-Adaptive feedback loops are integral to both healthcare interventions and creative film production orchestration. In healthcare, the 'assessment–intervention–feedback' framework emphasizes continuous improvement through iterative monitoring and adjustment, placing the patient at the center and committing to ongoing refinement. ([frontiersin.org](https://www.frontiersin.org/journals/public-health/articles/10.3389/fpubh.2026.1806393/full?utm_source=openai)) Similarly, in film production, the integration of generative systems has led to a more fluid, iterative cycle, transforming filmmaking from a linear process into a continuous loop of creation and feedback. ([adaptivemedia.ai](https://www.adaptivemedia.ai/blog/generative-ai-filmmaking-new-cinema-cycle?utm_source=openai))
+Adaptive Multi-Agent Deep Reinforcement Learning for Timely Healthcare Interventions
+([arxiv.org](https://arxiv.org/abs/2309.10980?utm_source=openai))
+
+CineVision: An Interactive Pre-visualization Storyboard System for Director-Cinematographer Collaboration
+([arxiv.org](https://arxiv.org/abs/2507.20355?utm_source=openai))
+
+Behavioral Sensing and Intervention Paradigm: A Review of Closed-Loop Approaches for Ingestion Health
+([arxiv.org](https://arxiv.org/abs/2505.03185?utm_source=openai))
 
 ## Reasoning
-Both domains utilize adaptive feedback mechanisms to refine and improve their respective processes. In healthcare, this approach ensures that interventions are responsive to patient needs, leading to better outcomes. In film production, iterative cycles allow for continuous refinement of creative content, enhancing the final product. The presence of such adaptive feedback loops in both fields indicates a bridging subfield that connects the two domains, supporting the proposed mapping.
+The search results reveal active research in both healthcare and film production that aligns with the proposed mapping. In healthcare, adaptive feedback mechanisms are evident in studies like "Adaptive Multi-Agent Deep Reinforcement Learning for Timely Healthcare Interventions," which employs multi-agent deep reinforcement learning for real-time patient monitoring and intervention. In film production, tools such as CineVision facilitate real-time collaboration between directors and cinematographers, enhancing pre-visualization and adaptive decision-making. Additionally, the "Behavioral Sensing and Intervention Paradigm" discusses closed-loop approaches in health interventions, highlighting the role of real-time feedback in adaptive health management. These findings indicate that the proposed mapping is supported by current research in both domains.

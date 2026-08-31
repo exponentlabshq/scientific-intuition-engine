@@ -1,7 +1,7 @@
 # Verification: Janusian — Human Learning Uncertainty
 
 **Verifies**: `hypotheses/2026-08-29-janusian-human-learning-uncertainty.md`
-**Verified**: 2026-08-29 · **Method**: Tavily search + GPT-4o classification (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
 ## Verdict: **ADJACENT_ACTIVE**
 
@@ -13,7 +13,7 @@
 - `John Dewey uncertainty in education`
 
 ## What was found
-The search results indicate active research on the impact of uncertainty on learning and creativity. For example, 'Developing a thirst for knowledge: How uncertainty in the classroom influences curiosity, affect, learning, and transfer' discusses how uncertainty can increase curiosity and influence learning (source 1). 'Uncertainty: A Catalyst for Creativity, Learning and Development' explores how uncertainty serves as a catalyst for creativity and learning (sources 6, 7, 8). These sources suggest that uncertainty can both hinder and enhance learning, aligning with the hypothesis's core claim.
+The book 'Uncertainty: A Catalyst for Creativity, Learning and Development' explores how uncertainty influences learning and creativity. ([link.springer.com](https://link.springer.com/book/10.1007/978-3-030-98729-9?utm_source=openai)) Research indicates that uncertainty can enhance learning by increasing attention to cues, facilitating the learning of new associations. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/28766369/?utm_source=openai)) Additionally, uncertainty-driven curiosity is linked to the development of intellectual character and supports learning. ([researchgate.net](https://www.researchgate.net/publication/362073278_Developing_Intellectual_Character_An_Educational_Perspective_on_How_Uncertainty-Driven_Curiosity_Can_Support_Learning?utm_source=openai))
 
 ## Reasoning
-The hypothesis posits that uncertainty can simultaneously hinder and enhance learning, leading to confusion and enhanced creativity. The search results reveal active research exploring how uncertainty influences learning outcomes and creativity, supporting the idea that uncertainty can have dual effects. However, no source explicitly confirms the simultaneous occurrence of confusion and enhanced creativity in problem-solving tasks as described in the hypothesis. Thus, the research is adjacent and active but does not directly confirm the hypothesis, placing it in the ADJACENT_ACTIVE category.
+The sources provide evidence that uncertainty can simultaneously hinder and enhance learning, leading to both confusion and increased creativity in problem-solving tasks.

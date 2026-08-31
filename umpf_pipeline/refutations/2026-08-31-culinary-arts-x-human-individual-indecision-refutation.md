@@ -1,0 +1,14 @@
+# Adversarial Refutation: Bisociation — Culinary Arts (Creative & Performance Systems) — Atomic: Recipe succeeds/fails, Ingredient freshness unknown, Multiple flavor combinations; Domain: Dish develops through cooking, Recipes & traditions, Log cooking steps; Control: External food suppliers, Concurrent cooking processes, Atomic seasoning adjustments; Orchestration: Restaurant coordination, Recipe vs service environments × Human Individual Indecision
+
+**Original**: `hypotheses/2026-08-31-culinary-arts-x-human-individual-indecision.md`
+**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost
+
+## Tally: 0 of 3 survive → **REFUTED**
+
+- **Coherence — REFUTED.** The core claim relies on the term 'uncertainty' to bridge culinary arts and decision-making processes. However, 'culinary uncertainty' refers to the unpredictability of ingredient quality and cooking outcomes, while 'indecision uncertainty' pertains to cognitive processes in making choices. These are not the same formal objects; they represent different types of uncertainty influenced by distinct factors in their respective domains. Thus, the claim exhibits equivocation on the term 'uncertainty.'
+- **Testability — REFUTED.** The core claim of the hypothesis lacks specific, checkable evidence that operationalizes the proposed mappings between culinary arts and individual indecision. While it references concepts from decision-making theory, it does not name any specific experiments, datasets, or established theorems that would validate the claim. The mappings are presented in a vague manner without clear metrics or thresholds for testing, making it impossible to definitively confirm or refute the hypothesis through empirical means. Therefore, the claim is not sufficiently operationalized and is considered vague.
+- **Triviality — REFUTED.** The core claim states that various aspects of culinary arts can be mapped to aspects of individual indecision, suggesting a structural similarity between the two domains. However, when stripped of domain-specific vocabulary, the claim reduces to a general assertion about uncertainty influencing outcomes in complex systems. This is a common characteristic of many complex systems, making the claim trivial. The specific mappings and relationships do not provide a unique insight that would not apply to other complex systems, such as decision-making in business or personal choices. Therefore, the claim does not survive the triviality lens.
+
+## No steelman offered
+
+All three lenses independently converged on REFUTED for this case. If revisited, it would need a genuinely tighter formulation, not a restatement of the same claim.

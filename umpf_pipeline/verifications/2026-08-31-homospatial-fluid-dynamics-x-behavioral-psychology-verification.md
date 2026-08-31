@@ -13,7 +13,7 @@
 - `Fluid dynamics principles applied to psychology`
 
 ## What was found
-A recent study integrates fluid dynamics principles into behavioral science, proposing a dynamical systems framework that combines matching law, disequilibrium theory, and behavioral momentum. This framework introduces the Brunt-Väisälä frequency analogy from fluid dynamics to model behavior allocation over time. ([sciety.org](https://sciety.org/articles/activity/10.31234/osf.io/pce7u_v1?utm_source=openai))
+A study titled 'Toward a Dynamical Systems Account of Behavioral Networks: Integrating Matching, Disequilibrium Theory, Momentum, and Brunt-Väisälä Frequency' explores the integration of behavioral processes with fluid dynamics principles. ([sciety.org](https://sciety.org/articles/activity/10.31234/osf.io/pce7u_v1?utm_source=openai))
 
 ## Reasoning
-The study's integration of fluid dynamics into behavioral science aligns with the proposed 'Behavioral Flux' concept, indicating active research in this area. However, the exact term 'Behavioral Flux' is not used, suggesting the hypothesis is adjacent to current research but not directly colliding with existing work.
+The study integrates behavioral processes with fluid dynamics principles, suggesting a connection between the two fields.

@@ -1,7 +1,7 @@
 # Verification: Bisociation — Materials Science — Phase Transitions × Cognitive Streaming Data Processing
 
 **Verifies**: `hypotheses/2026-08-29-materials-science-x-cognitive-streaming-data-processing.md`
-**Verified**: 2026-08-29 · **Method**: Tavily search + GPT-4o classification (`verify_hypothesis.py`, unattended)
+**Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
 ## Verdict: **ADJACENT_ACTIVE**
 
@@ -13,7 +13,7 @@
 - `Per Bak self-organized criticality theory in data processing`
 
 ## What was found
-Research on phase transitions in cognitive systems and data processing, such as 'Cognitive Phase Transitions in Subjective Physics' (https://digitalphysics.ru/cognitive_phase_transitions.html) and 'the phase transition in human cognition' (https://co-mind.org/rdmaterials/php.cv/pdfs/article/spivey_anderson_dale_2009.pdf), indicates active exploration of phase transition concepts in cognitive domains. Additionally, 'Phase transitions in big data' (https://www.santafe.edu/news-center/news/phase-transitions-big-data) discusses analogies between phase transitions in matter and data processing.
+1. 'Designing crystallization in phase-change materials for universal memory and neuro-inspired computing' (Nature Reviews Materials, 2019). 2. 'Intercalation of functional materials with phase transitions for neuromorphic applications' (Matter, 2025). 3. 'Memristive Transitions in a Neuromorphic Solid' (Oak Ridge National Laboratory, 2022).
 
 ## Reasoning
-The search results reveal active research in applying phase transition concepts to cognitive systems and data processing, indicating a fertile area of exploration. However, the specific mapping proposed in the hypothesis, such as the detailed layer-by-layer analogy, does not appear to have been explicitly drawn in existing literature. This suggests that while the domains are actively researched, the exact bisociation proposed remains novel, thus fitting the ADJACENT_ACTIVE category.
+The search results reveal active research exploring the intersection of phase transitions in materials science and cognitive streaming data processing. For instance, the 2019 Nature Reviews Materials article discusses the use of phase-change materials in neuro-inspired computing, highlighting their potential in memory and processing applications. The 2025 Matter article examines how intercalation techniques can induce phase transitions in materials for neuromorphic applications, suggesting a direct analogy to cognitive data processing. Additionally, the 2022 Oak Ridge National Laboratory research highlights memristive transitions in neuromorphic solids, further bridging the gap between material phase transitions and cognitive computing. These findings indicate that the mechanisms driving phase transitions in materials are being analogously applied to cognitive data processing systems.

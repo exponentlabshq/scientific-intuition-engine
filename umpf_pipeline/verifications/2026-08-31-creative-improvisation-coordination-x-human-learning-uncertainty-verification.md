@@ -3,7 +3,7 @@
 **Verifies**: `hypotheses/2026-08-31-creative-improvisation-coordination-x-human-learning-uncertainty.md`
 **Verified**: 2026-08-31 · **Method**: OpenAI web_search (gpt-4o-mini) + classification, single call (`verify_hypothesis.py`, unattended)
 
-## Verdict: **ADJACENT_ACTIVE**
+## Verdict: **COLLISION**
 
 ## Queries
 - `improvisation in education named theory OR framework OR researcher`
@@ -13,7 +13,7 @@
 - `Vygotsky social learning theory and improvisation`
 
 ## What was found
-Dynamic systems theory has been applied to education, viewing learning as a self-organizing process where complexity and order emerge from interactions among components. ([journals.sagepub.com](https://journals.sagepub.com/doi/10.1111/1467-8721.00062?utm_source=openai)) In music education, improvisation is recognized as a central component, developing students' musical abilities and fostering creativity. ([frontiersin.org](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2015.00614/full?utm_source=openai)) The concept of 'regulated improvisation' in teaching allows educators to adapt and respond to classroom contingencies, emphasizing the dynamic nature of teaching. ([link.springer.com](https://link.springer.com/article/10.1007/s13384-022-00545-0?utm_source=openai))
+The concept of 'regulated improvisation' in education is discussed in the article 'Teaching as regulated improvisation' published in The Australian Educational Researcher. ([link.springer.com](https://link.springer.com/article/10.1007/s13384-022-00545-0?utm_source=openai)) This concept is also explored in 'Improvisation in teaching and education—roots and applications' published in Cogent Education. ([researchgate.net](https://www.researchgate.net/publication/305877128_Improvisation_in_teaching_and_education-roots_and_applications?utm_source=openai)) Additionally, the 'Integrative Approach to Improvisation Education (IAIE)' model is presented in the article 'Integrative Approaches in Improvisation Education: A Qualitative Study of Emotional, Social, and Reflective Learning Processes with a Focus on Iranian Music' published in Visions of Research in Music Education. ([digitalcommons.lib.uconn.edu](https://digitalcommons.lib.uconn.edu/vrme/vol48/iss1/6/?utm_source=openai))
 
 ## Reasoning
-The search results reveal active research in both domains: dynamic systems theory in education and improvisation in music education. However, the exact mapping proposed in the hypothesis has not been explicitly established in the literature, indicating that the hypothesis is in an adjacent active state.
+The search results reveal that the concept of 'regulated improvisation' in education has been discussed in various academic articles, indicating that the proposed mapping between Creative Improvisation Coordination and Human Learning Uncertainty has been explored in existing literature.
