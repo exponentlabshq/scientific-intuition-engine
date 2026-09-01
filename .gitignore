@@ -5,6 +5,7 @@ __pycache__/
 *.pyo
 .DS_Store
 eureka-engine-web/
+fu-fake-university-site/
 umpf_pipeline/site_build/output/
 umpf_pipeline/site_build/landing.html
 umpf_pipeline/site_build/dashboard.html
