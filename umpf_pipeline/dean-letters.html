@@ -1,0 +1,189 @@
+<title>On the Eureka Engine</title>
+
+<style>
+:root {
+  --ink: #14110f;
+  --paper: #1c1815;
+  --surface: #241f1a;
+  --border: #3a3229;
+  --text: #ede6d8;
+  --text-muted: #a89a86;
+  --text-faint: #6f6455;
+  --gold: #c89b3c;
+  --v-adjacent: #5fa88f;
+  --v-collision: #6f93bd;
+  --v-refuted: #b56b6b;
+  --v-pending: #8a8577;
+  --serif: ui-serif, Georgia, 'Iowan Old Style', 'Times New Roman', serif;
+  --sans: -apple-system, BlinkMacSystemFont, 'Inter', ui-sans-serif, 'Segoe UI', sans-serif;
+  --mono: ui-monospace, 'SF Mono', Menlo, monospace;
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --ink: #faf7f0; --paper: #ffffff; --surface: #f6f2ea; --border: #ddd2bd;
+    --text: #241f1a; --text-muted: #6b5f4d; --text-faint: #948a76; --gold: #8a6f2e;
+  }
+}
+:root[data-theme="light"] {
+  --ink: #faf7f0; --paper: #ffffff; --surface: #f6f2ea; --border: #ddd2bd;
+  --text: #241f1a; --text-muted: #6b5f4d; --text-faint: #948a76; --gold: #8a6f2e;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--ink); color: var(--text); font-family: var(--sans);
+  font-size: 16.5px; line-height: 1.7; margin: 0; padding: 0 22px 100px;
+  -webkit-font-smoothing: antialiased;
+}
+.page { max-width: 700px; margin: 0 auto; }
+
+.masthead { padding: 64px 0 40px; border-bottom: 2px solid var(--gold); }
+.masthead .kicker {
+  font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.12em;
+  color: var(--gold); font-size: 0.78rem; margin-bottom: 14px;
+}
+.masthead h1 {
+  font-family: var(--serif); font-size: clamp(2.1rem, 5vw, 3.1rem); font-weight: 600;
+  margin: 0 0 14px; text-wrap: balance; letter-spacing: -0.01em;
+}
+.masthead .dek { color: var(--text-muted); font-size: 1.12rem; max-width: 600px; margin: 0 0 20px; }
+.masthead .byline { color: var(--text-faint); font-size: 0.88rem; font-family: var(--mono); }
+
+nav.toc {
+  margin: 36px 0; padding: 22px 26px; border: 1px solid var(--border); border-radius: 10px;
+  background: var(--surface);
+}
+nav.toc .label {
+  font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.1em;
+  color: var(--gold); font-size: 0.72rem; margin-bottom: 12px; display: block;
+}
+nav.toc ol { margin: 0; padding-left: 0; list-style: none; counter-reset: letter; }
+nav.toc li { margin: 10px 0; font-size: 0.94rem; counter-increment: letter; padding-left: 28px; position: relative; }
+nav.toc li::before {
+  content: counter(letter); position: absolute; left: 0; top: 0;
+  font-family: var(--mono); color: var(--gold); font-size: 0.8rem;
+}
+nav.toc a { color: var(--text); text-decoration: none; border-bottom: 1px solid transparent; }
+nav.toc a:hover { border-bottom-color: var(--gold); color: var(--gold); }
+nav.toc .toc-sub { display: block; color: var(--text-faint); font-size: 0.82rem; margin-top: 2px; }
+
+/* Each letter reads as a distinct piece of correspondence -- a subtle
+   letterhead card, serif body type for a personal register (matching the
+   whitepaper's own .story-open treatment), a visible date, and a
+   right-weighted signoff -- rather than continuing the report's own
+   section/article styling verbatim. */
+article.letters { counter-reset: none; }
+.letter {
+  margin: 0 0 56px;
+  padding: 40px 44px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  position: relative;
+}
+.letter::before {
+  content: "";
+  position: absolute; top: 0; left: 40px; right: 40px; height: 3px;
+  background: linear-gradient(90deg, var(--gold), transparent 70%);
+  border-radius: 0 0 3px 3px;
+}
+.letter-date {
+  font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.08em;
+  color: var(--gold); font-size: 0.76rem; margin-bottom: 22px;
+}
+.letter .salutation {
+  font-family: var(--serif); font-size: 1.15rem; font-style: italic;
+  color: var(--text); margin: 0 0 18px;
+}
+.letter p {
+  font-family: var(--serif); font-size: 1.04rem; line-height: 1.75;
+  color: var(--text); margin: 16px 0;
+}
+.letter p strong { color: var(--gold); font-weight: 600; }
+.letter .signoff {
+  margin-top: 28px; text-align: right; font-family: var(--serif);
+  font-style: italic; color: var(--text-muted); font-size: 1.02rem;
+}
+
+footer.colophon {
+  margin-top: 64px; padding-top: 22px; border-top: 1px solid var(--border);
+  color: var(--text-faint); font-size: 0.82rem; font-family: var(--mono);
+}
+
+@media (max-width: 600px) {
+  .letter { padding: 28px 22px; }
+  .letter::before { left: 22px; right: 22px; }
+}
+</style>
+
+<div class="page">
+  <header class="masthead">
+    <span class="kicker">Exponent Labs LLC &middot; Independent Review</span>
+    <h1>On the Eureka Engine</h1>
+    <p class="dek">Four letters from an outside, skeptical reviewer to a university provost, tracking how the real evidence for this tool has actually moved his own recommendation over time &mdash; corrections and all, not a curated highlight reel.</p>
+    <p class="byline">Dean of Faculty &rarr; Provost Alvarez</p>
+  </header>
+
+  <nav class="toc">
+    <span class="label">Four Letters</span>
+    <ol>
+      <li><a href="#letter-1">August 31, 2026<span class="toc-sub">First evaluation &mdash; what the tool is, what it does and doesn't do well, a bounded-pilot recommendation</span></a></li>
+      <li><a href="#letter-2">September 1, 2026<span class="toc-sub">A follow-up: does the tool's best output independently match real literature?</span></a></li>
+      <li><a href="#letter-3">September 1, 2026, later the same day<span class="toc-sub">The full-distribution study &mdash; checking the tool's confidence against reality across its entire output</span></a></li>
+      <li><a href="#letter-4">September 1, 2026, a third letter<span class="toc-sub">Repairing a diagnosed flaw, wiring the fix into production, and a bug caught the same day</span></a></li>
+    </ol>
+  </nav>
+
+  <article class="letters">
+    <section class="letter" id="letter-1">
+      <div class="letter-date">August 31, 2026</div>
+      <p class="salutation">Dear Provost Alvarez,</p>
+      <p>You asked me to look closely at the Eureka Engine before we commit any department budget to it, and I've spent the better part of two weeks doing exactly that — reading its own internal engineering logs, not just its sales pitch, and asking its developers to run real tests in front of me rather than show me a demo. Here is what I actually found.</p>
+      <p><strong>What it is, plainly.</strong> The Eureka Engine is a piece of software that pairs up two unrelated academic fields — say, control theory and astrophysics — and asks an AI to propose a genuine structural connection between them, the way Darwin's insight into natural selection borrowed from Malthus's economics, or the way a physicist might notice that a financial pricing model and a heat-diffusion equation are secretly the same mathematics. It then runs that proposed connection through a second AI whose only job is to try to kill it — to find the flaw, the sloppy reasoning, the equivocation. What survives gets ranked on a public leaderboard. The whole pitch is that finding a genuinely fruitful cross-disciplinary connection today depends on luck and a professor's personal breadth of reading, and this tool tries to manufacture that luck cheaply and at scale, before anyone spends a year of a graduate student's life chasing a dead end.</p>
+      <p><strong>What it does well.</strong> The part that impressed me most wasn't the idea — plenty of AI tools promise cross-disciplinary insight — it was how the team tested whether their own "kill it" mechanism actually works. They took real, historically confirmed Nobel-level discoveries — Hopfield's neural networks, Nash's equilibrium concept, the Kahneman-Tversky work on decision-making — and ran them through the exact same adversarial gauntlet used on every AI-generated guess, to see whether real science would actually survive. On the first attempt, none of it did, which told them their checker was broken, not that the discoveries were weak. They found the actual bugs, fixed them, and on the corrected version, roughly six of every ten real discoveries survived, while the system continued to correctly reject nearly three hundred AI-generated guesses in a row. That is a real, honest test of whether the tool can tell a true idea from a plausible-sounding one, and as far as I can determine, very few AI research tools ever run a test like this at all, let alone publish the failures along the way. I counted twenty separate engineering mistakes disclosed in their own documentation, each with the real numbers showing what went wrong and what fixing it actually changed. I would rather buy software from a team that shows me its wounds than one that shows me only its wins.</p>
+      <p><strong>What it does not do well, and this matters more.</strong> The tool is far weaker at actually finding something new than its leaderboard makes it look at first glance. When I asked the team to run a clean test — take domain pairs their own system had already flagged as promising, generate real hypotheses from them, and see how many survived the adversarial check — the answer was zero out of twenty. When I asked them to instead hand-pick domain pairs based on genuine mathematical knowledge, someone who actually understood the underlying equations, the rate rose to about two in thirteen. Left entirely to its own automatic judgment with no person steering it, the system essentially found nothing. That is an important number, and to their credit they did not hide it or spin it. There is also a more technical worry worth knowing about: when they re-ran the exact same check on the exact same unchanged text, with nothing in the world having changed, they got a different answer about four times out of ten. That is a real reliability gap in the tool's own judgment, not a one-time glitch, and it means no single verdict from this system should be treated as final.</p>
+      <p><strong>So what is actually valuable here, and what would I be paying for?</strong> I do not think this software finds discoveries. I think it does something narrower and still genuinely useful: it is a fast, cheap first filter that can tell a researcher, in minutes rather than months, whether a hunch about two fields connecting is something already well established, something worth a serious look, or something that falls apart under five minutes of real scrutiny. Used that way, in the hands of a curious faculty member who already knows enough to pick sensible pairings and to treat every result as a lead rather than an answer, it could genuinely save real time and real money. Used as an unattended discovery machine, left to wander the space of possible ideas on its own, I do not believe it earns its keep yet.</p>
+      <p><strong>My recommendation.</strong> I would authorize a small, bounded pilot with one or two departments that already do cross-disciplinary work, with the explicit understanding among the faculty that this is a triage tool, not an oracle, and that nothing it produces substitutes for a real experiment or a real literature review. I would not authorize a university-wide rollout, and I would not let anyone cite its leaderboard as evidence of anything on its own. The team's honesty about its own limits is precisely why I trust them enough to recommend the pilot at all — a vendor that shows you where their product breaks is a vendor worth doing business with. I simply want us to buy it for what it actually is, not for what a leaderboard makes it look like at a glance.</p>
+      <p class="signoff">Yours,<br>Dean of Faculty</p>
+    </section>
+
+    <section class="letter" id="letter-2">
+      <div class="letter-date">September 1, 2026</div>
+      <p class="salutation">Dear Provost Alvarez,</p>
+      <p>A quick follow-up to my letter of the 31st, because I asked for one more test before I let my own recommendation sit, and the result is worth putting in front of you directly.</p>
+      <p>My earlier concern was specific: I had watched the tool fail to reliably produce anything sharp when left to pick its own pairings, and I worried its leaderboard was measuring internal consistency rather than real relevance to actual science. So I asked a narrower, harder question. Not "does this survive the AI's own adversarial test" — I already knew the answer to that for its eight strongest surviving hypotheses — but "if I go and actually search the real scientific literature, does anyone out there happen to already be working on the same idea, independently, with no knowledge that this software exists?" If the tool is really onto something when it proposes a connection, real researchers should sometimes already be circling the same territory. If it is only good at sounding plausible, a real search should turn up nothing but silence or vague, unrelated noise.</p>
+      <p>I had the team run that search, by hand, on the eight strongest hypotheses currently sitting on the tool's leaderboard — the ones that had already survived its internal adversarial check. Six of the eight turned up a real match: an actual, named, citable paper or body of work addressing the same specific mechanism the software had proposed on its own. A 1997 paper on the exact tradeoff it identified in how compilers schedule instructions. A 2019 psychology study on the exact memory-chunking effect it proposed. A 2015 review of exactly how migratory birds combine instinct and learned cues, which is precisely the paradox the software had landed on by itself. Real citations, real journals, nothing invented. The two that came up empty — a claim about unreliable narrators in fiction, and a claim about ocean layering — the team reported as honestly empty rather than stretching a loose result to make the number look better, which by now I have come to expect from them and still appreciate every time.</p>
+      <p>I want to be careful about what this does and does not tell us. It does not mean the software discovered anything; every one of these six ideas already existed in the literature before the tool ever proposed them. What it tells us is something more useful for our purposes: when this software invents a cross-disciplinary idea entirely on its own, without a person steering it, that idea is landing in the same neighborhood as real, ongoing scholarship far more often than I expected — six times out of eight, and seven of those eight ideas were generated with no human guidance at all. That is a genuinely different, and better, result than the one that led me to be cautious two days ago, and I think it is fair to say so plainly rather than let my earlier skepticism stand unrevised.</p>
+      <p>One more detail worth your attention: this strong result came specifically from the half of the tool that takes one field and inverts its own assumption to find a paradox within it, not from the half that tries to connect two unrelated fields to each other. That second half is the one that struggled in my earlier letter — zero good results out of twenty unsupervised attempts. So my view now has more texture than it did on the 31st: the single-field paradox mode has earned more of my confidence than I gave it credit for; the two-field pairing mode has not yet earned any more than it had.</p>
+      <p>I am not changing my recommendation of a small, bounded pilot into anything larger — one good test on eight examples is not a track record, and I still want a faculty member's judgment sitting on top of every result this tool produces. But I am telling you plainly that my confidence in the pilot has gone up, not down, since Monday, and that the team earned that the same way they earned my attention in the first place: by running the harder, less flattering test themselves, correcting their own approach mid-stream when a search prompt was drawing the bar in the wrong place, and reporting exactly what came back, matches and misses both.</p>
+      <p class="signoff">Yours,<br>Dean of Faculty</p>
+    </section>
+
+    <section class="letter" id="letter-3">
+      <div class="letter-date">September 1, 2026 (later the same day)</div>
+      <p class="salutation">Dear Provost Alvarez,</p>
+      <p>I asked for one number after my last letter, and the team has now handed me something better than a number — a whole distribution. My concern on the 31st, even after the good result I reported to you that afternoon, was that six-of-eight was a small sample sitting at the very top of the leaderboard, exactly where I would expect the tool to look its best. A dean who only ever inspects the honor roll learns nothing about the school. So I asked them to run the same real-literature search across every confidence tier the tool assigns its own output, not just the top one — including its worst tier, the ideas its own adversarial check has already rejected — and to keep going until they had covered nearly everything the machine has ever produced.</p>
+      <p>They have now checked 631 of the tool's 717 real, machine-generated ideas — eighty-eight percent of its entire output, not a hand-picked sample — against the actual scientific literature, again by hand, again reporting real citations rather than a confidence score. The result is the most useful single fact I have learned about this tool: the match rate falls in a clean, orderly line as the tool's own confidence falls. Ideas that survived its internal adversarial test land in real, existing scholarship 71 percent of the time. Ideas it is unsure about, 46 to 67 percent. Ideas it has actively rejected — its own worst tier — still land in real territory 36 percent of the time. That last number is the one I want you to sit with. It means the tool's rejection is not the same claim as "this is nonsense." More than a third of the ideas it throws out are, it turns out, ideas a real scholar somewhere is or has been genuinely working on — the tool is correctly judging that its own proposed mechanism didn't hold up to scrutiny, while still, without knowing it, wandering into real intellectual territory along the way. That is exactly the failure mode of a bright but overconfident graduate student, not the failure mode of a machine generating plausible-sounding noise. I did not expect to be able to say that with this much evidence behind it.</p>
+      <p>I also owe you a correction to something I told you two days ago. I said then that the tool's single-field paradox mode had earned my confidence and its two-field pairing mode had not — based on that mode producing zero good results out of twenty unsupervised attempts at generating a strong idea. That finding still stands; it was a real, honest measurement, and I am not retracting it. But it turns out I was measuring a different question than the one I am asking you to weigh today. Whether a mode reliably produces an idea sharp enough to survive the tool's own internal adversarial check is one question. Whether the ideas that mode produces, survive or not, are actually touching real scholarship is a separate one, and on that second question the two-field pairing mode does respectably well — 41 percent of its ideas, checked across the full distribution, land in real territory. The mode I should actually be worried about is a third one I had not given much separate attention to before now, the one that asks the tool to hold two fields in mind at once rather than either inverting one field's own assumption or colliding two fields together: only 17 percent of its ideas land anywhere real, and that gap has widened, not narrowed, every time the team has grown the sample. I raise this because it is a plain example of why one good headline test is not the same as understanding a tool — I had the right instinct on the 31st and the wrong specific culprit.</p>
+      <p>One more thing worth your attention, smaller but telling. The team's own review found, the same day they found it, that a real match to existing literature and a real link to actually read it were sitting in their data almost every time — but the tool's public leaderboard was not showing either one anywhere you could see without clicking into a result individually first. In other words, they had built the evidence and then half-buried it. They fixed it the same day, so that a real citation and a working link now appear directly on the leaderboard without a click. I mention it not because it is a large technical matter but because it is a small, honest one: the kind of gap a team that is not paying close attention to its own product simply never notices, and this one did, unprompted by me.</p>
+      <p>Where does this leave my recommendation? Unchanged in size — still a small, bounded pilot, still with a faculty member's judgment required on top of every result — but considerably more confident in what that pilot is actually good for. I now believe this tool's real value is not the leaderboard's top ranks at all, but the ranking itself: a working, reasonably well-calibrated dial between "probably real" and "probably not," running across the tool's entire output, not just its best face. Used that way — a triage instrument whose calibration I have now seen tested honestly at scale, not a discovery machine and not an oracle — I would tell any department head this is worth their time to try.</p>
+      <p class="signoff">Yours,<br>Dean of Faculty</p>
+    </section>
+
+    <section class="letter" id="letter-4">
+      <div class="letter-date">September 1, 2026 (a third letter, same day)</div>
+      <p class="salutation">Dear Provost Alvarez,</p>
+      <p>Everything I have told you so far has been about measurement — how well the tool's own confidence tracks reality. Today the team showed me something different in kind: a real attempt to fix a specific, diagnosed flaw in how the tool reasons, not just grade it more carefully. I want to walk you through it, because I think it is the most interesting thing I have seen from them yet, and also because I do not want you to mistake it for more than it is.</p>
+      <p>An outside reviewer — not the team itself — looked at one of the tool's own rejected ideas and made a sharp observation. When the tool proposes that two fields are connected, it can do that in one of three ways, though nobody had put a name to the distinction before now. It can notice that two things merely resemble each other, the weakest and most common failure — "both of these systems change over time," which could describe almost anything and is worth nothing on its own. It can notice that the same relationship holds in both fields, which is stronger. Or, strongest of all, it can propose an actual, checkable translation between the two fields' own governing mathematics — not "these are similar," but "here is the precise substitution under which one field's equation becomes the other's." The rejected idea the reviewer looked at had done only the weakest thing: it noticed that a vibrating mechanical system and an evolving electrical circuit both have "displacement" and "voltage," and treated that resemblance as if it were a discovery. The adversarial check killed it correctly, for exactly that reason. But the reviewer pointed out something the team had not: the real, correct, textbook translation between those two fields already exists — it is called the electro-mechanical analogy, published in 1943, still used today — and the tool had simply failed to find it, not because it doesn't exist, but because nothing in the tool ever asked it to look for the strongest kind of connection rather than settle for the weakest.</p>
+      <p>So the team built something new: a second pass that takes a rejected idea, and asks the tool to try again, explicitly, at the hardest level — name the real mathematical objects on each side, propose the actual substitution, and try to show the equations transform into each other. Critically, it is allowed to fail honestly. If no real translation exists, it is supposed to say so and stop, not manufacture one to look productive. I made them show me the failures alongside the successes before I would take the successes seriously, and they did: on a first small batch, four of six tries produced an honest "no, I could not find one," each with a specific, sensible reason — phase transitions do not translate into spring mechanics, one told me, and cryptographic proofs do not translate into knot theory. Only two of six produced something real. I regard that as the correct ratio for a tool that isn't padding its own success rate, not a disappointing one.</p>
+      <p>Scaled up properly — Fibonacci-sized batches again, the same disciplined habit I have come to expect from this team — the real number settled at roughly one success in eight attempts for the category of ideas where this kind of fix could plausibly apply at all, and roughly one in fifty for ideas outside that category, where trying at all was mostly a waste of a phone call and the team, to their credit, said so once they saw the number rather than kept trying anyway. Small, but real, and every one of the handful of successes was then run back through the exact same adversarial gauntlet that killed the original idea — not a friendlier, second-chance version of the test. Every single one that the tool managed to fix this way went on to survive that gauntlet, where the original, sloppier version of the same idea had been unanimously rejected. That is a genuinely new fact about this system: its adversarial check is not just consistent, it is fine-grained enough to tell the difference between "this idea is bad" and "this idea is fine, but was stated badly," and reward the difference correctly when a better statement is offered.</p>
+      <p>I want to be precise about what this is not. Every one of the fixed ideas traced back to real, existing, often decades-old mathematics that a subject-matter expert already knows — the 1943 analogy, a well-known finance-and-physics equivalence, a standard acoustics formula. This is not the tool discovering anything. It is the tool learning to state its own best case properly instead of settling for its worst one, when a person with real domain knowledge points out where to look. I raised this distinction with the team directly and they did not push back on it; they wrote it into their own documentation the same way.</p>
+      <p>The last thing I will tell you is the one that actually earned my trust today, more than the fix itself. They wired this new step directly into the tool's own automatic, unattended production run — no longer something a person has to remember to do by hand. On the very first real test of that automation, it broke: a narrow case the team had not anticipated caused the new step to crash outright on one hypothesis out of six. I only know this because they told me plainly, in the same afternoon, before I asked. It turned out to be a small, honest oversight — a category of idea the tool generates that only ever involves one field, not two, was never given a sensible way to skip the new check cleanly, and the code assumed it always would be. Nothing was lost; the rest of the run finished normally; they found the bug, fixed it, and showed me the exact failing case working correctly afterward. I have said this to you in nearly the same words twice already this week, and I will say it again because it keeps being true: a team that tells me about the bug in their own automation the same day they find it, unprompted, is a team I trust more after the bug than before it, not less.</p>
+      <p>This does not change the size of my recommendation. It is one more real, disclosed piece of evidence — smaller in scale than the distribution study, but different in kind, because it is the first time I have watched this team try to make the tool actually better at reasoning, rather than only better at knowing its own limits. I will be watching for whether that kind of fix generalizes beyond this one narrow case, or whether it stays a clever patch for one specific failure mode. Either way, they earned the right to keep trying in front of me.</p>
+      <p class="signoff">Yours,<br>Dean of Faculty</p>
+    </section>
+  </article>
+
+  <footer class="colophon">
+    Correspondence log &middot; source: <code>eureka-engine-dean-evaluation-letter.md</code> &middot; every number and finding cited traces to this project's own real, dated engineering work &mdash; see the <a href="whitepaper.html" style="color:var(--gold)">whitepaper</a> for the full technical record.
+  </footer>
+</div>

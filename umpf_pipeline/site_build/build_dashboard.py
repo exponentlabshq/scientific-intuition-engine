@@ -398,6 +398,7 @@ section.block h2 { font-family: var(--display); font-size: 0.85rem; font-weight:
       <a href="landing.html">Home</a>
       <a href="dashboard.html" class="is-active">Dashboard</a>
       <a href="whitepaper.html">Whitepaper</a>
+      <a href="dean-letters.html">Dean's Letters</a>
       <a href="leaderboard.html">Leaderboard</a>
     </div>
   </div>

@@ -47,6 +47,7 @@ def nav_html(active):
         <a href="landing.html"{cls("landing")}>Home</a>
         <a href="dashboard.html"{cls("dashboard")}>Dashboard</a>
         <a href="whitepaper.html"{cls("whitepaper")}>Whitepaper</a>
+        <a href="dean-letters.html"{cls("dean-letters")}>Dean's Letters</a>
         <a href="leaderboard.html"{cls("leaderboard")}>Leaderboard</a>
       </div>
     </div>

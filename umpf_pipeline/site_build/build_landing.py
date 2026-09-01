@@ -389,6 +389,7 @@ footer.colophon a { color: var(--text-muted); }
         <a href="landing.html" class="is-active">Home</a>
         <a href="dashboard.html">Dashboard</a>
         <a href="whitepaper.html">Whitepaper</a>
+        <a href="dean-letters.html">Dean's Letters</a>
         <a href="leaderboard.html">Leaderboard</a>
       </div>
     </div>
