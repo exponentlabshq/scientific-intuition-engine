@@ -67,6 +67,8 @@ from verify_hypothesis import client, classify, detect_mode, title_and_domains, 
 from pair_type_classifier import classify_pair_type
 from token_tracker import log_usage
 from retry import call_with_retry
+from refute_hypothesis import run_lens, LENS_QUESTIONS, REFUTATIONS_DIR, LENS_VERSION, load_verification_note
+from ledger import load_latest_entries, LEDGER_PATH
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 PREFILTER_LOG_PATH = os.path.join(HERE, "prefilter-log.jsonl")
@@ -289,13 +291,118 @@ def sharpen_one(path: str, dry_run: bool = False) -> dict:
     }
 
 
+def extract_structural_claim(text: str) -> dict:
+    """Re-parse the appended Level 3 block from the hypothesis file's own
+    text, rather than trusting anything held in memory from an earlier run
+    -- this function has to work standalone, given just a slug, the same
+    way refute_hypothesis.py's own extract_core_claim() does. Returns None
+    if no Level 3 block exists (nothing to refute yet)."""
+    import re
+    m = re.search(
+        r"## Structural Reformulation \(Level 3.*?\n\n"
+        r"\*\*Attempted\*\*: .*?\n"
+        r"\*\*Relation in domain A\*\*: (.*?)\n.*?"
+        r"\*\*Claimed invariant\*\*: (.*?)\n\n"
+        r"\*\*Structural verification.*?\*\*:\n(.*?)\n\n"
+        r"\*\*Falsifiable prediction[^:]*\*\*: (.*?)\n",
+        text, re.DOTALL,
+    )
+    if not m:
+        return None
+    relation_a, invariant, reasoning, prediction = m.groups()
+    core_claim = (
+        f"Structural claim (Level 3 reformulation): {invariant.strip()}\n\n"
+        f"Reasoning: {reasoning.strip()}\n\n"
+        f"Falsifiable prediction: {prediction.strip()}"
+    )
+    return {"relation_a": relation_a.strip(), "invariant": invariant.strip(), "core_claim": core_claim}
+
+
+def refute_structural_claim(slug: str, dry_run: bool = False) -> dict:
+    """Runs the exact same 3-lens adversarial machinery (run_lens, same
+    rubric, same independence discipline) refute_hypothesis.py uses --
+    but on the NEW Level 3 structural claim, not the original Level 1 one
+    extract_core_claim() would pull from section 3/4. Deliberately does
+    NOT call append_ledger_refutation() on the main ledger entry: that
+    would overwrite the ORIGINAL hypothesis's refutation_verdict with a
+    result testing a different claim, conflating two distinct things
+    under one slug. Writes a separate refutation file
+    ({slug}-structural-refutation.md) and a minimal, separately-prefixed
+    ledger record (structural_refutation_*), same minimal-record-relies-
+    on-field-merge pattern active_research_check.py established."""
+    path = resolve_path(slug)
+    text = open(path, encoding="utf-8").read()
+    parsed = extract_structural_claim(text)
+    if not parsed:
+        raise ValueError(f"No Level 3 structural block found in {slug} — run sharpen_structural_mapping.py on it first")
+
+    mode = detect_mode(text)
+    title, domains = title_and_domains(text, mode)
+    verification_note = load_verification_note(slug)
+    rubric = load_rubric()
+
+    print(f"  → refuting the STRUCTURAL claim for: {title}")
+    lens_results = {}
+    for lens_name, question in LENS_QUESTIONS.items():
+        result = run_lens(lens_name, question, rubric, title + " (Level 3 structural reformulation)", mode, domains, parsed["core_claim"], verification_note, f"{slug}-structural")
+        lens_results[lens_name] = result
+        print(f"    {lens_name}: {result['verdict']}")
+
+    survives = sum(1 for r in lens_results.values() if r["verdict"] == "SURVIVES")
+    verdict = "SURVIVES" if survives >= 2 else "REFUTED"
+    print(f"    tally: {survives} of 3 survive -> {verdict}")
+
+    if dry_run:
+        return {"slug": slug, "verdict": verdict, "survives": survives}
+
+    os.makedirs(REFUTATIONS_DIR, exist_ok=True)
+    ref_path = os.path.join(REFUTATIONS_DIR, f"{slug}-structural-refutation.md")
+    lens_lines = "\n".join(f"- **{lens.capitalize()} — {res['verdict']}.** {res['reasoning']}" for lens, res in lens_results.items())
+    with open(ref_path, "w", encoding="utf-8") as f:
+        f.write(
+            f"# Adversarial Refutation of the Level 3 Structural Reformulation: {title}\n\n"
+            f"**Original hypothesis**: `hypotheses/{slug}.md`\n"
+            f"**Tests**: the Level 3 structural claim appended by sharpen_structural_mapping.py, "
+            f"NOT the original Level 1 claim -- see this hypothesis's own separate, original "
+            f"`{slug}-refutation.md` for that result.\n"
+            f"**Method**: 3 independent OpenAI completions, one per lens (refute_hypothesis.py's own "
+            f"run_lens(), same rubric, same independence discipline)\n\n"
+            f"## Tally: {survives} of 3 survive → **{verdict}**\n\n{lens_lines}\n"
+        )
+
+    # Minimal, separately-prefixed ledger record -- relies on ledger.py's
+    # field-by-field merge to combine safely with the slug's existing
+    # verdict/refutation_verdict fields, exactly the way
+    # active_research_check.py's append_ledger_entry() already does.
+    entry = {
+        "hypothesis_slug": slug,
+        "structural_refutation_verdict": verdict,
+        "structural_refutation_survival_count": survives,
+        "structural_refutation_file": f"refutations/{os.path.basename(ref_path)}",
+        "structural_refutation_checked_date": date.today().isoformat(),
+    }
+    with open(LEDGER_PATH, "a", encoding="utf-8") as f:
+        f.write(json.dumps(entry) + "\n")
+
+    print(f"    ✅ wrote {ref_path}")
+    return {"slug": slug, "verdict": verdict, "survives": survives, "file": ref_path}
+
+
 def main():
     parser = argparse.ArgumentParser(description="Force a formalism-shaped hypothesis through an explicit Level-3 structural-homomorphism attempt")
     parser.add_argument("hypothesis", nargs="?", help="Path or slug of a hypothesis .md")
     parser.add_argument("--backlog", action="store_true", help="Run every formalism-shaped hypothesis in prefilter-log.jsonl not yet attempted")
     parser.add_argument("--limit", type=int, default=None)
     parser.add_argument("--dry-run", action="store_true", help="Print what would happen; write nothing")
+    parser.add_argument("--refute", action="store_true", help="Instead of constructing a mapping, adversarially refute an ALREADY-constructed Level 3 claim (requires a single slug, not --backlog)")
     args = parser.parse_args()
+
+    if args.refute:
+        if not args.hypothesis:
+            raise SystemExit("--refute requires a single hypothesis slug that already has a Level 3 block")
+        result = refute_structural_claim(slug_from_path(resolve_path(args.hypothesis)), dry_run=args.dry_run)
+        print(f"\n{result['verdict']} ({result['survives']} of 3 survive)")
+        return
 
     if args.backlog:
         if not os.path.exists(PREFILTER_LOG_PATH):

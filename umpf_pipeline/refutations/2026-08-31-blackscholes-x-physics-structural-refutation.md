@@ -1,0 +1,11 @@
+# Adversarial Refutation of the Level 3 Structural Reformulation: Black–Scholes — financial pricing × Physics — diffusion equations
+
+**Original hypothesis**: `hypotheses/2026-08-31-blackscholes-x-physics.md`
+**Tests**: the Level 3 structural claim appended by sharpen_structural_mapping.py, NOT the original Level 1 claim -- see this hypothesis's own separate, original `2026-08-31-blackscholes-x-physics-refutation.md` for that result.
+**Method**: 3 independent OpenAI completions, one per lens (refute_hypothesis.py's own run_lens(), same rubric, same independence discipline)
+
+## Tally: 3 of 3 survive → **SURVIVES**
+
+- **Coherence — SURVIVES.** The core claim rests on the term 'partial differential equation' as the shared structure between the Black-Scholes equation and the diffusion equation. Both equations indeed represent the same formal object: a partial differential equation describing the evolution of a quantity over time. The mappings provided do not equivocate on the term, as they maintain the same mathematical structure despite differing contexts. Therefore, there is no equivocation present in the claim, and it survives this lens.
+- **Testability — SURVIVES.** The claim provides a specific, checkable piece of evidence in the form of the Black-Scholes equation and its mapping to the diffusion equation. This mapping serves as a named theorem that operationalizes the hypothesis, allowing for a clear metric (the equations themselves), a comparison condition (the relationship between financial volatility and diffusion coefficients), and a rejection threshold (the failure of the mapping to hold). Therefore, the claim is not vague and can be tested experimentally.
+- **Triviality — SURVIVES.** The core claim states that the form of the partial differential equation for the Black-Scholes model is structurally similar to that of diffusion equations. This specific mapping of variables and the structural form of the equations is not a trivial observation applicable to most complex systems; it requires a nuanced understanding of both financial mathematics and physics. The claim does not reduce to a generic statement about complex systems, as it involves specific mathematical formulations and relationships that are not universally applicable. Therefore, the claim survives the triviality lens.
