@@ -48,6 +48,28 @@ body {
 .masthead .dek { color: var(--text-muted); font-size: 1.12rem; max-width: 600px; margin: 0 0 20px; }
 .masthead .byline { color: var(--text-faint); font-size: 0.88rem; font-family: var(--mono); }
 
+.masthead-figure { margin: 32px 0 0; text-align: center; }
+.masthead-figure img {
+  max-width: 100%; width: 420px; border-radius: 10px; border: 1px solid var(--border); display: block; margin: 0 auto;
+}
+.masthead-figure figcaption {
+  font-family: var(--sans); color: var(--text-faint); font-size: 0.82rem;
+  margin-top: 10px; max-width: 420px; margin-left: auto; margin-right: auto; line-height: 1.5;
+}
+
+.letter-aside-figure {
+  float: right; width: 200px; margin: 0 0 16px 24px; text-align: center;
+}
+.letter-aside-figure img {
+  max-width: 100%; border-radius: 10px; border: 1px solid var(--border);
+}
+.letter-aside-figure figcaption {
+  font-family: var(--sans); color: var(--text-faint); font-size: 0.76rem; margin-top: 8px; line-height: 1.45;
+}
+@media (max-width: 560px) {
+  .letter-aside-figure { float: none; width: 200px; margin: 0 auto 16px; }
+}
+
 nav.toc {
   margin: 36px 0; padding: 22px 26px; border: 1px solid var(--border); border-radius: 10px;
   background: var(--surface);
@@ -135,6 +157,11 @@ footer.colophon {
     <p class="byline">Dean of Faculty &rarr; Provost Alvarez</p>
   </header>
 
+  <figure class="masthead-figure">
+    <img src="eureka-story-poster.jpg" alt="Two profiles facing each other, meeting at a single point of light — the Janus motif Janusian thinking takes its name from." loading="lazy">
+    <figcaption>Sometimes, the same thing really is two contradictory truths at once. That is the whole first letter below, made visual.</figcaption>
+  </figure>
+
   <nav class="toc">
     <span class="label">Five Letters</span>
     <ol>
@@ -199,6 +226,10 @@ footer.colophon {
       <div class="letter-date">September 1, 2026 (a fourth letter — starting over, for you)</div>
       <p class="salutation">Dear Provost Alvarez,</p>
       <p>You asked me, fairly, to stop assuming and start explaining. My last four letters walked in halfway through a conversation you never had — full of tiers and lenses and percentages, as if you already knew what a "Janusian hunch" was or why a rejected idea could still be worth 36 cents on the dollar. That is my fault, not yours. So let me start again, from the beginning, in plain language, and use real examples from the tool's own public leaderboard rather than abstractions — you can look every one of these up yourself.</p>
+      <figure class="letter-aside-figure">
+        <img src="eureka-explainer-poster.jpg" alt="A marble statue figure with the caption &quot;It just tested 170 fields for hidden science&quot; — the same hook this project's own 15-second explainer video opens on." loading="lazy">
+        <figcaption>The real hook this project leads with elsewhere on the site — the same tool, the same 170 real domains, plainer language.</figcaption>
+      </figure>
       <p><strong>What the thing actually is.</strong> Picture a tireless research assistant who does one thing, over and over: takes two ideas from completely different corners of human knowledge, or one idea looked at from two contradictory angles, and asks, "is there something real connecting these — a genuine mechanism, not just a coincidence of vocabulary?" It writes down its hunch. Then a second, independent voice — playing devil's advocate on purpose — tries as hard as it can to tear that hunch apart: is it actually saying something specific, or just something that sounds clever? Would it hold up if you replaced the fancy words with plain ones? Could you actually test it, or is it just a feeling dressed up as an idea? Only hunches that survive that interrogation get ranked on a public leaderboard. That whole loop — hunch, then honest attack — is the entire machine. Nothing more mysterious than that.</p>
       <p><strong>How it comes up with a hunch — three different habits of mind, each with real history behind it.</strong> The tool works in three modes, and none of them were invented for it. Each is a real, independently documented way human insight has actually happened; the team simply automated the habit of mind, not the specific discoveries. I had the team verify every historical claim below against real sources before I would let it stand in a letter to you — you'll find a link on each one.</p>
       <figure class="letter-figure">
