@@ -3,19 +3,19 @@
     {
       "mode": "janusian",
       "n": 214,
-      "avg_points": 27.0,
+      "avg_points": 28.7,
       "no_signal_rate": 0.08
     },
     {
       "mode": "bisociation",
       "n": 272,
-      "avg_points": 16.9,
+      "avg_points": 17.5,
       "no_signal_rate": 0.25
     },
     {
       "mode": "homospatial",
       "n": 244,
-      "avg_points": 10.1,
+      "avg_points": 10.2,
       "no_signal_rate": 0.36
     },
     {
