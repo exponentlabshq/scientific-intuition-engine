@@ -61,10 +61,33 @@ def load_totals():
     return int(m.group(1)), int(m.group(2))
 
 
+def load_experience_data():
+    """The real, full-fidelity per-hypothesis data the original interactive
+    leaderboard experience used (assemble_experience_data.py's output) --
+    real hypothesis/verification/refutation markdown, real active-research
+    matches, real score breakdown. Reused verbatim, not reassembled."""
+    path = os.path.join(PIPELINE_DIR, "experience_data.json")
+    with open(path, encoding="utf-8") as f:
+        entries = json.load(f)
+    by_pairing = {}
+    by_domain_head = {}
+    for e in entries:
+        pairing = " × ".join(e["domains"]) if e.get("domains") else e["key"]
+        norm = pairing.strip().lower()
+        by_pairing.setdefault(norm, e)  # first entry wins on rare collision
+        for d in (e.get("domains") or []):
+            head = d.split("—")[0].strip().lower()
+            by_domain_head.setdefault(head, []).append(e)
+    for head in by_domain_head:
+        by_domain_head[head].sort(key=lambda e: -(e.get("points") or 0))
+    return entries, by_pairing, by_domain_head
+
+
 ROWS = load_leaderboard_rows()
 DEPT_PERF = load_dept_performance()
 DOMAINS = load_domains()
 TOTAL_ENTRIES, TOTAL_SCORED = load_totals()
+EXP, EXP_BY_PAIRING, EXP_BY_DOMAIN_HEAD = load_experience_data()
 
 MODE_META = {
     "janusian": {
@@ -251,6 +274,25 @@ h1, h2, h3 { font-family: var(--serif); text-wrap: balance; }
 .roster-list li { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px dashed var(--border); font-size: 0.9rem; }
 .roster-list li:last-child { border-bottom: none; }
 .roster-list .deg { font-family: var(--mono); font-size: 0.72rem; color: var(--text-faint); }
+
+.tour-stop { margin: 0 0 64px; }
+.tour-stop .tour-imgs { display: grid; grid-template-columns: 1fr; gap: 10px; }
+.tour-stop .tour-imgs.pair { grid-template-columns: 1fr 1fr; }
+@media (max-width: 720px) { .tour-stop .tour-imgs.pair { grid-template-columns: 1fr; } }
+.tour-stop img { width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 14px; border: 1px solid var(--border); display: block; }
+.tour-stop .tour-caption { max-width: 680px; margin-top: 18px; }
+.tour-stop .tour-caption h2 { margin: 0 0 8px; }
+.tour-stop .tour-caption p { color: var(--text-muted); margin: 0 0 6px; }
+.tour-video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 24px 0; }
+.tour-video-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; }
+.tour-video-card video { width: 100%; aspect-ratio: 16/9; display: block; background: #000; }
+.tour-video-card .body { padding: 16px 18px; }
+.tour-video-card h3 { margin: 0 0 6px; font-size: 1rem; color: var(--gold); font-family: var(--serif); }
+.tour-video-card p { margin: 0; color: var(--text-muted); font-size: 0.86rem; line-height: 1.55; }
+.seal-row { display: flex; gap: 16px; flex-wrap: wrap; }
+.seal-row figure { flex: 1; min-width: 200px; margin: 0; text-align: center; }
+.seal-row img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; border: 1px solid var(--border); }
+.seal-row figcaption { font-family: var(--mono); font-size: 0.76rem; color: var(--text-faint); margin-top: 8px; }
 '''
 
 
@@ -284,7 +326,8 @@ def colophon():
 
 def wrap(title, body, active):
     return f'''<title>{title}</title>
-<style>{BASE_CSS}</style>
+<style>{BASE_CSS}
+{ROW_CSS}</style>
 {nav(active)}
 {body}
 {colophon()}
@@ -740,6 +783,257 @@ def publications_for_faculty(faculty_id):
     return sorted(out, key=lambda x: -x[0]["points"])
 
 
+# ---------------------------------------------------------------------------
+# Click-expandable publication rows -- porting the real interactive
+# leaderboard experience (leaderboard-experience.html: .row/.row-head/
+# .row-body, click to expand) rather than reinventing it. Ported server-side
+# in Python instead of the original's client-side JSON+JS renderer: the
+# content is static once built (same as every other page on this site), so
+# pre-rendering the real markdown to HTML at build time means no client-side
+# markdown parser or data blob is needed -- lighter pages, same interaction.
+# ---------------------------------------------------------------------------
+
+ROW_CSS = '''
+.row { border: 1px solid var(--border); border-radius: 10px; margin-bottom: 8px; background: var(--surface); overflow: hidden; }
+.row-head { display: flex; align-items: center; gap: 12px; padding: 13px 16px; cursor: pointer; user-select: none; }
+.row-head:hover { background: var(--ink); }
+.row-head .rank { font-family: var(--mono); color: var(--text-faint); font-size: 0.78rem; width: 24px; flex-shrink: 0; text-align: right; }
+.row-head .pairing { flex: 1; min-width: 0; font-weight: 600; font-size: 0.9rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.row-head .researcher { font-family: var(--mono); font-size: 0.72rem; color: var(--text-faint); flex-shrink: 0; }
+.row-head .r-points { font-family: var(--mono); font-variant-numeric: tabular-nums; font-weight: 600; font-size: 0.9rem; width: 46px; text-align: right; flex-shrink: 0; }
+.row-head .r-points.pos { color: var(--v-adjacent); }
+.row-head .r-points.neg { color: var(--v-refuted); }
+.row-head .r-points.zero { color: var(--text-faint); }
+.row-head .caret { color: var(--text-faint); transition: transform 0.15s ease; flex-shrink: 0; font-size: 0.7rem; }
+.row.open .caret { transform: rotate(90deg); }
+.row-body { display: none; padding: 4px 18px 20px; border-top: 1px solid var(--border); }
+.row.open .row-body { display: block; }
+.row-body h4 { font-family: var(--serif); font-size: 0.9rem; color: var(--gold); margin: 16px 0 6px; font-weight: 600; }
+.row-body .domains-line { color: var(--text-muted); font-size: 0.84rem; margin-top: 12px; }
+.row-badge-list { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.row-badge { font-size: 0.7rem; font-family: var(--mono); color: var(--text-muted); border: 1px solid var(--border); padding: 2px 8px; border-radius: 100px; }
+.md-block { font-size: 0.86rem; color: var(--text); line-height: 1.65; }
+.md-block h1, .md-block h2 { font-family: var(--serif); font-size: 0.98rem; color: var(--text); margin: 12px 0 6px; }
+.md-block h1:first-child, .md-block h2:first-child { margin-top: 0; }
+.md-block strong { color: var(--gold); font-weight: 600; }
+.md-block ul { margin: 6px 0; padding-left: 20px; }
+.md-block li { margin: 3px 0; }
+.md-block p { margin: 8px 0; }
+.md-block table { border-collapse: collapse; width: 100%; margin: 10px 0; font-size: 0.82rem; }
+.md-block th, .md-block td { border: 1px solid var(--border); padding: 6px 8px; text-align: left; vertical-align: top; }
+.md-block th { background: var(--ink); font-weight: 600; }
+.md-block hr { border: none; border-top: 1px solid var(--border); margin: 14px 0; }
+.md-block code { font-family: var(--mono); font-size: 0.85em; background: var(--ink); padding: 1px 5px; border-radius: 4px; }
+.breakdown-list { list-style: none; padding: 0; margin: 6px 0; }
+.breakdown-list li { font-family: var(--mono); font-size: 0.8rem; color: var(--text-muted); padding: 3px 0; }
+.active-research-block { background: var(--ink); border: 1px solid var(--gold); border-radius: 8px; padding: 12px 14px; margin: 8px 0 14px; }
+.ar-note { font-size: 0.84rem; color: var(--text); margin: 0 0 8px; line-height: 1.6; }
+.ar-matches { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+.ar-matches li { font-size: 0.84rem; }
+.ar-matches a { color: var(--gold); text-decoration: none; border-bottom: 1px dotted var(--gold); font-weight: 600; }
+.ar-matches a:hover { border-bottom-style: solid; }
+.ar-authors { color: var(--text-muted); }
+.ar-explanation { color: var(--text-faint); font-size: 0.8rem; margin-top: 3px; line-height: 1.5; }
+
+.course-item { border: 1px solid var(--border); border-radius: 8px; margin-bottom: 6px; background: var(--ink); }
+.course-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 9px 12px; cursor: pointer; font-size: 0.86rem; }
+.course-head:hover { background: var(--surface); }
+.course-head .cname { flex: 1; color: var(--text); }
+.course-head .ccount { font-family: var(--mono); font-size: 0.72rem; color: var(--text-faint); flex-shrink: 0; }
+.course-head .caret { color: var(--text-faint); transition: transform 0.15s; flex-shrink: 0; font-size: 0.7rem; }
+.course-item.open > .course-head .caret { transform: rotate(90deg); }
+.course-body { display: none; padding: 4px 12px 12px; }
+.course-item.open > .course-body { display: block; }
+'''
+
+ROW_TOGGLE_JS = '''<script>
+document.querySelectorAll('.row-head').forEach(function(h) {
+  h.addEventListener('click', function() { h.closest('.row').classList.toggle('open'); });
+});
+document.querySelectorAll('.course-head').forEach(function(h) {
+  h.addEventListener('click', function() { h.closest('.course-item').classList.toggle('open'); });
+});
+</script>'''
+
+
+def md_to_html(md):
+    """Direct Python port of leaderboard-experience.html's own mdToHtml --
+    same minimal, dependency-free markdown renderer, same behavior, so the
+    real hypothesis/verification/refutation markdown renders identically to
+    how it already rendered there."""
+    if not md:
+        return ""
+    lines = md.split("\n")
+    out = []
+    in_list = False
+    in_table = False
+    table_rows = []
+
+    def esc(s):
+        return s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+
+    def inline(s):
+        s = esc(s)
+        s = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", s)
+        s = re.sub(r"`(.+?)`", r"<code>\1</code>", s)
+        s = re.sub(r"\[([^\]]+)\]\(([^)]+)\)", r'<a href="\2" target="_blank" rel="noopener">\1</a>', s)
+        return s
+
+    def flush_list():
+        nonlocal in_list
+        if in_list:
+            out.append("</ul>")
+            in_list = False
+
+    def flush_table():
+        nonlocal in_table, table_rows
+        if in_table:
+            rows = [r for r in table_rows if not re.match(r"^\s*\|?\s*-{2,}", r)]
+            out.append("<table>")
+            for i, r in enumerate(rows):
+                cells = [c.strip() for c in r.split("|")]
+                if cells and cells[0] == "":
+                    cells = cells[1:]
+                if cells and cells[-1] == "":
+                    cells = cells[:-1]
+                tag = "th" if i == 0 else "td"
+                out.append("<tr>" + "".join(f"<{tag}>{inline(c)}</{tag}>" for c in cells) + "</tr>")
+            out.append("</table>")
+            in_table = False
+            table_rows = []
+
+    for line in lines:
+        if re.match(r"^\s*\|", line):
+            flush_list()
+            in_table = True
+            table_rows.append(line)
+            continue
+        elif in_table:
+            flush_table()
+        if re.match(r"^#{1,2}\s", line):
+            flush_list()
+            out.append(f"<h2>{inline(re.sub(r'^#{1,2}\\s', '', line))}</h2>")
+        elif re.match(r"^#{3,6}\s", line):
+            flush_list()
+            out.append(f"<h1>{inline(re.sub(r'^#{3,6}\\s', '', line))}</h1>")
+        elif re.match(r"^---+\s*$", line):
+            flush_list()
+            out.append("<hr/>")
+        elif re.match(r"^\s*[-*]\s", line):
+            if not in_list:
+                out.append("<ul>")
+                in_list = True
+            out.append(f"<li>{inline(re.sub(r'^\\s*[-*]\\s', '', line))}</li>")
+        elif line.strip() == "":
+            flush_list()
+        else:
+            flush_list()
+            out.append(f"<p>{inline(line)}</p>")
+    flush_list()
+    flush_table()
+    return "\n".join(out)
+
+
+def exp_row_html(e, rank=None, researcher=None, compact=False):
+    """One real, click-expandable publication row -- exact same content
+    the original interactive leaderboard showed (domains, badges, score
+    breakdown, real active-research matches, notes, and the full real
+    hypothesis / verification / refutation markdown), pre-rendered here
+    rather than parsed client-side. compact=True drops the three full
+    markdown blocks (hypothesis/verification/refutation content) -- used
+    on the course catalog, where one real entry can appear under multiple
+    domains and full content repeated that many times, across 109 domains,
+    would bloat the page by megabytes for no real benefit over the same
+    entry's full page on its faculty member's own publication list."""
+    pairing = " × ".join(e["domains"]) if e.get("domains") else e["key"]
+    pts = e.get("points") or 0
+    pts_class = "pos" if pts > 0 else ("neg" if pts < 0 else "zero")
+    verdict = (e.get("verdict") or "UNSCORED").replace("_", " ")
+
+    body = f'<div class="domains-line"><strong style="color:var(--text)">Domains:</strong> {" &times; ".join(e.get("domains") or [])}</div>'
+    body += '<div class="row-badge-list">' + "".join(f'<span class="row-badge">{b}</span>' for b in (e.get("badges") or [])) + "</div>"
+
+    if e.get("breakdown"):
+        body += f'<h4>Score breakdown ({pts:+d} pts)</h4><ul class="breakdown-list">'
+        body += "".join(f"<li>{re.sub('<', '&lt;', b)}</li>" for b in e["breakdown"])
+        body += "</ul>"
+
+    matches = e.get("active_research_matches") or []
+    if matches:
+        body += f'<h4>&#128300; Independent Research Match{"es" if len(matches) > 1 else ""}</h4><div class="active-research-block">'
+        if e.get("active_research_note"):
+            body += f'<p class="ar-note">{re.sub("<", "&lt;", e["active_research_note"])}</p>'
+        body += '<ul class="ar-matches">'
+        for m in matches:
+            title = re.sub("<", "&lt;", m.get("title") or "Untitled")
+            authors = re.sub("<", "&lt;", m.get("researcher_or_authors") or "")
+            year = f' ({m["year"]})' if m.get("year") else ""
+            url = m.get("url") or ""
+            title_html = f'<a href="{url}" target="_blank" rel="noopener noreferrer">{title}</a>' if url.startswith("http") else title
+            body += f"<li>{title_html}{year}" + (f' &mdash; <span class="ar-authors">{authors}</span>' if authors else "")
+            if m.get("explanation"):
+                body += f'<div class="ar-explanation">{re.sub("<", "&lt;", m["explanation"])}</div>'
+            body += "</li>"
+        body += "</ul></div>"
+
+    if e.get("notes"):
+        body += f'<h4>Notes</h4><div class="md-block">{md_to_html(e["notes"])}</div>'
+    if not compact:
+        if e.get("hypothesis_content"):
+            body += f'<h4>The Hypothesis</h4><div class="md-block">{md_to_html(e["hypothesis_content"])}</div>'
+        if e.get("verification_content"):
+            body += f'<h4>Verification</h4><div class="md-block">{md_to_html(e["verification_content"])}</div>'
+        if e.get("refutation_content"):
+            confirmed = " (independently confirmed)" if e.get("refutation_independently_confirmed") else ""
+            body += f'<h4>Adversarial Refutation{confirmed}</h4><div class="md-block">{md_to_html(e["refutation_content"])}</div>'
+    elif e.get("hypothesis_filename"):
+        body += f'<p class="real-thing">Full real record (hypothesis, verification, refutation): <code>{e["hypothesis_filename"]}</code></p>'
+
+    rank_html = f'<span class="rank">{rank}</span>' if rank is not None else ""
+    researcher_html = f'<span class="researcher">{researcher}</span>' if researcher else ""
+
+    return f'''<div class="row">
+      <div class="row-head">
+        {rank_html}
+        <span class="pairing">{pairing}</span>
+        {researcher_html}
+        <span class="row-badge" style="color:var(--gold);border-color:var(--gold);">{verdict}</span>
+        <span class="r-points {pts_class}">{pts:+d}</span>
+        <span class="caret">&#9656;</span>
+      </div>
+      <div class="row-body">{body}</div>
+    </div>'''
+
+
+COURSE_ENTRIES_SHOWN = 5
+
+
+def domain_entries(domain):
+    """Real hypotheses touching this real domain, via experience_data.json's
+    own real per-entry domains list (head-category match) -- capped, not
+    exhaustive: a subject with 20 real touches shows its top 5 by points,
+    same 'top N, not all N' convention this whole site already uses on
+    department and faculty pages."""
+    head = domain.split("—")[0].strip().lower()
+    out = EXP_BY_DOMAIN_HEAD.get(head, [])
+    return out[:COURSE_ENTRIES_SHOWN]
+
+
+def course_item_html(domain):
+    entries = domain_entries(domain)
+    if not entries:
+        return f'''<li style="padding:9px 12px; color:var(--text-faint); font-size:0.86rem;">{domain} <span style="font-family:var(--mono); font-size:0.72rem;">(0 real matches)</span></li>'''
+    rows = "".join(exp_row_html(e, compact=True) for e in entries)
+    return f'''<div class="course-item">
+      <div class="course-head">
+        <span class="cname">{domain}</span>
+        <span class="ccount">{len(entries)} shown</span>
+        <span class="caret">&#9656;</span>
+      </div>
+      <div class="course-body">{rows}</div>
+    </div>'''
+
+
 def build_course_catalog():
     matched = set()
     school_html = ""
@@ -750,27 +1044,28 @@ def build_course_catalog():
             if any(head == p or head.startswith(p) for p in prefixes):
                 items.append(d)
                 matched.add(d)
-        li = "".join(f"<li>{d}</li>" for d in sorted(items))
+        courses = "".join(course_item_html(d) for d in sorted(items))
         school_html += f'''<div class="card" style="background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:18px 20px; margin-bottom:16px;">
       <h3 style="margin:0 0 10px; font-size:1.05rem; color:var(--gold);">{school} <span style="font-family:var(--mono); font-size:0.75rem; color:var(--text-faint); font-weight:400;">({len(items)})</span></h3>
-      <ul style="margin:0; padding-left:20px; columns:2; column-gap:24px; font-size:0.9rem; color:var(--text-muted);">{li}</ul>
+      {courses}
     </div>'''
 
     unmatched = [d for d in DOMAINS if d not in matched]
     if unmatched:
-        li = "".join(f"<li>{d}</li>" for d in sorted(unmatched))
+        courses = "".join(course_item_html(d) for d in sorted(unmatched))
         school_html += f'''<div class="card" style="background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:18px 20px;">
       <h3 style="margin:0 0 10px; font-size:1.05rem; color:var(--gold);">Interdisciplinary / Unclassified <span style="font-family:var(--mono); font-size:0.75rem; color:var(--text-faint); font-weight:400;">({len(unmatched)})</span></h3>
-      <ul style="margin:0; padding-left:20px; columns:2; column-gap:24px; font-size:0.9rem; color:var(--text-muted);">{li}</ul>
+      {courses}
     </div>'''
 
     body = f'''<div class="page wide" style="padding-top:40px;">
     <span class="kicker">Registrar's Office</span>
     <h1>Course Catalog</h1>
-    <p style="color:var(--text-muted); max-width:680px;">All {len(DOMAINS)} real subjects in FU's domain pool, grouped into six schools for browsing. Every subject here is taught &mdash; in the FU sense &mdash; by all three departments at once: each is a real candidate half of a cross-domain pairing, not owned by any single department.</p>
-    <p class="real-thing">Real thing: <code>domains.json</code>'s <code>domain_pool</code>, {len(DOMAINS)} entries, read fresh at build time.</p>
+    <p style="color:var(--text-muted); max-width:680px;">All {len(DOMAINS)} real subjects in FU's domain pool, grouped into six schools for browsing. Every subject here is taught &mdash; in the FU sense &mdash; by all three departments at once: each is a real candidate half of a cross-domain pairing, not owned by any single department. Click any subject to see the real hypotheses that actually touch it.</p>
+    <p class="real-thing">Real thing: <code>domains.json</code>'s <code>domain_pool</code> ({len(DOMAINS)} entries) cross-referenced against <code>experience_data.json</code>'s real per-hypothesis domain tags.</p>
     <div style="margin-top:28px;">{school_html}</div>
-  </div>'''
+  </div>
+  {ROW_TOGGLE_JS}'''
     return wrap("Course Catalog — FU", body, "catalog")
 
 
@@ -894,14 +1189,29 @@ def build_faculty_index():
     return wrap("Faculty & Research — FU", body, "faculty")
 
 
+FACULTY_PUBS_SHOWN = 30
+
+
 def build_faculty_page(fac):
     meta = MODE_META[fac["dept"]]
     pubs = publications_for_faculty(fac["id"])
     students = STUDENTS_BY_FACULTY[fac["id"]]
 
     pub_rows_html = ""
-    for row, student in pubs[:20]:
-        pub_rows_html += f'''<tr><td>{row['pairing']}</td><td class="pts">{row['points']:+d}</td><td><span class="pub-badge">{row['verdict']}</span></td><td>{student['name']}</td></tr>'''
+    for i, (row, student) in enumerate(pubs[:FACULTY_PUBS_SHOWN]):
+        exp = EXP_BY_PAIRING.get(row["pairing"].strip().lower())
+        if exp:
+            pub_rows_html += exp_row_html(exp, rank=i + 1, researcher=student["name"])
+        else:
+            # Real leaderboard row with no matching experience_data.json
+            # record (a handful of held-out/edge entries) -- shown plainly
+            # rather than silently dropped.
+            pub_rows_html += f'''<div class="row"><div class="row-head" style="cursor:default;">
+              <span class="rank">{i+1}</span><span class="pairing">{row['pairing']}</span>
+              <span class="researcher">{student['name']}</span>
+              <span class="row-badge" style="color:var(--gold);border-color:var(--gold);">{row['verdict']}</span>
+              <span class="r-points {'pos' if row['points']>0 else ('neg' if row['points']<0 else 'zero')}">{row['points']:+d}</span>
+            </div></div>'''
 
     roster_html = "".join(
         f'''<li><span>{s['name']}</span><span class="deg">{s['degree']}</span></li>''' for s in students
@@ -924,139 +1234,158 @@ def build_faculty_page(fac):
     <h2 style="margin-top:36px;">Lab Roster</h2>
     <ul class="roster-list" style="max-width:420px;">{roster_html}</ul>
 
-    <h2 style="margin-top:36px;">Publications ({len(pubs)} real, {min(20,len(pubs))} shown)</h2>
-    <table class="pub-table">
-      <tr><th>Pairing</th><th>Points</th><th>Verdict</th><th>Researcher</th></tr>
-      {pub_rows_html}
-    </table>
+    <h2 style="margin-top:36px;">Publications ({len(pubs)} real, {min(FACULTY_PUBS_SHOWN,len(pubs))} shown)</h2>
+    <p style="color:var(--text-muted); max-width:680px;">Click any row for the full real record &mdash; the actual hypothesis, its real verification search, and its adversarial refutation where one ran.</p>
+    {pub_rows_html}
 
     <p style="margin-top:28px;"><a href="fu-department-{fac['dept']}.html">&larr; {meta['name']}</a> &middot; <a href="fu-faculty.html">All Faculty &rarr;</a></p>
-  </div>'''
+  </div>
+  {ROW_TOGGLE_JS}'''
     return wrap(f"{fac['name']} — FU", body, "faculty")
 
 
 # ---------------------------------------------------------------------------
-# fu-campus-explore.html -- browse by faculty, or by campus feature.
+# fu-campus-explore.html -- a real tour of the imagined campus. Faculty
+# directory browsing already lives at fu-faculty.html (Berkeley's own
+# "expertise finder" pattern); this page's job is atmosphere -- walk through
+# the buildings, the lobbies, a lecture in session -- not a second database
+# UI duplicating that one.
 # ---------------------------------------------------------------------------
 
-CAMPUS_FEATURES = [
+LECTURE_VIDEOS = [
     {
-        "img": "dean-letters-bisociation.jpg",
-        "name": "Department of Bisociation Studies, Seal",
-        "desc": "The same engraving used to explain the department's method in the real Dean's Letters &mdash; two matrices of thought, fused.",
-        "real": "<a href=\"dean-letters.html\">the Dean's Letters</a>, where this illustration already appears",
+        "file": "fu-lecture-bisociation.mp4",
+        "dept": "bisociation",
+        "line": "“Overlay social network structure onto team collaboration, and one pattern holds: network density that predicts a healthy social system also predicts a team that ships.”",
+        "real_pairing": "Social Systems × Human Team Collaboration",
     },
     {
-        "img": "dean-letters-janusian.jpg",
-        "name": "Department of Janusian Studies, Seal",
-        "desc": "The same engraving used to explain the department's method in the real Dean's Letters &mdash; a figure held true and false at once.",
-        "real": "<a href=\"dean-letters.html\">the Dean's Letters</a>, where this illustration already appears",
+        "file": "fu-lecture-janusian.mp4",
+        "dept": "janusian",
+        "line": "“Instruction scheduling improves performance by cutting execution time — and it degrades performance, by adding overhead. Both are true. That contradiction is the real research question.”",
+        "real_pairing": "Computer science — compiler instruction scheduling",
     },
     {
-        "img": "fu-campus-library.jpg",
-        "name": "The Registrar's Library",
-        "desc": "Where every real transcript lives &mdash; the ranked leaderboard, shelved by tier.",
-        "real": "<code>ledger.py</code> / <code>score_hypotheses.py</code>",
-    },
-    {
-        "img": "fu-campus-science.jpg",
-        "name": "The Engineering &amp; Computation Complex",
-        "desc": "Home to the largest single specialty in every department &mdash; the busiest lab on campus by real publication count, every time.",
-        "real": "<code>hypothesis_engine.py</code>'s most-populated real classification bucket",
-    },
-    {
-        "img": "fu-campus-lecture-hall.jpg",
-        "name": "The Adversarial Refutation Hall",
-        "desc": "Where three independent reviewers, blind to each other, try to kill every claim that walks in.",
-        "real": "the real adversarial refutation pass &mdash; <a href=\"whitepaper.html\">Section 6</a>",
-    },
-    {
-        "img": "fu-campus-admin.jpg",
-        "name": "Administration Building",
-        "desc": "Office of the Dean, upstairs. The five real Dean's Letters were all signed from here.",
-        "real": "<a href=\"dean-letters.html\">the five real Dean's Letters</a>",
-    },
-    {
-        "img": "fu-campus-union.jpg",
-        "name": "Student Union",
-        "desc": "Where PhD and Masters candidates &mdash; each one a real hypothesis in progress &mdash; compare notes between departments.",
-        "real": "<code>hypotheses/*.md</code>, every real in-progress record",
-    },
-    {
-        "img": "fu-campus-quad.jpg",
-        "name": "The Quad",
-        "desc": "The open green space between all three departments &mdash; nobody's specialty, everybody's shortcut.",
-        "real": "the real cross-department pairs (Section 2's three mechanisms colliding across schools)",
-    },
-    {
-        "img": "whitepaper-masthead.jpg",
-        "name": "The Founding Collision",
-        "desc": "FU's own founding story, told the way the real whitepaper opens it: Darwin reading Malthus, one collision producing a whole theory.",
-        "real": "<a href=\"whitepaper.html\">the whitepaper's real opening story</a>, Section 1",
-    },
-    {
-        "img": "dean-letters-homospatial.jpg",
-        "name": "Orientation Week",
-        "desc": "The same engraving used to explain Homospatial Studies in the real Dean's Letters, reused here rather than re-drawn.",
-        "real": "<a href=\"dean-letters.html\">the Dean's Letters</a>, where this illustration already appears",
+        "file": "fu-lecture-homospatial.mp4",
+        "dept": "homospatial",
+        "line": "“Superimpose immune memory onto city planning, and a city starts to look like an immune system: it remembers past shocks, and defends against what it has already survived.”",
+        "real_pairing": "Adaptive Immune Memory × Human Urban Planning",
     },
 ]
 
 
-def build_campus_explore():
-    faculty_cards = "".join(chair_card_html(m) for m in ("bisociation", "janusian", "homospatial"))
-    faculty_cards += "".join(faculty_card_html(f) for f in FACULTY)
-
-    feature_cards = ""
-    for feat in CAMPUS_FEATURES:
-        feature_cards += f'''<div class="feature-card">
-      <img src="{feat['img']}" alt="{feat['name']}">
+def lecture_video_card(v):
+    meta = MODE_META[v["dept"]]
+    exp = EXP_BY_PAIRING.get(v["real_pairing"].strip().lower())
+    pts = exp.get("points") if exp else None
+    verdict = exp.get("verdict") if exp else None
+    real_line = f"real hypothesis, {pts:+d} pts, {verdict}" if exp else "real hypothesis on record"
+    return f'''<div class="tour-video-card">
+      <video src="{v['file']}" controls preload="metadata" playsinline></video>
       <div class="body">
-        <h3>{feat['name']}</h3>
-        <p>{feat['desc']}</p>
-        <p class="real-thing">Real thing: {feat['real']}</p>
+        <h3>{meta['name']}</h3>
+        <p>{v['line']}</p>
+        <p class="real-thing" style="margin-top:8px;">Real finding cited: <b>{v['real_pairing']}</b> ({real_line}). Delivery is fictional &mdash; the finding is not.</p>
       </div>
     </div>'''
 
+
+def build_campus_explore():
+    video_cards = "".join(lecture_video_card(v) for v in LECTURE_VIDEOS)
+    seal_row = "".join(
+        f'<figure><img src="{img}" alt="{label}"><figcaption>{label}</figcaption></figure>'
+        for img, label in [
+            ("dean-letters-bisociation.jpg", "Bisociation Studies"),
+            ("dean-letters-janusian.jpg", "Janusian Studies"),
+            ("dean-letters-homospatial.jpg", "Homospatial Studies"),
+        ]
+    )
+
     body = f'''<div class="page wide" style="padding-top:40px;">
     <span class="kicker">Campus</span>
-    <h1>Explore FU</h1>
-    <p style="color:var(--text-muted); max-width:700px;">There's no real campus &mdash; but if there were, this is what it would hold. Browse by who works here, or by what the buildings would be for.</p>
+    <h1>A Tour of FU</h1>
+    <p style="color:var(--text-muted); max-width:700px;">There's no real campus &mdash; but if there were, this is what walking across it would look like. For the faculty directory, <a href="fu-faculty.html">browse by specialty instead &rarr;</a></p>
 
-    <div class="tab-toggle">
-      <button class="active" data-tab="faculty">Browse by Faculty</button>
-      <button data-tab="features">Browse by Campus Feature</button>
-    </div>
-
-    <div class="tab-panel active" id="tab-faculty">
-      <div class="faculty-filter">
-        <button class="active" data-filter="all">All Departments</button>
-        <button data-filter="bisociation">Bisociation Studies</button>
-        <button data-filter="janusian">Janusian Studies</button>
-        <button data-filter="homospatial">Homospatial Studies</button>
+    <div class="tour-stop" style="margin-top:40px;">
+      <div class="tour-imgs"><img src="fu-campus.jpg" alt="Arrival at FU"></div>
+      <div class="tour-caption">
+        <h2>Arrival</h2>
+        <p>Ivy, stone, and a walk that gets slower the closer you get. Illustrative &mdash; real thing this stands in for: <code>run_cycle.py</code>, the actual pipeline behind every building on this tour.</p>
       </div>
-      <div class="faculty-grid">{faculty_cards}</div>
     </div>
 
-    <div class="tab-panel" id="tab-features">
-      <div class="feature-grid">{feature_cards}</div>
+    <div class="tour-stop">
+      <div class="tour-imgs"><img src="fu-campus-quad.jpg" alt="The Quad"></div>
+      <div class="tour-caption">
+        <h2>The Quad</h2>
+        <p>The open green space between all three departments &mdash; nobody's specialty, everybody's shortcut. Real thing: the real cross-department pairs, Section 2's three mechanisms colliding across schools.</p>
+      </div>
     </div>
-  </div>
-  {FILTER_JS}
-  <script>
-  (function() {{
-    var tabs = document.querySelectorAll('.tab-toggle button');
-    var panels = {{ faculty: document.getElementById('tab-faculty'), features: document.getElementById('tab-features') }};
-    tabs.forEach(function(btn) {{
-      btn.addEventListener('click', function() {{
-        tabs.forEach(function(b) {{ b.classList.remove('active'); }});
-        btn.classList.add('active');
-        Object.keys(panels).forEach(function(k) {{ panels[k].classList.toggle('active', k === btn.getAttribute('data-tab')); }});
-      }});
-    }});
-  }})();
-  </script>'''
-    return wrap("Explore FU — Campus", body, "campus")
+
+    <div class="tour-stop">
+      <div class="tour-imgs"><img src="fu-campus-library.jpg" alt="The Registrar's Library"></div>
+      <div class="tour-caption">
+        <h2>The Registrar's Library</h2>
+        <p>Where every real transcript lives &mdash; the ranked leaderboard, shelved by tier. Real thing: <code>ledger.py</code> / <code>score_hypotheses.py</code>.</p>
+      </div>
+    </div>
+
+    <div class="tour-stop">
+      <div class="tour-imgs pair">
+        <img src="fu-campus-science.jpg" alt="Engineering & Computation Complex, exterior">
+        <img src="fu-campus-lobby-science.jpg" alt="Engineering & Computation Complex, lobby">
+      </div>
+      <div class="tour-caption">
+        <h2>The Engineering &amp; Computation Complex</h2>
+        <p>Home to the largest single specialty in every department &mdash; the busiest lab on campus by real publication count, every time. Real thing: <code>hypothesis_engine.py</code>'s most-populated real classification bucket.</p>
+      </div>
+    </div>
+
+    <div class="tour-stop">
+      <div class="tour-imgs"><img src="fu-campus-hall-packed.jpg" alt="A packed lecture hall"></div>
+      <div class="tour-caption">
+        <h2>A Lecture in Session</h2>
+        <p>Three departments, three real findings, delivered the way a real lecture would deliver them. The faculty are fictional. What they're saying, in each clip, is a real result pulled straight from the leaderboard &mdash; not written for the occasion.</p>
+      </div>
+      <div class="tour-video-grid">{video_cards}</div>
+    </div>
+
+    <div class="tour-stop">
+      <div class="tour-imgs pair">
+        <img src="fu-campus-admin.jpg" alt="Administration Building, exterior">
+        <img src="fu-campus-lobby-admin.jpg" alt="Administration Building, lobby">
+      </div>
+      <div class="tour-caption">
+        <h2>Administration Building</h2>
+        <p>Office of the Dean, upstairs. Real thing: <a href="dean-letters.html">the five real Dean's Letters</a>, all signed from here.</p>
+      </div>
+    </div>
+
+    <div class="tour-stop">
+      <div class="tour-imgs"><img src="fu-campus-union.jpg" alt="Student Union"></div>
+      <div class="tour-caption">
+        <h2>Student Union</h2>
+        <p>Where PhD and Masters candidates &mdash; each one a real hypothesis in progress &mdash; compare notes between departments. Real thing: <code>hypotheses/*.md</code>, every real in-progress record.</p>
+      </div>
+    </div>
+
+    <div class="tour-stop">
+      <div class="tour-caption" style="max-width:none;">
+        <h2>Department Seals</h2>
+        <p>The same three engravings that already explain each department's method in the real Dean's Letters, reused here rather than redrawn.</p>
+      </div>
+      <div class="seal-row">{seal_row}</div>
+    </div>
+
+    <div class="tour-stop" style="margin-bottom:20px;">
+      <div class="tour-imgs"><img src="whitepaper-masthead.jpg" alt="The Founding Collision"></div>
+      <div class="tour-caption">
+        <h2>The Founding Collision</h2>
+        <p>FU's own founding story, told the way the real whitepaper opens it: Darwin reading Malthus, one collision producing a whole theory. Real thing: <a href="whitepaper.html">the whitepaper's real opening story</a>, Section 1.</p>
+      </div>
+    </div>
+  </div>'''
+    return wrap("A Tour of FU — Campus", body, "campus")
 
 
 # ---------------------------------------------------------------------------

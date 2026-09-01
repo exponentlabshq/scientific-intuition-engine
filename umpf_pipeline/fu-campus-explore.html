@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="robots" content="noindex, nofollow" />
-<title>Explore FU — Campus</title>
+<title>A Tour of FU — Campus</title>
 <script>
 (function() {
   try {
@@ -141,6 +141,77 @@ h1, h2, h3 { font-family: var(--serif); text-wrap: balance; }
 .roster-list li { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px dashed var(--border); font-size: 0.9rem; }
 .roster-list li:last-child { border-bottom: none; }
 .roster-list .deg { font-family: var(--mono); font-size: 0.72rem; color: var(--text-faint); }
+
+.tour-stop { margin: 0 0 64px; }
+.tour-stop .tour-imgs { display: grid; grid-template-columns: 1fr; gap: 10px; }
+.tour-stop .tour-imgs.pair { grid-template-columns: 1fr 1fr; }
+@media (max-width: 720px) { .tour-stop .tour-imgs.pair { grid-template-columns: 1fr; } }
+.tour-stop img { width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 14px; border: 1px solid var(--border); display: block; }
+.tour-stop .tour-caption { max-width: 680px; margin-top: 18px; }
+.tour-stop .tour-caption h2 { margin: 0 0 8px; }
+.tour-stop .tour-caption p { color: var(--text-muted); margin: 0 0 6px; }
+.tour-video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 24px 0; }
+.tour-video-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; }
+.tour-video-card video { width: 100%; aspect-ratio: 16/9; display: block; background: #000; }
+.tour-video-card .body { padding: 16px 18px; }
+.tour-video-card h3 { margin: 0 0 6px; font-size: 1rem; color: var(--gold); font-family: var(--serif); }
+.tour-video-card p { margin: 0; color: var(--text-muted); font-size: 0.86rem; line-height: 1.55; }
+.seal-row { display: flex; gap: 16px; flex-wrap: wrap; }
+.seal-row figure { flex: 1; min-width: 200px; margin: 0; text-align: center; }
+.seal-row img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; border: 1px solid var(--border); }
+.seal-row figcaption { font-family: var(--mono); font-size: 0.76rem; color: var(--text-faint); margin-top: 8px; }
+
+
+.row { border: 1px solid var(--border); border-radius: 10px; margin-bottom: 8px; background: var(--surface); overflow: hidden; }
+.row-head { display: flex; align-items: center; gap: 12px; padding: 13px 16px; cursor: pointer; user-select: none; }
+.row-head:hover { background: var(--ink); }
+.row-head .rank { font-family: var(--mono); color: var(--text-faint); font-size: 0.78rem; width: 24px; flex-shrink: 0; text-align: right; }
+.row-head .pairing { flex: 1; min-width: 0; font-weight: 600; font-size: 0.9rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.row-head .researcher { font-family: var(--mono); font-size: 0.72rem; color: var(--text-faint); flex-shrink: 0; }
+.row-head .r-points { font-family: var(--mono); font-variant-numeric: tabular-nums; font-weight: 600; font-size: 0.9rem; width: 46px; text-align: right; flex-shrink: 0; }
+.row-head .r-points.pos { color: var(--v-adjacent); }
+.row-head .r-points.neg { color: var(--v-refuted); }
+.row-head .r-points.zero { color: var(--text-faint); }
+.row-head .caret { color: var(--text-faint); transition: transform 0.15s ease; flex-shrink: 0; font-size: 0.7rem; }
+.row.open .caret { transform: rotate(90deg); }
+.row-body { display: none; padding: 4px 18px 20px; border-top: 1px solid var(--border); }
+.row.open .row-body { display: block; }
+.row-body h4 { font-family: var(--serif); font-size: 0.9rem; color: var(--gold); margin: 16px 0 6px; font-weight: 600; }
+.row-body .domains-line { color: var(--text-muted); font-size: 0.84rem; margin-top: 12px; }
+.row-badge-list { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.row-badge { font-size: 0.7rem; font-family: var(--mono); color: var(--text-muted); border: 1px solid var(--border); padding: 2px 8px; border-radius: 100px; }
+.md-block { font-size: 0.86rem; color: var(--text); line-height: 1.65; }
+.md-block h1, .md-block h2 { font-family: var(--serif); font-size: 0.98rem; color: var(--text); margin: 12px 0 6px; }
+.md-block h1:first-child, .md-block h2:first-child { margin-top: 0; }
+.md-block strong { color: var(--gold); font-weight: 600; }
+.md-block ul { margin: 6px 0; padding-left: 20px; }
+.md-block li { margin: 3px 0; }
+.md-block p { margin: 8px 0; }
+.md-block table { border-collapse: collapse; width: 100%; margin: 10px 0; font-size: 0.82rem; }
+.md-block th, .md-block td { border: 1px solid var(--border); padding: 6px 8px; text-align: left; vertical-align: top; }
+.md-block th { background: var(--ink); font-weight: 600; }
+.md-block hr { border: none; border-top: 1px solid var(--border); margin: 14px 0; }
+.md-block code { font-family: var(--mono); font-size: 0.85em; background: var(--ink); padding: 1px 5px; border-radius: 4px; }
+.breakdown-list { list-style: none; padding: 0; margin: 6px 0; }
+.breakdown-list li { font-family: var(--mono); font-size: 0.8rem; color: var(--text-muted); padding: 3px 0; }
+.active-research-block { background: var(--ink); border: 1px solid var(--gold); border-radius: 8px; padding: 12px 14px; margin: 8px 0 14px; }
+.ar-note { font-size: 0.84rem; color: var(--text); margin: 0 0 8px; line-height: 1.6; }
+.ar-matches { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+.ar-matches li { font-size: 0.84rem; }
+.ar-matches a { color: var(--gold); text-decoration: none; border-bottom: 1px dotted var(--gold); font-weight: 600; }
+.ar-matches a:hover { border-bottom-style: solid; }
+.ar-authors { color: var(--text-muted); }
+.ar-explanation { color: var(--text-faint); font-size: 0.8rem; margin-top: 3px; line-height: 1.5; }
+
+.course-item { border: 1px solid var(--border); border-radius: 8px; margin-bottom: 6px; background: var(--ink); }
+.course-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 9px 12px; cursor: pointer; font-size: 0.86rem; }
+.course-head:hover { background: var(--surface); }
+.course-head .cname { flex: 1; color: var(--text); }
+.course-head .ccount { font-family: var(--mono); font-size: 0.72rem; color: var(--text-faint); flex-shrink: 0; }
+.course-head .caret { color: var(--text-faint); transition: transform 0.15s; flex-shrink: 0; font-size: 0.7rem; }
+.course-item.open > .course-head .caret { transform: rotate(90deg); }
+.course-body { display: none; padding: 4px 12px 12px; }
+.course-item.open > .course-body { display: block; }
 </style>
 
 </head>
@@ -163,271 +234,109 @@ h1, h2, h3 { font-family: var(--serif); text-wrap: balance; }
 <div class="fu-disclosure"><strong>FU is not a real degree-granting institution.</strong> It is an honest, self-aware brand for a real, disclosed AI research pipeline &mdash; every number and publication below is real; the faculty are not.</div>
 <div class="page wide" style="padding-top:40px;">
     <span class="kicker">Campus</span>
-    <h1>Explore FU</h1>
-    <p style="color:var(--text-muted); max-width:700px;">There's no real campus &mdash; but if there were, this is what it would hold. Browse by who works here, or by what the buildings would be for.</p>
+    <h1>A Tour of FU</h1>
+    <p style="color:var(--text-muted); max-width:700px;">There's no real campus &mdash; but if there were, this is what walking across it would look like. For the faculty directory, <a href="fu-faculty.html">browse by specialty instead &rarr;</a></p>
 
-    <div class="tab-toggle">
-      <button class="active" data-tab="faculty">Browse by Faculty</button>
-      <button data-tab="features">Browse by Campus Feature</button>
+    <div class="tour-stop" style="margin-top:40px;">
+      <div class="tour-imgs"><img src="fu-campus.jpg" alt="Arrival at FU"></div>
+      <div class="tour-caption">
+        <h2>Arrival</h2>
+        <p>Ivy, stone, and a walk that gets slower the closer you get. Illustrative &mdash; real thing this stands in for: <code>run_cycle.py</code>, the actual pipeline behind every building on this tour.</p>
+      </div>
     </div>
 
-    <div class="tab-panel active" id="tab-faculty">
-      <div class="faculty-filter">
-        <button class="active" data-filter="all">All Departments</button>
-        <button data-filter="bisociation">Bisociation Studies</button>
-        <button data-filter="janusian">Janusian Studies</button>
-        <button data-filter="homospatial">Homospatial Studies</button>
+    <div class="tour-stop">
+      <div class="tour-imgs"><img src="fu-campus-quad.jpg" alt="The Quad"></div>
+      <div class="tour-caption">
+        <h2>The Quad</h2>
+        <p>The open green space between all three departments &mdash; nobody's specialty, everybody's shortcut. Real thing: the real cross-department pairs, Section 2's three mechanisms colliding across schools.</p>
       </div>
-      <div class="faculty-grid"><a class="faculty-card" data-dept="bisociation" href="fu-department-bisociation.html">
-      <img src="fu-chair-bisociation.jpg" alt="Chair, Department of Bisociation Studies">
-      <div class="body">
-        <div class="name">Office of the Chair</div>
-        <div class="title">Chair, Department of Bisociation Studies</div>
-        <div class="spec">Bisociation Studies</div>
-        <div class="n">274 real publications</div>
-      </div>
-    </a><a class="faculty-card" data-dept="janusian" href="fu-department-janusian.html">
-      <img src="fu-chair-janusian.jpg" alt="Chair, Department of Janusian Studies">
-      <div class="body">
-        <div class="name">Office of the Chair</div>
-        <div class="title">Chair, Department of Janusian Studies</div>
-        <div class="spec">Janusian Studies</div>
-        <div class="n">216 real publications</div>
-      </div>
-    </a><a class="faculty-card" data-dept="homospatial" href="fu-department-homospatial.html">
-      <img src="fu-chair-homospatial.jpg" alt="Chair, Department of Homospatial Studies">
-      <div class="body">
-        <div class="name">Office of the Chair</div>
-        <div class="title">Chair, Department of Homospatial Studies</div>
-        <div class="spec">Homospatial Studies</div>
-        <div class="n">246 real publications</div>
-      </div>
-    </a><a class="faculty-card" data-dept="bisociation" href="fu-faculty-bisociation-engineering.html">
-      <img src="fu-faculty-bisociation-engineering.jpg" alt="Anton Reyes, Professor">
-      <div class="body">
-        <div class="name">Anton Reyes</div>
-        <div class="title">Professor</div>
-        <div class="spec">Engineering & Computation</div>
-        <div class="n">69 real publications</div>
-      </div>
-    </a><a class="faculty-card" data-dept="bisociation" href="fu-faculty-bisociation-physical.html">
-      <img src="fu-faculty-bisociation-physical.jpg" alt="Kai Odom, Professor">
-      <div class="body">
-        <div class="name">Kai Odom</div>
-        <div class="title">Professor</div>
-        <div class="spec">Physical & Formal Sciences</div>
-        <div class="n">66 real publications</div>
-      </div>
-    </a><a class="faculty-card" data-dept="bisociation" href="fu-faculty-bisociation-social.html">
-      <img src="fu-faculty-bisociation-social.jpg" alt="Yuki Moller, Assistant Professor">
-      <div class="body">
-        <div class="name">Yuki Moller</div>
-        <div class="title">Assistant Professor</div>
-        <div class="spec">Social & Behavioral Sciences</div>
-        <div class="n">45 real publications</div>
-      </div>
-    </a><a class="faculty-card" data-dept="bisociation" href="fu-faculty-bisociation-arts.html">
-      <img src="fu-faculty-bisociation-arts.jpg" alt="Ines Delacroix, Assistant Professor">
-      <div class="body">
-        <div class="name">Ines Delacroix</div>
-        <div class="title">Assistant Professor</div>
-        <div class="spec">Arts & Culture</div>
-        <div class="n">36 real publications</div>
-      </div>
-    </a><a class="faculty-card" data-dept="bisociation" href="fu-faculty-bisociation-life.html">
-      <img src="fu-faculty-bisociation-life.jpg" alt="Ingrid Nakamura, Professor">
-      <div class="body">
-        <div class="name">Ingrid Nakamura</div>
-        <div class="title">Professor</div>
-        <div class="spec">Life, Health & Environmental Systems</div>
-        <div class="n">42 real publications</div>
-      </div>
-    </a><a class="faculty-card" data-dept="janusian" href="fu-faculty-janusian-engineering.html">
-      <img src="fu-faculty-janusian-engineering.jpg" alt="Sarai Voss, Professor">
-      <div class="body">
-        <div class="name">Sarai Voss</div>
-        <div class="title">Professor</div>
-        <div class="spec">Engineering & Computation</div>
-        <div class="n">58 real publications</div>
-      </div>
-    </a><a class="faculty-card" data-dept="janusian" href="fu-faculty-janusian-physical.html">
-      <img src="fu-faculty-janusian-physical.jpg" alt="Priya Lindgren, Professor">
-      <div class="body">
-        <div class="name">Priya Lindgren</div>
-        <div class="title">Professor</div>
-        <div class="spec">Physical & Formal Sciences</div>
-        <div class="n">44 real publications</div>
-      </div>
-    </a><a class="faculty-card" data-dept="janusian" href="fu-faculty-janusian-social.html">
-      <img src="fu-faculty-janusian-social.jpg" alt="Elena Kirsch, Assistant Professor">
-      <div class="body">
-        <div class="name">Elena Kirsch</div>
-        <div class="title">Assistant Professor</div>
-        <div class="spec">Social & Behavioral Sciences</div>
-        <div class="n">50 real publications</div>
-      </div>
-    </a><a class="faculty-card" data-dept="janusian" href="fu-faculty-janusian-arts.html">
-      <img src="fu-faculty-janusian-arts.jpg" alt="Chiara Solheim, Professor">
-      <div class="body">
-        <div class="name">Chiara Solheim</div>
-        <div class="title">Professor</div>
-        <div class="spec">Arts & Culture</div>
-        <div class="n">31 real publications</div>
-      </div>
-    </a><a class="faculty-card" data-dept="janusian" href="fu-faculty-janusian-life.html">
-      <img src="fu-faculty-janusian-life.jpg" alt="Nadia Pham, Professor">
-      <div class="body">
-        <div class="name">Nadia Pham</div>
-        <div class="title">Professor</div>
-        <div class="spec">Life, Health & Environmental Systems</div>
-        <div class="n">33 real publications</div>
-      </div>
-    </a><a class="faculty-card" data-dept="homospatial" href="fu-faculty-homospatial-engineering.html">
-      <img src="fu-faculty-homospatial-engineering.jpg" alt="Aiko Uwimana, Professor">
-      <div class="body">
-        <div class="name">Aiko Uwimana</div>
-        <div class="title">Professor</div>
-        <div class="spec">Engineering & Computation</div>
-        <div class="n">83 real publications</div>
-      </div>
-    </a><a class="faculty-card" data-dept="homospatial" href="fu-faculty-homospatial-physical.html">
-      <img src="fu-faculty-homospatial-physical.jpg" alt="Marcus Falk, Associate Professor">
-      <div class="body">
-        <div class="name">Marcus Falk</div>
-        <div class="title">Associate Professor</div>
-        <div class="spec">Physical & Formal Sciences</div>
-        <div class="n">33 real publications</div>
-      </div>
-    </a><a class="faculty-card" data-dept="homospatial" href="fu-faculty-homospatial-social.html">
-      <img src="fu-faculty-homospatial-social.jpg" alt="Jonas Pham, Assistant Professor">
-      <div class="body">
-        <div class="name">Jonas Pham</div>
-        <div class="title">Assistant Professor</div>
-        <div class="spec">Social & Behavioral Sciences</div>
-        <div class="n">49 real publications</div>
-      </div>
-    </a><a class="faculty-card" data-dept="homospatial" href="fu-faculty-homospatial-arts.html">
-      <img src="fu-faculty-homospatial-arts.jpg" alt="Viktor Almeida, Professor">
-      <div class="body">
-        <div class="name">Viktor Almeida</div>
-        <div class="title">Professor</div>
-        <div class="spec">Arts & Culture</div>
-        <div class="n">34 real publications</div>
-      </div>
-    </a><a class="faculty-card" data-dept="homospatial" href="fu-faculty-homospatial-life.html">
-      <img src="fu-faculty-homospatial-life.jpg" alt="Yara Sato, Professor">
-      <div class="body">
-        <div class="name">Yara Sato</div>
-        <div class="title">Professor</div>
-        <div class="spec">Life, Health & Environmental Systems</div>
-        <div class="n">40 real publications</div>
-      </div>
-    </a></div>
     </div>
 
-    <div class="tab-panel" id="tab-features">
-      <div class="feature-grid"><div class="feature-card">
-      <img src="dean-letters-bisociation.jpg" alt="Department of Bisociation Studies, Seal">
-      <div class="body">
-        <h3>Department of Bisociation Studies, Seal</h3>
-        <p>The same engraving used to explain the department's method in the real Dean's Letters &mdash; two matrices of thought, fused.</p>
-        <p class="real-thing">Real thing: <a href="dean-letters.html">the Dean's Letters</a>, where this illustration already appears</p>
+    <div class="tour-stop">
+      <div class="tour-imgs"><img src="fu-campus-library.jpg" alt="The Registrar's Library"></div>
+      <div class="tour-caption">
+        <h2>The Registrar's Library</h2>
+        <p>Where every real transcript lives &mdash; the ranked leaderboard, shelved by tier. Real thing: <code>ledger.py</code> / <code>score_hypotheses.py</code>.</p>
       </div>
-    </div><div class="feature-card">
-      <img src="dean-letters-janusian.jpg" alt="Department of Janusian Studies, Seal">
-      <div class="body">
-        <h3>Department of Janusian Studies, Seal</h3>
-        <p>The same engraving used to explain the department's method in the real Dean's Letters &mdash; a figure held true and false at once.</p>
-        <p class="real-thing">Real thing: <a href="dean-letters.html">the Dean's Letters</a>, where this illustration already appears</p>
+    </div>
+
+    <div class="tour-stop">
+      <div class="tour-imgs pair">
+        <img src="fu-campus-science.jpg" alt="Engineering & Computation Complex, exterior">
+        <img src="fu-campus-lobby-science.jpg" alt="Engineering & Computation Complex, lobby">
       </div>
-    </div><div class="feature-card">
-      <img src="fu-campus-library.jpg" alt="The Registrar's Library">
-      <div class="body">
-        <h3>The Registrar's Library</h3>
-        <p>Where every real transcript lives &mdash; the ranked leaderboard, shelved by tier.</p>
-        <p class="real-thing">Real thing: <code>ledger.py</code> / <code>score_hypotheses.py</code></p>
+      <div class="tour-caption">
+        <h2>The Engineering &amp; Computation Complex</h2>
+        <p>Home to the largest single specialty in every department &mdash; the busiest lab on campus by real publication count, every time. Real thing: <code>hypothesis_engine.py</code>'s most-populated real classification bucket.</p>
       </div>
-    </div><div class="feature-card">
-      <img src="fu-campus-science.jpg" alt="The Engineering &amp; Computation Complex">
-      <div class="body">
-        <h3>The Engineering &amp; Computation Complex</h3>
-        <p>Home to the largest single specialty in every department &mdash; the busiest lab on campus by real publication count, every time.</p>
-        <p class="real-thing">Real thing: <code>hypothesis_engine.py</code>'s most-populated real classification bucket</p>
+    </div>
+
+    <div class="tour-stop">
+      <div class="tour-imgs"><img src="fu-campus-hall-packed.jpg" alt="A packed lecture hall"></div>
+      <div class="tour-caption">
+        <h2>A Lecture in Session</h2>
+        <p>Three departments, three real findings, delivered the way a real lecture would deliver them. The faculty are fictional. What they're saying, in each clip, is a real result pulled straight from the leaderboard &mdash; not written for the occasion.</p>
       </div>
-    </div><div class="feature-card">
-      <img src="fu-campus-lecture-hall.jpg" alt="The Adversarial Refutation Hall">
+      <div class="tour-video-grid"><div class="tour-video-card">
+      <video src="fu-lecture-bisociation.mp4" controls preload="metadata" playsinline></video>
       <div class="body">
-        <h3>The Adversarial Refutation Hall</h3>
-        <p>Where three independent reviewers, blind to each other, try to kill every claim that walks in.</p>
-        <p class="real-thing">Real thing: the real adversarial refutation pass &mdash; <a href="whitepaper.html">Section 6</a></p>
+        <h3>Department of Bisociation Studies</h3>
+        <p>“Overlay social network structure onto team collaboration, and one pattern holds: network density that predicts a healthy social system also predicts a team that ships.”</p>
+        <p class="real-thing" style="margin-top:8px;">Real finding cited: <b>Social Systems × Human Team Collaboration</b> (real hypothesis, +55 pts, ADJACENT_ACTIVE). Delivery is fictional &mdash; the finding is not.</p>
       </div>
-    </div><div class="feature-card">
-      <img src="fu-campus-admin.jpg" alt="Administration Building">
+    </div><div class="tour-video-card">
+      <video src="fu-lecture-janusian.mp4" controls preload="metadata" playsinline></video>
       <div class="body">
-        <h3>Administration Building</h3>
-        <p>Office of the Dean, upstairs. The five real Dean's Letters were all signed from here.</p>
-        <p class="real-thing">Real thing: <a href="dean-letters.html">the five real Dean's Letters</a></p>
+        <h3>Department of Janusian Studies</h3>
+        <p>“Instruction scheduling improves performance by cutting execution time — and it degrades performance, by adding overhead. Both are true. That contradiction is the real research question.”</p>
+        <p class="real-thing" style="margin-top:8px;">Real finding cited: <b>Computer science — compiler instruction scheduling</b> (real hypothesis, +60 pts, ADJACENT_ACTIVE). Delivery is fictional &mdash; the finding is not.</p>
       </div>
-    </div><div class="feature-card">
-      <img src="fu-campus-union.jpg" alt="Student Union">
+    </div><div class="tour-video-card">
+      <video src="fu-lecture-homospatial.mp4" controls preload="metadata" playsinline></video>
       <div class="body">
-        <h3>Student Union</h3>
-        <p>Where PhD and Masters candidates &mdash; each one a real hypothesis in progress &mdash; compare notes between departments.</p>
-        <p class="real-thing">Real thing: <code>hypotheses/*.md</code>, every real in-progress record</p>
-      </div>
-    </div><div class="feature-card">
-      <img src="fu-campus-quad.jpg" alt="The Quad">
-      <div class="body">
-        <h3>The Quad</h3>
-        <p>The open green space between all three departments &mdash; nobody's specialty, everybody's shortcut.</p>
-        <p class="real-thing">Real thing: the real cross-department pairs (Section 2's three mechanisms colliding across schools)</p>
-      </div>
-    </div><div class="feature-card">
-      <img src="whitepaper-masthead.jpg" alt="The Founding Collision">
-      <div class="body">
-        <h3>The Founding Collision</h3>
-        <p>FU's own founding story, told the way the real whitepaper opens it: Darwin reading Malthus, one collision producing a whole theory.</p>
-        <p class="real-thing">Real thing: <a href="whitepaper.html">the whitepaper's real opening story</a>, Section 1</p>
-      </div>
-    </div><div class="feature-card">
-      <img src="dean-letters-homospatial.jpg" alt="Orientation Week">
-      <div class="body">
-        <h3>Orientation Week</h3>
-        <p>The same engraving used to explain Homospatial Studies in the real Dean's Letters, reused here rather than re-drawn.</p>
-        <p class="real-thing">Real thing: <a href="dean-letters.html">the Dean's Letters</a>, where this illustration already appears</p>
+        <h3>Department of Homospatial Studies</h3>
+        <p>“Superimpose immune memory onto city planning, and a city starts to look like an immune system: it remembers past shocks, and defends against what it has already survived.”</p>
+        <p class="real-thing" style="margin-top:8px;">Real finding cited: <b>Adaptive Immune Memory × Human Urban Planning</b> (real hypothesis, +55 pts, ADJACENT_ACTIVE). Delivery is fictional &mdash; the finding is not.</p>
       </div>
     </div></div>
     </div>
+
+    <div class="tour-stop">
+      <div class="tour-imgs pair">
+        <img src="fu-campus-admin.jpg" alt="Administration Building, exterior">
+        <img src="fu-campus-lobby-admin.jpg" alt="Administration Building, lobby">
+      </div>
+      <div class="tour-caption">
+        <h2>Administration Building</h2>
+        <p>Office of the Dean, upstairs. Real thing: <a href="dean-letters.html">the five real Dean's Letters</a>, all signed from here.</p>
+      </div>
+    </div>
+
+    <div class="tour-stop">
+      <div class="tour-imgs"><img src="fu-campus-union.jpg" alt="Student Union"></div>
+      <div class="tour-caption">
+        <h2>Student Union</h2>
+        <p>Where PhD and Masters candidates &mdash; each one a real hypothesis in progress &mdash; compare notes between departments. Real thing: <code>hypotheses/*.md</code>, every real in-progress record.</p>
+      </div>
+    </div>
+
+    <div class="tour-stop">
+      <div class="tour-caption" style="max-width:none;">
+        <h2>Department Seals</h2>
+        <p>The same three engravings that already explain each department's method in the real Dean's Letters, reused here rather than redrawn.</p>
+      </div>
+      <div class="seal-row"><figure><img src="dean-letters-bisociation.jpg" alt="Bisociation Studies"><figcaption>Bisociation Studies</figcaption></figure><figure><img src="dean-letters-janusian.jpg" alt="Janusian Studies"><figcaption>Janusian Studies</figcaption></figure><figure><img src="dean-letters-homospatial.jpg" alt="Homospatial Studies"><figcaption>Homospatial Studies</figcaption></figure></div>
+    </div>
+
+    <div class="tour-stop" style="margin-bottom:20px;">
+      <div class="tour-imgs"><img src="whitepaper-masthead.jpg" alt="The Founding Collision"></div>
+      <div class="tour-caption">
+        <h2>The Founding Collision</h2>
+        <p>FU's own founding story, told the way the real whitepaper opens it: Darwin reading Malthus, one collision producing a whole theory. Real thing: <a href="whitepaper.html">the whitepaper's real opening story</a>, Section 1.</p>
+      </div>
+    </div>
   </div>
-  <script>
-(function() {
-  var buttons = document.querySelectorAll('.faculty-filter button');
-  var cards = document.querySelectorAll('[data-dept]');
-  buttons.forEach(function(btn) {
-    btn.addEventListener('click', function() {
-      buttons.forEach(function(b) { b.classList.remove('active'); });
-      btn.classList.add('active');
-      var dept = btn.getAttribute('data-filter');
-      cards.forEach(function(c) {
-        c.style.display = (dept === 'all' || c.getAttribute('data-dept') === dept) ? '' : 'none';
-      });
-    });
-  });
-})();
-</script>
-  <script>
-  (function() {
-    var tabs = document.querySelectorAll('.tab-toggle button');
-    var panels = { faculty: document.getElementById('tab-faculty'), features: document.getElementById('tab-features') };
-    tabs.forEach(function(btn) {
-      btn.addEventListener('click', function() {
-        tabs.forEach(function(b) { b.classList.remove('active'); });
-        btn.classList.add('active');
-        Object.keys(panels).forEach(function(k) { panels[k].classList.toggle('active', k === btn.getAttribute('data-tab')); });
-      });
-    });
-  })();
-  </script>
 <footer class="fu-colophon">
     FU: Fake University &middot; a positioning frame for <a href="whitepaper.html">The Eureka Engine</a> (Exponent Labs LLC) &middot; every real number sourced live from <code>leaderboard.md</code> (749 entries) and <code>domains.json</code> (109 domains) at build time &middot; see <a href="fu-fake-university-positioning-research.md">the positioning research</a> this site is built from
   </footer>
