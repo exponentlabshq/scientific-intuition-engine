@@ -53,3 +53,32 @@ The most likely reason this functor turns out superficial rather than structural
 ---
 
 **⚠️ Automated check failed twice:** no Search Query targets a specific named theory, framework, or researcher, even after one corrective retry. Verification may miss an existing collision with real prior art that a more specific search would have found — read this hypothesis's verdict with that in mind.
+
+---
+
+## Structural Reformulation (Level 3 -- sharpen_structural_mapping.py)
+
+**Attempted**: 2026-09-01
+**Relation in domain A**: The relation R_A is the equation for the natural frequency of a harmonic oscillator: f = (1/2π) * √(k/m), where k is the stiffness and m is the mass.
+
+**Object mapping (f)**:
+
+| Domain A | Domain B |
+|---|---|
+| stiffness (k) | bulk modulus (B) |
+| mass (m) | density (ρ) |
+| natural frequency (f) | resonant frequency (f') |
+
+**Claimed invariant**: The invariant is the form of the frequency equation: f = (1/2π) * √(k/m) for mechanical systems and f' = (1/2π) * √(B/ρ) for acoustic systems.
+
+**Structural verification (f(R_A) = R_B(f))**:
+In the mechanical spring system, the natural frequency is given by f = (1/2π) * √(k/m), where k is the stiffness and m is the mass. In acoustic resonance, the resonant frequency is given by f' = (1/2π) * √(B/ρ), where B is the bulk modulus and ρ is the density. By mapping k to B and m to ρ, the form of the equation is preserved under the mapping: f maps to f', k maps to B, and m maps to ρ. Thus, the structural form of the frequency equations is invariant under this mapping.
+
+**Falsifiable prediction (from the structural mapping, not a generic one)**: If the mapping holds, then increasing the density of the medium in an acoustic system should decrease its resonant frequency, analogous to how increasing the mass in a spring system decreases its natural frequency.
+
+### Re-verification of the structural claim
+
+**Verdict**: ADJACENT_ACTIVE
+
+The equations for resonant frequencies in mechanical and acoustic systems are structurally similar, involving parameters like stiffness, mass, wave velocity, and medium properties. Mapping k to B and m to ρ preserves the form of the equations, suggesting a structural analogy between the two systems.
+

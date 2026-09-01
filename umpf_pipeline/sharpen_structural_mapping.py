@@ -427,6 +427,7 @@ def main():
     parser.add_argument("--limit", type=int, default=None)
     parser.add_argument("--dry-run", action="store_true", help="Print what would happen; write nothing")
     parser.add_argument("--refute", action="store_true", help="Instead of constructing a mapping, adversarially refute an ALREADY-constructed Level 3 claim (requires a single slug, not --backlog)")
+    parser.add_argument("--prioritize-formalism", action="store_true", help="Within --backlog, draw confident formalism-shaped entries before mixed-uncertain ones (real, measured ~4x higher construction rate) instead of file order")
     args = parser.parse_args()
 
     if args.refute:
@@ -470,6 +471,17 @@ def main():
         targets = [s for s in targets if os.path.exists(os.path.join(HYP_DIR, f"{s}.md"))]
         already = already_attempted_slugs()
         targets = [s for s in targets if s not in already]
+        if args.prioritize_formalism:
+            # Real, measured reason for this: the first 27 real attempts
+            # (2026-09-01) split 22 mixed-uncertain / 5 formalism-shaped
+            # purely by file-order accident (the classifier's confident
+            # formalism-shaped tags cluster in later entries), and
+            # construction rate by type was 4.5% (mixed-uncertain) vs 20%
+            # (formalism-shaped) -- oldest-first was silently spending real
+            # calls on the ~4x weaker bucket. Explicit opt-in flag, not a
+            # silent default change, so a plain --backlog run still gives
+            # the unbiased population-wide picture if that's what's wanted.
+            targets.sort(key=lambda s: 0 if by_slug[s]["pair_type"] == "formalism-shaped" else 1)
         if args.limit:
             targets = targets[: args.limit]
     else:

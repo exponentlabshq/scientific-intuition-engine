@@ -53,3 +53,34 @@ The most likely reason this functor turns out superficial rather than structural
 ---
 
 **⚠️ Automated check failed twice:** no Search Query targets a specific named theory, framework, or researcher, even after one corrective retry. Verification may miss an existing collision with real prior art that a more specific search would have found — read this hypothesis's verdict with that in mind.
+
+---
+
+## Structural Reformulation (Level 3 -- sharpen_structural_mapping.py)
+
+**Attempted**: 2026-09-01
+**Relation in domain A**: The Black-Scholes equation: dS = μSdt + σSdW, where S is the asset price, μ is the drift, σ is the volatility, and dW is a Wiener process increment.
+
+**Object mapping (f)**:
+
+| Domain A | Domain B |
+|---|---|
+| Asset price S | Wiener process path X |
+| Drift μ | Wiener process drift parameter θ |
+| Volatility σ | Wiener process volatility parameter η |
+| Time increment dt | Time increment dt |
+| Wiener increment dW | Wiener increment dW |
+
+**Claimed invariant**: The stochastic differential equation form dS = μSdt + σSdW is preserved, mapping to dX = θXdt + ηXdW for a Wiener process with drift and volatility.
+
+**Structural verification (f(R_A) = R_B(f))**:
+The Black-Scholes model describes the dynamics of asset prices using a stochastic differential equation (SDE): dS = μSdt + σSdW. This is structurally similar to the SDE for a generalized Wiener process, dX = θXdt + ηXdW, where X is the process path, θ is the drift, and η is the volatility. The mapping f(S) = X, f(μ) = θ, f(σ) = η, f(dt) = dt, and f(dW) = dW preserves the SDE form because both equations describe the evolution of a quantity as a function of time with deterministic and stochastic components. The invariance lies in the form of the SDE, which remains consistent under the mapping, indicating that the stochastic processes in both domains evolve according to similar rules of continuous-time stochastic calculus.
+
+**Falsifiable prediction (from the structural mapping, not a generic one)**: If the structural mapping holds, then empirical asset price paths should exhibit statistical properties consistent with those of Wiener processes, such as log-normal distribution of prices and normally distributed returns over short time intervals.
+
+### Re-verification of the structural claim
+
+**Verdict**: COLLISION
+
+The search results confirm that the Black-Scholes model is derived from a stochastic differential equation involving a Wiener process, aligning with the hypothesis's structural mapping. ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC7516939/?utm_source=openai))
+
