@@ -199,6 +199,15 @@ header.top .backlink:hover { border-bottom-color: var(--gold); }
 .chip.v-fact_check_fail { color: var(--v-refuted); background: var(--v-refuted-bg); }
 .chip.v-other { color: var(--text-muted); background: var(--surface-hover); }
 .chip.tier-chip { color: var(--gold); background: rgba(200, 155, 60, 0.12); }
+.chip.research-chip {
+  color: #fff;
+  background: var(--gold);
+  text-decoration: none;
+  border: none;
+  font-weight: 700;
+}
+a.chip.research-chip:hover { filter: brightness(1.1); text-decoration: none; }
+span.chip.research-chip { opacity: 0.6; cursor: default; }
 
 .meta-panel {
   display: grid;
@@ -623,6 +632,28 @@ footer.foot {
     }).join(' ');
   }
 
+  // A direct, one-click path to the real research match from the
+  // collapsed row itself -- without this, the actual link and researcher
+  // name only ever appeared after expanding the row, which is not what
+  // "detailed, clickable information" was supposed to mean. Real link,
+  // real author name (as a hover tooltip), visible at a glance in the
+  // always-visible row-head, not just inside the expanded body.
+  // 2026-09-01, direct operator feedback: links/authors were effectively
+  // invisible when just scanning the leaderboard.
+  function researchChip(e) {
+    var matches = e.active_research_matches;
+    if (!matches || !matches.length) return '';
+    var top = matches[0];
+    var authorTip = (top.researcher_or_authors || '') + (top.year ? ' (' + top.year + ')' : '');
+    var label = '🔬 ' + matches.length + (matches.length > 1 ? ' sources' : ' source');
+    var hasUrl = top.url && /^https?:\/\//.test(top.url);
+    if (hasUrl) {
+      return '<a class="chip research-chip" href="' + top.url.replace(/"/g, '&quot;') + '" target="_blank" rel="noopener noreferrer" ' +
+        'title="' + authorTip.replace(/"/g, '&quot;') + '" onclick="event.stopPropagation()">' + label + ' &rarr;</a>';
+    }
+    return '<span class="chip research-chip" title="' + authorTip.replace(/"/g, '&quot;') + '">' + label + '</span>';
+  }
+
   function renderRowBody(e) {
     var out = '';
     out += '<div class="domains-line"><strong style="color:var(--text)">Domains:</strong> ' + (e.domains || []).join(' &times; ') + '</div>';
@@ -716,6 +747,7 @@ footer.foot {
               (e.tier_label ? '<span class="chip tier-chip" title="Confidence tier">' + e.tier_label + '</span>' : '') +
               (e.refutation_gradient_pct != null ? '<span class="chip tier-chip" title="Real 0/1/2/3-of-3 ensemble vote, not a self-report">' + e.refutation_gradient_pct + '% survived</span>' : '') +
               '<span class="chip ' + vClass + '">' + vLabel + '</span>' +
+              researchChip(e) +
             '</span>' +
             '<span class="points ' + ptsClass + '">' + (e.points > 0 ? '+' : '') + e.points + '</span>' +
             '<span class="caret">▶</span>' +
