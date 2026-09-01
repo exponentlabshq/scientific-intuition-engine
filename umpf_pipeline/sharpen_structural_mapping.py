@@ -72,6 +72,7 @@ from ledger import load_latest_entries, LEDGER_PATH
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 PREFILTER_LOG_PATH = os.path.join(HERE, "prefilter-log.jsonl")
+ATTEMPT_LOG_PATH = os.path.join(HERE, "structural-mapping-log.jsonl")
 
 MODEL = "gpt-4o"  # reasoning-heavy structural derivation -- same choice sharpen_hypothesis_llm.py made for its own generation call, not the gpt-4o-mini used for search-grounded checks.
 
@@ -217,6 +218,34 @@ def build_structural_block(slug: str, gen: dict, reverify: dict = None) -> str:
 """
 
 
+def log_attempt(slug: str, status: str, detail: str = "") -> None:
+    """A DECLINED result leaves no durable marker in the hypothesis file
+    itself (unlike CONSTRUCTED, which appends a real Level 3 block) --
+    without this, --backlog would silently re-pay for every already-
+    declined case on every run. Every real outcome (constructed, declined,
+    or skipped for a real reason) gets one line here; --already_attempted()
+    below and the --backlog target filter both consult it."""
+    with open(ATTEMPT_LOG_PATH, "a", encoding="utf-8") as f:
+        f.write(json.dumps({
+            "timestamp": date.today().isoformat(), "slug": slug, "status": status, "detail": detail[:300],
+        }) + "\n")
+
+
+def already_attempted_slugs() -> set:
+    if not os.path.exists(ATTEMPT_LOG_PATH):
+        return set()
+    slugs = set()
+    with open(ATTEMPT_LOG_PATH, encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if not line:
+                continue
+            rec = json.loads(line)
+            if rec.get("slug"):
+                slugs.add(rec["slug"])
+    return slugs
+
+
 def sharpen_one(path: str, dry_run: bool = False) -> dict:
     slug = slug_from_path(path)
     text = open(path, encoding="utf-8").read()
@@ -225,8 +254,8 @@ def sharpen_one(path: str, dry_run: bool = False) -> dict:
     preview = soft_claim_preview(text)
     soft_text = preview["section3"] or preview["section4"]
 
-    if "## Structural Reformulation (Level 3" in text:
-        print("    already has a Level 3 attempt — skipping")
+    if "## Structural Reformulation (Level 3" in text or slug in already_attempted_slugs():
+        print("    already attempted (constructed or honestly declined) — skipping")
         return {"slug": slug, "status": "ALREADY_ATTEMPTED"}
 
     pair_type = load_pair_type(slug, domains)
@@ -252,6 +281,8 @@ def sharpen_one(path: str, dry_run: bool = False) -> dict:
     if not gen.get("mapping_holds"):
         reason = gen.get("could_not_construct_reason") or "(no reason given even after retry)"
         print(f"    declined: {reason}")
+        if not dry_run:
+            log_attempt(slug, "DECLINED", reason)
         return {"slug": slug, "status": "DECLINED", "reason": reason}
 
     print(f"    constructed: {gen['invariant']}")
@@ -284,6 +315,7 @@ def sharpen_one(path: str, dry_run: bool = False) -> dict:
             f"## Re-verify verdict: **{reverify['verdict']}**\n\n{reverify.get('reasoning', '')}\n"
         )
     print(f"    ✅ wrote structural block + verification: {ver_path}")
+    log_attempt(slug, "CONSTRUCTED", gen["invariant"])
 
     return {
         "slug": slug, "status": "CONSTRUCTED", "invariant": gen["invariant"],
@@ -416,8 +448,28 @@ def main():
                 rec = json.loads(line)
                 if rec.get("slug"):
                     by_slug[rec["slug"]] = rec
-        targets = [s for s, r in by_slug.items() if r.get("pair_type") == "formalism-shaped"]
+        # Match sharpen_one()'s own guard, not a stricter one -- excluding
+        # mixed-uncertain here would have systematically skipped the exact
+        # flagship case that motivated this script (cached mixed-uncertain,
+        # confidence 3, despite being a clean formalism pair).
+        eligible_types = [s for s, r in by_slug.items() if r.get("pair_type") in ("formalism-shaped", "mixed-uncertain")]
+        # Scoped to the Refuted/Rejected tier -- the entries a Level 3
+        # upgrade could actually flip. An already-SURVIVES or COLLISION
+        # entry doesn't need rescuing; spending a real gpt-4o call on one
+        # would just be testing the mechanism's cost, not its value.
+        import score_hypotheses as sh
+        latest_by_slug = {e.get("hypothesis_slug"): e for e in load_latest_entries() if e.get("hypothesis_slug")}
+        targets = []
+        for s in eligible_types:
+            e = latest_by_slug.get(s)
+            if not e:
+                continue
+            rank, label = sh.tier_for(e)
+            if label == "💀 Refuted / Rejected":
+                targets.append(s)
         targets = [s for s in targets if os.path.exists(os.path.join(HYP_DIR, f"{s}.md"))]
+        already = already_attempted_slugs()
+        targets = [s for s in targets if s not in already]
         if args.limit:
             targets = targets[: args.limit]
     else:
