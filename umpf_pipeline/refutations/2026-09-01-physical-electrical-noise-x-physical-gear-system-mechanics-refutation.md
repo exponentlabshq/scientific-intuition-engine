@@ -1,0 +1,14 @@
+# Adversarial Refutation: Bisociation — Physical Electrical Noise × Physical Gear System Mechanics
+
+**Original**: `hypotheses/2026-09-01-physical-electrical-noise-x-physical-gear-system-mechanics.md`
+**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost
+
+## Tally: 0 of 3 survive → **REFUTED**
+
+- **Coherence — REFUTED.** The core claim relies on the term 'noise' to connect two distinct domains: electrical noise, which refers to voltage fluctuations and their impact on electrical systems, and mechanical noise, which pertains to vibrations and wear in gear systems. However, these two types of noise represent different underlying phenomena and metrics in their respective domains. Electrical noise is characterized by stochastic voltage variations, while mechanical noise involves physical vibrations and mechanical interactions. Therefore, the term 'noise' does not denote the same formal object or relationship in both domains, leading to equivocation. The claim does not hold as it conflates two different referents under the same term without establishing a genuine structural mapping between them.
+- **Testability — REFUTED.** The core claim presents a relationship between electrical noise and gear system noise, suggesting that both domains exhibit a direct relationship between noise characteristics and system performance metrics. However, the claim lacks specific, named metrics, comparison conditions, or rejection thresholds that would allow for a clear experimental test of this relationship. The phrase 'both domains must exhibit a direct relationship' is vague and does not operationalize the hypothesis into a testable format. Therefore, it does not meet the criteria for testability.
+- **Triviality — REFUTED.** The core claim states a specific relationship between electrical noise and gear system noise, focusing on their quantitative metrics and characteristics. When stripped of domain-specific vocabulary, the claim reduces to a general assertion about the relationship between noise characteristics and system performance metrics in two complex systems. This generic form is true of many complex systems, indicating that the claim is trivial. The exact phrase being tested for genericness is: "Both domains must exhibit a direct relationship between the characteristics of noise and the quantitative metrics of system performance." This phrase is indeed shorter and vaguer than the original claim, confirming that it has been paraphrased rather than stripped. Therefore, the claim does not survive this lens.
+
+## No steelman offered
+
+All three lenses independently converged on REFUTED for this case. If revisited, it would need a genuinely tighter formulation, not a restatement of the same claim.

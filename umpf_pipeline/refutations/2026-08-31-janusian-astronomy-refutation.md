@@ -1,0 +1,14 @@
+# Adversarial Refutation: Janusian — Astronomy — stellar nucleosynthesis
+
+**Original**: `hypotheses/2026-08-31-janusian-astronomy.md`
+**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost
+
+## Tally: 0 of 3 survive → **REFUTED**
+
+- **Coherence — REFUTED.** The core claim relies on the term 'primary sources' to describe both stars and planets in the context of nucleosynthesis. In astronomy, 'primary sources' typically refers to the initial formation of elements in stars through nuclear fusion, while planets are generally considered to form from the remnants of these processes and do not independently synthesize elements through nuclear reactions. Thus, the term 'primary sources' does not denote the same formal object in both domains, leading to equivocation. The claim fails to establish a coherent mapping between the two domains as it conflates distinct processes of element formation.
+- **Testability — REFUTED.** The core claim does not operationalize a specific, checkable prediction that can be tested through empirical means. While it proposes a correlation between isotopic signatures in planetary materials and nucleosynthesis events in stars, it lacks a clearly defined metric, comparison condition, or rejection threshold. The phrasing is vague enough that it does not allow for a straightforward experimental design to confirm or refute the hypothesis, particularly as it does not specify what those isotopic signatures would be or how they would be measured. Therefore, the claim is not sufficiently testable.
+- **Triviality — REFUTED.** The core claim states that both stars and planets are primary sources of elements heavier than hydrogen and helium created through nuclear processes. When stripped of domain-specific vocabulary, the claim reduces to a statement about two systems contributing to the same outcome through similar processes. This is a generic assertion that could apply to many complex systems, thus failing the triviality test. The specific mechanisms of nucleosynthesis in stars and the formation of elements in planets are not sufficiently unique to this claim, making it trivial. The quoted phrase being tested for genericness is: "Both stars and planets are primary sources of elements heavier than hydrogen and helium created through nuclear processes for the same cosmic phenomena; the theory must contain both." This phrase is indeed generic and does not hold unique specificity to the claim, leading to the conclusion that it is trivial.
+
+## No steelman offered
+
+All three lenses independently converged on REFUTED for this case. If revisited, it would need a genuinely tighter formulation, not a restatement of the same claim.

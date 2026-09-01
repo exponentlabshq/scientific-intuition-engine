@@ -1,0 +1,14 @@
+# Adversarial Refutation: Bisociation — Physical Mechanical Spring Systems × Physical Circuit Evolution
+
+**Original**: `hypotheses/2026-09-01-physical-mechanical-spring-systems-x-physical-circuit-evolution.md`
+**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost
+
+## Tally: 1 of 3 survive → **REFUTED**
+
+- **Coherence — REFUTED.** The core claim rests on the term 'energy storage,' which is used in both domains. In mechanical spring systems, it refers to elastic potential energy stored in springs, while in electrical circuits, it pertains to energy stored in capacitors and inductors. These are fundamentally different referents: elastic potential energy is a mechanical concept, while energy storage in circuits involves electromagnetic principles. Therefore, the claim equivocates on the term 'energy storage,' as it conflates two distinct physical phenomena without establishing a formal equivalence. This leads to a failure in coherence, as the mapping does not hold under scrutiny.
+- **Testability — SURVIVES.** The core claim presents a specific mapping between mechanical spring systems and electrical circuits, identifying displacement and velocity in springs with voltage and current in circuits, and energy storage in springs with capacitors and inductors. This mapping is operationalized through the identification of oscillatory behavior and energy transfer mechanisms in both domains, which are well-documented phenomena. Therefore, the claim is not vague and does provide a clear basis for testing the hypothesis, as it connects established principles in both fields.
+- **Triviality — REFUTED.** The core claim states that the mapping between physical mechanical spring systems and physical circuit evolution involves specific relationships between displacement, velocity, voltage, and current, as well as energy storage mechanisms. When stripped of domain-specific vocabulary, the claim reduces to a statement about two systems exhibiting similar dynamic responses characterized by oscillatory behavior and energy transfer. This is a generic observation that could apply to many complex systems, thus failing the triviality test. The quoted phrase being tested for genericness is: "both domains must exhibit a similar dynamic response to external inputs, characterized by oscillatory behavior and energy transfer mechanisms." This phrase is indeed shorter and vaguer than the original claim, indicating a failure to maintain specificity. Therefore, the claim does not survive this lens.
+
+## No steelman offered
+
+All three lenses independently converged on REFUTED for this case. If revisited, it would need a genuinely tighter formulation, not a restatement of the same claim.

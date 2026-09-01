@@ -1,0 +1,14 @@
+# Adversarial Refutation: Bisociation — Physical Elastic Deformation × Physical Voltage Spikes
+
+**Original**: `hypotheses/2026-09-01-physical-elastic-deformation-x-physical-voltage-spikes.md`
+**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost
+
+## Tally: 0 of 3 survive → **REFUTED**
+
+- **Coherence — REFUTED.** The core claim attempts to establish a relationship between elastic deformation and voltage spikes through a shared structure of input-output relationships. However, the term 'voltage spikes' does not denote the same formal object as 'elastic deformation' in the context of stress-strain relationships. In the domain of elastic deformation, the relationship is well-defined and predictable under normal conditions, while voltage spikes refer to transient phenomena that do not have a consistent, predictable relationship with mechanical deformation across materials. Thus, the claim relies on equivocation between these two distinct referents, failing to establish a coherent bisociation.
+- **Testability — REFUTED.** The core claim suggests a direct relationship between elastic deformation and voltage spikes, implying a predictable pattern across all materials. However, while the sources discuss stress-strain relationships and the effects of voltage on deformation, they do not operationalize a specific, measurable metric or provide a clear, generalizable framework that connects these two phenomena in a predictable manner. The absence of a defined rejection threshold or a named theorem that encapsulates this relationship leads to vagueness, making the hypothesis unfalsifiable as stated.
+- **Triviality — REFUTED.** The core claim states a specific relationship between elastic deformation and voltage spikes, asserting that both domains exhibit predictable patterns based on measurable inputs and outputs. However, when stripped of domain-specific vocabulary, the claim reduces to a general assertion about complex systems exhibiting predictable relationships between inputs and outputs. This is a common characteristic of many systems and does not provide a unique or novel insight. The phrase being tested for genericness is: "Both domains must exhibit a clear relationship between a measurable input (stress or voltage) and a corresponding output (strain or current) that follows predictable patterns under normal conditions." This is indeed a generic statement applicable to numerous complex systems, thus the claim is trivial. Therefore, the claim does not survive this lens.
+
+## No steelman offered
+
+All three lenses independently converged on REFUTED for this case. If revisited, it would need a genuinely tighter formulation, not a restatement of the same claim.
