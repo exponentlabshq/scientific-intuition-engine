@@ -60,6 +60,7 @@ Usage:
 import argparse
 import json
 import os
+from datetime import datetime
 
 from ledger import key_for, load_latest_entries
 
@@ -280,10 +281,31 @@ def score_entry(rec, *, include_self_report: bool = False):
         breakdown.append("Phase 4 data reconciled: +5")
 
     # Actively researched — orthogonal to the novelty axis on purpose.
+    # 2026-09-01: recency-weighted, not flat. A real match still counts at
+    # any age (an old, settled paper is real evidence the mechanism isn't
+    # a hallucination) -- but a live, recent research thread is a
+    # materially stronger signal than a decades-old, closed question, and
+    # the score should say so. Tiers, not a continuous formula, matching
+    # this project's own established style (discrete, explainable
+    # thresholds over smooth decay curves) -- see refutation_survival_count
+    # and the Contested-tier design for the same discipline elsewhere.
     if rec.get("actively_researched"):
-        points += 20
-        badges.append("🔬 Actively Researched")
-        breakdown.append("Actively researched (real, current evidence): +20")
+        most_recent = rec.get("active_research_most_recent_year")
+        current_year = datetime.now().year
+        age = (current_year - most_recent) if most_recent else None
+        if age is not None and age <= 2:
+            points += 25
+            badges.append("🔬🔥 Actively Researched (current)")
+            breakdown.append(f"Actively researched, most recent evidence {most_recent} ({age}y old — a live, current research thread): +25")
+        elif age is not None and age <= 10:
+            points += 15
+            badges.append("🔬 Actively Researched")
+            breakdown.append(f"Actively researched, most recent evidence {most_recent} ({age}y old): +15")
+        else:
+            points += 10
+            badges.append("🔬 Actively Researched (historical)")
+            note = f", most recent evidence {most_recent}" if most_recent else " (no date recovered)"
+            breakdown.append(f"Actively researched{note} — real, but not a currently live thread: +10")
 
     return points, badges, breakdown, None
 

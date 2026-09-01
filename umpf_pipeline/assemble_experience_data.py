@@ -190,6 +190,11 @@ def main():
             "refutation_filename": refutation_filename,
             "refutation_content": refutation_content,
             "refutation_independently_confirmed": rec.get("refutation_independently_confirmed", False),
+            "actively_researched": rec.get("actively_researched"),
+            "active_research_note": rec.get("active_research_note"),
+            "active_research_matches": rec.get("active_research_matches"),
+            "active_research_most_recent_year": rec.get("active_research_most_recent_year"),
+            "active_research_checked_date": rec.get("active_research_checked_date"),
         })
 
     missing_hyp = sum(1 for a in assembled if a["hypothesis_content"] is None)

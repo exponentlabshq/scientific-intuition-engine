@@ -343,6 +343,21 @@ header.top .backlink:hover { border-bottom-color: var(--gold); }
 .md-block hr { border: none; border-top: 1px solid var(--border); margin: 14px 0; }
 .md-block code { font-family: var(--mono); font-size: 0.85em; background: var(--surface-hover); padding: 1px 5px; border-radius: 4px; }
 
+.active-research-block {
+  background: var(--surface-hover);
+  border: 1px solid var(--gold);
+  border-radius: 8px;
+  padding: 12px 14px;
+  margin: 8px 0 14px;
+}
+.ar-note { font-size: 0.86rem; color: var(--text); margin: 0 0 8px; line-height: 1.6; }
+.ar-matches { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+.ar-matches li { font-size: 0.86rem; }
+.ar-matches a { color: var(--gold); text-decoration: none; border-bottom: 1px dotted var(--gold); font-weight: 600; }
+.ar-matches a:hover { border-bottom-style: solid; }
+.ar-authors { color: var(--text-muted); }
+.ar-explanation { color: var(--text-muted); font-size: 0.82rem; margin-top: 3px; line-height: 1.5; }
+
 .breakdown-list { list-style: none; padding: 0; margin: 6px 0; }
 .breakdown-list li {
   font-family: var(--mono);
@@ -616,6 +631,28 @@ footer.foot {
     if (e.breakdown && e.breakdown.length) {
       out += '<h4>Score breakdown (' + (e.points >= 0 ? '+' : '') + e.points + ' pts)</h4>';
       out += '<ul class="breakdown-list">' + e.breakdown.map(function (b) { return '<li>' + b.replace(/</g, '&lt;') + '</li>'; }).join('') + '</ul>';
+    }
+    if (e.active_research_matches && e.active_research_matches.length) {
+      out += '<h4>🔬 Independent Research Match' + (e.active_research_matches.length > 1 ? 'es' : '') + '</h4>';
+      out += '<div class="active-research-block">';
+      if (e.active_research_note) {
+        out += '<p class="ar-note">' + e.active_research_note.replace(/</g, '&lt;') + '</p>';
+      }
+      out += '<ul class="ar-matches">';
+      e.active_research_matches.forEach(function (m) {
+        var title = (m.title || 'Untitled').replace(/</g, '&lt;');
+        var authors = (m.researcher_or_authors || '').replace(/</g, '&lt;');
+        var year = m.year ? ' (' + m.year + ')' : '';
+        var titleHtml = (m.url && /^https?:\/\//.test(m.url))
+          ? '<a href="' + m.url.replace(/"/g, '&quot;') + '" target="_blank" rel="noopener noreferrer">' + title + '</a>'
+          : title;
+        out += '<li>' + titleHtml + year + (authors ? ' &mdash; <span class="ar-authors">' + authors + '</span>' : '');
+        if (m.explanation) {
+          out += '<div class="ar-explanation">' + m.explanation.replace(/</g, '&lt;') + '</div>';
+        }
+        out += '</li>';
+      });
+      out += '</ul></div>';
     }
     if (e.notes) {
       out += '<h4>Notes</h4><div class="md-block">' + mdToHtml(e.notes) + '</div>';

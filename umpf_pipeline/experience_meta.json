@@ -3,26 +3,26 @@
     {
       "mode": "janusian",
       "n": 214,
-      "avg_points": 17.8,
+      "avg_points": 18.8,
       "no_signal_rate": 0.08
     },
     {
       "mode": "bisociation",
       "n": 272,
-      "avg_points": 11.2,
-      "no_signal_rate": 0.25
-    },
-    {
-      "mode": "case-study",
-      "n": 12,
-      "avg_points": 8.8,
+      "avg_points": 12.0,
       "no_signal_rate": 0.25
     },
     {
       "mode": "homospatial",
       "n": 244,
-      "avg_points": 7.8,
+      "avg_points": 8.1,
       "no_signal_rate": 0.36
+    },
+    {
+      "mode": "case-study",
+      "n": 12,
+      "avg_points": 6.2,
+      "no_signal_rate": 0.25
     }
   ],
   "prefilter_correlation": {
