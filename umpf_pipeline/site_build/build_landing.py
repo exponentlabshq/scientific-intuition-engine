@@ -399,8 +399,8 @@ footer.colophon a { color: var(--text-muted); }
     <div class="hero-grid">
       <div class="hero-text">
         <div class="kicker">Exponent Labs LLC</div>
-        <h1>Our AI rediscovered a real MIT professor's theory &mdash; <em>before anyone told it the answer</em>.</h1>
-        <p class="dek">This isn't a party trick. It's real research infrastructure &mdash; built to generate genuine scientific hypotheses and prove, out in the open, whether its reasoning actually holds up.</p>
+        <h1>Our AI proposed a genuine paradox in how markets work &mdash; <em>then failed to notice an economist had already published it</em>.</h1>
+        <p class="dek">Not a clean win, and we're not pretending it was. This is what testing a research tool honestly looks like: a real hunch, a real gap in how it searches, and a real, disclosed limitation &mdash; not a bug we're hiding.</p>
         <div class="hero-ctas">
           <a class="cta-btn" href="whitepaper.html">Read the Whitepaper &rarr;</a>
           <a class="cta-btn secondary" href="leaderboard.html">See the Leaderboard &rarr;</a>
@@ -432,7 +432,7 @@ footer.colophon a { color: var(--text-muted); }
 
     <section class="block" id="system-map">
       <div class="eyebrow">The Eureka Engine In Action</div>
-      <h2>It rediscovered Andrew Lo's Adaptive Market Hypothesis &mdash; on its own.</h2>
+      <h2>It proposed a real economist's paradox &mdash; and its own search never noticed.</h2>
 
       <div class="story">
         <div class="beat">
@@ -449,11 +449,11 @@ footer.colophon a { color: var(--text-muted); }
         </div>
         <div class="beat">
           <span class="beat-label">The Result</span>
-          <p>When the system checked its own idea against live research, it found MIT economist <strong class="accent">Andrew Lo</strong>'s real, decades-old Adaptive Market Hypothesis &mdash; stating almost word-for-word the same paradox. Nobody told it. It found the collision on its own.</p>
+          <p>Verification found real, genuine research territory nearby &mdash; live market-anomaly literature the paradox hadn't been framed against &mdash; but the specific claim didn't survive adversarial scrutiny: 0 of 3 independent reviewers found it held up. Separately, a person recognized the paradox itself closely echoes MIT economist <strong class="accent">Andrew Lo</strong>'s real, published Adaptive Markets Hypothesis. The engine's own search &mdash; twice, including a later pass built specifically to hunt for this kind of match &mdash; never once turned up Lo's name. A real, disclosed limitation, not a bug we're hiding: it searches concepts, not the specific named researchers or frameworks a hunch might already resemble.</p>
         </div>
       </div>
 
-      <p class="map-bridge">Here's the exact machine that found it</p>
+      <p class="map-bridge">Here's the exact machine that ran it</p>
 
       <span class="map-step-label">Step 1 &middot; Generate &mdash; it had three doors</span>
       <div class="map-fork">
@@ -483,18 +483,18 @@ footer.colophon a { color: var(--text-muted); }
         <div class="map-tile">
           <img src="data:image/jpeg;base64,__MECH_VERIFY_IMG__" alt="Web verification diagram: an eye radiating to four outcomes" />
           <span class="mt-name">🔍 Verify</span>
-          <span class="mt-cap">Searched live research for the paradox &mdash; and found Andrew Lo's real Adaptive Market Hypothesis, stating almost the same thing.</span>
+          <span class="mt-cap">Found real, fertile research territory nearby &mdash; but never surfaced the one specific match, Andrew Lo's real work, that a person later recognized.</span>
         </div>
-        <div class="map-tile not-taken">
+        <div class="map-tile taken">
           <img src="data:image/jpeg;base64,__MECH_REFUTE_IMG__" alt="Adversarial refutation diagram: three sentinels testing a gem" />
           <span class="mt-name">⚖️ Refute</span>
-          <span class="mt-cap">Skipped. The match was clean enough on its own &mdash; a direct hit against real, published research doesn't need a trial.</span>
-          <span class="mt-tag">Skipped this run</span>
+          <span class="mt-cap">Ran, and correctly killed the specific claim: 0 of 3 independent reviewers found it held up. The paradox was real; this formulation of it wasn't precise enough to survive.</span>
+          <span class="mt-tag">Ran &mdash; refuted, 0 of 3</span>
         </div>
         <div class="map-tile">
           <img src="data:image/jpeg;base64,__MECH_SCORE_IMG__" alt="Scoring diagram: a balance scale feeding a ranked staircase" />
           <span class="mt-name">🏆 Rank</span>
-          <span class="mt-cap">Logged as a collision with a real, currently-active researcher &mdash; the strongest single match found that entire session.</span>
+          <span class="mt-cap">Logged honestly in the worst confidence tier &mdash; refuted, searchable, with the human-caught Lo connection written up as a real, open limitation, not hidden.</span>
         </div>
       </div>
     </section>
@@ -508,88 +508,93 @@ footer.colophon a { color: var(--text-muted); }
 
     <section class="block" id="featured-hypotheses">
       <div class="eyebrow">Featured Hypotheses</div>
-      <h2>Five real discoveries, ranked &mdash; this is what makes the engine real.</h2>
-      <p class="lede">Anyone can claim an AI generates ideas. These are the top five, exactly as scored, with what they actually found and why each one is worth taking seriously.</p>
+      <h2>The current top five, exactly as scored &mdash; this is what makes the engine real.</h2>
+      <p class="lede">Anyone can claim an AI generates ideas. These are the real, current top five on the public leaderboard, with what they actually found and why each one survived.</p>
 
       <div class="lb-rows">
         <div class="lb-row">
           <span class="lb-rank">#1</span>
           <div class="lb-body">
-            <span class="lb-pairing">Human Trust Variance &times; Cryptography &mdash; Zero-Knowledge Proofs</span>
-            <p class="lb-claim">Trust dynamics between people and the evolution of zero-knowledge proofs might follow the same underlying pattern &mdash; improvements in one predicting improvements in the other.</p>
+            <span class="lb-pairing">Computer Science &mdash; Compiler Instruction Scheduling</span>
+            <p class="lb-claim">Reordering a compiler's instructions to run faster can, genuinely at the same time, make the program run worse &mdash; both true, not &ldquo;it depends.&rdquo;</p>
             <span class="lb-why-label">Why it matters</span>
-            <p class="lb-why">Real research already treats &ldquo;trust&rdquo; as a technical property of cryptographic systems &mdash; but nobody's connected that math to how trust actually works between two people. If the pattern holds, it's a genuinely new bridge between psychology and cryptography.</p>
+            <p class="lb-why">A real 2004 academic paper on exactly this tradeoff turned up when the team checked, and the claim survived all three independent adversarial reviewers unanimously &mdash; the strongest single result on the entire leaderboard.</p>
             <div class="lb-badges">
               <span class="lb-badge verdict-adjacent">Adjacent Active</span>
-              <span class="lb-badge">🧬 Bisociative</span>
+              <span class="lb-badge">🎭 Janusian</span>
+              <span class="lb-badge">🛡️ Survived Refutation (3/3)</span>
               <span class="lb-badge">🔬 Actively Researched</span>
             </div>
           </div>
-          <span class="lb-points">+58</span>
+          <span class="lb-points">+60</span>
         </div>
         <div class="lb-row">
           <span class="lb-rank">#2</span>
           <div class="lb-body">
-            <span class="lb-pairing">Bridge Cable Tension &times; Bureaucratic Organizational Theory</span>
-            <p class="lb-claim">An increase in tension imbalance in physical bridge cables might correlate with decreased effectiveness in bureaucratic structures &mdash; the same failure pattern, two different materials.</p>
+            <span class="lb-pairing">Zoology &mdash; Animal Migration Navigation</span>
+            <p class="lb-claim">Migrating animals use both an innate, built-in sense of direction and things they learn from the environment &mdash; at the same time, not one or the other.</p>
             <span class="lb-why-label">Why it matters</span>
-            <p class="lb-why">Organizational theorists already borrow engineering metaphors loosely. This hypothesis proposes something stricter &mdash; that the actual physics of how tension distributes across a bridge could predict where a bureaucracy is about to fail, not just describe it poetically.</p>
+            <p class="lb-why">Three real papers on exactly this combination turned up, including work in the journal <em>Nature</em> &mdash; the engine's own confidence tracked genuine, ongoing research.</p>
             <div class="lb-badges">
               <span class="lb-badge verdict-adjacent">Adjacent Active</span>
-              <span class="lb-badge">🧬 Bisociative</span>
+              <span class="lb-badge">🎭 Janusian</span>
+              <span class="lb-badge">🛡️ Survived Refutation</span>
               <span class="lb-badge">🔬 Actively Researched</span>
             </div>
           </div>
-          <span class="lb-points">+58</span>
+          <span class="lb-points">+57</span>
         </div>
         <div class="lb-row">
           <span class="lb-rank">#3</span>
           <div class="lb-body">
-            <span class="lb-pairing">Hash Collisions &times; Human Social Network Dynamics</span>
-            <p class="lb-claim">A rise in informational hash collisions might correlate with a rise in new social connections forming &mdash; the same coincidence-driven pattern showing up in two unrelated systems.</p>
+            <span class="lb-pairing">Fisheries &mdash; Stock-Recruitment Dynamics</span>
+            <p class="lb-claim">Higher fish stock levels and lower recruitment rates can both be true of the same population at the same time &mdash; the two effects don't cancel out.</p>
             <span class="lb-why-label">Why it matters</span>
-            <p class="lb-why">Two real bodies of research already exist separately &mdash; one on coincidence in computing, one on coincidence in how people meet. Nobody has drawn the line connecting them. This hypothesis draws it.</p>
+            <p class="lb-why">A real 2020 study on exactly this decoupling turned up &mdash; the same paradox the engine proposed on its own, already being studied.</p>
             <div class="lb-badges">
               <span class="lb-badge verdict-adjacent">Adjacent Active</span>
-              <span class="lb-badge">🧬 Bisociative</span>
+              <span class="lb-badge">🎭 Janusian</span>
+              <span class="lb-badge">🛡️ Survived Refutation</span>
               <span class="lb-badge">🔬 Actively Researched</span>
             </div>
           </div>
-          <span class="lb-points">+58</span>
+          <span class="lb-points">+57</span>
         </div>
         <div class="lb-row">
           <span class="lb-rank">#4</span>
           <div class="lb-body">
-            <span class="lb-pairing">Creative Block &mdash; Barrier and Facilitator, Simultaneously</span>
-            <p class="lb-claim">Creative block might be both a barrier and a facilitator of creativity at the same time &mdash; genuinely engaging with a block, not avoiding it, could produce more innovative work than never hitting one.</p>
+            <span class="lb-pairing">Cognitive Psychology &mdash; Working Memory and Chunking</span>
+            <p class="lb-claim">Working memory's hard capacity limit and the real, effective expansion of that capacity through chunking are both true of the same task, at once.</p>
             <span class="lb-why-label">Why it matters</span>
-            <p class="lb-why">Real psychology research already shows stepping <em>away</em> from a block precedes breakthroughs &mdash; but that's avoidance, not engagement. This hypothesis claims something more specific: engaging with the block directly, not distracting yourself from it, is what unlocks the work. That distinction is still untested.</p>
+            <p class="lb-why">A real 2019 paper asking almost this exact question turned up &mdash; the tension the engine proposed is a live, studied one, not an invented contradiction.</p>
             <div class="lb-badges">
               <span class="lb-badge verdict-adjacent">Adjacent Active</span>
               <span class="lb-badge">🎭 Janusian</span>
+              <span class="lb-badge">🛡️ Survived Refutation</span>
               <span class="lb-badge">🔬 Actively Researched</span>
             </div>
           </div>
-          <span class="lb-points">+58</span>
+          <span class="lb-points">+57</span>
         </div>
         <div class="lb-row">
           <span class="lb-rank">#5</span>
           <div class="lb-body">
-            <span class="lb-pairing">Mechanical Spring Systems &times; Human Emotional Fluctuation</span>
-            <p class="lb-claim">Emotional responses might follow a mathematical model just like Hooke's Law &mdash; emotional intensity correlating directly with the degree of stimuli, the way a spring's force correlates with how far it's stretched.</p>
+            <span class="lb-pairing">Mathematics &mdash; Knot Invariants</span>
+            <p class="lb-claim">A knot can be fully classified by its invariants, and a genuinely different knot can share those same invariant values &mdash; both true at once.</p>
             <span class="lb-why-label">Why it matters</span>
-            <p class="lb-why">Real, active research already builds mathematical models of emotion &mdash; but none of it uses spring mechanics specifically. If a literal Hooke's-Law-style model held up, it would mean predicting someone's emotional reaction with the same precision engineers use to predict how far a spring stretches.</p>
+            <p class="lb-why">Real work on exactly this classification-versus-collision tension in knot theory turned up when the team checked &mdash; a genuine, still-open question in the field.</p>
             <div class="lb-badges">
               <span class="lb-badge verdict-adjacent">Adjacent Active</span>
-              <span class="lb-badge">🪞 Homospatial</span>
+              <span class="lb-badge">🎭 Janusian</span>
+              <span class="lb-badge">🛡️ Survived Refutation</span>
               <span class="lb-badge">🔬 Actively Researched</span>
             </div>
           </div>
-          <span class="lb-points">+58</span>
+          <span class="lb-points">+52</span>
         </div>
       </div>
 
-      <a class="cta-btn" href="leaderboard.html">See all 40 hypotheses &rarr;</a>
+      <a class="cta-btn" href="leaderboard.html">See all __STAT_TOTAL__ hypotheses &rarr;</a>
     </section>
 
     <section class="block" id="pipeline">
@@ -644,8 +649,8 @@ footer.colophon a { color: var(--text-muted); }
           </div>
           <div class="c-part">
             <span class="p-label">Where It Shows Up Again</span>
-            <h4>170 fields, one collision at a time.</h4>
-            <p>Our engine runs this exact move on purpose, over and over, across 170 real academic fields &mdash; comedy and thermodynamics, neuroscience and supply chains &mdash; hunting for the next accidental apple.</p>
+            <h4>109 fields, one collision at a time.</h4>
+            <p>Our engine runs this exact move on purpose, over and over, across 109 real academic fields &mdash; comedy and thermodynamics, neuroscience and supply chains &mdash; hunting for the next accidental apple.</p>
           </div>
         </div>
       </div>
@@ -774,7 +779,7 @@ footer.colophon a { color: var(--text-muted); }
 
       <div class="stat-row">
         <div class="stat-pill"><span class="n">__STAT_TOTAL__</span><span class="l">Hypotheses Tested</span></div>
-        <div class="stat-pill"><span class="n">170</span><span class="l">Domains In The Pool</span></div>
+        <div class="stat-pill"><span class="n">109</span><span class="l">Domains In The Pool</span></div>
         <div class="stat-pill"><span class="n">3</span><span class="l">Generation Methods</span></div>
         <div class="stat-pill"><span class="n">__STAT_REFUTED__</span><span class="l">Proven Wrong (And Kept, Not Hidden)</span></div>
       </div>
@@ -783,23 +788,23 @@ footer.colophon a { color: var(--text-muted); }
     <section class="block" id="whitepaper-teaser">
       <div class="eyebrow">The Full Report</div>
       <h2>The technical writeup &mdash; what it got right, what it got wrong, and why.</h2>
-      <p class="lede">Across all __STAT_TOTAL__ hypotheses in the pool &mdash; __STAT_PENDING_CLAUSE__: __STAT_COLLISION__ collided with real prior work, __STAT_ADJACENT__ found genuinely open territory, and __STAT_REFUTED__ were tested by independent skeptics and failed, __STAT_SURVIVAL_CLAUSE__, not smoothed over. We even tried to break that record on purpose &mdash; the strongest hypothesis in the pool, refuted too.</p>
+      <p class="lede">Across all __STAT_TOTAL__ hypotheses in the pool &mdash; __STAT_PENDING_CLAUSE__: __STAT_COLLISION__ collided with real prior work, __STAT_ADJACENT__ found genuinely open territory, and __STAT_REFUTED__ were tested by independent skeptics and failed, __STAT_SURVIVAL_CLAUSE__, not smoothed over.</p>
 
       <div class="wp-toc">
         <span class="wp-toc-label">What's inside</span>
         <ol class="wp-toc-list">
           <li>What This Is, in One Story &mdash; the Darwin story, told from scratch</li>
-          <li>Two Psychologists, Three Ways to Break Your Thinking Open &mdash; Koestler &amp; Rothenberg, explained plainly</li>
-          <li>Why This Matters &mdash; What a Bad Hypothesis Costs (real research)</li>
-          <li>How the Machine Does It &mdash; Three Mechanisms</li>
-          <li>The Four-Phase Pipeline</li>
-          <li>The Verification Layer</li>
-          <li>Adversarial Refutation</li>
-          <li>Points, Badges &amp; the Leaderboard</li>
+          <li>Three Ways to Force a Collision &mdash; Koestler &amp; Rothenberg, explained plainly</li>
+          <li>Why This Matters &mdash; What a Bad Hypothesis Costs</li>
+          <li>The Pipeline, Verification &amp; Adversarial Refutation &mdash; can the &ldquo;kill it&rdquo; check be trusted?</li>
+          <li>Full Autonomy, Cost &amp; the Audit Agent</li>
+          <li>The Leaderboard &mdash; Tiers and Scoring</li>
+          <li>Real Discoveries on the Leaderboard</li>
+          <li>Pointing the Engine at Real Discoveries, Blind</li>
+          <li>The v2 Pre-Filter</li>
           <li>Results</li>
-          <li>Postmortem &mdash; the real bugs, not polished away</li>
-          <li>Limitations</li>
-          <li>Conclusion</li>
+          <li>Postmortem &mdash; 20 real failures, not polished away</li>
+          <li>Limitations &amp; Conclusion</li>
         </ol>
       </div>
 
@@ -809,7 +814,7 @@ footer.colophon a { color: var(--text-muted); }
   </div>
 
   <footer class="colophon">
-    <div class="wrap">Exponent Labs LLC &middot; The Eureka Engine &middot; 2026-08-28 &middot; <a href="whitepaper.html">Report</a> &middot; <a href="leaderboard.html">Leaderboard</a></div>
+    <div class="wrap">Exponent Labs LLC &middot; The Eureka Engine &middot; 2026-09-01 &middot; <a href="whitepaper.html">Report</a> &middot; <a href="leaderboard.html">Leaderboard</a></div>
   </footer>
 
 </body>
