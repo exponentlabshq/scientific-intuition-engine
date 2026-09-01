@@ -53,3 +53,32 @@ The most likely reason this functor turns out superficial rather than structural
 ---
 
 **⚠️ Automated check failed twice:** no Search Query targets a specific named theory, framework, or researcher, even after one corrective retry. Verification may miss an existing collision with real prior art that a more specific search would have found — read this hypothesis's verdict with that in mind.
+
+---
+
+## Structural Reformulation (Level 3 -- sharpen_structural_mapping.py)
+
+**Attempted**: 2026-09-01
+**Relation in domain A**: The resonance condition for acoustic systems: the system amplifies sound waves at its natural frequencies.
+
+**Object mapping (f)**:
+
+| Domain A | Domain B |
+|---|---|
+| natural frequency of acoustic system | natural frequency of mechanical system |
+| sound wave amplitude | displacement amplitude of mechanical system |
+| acoustic impedance | mechanical impedance |
+
+**Claimed invariant**: The resonance condition: maximum amplitude occurs at natural frequencies.
+
+**Structural verification (f(R_A) = R_B(f))**:
+In acoustic resonance, the condition for resonance is that the frequency of the external sound wave matches the natural frequency of the acoustic system, leading to a maximum amplitude of oscillation. Mathematically, this is expressed as the system's impedance being minimized, allowing maximum energy transfer and thus maximum amplitude.\n\nIn mechanical systems, resonance similarly occurs when the frequency of an external force matches the system's natural frequency, leading to maximum displacement amplitude. The mechanical impedance is minimized under these conditions, allowing maximum energy transfer.\n\nThe mapping f is as follows:\n- The natural frequency of the acoustic system maps to the natural frequency of the mechanical system.\n- The amplitude of the sound wave maps to the displacement amplitude of the mechanical system.\n- The acoustic impedance maps to the mechanical impedance.\n\nUnder this mapping, the condition for resonance (minimum impedance leading to maximum amplitude) holds in both domains, showing that the structural relationship is preserved.
+
+**Falsifiable prediction (from the structural mapping, not a generic one)**: If an acoustic system and a mechanical system are subjected to external excitations at their respective natural frequencies, both systems should exhibit maximum amplitude responses at these frequencies, confirming the resonance condition in both domains.
+
+### Re-verification of the structural claim
+
+**Verdict**: ADJACENT_ACTIVE
+
+The provided sources confirm that both acoustic and mechanical systems exhibit resonance when subjected to external forces at their respective natural frequencies, leading to maximum amplitude responses. Additionally, the concept of impedance is relevant in both domains, affecting the system's response to external forces.
+
