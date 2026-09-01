@@ -91,6 +91,32 @@ figure { margin: 28px 0; text-align: center; }
 figure img { max-width: 100%; border-radius: 10px; border: 1px solid var(--border); }
 figure figcaption { color: var(--text-faint); font-size: 0.84rem; margin-top: 10px; font-family: var(--mono); }
 
+.masthead-figure { margin: 0 0 40px; }
+.masthead-figure img {
+  width: 100%; max-height: 320px; object-fit: cover; border-radius: 12px;
+  border: 1px solid var(--border); display: block;
+}
+.masthead-figure figcaption {
+  color: var(--text-faint); font-size: 0.8rem; font-family: var(--mono);
+  margin-top: 10px; text-align: center;
+}
+
+.mech-figures {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 24px 0;
+}
+.mech-figures figure { margin: 0; }
+.mech-figures img {
+  width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px;
+  border: 1px solid var(--border); display: block;
+}
+.mech-figures figcaption {
+  color: var(--text-faint); font-size: 0.78rem; font-family: var(--mono);
+  margin-top: 8px; text-align: center;
+}
+@media (max-width: 640px) {
+  .mech-figures { grid-template-columns: 1fr; }
+}
+
 .table-wrap { overflow-x: auto; margin: 20px 0; border: 1px solid var(--border); border-radius: 8px; }
 table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
 th, td { padding: 9px 13px; text-align: left; border-bottom: 1px solid var(--border); vertical-align: top; }
@@ -151,6 +177,11 @@ footer.colophon {
     <p class="byline">Exponent Labs LLC &middot; 2026-09-01 &middot; scientific-intuition-engine/umpf_pipeline</p>
   </header>
 
+  <figure class="masthead-figure">
+    <img src="whitepaper-masthead.jpg" alt="Two open books rendered as an engraving, their pages overlapping: one shows a finch and a branching tree, the other a city skyline and a rising growth curve, the lines of both merging where the pages meet.">
+    <figcaption>Darwin's finches, Malthus's population curve &mdash; one collision, one theory of evolution.</figcaption>
+  </figure>
+
   <div class="abstract">
     <span class="label">Abstract</span>
     <p>Most scientific breakthroughs come from colliding two unrelated fields, not staring harder at one &mdash; Darwin reading an economics pamphlet produced natural selection; Einstein imagining a falling man led toward general relativity. The Eureka Engine automates that collision on purpose, using three documented creativity mechanisms, then checks each result against real evidence before anyone spends months finding out by hand.</p>
@@ -200,6 +231,21 @@ footer.colophon {
         <tr><td>Janusian</td><td>Albert Rothenberg, from direct study of Nobel laureates</td><td>One domain's core assumption held true and false, simultaneously</td><td>Einstein's falling man &mdash; weightless and accelerating at once &mdash; toward general relativity</td></tr>
         <tr><td>Homospatial</td><td>Albert Rothenberg</td><td>Two domains superimposed into one new entity, not a metaphor</td><td>Rothenberg's own experiment: subjects shown two photographs superimposed produced more original metaphors than subjects shown the same photos side by side</td></tr>
       </table>
+    </div>
+
+    <div class="mech-figures">
+      <figure>
+        <img src="dean-letters-bisociation.jpg" alt="Engraving of two distinct matrices of thought, one geometric and one organic, fused into a single new form at their point of collision.">
+        <figcaption>Bisociation</figcaption>
+      </figure>
+      <figure>
+        <img src="dean-letters-janusian.jpg" alt="Engraving of a single figure depicted as simultaneously falling and standing still, two contradictory states held at once.">
+        <figcaption>Janusian</figcaption>
+      </figure>
+      <figure>
+        <img src="dean-letters-homospatial.jpg" alt="Engraving of two forms superimposed in the same space, merged rather than juxtaposed, producing a third structure.">
+        <figcaption>Homospatial</figcaption>
+      </figure>
     </div>
 
     <p>A <strong>functor</strong> &mdash; borrowed loosely from category theory &mdash; just means a stated, checkable rule for translating a concept from one domain into its counterpart in the other. &ldquo;Overcrowding in market X should produce the same boom-bust cycle observed in population Y&rdquo; is falsifiable; &ldquo;markets are like ecosystems&rdquo; is not. The pipeline enforces that precision mechanically &mdash; homospatial output, for instance, is scanned and rejected if it's secretly just a metaphor wearing a coined name.</p>
