@@ -111,6 +111,52 @@ def run_subprocess(cmd: list, dry_run: bool) -> dict:
     }
 
 
+STRUCTURAL_REPAIR_CAP = 5  # hard per-cycle ceiling regardless of how many new hypotheses land in the worst tier -- a deliberate, defensive cap (2026-09-01's own --dry-run --limit 1000 accident is exactly the failure mode this guards against), not expected to bind in a normal-sized cycle.
+
+
+def newly_refuted_slugs(new_files: list) -> list:
+    """Which of THIS cycle's own new hypotheses landed in the Refuted/
+    Rejected tier after refutation just ran -- read from the live ledger,
+    the same tier_for() call sharpen_structural_mapping.py's own --backlog
+    uses, not guessed from refutation's subprocess exit code (that only
+    means the subprocess ran cleanly, not that every hypothesis in it
+    survived)."""
+    sys.path.insert(0, PIPELINE_DIR)
+    from ledger import load_latest_entries
+    import score_hypotheses as sh
+    new_slugs = {os.path.splitext(os.path.basename(f))[0] for f in new_files}
+    latest_by_slug = {e.get("hypothesis_slug"): e for e in load_latest_entries() if e.get("hypothesis_slug")}
+    out = []
+    for slug in new_slugs:
+        e = latest_by_slug.get(slug)
+        if not e:
+            continue
+        rank, label = sh.tier_for(e)
+        if label == "💀 Refuted / Rejected":
+            out.append(slug)
+    return sorted(out)[:STRUCTURAL_REPAIR_CAP]
+
+
+def structural_mapping_status(slug: str) -> str:
+    """Latest structural-mapping-log.jsonl entry's status for this slug --
+    read from the log itself, the same ground-truth-from-the-log
+    discipline this pipeline uses everywhere (ledger.py's own latest-
+    entry-wins pattern), not parsed out of captured subprocess stdout."""
+    log_path = os.path.join(PIPELINE_DIR, "structural-mapping-log.jsonl")
+    if not os.path.exists(log_path):
+        return None
+    status = None
+    with open(log_path, encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if not line:
+                continue
+            rec = json.loads(line)
+            if rec.get("slug") == slug:
+                status = rec.get("status")
+    return status
+
+
 def failed(result) -> bool:
     """A stage's run_subprocess() result, or a list of them (generation runs
     one subprocess per mode) -- True if any real (non-dry-run) call in it
@@ -126,6 +172,7 @@ def main():
     parser.add_argument("--total", type=int, help="Total hypotheses this cycle, split across modes by mode_weights.json")
     parser.add_argument("--hypotheses-per-mode", type=int, help="Exact count per mode, ignoring mode_weights.json")
     parser.add_argument("--skip-refutation", action="store_true", help="Skip Phase 2.5 (adversarial refutation) this cycle")
+    parser.add_argument("--skip-structural-repair", action="store_true", help="Skip the Level 3 structural-mapping repair attempt on this cycle's own newly-REFUTED hypotheses")
     parser.add_argument("--skip-score", action="store_true", help="Skip regenerating leaderboard.md this cycle")
     parser.add_argument("--skip-publish", action="store_true", help="Skip regenerating/deploying the site's data-driven pages this cycle")
     parser.add_argument("--no-push", action="store_true", help="Publish and commit the site locally but don't git push (passed through to publish_site.py)")
@@ -207,6 +254,39 @@ def main():
             print(f"$ {PYTHON} refute_hypothesis.py --all-pending")
     else:
         print("(skipping refutation this cycle — --skip-refutation)")
+
+    # --- Phase 2.75: structural repair (Level 3, fail-open) ---
+    # Scoped to just THIS cycle's own new hypotheses that refutation just
+    # put in the worst tier -- not a --backlog sweep, which stays a
+    # separate, manual, deliberately-paced tool (whitepaper Section 14).
+    # Real diagnosis this responds to (2026-09-01): a REFUTED hypothesis is
+    # often a Level 1 lexical-analogy failure at the hypothesis layer, not
+    # proof the domain pair itself is barren. sharpen_structural_mapping.py
+    # attempts an explicit Level 3 (equation-preserving) reformulation and
+    # honestly declines rather than forcing one when no real mapping
+    # exists -- validated on 82 real backlog attempts (5 constructed, all
+    # 5 later surviving adversarial refutation where their originals
+    # didn't, 12.1% real rate on formalism-shaped, 2.0% on mixed-uncertain,
+    # 0% and correctly declining on narrative-shaped). Fail-open, same
+    # class as the prefilter above: its own failure, or a real, honest
+    # decline (the expected, majority outcome), must never mark this cycle
+    # DEGRADED -- a repair attempt not landing is not a broken stage.
+    if not args.skip_structural_repair and not args.dry_run and new_files:
+        newly_refuted = newly_refuted_slugs(new_files)
+        if newly_refuted:
+            print(f"\nAttempting Level 3 structural repair on {len(newly_refuted)} newly-REFUTED hypothesis(es): {', '.join(newly_refuted)}")
+            cycle_record["stages"]["structural_repair"] = []
+            for slug in newly_refuted:
+                cmd = [PYTHON, "sharpen_structural_mapping.py", slug]
+                cycle_record["stages"]["structural_repair"].append(run_subprocess(cmd, args.dry_run))
+                if structural_mapping_status(slug) == "CONSTRUCTED":
+                    refute_cmd = [PYTHON, "sharpen_structural_mapping.py", slug, "--refute"]
+                    cycle_record["stages"]["structural_repair"].append(run_subprocess(refute_cmd, args.dry_run))
+        # Deliberately NOT checked with failed()/degraded_reasons -- see comment above.
+    elif args.dry_run and new_files:
+        print(f"$ {PYTHON} sharpen_structural_mapping.py <this cycle's newly-REFUTED hypothesis(es), if any>")
+    elif args.skip_structural_repair:
+        print("(skipping structural repair this cycle — --skip-structural-repair)")
 
     # --- Phase: scoring --- always attempted even if an earlier stage
     # degraded (the ledger is append-only, rescoring whatever's really in

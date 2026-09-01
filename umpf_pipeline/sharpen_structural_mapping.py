@@ -147,7 +147,14 @@ def load_pair_type(slug: str, domains: list) -> dict:
                 rec = json.loads(line)
                 if rec.get("slug") == slug:
                     latest = rec
-        if latest:
+        # Real bug caught in run_cycle.py's first wired test (2026-09-01):
+        # prefilter_observe.py logs a real entry for a single-domain
+        # (janusian) hypothesis too, but with status="skipped_single_domain_mode"
+        # and no "pair_type" key at all -- `if latest:` alone is truthy for
+        # that record and a bare latest["pair_type"] crashed with KeyError.
+        # Must check the key itself exists, not just that some log line for
+        # this slug does.
+        if latest and "pair_type" in latest:
             return {
                 "pair_type": latest["pair_type"],
                 "reasoning": latest.get("pair_type_reasoning", ""),

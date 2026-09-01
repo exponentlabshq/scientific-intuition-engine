@@ -2,20 +2,20 @@
   "mode_performance": [
     {
       "mode": "janusian",
-      "n": 214,
+      "n": 216,
       "avg_points": 28.7,
       "no_signal_rate": 0.08
     },
     {
       "mode": "bisociation",
-      "n": 272,
-      "avg_points": 17.5,
+      "n": 274,
+      "avg_points": 17.3,
       "no_signal_rate": 0.25
     },
     {
       "mode": "homospatial",
-      "n": 244,
-      "avg_points": 10.2,
+      "n": 246,
+      "avg_points": 10.3,
       "no_signal_rate": 0.36
     },
     {
@@ -35,14 +35,14 @@
       },
       {
         "key": "narrative-shaped",
-        "n": 96,
-        "good": 71,
-        "rate_pct": 74.0
+        "n": 97,
+        "good": 72,
+        "rate_pct": 74.2
       },
       {
         "key": "mixed-uncertain",
-        "n": 210,
-        "good": 132,
+        "n": 213,
+        "good": 134,
         "rate_pct": 62.9
       }
     ],
@@ -55,9 +55,9 @@
       },
       {
         "key": "would_deprioritize",
-        "n": 297,
-        "good": 195,
-        "rate_pct": 65.7
+        "n": 301,
+        "good": 198,
+        "rate_pct": 65.8
       }
     ]
   }

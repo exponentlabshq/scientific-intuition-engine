@@ -1,0 +1,14 @@
+# Adversarial Refutation: Janusian — Political science — coalition government formation
+
+**Original**: `hypotheses/2026-09-01-janusian-political-science.md`
+**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost
+
+## Tally: 2 of 3 survive → **SURVIVES** (promoted out of NO_SIGNAL)
+
+- **Coherence — REFUTED.** The core claim rests on the term 'political stability and instability,' which is used to describe the outcomes of coalition governments. In political science, 'stability' typically refers to the ability of a government to maintain its authority and function effectively, while 'instability' often denotes conflict and dysfunction within that same government. These terms do not refer to the same formal object; rather, they denote different states of governance that can coexist in a coalition context. Therefore, the claim does equivocate on these terms, as it treats them as compatible outcomes without clearly delineating their distinct meanings in the context of coalition governance. Thus, the claim does not survive this lens.
+- **Testability — SURVIVES.** The core claim presents a falsifiable prediction that can be operationalized through specific observations of coalition governments. It specifies that both effective governance and significant intra-coalition conflicts should be observed simultaneously, which provides a clear metric for testing the hypothesis. The claim is not vague, as it directly relates to observable phenomena in political science, particularly in the context of coalition dynamics. Therefore, the claim survives this lens.
+- **Triviality — SURVIVES.** The core claim states that coalition governments can create both political stability and instability simultaneously, which is a specific assertion about the dynamics of coalition governance. When stripped of domain-specific vocabulary, the claim reduces to a statement about complex systems exhibiting dual characteristics of stability and instability. The phrase being tested for genericness is: "Both coalition governments create political stability and foster instability simultaneously for the same political context; the theory must contain both." This statement does not describe a common feature of most complex systems, as it specifies a unique interaction between stability and instability that is not universally applicable. Therefore, the claim does not reduce to something trivially true of almost any two complex systems.
+
+## What survived, and why this matters
+
+2 of 3 independent lenses could not kill this claim. Per the promotion rule (2-of-3 survival), this hypothesis moves out of NO_SIGNAL — real signal the claim isn't vacuous, not proof it's correct. Still worth Phase 3 outreach consideration if a real researcher in the adjacent field can be identified.

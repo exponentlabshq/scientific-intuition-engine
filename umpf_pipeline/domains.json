@@ -876,6 +876,14 @@
     [
       "Epidemiology — disease outbreak spread",
       "Creative Brainstorming Facilitation"
+    ],
+    [
+      "Behavioral psychology — habit formation loops",
+      "Creative Musical Motif Deviation"
+    ],
+    [
+      "Control theory — Kalman filtering",
+      "Genomics — GWAS and polygenic risk"
     ]
   ],
   "already_janused": [
@@ -1086,7 +1094,9 @@
     "Military strategy — asymmetric guerrilla tactics",
     "Banking — fractional reserve credit multiplier",
     "Veterinary medicine — zoonotic disease transmission",
-    "Dance — choreographic phrase repetition"
+    "Dance — choreographic phrase repetition",
+    "Ethics — trolley-problem moral reasoning",
+    "Political science — coalition government formation"
   ],
   "already_homospatial": [
     [
@@ -2060,6 +2070,14 @@
     [
       "Anthropology — gift economies and reciprocity",
       "Cognitive AI Attention"
+    ],
+    [
+      "Urban planning — zoning and land use",
+      "Physical Mechanical Vibration"
+    ],
+    [
+      "Cognitive psychology — working memory and chunking",
+      "Finance (Human & Social Systems) — Atomic: Transaction succeeds/fails, Account lookup missing, Multiple positions; Domain: Portfolio evolves, Market context, Audit logging; Control: External trades & APIs, Streaming market data, Atomic account updates; Orchestration: Regulatory coordination, Simulation vs live trading"
     ]
   ],
   "domain_pool": [
