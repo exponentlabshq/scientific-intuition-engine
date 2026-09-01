@@ -41,6 +41,8 @@ from datetime import datetime, timezone
 from dotenv import load_dotenv
 from openai import OpenAI
 
+import token_tracker
+
 PIPELINE_DIR = os.path.dirname(os.path.abspath(__file__))
 HYPOTHESES_DIR = os.path.join(PIPELINE_DIR, "hypotheses")
 LEDGER_PATH = os.path.join(PIPELINE_DIR, "verification-log.jsonl")
@@ -101,7 +103,7 @@ SYSTEM_PROMPT = (
 )
 
 
-def check_one(domains, core_claim):
+def check_one(domains, core_claim, slug=None):
     text = f"Domain(s): {', '.join(domains)}\n\nThe specific claim being checked:\n{core_claim}"
     resp = client.responses.create(
         model=MODEL,
@@ -111,6 +113,7 @@ def check_one(domains, core_claim):
         max_output_tokens=1600,
         text={"format": {"type": "json_schema", "name": "active_research_check", "schema": ACTIVE_RESEARCH_SCHEMA, "strict": True}},
     )
+    token_tracker.log_usage("active_research_check", MODEL, resp.usage, hypothesis_slug=slug)
     return json.loads(resp.output_text), resp.usage
 
 
@@ -173,7 +176,7 @@ def main():
         claim = extract_core_claim(e.get("mode", "bisociation"), filetext)
         print(f"[{i}/{len(args.slugs)}] {slug} ...", flush=True)
         try:
-            result, usage = check_one(e.get("domains", []), claim)
+            result, usage = check_one(e.get("domains", []), claim, slug=slug)
             n_matches = len(result.get("matches", []))
             print(f"  {result['verdict']} ({n_matches} match(es), {usage.total_tokens} tokens)", flush=True)
             for m in result.get("matches", []):
