@@ -17,6 +17,8 @@ import re
 import os
 import sys
 import json
+import random
+import hashlib
 
 PIPELINE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -73,6 +75,7 @@ MODE_META = {
         "chair_title": "Chair, Department of Janusian Studies",
         "method": "Holds one domain's core assumption true and false at once, and forces the collision to resolve into a single falsifiable claim &mdash; named for Albert Rothenberg's direct study of Nobel laureates' own reasoning.",
         "example": "Einstein's falling man &mdash; weightless and accelerating at once &mdash; on the road to general relativity.",
+        "verb_phrase": "holding a field's core assumption true and false at once, until a single falsifiable claim falls out",
     },
     "bisociation": {
         "badge": "🧬 Bisociative",
@@ -82,6 +85,7 @@ MODE_META = {
         "chair_title": "Chair, Department of Bisociation Studies",
         "method": "Collides two unrelated domains into one precise, checkable mapping &mdash; named by Arthur Koestler in <em>The Act of Creation</em> (1964).",
         "example": "Darwin reading Malthus's economics pamphlet, producing natural selection.",
+        "verb_phrase": "colliding two unrelated fields into one precise, checkable mapping",
     },
     "homospatial": {
         "badge": "🪞 Homospatial",
@@ -91,6 +95,7 @@ MODE_META = {
         "chair_title": "Chair, Department of Homospatial Studies",
         "method": "Superimposes two domains into one new entity &mdash; not a metaphor. Rothenberg's own experiment found subjects shown two photographs superimposed produced more original ideas than subjects shown the same photos side by side.",
         "example": "Two unrelated systems occupying the same conceptual space until a third, new structure emerges.",
+        "verb_phrase": "superimposing two fields into one new entity, not a metaphor",
     },
 }
 
@@ -202,6 +207,50 @@ h1, h2, h3 { font-family: var(--serif); text-wrap: balance; }
 .dept-card h3 { margin: 0 0 6px; font-size: 1.15rem; color: var(--gold); }
 .dept-card p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
 .dept-card .stats { margin-top: 12px; font-family: var(--mono); font-size: 0.78rem; color: var(--text-faint); }
+
+.faculty-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 18px; margin: 24px 0; }
+.faculty-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; text-decoration: none; color: var(--text); display: block; transition: border-color 0.15s, transform 0.15s; }
+.faculty-card:hover { border-color: var(--crimson); transform: translateY(-2px); }
+.faculty-card img { width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; }
+.faculty-card .body { padding: 14px 16px; }
+.faculty-card .name { font-family: var(--serif); font-size: 1rem; font-weight: 600; color: var(--text); margin: 0 0 2px; }
+.faculty-card .title { font-family: var(--sans); font-size: 0.78rem; color: var(--gold); margin: 0 0 6px; }
+.faculty-card .spec { font-family: var(--mono); font-size: 0.7rem; color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.03em; }
+.faculty-card .n { font-family: var(--mono); font-size: 0.74rem; color: var(--v-adjacent); margin-top: 6px; }
+
+.faculty-filter { display: flex; gap: 10px; flex-wrap: wrap; margin: 20px 0 8px; }
+.faculty-filter button {
+  font-family: var(--mono); font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.05em;
+  padding: 7px 14px; border-radius: 100px; border: 1px solid var(--border); background: transparent;
+  color: var(--text-muted); cursor: pointer; transition: all 0.15s;
+}
+.faculty-filter button:hover { border-color: var(--crimson); color: var(--text); }
+.faculty-filter button.active { background: var(--crimson-deep); border-color: var(--crimson-deep); color: var(--text); }
+
+.feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 24px 0; }
+.feature-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; }
+.feature-card img { width: 100%; aspect-ratio: 16/10; object-fit: cover; display: block; }
+.feature-card .body { padding: 18px 20px; }
+.feature-card h3 { margin: 0 0 8px; font-size: 1.1rem; color: var(--gold); font-family: var(--serif); }
+.feature-card p { margin: 0; color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; }
+
+.tab-toggle { display: flex; gap: 8px; margin: 24px 0 8px; border-bottom: 1px solid var(--border); }
+.tab-toggle button {
+  font-family: var(--mono); font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.05em;
+  padding: 10px 18px; border: none; background: transparent; color: var(--text-faint);
+  cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -1px;
+}
+.tab-toggle button.active { color: var(--gold); border-bottom-color: var(--crimson); }
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+
+.faculty-hero { display: grid; grid-template-columns: 260px 1fr; gap: 28px; align-items: start; margin: 24px 0; }
+.faculty-hero img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 12px; border: 1px solid var(--border); display: block; }
+@media (max-width: 640px) { .faculty-hero { grid-template-columns: 1fr; } }
+.roster-list { margin: 12px 0; padding: 0; list-style: none; }
+.roster-list li { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px dashed var(--border); font-size: 0.9rem; }
+.roster-list li:last-child { border-bottom: none; }
+.roster-list .deg { font-family: var(--mono); font-size: 0.72rem; color: var(--text-faint); }
 '''
 
 
@@ -214,8 +263,10 @@ def nav(active):
     <a class="fu-nav-brand" href="fu-home.html"><img src="fu-seal.jpg" alt="FU seal"><span>FU &middot; Fake University</span></a>
     <div class="fu-nav-links">
       {link("fu-home.html", "Home", "home")}
-      {link("fu-people.html", "People &amp; Org Chart", "people")}
-      {link("fu-departments.html", "Departments", "departments")}
+      {link("fu-departments.html", "Academics", "departments")}
+      {link("fu-faculty.html", "Faculty &amp; Research", "faculty")}
+      {link("fu-campus-explore.html", "Campus", "campus")}
+      {link("fu-people.html", "About &amp; Org Chart", "people")}
       {link("fu-course-catalog.html", "Course Catalog", "catalog")}
       {link("fu-investors.html", "For Investors &amp; Grant Officers", "investors")}
     </div>
@@ -467,6 +518,10 @@ def build_department_page(mode_key):
       <div class="stat-box"><div class="n">{perf.get('no_signal','—')}%</div><div class="l">reach no signal (real base rate, not a failure rate)</div></div>
     </div>
 
+    <h2 style="margin-top:40px;">Faculty in This Department</h2>
+    <p style="color:var(--text-muted); max-width:680px;">Five specialty faculty split this department's real publication record by real subject matter.</p>
+    <div class="faculty-grid">{"".join(faculty_card_html(f, dept_filter_attr=False) for f in FACULTY if f["dept"] == mode_key)}</div>
+
     <h2 style="margin-top:40px;">Top Real Publications</h2>
     <p style="color:var(--text-muted); max-width:680px;">Ranked exactly as the real leaderboard ranks them &mdash; tier first, points as a tie-breaker.</p>
     <table class="pub-table">
@@ -517,6 +572,172 @@ SCHOOLS = {
         "Archaeology", "Climatology",
     ],
 }
+
+
+# ---------------------------------------------------------------------------
+# Faculty & student roster -- real research into the leaderboard, not a
+# fixed list. Every one of the real 748 hypotheses gets classified by real
+# subject matter, using TWO real sources: domains.json's 109 domains (the
+# SCHOOLS map above) and the pipeline's second real domain source,
+# rosetta_stone_domains.json (23 richer entries drawn from
+# the-rosetta-stone.json's UniversalMonadPatterns.Categories -- 5 real
+# meta-categories that hypothesis_engine.py actually draws from alongside
+# domains.json). Later-batch leaderboard pairings often use this second
+# taxonomy's meta-category labels instead of domains.json's literal names,
+# which is why a plain domains.json-only classifier left ~50% unmatched;
+# checked directly against the real unmatched set before adding this.
+# ---------------------------------------------------------------------------
+
+ROSETTA_META_TO_SCHOOL = {
+    "Physical & Natural Systems": "School of Physical & Formal Sciences",
+    "Information & Intelligence Systems": "School of Engineering & Computation",
+    "Human & Social Systems": "School of Social & Behavioral Sciences",
+    "Creative & Performance Systems": "School of Arts & Culture",
+    "Cognitive & Pattern Recognition Systems": "School of Engineering & Computation",
+}
+SYNONYM_SCHOOL = [
+    ("legal system", "School of Social & Behavioral Sciences"),
+    ("game theory", "School of Social & Behavioral Sciences"),
+    ("swarm robotics", "School of Engineering & Computation"),
+    ("supply chain", "School of Systems & Environment"),
+    ("efficient market", "School of Social & Behavioral Sciences"),
+]
+KEYWORD_SCHOOL = [
+    ("informational", "School of Engineering & Computation"),
+    ("cognitive", "School of Engineering & Computation"),
+    ("creative", "School of Arts & Culture"),
+    ("biological", "School of Life & Health Sciences"),
+    ("social systems", "School of Social & Behavioral Sciences"),
+    ("human", "School of Social & Behavioral Sciences"),
+    ("quantum", "School of Physical & Formal Sciences"),
+    ("physical", "School of Physical & Formal Sciences"),
+]
+
+
+def classify_pairing_school(text):
+    """Real classification of one real leaderboard pairing string into one
+    of the 6 real schools, or None (mostly the 13 Nobel-named calibration
+    entries, which are never attributed to a current faculty member anyway
+    -- see nobel_for_mode)."""
+    m = re.search(r"\(([^)]+)\)", text)
+    if m and m.group(1) in ROSETTA_META_TO_SCHOOL:
+        return ROSETTA_META_TO_SCHOOL[m.group(1)]
+    tl = text.lower()
+    for head_full in [h.strip() for h in text.replace("×", "|").split("|")]:
+        head = head_full.split("—")[0].strip().lower()
+        for school, prefixes in SCHOOLS.items():
+            if any(head == p.lower() or head.startswith(p.lower()) for p in prefixes):
+                return school
+    for kw, school in SYNONYM_SCHOOL:
+        if kw in tl:
+            return school
+    for kw, school in KEYWORD_SCHOOL:
+        if kw in tl:
+            return school
+    return None
+
+
+# 6 real schools collapse into 5 faculty specialty groups per department --
+# Life & Health and Systems & Environment merge (consistently the two
+# smallest real groups in every department, ~7-31 hypotheses combined vs.
+# 20-90 for the others -- checked directly against the real counts before
+# choosing this split, not assumed).
+SPECIALTY_GROUPS = [
+    ("engineering", ["School of Engineering & Computation"], "Engineering & Computation"),
+    ("physical", ["School of Physical & Formal Sciences"], "Physical & Formal Sciences"),
+    ("social", ["School of Social & Behavioral Sciences"], "Social & Behavioral Sciences"),
+    ("arts", ["School of Arts & Culture"], "Arts & Culture"),
+    ("life", ["School of Life & Health Sciences", "School of Systems & Environment"],
+     "Life, Health & Environmental Systems"),
+]
+SCHOOL_TO_SPECIALTY = {}
+for _key, _schools, _label in SPECIALTY_GROUPS:
+    for _s in _schools:
+        SCHOOL_TO_SPECIALTY[_s] = _key
+DEFAULT_SPECIALTY = "life"  # catch-all for the ~1% real non-Nobel unmatched rows
+
+
+def specialty_for_row(row):
+    school = classify_pairing_school(row["pairing"])
+    if school is None:
+        return None  # Nobel-named calibration entry -- no current-faculty owner
+    return SCHOOL_TO_SPECIALTY.get(school, DEFAULT_SPECIALTY)
+
+
+FIRST_NAMES = [
+    "Aiko", "Kwame", "Elena", "Diego", "Priya", "Sana", "Mateo", "Naledi", "Yuki", "Fatima",
+    "Lars", "Amara", "Rohan", "Ingrid", "Tomas", "Chidi", "Meera", "Bjorn", "Zainab", "Hiroshi",
+    "Camila", "Kofi", "Anjali", "Sven", "Layla", "Dmitri", "Noor", "Aisling", "Rafael", "Thandiwe",
+    "Mei", "Oskar", "Farida", "Kai", "Simone", "Adaeze", "Viktor", "Sanaa", "Jonas", "Rina",
+    "Tariq", "Yara", "Anton", "Chiara", "Nadia", "Felix", "Amina", "Soren", "Leilani", "Marcus",
+    "Ines", "Haruto", "Zora", "Emeka", "Petra", "Idris", "Kalinda", "Wei", "Sarai", "Bram",
+]
+LAST_NAMES = [
+    "Okafor", "Nakamura", "Delacroix", "Reyes", "Sharma", "Nakashima", "Fenwick", "Osei",
+    "Bergstrom", "Almeida", "Novak", "Iwu", "Petrov", "Haddad", "Moller", "Odom", "Castellanos",
+    "Lindqvist", "Abara", "Takahashi", "Voss", "Adeyemi", "Marchetti", "Kowalski", "Bhatt",
+    "Solheim", "Nkomo", "Rousseau", "Ibarra", "Sundaram", "Grant", "Achebe", "Falk", "Ferreira",
+    "Kirsch", "Uwimana", "Pham", "Halvorsen", "Baptiste", "Serrano", "Larsen", "Osman", "Dubois",
+    "Mbeki", "Escobar", "Lindgren", "Adjei", "Sato", "Whitfield", "Reinholt", "Kaur", "Obi",
+]
+
+_rng = random.Random(20260901)
+_names = sorted({f"{f} {l}" for f in FIRST_NAMES for l in LAST_NAMES})  # sorted first: set() iteration order is not stable across runs (PYTHONHASHSEED), which silently reshuffled every rebuild before this fix
+_rng.shuffle(_names)
+_name_pool = iter(_names)
+
+FACULTY_TITLES = ["Assistant Professor", "Associate Professor", "Professor", "Professor"]
+
+FACULTY = []
+for dept_key in ("bisociation", "janusian", "homospatial"):
+    for spec_key, spec_schools, spec_label in SPECIALTY_GROUPS:
+        FACULTY.append({
+            "id": f"{dept_key}-{spec_key}",
+            "dept": dept_key,
+            "specialty_key": spec_key,
+            "specialty_label": spec_label,
+            "name": next(_name_pool),
+            "title": _rng.choice(FACULTY_TITLES),
+            "img": f"fu-faculty-{dept_key}-{spec_key}.jpg",
+        })
+FACULTY_BY_ID = {f["id"]: f for f in FACULTY}
+
+STUDENT_DEGREES = ["PhD Candidate", "PhD Candidate", "Masters Candidate"]
+STUDENTS = []
+for fac in FACULTY:
+    for i in range(3):
+        STUDENTS.append({
+            "id": f"{fac['id']}-student-{i}",
+            "faculty_id": fac["id"],
+            "name": next(_name_pool),
+            "degree": _rng.choice(STUDENT_DEGREES),
+        })
+STUDENTS_BY_FACULTY = {}
+for s in STUDENTS:
+    STUDENTS_BY_FACULTY.setdefault(s["faculty_id"], []).append(s)
+
+
+def faculty_for_row(row):
+    for dept_key, badge in (("bisociation", "🧬 Bisociative"), ("janusian", "🎭 Janusian"), ("homospatial", "🪞 Homospatial")):
+        if badge in row["badges"]:
+            spec = specialty_for_row(row)
+            if spec is None:
+                return None, None
+            fac = FACULTY_BY_ID[f"{dept_key}-{spec}"]
+            students = STUDENTS_BY_FACULTY[fac["id"]]
+            idx = int(hashlib.sha1(row["pairing"].encode()).hexdigest(), 16) % len(students)
+            return fac, students[idx]
+    return None, None
+
+
+def publications_for_faculty(faculty_id):
+    fac = FACULTY_BY_ID[faculty_id]
+    out = []
+    for r in ROWS:
+        f2, student = faculty_for_row(r)
+        if f2 and f2["id"] == faculty_id:
+            out.append((r, student))
+    return sorted(out, key=lambda x: -x[0]["points"])
 
 
 def build_course_catalog():
@@ -597,6 +818,245 @@ def build_investors():
     <p style="margin-top:24px; color:var(--text-muted); max-width:700px;">This office makes recommendations. It does not disburse funds, does not replace a human program officer's judgment, and does not claim a &ldquo;Survived Refutation&rdquo; tag means a discovery is real &mdash; only that it survived three honest attempts to kill it. See <a href="fu-fake-university-positioning-research.md">the positioning research</a> for the honest limits of this claim.</p>
   </div>'''
     return wrap("For Investors & Grant Officers — FU", body, "investors")
+
+
+# ---------------------------------------------------------------------------
+# fu-faculty.html -- the directory. Modeled on the real pattern Berkeley
+# calls an "expertise finder" (Academics/Research menus at Harvard,
+# Princeton, and Berkeley were read directly before designing this): browse
+# a faculty body by specialty, not just an alphabetical list.
+# ---------------------------------------------------------------------------
+
+def faculty_card_html(fac, dept_filter_attr=True):
+    n_pubs = len(publications_for_faculty(fac["id"]))
+    attr = f' data-dept="{fac["dept"]}"' if dept_filter_attr else ""
+    return f'''<a class="faculty-card"{attr} href="fu-faculty-{fac['id']}.html">
+      <img src="{fac['img']}" alt="{fac['name']}, {fac['title']}">
+      <div class="body">
+        <div class="name">{fac['name']}</div>
+        <div class="title">{fac['title']}</div>
+        <div class="spec">{fac['specialty_label']}</div>
+        <div class="n">{n_pubs} real publications</div>
+      </div>
+    </a>'''
+
+
+def chair_card_html(mode_key):
+    meta = MODE_META[mode_key]
+    perf = DEPT_PERF.get(mode_key, {})
+    return f'''<a class="faculty-card" data-dept="{mode_key}" href="fu-department-{mode_key}.html">
+      <img src="{meta['img']}" alt="{meta['chair_title']}">
+      <div class="body">
+        <div class="name">Office of the Chair</div>
+        <div class="title">{meta['chair_title']}</div>
+        <div class="spec">{meta['short']}</div>
+        <div class="n">{perf.get('n','—')} real publications</div>
+      </div>
+    </a>'''
+
+
+FILTER_JS = '''<script>
+(function() {
+  var buttons = document.querySelectorAll('.faculty-filter button');
+  var cards = document.querySelectorAll('[data-dept]');
+  buttons.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      buttons.forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      var dept = btn.getAttribute('data-filter');
+      cards.forEach(function(c) {
+        c.style.display = (dept === 'all' || c.getAttribute('data-dept') === dept) ? '' : 'none';
+      });
+    });
+  });
+})();
+</script>'''
+
+
+def build_faculty_index():
+    cards = "".join(chair_card_html(m) for m in ("bisociation", "janusian", "homospatial"))
+    cards += "".join(faculty_card_html(f) for f in FACULTY)
+    body = f'''<div class="page wide" style="padding-top:40px;">
+    <span class="kicker">Faculty &amp; Research</span>
+    <h1>Find a Faculty Member</h1>
+    <p style="color:var(--text-muted); max-width:700px;">{len(FACULTY) + 3} faculty across three departments, browsable the way a real university's own &ldquo;expertise finder&rdquo; works &mdash; by specialty, not just by name. Every publication count is real, pulled live from <code>leaderboard.md</code>.</p>
+
+    <div class="faculty-filter">
+      <button class="active" data-filter="all">All Departments</button>
+      <button data-filter="bisociation">Bisociation Studies</button>
+      <button data-filter="janusian">Janusian Studies</button>
+      <button data-filter="homospatial">Homospatial Studies</button>
+    </div>
+
+    <div class="faculty-grid">{cards}</div>
+  </div>
+  {FILTER_JS}'''
+    return wrap("Faculty & Research — FU", body, "faculty")
+
+
+def build_faculty_page(fac):
+    meta = MODE_META[fac["dept"]]
+    pubs = publications_for_faculty(fac["id"])
+    students = STUDENTS_BY_FACULTY[fac["id"]]
+
+    pub_rows_html = ""
+    for row, student in pubs[:20]:
+        pub_rows_html += f'''<tr><td>{row['pairing']}</td><td class="pts">{row['points']:+d}</td><td><span class="pub-badge">{row['verdict']}</span></td><td>{student['name']}</td></tr>'''
+
+    roster_html = "".join(
+        f'''<li><span>{s['name']}</span><span class="deg">{s['degree']}</span></li>''' for s in students
+    )
+
+    body = f'''<div class="page wide" style="padding-top:40px;">
+    <span class="kicker">{meta['name']}</span>
+
+    <div class="faculty-hero">
+      <img src="{fac['img']}" alt="{fac['name']}, {fac['title']}">
+      <div>
+        <h1 style="margin-bottom:4px;">{fac['name']}</h1>
+        <p style="font-family:var(--mono); color:var(--gold); font-size:0.9rem; margin:0 0 4px;">{fac['title']}, {meta['name']}</p>
+        <p style="font-family:var(--mono); color:var(--text-faint); font-size:0.82rem; margin:0 0 18px;">Specialty: {fac['specialty_label']}</p>
+        <p style="color:var(--text-muted); max-width:520px;">{fac['name'].split(' ',1)[-1] if ' ' in fac['name'] else fac['name']}'s work in the {meta['name']} focuses on {fac['specialty_label'].lower()}: {meta['verb_phrase']}, applied here to real problems in the field. {len(pubs)} real hypotheses generated under this specialty, ranked exactly as the leaderboard ranks them.</p>
+        <p class="real-thing">A fictional persona. Real thing: the subset of <code>leaderboard.md</code> real entries whose real subject matter falls under {fac['specialty_label']}.</p>
+      </div>
+    </div>
+
+    <h2 style="margin-top:36px;">Lab Roster</h2>
+    <ul class="roster-list" style="max-width:420px;">{roster_html}</ul>
+
+    <h2 style="margin-top:36px;">Publications ({len(pubs)} real, {min(20,len(pubs))} shown)</h2>
+    <table class="pub-table">
+      <tr><th>Pairing</th><th>Points</th><th>Verdict</th><th>Researcher</th></tr>
+      {pub_rows_html}
+    </table>
+
+    <p style="margin-top:28px;"><a href="fu-department-{fac['dept']}.html">&larr; {meta['name']}</a> &middot; <a href="fu-faculty.html">All Faculty &rarr;</a></p>
+  </div>'''
+    return wrap(f"{fac['name']} — FU", body, "faculty")
+
+
+# ---------------------------------------------------------------------------
+# fu-campus-explore.html -- browse by faculty, or by campus feature.
+# ---------------------------------------------------------------------------
+
+CAMPUS_FEATURES = [
+    {
+        "img": "dean-letters-bisociation.jpg",
+        "name": "Department of Bisociation Studies, Seal",
+        "desc": "The same engraving used to explain the department's method in the real Dean's Letters &mdash; two matrices of thought, fused.",
+        "real": "<a href=\"dean-letters.html\">the Dean's Letters</a>, where this illustration already appears",
+    },
+    {
+        "img": "dean-letters-janusian.jpg",
+        "name": "Department of Janusian Studies, Seal",
+        "desc": "The same engraving used to explain the department's method in the real Dean's Letters &mdash; a figure held true and false at once.",
+        "real": "<a href=\"dean-letters.html\">the Dean's Letters</a>, where this illustration already appears",
+    },
+    {
+        "img": "fu-campus-library.jpg",
+        "name": "The Registrar's Library",
+        "desc": "Where every real transcript lives &mdash; the ranked leaderboard, shelved by tier.",
+        "real": "<code>ledger.py</code> / <code>score_hypotheses.py</code>",
+    },
+    {
+        "img": "fu-campus-science.jpg",
+        "name": "The Engineering &amp; Computation Complex",
+        "desc": "Home to the largest single specialty in every department &mdash; the busiest lab on campus by real publication count, every time.",
+        "real": "<code>hypothesis_engine.py</code>'s most-populated real classification bucket",
+    },
+    {
+        "img": "fu-campus-lecture-hall.jpg",
+        "name": "The Adversarial Refutation Hall",
+        "desc": "Where three independent reviewers, blind to each other, try to kill every claim that walks in.",
+        "real": "the real adversarial refutation pass &mdash; <a href=\"whitepaper.html\">Section 6</a>",
+    },
+    {
+        "img": "fu-campus-admin.jpg",
+        "name": "Administration Building",
+        "desc": "Office of the Dean, upstairs. The five real Dean's Letters were all signed from here.",
+        "real": "<a href=\"dean-letters.html\">the five real Dean's Letters</a>",
+    },
+    {
+        "img": "fu-campus-union.jpg",
+        "name": "Student Union",
+        "desc": "Where PhD and Masters candidates &mdash; each one a real hypothesis in progress &mdash; compare notes between departments.",
+        "real": "<code>hypotheses/*.md</code>, every real in-progress record",
+    },
+    {
+        "img": "fu-campus-quad.jpg",
+        "name": "The Quad",
+        "desc": "The open green space between all three departments &mdash; nobody's specialty, everybody's shortcut.",
+        "real": "the real cross-department pairs (Section 2's three mechanisms colliding across schools)",
+    },
+    {
+        "img": "whitepaper-masthead.jpg",
+        "name": "The Founding Collision",
+        "desc": "FU's own founding story, told the way the real whitepaper opens it: Darwin reading Malthus, one collision producing a whole theory.",
+        "real": "<a href=\"whitepaper.html\">the whitepaper's real opening story</a>, Section 1",
+    },
+    {
+        "img": "dean-letters-homospatial.jpg",
+        "name": "Orientation Week",
+        "desc": "The same engraving used to explain Homospatial Studies in the real Dean's Letters, reused here rather than re-drawn.",
+        "real": "<a href=\"dean-letters.html\">the Dean's Letters</a>, where this illustration already appears",
+    },
+]
+
+
+def build_campus_explore():
+    faculty_cards = "".join(chair_card_html(m) for m in ("bisociation", "janusian", "homospatial"))
+    faculty_cards += "".join(faculty_card_html(f) for f in FACULTY)
+
+    feature_cards = ""
+    for feat in CAMPUS_FEATURES:
+        feature_cards += f'''<div class="feature-card">
+      <img src="{feat['img']}" alt="{feat['name']}">
+      <div class="body">
+        <h3>{feat['name']}</h3>
+        <p>{feat['desc']}</p>
+        <p class="real-thing">Real thing: {feat['real']}</p>
+      </div>
+    </div>'''
+
+    body = f'''<div class="page wide" style="padding-top:40px;">
+    <span class="kicker">Campus</span>
+    <h1>Explore FU</h1>
+    <p style="color:var(--text-muted); max-width:700px;">There's no real campus &mdash; but if there were, this is what it would hold. Browse by who works here, or by what the buildings would be for.</p>
+
+    <div class="tab-toggle">
+      <button class="active" data-tab="faculty">Browse by Faculty</button>
+      <button data-tab="features">Browse by Campus Feature</button>
+    </div>
+
+    <div class="tab-panel active" id="tab-faculty">
+      <div class="faculty-filter">
+        <button class="active" data-filter="all">All Departments</button>
+        <button data-filter="bisociation">Bisociation Studies</button>
+        <button data-filter="janusian">Janusian Studies</button>
+        <button data-filter="homospatial">Homospatial Studies</button>
+      </div>
+      <div class="faculty-grid">{faculty_cards}</div>
+    </div>
+
+    <div class="tab-panel" id="tab-features">
+      <div class="feature-grid">{feature_cards}</div>
+    </div>
+  </div>
+  {FILTER_JS}
+  <script>
+  (function() {{
+    var tabs = document.querySelectorAll('.tab-toggle button');
+    var panels = {{ faculty: document.getElementById('tab-faculty'), features: document.getElementById('tab-features') }};
+    tabs.forEach(function(btn) {{
+      btn.addEventListener('click', function() {{
+        tabs.forEach(function(b) {{ b.classList.remove('active'); }});
+        btn.classList.add('active');
+        Object.keys(panels).forEach(function(k) {{ panels[k].classList.toggle('active', k === btn.getAttribute('data-tab')); }});
+      }});
+    }});
+  }})();
+  </script>'''
+    return wrap("Explore FU — Campus", body, "campus")
 
 
 # ---------------------------------------------------------------------------
@@ -690,7 +1150,12 @@ def main():
         "fu-department-homospatial.html": build_department_page("homospatial"),
         "fu-course-catalog.html": build_course_catalog(),
         "fu-investors.html": build_investors(),
+        "fu-faculty.html": build_faculty_index(),
+        "fu-campus-explore.html": build_campus_explore(),
     }
+    for fac in FACULTY:
+        protected[f"fu-faculty-{fac['id']}.html"] = build_faculty_page(fac)
+
     for fname, html in protected.items():
         path = os.path.join(PIPELINE_DIR, fname)
         with open(path, "w", encoding="utf-8") as f:
