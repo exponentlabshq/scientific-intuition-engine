@@ -165,30 +165,37 @@ a { color: var(--crimson); }
 .page { max-width: 1040px; margin: 0 auto; padding: 0 24px 100px; }
 .wide { max-width: 1240px; }
 
-/* -- FU-specific nav, deliberately distinct from the main site's gold nav -- */
+/* -- FU-specific nav: unobtrusive by default, every title still a real
+   link. Low-contrast translucent bar over the page rather than a solid
+   toolbar; gains a touch of solidity on hover/focus so a reader can
+   still tell it's there without it competing with hero imagery. -- */
 .fu-nav {
   position: sticky; top: 0; z-index: 200;
-  background: rgba(21,14,15,0.95); backdrop-filter: blur(8px);
-  border-bottom: 1px solid var(--border);
+  background: rgba(21,14,15,0.35); backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(58,30,34,0.4);
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+.fu-nav:hover, .fu-nav:focus-within {
+  background: rgba(21,14,15,0.85); border-bottom-color: var(--border);
 }
 .fu-nav-inner {
-  max-width: 1240px; margin: 0 auto; padding: 14px 24px;
+  max-width: 1240px; margin: 0 auto; padding: 9px 24px;
   display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap;
 }
-.fu-nav-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-.fu-nav-brand img { width: 30px; height: 30px; border-radius: 50%; display: block; }
-.fu-nav-brand span { font-family: var(--serif); font-size: 1.05rem; color: var(--gold); font-weight: 600; letter-spacing: 0.01em; }
-.fu-nav-links { display: flex; gap: 20px; flex-wrap: wrap; }
-.fu-nav-links a { font-family: var(--mono); font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); text-decoration: none; }
-.fu-nav-links a:hover, .fu-nav-links a.is-active { color: var(--crimson); }
-.fu-nav-links a.is-active { border-bottom: 1px solid var(--crimson); padding-bottom: 2px; }
-.fu-nav-outbound { font-family: var(--mono); font-size: 0.72rem; color: var(--text-faint); text-decoration: none; border: 1px solid var(--border); padding: 5px 10px; border-radius: 100px; white-space: nowrap; }
-.fu-nav-outbound:hover { color: var(--gold); border-color: var(--gold); }
+.fu-nav-brand { display: flex; align-items: center; gap: 8px; text-decoration: none; opacity: 0.92; }
+.fu-nav-brand img { width: 22px; height: 22px; border-radius: 50%; display: block; }
+.fu-nav-brand span { font-family: var(--serif); font-size: 0.92rem; color: var(--gold); font-weight: 600; letter-spacing: 0.01em; }
+.fu-nav-links { display: flex; gap: 18px; flex-wrap: wrap; }
+.fu-nav-links a { font-family: var(--sans); font-size: 0.8rem; color: var(--text-faint); text-decoration: none; transition: color 0.15s; }
+.fu-nav-links a:hover, .fu-nav-links a.is-active { color: var(--gold); }
+.fu-nav-links a.is-active { border-bottom: 1px solid var(--gold); padding-bottom: 2px; }
+.fu-nav-outbound { font-family: var(--sans); font-size: 0.78rem; color: var(--text-faint); text-decoration: none; white-space: nowrap; opacity: 0.8; }
+.fu-nav-outbound:hover { color: var(--gold); opacity: 1; }
 
 .fu-disclosure {
-  background: var(--surface); border-bottom: 1px solid var(--border);
-  font-family: var(--mono); font-size: 0.76rem; color: var(--text-faint);
-  text-align: center; padding: 7px 16px;
+  background: transparent; border-bottom: 1px solid rgba(58,30,34,0.3);
+  font-family: var(--mono); font-size: 0.7rem; color: var(--text-faint);
+  text-align: center; padding: 5px 16px; opacity: 0.85;
 }
 .fu-disclosure strong { color: var(--text-muted); }
 
@@ -364,12 +371,24 @@ def build_home():
     </div>
   </header>
 
-  <figure style="margin: 32px 0 0;">
-    <img src="fu-campus.jpg" alt="FU's campus building, illustrative -- not a real place" style="width:100%; max-height:460px; object-fit:cover; display:block;">
+  <figure class="hero-video-wrap" style="margin: 32px 0 0; position:relative;">
+    <video id="hero-drone" src="fu-drone-campus.mp4" poster="fu-campus.jpg" autoplay muted loop playsinline style="width:100%; max-height:460px; object-fit:cover; display:block;"></video>
+    <button id="hero-unmute" style="position:absolute; bottom:16px; right:16px; background:rgba(21,14,15,0.7); border:1px solid var(--border); color:var(--text); font-family:var(--mono); font-size:0.76rem; padding:8px 14px; border-radius:100px; cursor:pointer;">&#128264; Sound on</button>
   </figure>
+  <script>
+  (function() {{
+    var v = document.getElementById('hero-drone');
+    var btn = document.getElementById('hero-unmute');
+    if (!v || !btn) return;
+    btn.addEventListener('click', function() {{
+      v.muted = !v.muted;
+      btn.innerHTML = v.muted ? '&#128264; Sound on' : '&#128266; Sound off';
+    }});
+  }})();
+  </script>
 
   <div class="page wide">
-    <p class="real-thing" style="text-align:center; margin: 14px 0 40px;">Real thing this photo is standing in for: <b>The Eureka Engine's real pipeline</b> &mdash; <code>run_cycle.py</code>, a script, not a building.</p>
+    <p class="real-thing" style="text-align:center; margin: 14px 0 40px;">Illustrative &mdash; real thing this stands in for: <b>The Eureka Engine's real pipeline</b> &mdash; <code>run_cycle.py</code>, a script, not a campus.</p>
 
     <div class="stat-row">
       <div class="stat-box"><div class="n">{TOTAL_ENTRIES}</div><div class="l">papers on record</div></div>
@@ -548,8 +567,8 @@ def build_department_page(mode_key):
     <h1>{meta['name']}</h1>
 
     <figure style="margin: 24px 0;">
-      <img src="{meta['img']}" alt="{meta['chair_title']} lecturing at a chalkboard" style="width:100%; max-height:420px; object-fit:cover; border-radius:12px; border:1px solid var(--border); display:block;">
-      <figcaption class="real-thing" style="text-align:center; margin-top:10px;">{meta['chair_title']} &mdash; a fictional persona. Real thing this stands in for: <b>{badge_key.split(' ',1)[1] if ' ' in badge_key else badge_key} generation mode</b> in <code>hypothesis_engine.py</code>.</figcaption>
+      <video src="fu-lecture-chair-{mode_key}.mp4" poster="{meta['img']}" controls preload="metadata" playsinline style="width:100%; max-height:420px; object-fit:cover; border-radius:12px; border:1px solid var(--border); display:block;"></video>
+      <figcaption class="real-thing" style="text-align:center; margin-top:10px;">{meta['chair_title']} &mdash; a fictional persona, delivering a real finding. Real thing this stands in for: <b>{badge_key.split(' ',1)[1] if ' ' in badge_key else badge_key} generation mode</b> in <code>hypothesis_engine.py</code>.</figcaption>
     </figure>
 
     <p style="font-size:1.05rem; color:var(--text-muted); max-width:680px;">{meta['method']}</p>
@@ -1221,13 +1240,13 @@ def build_faculty_page(fac):
     <span class="kicker">{meta['name']}</span>
 
     <div class="faculty-hero">
-      <img src="{fac['img']}" alt="{fac['name']}, {fac['title']}">
+      <video src="fu-lecture-{fac['id']}.mp4" poster="{fac['img']}" controls preload="metadata" playsinline style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:12px; border:1px solid var(--border); display:block;"></video>
       <div>
         <h1 style="margin-bottom:4px;">{fac['name']}</h1>
         <p style="font-family:var(--mono); color:var(--gold); font-size:0.9rem; margin:0 0 4px;">{fac['title']}, {meta['name']}</p>
         <p style="font-family:var(--mono); color:var(--text-faint); font-size:0.82rem; margin:0 0 18px;">Specialty: {fac['specialty_label']}</p>
         <p style="color:var(--text-muted); max-width:520px;">{fac['name'].split(' ',1)[-1] if ' ' in fac['name'] else fac['name']}'s work in the {meta['name']} focuses on {fac['specialty_label'].lower()}: {meta['verb_phrase']}, applied here to real problems in the field. {len(pubs)} real hypotheses generated under this specialty, ranked exactly as the leaderboard ranks them.</p>
-        <p class="real-thing">A fictional persona. Real thing: the subset of <code>leaderboard.md</code> real entries whose real subject matter falls under {fac['specialty_label']}.</p>
+        <p class="real-thing">A fictional persona, delivering a real finding: the video above cites {fac['name'].split(' ',1)[-1] if ' ' in fac['name'] else fac['name']}'s own real top-ranked publication, word for word. Real thing: the subset of <code>leaderboard.md</code> real entries whose real subject matter falls under {fac['specialty_label']}.</p>
       </div>
     </div>
 
