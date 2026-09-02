@@ -570,6 +570,26 @@ def pub_rows(entries):
     return rows
 
 
+def expandable_pub_rows(rows_list):
+    """Same real click-expandable row used on faculty pages and the course
+    catalog (full real hypothesis/verification/refutation content), applied
+    to a list of leaderboard.md row-dicts -- used wherever a page still had
+    the older plain <table> (department pages, investors)."""
+    out = ""
+    for i, row in enumerate(rows_list):
+        exp = EXP_BY_PAIRING.get(row["pairing"].strip().lower())
+        if exp:
+            out += exp_row_html(exp, rank=i + 1)
+        else:
+            pts_class = "pos" if row["points"] > 0 else ("neg" if row["points"] < 0 else "zero")
+            out += f'''<div class="row"><div class="row-head" style="cursor:default;">
+              <span class="rank">{i+1}</span><span class="pairing">{row['pairing']}</span>
+              <span class="row-badge" style="color:var(--gold);border-color:var(--gold);">{row['verdict']}</span>
+              <span class="r-points {pts_class}">{row['points']:+d}</span>
+            </div></div>'''
+    return out
+
+
 def build_department_page(mode_key):
     meta = MODE_META[mode_key]
     perf = DEPT_PERF.get(mode_key, {})
@@ -581,10 +601,7 @@ def build_department_page(mode_key):
     if nobel:
         nobel_section = f'''<h2 style="margin-top:40px;">Honorary Faculty &mdash; Ground-Truth Calibration</h2>
     <p style="color:var(--text-muted); max-width:680px;">These aren't FU's own work &mdash; they're 13 real, historically-confirmed Nobel-linked discoveries run through the exact same adversarial gauntlet, used to calibrate whether the checker can tell a real discovery from a hollow one. Never claimed as engine-generated.</p>
-    <table class="pub-table">
-      <tr><th>Pairing</th><th>Points</th><th>Verdict</th><th>Tier</th></tr>
-      {pub_rows(nobel)}
-    </table>'''
+    {expandable_pub_rows(nobel)}'''
 
     body = f'''<div class="page wide" style="padding-top:40px;">
     <span class="kicker">Department Page</span>
@@ -609,17 +626,15 @@ def build_department_page(mode_key):
     <div class="faculty-grid">{"".join(faculty_card_html(f, dept_filter_attr=False) for f in FACULTY if f["dept"] == mode_key)}</div>
 
     <h2 style="margin-top:40px;">Top Real Publications</h2>
-    <p style="color:var(--text-muted); max-width:680px;">Ranked exactly as the real leaderboard ranks them &mdash; tier first, points as a tie-breaker.</p>
-    <table class="pub-table">
-      <tr><th>Pairing</th><th>Points</th><th>Verdict</th><th>Tier</th></tr>
-      {pub_rows(top)}
-    </table>
+    <p style="color:var(--text-muted); max-width:680px;">Ranked exactly as the real leaderboard ranks them &mdash; tier first, points as a tie-breaker. Click any row for the full real record.</p>
+    {expandable_pub_rows(top)}
 
     {nobel_section}
 
     <p style="margin-top:32px;"><a href="fu-departments.html">&larr; All departments</a></p>
   </div>
-  {HOVER_VIDEO_JS}'''
+  {HOVER_VIDEO_JS}
+  {ROW_TOGGLE_JS}'''
     return wrap(f"{meta['name']} — FU", body, "departments")
 
 
@@ -1142,11 +1157,8 @@ def build_investors():
     <p class="real-thing">Real thing: <a href="whitepaper.html">the full technical report</a>, Sections 5&ndash;6 &amp; 10.</p>
 
     <h2 style="margin-top:40px;">The Current Shortlist</h2>
-    <p style="color:var(--text-muted); max-width:700px;">The top 8 real, currently-standing candidates across all three departments &mdash; excluding the calibration benchmarks, which were never up for funding in the first place.</p>
-    <table class="pub-table">
-      <tr><th>Pairing</th><th>Points</th><th>Verdict</th><th>Tier</th></tr>
-      {pub_rows(top_overall)}
-    </table>
+    <p style="color:var(--text-muted); max-width:700px;">The top 8 real, currently-standing candidates across all three departments &mdash; excluding the calibration benchmarks, which were never up for funding in the first place. Click any row for the full real record.</p>
+    {expandable_pub_rows(top_overall)}
 
     <div class="stat-row" style="margin-top:32px;">
       <div class="stat-box"><div class="n">$6.75</div><div class="l">total real spend across {TOTAL_ENTRIES} candidates evaluated</div></div>
@@ -1155,7 +1167,8 @@ def build_investors():
     </div>
 
     <p style="margin-top:24px; color:var(--text-muted); max-width:700px;">This office makes recommendations. It does not disburse funds, does not replace a human program officer's judgment, and does not claim a &ldquo;Survived Refutation&rdquo; tag means a discovery is real &mdash; only that it survived three honest attempts to kill it. See <a href="fu-fake-university-positioning-research.md">the positioning research</a> for the honest limits of this claim.</p>
-  </div>'''
+  </div>
+  {ROW_TOGGLE_JS}'''
     return wrap("For Investors & Grant Officers — FU", body, "investors")
 
 
