@@ -418,7 +418,7 @@ def build_home():
     <h2 style="margin-top:56px;">The Story of FU</h2>
     <p style="color:var(--text-muted); max-width:680px;">A short documentary: the Dean on why this exists, the real mechanism behind it, three department chairs on real findings, and three students on what a real adversarial review actually felt like. Hover any professor's photo anywhere on this site and it plays the same way &mdash; this is just the cut of it.</p>
     <video controls poster="fu-dean.jpg" preload="none" playsinline style="width:100%; border-radius:14px; border:1px solid var(--border); display:block; margin-top:16px;">
-      <source src="fu-documentary.mp4" type="video/mp4">
+      <source src="fu-documentary-v10.mp4" type="video/mp4">
     </video>
     <p class="real-thing" style="margin-top:10px;">The Dean and the three student testimonials are fictional deliveries of real content &mdash; every number and finding they cite is real, sourced the same way every other page on this site is. Not a real recruiting video; disclosed as such in its own closing frame.</p>
 
