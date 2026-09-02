@@ -754,5 +754,437 @@
     "question": "Can both precise coordination and chaotic execution hold simultaneously for the same pick-and-roll play?",
     "coherent": true,
     "concern": ""
+  },
+  "email-astronomy-x-creative-improvisation-coordination-sawyer.md": {
+    "hypothesis_slug": "2026-08-31-homospatial-astronomy-x-creative-improvisation-coordination",
+    "question": "Can stellar nucleosynthesis and creative improvisation coordination fuse to produce Improv-nucleosynthesis in collaborative sessions?",
+    "coherent": false,
+    "concern": "The question implies that stellar nucleosynthesis and creative improvisation can physically 'fuse' to create a new process, suggesting a direct mechanism of interaction between the two fundamentally different domains. However, the underlying claim only proposes an analogy based on abstract principles of transformation and collaboration, with no physical implementation or system connecting them."
+  },
+  "email-behavioral-psychology-x-informational-error-probab-mittenbuhler.md": {
+    "hypothesis_slug": "2026-08-30-homospatial-behavioral-psychology-x-informational-error-probability",
+    "question": "Can the Habitual Information Loop function as a framework that connects habit formation rates to the level of information accuracy encountered by individuals?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-behavioral-psychology-x-informational-sensor-netwo-egbert.md": {
+    "hypothesis_slug": "2026-08-31-behavioral-psychology-x-informational-sensor-networks",
+    "question": "Can increasing feedback frequency in sensor networks lead to more adaptive behaviors, similar to how enhanced rewards strengthen habits in behavioral psychology?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-behavioral-psychology-x-law-landes.md": {
+    "hypothesis_slug": "2026-08-30-behavioral-psychology-x-law",
+    "question": "Can changes in the strength of a legal precedent correlate with changes in the frequency of similar judicial rulings?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-behavioral-psychology-x-law-oliveiracastro.md": {
+    "hypothesis_slug": "2026-08-30-behavioral-psychology-x-law",
+    "question": "Can reinforcement mechanisms in behavioral psychology function as drivers for evolving legal interpretations in common law?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-cognitive-ai-attention-x-informational-software-ve-shekar.md": {
+    "hypothesis_slug": "2026-08-31-homospatial-cognitive-ai-attention-x-informational-software-version-control",
+    "question": "Can Cognitive AI Attention and Informational Software Version Control function together to create an Adaptive Attention Control System that demonstrates improved decision-making speed and accuracy?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-cognitive-ai-hyperparameter-orchestration-x-creati-calvo.md": {
+    "hypothesis_slug": "2026-08-30-homospatial-cognitive-ai-hyperparameter-orchestration-x-creative-narrative-arc-development",
+    "question": "Can Cognitive AI Hyperparameter Orchestration enhance Creative Narrative Arc Development to produce more emotionally engaging stories?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-cognitive-concept-drift-x-creative-idea-uncertaint-kenett.md": {
+    "hypothesis_slug": "2026-08-31-cognitive-concept-drift-x-creative-idea-uncertainty",
+    "question": "Can changes in the understanding of a concept predict shifts in the acceptance of related creative ideas?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-cognitive-concept-drift-x-creative-idea-uncertaint-shariatmadari.md": {
+    "hypothesis_slug": "2026-08-31-cognitive-concept-drift-x-creative-idea-uncertainty",
+    "question": "Can shifts in the understanding of a concept predict changes in the acceptance of related creative ideas?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-cognitive-development-x-physical-immune-system-yue.md": {
+    "hypothesis_slug": "2026-08-30-homospatial-cognitive-development-x-physical-immune-system",
+    "question": "Can Cognitive Development function as a mechanism for recognizing and responding to challenges, akin to how the Physical Immune System adapts to pathogens?",
+    "coherent": false,
+    "concern": "The question implies a direct causal relationship that equates cognitive development with a mechanism for recognizing challenges in the same way the immune system addresses pathogens. However, the underlying idea is only that both domains share abstract principles of adaptation and learning, not that one can function as a literal mechanism for the other without a proposed system linking them."
+  },
+  "email-cognitive-development-x-physical-immune-system-zhai.md": {
+    "hypothesis_slug": "2026-08-30-homospatial-cognitive-development-x-physical-immune-system",
+    "question": "Can diverse learning experiences function as mechanisms that improve adaptability in problem-solving tasks related to immune function severity?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-cognitive-model-adaptation-egner.md": {
+    "hypothesis_slug": "2026-08-30-janusian-cognitive-model-adaptation",
+    "question": "Can both cognitive models being stable and unstable be true simultaneously for the same cognitive instance?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-cognitive-model-adaptation-geddert.md": {
+    "hypothesis_slug": "2026-08-30-janusian-cognitive-model-adaptation",
+    "question": "Can both cognitive models being stable and unstable occur simultaneously for the same cognitive instance?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-cognitive-streaming-data-processing-x-creative-fil-hu.md": {
+    "hypothesis_slug": "2026-08-30-homospatial-cognitive-streaming-data-processing-x-creative-film-production-orchestration",
+    "question": "Can cognitive streaming data processing function as an adaptive framework for real-time film production?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-cognitive-streaming-data-processing-x-creative-fil-mu.md": {
+    "hypothesis_slug": "2026-08-30-homospatial-cognitive-streaming-data-processing-x-creative-film-production-orchestration",
+    "question": "Can the Cognitive Filmstream emerge from forcing cognitive streaming data processing and creative film production orchestration into the same space?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-cognitive-streaming-data-processing-x-creative-fil-nan.md": {
+    "hypothesis_slug": "2026-08-30-homospatial-cognitive-streaming-data-processing-x-creative-film-production-orchestration",
+    "question": "Can cognitive streaming data processing function as a mechanism that informs every aspect of creative film production orchestration to create a Cognitive Filmstream?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-cognitive-streaming-data-processing-x-creative-fil-xie.md": {
+    "hypothesis_slug": "2026-08-30-homospatial-cognitive-streaming-data-processing-x-creative-film-production-orchestration",
+    "question": "Can cognitive streaming data processing function as an adaptive feedback mechanism within creative film production orchestration to yield the Cognitive Filmstream?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-control-theory-x-informational-bit-flips-wang.md": {
+    "hypothesis_slug": "2026-08-31-homospatial-control-theory-x-informational-bit-flips",
+    "question": "Can Kalman filtering and informational bit flips function together to create an Error-Resilient Estimation System (ERES) that shows statistically significant improvement in estimation accuracy under noisy conditions?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-creative-film-production-orchestration-ebbers.md": {
+    "hypothesis_slug": "2026-08-30-janusian-creative-film-production-orchestration",
+    "question": "Can both preserving creative vision and sacrificing it for logistical efficiency be true simultaneously for the same film production?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-creative-film-production-orchestration-hansen.md": {
+    "hypothesis_slug": "2026-08-30-janusian-creative-film-production-orchestration",
+    "question": "Can both preserving creative vision and sacrificing it for logistical efficiency be true simultaneously for the same film production?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-creative-idea-uncertainty-x-physical-electrical-no-pena.md": {
+    "hypothesis_slug": "2026-08-31-homospatial-creative-idea-uncertainty-x-physical-electrical-noise",
+    "question": "Can analyzing creative outputs produced in environments with varying levels of electrical noise reveal distinct patterns of idea generation that correlate with noise characteristics?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-creative-idea-uncertainty-x-physical-electrical-no-stock.md": {
+    "hypothesis_slug": "2026-08-31-homospatial-creative-idea-uncertainty-x-physical-electrical-noise",
+    "question": "Can Creativity Noise Fusion emerge when creative idea uncertainty interacts with physical electrical noise?",
+    "coherent": false,
+    "concern": "The question implies a direct causal relationship where manipulating or interacting with creative idea uncertainty and physical electrical noise would literally produce a new entity (Creativity Noise Fusion), but the underlying hypothesis only discusses their conceptual overlay without specifying a mechanism for how this interaction occurs. There is no proposed system that connects these two domains in a manner that would facilitate such an emergence."
+  },
+  "email-creative-musical-motif-deviation-x-informational-b-bhandari.md": {
+    "hypothesis_slug": "2026-08-31-creative-musical-motif-deviation-x-informational-bit-flips",
+    "question": "Can systematic studies of motif deviations in music reveal patterns analogous to error correction in data transmission?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-creative-musical-motif-deviation-x-informational-b-taieb.md": {
+    "hypothesis_slug": "2026-08-31-creative-musical-motif-deviation-x-informational-bit-flips",
+    "question": "Can systematic studies of musical motif deviations reveal patterns analogous to bit flips in data transmission?",
+    "coherent": false,
+    "concern": "The question implies a direct causal connection between systematic studies of musical motifs and data transmission protocols, suggesting that findings in one domain would literally reveal mechanisms in the other. In reality, the hypothesis only asserts that both may share a structural analogy related to how deviations or alterations retain a core identity, not that they functionally influence each other in a concrete way."
+  },
+  "email-culinary-arts-x-human-individual-indecision-otto.md": {
+    "hypothesis_slug": "2026-08-31-culinary-arts-x-human-individual-indecision",
+    "question": "Can culinary arts principles function as frameworks for improving choices in individual decision-making processes?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-ecology-mycorrhizal-fungal-networks-x-telecommunic-wille.md": {
+    "hypothesis_slug": "2026-08-21-ecology-mycorrhizal-fungal-networks-x-telecommunications-packet-switching-and-routing",
+    "question": "Can increasing the connectivity and resilience of mycorrhizal networks lead to more effective data routing and reduced packet loss in telecommunications?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-economics-x-astrophysics-hanson.md": {
+    "hypothesis_slug": "2026-08-31-homospatial-economics-x-astrophysics",
+    "question": "Can auction theory and astrophysics function as a framework where Astro-Auction Dynamics emerges?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-education-x-physical-magnetic-field-control-chu.md": {
+    "hypothesis_slug": "2026-08-31-education-x-physical-magnetic-field-control",
+    "question": "Can increasing the precision of assignment grading correlate with improved student performance, analogous to fine-tuning magnetic fields enhancing particle control effectiveness?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-education-x-physical-magnetic-field-control-ivanova.md": {
+    "hypothesis_slug": "2026-08-31-education-x-physical-magnetic-field-control",
+    "question": "Can the relationship between assignment grading uncertainty and student performance be analogous to how magnetic field strength affects particle trajectories?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-epigenetics-hackett.md": {
+    "hypothesis_slug": "2026-08-30-janusian-epigenetics",
+    "question": "Can gene expression be modified without changing the DNA sequence while also being unmodifiable without changing the DNA sequence at the same time?",
+    "coherent": false,
+    "concern": "The question suggests that gene expression can be modified and unmodifiable simultaneously without DNA change, which implies a direct, literal mechanism of modification that isn't supported by the underlying claim of the hypotheses. The paradox does not propose a mechanism wherein gene expression can be controlled in such contradictory ways without involving DNA alterations."
+  },
+  "email-epigenetics-szyf.md": {
+    "hypothesis_slug": "2026-08-30-janusian-epigenetics",
+    "question": "Can both gene expression can be modified without changing the DNA sequence and gene expression cannot be modified without changing the DNA sequence be true simultaneously for the same gene?",
+    "coherent": false,
+    "concern": "The question implies that both statements about gene expression can coexist for the same gene in a literal sense, suggesting a lack of clarity about the conditions under which each statement applies. The underlying concept seems to discuss the contextual validity of gene expression mechanisms rather than allowing for a physical instance where both conditions simultaneously exist, creating a confusion between abstract principles and physical instances."
+  },
+  "email-epigenetics-x-cognitive-concept-drift-espesogil.md": {
+    "hypothesis_slug": "2026-08-31-epigenetics-x-cognitive-concept-drift",
+    "question": "Can interventions that alter environmental conditions function to affect both gene expression profiles and conceptual understanding in a parallel manner?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-epigenetics-x-cognitive-concept-drift-karlsson.md": {
+    "hypothesis_slug": "2026-08-31-epigenetics-x-cognitive-concept-drift",
+    "question": "Can interventions that alter environmental conditions affect both gene expression profiles and conceptual understanding in a parallel manner?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-epigenetics-x-cognitive-concept-drift-pena.md": {
+    "hypothesis_slug": "2026-08-31-epigenetics-x-cognitive-concept-drift",
+    "question": "Can external influences lead to reversible changes in both gene expression profiles and conceptual understanding in a parallel manner?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-evolutionary-biology-x-creative-inspiration-variab-eldredge.md": {
+    "hypothesis_slug": "2026-08-31-evolutionary-biology-x-creative-inspiration-variability",
+    "question": "Can periods of intense creative output be triggered by specific stimuli in the same way that evolutionary changes are initiated by environmental shifts?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-evolutionary-biology-x-physical-magnetic-field-con-tarduno.md": {
+    "hypothesis_slug": "2026-08-31-evolutionary-biology-x-physical-magnetic-field-control",
+    "question": "Can punctuated equilibrium in evolutionary biology demonstrate similar patterns of stability and rapid change as observed in magnetic field control?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-fluid-dynamics-x-human-emotional-fluctuation-vidal.md": {
+    "hypothesis_slug": "2026-08-29-homospatial-fluid-dynamics-x-human-emotional-fluctuation",
+    "question": "Can Emotifluidity manifest as emotional turbulence measured by EEG dynamics?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-gaming-narrative-x-human-financial-trading-algorit-cliff.md": {
+    "hypothesis_slug": "2026-08-29-gaming-narrative-x-human-financial-trading-algorithms",
+    "question": "Can the strategies developed in gaming narratives to optimize player outcomes apply to enhance the performance of financial trading algorithms in uncertain market conditions?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-geology-x-epidemiology-vespignani.md": {
+    "hypothesis_slug": "2026-08-31-homospatial-geology-x-epidemiology",
+    "question": "Can sedimentary layering and herd immunity thresholds be merged to predict outbreaks more accurately than traditional models?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-healthcare-x-physical-voltage-spikes-patrick.md": {
+    "hypothesis_slug": "2026-08-29-healthcare-x-physical-voltage-spikes",
+    "question": "Can real-time monitoring strategies in healthcare influence the management of voltage spikes in electrical systems?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-human-cognitive-bias-dror.md": {
+    "hypothesis_slug": "2026-08-28-janusian-human-cognitive-bias",
+    "question": "Can cognitive biases be both inherent flaws and inherent strengths in human reasoning, allowing for both irrational and effective decision-making simultaneously?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-human-financial-market-systems-x-physical-mechanic-manhire.md": {
+    "hypothesis_slug": "2026-08-30-human-financial-market-systems-x-physical-mechanical-spring-systems",
+    "question": "Can a model predicting market price changes using principles from spring mechanics yield accurate forecasts for financial asset movements?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-human-individual-indecision-x-physical-voltage-spi-petersen.md": {
+    "hypothesis_slug": "2026-08-29-homospatial-human-individual-indecision-x-physical-voltage-spikes",
+    "question": "Can human individual indecision function as a catalyst for fluctuating electrical activity in the brain, akin to physical voltage spikes?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-human-individual-indecision-x-physical-voltage-spi-saez.md": {
+    "hypothesis_slug": "2026-08-29-homospatial-human-individual-indecision-x-physical-voltage-spikes",
+    "question": "Can Indecision function as a trigger for fluctuations in brain activity that resemble voltage spikes in electrical circuits?",
+    "coherent": false,
+    "concern": "The question implies a direct causal mechanism where 'Indecision' acts as a literal trigger for 'fluctuations in brain activity resembling voltage spikes', suggesting a physical linkage between the psychological state and electrical behavior in circuits. However, the underlying hypothesis only argues for a conceptual analogy between the two without proposing a specific mechanism where one influences the other in a tangible way. Therefore, it misrepresents the relationship as one of direct influence rather than abstract parallel."
+  },
+  "email-immunology-x-military-strategy-jobbagy.md": {
+    "hypothesis_slug": "2026-08-29-immunology-x-military-strategy",
+    "question": "Can an adaptive military strategy that mirrors the innate immune response show improved outcomes in unpredictable battle scenarios?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-informational-backup-systems-x-physical-acoustic-r-hann.md": {
+    "hypothesis_slug": "2026-08-31-homospatial-informational-backup-systems-x-physical-acoustic-resonance",
+    "question": "Can Resonant Data Echo allow distinct data sets to be retrieved through specific sound frequencies in a resonance-based storage medium?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-informational-backup-systems-x-physical-magnetic-f-yamamoto.md": {
+    "hypothesis_slug": "2026-08-31-informational-backup-systems-x-physical-magnetic-fluctuation",
+    "question": "Can implementing redundancy in magnetic systems lead to improved predictability of magnetic behavior under fluctuating conditions?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-informational-cache-miss-handling-x-human-individu-lange.md": {
+    "hypothesis_slug": "2026-08-28-homospatial-informational-cache-miss-handling-x-human-individual-indecision",
+    "question": "Can Cognitive Cache Indecision function as a systematic exploration of choices akin to cache miss handling in computing?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-informational-cache-miss-handling-x-human-individu-press.md": {
+    "hypothesis_slug": "2026-08-28-homospatial-informational-cache-miss-handling-x-human-individual-indecision",
+    "question": "Can the patterns of decision-making in individuals experiencing indecision be modeled similarly to caching algorithms in computer memory?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-informational-error-probability-x-mathematics-klc.md": {
+    "hypothesis_slug": "2026-09-01-informational-error-probability-x-mathematics",
+    "question": "Can the relationship between error probabilities and knot classifications yield a novel knot invariant?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-informational-load-balancing-x-physical-evolutiona-bartlett.md": {
+    "hypothesis_slug": "2026-08-31-homospatial-informational-load-balancing-x-physical-evolutionary-selection",
+    "question": "Can the Adaptive Information Ecology emerge from the interplay between informational load balancing and physical evolutionary selection, exhibiting improved resilience over time?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-informational-load-balancing-x-physical-evolutiona-carvajalrodriguez.md": {
+    "hypothesis_slug": "2026-08-31-homospatial-informational-load-balancing-x-physical-evolutionary-selection",
+    "question": "Can informational load balancing function as a force of physical evolutionary selection in the emergence of Adaptive Information Ecology?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-knowledge-systems-x-informational-distributed-cons-badica.md": {
+    "hypothesis_slug": "2026-08-31-homospatial-knowledge-systems-x-informational-distributed-consensus",
+    "question": "Can the Consensus Knowledge Network improve the accuracy and adaptability of knowledge insights through decentralized decision-making?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-language-linguistics-x-cognitive-reinforcement-lea-lipowski.md": {
+    "hypothesis_slug": "2026-08-31-homospatial-language-linguistics-x-cognitive-reinforcement-learning",
+    "question": "Can language linguistics and cognitive reinforcement learning converge to create a dynamic, adaptive system that evolves based on user feedback mechanisms?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-linguistics-x-cognitive-ai-preprocessing-pipelines-lu.md": {
+    "hypothesis_slug": "2026-08-30-linguistics-x-cognitive-ai-preprocessing-pipelines",
+    "question": "Can the systematic alterations of sounds in historical linguistics function as a basis for predictable transformations in cognitive AI preprocessing pipelines?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-linguistics-x-cognitive-ai-preprocessing-pipelines-mortensen.md": {
+    "hypothesis_slug": "2026-08-30-linguistics-x-cognitive-ai-preprocessing-pipelines",
+    "question": "Can the principles governing sound change in linguistics lead to analogous effects in cognitive AI preprocessing pipelines?",
+    "coherent": false,
+    "concern": "The question implies a direct causal connection where sound change principles would directly affect AI preprocessing methods, suggesting that adjusting principles in one domain would yield direct effects in the other. However, the underlying claim only suggests analogous effects based on shared abstract principles rather than a direct mechanism of influence."
+  },
+  "email-linguistics-x-law-uliasz.md": {
+    "hypothesis_slug": "2026-08-31-homospatial-linguistics-x-law",
+    "question": "Can creole genesis and contract formation coexist to create Lexicon Pactum in multilingual negotiation contexts?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-music-sound-x-human-cognitive-bias-margulis.md": {
+    "hypothesis_slug": "2026-08-30-homospatial-music-sound-x-human-cognitive-bias",
+    "question": "Can music sound and human cognitive bias interact to create a performance system like Cognimusic?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-music-sound-x-physical-circuit-evolution-maccallum.md": {
+    "hypothesis_slug": "2026-08-30-music-sound-x-physical-circuit-evolution",
+    "question": "Can an increase in audience feedback during live performances lead to measurable enhancements in musical complexity, similar to how testing feedback improves circuit reliability?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-music-theory-x-economics-voldsund.md": {
+    "hypothesis_slug": "2026-08-31-homospatial-music-theory-x-economics",
+    "question": "Can patterns of improvisational contributions in BidJam exhibit measurable shifts in response to audience engagement?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-music-theory-x-sports-harrison.md": {
+    "hypothesis_slug": "2026-08-30-homospatial-music-theory-x-sports",
+    "question": "Can jazz improvisation and baseball pitch sequencing function as a unified system in the framework of Harmonic Pitchcraft?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-music-x-human-learning-uncertainty-soderman.md": {
+    "hypothesis_slug": "2026-08-31-music-x-human-learning-uncertainty",
+    "question": "Can variations in sample selection and manipulation techniques correlate with distinct learning outcomes in educational settings?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-oceanography-ma.md": {
+    "hypothesis_slug": "2026-08-31-janusian-oceanography",
+    "question": "Can both stable and unstable thermocline stratification be true simultaneously for the same oceanic body?",
+    "coherent": false,
+    "concern": "The question implies that both stable and unstable thermocline conditions could co-exist in a single, specific instance or region of an ocean body, suggesting a direct contradiction in terms of their mechanistic interactions. However, the underlying claim only discusses the coexistence of these states in a more abstract sense and does not provide a proposed mechanism for how both could function at the same time within the same physical framework of an ocean body."
+  },
+  "email-oceanography-radko.md": {
+    "hypothesis_slug": "2026-08-31-janusian-oceanography",
+    "question": "Can both stable and unstable thermocline stratification hold simultaneously for the same oceanic body?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-physical-elastic-deformation-x-physical-voltage-sp-barzi.md": {
+    "hypothesis_slug": "2026-09-01-physical-elastic-deformation-x-physical-voltage-spikes",
+    "question": "Can the relational rule governing elastic deformation predict analogous behaviors in electrical circuits experiencing voltage spikes?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-physical-gear-system-mechanics-x-physical-circuit-ata.md": {
+    "hypothesis_slug": "2026-09-01-physical-gear-system-mechanics-x-physical-circuit-evolution",
+    "question": "Can variations in gear engagement strategies correspond to similar variations in electrical component arrangements that optimize circuit performance?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-physical-gear-system-mechanics-x-physical-circuit-dakkak.md": {
+    "hypothesis_slug": "2026-09-01-physical-gear-system-mechanics-x-physical-circuit-evolution",
+    "question": "Can variations in gear engagement strategies correspond to similar variations in electrical component arrangements that optimize circuit performance?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-physical-gear-system-mechanics-x-physical-circuit-kurzhanski.md": {
+    "hypothesis_slug": "2026-09-01-physical-gear-system-mechanics-x-physical-circuit-evolution",
+    "question": "Can variations in gear engagement strategies correspond to similar variations in electrical component arrangements that optimize circuit performance?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-sports-x-finance-takamido.md": {
+    "hypothesis_slug": "2026-08-29-homospatial-sports-x-finance",
+    "question": "Can Pitch-Transaction Dynamics operate as a framework that improves transaction success rates by adapting in real-time to market feedback, similar to a pitcher adjusting their pitch sequences based on batter responses?",
+    "coherent": false,
+    "concern": "The question implies that Pitch-Transaction Dynamics can literally operate as a framework that improves transaction success rates through real-time adaptations, suggesting a direct causal mechanism between pitch adjustment in baseball and financial transactions. However, the underlying claim only asserts that both domains share an abstract principle of adaptation, without proposing a concrete system where one influences the other."
+  },
+  "email-sports-x-physical-flux-regulation-matulaitis.md": {
+    "hypothesis_slug": "2026-08-29-homospatial-sports-x-physical-flux-regulation",
+    "question": "Can the Dynamic Flux Offense function as a self-regulating system that increases scoring opportunities compared to traditional static plays?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-telecommunications-x-music-sound-lakiotakis.md": {
+    "hypothesis_slug": "2026-08-31-homospatial-telecommunications-x-music-sound",
+    "question": "Can packet switching function as a mechanism to adapt live musical performances in real-time based on audience feedback and musician coordination?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-urban-planning-x-informational-cache-miss-handling-wang.md": {
+    "hypothesis_slug": "2026-08-31-homospatial-urban-planning-x-informational-cache-miss-handling",
+    "question": "Can urban planning traffic flow optimization function as informational cache miss handling within a Traffic Dataflow Optimization System?",
+    "coherent": false,
+    "concern": "The question implies a direct functional application of urban traffic flow optimization as a literal mechanism for handling cache misses, which overstates the relationship between the two concepts. While both share an abstract theme of optimizing flow, there is no proposed system that connects them in a way that allows one to function as the other, leading to a misleading interpretation of their relationship."
   }
 }
