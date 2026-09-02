@@ -209,27 +209,75 @@ def _clean_title(title):
 _SURNAME_STOPWORDS = {"jr", "sr", "ii", "iii", "phd", "md"}
 
 
+_INSTITUTION_WORDS = {
+    "university", "universidad", "universit", "institute", "institut", "college",
+    "department", "dept", "laboratory", "lab", "labs", "center", "centre", "school",
+    "corp", "corporation", "inc", "llc", "gmbh", "ltd", "foundation", "hospital",
+    "faculty", "academy", "polytechnic", "national", "research",
+}
+
+
+def _looks_like_person_name(s):
+    """Real bug found 2026-09-02, same batch as the JSON-blob one, same
+    root cause (the model padding out an author slot with SOMETHING
+    rather than admitting it only confirmed one real name): for a
+    single-author paper, 'Your paper with Bandirma Onyedi Eylul
+    University' shipped -- the recipient's own institution cited as if
+    it were a co-author's name. A real person's name is 1-4 words, no
+    digits, and never contains an institution-shaped word; check all
+    three rather than trust the field's own label."""
+    s = s.strip()
+    if not s or any(ch.isdigit() or ch in '{}[]":' for ch in s):
+        return False
+    words = s.split()
+    if not (1 <= len(words) <= 4):
+        return False
+    lower_words = {w.strip(".,").lower() for w in words}
+    if lower_words & _INSTITUTION_WORDS:
+        return False
+    return True
+
+
+def _clean_author_list(authors_str):
+    """Splits a raw authors string on common separators and drops any
+    segment that doesn't pass _looks_like_person_name -- the shared
+    cleaning step both the metadata citation line and the body's
+    co-author clause build on, so an institution name or other
+    non-person artifact can never reach either one. Returns a list of
+    real name strings (possibly empty)."""
+    if not authors_str or authors_str == "authors not specified in excerpt":
+        return []
+    parts = re.split(r",|&|\band\b", authors_str)
+    return [p for p in (p.strip().strip(".") for p in parts) if p and _looks_like_person_name(p)]
+
+
 def _coauthors_excluding_recipient(authors_str, recipient_name):
     """Real bug found 2026-09-02, first generation test run: an email to
     Junhui Wu cited 'Your paper with Junhui Wu, Guangya Zhou' -- citing
     the recipient as their own co-author, because the equality check
     only caught an exact full-string match, not a name appearing inside
-    a real multi-author list. Splits on common separators, drops any
-    name that shares its last real word (surname) with the recipient,
-    and returns the real remaining co-authors (or empty if none)."""
-    if not authors_str or authors_str == "authors not specified in excerpt":
-        return ""
+    a real multi-author list. Cleans via _clean_author_list first (so
+    an institution-shaped artifact is never treated as a co-author
+    either), then drops whoever shares the recipient's surname, and
+    returns the real remaining co-authors (or empty if none)."""
     recipient_surname = _surname(recipient_name)
-    parts = re.split(r",|&|\band\b", authors_str)
-    others = []
-    for p in parts:
-        p = p.strip().strip(".")
-        if not p:
-            continue
-        if _surname(p) == recipient_surname:
-            continue
-        others.append(p)
+    others = [p for p in _clean_author_list(authors_str) if _surname(p) != recipient_surname]
     return ", ".join(others)
+
+
+def _looks_like_real_author_list(s):
+    """Real bug found 2026-09-02, first 5-candidate batch: for a paper
+    with 10 authors where only the first was actually confirmable, the
+    model returned paper_authors_verified as a literal, malformed
+    JSON-shaped string -- '{"author1":"Adem Korkmaz","author2":"[Author
+    2]",...}' -- rather than either the one real name it found or an
+    empty string. Nothing in the schema or prompt forbade this shape,
+    and it shipped straight into a real email's citation line
+    ('Your paper with "author2":"[Author 2]", ...') before being
+    caught by hand. A real name list is plain text -- these characters
+    should never appear in one; reject and fall back to the
+    already-known source_match_authors (or empty) rather than trust it."""
+    return not any(ch in s for ch in "{}[]\"")
 
 
 def write_email_file(candidate, draft):
@@ -241,14 +289,18 @@ def write_email_file(candidate, draft):
         return None  # never overwrite an existing draft
 
     title = _clean_title(candidate["source_match_title"])
-    authors = draft["paper_authors_verified"] or candidate["source_match_authors"] or ""
+    verified_authors = draft["paper_authors_verified"]
+    if verified_authors and not _looks_like_real_author_list(verified_authors):
+        verified_authors = ""
+    authors = verified_authors or candidate["source_match_authors"] or ""
     year = draft["paper_year_verified"] or candidate["source_match_year"] or ""
     venue = draft["paper_venue"]
+    clean_authors = _clean_author_list(authors)  # institution/JSON-artifact-free, recipient still included
     coauthors = _coauthors_excluding_recipient(authors, candidate["target_name"])
 
     cite_bits = []
-    if authors and authors != "authors not specified in excerpt":
-        cite_bits.append(authors)
+    if clean_authors:
+        cite_bits.append(", ".join(clean_authors))
     cite_bits.append(f'"{title}"')
     if venue:
         cite_bits.append(f"*{venue}*")

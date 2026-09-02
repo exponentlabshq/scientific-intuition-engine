@@ -96,5 +96,40 @@
     "sharpness": "SHARP",
     "restates_domain_name": false,
     "reason": "The question specifically addresses the relationship between as-built BIM, inspection outcomes, and the process of automated compliance checking, indicating a nuanced understanding of the mechanisms involved rather than a generic inquiry."
+  },
+  "email-architecture-x-agriculture-soh.md": {
+    "hypothesis_slug": "2026-08-30-homospatial-architecture-x-agriculture",
+    "question": "Can AgriModular Ecosystems enhance crop yield efficiency and resource management over traditional farming methods?",
+    "sharpness": "BORDERLINE",
+    "restates_domain_name": true,
+    "reason": "The question largely restates known concepts about the potential benefits of modular ecosystems versus traditional farming without addressing specific mechanisms or variables discussed in the cited paper."
+  },
+  "email-cognitive-ai-hyperparameter-orchestration-x-human-badawy.md": {
+    "hypothesis_slug": "2026-08-31-homospatial-cognitive-ai-hyperparameter-orchestration-x-human-learning-uncertainty",
+    "question": "Can adaptive AI hyperparameter orchestration enhance real-time human learning adaptation?",
+    "sharpness": "BORDERLINE",
+    "restates_domain_name": true,
+    "reason": "The question largely paraphrases concepts from the paper's title without introducing a specific mechanism or variable, making it feel more like a summary than a novel query."
+  },
+  "email-cognitive-ai-hyperparameter-orchestration-x-human-quinzan.md": {
+    "hypothesis_slug": "2026-08-31-homospatial-cognitive-ai-hyperparameter-orchestration-x-human-learning-uncertainty",
+    "question": "Can adaptive cognitive orchestration enhance AI performance in human-interactive tasks?",
+    "sharpness": "BORDERLINE",
+    "restates_domain_name": false,
+    "reason": "The question is relevant to the paper's topic but mainly rephrases known concepts about adaptive orchestration in AI without delving into specific mechanisms or variables that would require deeper insight into the paper's content."
+  },
+  "email-cognitive-ai-hyperparameter-orchestration-x-human-yang.md": {
+    "hypothesis_slug": "2026-08-31-homospatial-cognitive-ai-hyperparameter-orchestration-x-human-learning-uncertainty",
+    "question": "Can adaptive cognitive orchestration enhance AI performance in human-interactive tasks?",
+    "sharpness": "BORDERLINE",
+    "restates_domain_name": true,
+    "reason": "The question restates a general concept in the domain of AI and human interaction without delving into specific mechanisms or details from the cited paper that would require a deeper understanding of its contributions."
+  },
+  "email-cognitive-attention-map-evolution-x-creative-artis-korkmaz.md": {
+    "hypothesis_slug": "2026-08-29-homospatial-cognitive-attention-map-evolution-x-creative-artistic-critique",
+    "question": "Can art critiques reshape viewers' attention to specific artwork elements?",
+    "sharpness": "BORDERLINE",
+    "restates_domain_name": true,
+    "reason": "The question restates the potential impact of art critiques on viewer perception without delving into specific mechanisms or outcomes discussed in the cited paper."
   }
 }
