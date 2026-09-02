@@ -139,6 +139,16 @@ def load_outreach_emails():
         question_m = re.search(r"\*\*([A-Z][^*]*?\?)\*\*", text)
         cite_m = re.search(r"\*\*Match source:\*\*\s*(.+)", text)
         flag_m = re.search(r"\*\*Flag(?:ged)?:?\*\*\s*(.+)", text)
+        # Real bug found 2026-09-02: only the subject + bolded question were
+        # ever surfaced on the site -- Michael's own words: "the emails
+        # included in the publications and leaderboard items are just a
+        # snippet; I'd like the full email there... the full email is the
+        # pre-champagne moment and I want it documented." Captures the
+        # actual sent-shaped body verbatim (from the closing "---" after
+        # the Subject line to the "---" before "## Send checklist") so the
+        # real text -- greeting, question, citation sentence, sign-off --
+        # renders, not a reconstruction of it.
+        body_m = re.search(r"\*\*Subject:\*\*.*?\n\n---\n\n(.*?)\n\n---\n\n## Send checklist", text, re.S)
         if not (slug_m and to_m):
             continue
         status_text = (status_m.group(1).strip() if status_m else "")
@@ -156,6 +166,7 @@ def load_outreach_emails():
             "subject": subject_m.group(1).strip() if subject_m else "",
             "question": question_m.group(1).strip() if question_m else "",
             "citation": cite_m.group(1).strip() if cite_m else "",
+            "body": body_m.group(1).strip() if body_m else "",
             "state": state,
             "flag_reason": flag_m.group(1).strip() if (flag_m and state == "flagged") else "",
         }
@@ -1046,6 +1057,13 @@ ROW_CSS = '''
 .ed-subject { font-family: var(--serif); font-style: italic; color: var(--text); margin-bottom: 4px; }
 .ed-question { color: var(--text-muted); }
 .ed-flag-reason { margin-top: 6px; padding-top: 6px; border-top: 1px solid var(--border); color: var(--text-faint); font-size: 0.76rem; }
+.ed-full { margin-top: 8px; }
+.ed-full summary { cursor: pointer; font-family: var(--sans); font-size: 0.76rem; color: var(--gold); list-style: none; }
+.ed-full summary::-webkit-details-marker { display: none; }
+.ed-full summary::before { content: '\\25b8\\0020'; }
+.ed-full[open] summary::before { content: '\\25be\\0020'; }
+.ed-full summary:hover { text-decoration: underline; }
+.ed-full-body { margin-top: 8px; padding: 10px 12px; background: var(--ink); border-radius: 6px; border-left: 2px solid var(--border); }
 
 .corr-dept { margin-top: 36px; }
 .corr-dept h2 { font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--border); padding-bottom: 8px; margin-bottom: 16px; }
@@ -1060,6 +1078,7 @@ ROW_CSS = '''
 .corr-entry.flagged .corr-badge { color: var(--gold); }
 .corr-pairing { font-family: var(--mono); font-size: 0.72rem; color: var(--text-faint); margin: 4px 0 8px; }
 .corr-flag-reason { margin-top: 8px; padding-top: 8px; border-top: 1px solid var(--border); color: var(--text-faint); font-size: 0.78rem; }
+.corr-full-body { margin-top: 10px; padding: 12px 14px; background: var(--ink); border-radius: 8px; border-left: 2px solid var(--border); font-size: 0.86rem; }
 
 .course-item { border: 1px solid var(--border); border-radius: 8px; margin-bottom: 6px; background: var(--ink); }
 .course-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 9px 12px; cursor: pointer; font-size: 0.86rem; }
@@ -1198,7 +1217,18 @@ def email_draft_html(draft):
     actual subject + question, sendable as-is) and a flagged one (same
     content, plus the real reason a human review held it back -- never
     hidden, since a flag is itself real information about this
-    pipeline's own discipline, not something to smooth over)."""
+    pipeline's own discipline, not something to smooth over).
+
+    Real gap found 2026-09-02, Michael's own words: "the emails included
+    in the publications and leaderboard items are just a snippet; I'd
+    like the full email there... the full email is the pre-champagne
+    moment and I want it documented." The subject + question line was
+    all that ever rendered here -- the actual sent-shaped text (greeting,
+    citation sentence, sign-off) was real, on disk, and invisible. Now
+    renders inside a native <details> so a dense page (leaderboard, a
+    faculty page with a dozen publications) stays scannable by default,
+    but the real full email is genuinely IN the page -- not behind a
+    script, not a reconstruction -- one click away, closed by default."""
     subj = re.sub("<", "&lt;", draft.get("subject") or "")
     q = re.sub("<", "&lt;", draft.get("question") or "")
     cls = "flagged" if draft["state"] == "flagged" else "ready"
@@ -1210,6 +1240,11 @@ def email_draft_html(draft):
         html += f'<div class="ed-question">{q}</div>'
     if cls == "flagged" and draft.get("flag_reason"):
         html += f'<div class="ed-flag-reason">{re.sub("<", "&lt;", draft["flag_reason"])}</div>'
+    if draft.get("body"):
+        html += (
+            '<details class="ed-full"><summary>Read the full drafted email</summary>'
+            f'<div class="ed-full-body md-block">{md_to_html(draft["body"])}</div></details>'
+        )
     html += "</div>"
     return html
 
@@ -1698,6 +1733,15 @@ def build_investors():
 # ---------------------------------------------------------------------------
 
 def correspondence_entry_html(draft, institution, exp_entry):
+    """Michael's own words, 2026-09-02: 'the full email is the
+    pre-champagne moment and I want it documented.' This page exists
+    specifically to hold that -- so unlike email_draft_html()'s inline
+    <details> (closed by default, tucked into an already-dense
+    leaderboard/faculty page), the full real email body renders
+    directly, open, no click required. The subject + bolded question
+    stay above it as the scan line -- so a reader can still skim 280+
+    entries by researcher/pairing -- but the actual sendable text sits
+    right there underneath every one of them."""
     subj = re.sub("<", "&lt;", draft.get("subject") or "")
     q = re.sub("<", "&lt;", draft.get("question") or "")
     name = re.sub("<", "&lt;", draft.get("target_name") or "")
@@ -1708,6 +1752,9 @@ def correspondence_entry_html(draft, institution, exp_entry):
     flag_html = ""
     if cls == "flagged" and draft.get("flag_reason"):
         flag_html = f'<div class="corr-flag-reason">{re.sub("<", "&lt;", draft["flag_reason"])}</div>'
+    body_html = ""
+    if draft.get("body"):
+        body_html = f'<div class="corr-full-body md-block">{md_to_html(draft["body"])}</div>'
     return f'''<div class="corr-entry {cls}">
     <div class="corr-head">
       <div class="corr-who"><strong>{name}</strong>{f" &middot; {inst}" if inst else ""}</div>
@@ -1717,6 +1764,7 @@ def correspondence_entry_html(draft, institution, exp_entry):
     <div class="ed-subject">&ldquo;{subj}&rdquo;</div>
     <div class="ed-question">{q}</div>
     {flag_html}
+    {body_html}
   </div>'''
 
 
