@@ -163,6 +163,17 @@ body {
 }
 a { color: var(--crimson); }
 .page { max-width: 1040px; margin: 0 auto; padding: 0 24px 100px; }
+
+.hero-section { position: relative; min-height: 68vh; display: flex; align-items: center; overflow: hidden; }
+.hero-bg-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
+.hero-overlay { position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, rgba(21,14,15,0.5) 0%, rgba(21,14,15,0.7) 60%, var(--ink) 100%); }
+.hero-content { position: relative; z-index: 2; padding: 40px 24px; }
+.hero-unmute {
+  position: absolute; z-index: 3; bottom: 20px; right: 20px;
+  background: rgba(21,14,15,0.7); border: 1px solid var(--border); color: var(--text);
+  font-family: var(--mono); font-size: 0.76rem; padding: 8px 14px; border-radius: 100px; cursor: pointer;
+}
+@media (max-width: 640px) { .hero-section { min-height: 78vh; } }
 .wide { max-width: 1240px; }
 
 /* -- FU-specific nav: unobtrusive by default, every title still a real
@@ -332,10 +343,8 @@ def nav(active):
       {link("fu-course-catalog.html", "Course Catalog", "catalog")}
       {link("fu-investors.html", "For Investors &amp; Grant Officers", "investors")}
     </div>
-    <a class="fu-nav-outbound" href="whitepaper.html">The Real Engine (technical report) &rarr;</a>
   </div>
-</nav>
-<div class="fu-disclosure"><strong>FU is not a real degree-granting institution.</strong> It is an honest, self-aware brand for a real, disclosed AI research pipeline &mdash; every number and publication below is real; the faculty are not.</div>'''
+</nav>'''
 
 
 def colophon():
@@ -372,22 +381,20 @@ def build_home():
       </div>
     </a>'''
 
-    body = f'''<header style="padding: 56px 0 20px;">
-    <div class="page wide" style="padding-bottom:0;">
+    body = f'''<header class="hero-section">
+    <video id="hero-drone" class="hero-bg-video" src="fu-drone-campus.mp4" poster="fu-campus.jpg" autoplay muted loop playsinline></video>
+    <div class="hero-overlay"></div>
+    <button id="hero-unmute" class="hero-unmute">&#128264; Sound on</button>
+    <div class="page wide hero-content">
       <span class="kicker">Exponent Labs LLC &middot; Est. 2026 &middot; Not Accredited By Anyone</span>
-      <h1 style="font-size: clamp(2.2rem, 5vw, 3.4rem); margin: 14px 0 16px; font-weight: 600;">FU: Fake University</h1>
-      <p style="font-family: var(--serif); font-size: 1.2rem; color: var(--text-muted); max-width: 680px; margin: 0 0 28px;">A university with no campus, no accreditation, and no students who are actually people &mdash; built entirely on real research output. Every paper, every score, every rejected hypothesis on this site is real. The faculty are not.</p>
+      <h1 style="font-size: clamp(2.2rem, 5vw, 3.4rem); margin: 14px 0 16px; font-weight: 600; color: #fff;">FU: Fake University</h1>
+      <p style="font-family: var(--serif); font-size: 1.2rem; color: rgba(255,255,255,0.82); max-width: 680px; margin: 0 0 28px;">A university with no campus, no accreditation, and no students who are actually people &mdash; built entirely on real research output. Every paper, every score, every rejected hypothesis on this site is real. The faculty are not.</p>
       <div style="display:flex; gap:14px; flex-wrap:wrap;">
         <a href="fu-people.html" style="display:inline-block; padding:12px 22px; background:var(--crimson-deep); color:var(--text); text-decoration:none; border-radius:8px; font-family:var(--mono); font-size:0.85rem;">Meet the Faculty &amp; Org Chart &rarr;</a>
         <a href="fu-investors.html" style="display:inline-block; padding:12px 22px; border:1px solid var(--gold); color:var(--gold); text-decoration:none; border-radius:8px; font-family:var(--mono); font-size:0.85rem;">For Investors &amp; Grant Officers &rarr;</a>
       </div>
     </div>
   </header>
-
-  <figure class="hero-video-wrap" style="margin: 32px 0 0; position:relative;">
-    <video id="hero-drone" src="fu-drone-campus.mp4" poster="fu-campus.jpg" autoplay muted loop playsinline style="width:100%; max-height:460px; object-fit:cover; display:block;"></video>
-    <button id="hero-unmute" style="position:absolute; bottom:16px; right:16px; background:rgba(21,14,15,0.7); border:1px solid var(--border); color:var(--text); font-family:var(--mono); font-size:0.76rem; padding:8px 14px; border-radius:100px; cursor:pointer;">&#128264; Sound on</button>
-  </figure>
   <script>
   (function() {{
     var v = document.getElementById('hero-drone');
@@ -400,9 +407,7 @@ def build_home():
   }})();
   </script>
 
-  <div class="page wide">
-    <p class="real-thing" style="text-align:center; margin: 14px 0 40px;">Illustrative &mdash; real thing this stands in for: <b>The Eureka Engine's real pipeline</b> &mdash; <code>run_cycle.py</code>, a script, not a campus.</p>
-
+  <div class="page wide" style="padding-top:40px;">
     <div class="stat-row">
       <div class="stat-box"><div class="n">{TOTAL_ENTRIES}</div><div class="l">papers on record</div></div>
       <div class="stat-box"><div class="n">{len(DOMAINS)}</div><div class="l">subjects taught (real domain pool)</div></div>
@@ -420,9 +425,6 @@ def build_home():
     <h2 style="margin-top:56px;">The Three Departments</h2>
     <p style="color:var(--text-muted); max-width:680px;">Every real hypothesis FU has ever produced was generated by one of three documented creativity mechanisms. Each got its own department, its own chair, and its own real publication record.</p>
     <div class="card-grid">{dept_cards}</div>
-
-    <h2 style="margin-top:48px;">What FU Actually Is</h2>
-    <p style="color:var(--text-muted); max-width:680px;">FU is a narrative frame over <a href="whitepaper.html">The Eureka Engine</a> &mdash; a real system that generates falsifiable cross-domain hypotheses, checks them against real literature, and subjects the survivors to adversarial peer review. The university metaphor isn't new marketing: the system's own leaderboard already ranks entries into tiers like &ldquo;Established Department&rdquo; and &ldquo;Frontier Research Group.&rdquo; FU just gives that structure a campus, a faculty, and an org chart.</p>
   </div>
   {HOVER_VIDEO_JS}'''
     return wrap("FU: Fake University", body, "home")
@@ -539,7 +541,7 @@ def build_departments_index():
         meta = MODE_META[mode_key]
         perf = DEPT_PERF.get(mode_key, {})
         cards += f'''<a class="dept-card" href="fu-department-{mode_key}.html">
-      <img src="{meta['img']}" alt="{meta['chair_title']} lecturing">
+      {hover_media_html(meta['img'], f"fu-lecture-chair-{mode_key}.mp4", f"{meta['chair_title']} lecturing")}
       <div class="body">
         <h3>{meta['name']}</h3>
         <p>{meta['method']}</p>
@@ -552,7 +554,8 @@ def build_departments_index():
     <p style="color:var(--text-muted); max-width:680px;">FU has exactly three departments &mdash; one per real, documented creativity mechanism the pipeline implements. No department was invented to fill out an org chart; the mechanism came first, in the literature, decades before FU did.</p>
     <div class="card-grid">{cards}</div>
     <p style="margin-top:24px;"><a href="fu-course-catalog.html">Browse all {len(DOMAINS)} subjects across every department &rarr;</a></p>
-  </div>'''
+  </div>
+  {HOVER_VIDEO_JS}'''
     return wrap("Departments — FU", body, "departments")
 
 

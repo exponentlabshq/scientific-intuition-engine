@@ -30,6 +30,17 @@ body {
 }
 a { color: var(--crimson); }
 .page { max-width: 1040px; margin: 0 auto; padding: 0 24px 100px; }
+
+.hero-section { position: relative; min-height: 68vh; display: flex; align-items: center; overflow: hidden; }
+.hero-bg-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
+.hero-overlay { position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, rgba(21,14,15,0.5) 0%, rgba(21,14,15,0.7) 60%, var(--ink) 100%); }
+.hero-content { position: relative; z-index: 2; padding: 40px 24px; }
+.hero-unmute {
+  position: absolute; z-index: 3; bottom: 20px; right: 20px;
+  background: rgba(21,14,15,0.7); border: 1px solid var(--border); color: var(--text);
+  font-family: var(--mono); font-size: 0.76rem; padding: 8px 14px; border-radius: 100px; cursor: pointer;
+}
+@media (max-width: 640px) { .hero-section { min-height: 78vh; } }
 .wide { max-width: 1240px; }
 
 /* -- FU-specific nav: unobtrusive by default, every title still a real
@@ -248,10 +259,8 @@ h1, h2, h3 { font-family: var(--serif); text-wrap: balance; }
       <a href="fu-course-catalog.html">Course Catalog</a>
       <a href="fu-investors.html">For Investors &amp; Grant Officers</a>
     </div>
-    <a class="fu-nav-outbound" href="whitepaper.html">The Real Engine (technical report) &rarr;</a>
   </div>
 </nav>
-<div class="fu-disclosure"><strong>FU is not a real degree-granting institution.</strong> It is an honest, self-aware brand for a real, disclosed AI research pipeline &mdash; every number and publication below is real; the faculty are not.</div>
 <div class="page wide" style="padding-top:40px;">
     <span class="kicker">Department Page</span>
     <h1>Department of Homospatial Studies</h1>

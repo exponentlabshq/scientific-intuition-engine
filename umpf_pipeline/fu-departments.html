@@ -30,6 +30,17 @@ body {
 }
 a { color: var(--crimson); }
 .page { max-width: 1040px; margin: 0 auto; padding: 0 24px 100px; }
+
+.hero-section { position: relative; min-height: 68vh; display: flex; align-items: center; overflow: hidden; }
+.hero-bg-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
+.hero-overlay { position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, rgba(21,14,15,0.5) 0%, rgba(21,14,15,0.7) 60%, var(--ink) 100%); }
+.hero-content { position: relative; z-index: 2; padding: 40px 24px; }
+.hero-unmute {
+  position: absolute; z-index: 3; bottom: 20px; right: 20px;
+  background: rgba(21,14,15,0.7); border: 1px solid var(--border); color: var(--text);
+  font-family: var(--mono); font-size: 0.76rem; padding: 8px 14px; border-radius: 100px; cursor: pointer;
+}
+@media (max-width: 640px) { .hero-section { min-height: 78vh; } }
 .wide { max-width: 1240px; }
 
 /* -- FU-specific nav: unobtrusive by default, every title still a real
@@ -248,30 +259,37 @@ h1, h2, h3 { font-family: var(--serif); text-wrap: balance; }
       <a href="fu-course-catalog.html">Course Catalog</a>
       <a href="fu-investors.html">For Investors &amp; Grant Officers</a>
     </div>
-    <a class="fu-nav-outbound" href="whitepaper.html">The Real Engine (technical report) &rarr;</a>
   </div>
 </nav>
-<div class="fu-disclosure"><strong>FU is not a real degree-granting institution.</strong> It is an honest, self-aware brand for a real, disclosed AI research pipeline &mdash; every number and publication below is real; the faculty are not.</div>
 <div class="page wide" style="padding-top:40px;">
     <span class="kicker">Faculty</span>
     <h1>The Three Departments</h1>
     <p style="color:var(--text-muted); max-width:680px;">FU has exactly three departments &mdash; one per real, documented creativity mechanism the pipeline implements. No department was invented to fill out an org chart; the mechanism came first, in the literature, decades before FU did.</p>
     <div class="card-grid"><a class="dept-card" href="fu-department-bisociation.html">
-      <img src="fu-chair-bisociation.jpg" alt="Chair, Department of Bisociation Studies lecturing">
+      <div class="hover-media">
+        <img src="fu-chair-bisociation.jpg" alt="Chair, Department of Bisociation Studies lecturing">
+        <video muted loop playsinline preload="none" data-src="fu-lecture-chair-bisociation.mp4"></video>
+      </div>
       <div class="body">
         <h3>Department of Bisociation Studies</h3>
         <p>Collides two unrelated domains into one precise, checkable mapping &mdash; named by Arthur Koestler in <em>The Act of Creation</em> (1964).</p>
         <div class="stats">274 papers &middot; avg +17.3 pts &middot; 25% reach no signal</div>
       </div>
     </a><a class="dept-card" href="fu-department-janusian.html">
-      <img src="fu-chair-janusian.jpg" alt="Chair, Department of Janusian Studies lecturing">
+      <div class="hover-media">
+        <img src="fu-chair-janusian.jpg" alt="Chair, Department of Janusian Studies lecturing">
+        <video muted loop playsinline preload="none" data-src="fu-lecture-chair-janusian.mp4"></video>
+      </div>
       <div class="body">
         <h3>Department of Janusian Studies</h3>
         <p>Holds one domain's core assumption true and false at once, and forces the collision to resolve into a single falsifiable claim &mdash; named for Albert Rothenberg's direct study of Nobel laureates' own reasoning.</p>
         <div class="stats">216 papers &middot; avg +28.7 pts &middot; 8% reach no signal</div>
       </div>
     </a><a class="dept-card" href="fu-department-homospatial.html">
-      <img src="fu-chair-homospatial.jpg" alt="Chair, Department of Homospatial Studies lecturing">
+      <div class="hover-media">
+        <img src="fu-chair-homospatial.jpg" alt="Chair, Department of Homospatial Studies lecturing">
+        <video muted loop playsinline preload="none" data-src="fu-lecture-chair-homospatial.mp4"></video>
+      </div>
       <div class="body">
         <h3>Department of Homospatial Studies</h3>
         <p>Superimposes two domains into one new entity &mdash; not a metaphor. Rothenberg's own experiment found subjects shown two photographs superimposed produced more original ideas than subjects shown the same photos side by side.</p>
@@ -280,6 +298,22 @@ h1, h2, h3 { font-family: var(--serif); text-wrap: balance; }
     </a></div>
     <p style="margin-top:24px;"><a href="fu-course-catalog.html">Browse all 109 subjects across every department &rarr;</a></p>
   </div>
+  <script>
+document.querySelectorAll('.hover-media').forEach(function(box) {
+  var video = box.querySelector('video');
+  if (!video) return;
+  var loaded = false;
+  box.addEventListener('mouseenter', function() {
+    if (!loaded) { video.src = video.getAttribute('data-src'); video.load(); loaded = true; }
+    box.classList.add('is-playing');
+    video.play().catch(function() {});
+  });
+  box.addEventListener('mouseleave', function() {
+    box.classList.remove('is-playing');
+    video.pause();
+  });
+});
+</script>
 <footer class="fu-colophon">
     FU: Fake University &middot; a positioning frame for <a href="whitepaper.html">The Eureka Engine</a> (Exponent Labs LLC) &middot; every real number sourced live from <code>leaderboard.md</code> (749 entries) and <code>domains.json</code> (109 domains) at build time &middot; see <a href="fu-fake-university-positioning-research.md">the positioning research</a> this site is built from
   </footer>
