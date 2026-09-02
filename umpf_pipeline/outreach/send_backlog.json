@@ -1,5 +1,16 @@
 [
   {
+    "send_priority": 90,
+    "sharpness": "SHARP",
+    "points": 55,
+    "department": "Department of Bisociation Studies",
+    "dept_slug": "bisociation",
+    "target_name": "Daniel A. Vajner",
+    "email": "daniel.vajner@physik.uni-stuttgart.de",
+    "hypothesis_slug": "2026-08-30-cryptography-x-physical-photon-emission",
+    "filename": "email-cryptography-x-physical-photon-emission-vajner.md"
+  },
+  {
     "send_priority": 88,
     "sharpness": "SHARP",
     "points": 55,
@@ -31,6 +42,17 @@
     "email": "chew_beng_soh@sutd.edu.sg",
     "hypothesis_slug": "2026-08-30-homospatial-architecture-x-agriculture",
     "filename": "email-architecture-x-agriculture-soh.md"
+  },
+  {
+    "send_priority": 75,
+    "sharpness": "BORDERLINE",
+    "points": 55,
+    "department": "Department of Homospatial Studies",
+    "dept_slug": "homospatial",
+    "target_name": "Shu Zhou",
+    "email": "zhou@ustc.edu.cn",
+    "hypothesis_slug": "2026-08-30-homospatial-artificial-intelligence-x-informational-database-state",
+    "filename": "email-artificial-intelligence-x-informational-database-s-zhou.md"
   },
   {
     "send_priority": 75,
@@ -75,6 +97,72 @@
     "email": "adem.korkmaz@bandirma.edu.tr",
     "hypothesis_slug": "2026-08-29-homospatial-cognitive-attention-map-evolution-x-creative-artistic-critique",
     "filename": "email-cognitive-attention-map-evolution-x-creative-artis-korkmaz.md"
+  },
+  {
+    "send_priority": 75,
+    "sharpness": "BORDERLINE",
+    "points": 55,
+    "department": "Department of Homospatial Studies",
+    "dept_slug": "homospatial",
+    "target_name": "Hanzhong Cao",
+    "email": "hanzhong.cao@turing.ac.uk",
+    "hypothesis_slug": "2026-08-29-homospatial-comedy-x-cognitive-ai-hyperparameter-orchestration",
+    "filename": "email-comedy-x-cognitive-ai-hyperparameter-orchestration-cao.md"
+  },
+  {
+    "send_priority": 75,
+    "sharpness": "BORDERLINE",
+    "points": 55,
+    "department": "Department of Homospatial Studies",
+    "dept_slug": "homospatial",
+    "target_name": "Susung Hong",
+    "email": "susung@cs.washington.edu",
+    "hypothesis_slug": "2026-08-29-homospatial-comedy-x-cognitive-ai-hyperparameter-orchestration",
+    "filename": "email-comedy-x-cognitive-ai-hyperparameter-orchestration-hong.md"
+  },
+  {
+    "send_priority": 75,
+    "sharpness": "BORDERLINE",
+    "points": 55,
+    "department": "Department of Homospatial Studies",
+    "dept_slug": "homospatial",
+    "target_name": "Elger Abrahamse",
+    "email": "e.l.abrahamse@tilburguniversity.edu",
+    "hypothesis_slug": "2026-08-29-homospatial-creative-artistic-critique-x-creative-idea-uncertainty",
+    "filename": "email-creative-artistic-critique-x-creative-idea-uncerta-abrahamse.md"
+  },
+  {
+    "send_priority": 75,
+    "sharpness": "BORDERLINE",
+    "points": 55,
+    "department": "Department of Bisociation Studies",
+    "dept_slug": "bisociation",
+    "target_name": "Francesco Branda",
+    "email": "fbranda@unisa.it",
+    "hypothesis_slug": "2026-08-31-epidemiology-x-creative-brainstorming-facilitation",
+    "filename": "email-epidemiology-x-creative-brainstorming-facilitation-branda.md"
+  },
+  {
+    "send_priority": 75,
+    "sharpness": "BORDERLINE",
+    "points": 55,
+    "department": "Department of Homospatial Studies",
+    "dept_slug": "homospatial",
+    "target_name": "Nozomi Asaoka",
+    "email": "asaoka@mol.f.u-tokyo.ac.jp",
+    "hypothesis_slug": "2026-08-31-homospatial-neuroscience-x-behavioral-psychology",
+    "filename": "email-neuroscience-x-behavioral-psychology-asaoka.md"
+  },
+  {
+    "send_priority": 75,
+    "sharpness": "BORDERLINE",
+    "points": 55,
+    "department": "Department of Bisociation Studies",
+    "dept_slug": "bisociation",
+    "target_name": "Murad Sultanov",
+    "email": "murad.sultan.81@mail.ru",
+    "hypothesis_slug": "2026-08-31-neuroscience-x-sports-athletics",
+    "filename": "email-neuroscience-x-sports-athletics-sultanov.md"
   },
   {
     "send_priority": 75,

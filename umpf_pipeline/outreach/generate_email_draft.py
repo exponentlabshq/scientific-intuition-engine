@@ -193,17 +193,42 @@ def _short_slug(hypothesis_slug):
     return s[:50].rstrip("-")
 
 
+_KNOWN_AGGREGATOR_SUFFIXES = {"PMC", "PubMed", "ScienceDirect", "ResearchGate", "SpringerLink"}
+
+
 def _clean_title(title):
-    """Strip a trailing pipe-separated venue/aggregator suffix search
-    results sometimes carry on a paper title (e.g. 'Foo Bar Baz |
-    Microsystems & Nanoengineering | Springer Nature Link' -> 'Foo Bar
-    Baz') -- found 2026-09-02 on the first real generation test run,
-    where the raw title was echoed verbatim into an email body. A title
-    is never legitimately more than a couple of pipe segments in this
-    pipeline's real data, so cut at the first '|' when one exists."""
+    """Strip a venue/aggregator artifact search results sometimes carry
+    on a paper title. Pipe-separated: 'Foo Bar Baz | Microsystems &
+    Nanoengineering | Springer Nature Link' -> 'Foo Bar Baz' (found
+    2026-09-02, first real generation test run) -- but the junk isn't
+    always a trailing segment: 'Frontiers | Toward a dual-pathway
+    model of neuroplastic adaptation in sport...' has the venue's own
+    BRAND NAME as a PREFIX instead (found the very next batch, same
+    day) -- an earlier version of this function that always kept the
+    first pipe segment shipped 'Frontiers' itself as the paper's
+    title. Neither position is reliable, so instead keep whichever
+    pipe segment is actually the longest -- a real title is virtually
+    always much longer than a one-or-two-word venue/brand name
+    ('Frontiers', 'Springer Nature Link', 'ScienceDirect'), checked
+    against every real pipe-separated title seen in this pipeline's
+    data before trusting the heuristic.
+
+    Dash-separated ('DynKGRAG: ... - ScienceDirect' -> 'DynKGRAG:
+    ...') is NOT safe to cut blindly the same way -- real titles
+    legitimately use dashes as internal punctuation ('State-of-the-
+    art', subtitle separators) -- so only cut a trailing ' - X' when X
+    matches a real, surveyed list of this pipeline's actual
+    aggregator-site suffixes (10 real PMC occurrences, 3 ScienceDirect,
+    1 PubMed as of 2026-09-02), never a blanket dash split."""
     if not title:
         return title
-    return title.split(" | ")[0].strip()
+    if " | " in title:
+        title = max(title.split(" | "), key=len).strip()
+    for suffix in _KNOWN_AGGREGATOR_SUFFIXES:
+        if title.endswith(f" - {suffix}"):
+            title = title[: -(len(suffix) + 3)].strip()
+            break
+    return title
 
 
 _SURNAME_STOPWORDS = {"jr", "sr", "ii", "iii", "phd", "md"}

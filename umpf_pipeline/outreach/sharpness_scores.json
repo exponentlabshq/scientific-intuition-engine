@@ -131,5 +131,61 @@
     "sharpness": "BORDERLINE",
     "restates_domain_name": true,
     "reason": "The question restates the potential impact of art critiques on viewer perception without delving into specific mechanisms or outcomes discussed in the cited paper."
+  },
+  "email-artificial-intelligence-x-informational-database-s-zhou.md": {
+    "hypothesis_slug": "2026-08-30-homospatial-artificial-intelligence-x-informational-database-state",
+    "question": "Can a Dynamic Intelligence Database enhance AI learning efficiency and data retrieval accuracy?",
+    "sharpness": "BORDERLINE",
+    "restates_domain_name": true,
+    "reason": "The question primarily reiterates the topic of the paper without probing into specific mechanisms or unique variables that would suggest a deeper understanding or exploration of the subject."
+  },
+  "email-comedy-x-cognitive-ai-hyperparameter-orchestration-cao.md": {
+    "hypothesis_slug": "2026-08-29-homospatial-comedy-x-cognitive-ai-hyperparameter-orchestration",
+    "question": "Can Humor-Driven Adaptive Intelligence autonomously generate comedic content that increases audience engagement by at least 30%?",
+    "sharpness": "BORDERLINE",
+    "restates_domain_name": true,
+    "reason": "The question rephrases a known mechanism from the paper regarding humor and audience engagement without providing specific variables or additional context."
+  },
+  "email-comedy-x-cognitive-ai-hyperparameter-orchestration-hong.md": {
+    "hypothesis_slug": "2026-08-29-homospatial-comedy-x-cognitive-ai-hyperparameter-orchestration",
+    "question": "Can Humor-Driven Adaptive Intelligence autonomously generate comedic content that increases audience engagement by at least 30% compared to traditional static comedy performances?",
+    "sharpness": "BORDERLINE",
+    "restates_domain_name": true,
+    "reason": "While the question focuses on a specific mechanism (Humor-Driven Adaptive Intelligence), it primarily restates the core concept of the paper without delving into a unique angle or deeper implications that reflect independent thought."
+  },
+  "email-creative-artistic-critique-x-creative-idea-uncerta-abrahamse.md": {
+    "hypothesis_slug": "2026-08-29-homospatial-creative-artistic-critique-x-creative-idea-uncertainty",
+    "question": "Can CritiqueFlux enhance collaborative art critique outcomes?",
+    "sharpness": "BORDERLINE",
+    "restates_domain_name": false,
+    "reason": "The question is relevant but largely mirrors the themes of the cited paper without posing a specific mechanism or variable related to CritiqueFlux's implementation or its effects on collaborative outcomes."
+  },
+  "email-cryptography-x-physical-photon-emission-vajner.md": {
+    "hypothesis_slug": "2026-08-30-cryptography-x-physical-photon-emission",
+    "question": "Can manipulating zero-knowledge proof parameters affect the uncertainty of emitted photons?",
+    "sharpness": "SHARP",
+    "restates_domain_name": false,
+    "reason": "The question specifically addresses the impact of zero-knowledge proof parameters on photon emission uncertainty, suggesting a nuanced understanding of the mechanisms involved, which goes beyond a generic inquiry."
+  },
+  "email-epidemiology-x-creative-brainstorming-facilitation-branda.md": {
+    "hypothesis_slug": "2026-08-31-epidemiology-x-creative-brainstorming-facilitation",
+    "question": "Can adaptive brainstorming techniques inspired by epidemiological feedback loops enhance idea generation in group settings?",
+    "sharpness": "BORDERLINE",
+    "restates_domain_name": false,
+    "reason": "The question touches on a specific application of adaptive brainstorming techniques but mainly reiterates known concepts rather than posing a novel inquiry about the mechanisms involved."
+  },
+  "email-neuroscience-x-behavioral-psychology-asaoka.md": {
+    "hypothesis_slug": "2026-08-31-homospatial-neuroscience-x-behavioral-psychology",
+    "question": "Can cortical map reorganization drive habit formation loops?",
+    "sharpness": "BORDERLINE",
+    "restates_domain_name": false,
+    "reason": "The question touches on specific mechanisms (cortical map reorganization and habit formation), but it largely rephrases concepts already implied in the paper's title without introducing a new angle or insight."
+  },
+  "email-neuroscience-x-sports-athletics-sultanov.md": {
+    "hypothesis_slug": "2026-08-31-neuroscience-x-sports-athletics",
+    "question": "Can synaptic pruning in the brain enhance athletic performance by eliminating ineffective strategies?",
+    "sharpness": "BORDERLINE",
+    "restates_domain_name": true,
+    "reason": "The question restates a known mechanism of synaptic pruning without delving into specific variables or claims relevant to the paper."
   }
 }
