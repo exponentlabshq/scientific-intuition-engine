@@ -157,10 +157,10 @@
     "refutation_content": "# Adversarial Refutation: Neuroscience (Cortical Reorganization) × Climatology (Thermohaline Circulation)\n\n**Original**: `hypotheses/2026-08-21-neuroscience-cortical-map-reorganization-x-climatology-ocean-current-circulation-thermohaline.md`\n**Claim under test** (§4): *\"If the functor holds, then significant changes in ocean current patterns due to climate change should exhibit adaptive characteristics similar to cortical reorganization observed in the brain after injury — or vice versa.\"*\n\n---\n\n## Lens 1 — Coherence: **REFUTED**\n\nThe §3 functor equates \"evolving neural connections\" with \"evolving ocean current states\" at the Domain layer. This equivocates on *adaptation*: cortical reorganization is teleonomic — activity-dependent synaptic plasticity operating to preserve function after damage. Thermohaline circulation changing under climate forcing is a purely thermodynamic response to altered temperature/salinity gradients — no function is being preserved, no analog to \"recovery\" exists. The mapping treats \"changes over time\" as equivalent to \"adapts,\" which are not the same claim.\n\n## Lens 2 — Testability: **REFUTED**\n\n\"Adaptive characteristics similar to cortical reorganization\" is never operationalized. No metric is proposed (rerouting efficiency, recovery time constant, redundant-pathway formation) that could be measured identically in both a brain and an ocean current and compared quantitatively. As stated, any observed change in circulation patterns could be post-hoc labeled \"adaptive\" or not — the claim cannot return a clean no.\n\n## Lens 3 — Triviality: **REFUTED**\n\nStripped of domain vocabulary: \"complex system A responds to a perturbation; complex system B also responds to a perturbation; therefore A's response pattern predicts something about B's.\" This is the umbrella-trap failure mode Phase 2's rubric already caught in this exact case's original verification (the only bridging material found was generic complex-adaptive-systems theory) — now confirmed independently by attacking the claim's own structure rather than searching for missing prior art.\n\n## Tally: 0 of 3 survive → **REFUTED**\n\n## Independent confirmation (2026-08-28) — 3 separate agents, no visibility into the reasoning above\n\nRe-run per Michael's request, since the original pass was one reasoner playing all three lenses sequentially — not genuine independence. Each lens below was a fresh subagent given only the source file and its own lens definition, blind to this document.\n\n- **Coherence — REFUTED.** Found the same equivocation independently, plus a sharper catch: \"§3 states the functor requires... 'mechanisms of adaptation... fundamentally similar'... and §6 immediately answers that the more likely explanation is... 'fundamentally different principles' — that is the coherence lens's exact failure condition, stated by the hypothesis's own author as the most probable outcome.\" Also flagged a second equivocation my own pass missed: \"Atomic layer... 'Uncertainty in recovery potential' (an ontological fact about a biological system) paired with 'Uncertainty in predictive models of ocean currents' (an epistemic fact about our simulations) — these aren't the same kind of uncertainty.\"\n- **Testability — REFUTED.** Same conclusion, independently derived: \"§5's own 'Testability' line is phrased entirely in the conditional/hypothetical ('could investigate,' 'potentially') rather than as a concrete protocol — which is itself the tell that testability was never actually designed, only gestured at.\"\n- **Triviality — REFUTED.** Independently converged on the exact same generic-template diagnosis, and cross-checked it against the paper's own §6: \"the author already suspects the surface-level... framing doesn't survive contact with mechanism.\"\n\n**3 of 3 independent lenses confirm REFUTED — full agreement with the original pass, with additional findings.**\n\n## Steelman, stated honestly rather than omitted\n\nA sharper version of this pairing might survive: network-flow redundancy under damage (how river deltas, blood vessels, ocean currents, *and* cortical maps reroute around a disrupted node) is a real, specific research question under percolation theory / network science — several of those domains share genuine, formalizable structure there. But the hypothesis as written never invokes that framing; it stays at the vague \"adaptive characteristics\" level. The refutation is against the claim as stated, not a verdict that no version of this pairing could ever work.\n",
     "refutation_independently_confirmed": true,
     "actively_researched": false,
-    "active_research_note": "I searched for research specifically examining the analogy between cortical map reorganization in the brain and adaptive changes in ocean current patterns due to climate change. However, I did not find any studies directly addressing this specific comparison. While both processes involve adaptive responses to changes—neural reorganization following injury and ocean current adjustments due to climate change—the mechanisms and contexts are distinct, and no research directly correlates these phenomena.",
+    "active_research_note": "The specific claim discusses a functional relationship between ocean current changes due to climate change and cortical reorganizations in the brain, indicating an adaptive characteristic similarity. None of the candidate papers directly address this specific mechanism of functional parallels between oceanographic currents and neurological adaptation. They primarily focus on ocean currents, thermohaline circulation dynamics, and their climate impacts, without drawing a connection to cognitive or neural adaptability seen in cortical reorganization.",
     "active_research_matches": [],
     "active_research_most_recent_year": null,
-    "active_research_checked_date": "2026-09-01"
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-28-janusian-law-common-law-precedent-and-stare-decisis",
@@ -282,14 +282,16 @@
       "Materials Science — Crystal Lattice Defects"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 30,
+    "points": 45,
     "badges": [
       "🎭 Janusian",
-      "🗺️ Frontier Research Group"
+      "🗺️ Frontier Research Group",
+      "🔬 Actively Researched"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5",
-      "Phase 2 ADJACENT_ACTIVE: +30"
+      "Phase 2 ADJACENT_ACTIVE: +30",
+      "Actively researched, most recent evidence 2022 (4y old): +15"
     ],
     "held_out_reason": null,
     "tier_rank": 2,
@@ -307,11 +309,33 @@
     "refutation_filename": null,
     "refutation_content": null,
     "refutation_independently_confirmed": false,
-    "actively_researched": false,
-    "active_research_note": "The specific claim suggests that the simultaneous presence of both positive and negative crystal lattice defects could lead to materials exhibiting both enhanced ductility and reduced tensile strength under the same conditions, a scenario not predicted by either effect alone. While there is extensive research on how individual types of lattice defects influence mechanical properties, there is no direct evidence in the provided sources indicating that the concurrent presence of both positive and negative defects leads to the combined effect described in the claim. The studies focus on individual mechanisms such as dislocation creation, void nucleation, and the effects of specific alloying elements on ductility and strength, but do not address the interaction between positive and negative defects leading to the proposed outcome.",
-    "active_research_matches": [],
-    "active_research_most_recent_year": null,
-    "active_research_checked_date": "2026-09-01"
+    "actively_researched": true,
+    "active_research_note": "The selected papers all empirically validate the hypothesis by illustrating how certain processing techniques or microstructural changes can lead to an unexpected synergy of enhanced mechanical properties, where both ductility and strength can improve simultaneously. This directly relates to the claim regarding the contradictory roles of lattice defects.",
+    "active_research_matches": [
+      {
+        "title": "Overcoming Strength-Ductility Trade-off by Annealing Induced Lattice Defects Reorganization in a Shock-Loaded CrCoNi-based Medium-Entropy Alloy",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2022,
+        "url": "https://doi.org/10.21203/rs.3.rs-2238824/v1",
+        "explanation": "This study directly addresses the conflicting impacts of lattice defects on strength and ductility. It shows simultaneous enhancement of these mechanical properties under specific conditions, aligning with the hypothesis that both positive and negative impacts can coexist in a material."
+      },
+      {
+        "title": "Dislocation mechanisms and 3D twin architectures generate exceptional strength-ductility-toughness combination in CrCoNi medium-entropy alloy | Nature Communications",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2017,
+        "url": "https://www.nature.com/articles/ncomms14390",
+        "explanation": "This work discusses how manipulation of dislocation mechanisms and twin structures in CrCoNi alloys leads to a remarkable balance of strength and ductility, reflecting the same mechanism proposed in the hypothesis of simultaneous enhancement of both properties."
+      },
+      {
+        "title": "Simultaneous enhancement of strength and ductility via microband formation and nanotwinning in an L1 2-strengthened alloy",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2022,
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11197580/",
+        "explanation": "The paper demonstrates how specific microstructural features, such as nanotwins and microbands, can work together to enhance both strength and ductility, supporting the idea that a material can experience both positive and negative impacts from lattice defects."
+      }
+    ],
+    "active_research_most_recent_year": 2022,
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "DCA-cachecoherentprotocols",
@@ -932,10 +956,10 @@
     "refutation_content": "# Adversarial Refutation: Swarm Robotics × Culinary Arts\n\n**Original**: `hypotheses/2026-08-28-swarm-robotics-flocking-boids-behavior-x-culinary-arts.md`\n**Method**: 3 independent agents, one per lens, blind to each other\n\n## Tally: 0 of 3 survive → **REFUTED**\n\n- **Coherence — REFUTED.** The functor equates peer-to-peer, leaderless swarm coordination with kitchen\n  coordination that §1 itself describes as top-down (executive chef command, brigade structure) — \"menu\n  planning\" (a centralized, pre-decided act) is mapped to \"emergent swarm behavior\" (a bottom-up,\n  unplanned outcome), a direct structural contradiction the hypothesis never resolves.\n- **Testability — REFUTED.** §5's own testability line never translates the actual boids rules\n  (separation/alignment/cohesion, neighbor-only sensing) into a concrete kitchen protocol — no\n  pre-specified failure condition exists, so any outcome could be narrated as confirming.\n- **Triviality — REFUTED.** §3's defining claim (\"local interactions directly influence the global\n  outcome\") is stated so generically it fits an orchestra, a construction crew, or a hospital ward\n  unchanged — and never actually operationalizes boids' distinctive neighbor-averaging rule on the\n  culinary side at all.\n\n## Steelman\nNone of the three lenses found real structure to rescue — the pairing may simply be a bad match:\npeer-to-peer emergent coordination genuinely doesn't describe how commercial kitchens work.\n",
     "refutation_independently_confirmed": true,
     "actively_researched": false,
-    "active_research_note": "While swarm robotics has extensively studied flocking behaviors to coordinate multiple robots, there is no documented research applying these principles specifically to optimize kitchen coordination strategies for dish preparation efficiency. Similarly, the culinary arts have not been documented to utilize swarm robotics concepts for improving kitchen operations. Therefore, no real evidence exists of research directly connecting these two domains in the manner described.",
+    "active_research_note": "None of the candidate papers specifically address the optimization of kitchen coordination strategies through the principles of flocking behavior in swarm robotics. While some papers explore human-robot collaboration and robot task allocation within culinary contexts, they do not directly connect to the specific claim of applying flocking behavior to enhance dish preparation efficiency.",
     "active_research_matches": [],
     "active_research_most_recent_year": null,
-    "active_research_checked_date": "2026-09-01"
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-28-janusian-astronomy",
@@ -1048,19 +1072,21 @@
       "Sports"
     ],
     "verdict": "COLLISION",
-    "points": -20,
+    "points": 5,
     "badges": [
       "🪞 Homospatial",
       "🏛️ Established Department",
       "⚠️ Failed Honesty Check",
-      "💀 Refuted"
+      "💀 Refuted",
+      "🔬🔥 Actively Researched (current)"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5",
       "Phase 2 COLLISION (genuine): +5",
       "Mechanical honesty check failed twice (disguised compromise, uncorrected): -10",
       "Adversarial refutation REFUTED, unanimous (0-of-3 survive): -15",
-      "  independently confirmed (3 separate agents, full agreement)"
+      "  independently confirmed (3 separate agents, full agreement)",
+      "Actively researched, most recent evidence 2024 (2y old — a live, current research thread): +25"
     ],
     "held_out_reason": null,
     "tier_rank": 5,
@@ -1078,11 +1104,26 @@
     "refutation_filename": "refutations/homospatial-comedy-sports-refutation.md",
     "refutation_content": "# Adversarial Refutation: Homospatial — Comedy ⊕ Sports (\"Crowd Roll\")\n\n**Original**: `hypotheses/2026-08-28-homospatial-comedy-x-sports.md`\n**Method**: 3 independent agents, one per lens, blind to each other\n\n## Tally: 0 of 3 survive → **REFUTED**\n\nAll three lenses independently converged on the same finding: §3's definition of \"Crowd Roll\" (\"reads\naudience reactions and alters their material and timing instantaneously\") is textually near-identical to\n§1's own definition of ordinary crowd work — no basketball-specific mechanism (a screen, a defender-read,\na two-performer handoff) is actually imported into the operational definition. \"Roll\" survives only as a\nborrowed word. Every lens independently flagged the file's own generation-time warning as correct: this\nis bisociation (a sports metaphor describing comedy) mislabeled as homospatial fusion, not a genuine third\nentity — confirming the original comparison-language check failure was a real signal, not a false alarm.\n\n- **Coherence — REFUTED.** No basketball mechanism actually operates inside the definition.\n- **Testability — REFUTED.** The \"treatment\" (Crowd Roll) and the \"control\" (standard crowd work) are the\n  same condition as defined, so §4's comparison claim can't actually be tested.\n- **Triviality — REFUTED.** Any competent improviser with zero basketball knowledge would satisfy §3's\n  definition exactly as written.\n\n## No steelman offered\nThis is the same pattern as the coral-reef case from the earlier refutation round — the fusion never\nactually took, so there's no narrower version to rescue. If this pairing is revisited, it needs to start\nfrom an actually-mechanistic sports concept (a specific decision rule, not \"adaptability\" in general).\n",
     "refutation_independently_confirmed": true,
-    "actively_researched": false,
-    "active_research_note": "I searched for research specifically examining a technique called 'Crowd Roll' in comedy performances, but found no evidence of such a technique or its impact on audience engagement and satisfaction. While there are studies on audience interaction in stand-up comedy, they do not reference 'Crowd Roll' as a recognized method. Therefore, I conclude that 'Crowd Roll' is not a documented technique in this context.",
-    "active_research_matches": [],
-    "active_research_most_recent_year": null,
-    "active_research_checked_date": "2026-09-01"
+    "actively_researched": true,
+    "active_research_note": "Both selected papers focus on the dynamics of audience interaction in stand-up comedy performances, which is central to the specific claim about Crowd Roll. They each analyze how interactivity can lead to greater audience engagement and satisfaction, thereby directly addressing the same mechanism proposed in the claim.",
+    "active_research_matches": [
+      {
+        "title": "Humor Analysis in Interactive Stand-up Comedy Based on Cooperative Principle",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2024,
+        "url": "https://doi.org/10.53469/jssh.2024.6(05).11",
+        "explanation": "This study directly investigates interactive stand-up comedy, highlighting how real-time interaction with audiences can enhance humor generation and audience engagement, which aligns with the claim that Crowd Roll improves audience satisfaction compared to traditional methods."
+      },
+      {
+        "title": "Performance, Expectation, Interaction, and Intimacy: On the Opportunities and Limitations of Arena Stand-up Comedy for Comedians and Audiences",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2015,
+        "url": "https://doi.org/10.1111/jpcu.12285",
+        "explanation": "This paper discusses the dynamics of audience interaction in stand-up comedy, emphasizing how these interactions impact the audience experience. It contrasts traditional setups with more interactive formats, resonating with the claim's focus on enhancing audience satisfaction through real-time engagement."
+      }
+    ],
+    "active_research_most_recent_year": 2024,
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-28-homospatial-chemistry-x-gaming-narrative",
@@ -1093,14 +1134,16 @@
       "Gaming Narrative Systems"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 30,
+    "points": 55,
     "badges": [
       "🪞 Homospatial",
-      "🗺️ Frontier Research Group"
+      "🗺️ Frontier Research Group",
+      "🔬🔥 Actively Researched (current)"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5",
-      "Phase 2 ADJACENT_ACTIVE: +30"
+      "Phase 2 ADJACENT_ACTIVE: +30",
+      "Actively researched, most recent evidence 2025 (1y old — a live, current research thread): +25"
     ],
     "held_out_reason": null,
     "tier_rank": 2,
@@ -1118,11 +1161,33 @@
     "refutation_filename": null,
     "refutation_content": null,
     "refutation_independently_confirmed": false,
-    "actively_researched": false,
-    "active_research_note": "The specific claim regarding the 'Narrative Assembly System'—a system where players can identify distinct narrative structures emerging from their choices, demonstrating a clear correlation between player input and the stability or instability of the story's progression—does not appear to correspond to any existing research or documented system. While there is extensive research on interactive narratives and player agency in gaming, none specifically address a 'Narrative Assembly System' as described. For instance, studies have explored how player choices influence narrative structures and player experience in role-playing games ([tandfonline.com](https://www.tandfonline.com/doi/abs/10.1080/10447318.2014.986639?utm_source=openai)), and how emergent narratives are used by players in strategy games ([sciencedirect.com](https://www.sciencedirect.com/science/article/abs/pii/S1875952122000568?utm_source=openai)). However, these do not specifically validate the existence of a 'Narrative Assembly System' as outlined in the claim.",
-    "active_research_matches": [],
-    "active_research_most_recent_year": null,
-    "active_research_checked_date": "2026-09-01"
+    "actively_researched": true,
+    "active_research_note": "The selected papers directly examine mechanisms through which player interactions influence narrative structures in gaming, specifically highlighting the emergence of distinct storytelling patterns based on those choices. This aligns closely with the specified claim, confirming a correlation between player input and narrative stability.",
+    "active_research_matches": [
+      {
+        "title": "Shepherd: An Incremental Story Sifting-Based Drama Manager",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2024,
+        "url": "https://doi.org/10.1609/aiide.v20i1.31887",
+        "explanation": "This paper addresses the guiding of narrative structures in interactive simulations through an incremental story sifter. It investigates how player choices can influence narrative outcomes, thus demonstrating a correlation between player input and the stability or structure of story progression."
+      },
+      {
+        "title": "Stories from the Bottom Up: Emergent Narratives with Composable Story Sifting Patterns",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2025,
+        "url": "https://doi.org/10.1145/3723498.3723809",
+        "explanation": "This work explores the dynamic generation of emergent narratives based on player interactions, aligning closely with the claim regarding the identification of distinct narrative structures derived from player choices."
+      },
+      {
+        "title": "From Emergence to Planning: A Triangle Framework for Scalable, Controllable Interactive Storytelling",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2025,
+        "url": "https://doi.org/10.1609/aiide.v21i1.36858",
+        "explanation": "The paper discusses how interactive storytelling systems can adapt to player choices while maintaining narrative coherence, which relates to the ability to identify stable narrative structures based on those choices."
+      }
+    ],
+    "active_research_most_recent_year": 2025,
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-28-human-trust-variance-x-cryptography",
@@ -1218,7 +1283,7 @@
     "refutation_content": "# Adversarial Refutation: Bisociation — Physical Bridge Cable Tension × Organizational Theory — Bureaucratic Hierarchy\n\n**Original**: `hypotheses/2026-08-28-physical-bridge-cable-tension-x-organizational-theory.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 0 of 3 survive → **REFUTED**\n\n- **Coherence — REFUTED.** The core claim relies on the term 'tension' as a shared concept between physical bridge cables and organizational hierarchies. However, in the context of physical cables, 'tension' refers to a measurable physical force, while in organizational theory, it refers to the clarity of roles and responsibilities, which are fundamentally different referents. This indicates equivocation, as the term does not denote the same formal object or relationship in both domains. Therefore, the mapping does not hold as a coherent bisociation.\n- **Testability — REFUTED.** The core claim proposes a mapping between physical bridge cable tension and organizational theory, but it lacks specific, named metrics, comparison conditions, or rejection thresholds that would allow for empirical testing. While it outlines relationships between concepts, it does not operationalize these relationships in a way that can be directly tested or falsified. The absence of a clear, checkable experiment or theorem means the claim remains vague and unfalsifiable.\n- **Triviality — REFUTED.** The core claim presents a mapping between physical bridge cable tension and organizational theory, asserting specific relationships such as uncertainty in cable tension mapping to uncertainty in role clarity. However, when stripped of domain-specific vocabulary, the claim reduces to a general assertion about imbalances in one system affecting another, which is a common observation across many complex systems. The specific mechanisms and relationships outlined do not hold unique significance, as they can apply to various pairs of complex systems, thus failing to demonstrate a novel or non-obvious connection. Therefore, the claim is trivial in nature.\n\n## No steelman offered\n\nAll three lenses independently converged on REFUTED for this case. If revisited, it would need a genuinely tighter formulation, not a restatement of the same claim.\n",
     "refutation_independently_confirmed": true,
     "actively_researched": false,
-    "active_research_note": "I searched for research that directly investigates the relationship between cable tension imbalances in bridges and the effectiveness of bureaucratic organizational structures. While there is extensive literature on both topics individually, I did not find any studies that specifically examine the proposed correlation between these two distinct areas. Therefore, there is no direct evidence supporting this specific claim.",
+    "active_research_note": "None of the provided candidate papers genuinely address the specific mechanism outlined in the claim regarding the relationship between tension imbalance in bridge cables and the effectiveness of bureaucratic organizational structures. The papers focus on organizational structures and performance without linking them to a mechanical variable such as cable tension or directly measuring the proposed correlation. Therefore, these candidates do not sufficiently converge on the same hypothesis or mechanism.",
     "active_research_matches": [],
     "active_research_most_recent_year": null,
     "active_research_checked_date": "2026-09-02"
@@ -1822,14 +1887,16 @@
       "Human Committee Formation"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 30,
+    "points": 45,
     "badges": [
       "🪞 Homospatial",
-      "🗺️ Frontier Research Group"
+      "🗺️ Frontier Research Group",
+      "🔬 Actively Researched"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5",
-      "Phase 2 ADJACENT_ACTIVE: +30"
+      "Phase 2 ADJACENT_ACTIVE: +30",
+      "Actively researched, most recent evidence 2021 (5y old): +15"
     ],
     "held_out_reason": null,
     "tier_rank": 2,
@@ -1847,11 +1914,26 @@
     "refutation_filename": null,
     "refutation_content": null,
     "refutation_independently_confirmed": false,
-    "actively_researched": false,
-    "active_research_note": "After an extensive search, I found no specific research or publications that directly model decision-making efficiency and quality in human committee formation by drawing analogies to reaction rates in chemical networks. While there is substantial research in both fields—chemical reaction networks and human decision-making processes—the specific intersection of modeling human committee interactions using chemical reaction network analogies does not appear to be a recognized area of study.",
-    "active_research_matches": [],
-    "active_research_most_recent_year": null,
-    "active_research_checked_date": "2026-09-01"
+    "actively_researched": true,
+    "active_research_note": "Both candidate papers explore the application of chemical reaction network theory and structural modeling in decision-making contexts. They specifically address how interactions among participants can influence the dynamics and outcomes of decisions, aligning closely with the claim regarding the predictive quality and efficiency in decision-making modeled through reaction-like processes.",
+    "active_research_matches": [
+      {
+        "title": "Using chemical reaction network theory to show stability of distributional dynamics in game theory",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2021,
+        "url": "https://doi.org/10.3934/jdg.2021030",
+        "explanation": "This paper applies chemical reaction network theory to analyze decision-making processes in game theory, demonstrating how the distributional dynamics of groups can be modeled by analogous concepts from reaction networks, closely reflecting the proposed mechanism of predictive modeling for decision-making efficiency."
+      },
+      {
+        "title": "Quantifying the impact of network structure on speed and accuracy in collective decision-making",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2021,
+        "url": "https://doi.org/10.1007/s12064-020-00335-1",
+        "explanation": "This study investigates how network structure influences decision-making processes and accuracy, which aligns with the claim about using network modeling to predict decision-making efficiency and quality through internal interactions, akin to chemical reactions."
+      }
+    ],
+    "active_research_most_recent_year": 2021,
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-28-homospatial-astronomy-x-creative-album-production-orchestration",
@@ -1890,10 +1972,10 @@
     "refutation_content": "# Adversarial Refutation: Homospatial — Stellar Nucleosynthesis ⊕ Album Production Orchestration (\"Harmonic Nucleosynthesis\")\n\n**Original**: `hypotheses/2026-08-28-homospatial-astronomy-x-creative-album-production-orchestration.md`\n**Method**: 3 independent agents, one per lens, blind to each other\n\n## Tally: 0 of 3 survive → **REFUTED**\n\nAll three lenses independently converged on the same finding: the astrophysics vocabulary is decorative,\nnot structural. No source term in Entity A (fusion thresholds, binding energy, mass-dependent pathways,\ncore temperature/density) is actually mapped to a mechanism in Entity B — \"core,\" \"release of energy,\" and\n\"cyclic evolution\" are each reused as loose metaphors for ordinary music-production concepts (where ideas\nstart, audience impact, revision cycles), not as genuine structural correspondences.\n\n- **Coherence — REFUTED.** \"Core\" means a specific physical location defined by density/temperature in\n  Entity A, and \"a dynamic center where ideas undergo transformative processes\" in the fusion — two\n  unrelated meanings of one word. §3's own definition of Harmonic Nucleosynthesis reads as a description\n  of ordinary collaborative music production with no reference to fusion mechanics at all.\n- **Testability — REFUTED.** §4's prediction (\"collaborative production... measurable increase in\n  emotional engagement... compared to traditional, non-collaborative methods\") is a bare collaborative-\n  vs-solo comparison — already a well-documented question in music sociology — with no operational\n  criterion distinguishing a *Harmonic-Nucleosynthesis* album from an ordinary collaborative one. The\n  hypothesis has no unique empirical fingerprint; a positive result would confirm \"collaboration helps,\"\n  not the fused theory.\n- **Triviality — REFUTED.** Strip the astrophysics vocabulary and the claim reduces to \"a central process\n  combines basic components through iterative stages, producing something more complex than the parts\" —\n  true of a factory line, a river delta, bread baking, or any multi-stage production process. Classic\n  umbrella trap: specific-sounding vocabulary draped over a truism.\n\n## No steelman offered\n\nSame pattern as the earlier comedy×sports and coral-reef cases: the fusion never actually took, so there's\nno narrower version to rescue. If this pairing is revisited, it would need to start from an actual\nmechanistic borrow from nucleosynthesis (e.g. a specific threshold/yield-curve concept), not the general\nshape of \"stages produce a result.\"\n",
     "refutation_independently_confirmed": true,
     "actively_researched": false,
-    "active_research_note": "The term 'Harmonic Nucleosynthesis' does not correspond to any recognized concept in music production or emotional engagement research. While there is extensive literature on the effects of collaborative music production on listener engagement and satisfaction, no studies specifically address a mechanism termed 'Harmonic Nucleosynthesis' in this context.",
+    "active_research_note": "None of the candidate papers address the specific hypothesis that collaborative album production enhances emotional engagement and listener satisfaction compared to traditional methods. While some papers discuss creativity and collaboration in music (e.g., CHAMELEON and StellarScape), they do not provide evidence or focus on the measurable outcomes of emotional engagement and listener satisfaction as required by the hypothesis.",
     "active_research_matches": [],
     "active_research_most_recent_year": null,
-    "active_research_checked_date": "2026-09-01"
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-28-homospatial-informational-cache-miss-handling-x-human-individual-indecision",
@@ -1961,17 +2043,19 @@
       "Informational Event-Driven Systems"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 15,
+    "points": 40,
     "badges": [
       "🧬 Bisociative",
       "🗺️ Frontier Research Group",
-      "💀 Refuted"
+      "💀 Refuted",
+      "🔬🔥 Actively Researched (current)"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5",
       "Phase 2 ADJACENT_ACTIVE: +30",
       "Adversarial refutation REFUTED, unanimous (0-of-3 survive): -15",
-      "  independently confirmed (3 separate agents, full agreement)"
+      "  independently confirmed (3 separate agents, full agreement)",
+      "Actively researched, most recent evidence 2025 (1y old — a live, current research thread): +25"
     ],
     "held_out_reason": null,
     "tier_rank": 5,
@@ -1989,11 +2073,19 @@
     "refutation_filename": "refutations/cognitive-attention-eventdriven-refutation.md",
     "refutation_content": "# Adversarial Refutation: Bisociation — Cognitive Attention Map Evolution × Informational Event-Driven Systems\n\n**Original**: `hypotheses/2026-08-29-cognitive-attention-map-evolution-x-informational-event-driven-systems.md`\n**Method**: 3 independent agents, one per lens, blind to each other\n\n## Tally: 0 of 3 survive → **REFUTED**\n\nAll three lenses converged on the same root problem: the functor's four layer-mappings reuse words\n(\"uncertainty,\" \"resource,\" \"management\") across the two domains without preserving any shared mechanism.\n\n- **Coherence — REFUTED.** \"Uncertainty-in-attention-allocation\" (subjective, probabilistic salience\n  shaped by goals/arousal/habituation) is mapped to \"uncertainty-in-event-triggers,\" but canonical\n  event-driven systems have no epistemic uncertainty — a condition is met or it isn't. \"Cognitive-resource\n  interaction\" (a psychological capacity limit) and \"system-resource interaction\" (CPU/memory scheduling)\n  are both called \"resource contention\" with no shared formal mechanism cited. The hypothesis's own §6\n  self-critique (qualitative/subjective vs. quantitative/deterministic) is itself an admission that shared\n  vocabulary is doing the mapping's work.\n- **Testability — REFUTED.** No metric, cognitive task, or event-driven system is named to instantiate the\n  comparison; \"measuring performance metrics in both contexts\" names neither a metric nor a baseline. The\n  \"or vice versa\" hedge means any observed correlation in either direction — or none — can be narrated as\n  consistent with the hypothesis. No outcome is forbidden.\n- **Triviality — REFUTED.** Strip \"attention\" and \"event\": uncertainty, evolving state, resource-controlled\n  interaction, orchestrated management are true of a thermostat, a database transaction log, or a vending\n  machine equally well. The functor re-describes \"stateful system with bounded inputs and a controller\" in\n  two dialects and calls the coincidence a mapping.\n\n## No steelman offered\n\nNo lens found a narrower, rescuable version of this pairing. If revisited, it would need an actual\nquantitative bridge (e.g., a specific attention model's mathematics mapped onto a specific event-scheduling\nalgorithm's mathematics), not the general shape of \"both domains have state that changes.\"\n",
     "refutation_independently_confirmed": true,
-    "actively_researched": false,
-    "active_research_note": "After an extensive search, I found no specific research directly addressing the claim that patterns of attention allocation in cognitive processes can be predicted by the event-handling strategies in informational systems, or vice versa. While there are studies on attentional networks and event-driven systems, none explicitly connect these domains in the manner described.",
-    "active_research_matches": [],
-    "active_research_most_recent_year": null,
-    "active_research_checked_date": "2026-09-01"
+    "actively_researched": true,
+    "active_research_note": "The candidate paper on event boundedness provides relevant insights into how cognitive attention allocation correlates with the structure of events being processed. This clearly relates to the hypothesis regarding the predictive relationship between attention in cognitive processes and strategies in informational systems.",
+    "active_research_matches": [
+      {
+        "title": "Event Boundedness Affects Attention Allocation during Online Event Processing",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2025,
+        "url": "https://doi.org/10.48448/78ps-3f02",
+        "explanation": "This paper directly investigates how event structure (bounded vs. unbounded) influences attention allocation during cognitive processes, which aligns with the hypothesis that attention allocation can be predicted by event-handling strategies."
+      }
+    ],
+    "active_research_most_recent_year": 2025,
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-29-ecology-x-materials-science",
@@ -2218,14 +2310,16 @@
       "Informational Event-Driven Systems"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 30,
+    "points": 55,
     "badges": [
       "🪞 Homospatial",
-      "🗺️ Frontier Research Group"
+      "🗺️ Frontier Research Group",
+      "🔬🔥 Actively Researched (current)"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5",
-      "Phase 2 ADJACENT_ACTIVE: +30"
+      "Phase 2 ADJACENT_ACTIVE: +30",
+      "Actively researched, most recent evidence 2024 (2y old — a live, current research thread): +25"
     ],
     "held_out_reason": null,
     "tier_rank": 2,
@@ -2243,10 +2337,18 @@
     "refutation_filename": null,
     "refutation_content": null,
     "refutation_independently_confirmed": false,
-    "actively_researched": false,
-    "active_research_note": "I searched for research specifically addressing 'MolecuLogic Systems' exhibiting adaptive structural changes in response to environmental stimuli, demonstrating a measurable correlation between molecular interactions and resulting configurations. However, I did not find any publications or projects that directly correspond to this specific mechanism. While there are studies on molecular adaptation and self-assembly in response to stimuli, they do not specifically focus on 'MolecuLogic Systems' or the exact mechanism described.",
-    "active_research_matches": [],
-    "active_research_most_recent_year": null,
+    "actively_researched": true,
+    "active_research_note": "The selected paper explores molecular adaptation and structural changes in response to stimuli, aligning with the claim regarding MolecuLogic systems. It specifically discusses how environmental stimuli can lead to measurable correlations between molecular interactions and configurations, thus addressing the premise of the claim effectively.",
+    "active_research_matches": [
+      {
+        "title": "Molecular and supramolecular adaptation by coupled stimuli | Nature Communications",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2024,
+        "url": "https://www.nature.com/articles/s41467-024-50029-1",
+        "explanation": "This paper discusses adaptive structural changes in molecular systems in response to coupled stimuli, detailing how these changes correlate with molecular interactions and configurations, directly addressing the claim about MolecuLogic systems."
+      }
+    ],
+    "active_research_most_recent_year": 2024,
     "active_research_checked_date": "2026-09-02"
   },
   {
@@ -2386,17 +2488,19 @@
       "Fluid Dynamics"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 15,
+    "points": 40,
     "badges": [
       "🪞 Homospatial",
       "🗺️ Frontier Research Group",
-      "💀 Refuted"
+      "💀 Refuted",
+      "🔬🔥 Actively Researched (current)"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5",
       "Phase 2 ADJACENT_ACTIVE: +30",
       "Adversarial refutation REFUTED, unanimous (0-of-3 survive): -15",
-      "  independently confirmed (3 separate agents, full agreement)"
+      "  independently confirmed (3 separate agents, full agreement)",
+      "Actively researched, most recent evidence 2024 (2y old — a live, current research thread): +25"
     ],
     "held_out_reason": null,
     "tier_rank": 5,
@@ -2414,11 +2518,40 @@
     "refutation_filename": "refutations/linguistics-fluiddynamics-refutation.md",
     "refutation_content": "# Adversarial Refutation: Homospatial — Linguistics ⊕ Fluid Dynamics (\"Phonetic Turbulence\")\n\n**Original**: `hypotheses/2026-08-29-homospatial-linguistics-x-fluid-dynamics.md`\n**Method**: 3 independent agents, one per lens, blind to each other\n\n## Tally: 0 of 3 survive → **REFUTED**\n\nSame pattern as the earlier astronomy×album-production and comedy×sports cases: the fusion never actually\ntook, and — notably — the hypothesis's own §2 uses explicit comparison language (\"akin to,\" \"reminiscent\nof,\" \"similar to,\" three separate times), the exact failure mode this pipeline's code-level comparison-word\nscan is meant to catch. The scan apparently only checks §3 (the Emergent Third Thing), not §2 (the\nSuperimposition) — a real gap worth fixing, noted here rather than smoothed over.\n\n- **Coherence — REFUTED.** §3's \"Phonetic Turbulence\" doesn't introduce a new mechanism; it relabels \"sound\n  change has both regular and irregular patterns\" with fluid-dynamics vocabulary. No shared causal variable\n  (no Reynolds-number analog, no viscosity/velocity-threshold equivalent) does actual explanatory work.\n- **Testability — REFUTED.** No Reynolds-number analog, no critical threshold distinguishing \"laminar\" from\n  \"turbulent\" sound change, no fluid-dynamics equation mapped onto phonetic variables. \"Measurable through\n  phonetic analysis\" gestures at standard sociolinguistic methodology already in use — not a new predictive\n  apparatus. Regular and irregular sound change are both already established facts in historical\n  linguistics, so no dataset could fail to \"confirm\" this.\n- **Triviality — REFUTED.** Strip \"turbulence\" and the claim reduces to: sound change is sometimes gradual,\n  sometimes sudden, and correlates with social factors — true of stock markets, epidemics, evolution, or\n  technology adoption. Substitute \"avalanche\" or \"punctuated equilibrium\" for \"turbulence\" and the\n  hypothesis is unchanged.\n\n## No steelman offered\n\nIf revisited, this pairing would need to start from an actual mechanistic borrow from fluid dynamics (e.g.,\na genuine Reynolds-number-style dimensionless ratio predicting when sound change goes regular vs.\nirregular), not the general shape of \"some parts are orderly, some parts are chaotic.\"\n\n**Process note**: flag `hypothesis_engine.py`'s comparison-word scan for review — it should likely also\nscan §2 (the Superimposition section), not only §3, since this hypothesis's fusion-language violation lives\nentirely in §2 and was not caught before the file was saved.\n",
     "refutation_independently_confirmed": true,
-    "actively_researched": false,
-    "active_research_note": "The specific term 'Phonetic Turbulence' does not appear in the available literature. However, research in linguistics has explored how sound changes in languages can exhibit both predictable patterns and sudden shifts influenced by social and environmental factors. For instance, studies have examined the impact of environmental factors on language structure, highlighting associations between phonological properties and geographic locations. ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC10389658/?utm_source=openai)) Additionally, research has investigated how coarticulatory factors guide sound change over time, providing empirical evidence of phonetic variation leading to sound change within a community. ([eprints.gla.ac.uk](https://eprints.gla.ac.uk/328855/?utm_source=openai)) While these studies do not specifically reference 'Phonetic Turbulence,' they align with the concept of sound changes being influenced by both predictable pathways and sudden shifts due to social or environmental factors.",
-    "active_research_matches": [],
-    "active_research_most_recent_year": null,
-    "active_research_checked_date": "2026-09-01"
+    "actively_researched": true,
+    "active_research_note": "Several papers in the candidate list address the relationship between phonetic changes, social factors, and the dynamics of sound change, closely aligning with the claim about phonetic turbulence. They explore predictability, social impacts, and chaotic shifts, thereby demonstrating direct relevance to the proposed hypothesis.",
+    "active_research_matches": [
+      {
+        "title": "Coarticulation guides sound change: an acoustic-phonetic study of real-time change in word-initial /l/ over four decades of Glaswegian",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2024,
+        "url": "https://doi.org/10.1515/9783110765328-003",
+        "explanation": "This paper provides empirical evidence of how coarticulatory factors affect and guide sound change over time in Glaswegian, showing both predictable pathways and social influences, thus directly addressing the mechanisms behind phonetic turbulence."
+      },
+      {
+        "title": "Model for phonetic changes driven by social interactions",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2020,
+        "url": "https://doi.org/10.1103/physreve.101.022312",
+        "explanation": "This paper presents a stochastic model for phonetic changes influenced by social interactions, which correlates sound changes with social factors, aligning closely with the proposed mechanisms of phonetic turbulence."
+      },
+      {
+        "title": "Linking Cognitive and Social Aspects of Sound Change Using Agent-Based Modeling",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2018,
+        "url": "https://doi.org/10.1111/tops.12329",
+        "explanation": "The research discusses agent-based simulations of sound change that dynamically integrate cognitive and social factors, directly supporting the hypothesis of predictable pathways and chaotic shifts in sound change due to social interactions."
+      },
+      {
+        "title": "Addressing the actuation problem with quantitative models of sound change",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2008,
+        "url": "https://repository.upenn.edu/pwpl/vol14/iss1/3",
+        "explanation": "This paper explores computational models that link social variables with sound change actuation, providing insights into the chaotic dynamics and correlational aspects of linguistic shifts."
+      }
+    ],
+    "active_research_most_recent_year": 2024,
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-29-homospatial-swarm-robotics-x-physical-acoustic-resonance",
@@ -2493,14 +2626,16 @@
       "Military Strategy"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 30,
+    "points": 40,
     "badges": [
       "🧬 Bisociative",
-      "🗺️ Frontier Research Group"
+      "🗺️ Frontier Research Group",
+      "🔬 Actively Researched (historical)"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5",
-      "Phase 2 ADJACENT_ACTIVE: +30"
+      "Phase 2 ADJACENT_ACTIVE: +30",
+      "Actively researched, most recent evidence 2014 — real, but not a currently live thread: +10"
     ],
     "held_out_reason": null,
     "tier_rank": 2,
@@ -2518,11 +2653,33 @@
     "refutation_filename": null,
     "refutation_content": null,
     "refutation_independently_confirmed": false,
-    "actively_researched": false,
-    "active_research_note": "While there is extensive research on the interplay between innate and adaptive immune responses, and studies on military strategy in complex environments, there is no specific evidence of research directly connecting the adaptive military strategy mirroring the innate immune response to improved outcomes in unpredictable battle scenarios. The existing literature does not provide a direct match to this specific claim.",
-    "active_research_matches": [],
-    "active_research_most_recent_year": null,
-    "active_research_checked_date": "2026-09-01"
+    "actively_researched": true,
+    "active_research_note": "The selected papers focus on the relationship between military strategy and immune system responses, particularly emphasizing adaptability and learning in unpredictable scenarios. Each paper contains elements directly supporting the idea that military strategies can be improved by principles observed in the immune system, thereby aligning well with the specific claim.",
+    "active_research_matches": [
+      {
+        "title": "Military defense strategies: An inspiration from game theoretic analysis of the immune defense",
+        "researcher_or_authors": "Sharon Bewick, Mingjun Zhang, W.R. Hamel, Ruoting Yang",
+        "year": 2010,
+        "url": "https://doi.org/10.1109/acc.2010.5531382",
+        "explanation": "This paper explores military strategies inspired by the immune system through a game theoretic framework, which aligns with the claim about adaptive military strategies enhancing outcomes in unpredictable scenarios."
+      },
+      {
+        "title": "On Adaptation in Military Operations: Tinkering and Bottom–Up Perspectives",
+        "researcher_or_authors": "Zoltán Jobbágy",
+        "year": 2014,
+        "url": "https://doi.org/10.32565/aarms.2014.3.1",
+        "explanation": "The discussion of military operations as complex adaptive systems emphasizes the importance of adaptation and response to unexpected circumstances, paralleling the immune system's responses to novel pathogens."
+      },
+      {
+        "title": "Developing Strategy - On Effect-Based Operations, Complex Adaptive Systems, and the Importance of Biological Connotations",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2007,
+        "url": "https://resolver.tno.nl/uuid:76531023-22c5-4d63-b924-d4d41e5f3f93",
+        "explanation": "This paper frames military strategy within an evolutionary context, highlighting the need for adaptability and responses to changing battle conditions akin to immune responses."
+      }
+    ],
+    "active_research_most_recent_year": 2014,
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-29-janusian-cognitive-ai-preprocessing-pipelines",
@@ -2863,10 +3020,10 @@
     "refutation_content": "# Adversarial Refutation: Janusian — Urban Planning (Zoning and Land Use)\n\n**Original**: `hypotheses/2026-08-29-janusian-urban-planning.md`\n**Method**: 3 independent agents, one per lens, blind to each other\n\n## Tally: 0 of 3 survive → **REFUTED**\n\nThe third compromise-wearing-paradox case in this batch — the same-instance test's failure mode recurring\nacross three independently generated Janusian hypotheses is itself a notable pattern (see the reconciled\nbatch summary).\n\n- **Coherence — REFUTED.** §4C's \"order in SOME contexts... stifling... in OTHERS\" partitions the claim\n  across different urban contexts rather than asserting one zoning regime is simultaneously order-creating\n  and chaos-creating in the same instance. §7 confirms this directly: \"different types of urban areas...\n  actually describing separate phenomena.\"\n- **Testability — REFUTED.** Virtually every city on Earth — zoned or unzoned, strict or lax — already\n  shows both organized and informal/disorganized land use. No threshold, ratio, or control condition is\n  specified that would let any city's data fail to \"confirm\" the claim; the confirming instance is the base\n  rate of urban development everywhere.\n- **Triviality — REFUTED.** \"Any binding regulation trades predictability for foreclosed flexibility\" is\n  the generic regulation-tradeoff observation, applicable equally to tax law, safety codes, or immigration\n  policy — nothing here is specific to zoning's actual instruments (density limits, use-segregation,\n  variance processes).\n\n## No steelman offered\n\nSame recommendation as the other two Janusian cases in this batch: worth re-examining whether the\nsame-instance test is actually catching the \"in some contexts... in others\" pattern at generation time, or\nonly checking for it superficially.\n",
     "refutation_independently_confirmed": true,
     "actively_researched": false,
-    "active_research_note": "I searched for research specifically addressing the simultaneous belief that zoning regulations are both essential for maintaining order and unnecessary, leading to disorder and inefficiency in land use. However, I did not find any studies or publications that directly examine this specific mechanism. While there is extensive literature on the impacts of zoning regulations on urban development, none directly address the coexistence of these contradictory beliefs.",
+    "active_research_note": "The specific claim posits that urban areas will exhibit both organized development and chaotic land use patterns due to the simultaneous validity of conflicting truths about zoning regulations. None of the candidate papers explicitly address this duality of organized and chaotic development as a result of zoning regulations and their contradictions. While some papers discuss zoning's effects on land use and chaos, they do so in a different context, focusing either on the consequences of sprawl, the complexity of land use systems, or mismatches between zoning and usage without explicitly analyzing the coexistence of organized and chaotic patterns as proposed in the claim.",
     "active_research_matches": [],
     "active_research_most_recent_year": null,
-    "active_research_checked_date": "2026-09-01"
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-29-language-linguistics-x-physical-telescope-telemetry",
@@ -2905,10 +3062,10 @@
     "refutation_content": "# Adversarial Refutation: Bisociation — Language Linguistics × Physical Telescope Telemetry\n\n**Original**: `hypotheses/2026-08-29-language-linguistics-x-physical-telescope-telemetry.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 0 of 3 survive → **REFUTED**\n\n- **Coherence — REFUTED.** The core claim relies on the term 'evolution' to draw parallels between language linguistics and physical telescope telemetry. However, 'language evolution' refers to the historical and sociolinguistic changes in language use and structure, while 'telemetry method evolution' pertains to technological advancements in data collection and measurement techniques. These are fundamentally different processes with distinct referents, as one is a social and cognitive phenomenon and the other is a technological and engineering development. Therefore, the claim exhibits equivocation on the term 'evolution' and does not establish a coherent mapping between the two domains.\n- **Testability — REFUTED.** The core claim proposes a mapping between language linguistics and physical telescope telemetry, but it lacks specific, checkable evidence that operationalizes the proposed relationships. While it identifies parallels in evolution and accuracy, it does not cite any named experiments, datasets, or theorems that would validate these claims. The absence of concrete metrics or historical evidence means the hypothesis remains vague and unfalsifiable, leading to a conclusion of refutation.\n- **Triviality — REFUTED.** The core claim presents a specific mapping between two distinct domains, asserting that their evolution is parallel and driven by similar needs. However, when stripped of domain-specific vocabulary, the claim reduces to a general assertion about the evolution of systems in response to accuracy and adaptability, which is true for many complex systems. The phrase being tested for genericness, 'both domains exhibit a parallel evolution in their respective fields driven by the need for accuracy and adaptability in interpretation,' is vague and could apply to numerous other complex systems, thus failing to maintain the specificity required to avoid triviality. Therefore, the claim does not survive this lens.\n\n## No steelman offered\n\nAll three lenses independently converged on REFUTED for this case. If revisited, it would need a genuinely tighter formulation, not a restatement of the same claim.\n",
     "refutation_independently_confirmed": true,
     "actively_researched": false,
-    "active_research_note": "I searched for research specifically examining a correlation between improvements in translation accuracy in linguistics and advancements in measurement precision in telescope telemetry. However, I found no studies or publications that directly address this specific relationship. The fields of linguistics and telescope telemetry are distinct, and while both involve precision and accuracy, there is no evidence of research exploring a direct correlation between advancements in one leading to improvements in the other.",
+    "active_research_note": "The specific claim relates to a correlation between translation accuracy in linguistics and measurement precision in telescope telemetry, which encompasses distinct sectors - language linguistics and astronomy. The provided candidate papers focus predominantly on telemetry systems for telescopes and related measurement techniques, without addressing any linguistic aspects or directly exploring the proposed relationship. Therefore, none of the candidates can be said to genuinely address the same specific mechanism outlined in the claim.",
     "active_research_matches": [],
     "active_research_most_recent_year": null,
-    "active_research_checked_date": "2026-09-01"
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-29-homospatial-cognitive-attention-map-evolution-x-creative-artistic-critique",
@@ -2919,14 +3076,16 @@
       "Creative Artistic Critique"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 30,
+    "points": 55,
     "badges": [
       "🪞 Homospatial",
-      "🗺️ Frontier Research Group"
+      "🗺️ Frontier Research Group",
+      "🔬🔥 Actively Researched (current)"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5",
-      "Phase 2 ADJACENT_ACTIVE: +30"
+      "Phase 2 ADJACENT_ACTIVE: +30",
+      "Actively researched, most recent evidence 2026 (0y old — a live, current research thread): +25"
     ],
     "held_out_reason": null,
     "tier_rank": 2,
@@ -2944,11 +3103,33 @@
     "refutation_filename": null,
     "refutation_content": null,
     "refutation_independently_confirmed": false,
-    "actively_researched": false,
-    "active_research_note": "After an extensive search, I found no specific evidence of a research project, paper, or study explicitly named 'Critique-Enhanced Attention Mapping (CEAM)' or directly investigating the claim that individuals exposed to critical artistic evaluations exhibit measurable shifts in their attention patterns toward specific elements of artwork that align with the critiques. While there is substantial research on how contextual information and critiques influence aesthetic engagement and attention in art viewing, none of the identified studies specifically address the proposed mechanism as described.",
-    "active_research_matches": [],
-    "active_research_most_recent_year": null,
-    "active_research_checked_date": "2026-09-01"
+    "actively_researched": true,
+    "active_research_note": "The selected papers indicate various aspects of how critique, background information, and art expertise affect attention and processing in art evaluation. They show measurable shifts in attention patterns that resonate with the hypothesis of CEAM.",
+    "active_research_matches": [
+      {
+        "title": "Reappraising Abstract Paintings after Exposure to Background Information - PMC",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2015,
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4422661/",
+        "explanation": "This study investigates the impact of background information on aesthetic evaluation, which aligns with the claim's focus on shifts in attention patterns resulting from critical artistic evaluations."
+      },
+      {
+        "title": "Visual Evaluation Strategies in Art Image Viewing: An Eye-Tracking Comparison of Art-Educated and Non-Art Participants",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2026,
+        "url": "https://doi.org/10.3390/jemr19010014",
+        "explanation": "This paper examines how formal art education shapes visual evaluation strategies, potentially paralleling the effects of critical evaluations on attention patterns in the specific claim."
+      },
+      {
+        "title": "Eye Movement Correlates of Expertise in Visual Arts",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2018,
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5879988/",
+        "explanation": "This study explores how expertise affects visual scanning strategies in art appreciation, which relates to how critiques might influence attention towards specific elements in artwork."
+      }
+    ],
+    "active_research_most_recent_year": 2026,
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-29-janusian-culinary-arts",
@@ -2958,14 +3139,16 @@
       "Culinary Arts (Creative & Performance Systems)"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 30,
+    "points": 45,
     "badges": [
       "🎭 Janusian",
-      "🗺️ Frontier Research Group"
+      "🗺️ Frontier Research Group",
+      "🔬 Actively Researched"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5",
-      "Phase 2 ADJACENT_ACTIVE: +30"
+      "Phase 2 ADJACENT_ACTIVE: +30",
+      "Actively researched, most recent evidence 2020 (6y old): +15"
     ],
     "held_out_reason": null,
     "tier_rank": 2,
@@ -2983,11 +3166,33 @@
     "refutation_filename": null,
     "refutation_content": null,
     "refutation_independently_confirmed": false,
-    "actively_researched": false,
-    "active_research_note": "After an extensive search, I found no specific research directly addressing the combined influence of recipe adherence and chef improvisation on a dish's perceived quality, moderated by diners' expectations and dining context. While studies have explored individual factors—such as the impact of plating on perceived creativity ([sciencedirect.com](https://www.sciencedirect.com/science/article/pii/S1878450X17300677?utm_source=openai)) and the effect of dining environment on food acceptability ([sciencedirect.com](https://www.sciencedirect.com/science/article/abs/pii/S0950329302001891?utm_source=openai))—there appears to be no research that simultaneously considers all these variables in the context described.",
-    "active_research_matches": [],
-    "active_research_most_recent_year": null,
-    "active_research_checked_date": "2026-09-01"
+    "actively_researched": true,
+    "active_research_note": "The selected papers explore the complex interactions between recipe adherence, improvisation by the chef, and how these elements are perceived by diners based on their expectations and the dining context. This directly corresponds to the mechanisms described in the claim, making them relevant matches.",
+    "active_research_matches": [
+      {
+        "title": "Dishes as Performances, Authenticity, Normativity, and Improvisation in the Kitchen",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2020,
+        "url": "http://hdl.handle.net/2318/1765297",
+        "explanation": "This paper discusses how the cooking process incorporates both adherence to recipes and improvisation, influenced by the context of the meal, which is closely aligned with the specific claim about the variability in perceived quality based on expectations and context."
+      },
+      {
+        "title": "Eating location as a reference point: Differences in hedonic evaluation of dishes according to consumption situation",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": null,
+        "url": "https://www.sciencedirect.com/science/article/abs/pii/S0950329319301041",
+        "explanation": "This study highlights how consumers' expectations and prior experiences influence their evaluation of food based on the consumption context, directly supporting the claim that perceived quality can vary based on context and expectations."
+      },
+      {
+        "title": "What really matters when dining out? Insights into the role of context from a qualitative study with French consumers",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": null,
+        "url": "https://www.sciencedirect.com/science/article/abs/pii/S1878450X22000725",
+        "explanation": "The paper explores the interplay between consumer expectations and dining contexts, which aligns with the claim that both adherence to a recipe and improvisation influence perceived quality through the lens of the diner's expectations."
+      }
+    ],
+    "active_research_most_recent_year": 2020,
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-29-supply-chain-logistics-x-physical-thermal-variation",
@@ -3027,10 +3232,10 @@
     "refutation_content": "# Adversarial Refutation: Bisociation — Supply Chain Logistics × Physical Thermal Variation\n\n**Original**: `hypotheses/2026-08-29-supply-chain-logistics-x-physical-thermal-variation.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 0 of 3 survive → **REFUTED**\n\n- **Coherence — REFUTED.** The hypothesis equivocates on the term 'uncertainty,' using it to describe both demand signals and temperature readings without establishing a genuine structural mapping. The proposed feedback loop is context-dependent, not a true paradox, as it relies on different mechanisms in each domain. This undermines the coherence of the bisociation claim.\n- **Testability — REFUTED.** The hypothesis lacks a clear operationalization of its core claim. It does not specify a named metric, comparison condition, or rejection threshold for testing the proposed mapping between supply chain logistics and thermal variation. Without these elements, the hypothesis cannot be empirically tested or falsified, making it unfalsifiable and therefore refuted under the testability lens.\n- **Triviality — REFUTED.** The hypothesis reduces to a generic mapping between two complex systems with feedback loops, a common feature in many domains. The claim of uncertainty leading to amplified effects is a typical characteristic of complex systems, making the mapping trivial. Without specific, non-trivial connections, the hypothesis does not hold under the triviality lens.\n\n## No steelman offered\n\nAll three lenses independently converged on REFUTED for this case. If revisited, it would need a genuinely tighter formulation, not a restatement of the same claim.\n",
     "refutation_independently_confirmed": true,
     "actively_researched": false,
-    "active_research_note": "After an extensive search, I found no specific research directly linking the amplification effects in temperature management strategies of thermal systems to the bullwhip effect observed in supply chain logistics, or vice versa. While both fields involve complex systems where small changes can lead to significant downstream effects, the mechanisms and dynamics differ substantially. The bullwhip effect pertains to demand variability amplification in supply chains, whereas temperature management in thermal systems focuses on heat distribution and control. No studies explicitly draw parallels between these two phenomena.",
+    "active_research_note": "None of the candidate papers address the specific claim about the amplification effects in temperature management strategies in thermal systems related to the bullwhip effect in supply chain logistics. The papers focus on various aspects of thermal management and supply chain optimizations but do not share the explicit proposed relationship between temperature management strategies and the bullwhip effect. The analysis is either too broad or unrelated to the specific mechanism of amplification effects as described in the claim.",
     "active_research_matches": [],
     "active_research_most_recent_year": null,
-    "active_research_checked_date": "2026-09-01"
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-29-game-theory-x-informational-measurement-data-evolution",
@@ -3041,17 +3246,19 @@
       "Informational Measurement Data Evolution"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 15,
+    "points": 30,
     "badges": [
       "🧬 Bisociative",
       "🗺️ Frontier Research Group",
-      "💀 Refuted"
+      "💀 Refuted",
+      "🔬 Actively Researched"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5",
       "Phase 2 ADJACENT_ACTIVE: +30",
       "Adversarial refutation REFUTED, unanimous (0-of-3 survive): -15",
-      "  independently confirmed (3 separate agents, full agreement)"
+      "  independently confirmed (3 separate agents, full agreement)",
+      "Actively researched, most recent evidence 2022 (4y old): +15"
     ],
     "held_out_reason": null,
     "tier_rank": 5,
@@ -3069,11 +3276,26 @@
     "refutation_filename": "refutations/2026-08-29-game-theory-x-informational-measurement-data-evolution-refutation.md",
     "refutation_content": "# Adversarial Refutation: Bisociation — Game Theory — Repeated Prisoner's Dilemma × Informational Measurement Data Evolution\n\n**Original**: `hypotheses/2026-08-29-game-theory-x-informational-measurement-data-evolution.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 0 of 3 survive → **REFUTED**\n\n- **Coherence — REFUTED.** The hypothesis equivocates on 'evolution' and 'uncertainty,' using them to describe both player strategies and data measurement without demonstrating a genuine structural mapping. The claim treats these as analogous without showing a true fusion or same-instance paradox, instead presenting a side-by-side comparison under a coined name. This lacks coherence, as the mechanisms in game theory and data measurement are fundamentally different.\n- **Testability — REFUTED.** The hypothesis lacks a clear operationalized prediction that can be tested. It proposes a mapping between game theory and informational measurement without specifying a metric, comparison condition, or rejection threshold. The claim that strategy evolution influences data reliability is vague and lacks a concrete experimental setup to test this influence, making it unfalsifiable.\n- **Triviality — REFUTED.** The hypothesis reduces to a generic mapping between uncertainty and evolution in two complex systems: player strategies and data measurement. Such mappings are trivially true for many systems with evolving strategies and data processes, lacking specificity or novel insight. The claim does not demonstrate a unique or non-trivial connection beyond this broad analogy.\n\n## No steelman offered\n\nAll three lenses independently converged on REFUTED for this case. If revisited, it would need a genuinely tighter formulation, not a restatement of the same claim.\n",
     "refutation_independently_confirmed": true,
-    "actively_researched": false,
-    "active_research_note": "While there is extensive research on adaptive strategies in repeated prisoner's dilemma games, there is no evidence of studies specifically linking these strategies to the accuracy and relevance of informational measurement data. The existing literature primarily focuses on the evolution of cooperation and strategy optimization within the game itself, without extending to the impact on informational measurement data.",
-    "active_research_matches": [],
-    "active_research_most_recent_year": null,
-    "active_research_checked_date": "2026-09-01"
+    "actively_researched": true,
+    "active_research_note": "Both candidate papers analyze aspects of learning and adaptation in repeated prisoner's dilemmas, focusing on how players adjust their strategies based on their past experiences. These mechanisms directly relate to the claim about the functor's impact on accuracy and relevance in informational measurement data.",
+    "active_research_matches": [
+      {
+        "title": "Accuracy and retaliation in repeated games with imperfect private monitoring: Experiments",
+        "researcher_or_authors": "Hitoshi Matsushima, Tomohisa Toyama",
+        "year": 2020,
+        "url": "https://www.sciencedirect.com/science/article/pii/S0899825619301794",
+        "explanation": "This study investigates the effects of imperfect monitoring on players' strategies in repeated prisoner's dilemmas, showcasing how players adapt their strategies based on past interactions, which directly connects to the proposed relationship in the claim."
+      },
+      {
+        "title": "Beliefs, Learning, and Personality in the Indefinitely Repeated Prisoner's Dilemma",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2022,
+        "url": "https://doi.org/10.2139/ssrn.4196265",
+        "explanation": "This paper explores how beliefs and behavior evolve through experience in an indefinitely repeated prisoner's dilemma, underscoring the learning from past interactions that aligns with the optimization of choices described in the claim."
+      }
+    ],
+    "active_research_most_recent_year": 2022,
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-29-homospatial-game-theory-x-human-social-network-dynamics",
@@ -3148,17 +3370,19 @@
       "Physical Flux Regulation"
     ],
     "verdict": "COLLISION",
-    "points": -10,
+    "points": 5,
     "badges": [
       "🪞 Homospatial",
       "🏛️ Established Department",
-      "💀 Refuted"
+      "💀 Refuted",
+      "🔬 Actively Researched"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5",
       "Phase 2 COLLISION (genuine): +5",
       "Adversarial refutation REFUTED, unanimous (0-of-3 survive): -15",
-      "  independently confirmed (3 separate agents, full agreement)"
+      "  independently confirmed (3 separate agents, full agreement)",
+      "Actively researched, most recent evidence 2021 (5y old): +15"
     ],
     "held_out_reason": null,
     "tier_rank": 5,
@@ -3176,11 +3400,26 @@
     "refutation_filename": "refutations/2026-08-29-homospatial-sports-x-physical-flux-regulation-refutation.md",
     "refutation_content": "# Adversarial Refutation: Homospatial — Basketball Pick-and-Roll Offense ⊕ Physical Flux Regulation\n\n**Original**: `hypotheses/2026-08-29-homospatial-sports-x-physical-flux-regulation.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 0 of 3 survive → **REFUTED**\n\n- **Coherence — REFUTED.** The hypothesis claims a fusion between basketball strategy and physical flux regulation, but it merely describes adaptive strategies and feedback loops, which are common in sports. The term 'Dynamic Flux Offense' is coined without demonstrating a genuine fusion of the two domains, instead presenting a side-by-side comparison of adaptive concepts. This lacks the structural coherence required for a true homospatial hypothesis.\n- **Testability — REFUTED.** The hypothesis lacks a clear operationalized prediction that can be tested. It describes a basketball strategy as a self-regulating system with adaptive agents but does not specify measurable metrics, comparison conditions, or rejection thresholds. Without these, the claim remains too vague to be falsifiable, as no specific experiment could definitively confirm or deny the existence or effectiveness of the 'Dynamic Flux Offense.'\n- **Triviality — REFUTED.** The hypothesis reduces to a general statement about adaptive systems where agents adjust actions based on feedback, a concept applicable to almost any complex system. The claim of players as adaptive agents responding to game flow is a trivial observation in sports strategy, lacking specificity or novelty beyond common adaptive dynamics.\n\n## No steelman offered\n\nAll three lenses independently converged on REFUTED for this case. If revisited, it would need a genuinely tighter formulation, not a restatement of the same claim.\n",
     "refutation_independently_confirmed": true,
-    "actively_researched": false,
-    "active_research_note": "I searched for research studies or projects specifically examining a strategy called 'Dynamic Flux Offense' in basketball, particularly focusing on its impact on scoring efficiency compared to traditional static offensive plays. However, I did not find any references to this specific strategy in the available literature. While there are numerous studies on the effectiveness of the pick-and-roll offense and other offensive strategies in basketball, none mention 'Dynamic Flux Offense' as a recognized term or concept. Therefore, it appears that 'Dynamic Flux Offense' is not a widely recognized or researched strategy in the field of basketball.",
-    "active_research_matches": [],
-    "active_research_most_recent_year": null,
-    "active_research_checked_date": "2026-09-01"
+    "actively_researched": true,
+    "active_research_note": "The candidate papers specifically address the effectiveness of dynamic offensive strategies like the pick and roll in basketball. They provide empirical evidence that these strategies lead to increased scoring efficiency, aligning closely with the specific claim about the advantages of the Dynamic Flux Offense compared to traditional plays.",
+    "active_research_matches": [
+      {
+        "title": "Efficacy of the “pick and roll” offense in top level European basketball teams",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2016,
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5260556/",
+        "explanation": "The study analyzes the effectiveness of the pick and roll (P&R) as a dynamic offensive strategy in basketball, providing empirical evidence on its ability to increase scoring efficiency compared to static plays. The relationship found between P&R execution and team success highlights its dynamic nature, supporting the proposed benefits of dynamic offensive strategies."
+      },
+      {
+        "title": "Prediction of Offensive Possession Ends in Elite Basketball Teams",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2021,
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7908613/",
+        "explanation": "This research identifies specific offensive strategies, including the pick and roll, as leading to efficient scoring opportunities, supporting the claim that executing a dynamic offense can enhance scoring efficiency compared to less dynamic or static plays."
+      }
+    ],
+    "active_research_most_recent_year": 2021,
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-29-janusian-informational-database-state",
@@ -3376,14 +3615,16 @@
       "Human Committee Formation"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 30,
+    "points": 55,
     "badges": [
       "🪞 Homospatial",
-      "🗺️ Frontier Research Group"
+      "🗺️ Frontier Research Group",
+      "🔬🔥 Actively Researched (current)"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5",
-      "Phase 2 ADJACENT_ACTIVE: +30"
+      "Phase 2 ADJACENT_ACTIVE: +30",
+      "Actively researched, most recent evidence 2025 (1y old — a live, current research thread): +25"
     ],
     "held_out_reason": null,
     "tier_rank": 2,
@@ -3401,11 +3642,26 @@
     "refutation_filename": null,
     "refutation_content": null,
     "refutation_independently_confirmed": false,
-    "actively_researched": false,
-    "active_research_note": "While there is extensive research on collaborative storytelling and narrative generation, specific studies directly addressing the 'Collaborative Narrative Arc'—a distinct plot structure and character dynamics resulting from committee collaboration—are not readily available. Existing literature primarily focuses on collaborative storytelling in general terms, without isolating the unique narrative elements produced by group collaboration. For instance, the study 'The evolution of collaborative stories' explores how stories evolve through collaborative efforts but does not specifically examine the unique plot structures and character dynamics resulting from committee collaboration. ([research.ed.ac.uk](https://www.research.ed.ac.uk/portal/en/publications/the-evolution-of-collaborative-stories%28718aee6c-86b7-4e3e-97b5-6ccbfc095170%29.html?utm_source=openai)) Similarly, 'Twice-told tales: Collaborative narration of familiar stories' discusses the retelling of familiar stories in collaborative settings but does not focus on the unique narrative outcomes of committee collaboration. ([cambridge.org](https://www.cambridge.org/core/journals/language-in-society/article/abs/twicetold-tales-collaborative-narration-of-familiar-stories/DE59D17FA1631D760DAB90D542AD37E1?utm_source=openai)) Therefore, while the concept of a 'Collaborative Narrative Arc' is plausible, there is no direct evidence in the current literature to confirm its existence.",
-    "active_research_matches": [],
-    "active_research_most_recent_year": null,
-    "active_research_checked_date": "2026-09-01"
+    "actively_researched": true,
+    "active_research_note": "The selected papers examine the interplay of collaboration in narrative creation, specifically focusing on the effects of diversity in inputs and structured dialogue on narrative outcomes. They provide empirical evidence supporting the idea that collaboration, specifically in a committee-like format, can lead to unique plot structures and character dynamics, as suggested in the claim.",
+    "active_research_matches": [
+      {
+        "title": "Using Generative AI Personas Increases Collective Diversity in Human Ideation",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2025,
+        "url": "http://arxiv.org/abs/2504.13868",
+        "explanation": "This study directly investigates how diverse AI inputs affect the creative outputs of human writers in collaborative settings. It reveals that varying perspectives from AI personas can enhance story diversity and creativity, aligning with the claim's assertion about the uniqueness of narratives developed through collaboration."
+      },
+      {
+        "title": "Shaping the Narrative Arc: Information-Theoretic Collaborative Dialogue",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2020,
+        "url": "https://doi.org/10.48448/s684-1w35",
+        "explanation": "This paper discusses designing an artificial agent to interact with humans in collaborative storytelling, addressing how structured dialogue can enhance the narrative's depth. This relates directly to the claim by exploring how collaborative methods can yield distinct narrative arcs."
+      }
+    ],
+    "active_research_most_recent_year": 2025,
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-29-organizational-theory-x-finance",
@@ -3416,17 +3672,19 @@
       "Finance (Human & Social Systems)"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 15,
+    "points": 40,
     "badges": [
       "🧬 Bisociative",
       "🗺️ Frontier Research Group",
-      "💀 Refuted"
+      "💀 Refuted",
+      "🔬🔥 Actively Researched (current)"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5",
       "Phase 2 ADJACENT_ACTIVE: +30",
       "Adversarial refutation REFUTED, unanimous (0-of-3 survive): -15",
-      "  independently confirmed (3 separate agents, full agreement)"
+      "  independently confirmed (3 separate agents, full agreement)",
+      "Actively researched, most recent evidence 2025 (1y old — a live, current research thread): +25"
     ],
     "held_out_reason": null,
     "tier_rank": 5,
@@ -3444,11 +3702,26 @@
     "refutation_filename": "refutations/2026-08-29-organizational-theory-x-finance-refutation.md",
     "refutation_content": "# Adversarial Refutation: Bisociation — Organizational Theory — Self-Organizing Teams × Finance (Human & Social Systems)\n\n**Original**: `hypotheses/2026-08-29-organizational-theory-x-finance.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 0 of 3 survive → **REFUTED**\n\n- **Coherence — REFUTED.** The hypothesis equivocates on the term 'self-organizing' by treating team dynamics and financial transactions as structurally equivalent without demonstrating a genuine same-instance paradox. The mapping relies on superficial similarities rather than a coherent structural fusion, as it fails to show how decentralized decision-making in teams directly correlates with transaction success in finance. This is a disguised context-dependent compromise rather than a true bisociation.\n- **Testability — REFUTED.** The hypothesis lacks a clear operationalization of its core claim. It does not specify a named metric, comparison condition, or rejection threshold for testing whether self-organizing principles in teams correlate with successful transaction outcomes in finance. The use of terms like 'adaptive, decentralized decision-making' without precise definitions or measurable criteria makes it impossible to design an experiment that could definitively confirm or refute the claim. The absence of a falsifiable prediction renders the hypothesis untestable.\n- **Triviality — REFUTED.** The hypothesis reduces to a generic claim that adaptive, decentralized decision-making leads to successful outcomes in complex systems. This is a trivial assertion applicable to many domains, not just organizational theory and finance. The mapping of team dynamics to portfolio evolution and team coordination to regulatory coordination lacks specificity and could apply to any complex adaptive system, failing to demonstrate a unique cross-domain insight.\n\n## No steelman offered\n\nAll three lenses independently converged on REFUTED for this case. If revisited, it would need a genuinely tighter formulation, not a restatement of the same claim.\n",
     "refutation_independently_confirmed": true,
-    "actively_researched": false,
-    "active_research_note": "After an extensive search, I found no specific research directly linking the implementation of self-organizing principles in finance teams to improved transaction success rates and more adaptive portfolio management. While there is substantial literature on adaptive and self-organizing systems in financial markets, such as studies on adaptive agents in mutual fund flows ([sciencedirect.com](https://www.sciencedirect.com/science/article/pii/S0165188997000468?utm_source=openai)) and high-frequency trading from an evolutionary perspective ([onlinelibrary.wiley.com](https://onlinelibrary.wiley.com/doi/abs/10.1002/ijfe.1700?utm_source=openai)), these do not specifically address the impact of self-organizing principles within finance teams on transaction success and portfolio management. Therefore, there is no direct evidence supporting the specific claim regarding the implementation of self-organizing principles in finance teams leading to improved transaction success rates and more adaptive portfolio management.",
-    "active_research_matches": [],
-    "active_research_most_recent_year": null,
-    "active_research_checked_date": "2026-09-01"
+    "actively_researched": true,
+    "active_research_note": "The claim discusses the effects of self-organizing principles on financial teams' performance, specifically transaction success rates and portfolio management. The identified papers address similar mechanisms, focusing on self-organizing teams' performance and leadership dynamics in crisis situations, as well as their effectiveness. These connections highlight the proposed relationships sought in the claim.",
+    "active_research_matches": [
+      {
+        "title": "Do self-organizing teams promote shared leadership and team performance in crisis management?",
+        "researcher_or_authors": "Marie-Eve Jobidon, Isabelle Turcotte, Caroline Aubé, Alexandre Labrecque, Shelley Kelsey, Sébastien Tremblay",
+        "year": 2025,
+        "url": "https://doi.org/10.1108/tpm-02-2025-0026",
+        "explanation": "This study explicitly investigates the relationship between self-organizing teams and their performance outcomes in crisis management, directly addressing how implementation of self-organizing principles impacts performance metrics."
+      },
+      {
+        "title": "Self-Managing Team Performance: A Systematic Review of Multilevel Input Factors",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2024,
+        "url": "https://www.researchgate.net/publication/317335715_Self-Managing_Team_Performance_A_Systematic_Review_of_Multilevel_Input_Factors",
+        "explanation": "This paper reviews empirical research on factors influencing self-managing teams’ effectiveness, including their potential to enhance performance outcomes, thus relating to the claim about adaptive management and success rates."
+      }
+    ],
+    "active_research_most_recent_year": 2025,
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-29-creative-brainstorming-facilitation-x-physical-electrical-noise",
