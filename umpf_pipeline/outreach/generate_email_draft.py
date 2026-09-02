@@ -4,11 +4,7 @@ generate_email_draft.py -- COA 8b: automates the exact process that
 produced the three hand-drafted emails this pipeline's own template is
 now locked to (email-reactive-control-network-enciso.md,
 email-creative-versioning-sterman.md,
-email-neurogrid-optimization-papageorgiou.md). Same architecture as
-find_researcher_contact.py and find_new_evidence.py: one OpenAI
-structured call per target, `web_search` enabled so it can verify a
-paper's real venue/full author list the same way that was done by hand
-for each of the three examples -- never inventing what it can't confirm.
+email-neurogrid-optimization-papageorgiou.md).
 
 Reads outreach/outreach_queue.json (built by prioritize_outreach.py),
 drafts the top N not-yet-drafted candidates, writes each to
@@ -19,6 +15,30 @@ citing the real paper -> syndicate line -> sign-off. No Eureka Engine
 explainer, no "independent convergence" hedging -- this is the leaner
 template that actually survived to real sends (Aronson/Frey/Phillips),
 per that email's own note.
+
+Citation verification -- REWRITTEN 2026-09-02, real fabrication found
+in production: the original design used OpenAI's `web_search` tool and
+asked the model to "verify" venue/authors/year itself. On a real
+13-draft batch, that step confidently reported WRONG bibliographic
+details on 4 of 5 spot-checked drafts (wrong journal, wrong year,
+wrong co-authors -- once even the wrong paper's authors entirely),
+every time with zero hedging ("Verified authors and venue; publication
+year confirmed as 2020" -- wrong on all three counts). The failure
+wasn't the model being asked to verify -- it's that "go search the web
+and tell me what you found" is a RECALL task, and recall is exactly
+where a small model confabulates confidently.
+
+Fixed by removing that recall step entirely: exa.get_contents() fetches
+the ACTUAL real page at the paper's own known URL (already in hand from
+contacts.jsonl -- this is retrieval, not search) and returns real,
+structured fields (title, published_date) plus an extraction-grounded
+summary, at ~$0.002/call. The drafting call is then given that REAL
+fetched text as provided context and told to extract bibliographic
+fields ONLY from what's actually there -- an extraction task grounded
+in real text the model can't confabulate past, not a recall task it
+can. Confirmed against the two real fabrication cases from the prior
+run (Screen, Rajpal) before trusting this: both came back exactly
+matching independently hand-verified facts.
 
 Deliberately does NOT add the American Reindustrialization PS
 automatically -- that was flagged as an open, undecided design
@@ -43,6 +63,7 @@ import sys
 from datetime import datetime, timezone
 
 from dotenv import load_dotenv
+from exa_py import Exa
 from openai import OpenAI
 
 PIPELINE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -55,11 +76,16 @@ EXPERIENCE_PATH = os.path.join(PIPELINE_DIR, "experience_data.json")
 
 load_dotenv("/Users/michaeljagdeo/Downloads/talentOS-2026/.env")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+EXA_API_KEY = os.getenv("EXA_AI_API_KEY")
 if not OPENAI_API_KEY:
     raise SystemExit("OPENAI_API_KEY is not set — add it to the vault-root .env")
+if not EXA_API_KEY:
+    raise SystemExit("EXA_AI_API_KEY is not set — add it to the vault-root .env")
 client = OpenAI(api_key=OPENAI_API_KEY)
+exa = Exa(api_key=EXA_API_KEY)
 
 MODEL = "gpt-4o-mini"
+EXA_CITATION_QUERY = "What is the exact title, journal or venue name, publication year, and full author list of this paper?"
 
 DRAFT_SCHEMA = {
     "type": "object",
@@ -81,19 +107,19 @@ DRAFT_SCHEMA = {
         },
         "paper_authors_verified": {
             "type": "string",
-            "description": "Full real author list for the cited paper, found via web_search on its title/URL. Empty string if not confirmable -- never invent names beyond what was already given.",
+            "description": "Full real author list for the cited paper, EXTRACTED ONLY from the real fetched page content/summary provided below -- never from memory or inference. Empty string if the provided content doesn't actually state it.",
         },
         "paper_venue": {
             "type": "string",
-            "description": "Real journal/conference/preprint-server name for the cited paper, found via web_search. Empty string if not confirmable.",
+            "description": "Real journal/conference/preprint-server name for the cited paper, EXTRACTED ONLY from the provided fetched content. Empty string if not stated there.",
         },
         "paper_year_verified": {
             "type": "string",
-            "description": "Real publication year if found via web_search and different from or absent in the year already given. Empty string if the given year is already correct or nothing better was found.",
+            "description": "Real publication year, EXTRACTED ONLY from the provided fetched content (its published_date field or stated text), if different from or absent in the year already given. Empty string if the given year already matches or nothing is stated in the provided content.",
         },
         "verification_notes": {
             "type": "string",
-            "description": "1-2 sentences: what was actually checked and found (or not found) via web_search for this paper's bibliographic details.",
+            "description": "1-2 sentences: what the provided fetched content actually stated (or didn't) about this paper's bibliographic details.",
         },
     },
     "required": ["subject", "opening_question", "paper_authors_verified", "paper_venue", "paper_year_verified", "verification_notes"],
@@ -104,8 +130,9 @@ SYSTEM_PROMPT = (
     "You are drafting ONE short outreach email's core content -- a subject line and one "
     "bolded opening question -- to a real academic researcher, on behalf of Exponent Labs' "
     "Eureka Engine. You are given: (1) a real, AI-generated cross-domain research hypothesis "
-    "(its fusion sentence and falsifiable prediction), and (2) a real paper by the recipient "
-    "that a separate discovery step already matched as working related territory.\n\n"
+    "(its fusion sentence and falsifiable prediction), and (2) the REAL, ACTUALLY FETCHED "
+    "content of the recipient's paper's own real page -- not a search result, the real page "
+    "text and a structured summary of it.\n\n"
     "Your opening_question must be a single, sharp, direct question -- 'Can X function as Y "
     "...?' -- built ONLY from the hypothesis's own stated fusion sentence and falsifiable "
     "prediction. Do not add mechanism, motivation, or claims that are not actually present in "
@@ -114,11 +141,12 @@ SYSTEM_PROMPT = (
     "scientist would ask another. Never mention Eureka Engine, AI, hypothesis generation, or "
     "how the question was produced inside this sentence -- that context lives elsewhere in the "
     "email, not in the question itself.\n\n"
-    "You also have web_search available: use it to verify the cited paper's real publication "
-    "venue and full author list from its title/URL. The single most important rule, identical "
-    "to this pipeline's other research tools: only report a venue, author name, or year if you "
-    "actually found it written on a real page search returned -- an empty string is the correct, "
-    "honest answer when nothing is confirmable, never a guess."
+    "For paper_authors_verified/paper_venue/paper_year_verified: this is an EXTRACTION task, "
+    "not a search task -- the real fetched content is already provided below. Read it and "
+    "report only what it actually says. The single most important rule, identical to this "
+    "pipeline's other research tools: an empty string is the correct, honest answer when the "
+    "provided content doesn't clearly state something -- never fill a gap from your own "
+    "training-data memory of the paper or a plausible guess, even if the paper sounds familiar."
 )
 
 
@@ -148,10 +176,35 @@ def load_already_drafted():
     return slugs
 
 
+def fetch_real_citation_content(url):
+    """Retrieval, not search -- the URL is already known (from
+    contacts.jsonl), so this fetches the ACTUAL real page rather than
+    asking a model to recall or re-search bibliographic facts. Real
+    ~$0.002/call. Returns (text_snippet, summary, published_date,
+    real_cost) -- any field empty/None if the fetch itself fails,
+    never silently substituted with a guess."""
+    try:
+        r = exa.get_contents([url], text=True, summary={"query": EXA_CITATION_QUERY})
+    except Exception as e:
+        return "", "", None, 0.0
+    cost = 0.0
+    if getattr(r, "cost_dollars", None) is not None:
+        cost = r.cost_dollars.total or 0.0
+    if not r.results:
+        return "", "", None, cost
+    res = r.results[0]
+    text = (getattr(res, "text", "") or "")[:2000]  # real page text, capped -- this is context, not the whole paper
+    summary = getattr(res, "summary", "") or ""
+    published_date = getattr(res, "published_date", None)
+    return text, summary, published_date, cost
+
+
 def draft_one(candidate):
     hyp_content = load_hypothesis_content(candidate["hypothesis_slug"])
     if not hyp_content:
-        return None, None
+        return None, None, 0.0
+
+    real_text, real_summary, published_date, exa_cost = fetch_real_citation_content(candidate["source_match_url"])
 
     text = (
         f"HYPOTHESIS (this pipeline's own AI-generated hypothesis -- draw the opening_question "
@@ -162,24 +215,29 @@ def draft_one(candidate):
         f"{hyp_content}\n\n"
         f"---\n\n"
         f"REAL PAPER a separate discovery step matched as related, working territory:\n"
-        f"Title: {candidate['source_match_title']}\n"
+        f"Title (as already known): {candidate['source_match_title']}\n"
         f"Authors (as already known): {candidate['source_match_authors']}\n"
         f"Year (as already known): {candidate['source_match_year'] or 'unknown'}\n"
         f"URL: {candidate['source_match_url']}\n\n"
         f"RECIPIENT: {candidate['target_name']}, {candidate['institution'] or '(institution unknown)'}\n\n"
-        "Draft the subject line and opening_question. Verify the paper's real venue and full "
-        "author list via web_search on its title/URL."
+        f"---\n\n"
+        f"REAL FETCHED CONTENT of the paper's own page (retrieved directly, not a search result --"
+        f" extract paper_authors_verified/paper_venue/paper_year_verified ONLY from what's actually"
+        f" here, empty string for anything not stated):\n\n"
+        f"Published date field (if the page had one): {published_date or '(none returned)'}\n\n"
+        f"Structured summary of the real page:\n{real_summary or '(fetch returned no summary)'}\n\n"
+        f"Real page text (first 2000 chars):\n{real_text or '(fetch returned no text -- treat all three fields as unconfirmable, empty string)'}\n\n"
+        "Draft the subject line and opening_question."
     )
     resp = client.responses.create(
         model=MODEL,
-        tools=[{"type": "web_search"}],
         instructions=SYSTEM_PROMPT,
         input=text,
         max_output_tokens=1500,
         text={"format": {"type": "json_schema", "name": "email_draft", "schema": DRAFT_SCHEMA, "strict": True}},
     )
     token_tracker.log_usage("outreach_email_draft", MODEL, resp.usage, hypothesis_slug=candidate["hypothesis_slug"])
-    return json.loads(resp.output_text), resp.usage
+    return json.loads(resp.output_text), resp.usage, exa_cost
 
 
 def _surname(name):
@@ -317,6 +375,20 @@ def write_email_file(candidate, draft):
     verified_authors = draft["paper_authors_verified"]
     if verified_authors and not _looks_like_real_author_list(verified_authors):
         verified_authors = ""
+
+    # Real bug found 2026-09-02 (Screen): the paper at the matched URL
+    # was real, but the recipient wasn't actually one of its authors --
+    # a bad underlying contact-resolution match, not just a citation
+    # detail. Now that authors are extracted from real fetched content
+    # instead of recalled, this is detectable: if the real author list
+    # is confirmed and the recipient's surname isn't in it, the match
+    # itself is wrong -- skip rather than ship a real citation
+    # attributed to the wrong person.
+    if verified_authors:
+        real_surnames = {_surname(p) for p in _clean_author_list(verified_authors)}
+        if real_surnames and _surname(candidate["target_name"]) not in real_surnames:
+            return "AUTHORSHIP_MISMATCH"
+
     authors = verified_authors or candidate["source_match_authors"] or ""
     year = draft["paper_year_verified"] or candidate["source_match_year"] or ""
     venue = draft["paper_venue"]
@@ -400,26 +472,31 @@ def main():
 
     print(f"Drafting {len(todo)} email(s)...\n")
     written = 0
+    total_exa_cost = 0.0
     for i, c in enumerate(todo, 1):
         print(f"[{i}/{len(todo)}] {c['hypothesis_slug']} -> {c['target_name']} <{c['email']}> ...")
-        draft, usage = draft_one(c)
+        draft, usage, exa_cost = draft_one(c)
+        total_exa_cost += exa_cost
         if draft is None:
             print("    SKIPPED (no hypothesis_content found)")
             continue
         print(f"    Subject: {draft['subject']}")
         print(f"    Question: {draft['opening_question']}")
         if draft["paper_venue"] or draft["paper_authors_verified"]:
-            print(f"    Verified: venue={draft['paper_venue'] or '(none found)'} authors={draft['paper_authors_verified'] or '(none found)'}")
+            print(f"    Extracted from real fetched page: venue={draft['paper_venue'] or '(not stated)'} authors={draft['paper_authors_verified'] or '(not stated)'}")
         if not args.dry_run:
             fname = write_email_file(c, draft)
-            if fname:
+            if fname == "AUTHORSHIP_MISMATCH":
+                print(f"    SKIPPED — recipient not among the real fetched paper's real authors (bad underlying match, not a citation-detail issue)")
+            elif fname:
                 print(f"    Written: outreach/emails/{fname}")
                 written += 1
             else:
                 print("    SKIPPED (file already exists)")
         print()
 
-    print(f"Done. {written} draft(s) written. Nothing was sent — every file needs a human Send checklist pass.")
+    print(f"Done. {written} draft(s) written. Total Exa citation-fetch spend: ${total_exa_cost:.4f}. "
+          f"Nothing was sent — every file needs a human Send checklist pass.")
 
 
 if __name__ == "__main__":

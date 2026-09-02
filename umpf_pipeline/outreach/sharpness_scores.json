@@ -264,5 +264,19 @@
     "sharpness": "BORDERLINE",
     "restates_domain_name": true,
     "reason": "The question reiteratively combines concepts from the paper's title without introducing a new mechanism or specific variable that would indicate a deeper understanding of the research."
+  },
+  "email-developmental-psychology-kim.md": {
+    "hypothesis_slug": "2026-08-31-janusian-developmental-psychology",
+    "question": "Can both secure attachment and insecure attachment lead to healthy emotional and social development simultaneously for the same individual?",
+    "sharpness": "BORDERLINE",
+    "restates_domain_name": true,
+    "reason": "The question is relevant to attachment theory but primarily repeats known concepts without introducing a specific variable or mechanism that would provoke deeper thought or discussion."
+  },
+  "email-law-x-informational-database-state-sun.md": {
+    "hypothesis_slug": "2026-08-29-homospatial-law-x-informational-database-state",
+    "question": "Can the Judicial Knowledgebase maintain legal integrity while allowing for the evolution of legal interpretations in response to new case law?",
+    "sharpness": "BORDERLINE",
+    "restates_domain_name": false,
+    "reason": "The question touches on a relevant topic in legal informatics, but it primarily rephrases concepts from the paper without introducing a new, specific variable or mechanism for discussion."
   }
 }
