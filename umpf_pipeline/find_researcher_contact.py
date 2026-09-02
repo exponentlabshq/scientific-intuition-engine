@@ -180,7 +180,24 @@ def _sanity_check(result, title):
     misattributed contact. Deliberately narrow so a real, if unusual,
     real name or a real personal homepage is never wrongly flagged."""
     name = (result.get("target_name") or "").strip()
-    if title and name and (name.lower() == title.strip().lower() or (len(name) > 15 and name.lower() in title.lower())):
+    # Deliberately excludes "" -- an already-empty field is the correct,
+    # honest representation of "not found," not a placeholder needing
+    # rejection. Found and fixed within the hour of writing the first
+    # version of this check: it included "" in this set, so it fired on
+    # every already-legitimate empty target_name/email in the file and
+    # overwrote their real notes with a false rejection message on a
+    # retroactive re-scan, before any of that reached a live batch.
+    PLACEHOLDER_WORDS = {"not specified", "n/a", "na", "none", "unknown", "unspecified", "tbd"}
+    if name and name.lower().strip(".") in PLACEHOLDER_WORDS:
+        # The model is supposed to leave a field genuinely empty when it
+        # doesn't know, per the schema -- but one real result instead
+        # wrote the literal text "Not specified" into target_name AND
+        # email AND email_source_url, which (being non-empty strings)
+        # read as a truthy, "found" result to every caller checking
+        # `if result.get("email")`. A schema and a prompt asking for an
+        # empty string is not the same as the model actually producing
+        # one; this catches the placeholder-as-if-real-data case
+        # directly rather than trusting the field was used correctly.
         return {
             **result,
             "resolved": False,
@@ -189,7 +206,32 @@ def _sanity_check(result, title):
             "email_source_url": "",
             "profile_url": "",
             "confidence": "LOW",
-            "notes": f"Sanity check rejected this result: target_name matched the source paper's own title ('{name}'), not a person. Original notes: {result.get('notes', '')}",
+            "notes": f"Sanity check rejected this result: target_name was a placeholder string ('{name}'), not a real name. Original notes: {result.get('notes', '')}",
+        }
+    title_norm = (title or "").strip().lower()
+    name_norm = name.lower()
+    if title_norm and name_norm and (
+        name_norm == title_norm
+        or (len(name_norm) > 15 and name_norm in title_norm)
+        or (len(title_norm) > 3 and title_norm in name_norm)
+    ):
+        # Bidirectional on purpose: the first real catch of this failure
+        # ('Humor Analysis in Interactive Stand-up Comedy...' as a
+        # target_name) had the full paper title AS the name. A later
+        # real case ('LibRA 2019' as a target_name for a paper titled
+        # 'LibRA') has it the other way around -- the paper's own short
+        # title sits INSIDE a name-shaped string, with a year tacked on
+        # like a person's name might have a suffix. Checking only
+        # name-in-title missed that second real shape.
+        return {
+            **result,
+            "resolved": False,
+            "target_name": "",
+            "email": "",
+            "email_source_url": "",
+            "profile_url": "",
+            "confidence": "LOW",
+            "notes": f"Sanity check rejected this result: target_name ('{name}') and the source paper's own title ('{title}') overlap too closely for this to be a real person's name. Original notes: {result.get('notes', '')}",
         }
     email_src = (result.get("email_source_url") or "").strip()
     m = _BARE_DOMAIN_RE.match(email_src) if email_src else None
@@ -202,6 +244,18 @@ def _sanity_check(result, title):
             "notes": f"Sanity check rejected the email in this result: its cited source ('{email_src}') is a bare domain homepage unconnected to {name}'s own name, which cannot actually display one specific person's email -- almost certainly a pattern-guessed address, not a real citation. Original notes: {result.get('notes', '')}",
         }
     email = (result.get("email") or "")
+    if email and email.lower().strip(".") in PLACEHOLDER_WORDS:
+        # Same placeholder-as-if-real-data failure as target_name above,
+        # caught independently here since a real name can still come
+        # paired with a placeholder email (the two are set by the model
+        # somewhat independently, not always both-or-neither).
+        return {
+            **result,
+            "email": "",
+            "email_source_url": "",
+            "confidence": "LOW",
+            "notes": f"Sanity check rejected this result: email was a placeholder string ('{email}'), not a real address. Original notes: {result.get('notes', '')}",
+        }
     if "protected" in email.lower() and "email" in email.lower():
         # Third real failure mode, same day: ResearchGate (and other
         # sites) render an obfuscated contact as literal page text --

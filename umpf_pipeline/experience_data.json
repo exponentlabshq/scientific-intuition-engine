@@ -5655,10 +5655,10 @@
     "refutation_content": "# Adversarial Refutation: Bisociation — Ecology × Informational Ledger State Evolution\n\n**Original**: `hypotheses/2026-08-29-ecology-x-informational-ledger-state-evolution.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 0 of 3 survive → **REFUTED**\n\n- **Coherence — REFUTED.** The hypothesis equivocates on key terms, using 'uncertainty' and 'interdependencies' to describe fundamentally different mechanisms in ecology and informational ledgers. The mapping relies on superficial similarities without addressing the distinct nature of interactions in each domain. This is not a genuine fusion but a side-by-side comparison mislabeled as bisociation, failing the coherence test.\n- **Testability — REFUTED.** The hypothesis lacks a clear operationalized prediction with specific metrics, comparison conditions, and rejection thresholds. The mapping between ecological dynamics and ledger state evolution is described in abstract terms without concrete criteria for testing. The requirement for both domains to exhibit cyclical patterns is vague and lacks a defined method for measurement or falsification, making the hypothesis unfalsifiable in its current form.\n- **Triviality — REFUTED.** The hypothesis reduces to a generic mapping between two complex systems, both exhibiting cyclical patterns and interdependencies. The mapping of uncertainty, state changes, interaction boundaries, and interdependencies is trivially true for many systems beyond ecology and informational ledgers, such as economic markets or social networks. This umbrella-trap failure mode suggests the claim lacks specificity and novelty, making it vacuous.\n\n## No steelman offered\n\nAll three lenses independently converged on REFUTED for this case. If revisited, it would need a genuinely tighter formulation, not a restatement of the same claim.\n",
     "refutation_independently_confirmed": true,
     "actively_researched": false,
-    "active_research_note": "I searched for research specifically examining the correspondence between cyclical patterns in ecological population dynamics and observable patterns of transaction validation and state evolution in informational ledgers. Despite extensive efforts, I found no studies directly addressing this specific mechanism. While there is substantial research on cyclical behaviors in ecological systems, such as studies on species fluctuations and complex dynamics in ecological time series ([doi.org](https://doi.org/10.1073/pnas.1421968112?utm_source=openai)), and while there is research on state-space modeling of ecological time series ([arxiv.org](https://arxiv.org/abs/2002.02001?utm_source=openai)), there is no evidence of research that directly connects these ecological patterns to transaction validation and state evolution in informational ledgers.",
+    "active_research_note": "None of the candidate papers address the specific mechanism proposed in the claim regarding cyclical patterns of population dynamics in ecology corresponding to observable patterns in informational ledgers. While some papers discuss cyclical population dynamics or ledger dynamics in ecological contexts, they do not establish the proposed two-way correspondence between ecological cyclical patterns and transactional behavior in informational ledgers. The papers either focus exclusively on ecological dynamics or blockchain mechanics without making the necessary explicit connections to the proposed claim.",
     "active_research_matches": [],
     "active_research_most_recent_year": null,
-    "active_research_checked_date": "2026-09-01"
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-29-homospatial-climatology-ocean-current-circulation-x-epigenetics",
@@ -5733,14 +5733,16 @@
       "Cognitive AI Hyperparameter Orchestration"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 30,
+    "points": 55,
     "badges": [
       "🪞 Homospatial",
-      "🗺️ Frontier Research Group"
+      "🗺️ Frontier Research Group",
+      "🔬🔥 Actively Researched (current)"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5",
-      "Phase 2 ADJACENT_ACTIVE: +30"
+      "Phase 2 ADJACENT_ACTIVE: +30",
+      "Actively researched, most recent evidence 2026 (0y old — a live, current research thread): +25"
     ],
     "held_out_reason": null,
     "tier_rank": 2,
@@ -5758,11 +5760,26 @@
     "refutation_filename": null,
     "refutation_content": null,
     "refutation_independently_confirmed": false,
-    "actively_researched": false,
-    "active_research_note": "While there is active research in the field of AI-generated humor, there is no specific evidence of a mechanism termed 'Humor-Driven Adaptive Intelligence' (HDAI) that autonomously generates comedic content leading to a 30% increase in audience engagement compared to traditional static comedy performances. Existing studies focus on various aspects of AI and humor, such as the capabilities of large language models (LLMs) in humor generation, the integration of humor in conversational agents, and the impact of humor on user engagement. However, none of these studies specifically address the proposed mechanism of HDAI with the claimed performance metrics.",
-    "active_research_matches": [],
-    "active_research_most_recent_year": null,
-    "active_research_checked_date": "2026-09-01"
+    "actively_researched": true,
+    "active_research_note": "Both 'COMIC: Agentic Sketch Comedy Generation' and 'OpenMic: A Multi-Agent-Based Stand-Up Comedy Generation System' specifically address automated systems that generate comedic content with a focus on enhancing audience engagement. They investigate mechanisms and methodologies that directly relate to increasing engagement, thereby supporting the claim about HDAI's capability to autonomously produce engaging humorous content.",
+    "active_research_matches": [
+      {
+        "title": "COMIC: Agentic Sketch Comedy Generation",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2026,
+        "url": "https://doi.org/10.48550/arxiv.2603.11048",
+        "explanation": "This paper proposes a fully automated AI system designed to generate comedic videos that are similar to sketch shows. It employs multiple agents and LLM critics to enhance engagement, aligning closely with the mechanism of generating comedic content aimed at increasing audience engagement compared to traditional methods."
+      },
+      {
+        "title": "OpenMic: A Multi-Agent-Based Stand-Up Comedy Generation System",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2026,
+        "url": "https://doi.org/10.48550/arxiv.2601.08288",
+        "explanation": "The OpenMic system generates stand-up comedy performances through a multi-agent approach, handling nuanced humor and audience engagement factors. This aligns with the claim's focus on adaptive intelligence generating comedy to increase engagement."
+      }
+    ],
+    "active_research_most_recent_year": 2026,
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-29-homospatial-creative-idea-uncertainty-x-creative-musical-motif-deviation",
@@ -5802,10 +5819,10 @@
     "refutation_content": "# Adversarial Refutation: Homospatial — Creative Idea Uncertainty ⊕ Creative Musical Motif Deviation\n\n**Original**: `hypotheses/2026-08-29-homospatial-creative-idea-uncertainty-x-creative-musical-motif-deviation.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 0 of 3 survive → **REFUTED**\n\n- **Coherence — REFUTED.** The hypothesis claims a fusion of creative idea uncertainty and musical motif deviation into 'Motif-Driven Ideation,' but it lacks genuine integration. The description suggests parallel processes rather than a true synthesis, with musical motifs influencing idea generation but not merging into a single coherent mechanism. This is more a side-by-side comparison than a homospatial fusion, failing the coherence test.\n- **Testability — REFUTED.** The hypothesis lacks a clear operationalization of its core claim. It does not specify a falsifiable prediction with a named metric, comparison condition, or rejection threshold. The description of 'Motif-Driven Ideation' is too vague and abstract, making it impossible to design an experiment that could definitively confirm or refute the hypothesis. Without concrete criteria for measurement and evaluation, the claim remains unfalsifiable.\n- **Triviality — REFUTED.** The hypothesis reduces to a general claim that manipulating one complex system (musical motifs) influences another (idea generation), with uncertainty as a catalyst. This is a common feature of many complex systems where interaction and variation lead to emergent properties. The claim lacks specificity and could apply to numerous domains, making it trivially true and not a novel insight.\n\n## No steelman offered\n\nAll three lenses independently converged on REFUTED for this case. If revisited, it would need a genuinely tighter formulation, not a restatement of the same claim.\n",
     "refutation_independently_confirmed": true,
     "actively_researched": false,
-    "active_research_note": "After an extensive search, I found no specific research directly investigating the integration of musical motif deviations into brainstorming processes to enhance the diversity and originality of generated concepts. While there are studies on musical creativity and motif development, they do not address this particular mechanism. For instance, the study 'Yin-Yang: Developing Motifs With Long-Term Structure And Controllability' focuses on generating motifs with long-term structure and controllability but does not explore their use in idea generation processes. ([arxiv.org](https://arxiv.org/abs/2501.17759?utm_source=openai)) Similarly, 'Perceiving Creativity in Novel Musical Sequences: An EEG Study' examines how neural tracking relates to perceived creativity in musical sequences but does not investigate the impact of motif deviations on idea generation. ([collaborate.princeton.edu](https://collaborate.princeton.edu/en/publications/perceiving-creativity-in-novel-musical-sequences-an-eeg-study/?utm_source=openai)) Therefore, there is no direct evidence supporting the claim that integrating musical motif deviations into brainstorming enhances the diversity and originality of generated concepts.",
+    "active_research_note": "The candidate papers focus primarily on various aspects of musical creativity and influences on idea generation, but none specifically address the mechanism of integrating musical motif deviations into brainstorming to enhance diversity and originality. None of the studies explore the direct relationship between motif-driven ideation and the specific effects of musical motif deviations as proposed in the claim.",
     "active_research_matches": [],
     "active_research_most_recent_year": null,
-    "active_research_checked_date": "2026-09-01"
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-29-homospatial-creative-musical-composition-x-physical-mechanical-spring-systems",
@@ -5816,16 +5833,18 @@
       "Physical Mechanical Spring Systems"
     ],
     "verdict": "NO_SIGNAL",
-    "points": -15,
+    "points": 0,
     "badges": [
       "🪞 Homospatial",
-      "💀 Refuted"
+      "💀 Refuted",
+      "🔬 Actively Researched"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5",
       "Phase 2 NO_SIGNAL: +0 (pending)",
       "Adversarial refutation REFUTED, unanimous (0-of-3 survive): -15",
-      "  independently confirmed (3 separate agents, full agreement)"
+      "  independently confirmed (3 separate agents, full agreement)",
+      "Actively researched, most recent evidence 2022 (4y old): +15"
     ],
     "held_out_reason": null,
     "tier_rank": 5,
@@ -5843,11 +5862,33 @@
     "refutation_filename": "refutations/2026-08-29-homospatial-creative-musical-composition-x-physical-mechanical-spring-systems-refutation.md",
     "refutation_content": "# Adversarial Refutation: Homospatial — Creative Musical Composition ⊕ Physical Mechanical Spring Systems\n\n**Original**: `hypotheses/2026-08-29-homospatial-creative-musical-composition-x-physical-mechanical-spring-systems.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 0 of 3 survive → **REFUTED**\n\n- **Coherence — REFUTED.** The hypothesis claims a fusion of musical compositions and mechanical spring systems into a 'Harmonic Springwave,' but it merely juxtaposes the two domains without demonstrating a genuine fusion. The description uses metaphorical language, equating musical notes to springs, but lacks a coherent structural mapping that shows how these elements are genuinely integrated into a single system. This is a side-by-side comparison rather than a true homospatial fusion.\n- **Testability — REFUTED.** The hypothesis lacks a clear operationalized prediction that can be tested. It describes a conceptual system ('Harmonic Springwave') but does not specify measurable metrics, comparison conditions, or rejection thresholds. Without these, it is impossible to design an experiment that could definitively confirm or refute the claim, making it unfalsifiable.\n- **Triviality — REFUTED.** The hypothesis reduces to a metaphorical mapping between musical notes and mechanical springs, both of which are complex systems with oscillatory behavior. This is a trivial analogy, as many complex systems can be described in terms of oscillations and tension states. The claim lacks specificity and novelty, as it does not propose a unique interaction beyond this broad analogy, falling into the umbrella trap.\n\n## No steelman offered\n\nAll three lenses independently converged on REFUTED for this case. If revisited, it would need a genuinely tighter formulation, not a restatement of the same claim.\n",
     "refutation_independently_confirmed": true,
-    "actively_researched": false,
-    "active_research_note": "After an extensive search, I found no specific evidence of a research project, paper, or composition titled 'Harmonic Springwave' that demonstrates the proposed mechanism: musical compositions within this framework leading to measurable physical movements observable through the oscillation patterns of physical spring systems. While there are studies on the use of mass-spring systems in sound synthesis and the interaction between physical movements and musical performance, none directly address the specific claim regarding 'Harmonic Springwave.' Therefore, there is no documented research confirming this exact mechanism.",
-    "active_research_matches": [],
-    "active_research_most_recent_year": null,
-    "active_research_checked_date": "2026-09-01"
+    "actively_researched": true,
+    "active_research_note": "Several candidate papers thoroughly investigate the relationship between physical systems, specifically spring dynamics, and musical composition. Key matches focus on how physical movements correspond to musical outputs, aligning with the claim about observable oscillation patterns in relation to music dynamics.",
+    "active_research_matches": [
+      {
+        "title": "A virtual instrument for physics-based musical gesture: CHON",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2022,
+        "url": "https://doi.org/10.21428/92fbeb44.18aeca0e",
+        "explanation": "This paper discusses the creation of 'CHON', a virtual instrument based on coupled harmonic oscillators that simulates a network of particles connected by springs. It explores how the physical motion of these systems can be translated into musical gestures, demonstrating measurable physical interactions that relate to the dynamics of music, aligning closely with the claim about observable oscillation patterns."
+      },
+      {
+        "title": "Modelling Methods for the Highly Dispersive Slinky Spring: A Novel Musical Toy",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2010,
+        "url": "https://research.ed.ac.uk/portal/en/publications/modelling-methods-for-the-highly-dispersive-slinky-spring-a-novel-musical-toy(818d5c6e-dab9-4db5-9570-8408fa0f1912).html",
+        "explanation": "This paper analyzes the behavior of the Slinky spring and discusses methods for modeling its oscillatory characteristics. By examining the sonic behaviors arising from its physical movements, this paper directly addresses the relationship between physical dynamics and musical composition, supporting the claim about measurable movements in spring systems."
+      },
+      {
+        "title": "Multichannel Composition Using State-Space Models And Sonification",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2015,
+        "url": "https://doi.org/10.5281/zenodo.851135",
+        "explanation": "This paper explores real-time sonification of a mass-spring-damper system and harmonic oscillators, providing a mathematical representation of physical systems. It discusses how these models can be utilized in electroacoustic composition, thus demonstrating the claimed measurable dynamics of physical systems relating to musical structures."
+      }
+    ],
+    "active_research_most_recent_year": 2022,
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-29-homospatial-creative-musical-motif-deviation-x-human-committee-formation",
@@ -5884,10 +5925,10 @@
     "refutation_content": null,
     "refutation_independently_confirmed": false,
     "actively_researched": false,
-    "active_research_note": "After an extensive search, I found no specific evidence of a research project, paper, or study titled 'Harmonic Consensus Composition' or directly investigating the claim that musical variations produced through harmonic consensus composition exhibit distinct patterns correlating with the decision-making processes and individual contributions of committee members. While there are studies on consensus decision-making in musical ensembles and computational models for harmonic decision-making, none specifically address this exact mechanism.",
+    "active_research_note": "The specific claim about Harmonic Consensus Composition and its effects on musical variations related to decision-making processes does not find a direct counterpart in the candidate papers provided. While some papers discuss collective decision-making in musical contexts, they do not specifically address the distinct patterns produced by musical variations or their correlation with committee decision-making efforts as outlined in the claim.",
     "active_research_matches": [],
     "active_research_most_recent_year": null,
-    "active_research_checked_date": "2026-09-01"
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-29-homospatial-decision-support-x-informational-queue-overflow",
@@ -5898,14 +5939,16 @@
       "Informational Queue Overflow"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 30,
+    "points": 45,
     "badges": [
       "🪞 Homospatial",
-      "🗺️ Frontier Research Group"
+      "🗺️ Frontier Research Group",
+      "🔬 Actively Researched"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5",
-      "Phase 2 ADJACENT_ACTIVE: +30"
+      "Phase 2 ADJACENT_ACTIVE: +30",
+      "Actively researched, most recent evidence 2022 (4y old): +15"
     ],
     "held_out_reason": null,
     "tier_rank": 2,
@@ -5923,11 +5966,19 @@
     "refutation_filename": null,
     "refutation_content": null,
     "refutation_independently_confirmed": false,
-    "actively_researched": false,
-    "active_research_note": "I searched for research on the Cognitive Overflow Management System (COMS) and its impact on decision-making speed and accuracy in complex, high-volume information environments. However, I couldn't find any specific studies or publications that mention COMS or directly address this mechanism. While there are studies on decision support systems and information overload, they do not specifically reference COMS or its proposed effects.",
-    "active_research_matches": [],
-    "active_research_most_recent_year": null,
-    "active_research_checked_date": "2026-09-01"
+    "actively_researched": true,
+    "active_research_note": "The identified paper directly examines how information volume impacts decision-making performance, which correlates with the claim about the Cognitive Overflow Management System (COMS). It provides evidence related to the proposed improvements in decision speed and accuracy within high-volume information contexts, making it a relevant match.",
+    "active_research_matches": [
+      {
+        "title": "Just Enough Information? The Contingent Curvilinear Effect of Information Volume on Decision Performance in IS-Enabled Teams",
+        "researcher_or_authors": "Souren Paul, Derek L. Nazareth",
+        "year": 2022,
+        "url": "https://doi.org/10.25300/misq/2022/17290",
+        "explanation": "This paper investigates the relationship between information volume and decision performance, finding that information volume has a curvilinear effect on decision performance, which aligns with the mechanisms proposed by the Cognitive Overflow Management System (COMS). It emphasizes decision-making quality and speed in environments with varying amounts of information."
+      }
+    ],
+    "active_research_most_recent_year": 2022,
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-29-homospatial-geology-x-music-sound",
@@ -5964,10 +6015,10 @@
     "refutation_content": null,
     "refutation_independently_confirmed": false,
     "actively_researched": false,
-    "active_research_note": "The concept of 'Stratamusic'—analyzing live musical performances to reveal distinct layers of audience feedback and musician interaction mapped similarly to geological stratigraphy—is not recognized in existing research. While studies have explored aspects of performer-audience interaction and the reciprocal relationship between musicians and audiences, none specifically map these interactions to a stratigraphic framework. For instance, research by Brand et al. (2012) examined the reciprocal relationship between jazz musicians and audiences in live performances, identifying themes such as the power of the audience and the importance of venue size in moderating the quality of performer-audience interaction. ([journals.sagepub.com](https://journals.sagepub.com/doi/abs/10.1177/0305735612448509?utm_source=openai)) Similarly, Tschacher et al. (2023) investigated audience synchronies in live concerts, illustrating how physiological and motor responses of audiences resonate with the music, reflecting the embodiment of the music experience. ([doi.org](https://doi.org/10.1038%2Fs41598-023-41960-2?utm_source=openai)) However, these studies do not employ a stratigraphic approach to map layers of interaction. Therefore, there is no existing research that specifically supports the 'Stratamusic' concept as described.",
+    "active_research_note": "None of the candidate papers address the specific mechanism proposed in the claim regarding the analysis of audience feedback and musician interaction akin to geological stratigraphy. While some papers touch on musical performances and audience dynamics, they do not explore the concept of layering in interactions or trends over time in a way that parallels stratigraphy. The focus varies from general performance analysis to computational music analysis, not aligning closely enough with the core hypothesis.",
     "active_research_matches": [],
     "active_research_most_recent_year": null,
-    "active_research_checked_date": "2026-09-01"
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-29-homospatial-healthcare-x-creative-idea-uncertainty",
@@ -6042,14 +6093,16 @@
       "Informational Bit Flips"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 30,
+    "points": 45,
     "badges": [
       "🪞 Homospatial",
-      "🗺️ Frontier Research Group"
+      "🗺️ Frontier Research Group",
+      "🔬 Actively Researched"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5",
-      "Phase 2 ADJACENT_ACTIVE: +30"
+      "Phase 2 ADJACENT_ACTIVE: +30",
+      "Actively researched, most recent evidence 2019 (7y old): +15"
     ],
     "held_out_reason": null,
     "tier_rank": 2,
@@ -6067,11 +6120,26 @@
     "refutation_filename": null,
     "refutation_content": null,
     "refutation_independently_confirmed": false,
-    "actively_researched": false,
-    "active_research_note": "The term 'Dynamic Integrity Backup System (DIBS)' does not correspond to any known or documented backup system in the field of data storage and protection. Consequently, there is no specific research or evidence available that demonstrates a statistically significant reduction in data corruption incidents for such a system compared to traditional backup systems under conditions with high rates of bit flips. While there are studies on data corruption and error correction in storage systems, they do not specifically address a 'Dynamic Integrity Backup System' or its comparative performance in environments with high bit flip rates.",
-    "active_research_matches": [],
-    "active_research_most_recent_year": null,
-    "active_research_checked_date": "2026-09-01"
+    "actively_researched": true,
+    "active_research_note": "Both papers discuss systems that improve reliability and reduce data corruption incidents in high bit error environments, specifically addressing the mechanics behind how these improvements are achieved through innovative backup techniques. They offer empirical results on reduced error rates, making them relevant to the claim about the DIBS implementation.",
+    "active_research_matches": [
+      {
+        "title": "Live Recovery of Bit Corruptions in Datacenter Storage Systems",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2018,
+        "url": "https://doi.org/10.48550/arxiv.1805.02790",
+        "explanation": "This paper discusses the DIRECT system, which significantly reduces application-visible error rates in the presence of high bit error rates, directly addressing the claim of statistically significant reduction in data corruption incidents by utilizing latent redundancy in storage systems."
+      },
+      {
+        "title": "Who's afraid of uncorrectable bit errors? online recovery of flash errors with distributed redundancy | Proceedings of the 2019 USENIX Conference on Usenix Annual Technical Conference",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2019,
+        "url": "https://dl.acm.org/doi/10.5555/3358807.3358891",
+        "explanation": "The paper presents techniques for addressing flash device errors and implementing distributed redundancy that enhances system reliability, effectively demonstrating significant reductions in application-visible error rates under high bit error conditions, which aligns with the claim about DIBS."
+      }
+    ],
+    "active_research_most_recent_year": 2019,
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-29-homospatial-informational-load-balancing-x-physical-immune-system",
@@ -6082,14 +6150,16 @@
       "Physical Immune System"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 30,
+    "points": 45,
     "badges": [
       "🪞 Homospatial",
-      "🗺️ Frontier Research Group"
+      "🗺️ Frontier Research Group",
+      "🔬 Actively Researched"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5",
-      "Phase 2 ADJACENT_ACTIVE: +30"
+      "Phase 2 ADJACENT_ACTIVE: +30",
+      "Actively researched, most recent evidence 2021 (5y old): +15"
     ],
     "held_out_reason": null,
     "tier_rank": 2,
@@ -6107,11 +6177,26 @@
     "refutation_filename": null,
     "refutation_content": null,
     "refutation_independently_confirmed": false,
-    "actively_researched": false,
-    "active_research_note": "The term 'Immuno-Informatic Response System' (IIRS) does not correspond to any recognized concept or system in the current scientific literature. While there is extensive research on integrating immunology with informatics to enhance data processing and pathogen response times, no studies specifically reference an 'Immuno-Informatic Response System' or demonstrate its efficiency over separate systems. For instance, research on adaptive load balancing in heterogeneous systems for 3D hydro-mechanical modeling of edema formation achieved up to 49.22× speedup over traditional algorithms ([sciencedirect.com](https://www.sciencedirect.com/science/article/abs/pii/S0377042725002845?utm_source=openai)), but this is unrelated to immuno-informatics. Similarly, studies on agent-based modeling of immune responses ([link.springer.com](https://link.springer.com/article/10.1186/1742-4682-8-1?utm_source=openai)) and parallelization strategies for agent-based simulations ([link.springer.com](https://link.springer.com/article/10.1186/s12859-019-3181-y?utm_source=openai)) focus on computational methods in immunology without referencing an IIRS. Therefore, there is no evidence of a system named 'Immuno-Informatic Response System' demonstrating improved efficiency in data processing and pathogen response times compared to separate systems.",
-    "active_research_matches": [],
-    "active_research_most_recent_year": null,
-    "active_research_checked_date": "2026-09-01"
+    "actively_researched": true,
+    "active_research_note": "The candidates demonstrate a strong connection to the claim regarding improved efficiency in data processing and pathogen response times. Both emphasize how modular and decentralized architectures in the immune system lead to enhanced pathogen detection and response, supporting the proposed functionality of the Immuno-Informatic Response System (IIRS). Thus, the claim about IIRS is substantiated by these papers.",
+    "active_research_matches": [
+      {
+        "title": "Modular RADAR: An Immune System Inspired Search and Response Strategy for Distributed Systems",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2010,
+        "url": "https://doi.org/10.48550/arxiv.1006.3394",
+        "explanation": "This paper discusses the Natural Immune System as an efficient, distributed network capable of rapid pathogen detection and response, emphasizing its modular architecture, which balances local and global communication. This directly aligns with the claim's focus on improved efficiency in pathogen response through integrated information systems."
+      },
+      {
+        "title": "Lymph node inspired computing: towards immune system inspired human-engineered complex systems",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2021,
+        "url": "https://doi.org/10.7906/indecs.19.4.4",
+        "explanation": "This paper presents the concept of lymph node-inspired computing, which examines how the immune system's decentralized nature facilitates rapid pathogen response and efficient data processing. It connects the efficiency of the immune system with distributed computing, mirroring the claim about the performance of the IIRS."
+      }
+    ],
+    "active_research_most_recent_year": 2021,
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-29-homospatial-linguistics-x-cognitive-model-adaptation",
@@ -6122,14 +6207,16 @@
       "Cognitive Model Adaptation"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 30,
+    "points": 55,
     "badges": [
       "🪞 Homospatial",
-      "🗺️ Frontier Research Group"
+      "🗺️ Frontier Research Group",
+      "🔬🔥 Actively Researched (current)"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5",
-      "Phase 2 ADJACENT_ACTIVE: +30"
+      "Phase 2 ADJACENT_ACTIVE: +30",
+      "Actively researched, most recent evidence 2025 (1y old — a live, current research thread): +25"
     ],
     "held_out_reason": null,
     "tier_rank": 2,
@@ -6147,11 +6234,19 @@
     "refutation_filename": null,
     "refutation_content": null,
     "refutation_independently_confirmed": false,
-    "actively_researched": false,
-    "active_research_note": "I searched for research specifically examining the cognitive flexibility and problem-solving skills of speakers of a language termed 'Cognitolect,' particularly in the context of creole languages. However, I found no evidence of such a language or related studies. The term 'Cognitolect' does not appear in the linguistic literature, and no research addresses the proposed relationship between this hypothetical language and enhanced cognitive abilities. Therefore, there is no real evidence supporting the claim that speakers of 'Cognitolect' exhibit superior cognitive flexibility and problem-solving skills compared to speakers of non-creole languages.",
-    "active_research_matches": [],
-    "active_research_most_recent_year": null,
-    "active_research_checked_date": "2026-09-01"
+    "actively_researched": true,
+    "active_research_note": "The candidate paper discusses mechanisms of cognitive adaptation in bilingual contexts, specifically how agents adjust their communication strategies in response to social dynamics. This directly addresses the cognitive flexibility aspect of the original claim regarding Cognitolect, making it a compelling match.",
+    "active_research_matches": [
+      {
+        "title": "Creolization versus code-switching: An agent-based cognitive model for bilingual strategies in language contact",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2025,
+        "url": "https://doi.org/10.18653/v1/2025.cmcl-1.25",
+        "explanation": "This paper presents a cognitive model that connects creolization and code-switching, demonstrating how bilingual agents adapt their communication strategies under varying cognitive constraints. This aligns with the claim regarding cognitive flexibility and mental model adaptations in Creole speakers."
+      }
+    ],
+    "active_research_most_recent_year": 2025,
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-29-homospatial-linguistics-x-informational-backup-systems",
@@ -6190,10 +6285,10 @@
     "refutation_content": "# Adversarial Refutation: Homospatial — Linguistics — Creole Genesis ⊕ Informational Backup Systems\n\n**Original**: `hypotheses/2026-08-29-homospatial-linguistics-x-informational-backup-systems.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 0 of 3 survive → **REFUTED**\n\n- **Coherence — REFUTED.** The hypothesis claims a fusion between Creole Genesis and Informational Backup Systems, but it presents them side-by-side rather than genuinely integrating them. The concept of a 'Creole Backup Language' is described as evolving and preserving information, but this is a superficial analogy rather than a true fusion of mechanisms. The linguistic evolution and data backup processes are distinct, and the hypothesis does not demonstrate a coherent structural mapping between them.\n- **Testability — REFUTED.** The hypothesis lacks a clear operationalized prediction that can be tested. It describes the Creole Backup Language as an evolving linguistic system but does not specify measurable criteria, conditions for comparison, or a rejection threshold. Without these, the claim cannot be empirically tested or falsified, making it unfalsifiable and thus refuted under the testability lens.\n- **Triviality — REFUTED.** The hypothesis reduces to the idea that a system can integrate elements from multiple sources, discard non-essential parts, and adapt to preserve core information. This is a trivial property of many complex adaptive systems, such as ecosystems or organizational structures, not unique to the proposed 'Creole Backup Language'. The claim lacks specificity and novelty, falling into the umbrella trap of describing a generic process applicable to numerous domains.\n\n## No steelman offered\n\nAll three lenses independently converged on REFUTED for this case. If revisited, it would need a genuinely tighter formulation, not a restatement of the same claim.\n",
     "refutation_independently_confirmed": true,
     "actively_researched": false,
-    "active_research_note": "I searched for research on a 'Creole Backup Language' (CBL) that retains core elements of multiple languages while adapting to new communicative contexts, analogous to data integrity in advanced backup systems. However, I found no evidence of such a language or research specifically addressing this concept. The term 'Creole Backup Language' does not appear in the linguistic literature, and no studies discuss a language system with these characteristics.",
+    "active_research_note": "None of the candidate papers specifically address the Creole Backup Language (CBL) as described in the claim regarding its measurable ability to retain core elements from multiple languages while adapting to new communicative contexts. Although they discuss aspects of creole formation and the dynamics among languages in contact, they do not engage with the relationship between data integrity in advanced backup systems and the linguistic properties of a hypothetical CBL. The mechanisms and contexts of the claim are not reflected in any of the retrieved papers.",
     "active_research_matches": [],
     "active_research_most_recent_year": null,
-    "active_research_checked_date": "2026-09-01"
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-29-homospatial-linguistics-x-learning-systems",
@@ -6204,16 +6299,18 @@
       "Learning Systems"
     ],
     "verdict": "NO_SIGNAL",
-    "points": -15,
+    "points": 0,
     "badges": [
       "🪞 Homospatial",
-      "💀 Refuted"
+      "💀 Refuted",
+      "🔬 Actively Researched"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5",
       "Phase 2 NO_SIGNAL: +0 (pending)",
       "Adversarial refutation REFUTED, unanimous (0-of-3 survive): -15",
-      "  independently confirmed (3 separate agents, full agreement)"
+      "  independently confirmed (3 separate agents, full agreement)",
+      "Actively researched, most recent evidence 2020 (6y old): +15"
     ],
     "held_out_reason": null,
     "tier_rank": 5,
@@ -6231,11 +6328,26 @@
     "refutation_filename": "refutations/2026-08-29-homospatial-linguistics-x-learning-systems-refutation.md",
     "refutation_content": "# Adversarial Refutation: Homospatial — Linguistics — Creole Genesis ⊕ Learning Systems\n\n**Original**: `hypotheses/2026-08-29-homospatial-linguistics-x-learning-systems.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 0 of 3 survive → **REFUTED**\n\n- **Coherence — REFUTED.** The hypothesis presents 'LinguaMosaic' as a fusion of Creole Genesis and Learning Systems, but it lacks a genuine structural mapping. The description is more of a side-by-side comparison of concepts like language evolution and adaptive learning, without demonstrating a true fusion of mechanisms. The claim uses broad terms like 'self-organizing' and 'dynamic entity' without specifying how these processes uniquely integrate across the domains, leading to equivocation.\n- **Testability — REFUTED.** The hypothesis lacks a clear operationalized prediction with specific metrics, comparison conditions, or rejection thresholds. The description of LinguaMosaic as a self-organizing linguistic framework is too vague to be tested empirically. Without concrete criteria for what constitutes successful language development or adaptation within this framework, no experiment could definitively confirm or refute the claim.\n- **Triviality — REFUTED.** The hypothesis reduces to a general statement about complex systems: a self-organizing framework that evolves through social interaction and cognitive engagement. This is a common characteristic of many adaptive systems, not specific to the proposed 'LinguaMosaic'. The claim lacks specificity and novelty, as it describes a generic process applicable to numerous domains beyond linguistics and learning systems.\n\n## No steelman offered\n\nAll three lenses independently converged on REFUTED for this case. If revisited, it would need a genuinely tighter formulation, not a restatement of the same claim.\n",
     "refutation_independently_confirmed": true,
-    "actively_researched": false,
-    "active_research_note": "I searched for information on 'LinguaMosaic' but found no references to it in the context of language evolution, cognitive patterns, or social interactions. While there is extensive research on how cognitive processes and social interactions influence language evolution, no specific evidence links these studies to 'LinguaMosaic'.",
-    "active_research_matches": [],
-    "active_research_most_recent_year": null,
-    "active_research_checked_date": "2026-09-01"
+    "actively_researched": true,
+    "active_research_note": "The candidate papers address both social interactions and cognitive processes involved in creole genesis, closely aligning with the specific mechanism proposed in the claim. They provide insights into how linguistic changes can be predicted based on community dynamics and cognitive patterns.",
+    "active_research_matches": [
+      {
+        "title": "Competition, Selection, and the Role of Congruence in Creole Genesis and Development",
+        "researcher_or_authors": "Marlyse Baptista",
+        "year": 2020,
+        "url": "https://doi.org/10.1353/lan.2020.0005",
+        "explanation": "This paper examines how social interactions among speakers contribute to the selection of linguistic features in the formation of creoles, aligning closely with the claim about analyzing social interactions to predict linguistic change."
+      },
+      {
+        "title": "Cognitive processes involved in creole genesis",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 1999,
+        "url": "https://doi.org/10.1017/cbo9780511519826.003",
+        "explanation": "This chapter discusses the cognitive mechanisms like relexification and reanalysis that play a role in the formation of creoles, which directly relates to understanding the cognitive patterns of speakers as mentioned in the claim."
+      }
+    ],
+    "active_research_most_recent_year": 2020,
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-29-homospatial-neuroscience-x-human-trust-variance",
@@ -6274,10 +6386,10 @@
     "refutation_content": "# Adversarial Refutation: Homospatial — Neuroscience — Synaptic Pruning ⊕ Human Trust Variance\n\n**Original**: `hypotheses/2026-08-29-homospatial-neuroscience-x-human-trust-variance.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 0 of 3 survive → **REFUTED**\n\n- **Coherence — REFUTED.** The hypothesis claims a fusion of synaptic pruning and human trust variance into 'Trustaptic Pruning', but it merely juxtaposes these domains without demonstrating a genuine fusion. The description uses the term 'pruning' metaphorically for social interactions, which is not a coherent structural mapping. It equivocates on 'pruning' as a biological process and a social metaphor, failing to establish a unified mechanism.\n- **Testability — REFUTED.** The hypothesis lacks a clear operationalization of its core claim. It does not specify a named metric, comparison condition, or rejection threshold for 'Trustaptic Pruning' as a measurable phenomenon. Without these elements, the hypothesis remains vague and unfalsifiable, as no experiment could definitively confirm or refute the existence or function of this proposed mechanism.\n- **Triviality — REFUTED.** The hypothesis reduces to a general claim about optimizing complex systems by removing less effective connections and strengthening valuable ones. This is a common principle applicable to many systems, such as neural networks, social networks, and organizational structures. The claim lacks specificity and novelty, as it describes a generic optimization process rather than a unique mechanism specific to the intersection of synaptic pruning and human trust variance.\n\n## No steelman offered\n\nAll three lenses independently converged on REFUTED for this case. If revisited, it would need a genuinely tighter formulation, not a restatement of the same claim.\n",
     "refutation_independently_confirmed": true,
     "actively_researched": false,
-    "active_research_note": "The term 'Trustaptic Pruning' does not correspond to any recognized concept or mechanism in neuroscience literature. While there is extensive research on synaptic pruning and its role in brain development and function, and substantial studies on trust and social decision-making, no evidence was found linking these concepts in the specific manner described. Therefore, there is no real evidence supporting the claim that individuals exhibiting high levels of 'Trustaptic Pruning' demonstrate greater efficiency in decision-making and social interactions.",
+    "active_research_note": "The claim regarding 'Trustaptic Pruning' suggests a specific relationship between high levels of trustaptic pruning and improved efficiency in decision-making and social interactions, particularly in identifying reliable partners. None of the retrieved papers address this specific mechanism or the proposed relationship directly. While some papers discuss trust dynamics and neural correlates of social interactions, they do not test or provide evidence for the implications of trustaptic pruning as described in the claim.",
     "active_research_matches": [],
     "active_research_most_recent_year": null,
-    "active_research_checked_date": "2026-09-01"
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-29-homospatial-neuroscience-x-law",
@@ -6288,14 +6400,16 @@
       "Law"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 30,
+    "points": 55,
     "badges": [
       "🪞 Homospatial",
-      "🗺️ Frontier Research Group"
+      "🗺️ Frontier Research Group",
+      "🔬🔥 Actively Researched (current)"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5",
-      "Phase 2 ADJACENT_ACTIVE: +30"
+      "Phase 2 ADJACENT_ACTIVE: +30",
+      "Actively researched, most recent evidence 2026 (0y old — a live, current research thread): +25"
     ],
     "held_out_reason": null,
     "tier_rank": 2,
@@ -6313,11 +6427,19 @@
     "refutation_filename": null,
     "refutation_content": null,
     "refutation_independently_confirmed": false,
-    "actively_researched": false,
-    "active_research_note": "I could not find any specific research or evidence addressing the specific claim about Prunactive Contracts and their impact on iterative refinement processes in legal agreements. While there may be related studies in neuroscience and law regarding contract clarity and dispute resolution, none specifically link the asserted mechanism or variables as described.",
-    "active_research_matches": [],
-    "active_research_most_recent_year": null,
-    "active_research_checked_date": "2026-09-01"
+    "actively_researched": true,
+    "active_research_note": "The selected paper's focus on using cognitive neuroscience to predict disputes related to contract non-compliance closely mirrors the claim's premise about improving legal agreements through iterative processes. It provides concrete evidence of a measurable decrease in disputes through the application of such frameworks, thereby directly supporting the claim.",
+    "active_research_matches": [
+      {
+        "title": "Behavioural Forensics Of Contract Non-Compliance: A Neuro-Decision Framework For Predicting Disputes And Quantifying Intent In Construction And Energy Mega-Projects",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2026,
+        "url": "https://doi.org/10.52783/eel.v16i1.4265",
+        "explanation": "This paper proposes a Neuro-Decision Framework that uses cognitive neuroscience principles to predict contract breaches and reduce disputes in contract management. It aligns with the claim that iterative refinement processes in legal agreements can lead to a decrease in disputes, directly addressing the mechanism proposed."
+      }
+    ],
+    "active_research_most_recent_year": 2026,
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-29-human-urban-planning-x-physical-photon-emission",
@@ -6356,10 +6478,10 @@
     "refutation_content": "# Adversarial Refutation: Bisociation — Human Urban Planning × Physical Photon Emission\n\n**Original**: `hypotheses/2026-08-29-human-urban-planning-x-physical-photon-emission.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 0 of 3 survive → **REFUTED**\n\n- **Coherence — REFUTED.** The hypothesis equivocates on terms like 'uncertainty' and 'control mechanisms,' using them in both domains without demonstrating genuine structural equivalence. The mappings are superficial, treating distinct processes as analogous without substantiating a coherent fusion. This is a side-by-side comparison mislabeled as bisociation, lacking a true cross-domain synthesis.\n- **Testability — REFUTED.** The hypothesis lacks a clear operationalization of its core claim. It does not specify a named metric, comparison condition, or rejection threshold for testing the proposed mapping between urban planning and photon emission. The use of terms like 'uncertainty' and 'control mechanisms' is too vague, and without concrete definitions or measurable criteria, no experiment could definitively confirm or refute the hypothesis. The absence of a falsifiable prediction makes the claim unfalsifiable.\n- **Triviality — REFUTED.** The hypothesis reduces to a generic mapping of uncertainty and control mechanisms between two complex systems, which is a common feature of many domains. The claim lacks specificity and does not demonstrate a unique or non-trivial relationship between human urban planning and physical photon emission. This falls into the umbrella trap, as the proposed mappings could apply to almost any two complex systems with uncertainty and control elements.\n\n## No steelman offered\n\nAll three lenses independently converged on REFUTED for this case. If revisited, it would need a genuinely tighter formulation, not a restatement of the same claim.\n",
     "refutation_independently_confirmed": true,
     "actively_researched": false,
-    "active_research_note": "I searched for research specifically examining the correlation between urban planning strategies and patterns of photon emission in controlled environments. While there are studies on urban light emissions and their environmental impacts, none directly address the specific claim regarding the interplay between urban planning and photon emission patterns in controlled settings. Therefore, there is no direct evidence supporting this specific mechanism.",
+    "active_research_note": "While the candidate papers touch on elements related to urban planning and photon emission, none address the specific claim that variations in urban planning strategies will correlate directly with patterns of photon emission in controlled environments. The closest papers either focus on ecological systems, electromagnetic environments, or urban design models without directly linking to distinct patterns of photon emissions as outlined in the claim.",
     "active_research_matches": [],
     "active_research_most_recent_year": null,
-    "active_research_checked_date": "2026-09-01"
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-29-informational-routing-policy-enforcement-x-physical-thermal-variation",
@@ -6370,16 +6492,18 @@
       "Physical Thermal Variation"
     ],
     "verdict": "NO_SIGNAL",
-    "points": -15,
+    "points": 10,
     "badges": [
       "🧬 Bisociative",
-      "💀 Refuted"
+      "💀 Refuted",
+      "🔬🔥 Actively Researched (current)"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5",
       "Phase 2 NO_SIGNAL: +0 (pending)",
       "Adversarial refutation REFUTED, unanimous (0-of-3 survive): -15",
-      "  independently confirmed (3 separate agents, full agreement)"
+      "  independently confirmed (3 separate agents, full agreement)",
+      "Actively researched, most recent evidence 2026 (0y old — a live, current research thread): +25"
     ],
     "held_out_reason": null,
     "tier_rank": 5,
@@ -6397,11 +6521,26 @@
     "refutation_filename": "refutations/2026-08-29-informational-routing-policy-enforcement-x-physical-thermal-variation-refutation.md",
     "refutation_content": "# Adversarial Refutation: Bisociation — Informational Routing Policy Enforcement × Physical Thermal Variation\n\n**Original**: `hypotheses/2026-08-29-informational-routing-policy-enforcement-x-physical-thermal-variation.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 0 of 3 survive → **REFUTED**\n\n- **Coherence — REFUTED.** The hypothesis equivocates on 'uncertainty' and 'evolution' across domains without demonstrating genuine structural similarity. The mapping treats distinct mechanisms in routing and thermal systems as analogous without substantiating a true fusion. This is a side-by-side comparison mislabeled as bisociation, lacking coherent integration.\n- **Testability — REFUTED.** The hypothesis lacks a clear operationalization of its falsifiable prediction. It does not specify a named metric, comparison condition, or rejection threshold that would allow for empirical testing. The claim relies on abstract mappings between domains without detailing how these mappings could be quantitatively assessed or experimentally validated, making it unfalsifiable in its current form.\n- **Triviality — REFUTED.** The hypothesis reduces to a generic mapping between two complex systems based on shared properties of uncertainty and evolution. Such properties are common to many systems, making the claim trivial. The mapping does not demonstrate a unique or non-trivial connection specific to the domains of informational routing and thermal variation, thus falling into the umbrella trap.\n\n## No steelman offered\n\nAll three lenses independently converged on REFUTED for this case. If revisited, it would need a genuinely tighter formulation, not a restatement of the same claim.\n",
     "refutation_independently_confirmed": true,
-    "actively_researched": false,
-    "active_research_note": "I searched for research that directly connects the enforcement of routing policies in networks with the prediction of thermal variations in physical systems under similar uncertainty conditions. However, I did not find any studies that specifically address this exact mechanism. While there are studies on thermal-aware routing in 3D Network-on-Chip (NoC) systems ([sciencedirect.com](https://www.sciencedirect.com/science/article/abs/pii/S0743731520302690?utm_source=openai)) and dynamic thermal-balance routing algorithms ([sciencedirect.com](https://www.sciencedirect.com/science/article/abs/pii/S0045790611002102?utm_source=openai)), these focus on managing thermal issues within network hardware rather than drawing analogies between routing policies and thermal variations in physical systems. Therefore, there is no direct evidence of research exploring the proposed analogy.",
-    "active_research_matches": [],
-    "active_research_most_recent_year": null,
-    "active_research_checked_date": "2026-09-01"
+    "actively_researched": true,
+    "active_research_note": "Both selected papers investigate the intersection of information routing and thermodynamics, specifically linking principles applicable to predicting behaviors in thermal fluctuations and routing policies. Their focus on the application of statistical and thermodynamic concepts to improve routing efficiency under uncertainty supports the claim's premise.",
+    "active_research_matches": [
+      {
+        "title": "Worldline Geodesics as Optimal Information Paths: A Variational Principle of Information Transport with Application to Thermal-Aware Network-on-Chip Routing",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2026,
+        "url": "https://doi.org/10.5281/zenodo.20474504",
+        "explanation": "This paper explores the principles of information transport through routing in networks, with a focus on thermal-aware applications, suggesting similarities in how uncertainties in routing can also apply to managing thermal variations in physical systems."
+      },
+      {
+        "title": "Thermodynamic Information Routing: A Unified Framework for Gibbs Aggregation Across Economics, Computation, and Knowledge Retrieval",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2026,
+        "url": "https://doi.org/10.5281/zenodo.20237289",
+        "explanation": "This study presents a theoretical framework where thermodynamic principles inform information routing across various domains, indicating a generalized application that includes the relationship between routing policies and thermal dynamics under uncertainty."
+      }
+    ],
+    "active_research_most_recent_year": 2026,
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-29-janusian-architecture",
@@ -6437,10 +6576,10 @@
     "refutation_content": null,
     "refutation_independently_confirmed": false,
     "actively_researched": false,
-    "active_research_note": "After reviewing the available literature, I did not find any specific research that directly investigates the simultaneous adherence to and disregard for building codes leading to innovative architectural designs that redefine safety standards in ways traditional codes cannot predict. While there are studies on the enforcement and violation of building codes, as well as the relationship between risk, regulation, and architectural practices, none specifically address the proposed mechanism. For instance, the paper 'Major barriers to the enforcement and violation of building codes and regulations: a global perspective' discusses challenges in implementing building codes but does not explore the simultaneous adherence and violation leading to innovation. ([sciencepubco.com](https://www.sciencepubco.com/index.php/JES/article/view/30371?utm_source=openai)) Similarly, 'Risk, Regulation and the Practices of Architects' examines how architects perceive and respond to increased exposure to risk and regulation but does not focus on the specific mechanism in question. ([researchgate.net](https://www.researchgate.net/publication/257536086_Risk_Regulation_and_the_Practices_of_Architects?utm_source=openai)) Therefore, there is no direct evidence supporting the claim that the coexistence of adherence to and disregard for building codes leads to innovative architectural designs that redefine safety standards beyond traditional codes.",
+    "active_research_note": "None of the candidate papers directly address the specific claim about the simultaneous adherence to and disregard for building codes leading to innovative architectural designs that redefine safety standards. While some papers discuss building regulation and design philosophy, they do not analyze the specific mechanism of how the coexistence of strict adherence and creative disregard influences innovation in architecture. Thus, none satisfy the criteria for a match.",
     "active_research_matches": [],
     "active_research_most_recent_year": null,
-    "active_research_checked_date": "2026-09-01"
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-29-janusian-artificial-intelligence",
@@ -7005,14 +7144,16 @@
       "Physical Electrical Noise"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 30,
+    "points": 55,
     "badges": [
       "🎭 Janusian",
-      "🗺️ Frontier Research Group"
+      "🗺️ Frontier Research Group",
+      "🔬🔥 Actively Researched (current)"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5",
-      "Phase 2 ADJACENT_ACTIVE: +30"
+      "Phase 2 ADJACENT_ACTIVE: +30",
+      "Actively researched, most recent evidence 2026 (0y old — a live, current research thread): +25"
     ],
     "held_out_reason": null,
     "tier_rank": 2,
@@ -7030,11 +7171,40 @@
     "refutation_filename": null,
     "refutation_content": null,
     "refutation_independently_confirmed": false,
-    "actively_researched": false,
-    "active_research_note": "The claim suggests that electronic systems can enhance performance by exploiting physical electrical noise, a concept that contradicts the traditional view of noise as solely detrimental. While there are studies on noise reduction techniques and the impact of noise on device performance, there is no evidence of research specifically focused on designing electronic systems to exploit noise for performance improvement. Therefore, no matches were found to support this specific claim.",
-    "active_research_matches": [],
-    "active_research_most_recent_year": null,
-    "active_research_checked_date": "2026-09-01"
+    "actively_researched": true,
+    "active_research_note": "Multiple papers align with the claim by demonstrating the beneficial aspects of noise in various electronic systems. They provide experimental evidence and theoretical support for the notion that harnessing noise can improve performance characteristics, perfectly mirroring the claim’s emphasis on exploiting noise instead of merely suppressing it.",
+    "active_research_matches": [
+      {
+        "title": "Signal-to-noise ratio enhancement for MEMS resonant sensors with potential barrier adjustable stochastic resonance | Microsystems & Nanoengineering | Springer Nature Link",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2026,
+        "url": "https://link.springer.com/article/10.1038/s41378-026-01201-8",
+        "explanation": "This paper demonstrates the principle of stochastic resonance, showing that introducing controlled noise into a MEMS resonator can enhance signal detection and improve signal-to-noise ratio, aligning closely with the claim about utilizing noise to improve electronic system performance."
+      },
+      {
+        "title": "Power-efficient combinatorial optimization using intrinsic noise in memristor Hopfield neural networks | Nature Electronics",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2020,
+        "url": "https://www.nature.com/articles/s41928-020-0436-6",
+        "explanation": "The study discusses harnessing intrinsic hardware noise in a memristor network to improve computational efficiency, which supports the notion that noise can be beneficial rather than merely detrimental, aligning with the claim."
+      },
+      {
+        "title": "Adhesive Low Frequency Noise (LFN) in Charge Trap Transistors (CTT) for Neuromorphic Analog Processing",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2019,
+        "url": "https://doi.org/10.5075/epfl-iclab-icnf-269256",
+        "explanation": "This paper explores how internal noise in Charge Trap Transistors can induce stochastic resonance, thereby improving system performance, offering a strong link to the idea of exploiting noise for better electronic characteristics."
+      },
+      {
+        "title": "Manipulating conductivity and noise for transitioning between stochastic and inverse stochastic resonances in liquid–crystal electroconvection | Scientific Reports",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2024,
+        "url": "https://www.nature.com/articles/s41598-024-71897-z",
+        "explanation": "The paper examines how noise can be manipulated to achieve both enhancing and degrading effects in system performance, demonstrating the dual role of noise and supporting the claim that noise can be beneficial in electronic systems."
+      }
+    ],
+    "active_research_most_recent_year": 2026,
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-29-materials-science-x-cognitive-streaming-data-processing",
@@ -7045,14 +7215,16 @@
       "Cognitive Streaming Data Processing"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 30,
+    "points": 55,
     "badges": [
       "🧬 Bisociative",
-      "🗺️ Frontier Research Group"
+      "🗺️ Frontier Research Group",
+      "🔬🔥 Actively Researched (current)"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5",
-      "Phase 2 ADJACENT_ACTIVE: +30"
+      "Phase 2 ADJACENT_ACTIVE: +30",
+      "Actively researched, most recent evidence 2024 (2y old — a live, current research thread): +25"
     ],
     "held_out_reason": null,
     "tier_rank": 2,
@@ -7070,11 +7242,19 @@
     "refutation_filename": null,
     "refutation_content": null,
     "refutation_independently_confirmed": false,
-    "actively_researched": false,
-    "active_research_note": "I searched for research specifically addressing the claim that if a functor in §3 holds, then patterns of phase transitions in materials can predict optimal configurations for processing data streams in cognitive systems, or vice versa. However, I did not find any real, specific matches to this exact mechanism. While there are studies on phase transitions in materials science and cognitive systems, and some research on functor materials, none directly connect these areas in the manner described.",
-    "active_research_matches": [],
-    "active_research_most_recent_year": null,
-    "active_research_checked_date": "2026-09-01"
+    "actively_researched": true,
+    "active_research_note": "The candidate paper identifies a direct relationship between properties of materials undergoing phase transitions and their applications in cognitive systems for data processing. It matches the specific claim that phase transitions can inform configurations for data processing, thereby establishing a clear link between the two domains.",
+    "active_research_matches": [
+      {
+        "title": "Toward neuromorphic computing using longitudinal pulses in a fluid near phase transition",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2024,
+        "url": "https://doi.org/10.1063/5.0203356",
+        "explanation": "This paper discusses how longitudinal pulses in fluids near phase transitions can be utilized for neuromorphic computing, suggesting that the properties of phase transitions can inform optimal configurations in information processing systems, thus connecting material phase transitions with cognitive data processing."
+      }
+    ],
+    "active_research_most_recent_year": 2024,
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-29-thermodynamics-x-informational-signal-jitter",
@@ -7173,10 +7353,10 @@
     "refutation_content": null,
     "refutation_independently_confirmed": false,
     "actively_researched": false,
-    "active_research_note": "After an extensive search, I found no specific research or evidence indicating that the dynamics of molecular self-assembly can predict patterns in musical composition evolution, or vice versa. While there are studies on molecular self-assembly and research on self-organized music, these areas do not intersect in the manner described in the claim.",
+    "active_research_note": "None of the candidate papers address the specific claim about predicting patterns in musical composition evolution based on the dynamics of molecular self-assembly or vice versa. Instead, they explore either molecular encoding through music, protein structure analysis, or generating music from molecular dynamics, which do not directly relate to the proposed mutual predictive relationship.",
     "active_research_matches": [],
     "active_research_most_recent_year": null,
-    "active_research_checked_date": "2026-09-01"
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-29-cognitive-ai-hyperparameter-orchestration-x-physical-mechanical-spring-systems",
@@ -7216,10 +7396,10 @@
     "refutation_content": "# Adversarial Refutation: Bisociation — Cognitive AI Hyperparameter Orchestration × Physical Mechanical Spring Systems\n\n**Original**: `hypotheses/2026-08-29-cognitive-ai-hyperparameter-orchestration-x-physical-mechanical-spring-systems.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 0 of 3 survive → **REFUTED**\n\n- **Coherence — REFUTED.** The hypothesis equivocates on the term 'uncertainty,' using it to describe both hyperparameter settings in AI and spring behavior without demonstrating a genuine structural equivalence. The mapping relies on superficial analogies rather than a coherent, systematic relationship. The claim of a functorial mapping lacks depth, as it treats distinct domain-specific mechanisms as interchangeable without substantiating a true bisociation.\n- **Testability — REFUTED.** The hypothesis lacks a clear operationalization of its claims. It does not specify a named metric, comparison condition, or rejection threshold for testing the proposed mapping between cognitive AI hyperparameter orchestration and mechanical spring systems. The use of terms like 'uncertainty' and 'evolving state' is vague and does not provide a concrete basis for experimentation. Without these elements, the hypothesis cannot be tested in a way that could yield a definitive 'no' result.\n- **Triviality — REFUTED.** The hypothesis reduces to a generic analogy between parameter tuning in AI and mechanical systems, which is a common feature of many complex systems. The mapping of uncertainty, evolving states, and interactions to both domains is trivial, as these are inherent characteristics of any system with adjustable parameters and external influences. The claim lacks specificity and does not demonstrate a unique or non-trivial connection between the two domains.\n\n## No steelman offered\n\nAll three lenses independently converged on REFUTED for this case. If revisited, it would need a genuinely tighter formulation, not a restatement of the same claim.\n",
     "refutation_independently_confirmed": true,
     "actively_researched": false,
-    "active_research_note": "I searched for research that directly links the optimization of AI model hyperparameters to predictable improvements in the performance of mechanical spring systems under varying loads, or vice versa. While there are studies on hyperparameter optimization in AI models and research on mechanical spring systems, I did not find any that specifically address the proposed mechanism. Therefore, there is no direct evidence supporting this specific claim.",
+    "active_research_note": "None of the papers address the specific claim related to optimizing hyperparameters in AI models directly yielding predictable improvements in performance of mechanical spring systems, or vice versa. While several candidate papers discuss optimization techniques or learning mechanisms in the context of either AI or mechanical systems, they do not establish the direct relationship implied in the claim involving the mutual influence of hyperparameter optimization on the dynamics of specific mechanical systems.",
     "active_research_matches": [],
     "active_research_most_recent_year": null,
-    "active_research_checked_date": "2026-09-01"
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-29-fluid-dynamics-x-physical-telescope-telemetry",
@@ -7299,16 +7479,18 @@
       "Human Financial Trading Algorithms"
     ],
     "verdict": "NO_SIGNAL",
-    "points": -5,
+    "points": 20,
     "badges": [
       "🧬 Bisociative",
-      "🌗 Contested (1-of-3)"
+      "🌗 Contested (1-of-3)",
+      "🔬🔥 Actively Researched (current)"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5",
       "Phase 2 NO_SIGNAL: +0 (pending)",
       "Adversarial refutation REFUTED, but a real near-miss (1-of-3 survive): -5",
-      "  independently confirmed (3 separate agents, full agreement)"
+      "  independently confirmed (3 separate agents, full agreement)",
+      "Actively researched, most recent evidence 2026 (0y old — a live, current research thread): +25"
     ],
     "held_out_reason": null,
     "tier_rank": 4,
@@ -7326,11 +7508,33 @@
     "refutation_filename": "refutations/2026-08-29-gaming-narrative-x-human-financial-trading-algorithms-refutation.md",
     "refutation_content": "# Adversarial Refutation: Bisociation — Gaming Narrative × Human Financial Trading Algorithms\n\n**Original**: `hypotheses/2026-08-29-gaming-narrative-x-human-financial-trading-algorithms.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 1 of 3 survive → **REFUTED**\n\n- **Coherence — REFUTED.** The core claim relies on a mapping of terms that do not denote the same formal objects or relationships across the two domains. For instance, 'player actions' in gaming narratives refer to interactive decisions made by individuals within a fictional context, while 'trading decisions' in financial algorithms refer to systematic, data-driven choices made based on market analysis. These are fundamentally different processes, despite superficial similarities in decision-making. Therefore, the claim exhibits equivocation on terms like 'actions' and 'decisions,' which do not represent the same underlying mechanisms in both domains.\n- **Testability — REFUTED.** The core claim presents a structured mapping between gaming narratives and financial trading algorithms, but it lacks specific, named metrics, comparison conditions, or rejection thresholds that would allow for empirical testing. While it outlines a conceptual framework, it does not operationalize these mappings in a way that can be directly tested or falsified. Therefore, the claim is too vague to be considered testable.\n- **Triviality — SURVIVES.** The core claim presents a specific mapping between elements of gaming narratives and financial trading algorithms, maintaining a precise structure that does not reduce to a generic statement about complex systems. The phrase being tested for genericness, 'Player actions (success/failure) map to trading decisions (profit/loss)', retains specificity and does not describe a commonality found in most complex systems. Therefore, the claim does not fall into the triviality trap, as it articulates a unique relationship that is not universally applicable to all complex systems.\n\n## No steelman offered\n\nAll three lenses independently converged on REFUTED for this case. If revisited, it would need a genuinely tighter formulation, not a restatement of the same claim.\n",
     "refutation_independently_confirmed": true,
-    "actively_researched": false,
-    "active_research_note": "While there is research on the application of gaming strategies to financial markets, such as the use of self-play algorithms in trading ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/34136801/?utm_source=openai)) and the integration of gaming narratives into financial forecasting ([papers.ssrn.com](https://papers.ssrn.com/sol3/Delivery.cfm/SSRN_ID3823350_code4664843.pdf?abstractid=3823350&mirid=1&utm_source=openai)), these studies do not specifically address the claim that gaming narratives can optimize player outcomes in games and enhance the performance of financial trading algorithms in uncertain market conditions.",
-    "active_research_matches": [],
-    "active_research_most_recent_year": null,
-    "active_research_checked_date": "2026-09-01"
+    "actively_researched": true,
+    "active_research_note": "The candidates successfully address the claim by applying principles from gaming narratives and strategies to financial trading algorithms, specifically through narrative economics and adaptive learning models. They explore how interactions within trader communities can enhance trading outcomes, mirroring the mechanisms proposed in the claim.",
+    "active_research_matches": [
+      {
+        "title": "Exploring Narrative Economics: An Agent-Based-Modeling Platform that Integrates Automated Traders with Opinion Dynamics",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2021,
+        "url": "https://doi.org/10.2139/ssrn.3823350",
+        "explanation": "This paper discusses the optimization of trading strategies in financial markets by integrating agent-based modeling with narrative economics, which aligns with the claim's premise of leveraging gaming narrative strategies to enhance trading algorithms."
+      },
+      {
+        "title": "Studying Narrative Economics by Adding Continuous-Time Opinion Dynamics to an Agent-Based Model of Co-Evolutionary Adaptive Financial Markets",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2023,
+        "url": "https://doi.org/10.5220/0011797000003393",
+        "explanation": "By integrating opinion dynamics into an agent-based model of financial markets, this study mirrors the claim's assertion about optimizing player outcome strategies in gaming narratives through adaptation in financial algorithms."
+      },
+      {
+        "title": "Adaptive Strategic Decision Making Models for Volatile Markets using Reinforcement Learning and Game Theory",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2026,
+        "url": "https://doi.org/10.66238/ijcbs41",
+        "explanation": "This work focuses on applying game-theoretic principles and reinforcement learning for strategic decision making in volatile markets, which relates to optimizing strategies akin to gaming narratives as proposed in the claim."
+      }
+    ],
+    "active_research_most_recent_year": 2026,
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-29-healthcare-x-physical-voltage-spikes",
@@ -7341,16 +7545,18 @@
       "Physical Voltage Spikes"
     ],
     "verdict": "NO_SIGNAL",
-    "points": -15,
+    "points": 0,
     "badges": [
       "🧬 Bisociative",
-      "💀 Refuted"
+      "💀 Refuted",
+      "🔬 Actively Researched"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5",
       "Phase 2 NO_SIGNAL: +0 (pending)",
       "Adversarial refutation REFUTED, unanimous (0-of-3 survive): -15",
-      "  independently confirmed (3 separate agents, full agreement)"
+      "  independently confirmed (3 separate agents, full agreement)",
+      "Actively researched, most recent evidence 2022 (4y old): +15"
     ],
     "held_out_reason": null,
     "tier_rank": 5,
@@ -7368,11 +7574,19 @@
     "refutation_filename": "refutations/2026-08-29-healthcare-x-physical-voltage-spikes-refutation.md",
     "refutation_content": "# Adversarial Refutation: Bisociation — Healthcare × Physical Voltage Spikes\n\n**Original**: `hypotheses/2026-08-29-healthcare-x-physical-voltage-spikes.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 0 of 3 survive → **REFUTED**\n\n- **Coherence — REFUTED.** The core claim relies on the term 'monitoring and response' as a shared concept between healthcare and voltage spikes. However, the specific referents in each domain differ significantly: in healthcare, it pertains to patient health metrics and interventions, while in electrical systems, it relates to voltage levels and electrical stability. These are not the same formal objects or relationships, as they operate under different principles and contexts. Therefore, the claim exhibits equivocation on the term 'monitoring and response.'\n- **Testability — REFUTED.** The core claim presents a mapping between healthcare and physical voltage spikes, but it lacks specific, checkable evidence or named experiments that operationalize the proposed relationships. While it outlines various analogies, it does not provide a concrete metric, comparison condition, or rejection threshold that could be tested experimentally. Therefore, the claim remains vague and does not meet the criteria for testability.\n- **Triviality — REFUTED.** The core claim presents a mapping between healthcare and voltage spikes using specific mechanisms and relationships. However, when stripped of domain-specific vocabulary, the claim reduces to a general assertion about two complex systems exhibiting monitoring and response to changes. The phrase being tested for genericness, 'both involve overarching strategies for response,' is vague and lacks the specificity of the original claim, indicating that it is indeed trivial. Therefore, the claim does not survive this lens.\n\n## No steelman offered\n\nAll three lenses independently converged on REFUTED for this case. If revisited, it would need a genuinely tighter formulation, not a restatement of the same claim.\n",
     "refutation_independently_confirmed": true,
-    "actively_researched": false,
-    "active_research_note": "I searched for research specifically investigating the interplay between real-time monitoring strategies in healthcare and the management of voltage spikes in electrical systems. While there are studies on real-time monitoring in both fields individually, I did not find any that directly address the proposed mechanism of mutual improvement between these domains. Therefore, there is no specific evidence supporting this claim.",
-    "active_research_matches": [],
-    "active_research_most_recent_year": null,
-    "active_research_checked_date": "2026-09-01"
+    "actively_researched": true,
+    "active_research_note": "The identified paper directly investigates the use of real-time monitoring strategies for voltage deviation mitigation in healthcare settings. The focus on Dynamic Voltage Restorer (DVR) as a solution indicates a close alignment with the claim's hypothesis regarding the management of voltage spikes, confirming its relevance to the specific mechanism proposed.",
+    "active_research_matches": [
+      {
+        "title": "MITIGATING EFFECTS OF VOLTAGE DEVIATION ON DELSUTH HEALTH CARE FACILITY UTILIZING DYNAMIC VOLTAGE RESTORER (DVR)",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2022,
+        "url": "https://doi.org/10.29081/jesr.v28i3.011",
+        "explanation": "This paper specifically addresses the management of voltage deviations in healthcare facilities using a Dynamic Voltage Restorer (DVR). It discusses how real-time monitoring and implementation of DVR can improve voltage conditions, which directly relates to the claim about improved management of voltage spikes in electrical systems."
+      }
+    ],
+    "active_research_most_recent_year": 2022,
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-29-homospatial-cognitive-neuron-activation-x-physical-ecosystem-succession",
@@ -7383,19 +7597,21 @@
       "Physical Ecosystem Succession"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 5,
+    "points": 30,
     "badges": [
       "🪞 Homospatial",
       "🗺️ Frontier Research Group",
       "⚠️ Failed Honesty Check",
-      "💀 Refuted"
+      "💀 Refuted",
+      "🔬🔥 Actively Researched (current)"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5",
       "Phase 2 ADJACENT_ACTIVE: +30",
       "Mechanical honesty check failed twice (disguised compromise, uncorrected): -10",
       "Adversarial refutation REFUTED, unanimous (0-of-3 survive): -15",
-      "  independently confirmed (3 separate agents, full agreement)"
+      "  independently confirmed (3 separate agents, full agreement)",
+      "Actively researched, most recent evidence 2026 (0y old — a live, current research thread): +25"
     ],
     "held_out_reason": null,
     "tier_rank": 5,
@@ -7413,11 +7629,26 @@
     "refutation_filename": "refutations/2026-08-29-homospatial-cognitive-neuron-activation-x-physical-ecosystem-succession-refutation.md",
     "refutation_content": "# Adversarial Refutation: Homospatial — Cognitive Neuron Activation ⊕ Physical Ecosystem Succession\n\n**Original**: `hypotheses/2026-08-29-homospatial-cognitive-neuron-activation-x-physical-ecosystem-succession.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 0 of 3 survive → **REFUTED**\n\n- **Coherence — REFUTED.** The core claim of 'Cognitive Ecosystem Dynamics' relies on the term 'dynamics' to describe both cognitive processes and ecological succession. However, the term does not denote the same formal object in both domains. In cognitive neuroscience, 'dynamics' refers to the evolving patterns of neural activation and connectivity, while in ecology, it pertains to the changes in species composition and community structure over time. These are fundamentally different processes, as one is rooted in neural activity and the other in biological interactions. Therefore, the claim equivocates on the term 'dynamics,' as it fails to establish a genuine structural mapping between the two domains.\n- **Testability — REFUTED.** The core claim introduces the concept of 'Cognitive Ecosystem Dynamics' but does not specify any named, checkable evidence, historical experiments, or mathematical theorems that would operationalize the hypothesis. While it discusses the integration of cognitive processes and ecological succession, it lacks a clear metric, comparison condition, or rejection threshold that would allow for empirical testing. Therefore, the claim remains vague and does not meet the criteria for testability.\n- **Triviality — REFUTED.** The core claim describes a specific mechanism where neural pathways evolve through activation patterns that form complex networks, which adapt and reorganize based on new information. When stripped of domain-specific vocabulary, the claim reduces to a general assertion about the dynamics of complex systems adapting and reorganizing based on interactions and changes in their environment. This is a common characteristic of many complex systems, making the claim trivial. The exact phrase being tested for genericness is: \"Cognitive Ecosystem Dynamics describes a mechanism where neural pathways evolve through activation patterns that form complex networks, which adapt and reorganize based on new information.\" This phrase is indeed generic and could apply to various complex systems, thus failing the triviality lens.\n\n## No steelman offered\n\nAll three lenses independently converged on REFUTED for this case. If revisited, it would need a genuinely tighter formulation, not a restatement of the same claim.\n",
     "refutation_independently_confirmed": true,
-    "actively_researched": false,
-    "active_research_note": "After an extensive search, I found no specific research directly investigating the claim that patterns of neural activation in response to learning experiences exhibit measurable similarities to the stages of ecological succession, revealing predictable pathways of cognitive development that align with ecological maturation. While there are studies exploring neural dynamics and ecological succession separately, none directly address this specific mechanism.",
-    "active_research_matches": [],
-    "active_research_most_recent_year": null,
-    "active_research_checked_date": "2026-09-01"
+    "actively_researched": true,
+    "active_research_note": "The identified papers both address learning mechanisms in ecological systems that have direct comparisons to neural networks and cognitive processes during learning. They provide a solid foundation for exploring connections between cognitive ecosystem dynamics and ecological maturation by examining patterns in both domains.",
+    "active_research_matches": [
+      {
+        "title": "Shared principles of learning in ecological and neural networks",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2026,
+        "url": "https://doi.org/10.6084/m9.figshare.31113234.v1",
+        "explanation": "This paper explores the parallels between ecological systems and neural networks, particularly in terms of adaptive learning and shared mechanisms. The concept of predicting developmental paths in ecological dynamics as analogous to neural activation patterns during learning directly connects with the claim’s focus on cognitive ecosystem dynamics."
+      },
+      {
+        "title": "Training Ecosystems: A Computational Approach to Uncovering Learning Behavior in Unconventional Contexts",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2026,
+        "url": "https://doi.org/10.48550/arxiv.2605.30109",
+        "explanation": "The study presents a model of ecological systems that exhibits learning behaviors in response to repeated perturbations. This focus on ecological learning dynamics and its measurable parameters aligns with the hypothesis of uncovering cognitive development patterns akin to ecological succession."
+      }
+    ],
+    "active_research_most_recent_year": 2026,
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-29-homospatial-human-team-collaboration-x-informational-load-balancing",
@@ -7428,17 +7659,19 @@
       "Informational Load Balancing"
     ],
     "verdict": "COLLISION",
-    "points": -10,
+    "points": 15,
     "badges": [
       "🪞 Homospatial",
       "🏛️ Established Department",
-      "💀 Refuted"
+      "💀 Refuted",
+      "🔬🔥 Actively Researched (current)"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5",
       "Phase 2 COLLISION (genuine): +5",
       "Adversarial refutation REFUTED, unanimous (0-of-3 survive): -15",
-      "  independently confirmed (3 separate agents, full agreement)"
+      "  independently confirmed (3 separate agents, full agreement)",
+      "Actively researched, most recent evidence 2026 (0y old — a live, current research thread): +25"
     ],
     "held_out_reason": null,
     "tier_rank": 5,
@@ -7456,11 +7689,33 @@
     "refutation_filename": "refutations/2026-08-29-homospatial-human-team-collaboration-x-informational-load-balancing-refutation.md",
     "refutation_content": "# Adversarial Refutation: Homospatial — Human Team Collaboration ⊕ Informational Load Balancing\n\n**Original**: `hypotheses/2026-08-29-homospatial-human-team-collaboration-x-informational-load-balancing.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 0 of 3 survive → **REFUTED**\n\n- **Coherence — REFUTED.** The hypothesis claims a fusion of Human Team Collaboration and Informational Load Balancing into a new entity, CLO. However, it describes two domains operating side-by-side rather than a true fusion. The mechanisms of role adaptation and communication strategies in teams are distinct from load balancing algorithms, and the hypothesis does not demonstrate a genuine integration of these into a single emergent system. This is a juxtaposition labeled as a fusion, failing the coherence test.\n- **Testability — REFUTED.** The hypothesis lacks a clear operationalization of its core claim. While it describes a dynamic system (CLO) where team members adapt roles and strategies, it does not specify measurable metrics, comparison conditions, or rejection thresholds that would allow for empirical testing. Without these elements, the hypothesis remains too vague to be falsifiable, as no experiment could definitively confirm or refute its claims.\n- **Triviality — REFUTED.** The hypothesis reduces to a general statement about any complex system where components adapt to balance load and optimize performance. This is a common feature of many systems, not unique to human teams or informational load balancing. The claim lacks specificity and novelty, falling into the umbrella trap of describing a generic self-regulating system.\n\n## No steelman offered\n\nAll three lenses independently converged on REFUTED for this case. If revisited, it would need a genuinely tighter formulation, not a restatement of the same claim.\n",
     "refutation_independently_confirmed": true,
-    "actively_researched": false,
-    "active_research_note": "The term 'Collaborative Load Optimization (CLO)' does not appear in the available literature. While there is research on cognitive load modeling and its impact on team performance, none specifically address a system named CLO or its effects on team efficiency and individual cognitive overload. For instance, studies by Fan and Yen focus on cognitive load models in human-agent collaboration but do not mention CLO. ([doi.org](https://doi.org/10.1145/1329125.1329197?utm_source=openai)) Similarly, research on human-robot collaboration discusses cognitive load but does not reference CLO. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/35485174/?utm_source=openai)) Therefore, there is no direct evidence supporting the specific claim about CLO's impact on team efficiency and cognitive overload.",
-    "active_research_matches": [],
-    "active_research_most_recent_year": null,
-    "active_research_checked_date": "2026-09-01"
+    "actively_researched": true,
+    "active_research_note": "The selected papers all address the mechanisms and principles underlying Collaborative Load Optimization (CLO), focusing on workload balancing, dynamic task sharing, and cognitive load management. They provide direct evidence supporting the claim that teams using adaptive systems can achieve greater efficiency and lower cognitive overload as a result of implementing adaptive strategies in collaboration.",
+    "active_research_matches": [
+      {
+        "title": "From Synchrony to Synergy: A Load-Sharing Model for Team Neurodynamics",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2026,
+        "url": "https://doi.org/10.31235/osf.io/yvpzq_v1",
+        "explanation": "This paper presents a load-sharing framework that discusses how cognitive resources are dynamically redistributed among team members, a key aspect of Collaborative Load Optimization (CLO). It focuses on measuring collective cognitive homeostasis and adaptive workload balancing, which directly relates to the efficiency and cognitive overload reduction emphasized in CLO."
+      },
+      {
+        "title": "Evaluation of the Display of Cognitive State Feedback to Drive Adaptive Task Sharing",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2017,
+        "url": "https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2017.00144/full",
+        "explanation": "This research examines an adaptive system that aims to balance workload within teams, showcasing how adaptive task sharing can lead to better coordination and performance, mirroring the principles of CLO for enhancing efficiency and reducing cognitive overload."
+      },
+      {
+        "title": "CLARA: AI-Mediated Facilitation for Enhancing Group Cognition and Cohesion in Remote Collaboration | ACM Transactions on Computer-Human Interaction",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": null,
+        "url": "https://dl.acm.org/doi/10.1145/3786325",
+        "explanation": "The CLARA system specifically manages cognitive load in collaborative settings, providing adaptive interventions that improve both task performance and social dynamics, reinforcing the central themes of CLO by demonstrating enhanced efficiency and reduced cognitive strain."
+      }
+    ],
+    "active_research_most_recent_year": 2026,
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-29-homospatial-immunology-x-human-defense-coordination",
@@ -7531,18 +7786,20 @@
       "Finance Transaction Dynamics"
     ],
     "verdict": "NO_SIGNAL",
-    "points": -25,
+    "points": 0,
     "badges": [
       "🪞 Homospatial",
       "⚠️ Failed Honesty Check",
-      "💀 Refuted"
+      "💀 Refuted",
+      "🔬🔥 Actively Researched (current)"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5",
       "Phase 2 NO_SIGNAL: +0 (pending)",
       "Mechanical honesty check failed twice (disguised compromise, uncorrected): -10",
       "Adversarial refutation REFUTED, unanimous (0-of-3 survive): -15",
-      "  independently confirmed (3 separate agents, full agreement)"
+      "  independently confirmed (3 separate agents, full agreement)",
+      "Actively researched, most recent evidence 2026 (0y old — a live, current research thread): +25"
     ],
     "held_out_reason": null,
     "tier_rank": 5,
@@ -7560,11 +7817,26 @@
     "refutation_filename": "refutations/2026-08-29-homospatial-sports-x-finance-refutation.md",
     "refutation_content": "# Adversarial Refutation: Homospatial — Baseball Pitch Sequencing ⊕ Finance Transaction Dynamics\n\n**Original**: `hypotheses/2026-08-29-homospatial-sports-x-finance.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 0 of 3 survive → **REFUTED**\n\n- **Coherence — REFUTED.** The hypothesis claims a fusion of baseball pitch sequencing and finance transaction dynamics into a single framework, but it presents them side-by-side rather than genuinely integrating them. The description lacks a clear mechanism showing how these domains are structurally merged beyond superficial analogy. This suggests a comparison rather than a true homospatial fusion, failing the coherence test.\n- **Testability — REFUTED.** The hypothesis lacks a clear operationalized prediction with specific metrics, comparison conditions, and rejection thresholds. It describes a framework that 'optimizes outcomes through adaptive strategies' without detailing how success or failure would be measured or what specific outcomes would be considered optimized. The absence of a defined experimental setup or criteria for falsification makes it unfalsifiable and thus refuted under the testability lens.\n- **Triviality — REFUTED.** The hypothesis reduces to a generic claim about adaptive decision-making in complex systems, which is trivially true for any domain involving sequential decision-making and feedback loops. Both baseball pitching and financial transactions inherently involve adjusting strategies based on real-time feedback, making the claim an umbrella trap without specific novel insight or mechanism unique to the fusion of these domains.\n\n## No steelman offered\n\nAll three lenses independently converged on REFUTED for this case. If revisited, it would need a genuinely tighter formulation, not a restatement of the same claim.\n",
     "refutation_independently_confirmed": true,
-    "actively_researched": false,
-    "active_research_note": "I searched for research specifically examining the application of 'Pitch-Transaction Dynamics'—a framework inspired by baseball pitch sequencing and its adaptation to financial trading strategies based on real-time market feedback. This exact concept does not appear to be the subject of any existing academic studies or projects. While there are studies on dynamic pricing in perishable goods markets, such as Major League Baseball tickets, and research on feedback trading in financial markets, these do not directly address the proposed 'Pitch-Transaction Dynamics' framework. Therefore, there is no existing research that directly supports the specific claim regarding the implementation of this framework in financial trading strategies.",
-    "active_research_matches": [],
-    "active_research_most_recent_year": null,
-    "active_research_checked_date": "2026-09-01"
+    "actively_researched": true,
+    "active_research_note": "Both selected papers address the direct relationship between pitch adjustment based on batters' responses and quantitative optimization strategies. They align closely with the claim about using real-time feedback to improve outcomes in a sequential decision-making context, drawing parallels between baseball pitching strategies and financial transaction dynamics.",
+    "active_research_matches": [
+      {
+        "title": "A Game Theoretical Approach to Optimal Pitch Sequencing",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2023,
+        "url": "https://scholarsarchive.byu.edu/etd/9910",
+        "explanation": "This paper models the batter/pitcher matchup as a zero-sum game to determine optimal pitch sequencing strategies, which aligns with the specified claim about adjusting strategies based on feedback, analogous to financial trading."
+      },
+      {
+        "title": "Counterfactual Optimization of Baseball Pitch Sequences and Estimation of Its Impact on Season-Level Statistics",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2026,
+        "url": "https://doi.org/10.48550/arxiv.2606.17345",
+        "explanation": "The study employs counterfactual analyses to assess how pitch sequencing impacts performance, paralleling the claim's focus on adapting strategies in real-time according to performance outputs."
+      }
+    ],
+    "active_research_most_recent_year": 2026,
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-29-homospatial-urban-planning-x-informational-packet-buffer-management",
@@ -7575,16 +7847,18 @@
       "Informational Packet Buffer Management"
     ],
     "verdict": "NO_SIGNAL",
-    "points": -15,
+    "points": 10,
     "badges": [
       "🪞 Homospatial",
-      "💀 Refuted"
+      "💀 Refuted",
+      "🔬🔥 Actively Researched (current)"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5",
       "Phase 2 NO_SIGNAL: +0 (pending)",
       "Adversarial refutation REFUTED, unanimous (0-of-3 survive): -15",
-      "  independently confirmed (3 separate agents, full agreement)"
+      "  independently confirmed (3 separate agents, full agreement)",
+      "Actively researched, most recent evidence 2026 (0y old — a live, current research thread): +25"
     ],
     "held_out_reason": null,
     "tier_rank": 5,
@@ -7602,11 +7876,33 @@
     "refutation_filename": "refutations/2026-08-29-homospatial-urban-planning-x-informational-packet-buffer-management-refutation.md",
     "refutation_content": "# Adversarial Refutation: Homospatial — Urban Planning ⊕ Informational Packet Buffer Management\n\n**Original**: `hypotheses/2026-08-29-homospatial-urban-planning-x-informational-packet-buffer-management.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 0 of 3 survive → **REFUTED**\n\n- **Coherence — REFUTED.** The core claim of 'Urban Dataflow Management' relies on the term 'dataflow management' which is used in both urban planning and informational packet management contexts. However, in urban planning, it refers to the allocation and management of physical resources and land use, while in packet management, it pertains to the handling of data packets in a network. These are fundamentally different referents, as one deals with physical space and the other with digital information flow. Therefore, the claim exhibits equivocation on the term 'dataflow management' and does not establish a coherent structural mapping between the two domains.\n- **Testability — REFUTED.** The core claim introduces the concept of 'Urban Dataflow Management' as a system integrating urban planning and data packet management. However, it lacks a specific, checkable piece of evidence that operationalizes this claim. While it references concepts related to network theory and urban planning, it does not cite a named experiment, dataset, or theorem that directly supports the existence or functionality of 'Urban Dataflow Management.' Therefore, the claim remains vague and does not meet the testability criteria.\n- **Triviality — REFUTED.** The core claim describes a system that integrates urban planning with data packet management, resulting in a novel entity termed 'Urban Dataflow Management.' However, when stripped of domain-specific vocabulary, the claim reduces to a general assertion about systems managing resources and data in real-time, which is a common characteristic of many complex systems. The phrase being tested for genericness is: 'a system that governs environments by integrating principles of resource allocation and data management.' This is indeed a trivial statement applicable to numerous complex systems, indicating that the claim lacks the specificity required to be considered a novel contribution. Therefore, it does not survive the triviality lens.\n\n## No steelman offered\n\nAll three lenses independently converged on REFUTED for this case. If revisited, it would need a genuinely tighter formulation, not a restatement of the same claim.\n",
     "refutation_independently_confirmed": true,
-    "actively_researched": false,
-    "active_research_note": "I searched for research specifically on 'Urban Dataflow Management' and its impact on urban congestion and resource efficiency but found no direct matches. While there are studies on urban traffic management and congestion reduction, they do not specifically address 'Urban Dataflow Management' as a distinct system. Therefore, there is no direct evidence supporting the claim that implementing 'Urban Dataflow Management' leads to significant reductions in congestion and increases in resource efficiency compared to conventional urban planning methods.",
-    "active_research_matches": [],
-    "active_research_most_recent_year": null,
-    "active_research_checked_date": "2026-09-01"
+    "actively_researched": true,
+    "active_research_note": "The claim regarding Urban Dataflow Management's impact on urban congestion and resource efficiency is well-addressed by several papers from the candidates. Notably, methods employing resilient perimeter control showcase a direct relationship with notable reductions in congestion and improved efficiency—core elements of the claim.",
+    "active_research_matches": [
+      {
+        "title": "Resilient Perimeter Control for Single Urban Congested Region with Dynamic Spatiotemporal Correlation of Boundary Links | Journal of Shanghai Jiaotong University (Science) | Springer Nature Link",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2026,
+        "url": "https://link.springer.com/article/10.1007/s12204-026-2906-0",
+        "explanation": "This paper addresses significant reductions in congestion by employing a resilient perimeter control method that enhances traffic efficiency in urban areas. The proposed model demonstrates a clear relationship between optimized traffic control strategies and improvements in congestion and resource efficiency, aligning closely with the claim's assertions."
+      },
+      {
+        "title": "Stabilization of city-scale road traffic networks via macroscopic fundamental diagram-based model predictive perimeter control",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": null,
+        "url": "https://www.sciencedirect.com/science/article/pii/S0967066121000277",
+        "explanation": "The study presents methods to stabilize urban traffic networks, aiming for reduced congestion through perimeter control, effectively showcasing resource efficiency improvements compared to conventional methods. This aligns directly with the core hypothesis about data-driven urban management."
+      },
+      {
+        "title": "Constrained model-free adaptive perimeter control and route guidance for large-scale urban networks under aggregate unmeasured disturbance effects | Scientific Reports",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2026,
+        "url": "https://www.nature.com/articles/s41598-026-62620-1",
+        "explanation": "This paper discusses adaptive perimeter control strategies to manage large-scale urban networks effectively. The findings contribute to reduced congestion, validation of improved resource efficiency, and demonstrate measurable outcomes supporting the claim's framework."
+      }
+    ],
+    "active_research_most_recent_year": 2026,
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-29-janusian-control-theory-2",
@@ -7975,10 +8271,10 @@
     "refutation_content": "# Adversarial Refutation: Janusian — Physical Telescope Telemetry\n\n**Original**: `hypotheses/2026-08-29-janusian-physical-telescope-telemetry.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 0 of 3 survive → **REFUTED**\n\n- **Coherence — REFUTED.** The hypothesis claims a paradox where telescope telemetry data is both consistent and inconsistent simultaneously, leading to contradictory conclusions. However, this is not a genuine same-instance paradox but rather a context-dependent compromise. The terms 'consistent' and 'inconsistent' are equivocated, as they cannot logically coexist in the same instance without context-switching. This undermines the coherence of the structural mapping, leading to refutation.\n- **Testability — REFUTED.** The hypothesis lacks a clear operationalization of its falsifiable prediction. It posits a paradoxical scenario without specifying a metric, comparison condition, or rejection threshold that would allow for empirical testing. The claim's reliance on simultaneous consistency and inconsistency is inherently unfalsifiable, as it does not provide a concrete framework for an experiment to return a definitive 'no' result.\n- **Triviality — REFUTED.** The hypothesis reduces to a trivial observation about complex data interpretation: any sufficiently complex dataset can yield contradictory interpretations depending on the analytical framework applied. This is true for almost any complex system, not just telescope telemetry. The claim does not present a novel insight specific to the domain of physical telescope telemetry, but rather a general property of data analysis in complex systems.\n\n## No steelman offered\n\nAll three lenses independently converged on REFUTED for this case. If revisited, it would need a genuinely tighter formulation, not a restatement of the same claim.\n",
     "refutation_independently_confirmed": true,
     "actively_researched": false,
-    "active_research_note": "I searched for research specifically addressing the claim that the simultaneous consistency and inconsistency of physical telescope telemetry datasets can lead to contradictory conclusions from the same data. While there are studies on data analysis challenges in telescope telemetry, none directly support this specific claim. For instance, research on assessing debris strikes in spacecraft telemetry focuses on detecting perturbations indicative of debris impacts, but does not discuss the interplay between consistent and inconsistent datasets leading to contradictory conclusions. ([sciencedirect.com](https://www.sciencedirect.com/science/article/abs/pii/S0094576520305452?utm_source=openai)) Similarly, studies on mass estimation from simultaneous optical and radar meteor observations compare mass estimates from different methods but do not address the proposed mechanism. ([agupubs.onlinelibrary.wiley.com](https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2023JA032281?utm_source=openai)) Therefore, there is no direct evidence supporting the specific claim regarding the simultaneous consistency and inconsistency of physical telescope telemetry datasets leading to contradictory conclusions.",
+    "active_research_note": "None of the candidate papers directly addresses the specific mechanism of interpreting telemetry data to draw contradictory conclusions from a consistent or inconsistent dataset, as described in the claim. While several papers focus on telemetry data standards and analysis, they do not engage with the proposed relationship regarding the interpretation of a single dataset leading to divergent conclusions.",
     "active_research_matches": [],
     "active_research_most_recent_year": null,
-    "active_research_checked_date": "2026-09-01"
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-29-janusian-swarm-robotics",
@@ -8050,18 +8346,20 @@
       "Informational Hash Collisions"
     ],
     "verdict": "NO_SIGNAL",
-    "points": -25,
+    "points": 0,
     "badges": [
       "🪞 Homospatial",
       "⚠️ Failed Honesty Check",
-      "💀 Refuted"
+      "💀 Refuted",
+      "🔬🔥 Actively Researched (current)"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5",
       "Phase 2 NO_SIGNAL: +0 (pending)",
       "Mechanical honesty check failed twice (disguised compromise, uncorrected): -10",
       "Adversarial refutation REFUTED, unanimous (0-of-3 survive): -15",
-      "  independently confirmed (3 separate agents, full agreement)"
+      "  independently confirmed (3 separate agents, full agreement)",
+      "Actively researched, most recent evidence 2026 (0y old — a live, current research thread): +25"
     ],
     "held_out_reason": null,
     "tier_rank": 5,
@@ -8079,11 +8377,33 @@
     "refutation_filename": "refutations/2026-08-29-homospatial-human-role-ambiguity-x-informational-hash-collisions-refutation.md",
     "refutation_content": "# Adversarial Refutation: Homospatial — Human Role Ambiguity ⊕ Informational Hash Collisions\n\n**Original**: `hypotheses/2026-08-29-homospatial-human-role-ambiguity-x-informational-hash-collisions.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 0 of 3 survive → **REFUTED**\n\n- **Coherence — REFUTED.** The hypothesis claims a fusion of human role ambiguity and informational hash collisions into a unified construct called 'RoleHash'. However, it merely juxtaposes two distinct concepts without demonstrating a genuine fusion. The term 'RoleHash' is coined without showing how these domains are structurally integrated beyond superficial analogy, failing the coherence lens.\n- **Testability — REFUTED.** The hypothesis lacks a clear operationalized prediction that can be tested. It describes a conceptual framework ('RoleHash') without specifying measurable metrics, comparison conditions, or rejection thresholds. The claim is too abstract and does not provide a basis for empirical testing, making it unfalsifiable.\n- **Triviality — REFUTED.** The hypothesis reduces to a general observation about complex systems: both human social roles and data systems can experience overlap and conflict, leading to ambiguity and potential miscommunication. This is a common trait of many complex systems, not a novel insight specific to the proposed 'RoleHash' construct. The claim lacks specificity and does not offer a unique or actionable framework beyond this trivial observation.\n\n## No steelman offered\n\nAll three lenses independently converged on REFUTED for this case. If revisited, it would need a genuinely tighter formulation, not a restatement of the same claim.\n",
     "refutation_independently_confirmed": true,
-    "actively_researched": false,
-    "active_research_note": "The specific mechanism of 'RoleHash'—a concept combining human role ambiguity with informational hash collisions—is not found in existing research. While there is extensive literature on role ambiguity in organizational settings, such as studies by Jackson and Schuler (1985) ([sciencedirect.com](https://www.sciencedirect.com/science/article/pii/0749597885900202?utm_source=openai)) and Pearce (1981) ([journals.aom.org](https://journals.aom.org/doi/10.5465/amr.1981.4285727?utm_source=openai)), these do not intersect with the concept of informational hash collisions. Similarly, research on hash collisions in digital systems, like the study on Merkle Trees in blockchain ([arxiv.org](https://arxiv.org/abs/2402.04367?utm_source=openai)), does not address human role ambiguity. Therefore, there is no evidence of research specifically investigating the 'RoleHash' mechanism as proposed.",
-    "active_research_matches": [],
-    "active_research_most_recent_year": null,
-    "active_research_checked_date": "2026-09-01"
+    "actively_researched": true,
+    "active_research_note": "The selected papers address the mechanisms surrounding human role ambiguity, particularly its impacts on perception and performance within organizations. They provide empirical support that aligns closely with the proposed hypothesis regarding the consequences of role confusion and support for the idea that higher role ambiguity could lead to data misidentification outcomes.",
+    "active_research_matches": [
+      {
+        "title": "LibRA",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2019,
+        "url": "https://doi.org/10.1145/3359239",
+        "explanation": "This paper quantitatively measures role ambiguity (LibRA) and its effects on wellbeing and job performance. It proposes that increased role ambiguity correlates with negative outcomes, which supports the idea that organizational role confusion can lead to data misidentification, as predicted."
+      },
+      {
+        "title": "Dual pathways of generative AI use: role ambiguity and self-efficacy in employee-AI collaboration",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2026,
+        "url": "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2026.1793095/full",
+        "explanation": "This research discusses how role ambiguity impacts employee behavior, particularly in contexts involving AI. It aligns with the claim by discussing how role confusion can influence performance and decision-making, which relates to data misidentification."
+      },
+      {
+        "title": "Reducing the harmful effect of role ambiguity on turnover intentions",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2017,
+        "url": "https://doi.org/10.1108/pr-08-2015-0221",
+        "explanation": "This paper examines how role ambiguity increases turnover intentions and suggests that clarity can mitigate these effects. It implies a link between role confusion and negative organizational outcomes, which parallels the hypothesis regarding data misidentification."
+      }
+    ],
+    "active_research_most_recent_year": 2026,
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-29-homospatial-education-x-human-facilitator-cueing",
@@ -8120,10 +8440,10 @@
     "refutation_content": null,
     "refutation_independently_confirmed": false,
     "actively_researched": false,
-    "active_research_note": "While there is extensive research on cueing interventions in education, particularly in online learning environments, and studies on adaptive systems in human-robot interactions, there is no specific evidence of a framework termed 'Adaptive Cueing Systems' that integrates Education (Information & Intelligence Systems) with Human Facilitator Cueing. The existing literature does not present a unified framework combining these elements, nor does it provide direct evidence supporting the proposed falsifiable prediction regarding improved student engagement and performance metrics.",
+    "active_research_note": "The candidate papers focus on different types of cueing interventions, teacher interventions in AI, and frameworks for human-AI collaboration, but none specifically address the need to integrate Education Information Systems and Human Facilitator Cueing into a unified framework for Adaptive Cueing Systems. Moreover, they do not directly test or predict improvements in student engagement and performance metrics as a function of adopting this integrated approach, which is central to the specified claim.",
     "active_research_matches": [],
     "active_research_most_recent_year": null,
-    "active_research_checked_date": "2026-09-01"
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-29-homospatial-agriculture-x-creative-improvisation-adjustment",
@@ -8134,14 +8454,16 @@
       "Creative Improvisation Adjustment"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 30,
+    "points": 45,
     "badges": [
       "🪞 Homospatial",
-      "🗺️ Frontier Research Group"
+      "🗺️ Frontier Research Group",
+      "🔬 Actively Researched"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5",
-      "Phase 2 ADJACENT_ACTIVE: +30"
+      "Phase 2 ADJACENT_ACTIVE: +30",
+      "Actively researched, most recent evidence 2018 (8y old): +15"
     ],
     "held_out_reason": null,
     "tier_rank": 2,
@@ -8159,11 +8481,33 @@
     "refutation_filename": null,
     "refutation_content": null,
     "refutation_independently_confirmed": false,
-    "actively_researched": false,
-    "active_research_note": "After an extensive search, I found no specific research or evidence directly addressing the Agri-Improvisation System as defined in your claim. While there is substantial research on adaptive strategies in agriculture, creative decision-making, and yield variability, none explicitly combine these elements into a unified framework termed the Agri-Improvisation System. Therefore, there is no direct evidence supporting this specific mechanism.",
-    "active_research_matches": [],
-    "active_research_most_recent_year": null,
-    "active_research_checked_date": "2026-09-01"
+    "actively_researched": true,
+    "active_research_note": "The candidate papers collectively emphasize improvisation and adaptive strategies in agricultural practices, which directly relate to the proposed Agri-Improvisation System claim. They explore the dynamics of uncertainty and performance in agriculture, highlighting how farmers' creative decision-making processes can lead to improved outcomes, thus supporting the hypothesis of reduced yield variability through informed adaptive strategies.",
+    "active_research_matches": [
+      {
+        "title": "Shifting Cultivation as Improvisation",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2014,
+        "url": "https://doi.org/10.1093/oxfordhb/9780195370935.013.22",
+        "explanation": "This paper discusses improvisation in shifting cultivation, specifically how farmers adapt their practices based on evolving environmental and social conditions. This aligns directly with the claim of integrating agriculture and improvisation to form the Agri-Improvisation System, as it emphasizes adaptive strategies for agricultural practices."
+      },
+      {
+        "title": "Peasant farming as improvisation: what theory do we possess and how might it be used?",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2018,
+        "url": "https://doi.org/10.2458/v25i1.23088",
+        "explanation": "The article explores the theoretical foundations of improvisation in farming, particularly how farmers navigate social and environmental challenges through adaptive strategies, which directly supports the notion of the Agri-Improvisation System proposed in the claim."
+      },
+      {
+        "title": "Navigating compounding uncertainty: Farmer strategies amid biosecurity crises in western Uganda",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": null,
+        "url": "https://www.sciencedirect.com/science/article/abs/pii/S0016718520300713",
+        "explanation": "This paper illustrates how farmers respond to uncertainties through improvisation and experimentation, directly relating to the proposed adaptive strategies in the Agri-Improvisation System and its impact on agricultural yield variability."
+      }
+    ],
+    "active_research_most_recent_year": 2018,
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-29-janusian-human-financial-trading-algorithms",
@@ -8452,10 +8796,10 @@
     "refutation_content": null,
     "refutation_independently_confirmed": false,
     "actively_researched": false,
-    "active_research_note": "I searched for research that directly connects the principles of crop rotation for soil health with packet routing for network performance, particularly focusing on resource allocation leading to system resilience. While there are studies on crop rotation's impact on agricultural resilience and research on resource allocation in network routing, I did not find any that explicitly draw this parallel or suggest that implementing dynamic crop rotation strategies would yield similar improvements in data packet delivery efficiency as optimizing routing protocols under varying network conditions.",
+    "active_research_note": "The claim discusses a specific mechanism where the relationship between crop rotation for soil health and packet routing for network performance is based on resource allocation that optimizes resilience. The candidate papers retrieved focus on various aspects of agriculture and telecommunications, but none directly address the same specific mechanism of resource allocation leading to system resilience in both contexts, particularly not in the manner described in the claim. The papers primarily explore QoS in networks, routing protocols, and adaptive mechanisms, which do not align closely enough with the specified relationship between crop management and network routing performance under dynamic conditions.",
     "active_research_matches": [],
     "active_research_most_recent_year": null,
-    "active_research_checked_date": "2026-09-01"
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-30-cross-domain-pattern-recognition-x-human-team-collaboration",
@@ -8466,14 +8810,16 @@
       "Human Team Collaboration"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 30,
+    "points": 40,
     "badges": [
       "🧬 Bisociative",
-      "🗺️ Frontier Research Group"
+      "🗺️ Frontier Research Group",
+      "🔬 Actively Researched (historical)"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5",
-      "Phase 2 ADJACENT_ACTIVE: +30"
+      "Phase 2 ADJACENT_ACTIVE: +30",
+      "Actively researched, most recent evidence 2010 — real, but not a currently live thread: +10"
     ],
     "held_out_reason": null,
     "tier_rank": 2,
@@ -8491,11 +8837,40 @@
     "refutation_filename": null,
     "refutation_content": null,
     "refutation_independently_confirmed": false,
-    "actively_researched": false,
-    "active_research_note": "While there is extensive research on shared mental models and their impact on team performance, the specific claim regarding the relational rule governing the evolution of understanding in cross-domain pattern recognition and its influence on shared mental models in human team collaboration is not directly addressed in the available literature. The studies primarily focus on the role of shared mental models in team performance without explicitly linking them to cross-domain pattern recognition processes. Therefore, there is no direct evidence supporting the proposed mechanism as stated.",
-    "active_research_matches": [],
-    "active_research_most_recent_year": null,
-    "active_research_checked_date": "2026-09-01"
+    "actively_researched": true,
+    "active_research_note": "The identified papers provide substantial evidence regarding the dynamics of shared mental models and their influence on team performance and cohesion in contexts aligned with cross-domain pattern recognition and human collaboration. They specifically address the mechanisms of knowledge transfer and team effectiveness predicted in the specific claim.",
+    "active_research_matches": [
+      {
+        "title": "Are We on the Same Page? Knowledge Boundaries and Transactive Memory System Development in Cross-Functional Teams",
+        "researcher_or_authors": "Mathieu J. E., Heffner T. S., Goodwin G. F., Salas E., Cannon-Bowers J. A.",
+        "year": null,
+        "url": "https://journals.sagepub.com/doi/10.1177/0093650212469402",
+        "explanation": "This paper examines the development of transactive memory systems in cross-functional teams and how knowledge boundaries affect team performance, which is directly related to the dynamics of shared mental models and knowledge transfer as mentioned in the claim."
+      },
+      {
+        "title": "Measuring shared team mental models: A meta-analysis.",
+        "researcher_or_authors": "John E. Mathieu, Tonia S. Heffner, Gerald F. Goodwin, Eduardo Salas, Janis A. Cannon-Bowers",
+        "year": 2010,
+        "url": "https://doi.org/10.1037/a0017455",
+        "explanation": "This meta-analysis investigates the relationship between shared mental models and team performance, assessing how operationalization impacts this relationship, which ties closely to the proposed dynamics in the claim."
+      },
+      {
+        "title": "The Role of Shared Mental Models in Driving Knowledge Complementarity: Enhancing Human–AI Team Effectiveness",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": null,
+        "url": "https://www.tandfonline.com/doi/abs/10.1080/10447318.2025.2598670",
+        "explanation": "This study examines how shared mental models in human–AI teams affect team effectiveness and knowledge complementarity, aligning with the claim's focus on knowledge integration and team performance."
+      },
+      {
+        "title": "Let's Think Together! Assessing Shared Mental Models, Performance, and Trust in Human-Agent Teams",
+        "researcher_or_authors": "Xiaocong Fan and John Yen",
+        "year": null,
+        "url": "https://dl.acm.org/doi/10.1145/3492832",
+        "explanation": "This paper explores the development of shared mental models in human-agent teams and their relation to team performance, directly addressing the claimed relationship between knowledge transfer and team outcomes."
+      }
+    ],
+    "active_research_most_recent_year": 2010,
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-30-education-x-human-social-influence",
@@ -8568,19 +8943,21 @@
       "Human Cognitive Bias"
     ],
     "verdict": "COLLISION",
-    "points": -20,
+    "points": -10,
     "badges": [
       "🧬 Bisociative",
       "🏛️ Established Department",
       "⚠️ Failed Honesty Check",
-      "💀 Refuted"
+      "💀 Refuted",
+      "🔬 Actively Researched (historical)"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5",
       "Phase 2 COLLISION (genuine): +5",
       "Mechanical honesty check failed twice (disguised compromise, uncorrected): -10",
       "Adversarial refutation REFUTED, unanimous (0-of-3 survive): -15",
-      "  independently confirmed (3 separate agents, full agreement)"
+      "  independently confirmed (3 separate agents, full agreement)",
+      "Actively researched, most recent evidence 2015 — real, but not a currently live thread: +10"
     ],
     "held_out_reason": null,
     "tier_rank": 5,
@@ -8598,11 +8975,26 @@
     "refutation_filename": "refutations/2026-08-30-epidemiology-x-human-cognitive-bias-refutation.md",
     "refutation_content": "# Adversarial Refutation: Bisociation — Epidemiology × Human Cognitive Bias\n\n**Original**: `hypotheses/2026-08-30-epidemiology-x-human-cognitive-bias.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 0 of 3 survive → **REFUTED**\n\n- **Coherence — REFUTED.** The hypothesis equivocates on the term 'threshold,' using it to describe both herd immunity in epidemiology and a point of rational decision-making in cognitive bias without demonstrating a genuine structural mapping. The 'threshold' in epidemiology is a well-defined, quantifiable concept, whereas in cognitive bias, it is more abstract and lacks a clear, measurable counterpart. This results in a side-by-side comparison rather than a true bisociation.\n- **Testability — REFUTED.** The hypothesis lacks a clear operationalization of the cognitive bias threshold analogous to herd immunity. It does not specify a measurable metric, comparison condition, or rejection threshold for when cognitive biases are sufficiently mitigated to allow rational decision-making. Without these, the claim remains vague and unfalsifiable, as no experiment could definitively confirm or deny the existence of such a threshold.\n- **Triviality — REFUTED.** The hypothesis reduces to a trivial comparison between two threshold phenomena in complex systems. Both epidemiology and cognitive bias involve thresholds, but this is a common feature of many systems and does not establish a meaningful or novel connection. The claim lacks specificity beyond this generic similarity, failing to demonstrate a unique or insightful mapping between the domains.\n\n## No steelman offered\n\nAll three lenses independently converged on REFUTED for this case. If revisited, it would need a genuinely tighter formulation, not a restatement of the same claim.\n",
     "refutation_independently_confirmed": true,
-    "actively_researched": false,
-    "active_research_note": "I searched for research specifically examining the relationship between herd immunity thresholds in epidemiology and rational decision-making thresholds in cognitive bias. While there are studies on herd immunity thresholds affecting vaccination willingness, such as the work by Andersson et al. (2022) ([nature.com](https://www.nature.com/articles/s41599-022-01257-7?utm_source=openai)), and research on cognitive biases in decision-making, I did not find any studies directly linking these two concepts. Therefore, there is no existing research evidence supporting the specific claim that the relational rule governing the herd immunity threshold in epidemiology also governs the threshold of rational decision-making in cognitive bias.",
-    "active_research_matches": [],
-    "active_research_most_recent_year": null,
-    "active_research_checked_date": "2026-09-01"
+    "actively_researched": true,
+    "active_research_note": "The selected papers explicitly address the interplay between cognitive biases and herd immunity dynamics, making them relevant to the specific claim of a relational rule governing both epidemiology and cognitive decision-making. Their focus on how collective behavior and awareness impact both vaccination decisions and disease spread establishes a direct link to the proposed relationship in the claim.",
+    "active_research_matches": [
+      {
+        "title": "Beyond Rational Decision-Making: Modelling the Influence of Cognitive Biases on the Dynamics of Vaccination Coverage",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2015,
+        "url": "https://doi.org/10.1371/journal.pone.0142990",
+        "explanation": "This paper models the influence of cognitive biases on vaccination decision-making, emphasizing how these biases lead to dynamics in vaccination coverage that echo the requirements for achieving herd immunity. The parallels drawn between vaccination behaviors and epidemiological outcomes support the analogy made in the specific claim regarding critical mass."
+      },
+      {
+        "title": "Vaccination, Herd Behavior, and Herd Immunity",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2013,
+        "url": "https://journals.sagepub.com/doi/10.1177/0272989X13487946",
+        "explanation": "The study explores how social dynamics (like conforming to peers) affect vaccination decisions and herd immunity thresholds, aligning closely with the claim's assertion that awareness and behavior change can lead to improved outcomes, similar to herd immunity in epidemiology."
+      }
+    ],
+    "active_research_most_recent_year": 2015,
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-30-geology-x-human-committee-formation",
