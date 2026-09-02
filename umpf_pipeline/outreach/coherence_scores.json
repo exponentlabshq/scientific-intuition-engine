@@ -160,5 +160,71 @@
     "question": "Can a swarm use collective environmental / cavity resonance as a stigmergic blackboard \u2014 configuration changes the resonant field, and the resonant field changes configuration \u2014 such that under chamber-geometry change the swarm spontaneously finds formations that exploit resonance without being given the global solution?",
     "coherent": true,
     "concern": ""
+  },
+  "email-architecture-x-human-defense-coordination-csikvari.md": {
+    "hypothesis_slug": "2026-08-31-homospatial-architecture-x-human-defense-coordination",
+    "question": "Can modular construction with integrated defense systems enhance adaptability and efficiency in threat response?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-cognitive-attention-map-evolution-beffara.md": {
+    "hypothesis_slug": "2026-08-31-janusian-cognitive-attention-map-evolution",
+    "question": "Can attention maps evolve through both selective focus and indiscriminate engagement simultaneously?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-creative-narrative-arc-development-x-human-committ-wan.md": {
+    "hypothesis_slug": "2026-08-29-homospatial-creative-narrative-arc-development-x-human-committee-formation",
+    "question": "Can narratives developed through committee collaboration exhibit unique plot structures and character dynamics distinct from those created by individual authors?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-cross-domain-pattern-recognition-x-human-role-ambi-jaraettinger.md": {
+    "hypothesis_slug": "2026-08-30-cross-domain-pattern-recognition-x-human-role-ambiguity",
+    "question": "Can structured approaches to resolving ambiguity in human roles yield similar patterns of understanding as those found in successful cross-domain pattern recognition efforts?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-ethics-rutchick.md": {
+    "hypothesis_slug": "2026-09-01-janusian-ethics",
+    "question": "Can both pulling the lever to save five lives and not pulling the lever to respect individual rights be true simultaneously in the same ethical scenario?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-informational-mobile-system-coordination-x-physica-rajpal.md": {
+    "hypothesis_slug": "2026-08-30-informational-mobile-system-coordination-x-physical-ecosystem-succession",
+    "question": "Can adaptive responses in mobile systems to environmental changes predict species adaptation patterns?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-legal-systems-x-physical-magnetic-field-control-pires.md": {
+    "hypothesis_slug": "2026-08-31-legal-systems-x-physical-magnetic-field-control",
+    "question": "Can alterations in legal precedents lead to measurable changes in magnetic field configurations that produce specific effects?",
+    "coherent": false,
+    "concern": "The question implies a direct causal mechanism where changes in legal precedents directly influence magnetic field configurations, which suggests a physical connection that the underlying hypothesis does not support. The hypothesis only asserts a shared abstract principle of evolution or adaptation governed by historical outcomes in both domains, not a system where one can physically manipulate the other."
+  },
+  "email-linguistics-x-cognitive-model-adaptation-torres.md": {
+    "hypothesis_slug": "2026-08-29-homospatial-linguistics-x-cognitive-model-adaptation",
+    "question": "Can Cognitolect enhance cognitive flexibility through creole structures?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-military-strategy-2-worsnop.md": {
+    "hypothesis_slug": "2026-08-31-janusian-military-strategy-2",
+    "question": "Can guerrilla tactics achieve short-term victories while leading to strategic failure?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-neuroscience-x-law-massami.md": {
+    "hypothesis_slug": "2026-08-29-homospatial-neuroscience-x-law",
+    "question": "Can iterative refinement in legal agreements reduce disputes and enhance clarity?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-urban-planning-x-physical-mechanical-vibration-herbut.md": {
+    "hypothesis_slug": "2026-09-01-homospatial-urban-planning-x-physical-mechanical-vibration",
+    "question": "Can Vibrational Urban Dynamics enhance structural integrity during vibrational events?",
+    "coherent": true,
+    "concern": ""
   }
 }

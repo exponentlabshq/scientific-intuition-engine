@@ -187,5 +187,82 @@
     "sharpness": "BORDERLINE",
     "restates_domain_name": true,
     "reason": "The question restates a known mechanism of synaptic pruning without delving into specific variables or claims relevant to the paper."
+  },
+  "email-architecture-x-human-defense-coordination-csikvari.md": {
+    "hypothesis_slug": "2026-08-31-homospatial-architecture-x-human-defense-coordination",
+    "question": "Can modular construction with integrated defense systems enhance adaptability and efficiency in threat response?",
+    "sharpness": "BORDERLINE",
+    "restates_domain_name": true,
+    "reason": "The question connects modular construction to adaptability and efficiency in a specific context, but it largely restates known themes from the paper without probing into specific mechanisms or variables that would indicate deeper engagement with the research."
+  },
+  "email-cognitive-attention-map-evolution-beffara.md": {
+    "hypothesis_slug": "2026-08-31-janusian-cognitive-attention-map-evolution",
+    "question": "Can attention maps evolve through both selective focus and indiscriminate engagement simultaneously?",
+    "sharpness": "SHARP",
+    "restates_domain_name": false,
+    "reason": "The question specifically addresses the interaction between selective focus and indiscriminate engagement in the context of attention maps, directly engaging with the nuances of the paper's claims about attentional priority."
+  },
+  "email-creative-narrative-arc-development-x-human-committ-wan.md": {
+    "hypothesis_slug": "2026-08-29-homospatial-creative-narrative-arc-development-x-human-committee-formation",
+    "question": "Can narratives developed through committee collaboration exhibit unique plot structures and character dynamics distinct from those created by individual authors?",
+    "sharpness": "BORDERLINE",
+    "restates_domain_name": false,
+    "reason": "The question addresses a relevant aspect of the paper's theme but largely reiterates the concept of collaboration versus individual authorship without delving into the specific mechanisms or variables that distinguish these outcomes."
+  },
+  "email-cross-domain-pattern-recognition-x-human-role-ambi-jaraettinger.md": {
+    "hypothesis_slug": "2026-08-30-cross-domain-pattern-recognition-x-human-role-ambiguity",
+    "question": "Can structured approaches to resolving ambiguity in human roles yield similar patterns of understanding as those found in successful cross-domain pattern recognition efforts?",
+    "sharpness": "BORDERLINE",
+    "restates_domain_name": false,
+    "reason": "The question references concepts from the paper and draws a connection to cross-domain pattern recognition, but it mainly restates the general idea of ambiguity resolution without introducing a specific mechanism or variable that reflects deeper engagement with the content."
+  },
+  "email-ethics-rutchick.md": {
+    "hypothesis_slug": "2026-09-01-janusian-ethics",
+    "question": "Can both pulling the lever to save five lives and not pulling the lever to respect individual rights be true simultaneously in the same ethical scenario?",
+    "sharpness": "BORDERLINE",
+    "restates_domain_name": false,
+    "reason": "The question reflects an ethical dilemma based on a common moral scenario, but it primarily reiterates the tension between utilitarianism and deontological ethics without introducing a distinct mechanism or context from the paper."
+  },
+  "email-informational-mobile-system-coordination-x-physica-rajpal.md": {
+    "hypothesis_slug": "2026-08-30-informational-mobile-system-coordination-x-physical-ecosystem-succession",
+    "question": "Can adaptive responses in mobile systems to environmental changes predict species adaptation patterns?",
+    "sharpness": "BORDERLINE",
+    "restates_domain_name": false,
+    "reason": "The question connects adaptive responses in mobile systems to species adaptation patterns, which is relevant, but it largely restates known dynamics instead of probing a specific, unique mechanism or variable that would provoke deeper thought."
+  },
+  "email-legal-systems-x-physical-magnetic-field-control-pires.md": {
+    "hypothesis_slug": "2026-08-31-legal-systems-x-physical-magnetic-field-control",
+    "question": "Can alterations in legal precedents lead to measurable changes in magnetic field configurations that produce specific effects?",
+    "sharpness": "BORDERLINE",
+    "restates_domain_name": true,
+    "reason": "The question attempts to link legal precedents to magnetic field configurations but does so in a vague and general way, lacking a clear mechanism or specific variable that a domain expert would find compelling."
+  },
+  "email-linguistics-x-cognitive-model-adaptation-torres.md": {
+    "hypothesis_slug": "2026-08-29-homospatial-linguistics-x-cognitive-model-adaptation",
+    "question": "Can Cognitolect enhance cognitive flexibility through creole structures?",
+    "sharpness": "BORDERLINE",
+    "restates_domain_name": false,
+    "reason": "The question touches on a specific aspect of cognitive flexibility and introduces 'cognitolect' and 'creole structures,' but it primarily reiterates themes from the paper without posing a new or independent inquiry about the underlying mechanisms."
+  },
+  "email-military-strategy-2-worsnop.md": {
+    "hypothesis_slug": "2026-08-31-janusian-military-strategy-2",
+    "question": "Can guerrilla tactics achieve short-term victories while leading to strategic failure?",
+    "sharpness": "BORDERLINE",
+    "restates_domain_name": true,
+    "reason": "The question restates a known mechanism of guerrilla warfare without specifying unique variables or claims from the paper, making it feel more like a generic insight than a probing question."
+  },
+  "email-neuroscience-x-law-massami.md": {
+    "hypothesis_slug": "2026-08-29-homospatial-neuroscience-x-law",
+    "question": "Can iterative refinement in legal agreements reduce disputes and enhance clarity?",
+    "sharpness": "BORDERLINE",
+    "restates_domain_name": true,
+    "reason": "The question largely restates concepts related to legal agreements and dispute resolution without introducing a specific mechanism or variable related to the paper's content."
+  },
+  "email-urban-planning-x-physical-mechanical-vibration-herbut.md": {
+    "hypothesis_slug": "2026-09-01-homospatial-urban-planning-x-physical-mechanical-vibration",
+    "question": "Can Vibrational Urban Dynamics enhance structural integrity during vibrational events?",
+    "sharpness": "BORDERLINE",
+    "restates_domain_name": true,
+    "reason": "The question reiteratively combines concepts from the paper's title without introducing a new mechanism or specific variable that would indicate a deeper understanding of the research."
   }
 }

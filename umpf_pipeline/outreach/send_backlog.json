@@ -1,6 +1,20 @@
 {
   "ready": [
     {
+      "send_priority": 90,
+      "sharpness": "SHARP",
+      "coherent": true,
+      "coherence_concern": "",
+      "flagged": false,
+      "points": 55,
+      "department": "Department of Janusian Studies",
+      "dept_slug": "janusian",
+      "target_name": "Bertrand Beffara",
+      "email": "bertrand.beffara@gmail.com",
+      "hypothesis_slug": "2026-08-31-janusian-cognitive-attention-map-evolution",
+      "filename": "email-cognitive-attention-map-evolution-beffara.md"
+    },
+    {
       "send_priority": 88,
       "sharpness": "SHARP",
       "coherent": true,
@@ -189,6 +203,20 @@
       "coherence_concern": "",
       "flagged": false,
       "points": 55,
+      "department": "Department of Homospatial Studies",
+      "dept_slug": "homospatial",
+      "target_name": "QS. Bernard David Massami",
+      "email": "masamijunior@yahoo.co.uk",
+      "hypothesis_slug": "2026-08-29-homospatial-neuroscience-x-law",
+      "filename": "email-neuroscience-x-law-massami.md"
+    },
+    {
+      "send_priority": 75,
+      "sharpness": "BORDERLINE",
+      "coherent": true,
+      "coherence_concern": "",
+      "flagged": false,
+      "points": 55,
       "department": "Department of Bisociation Studies",
       "dept_slug": "bisociation",
       "target_name": "Murad Sultanov",
@@ -211,6 +239,104 @@
       "filename": "email-quantum-physics-x-physical-magnetic-field-control-haas.md"
     },
     {
+      "send_priority": 73,
+      "sharpness": "BORDERLINE",
+      "coherent": true,
+      "coherence_concern": "",
+      "flagged": false,
+      "points": 55,
+      "department": "Department of Homospatial Studies",
+      "dept_slug": "homospatial",
+      "target_name": "G Csikvari",
+      "email": "Gergely.Csikvari@xjtlu.edu.cn",
+      "hypothesis_slug": "2026-08-31-homospatial-architecture-x-human-defense-coordination",
+      "filename": "email-architecture-x-human-defense-coordination-csikvari.md"
+    },
+    {
+      "send_priority": 73,
+      "sharpness": "BORDERLINE",
+      "coherent": true,
+      "coherence_concern": "",
+      "flagged": false,
+      "points": 55,
+      "department": "Department of Homospatial Studies",
+      "dept_slug": "homospatial",
+      "target_name": "Yun Wan",
+      "email": "yunwan@cs.stanford.edu",
+      "hypothesis_slug": "2026-08-29-homospatial-creative-narrative-arc-development-x-human-committee-formation",
+      "filename": "email-creative-narrative-arc-development-x-human-committ-wan.md"
+    },
+    {
+      "send_priority": 73,
+      "sharpness": "BORDERLINE",
+      "coherent": true,
+      "coherence_concern": "",
+      "flagged": false,
+      "points": 55,
+      "department": "Department of Bisociation Studies",
+      "dept_slug": "bisociation",
+      "target_name": "Julian Jara-Ettinger",
+      "email": "julian.jara-ettinger@yale.edu",
+      "hypothesis_slug": "2026-08-30-cross-domain-pattern-recognition-x-human-role-ambiguity",
+      "filename": "email-cross-domain-pattern-recognition-x-human-role-ambi-jaraettinger.md"
+    },
+    {
+      "send_priority": 73,
+      "sharpness": "BORDERLINE",
+      "coherent": true,
+      "coherence_concern": "",
+      "flagged": false,
+      "points": 55,
+      "department": "Department of Bisociation Studies",
+      "dept_slug": "bisociation",
+      "target_name": "Hardik Rajpal",
+      "email": "h.rajpal@imperial.ac.uk",
+      "hypothesis_slug": "2026-08-30-informational-mobile-system-coordination-x-physical-ecosystem-succession",
+      "filename": "email-informational-mobile-system-coordination-x-physica-rajpal.md"
+    },
+    {
+      "send_priority": 73,
+      "sharpness": "BORDERLINE",
+      "coherent": true,
+      "coherence_concern": "",
+      "flagged": false,
+      "points": 55,
+      "department": "Department of Homospatial Studies",
+      "dept_slug": "homospatial",
+      "target_name": "Charles John Torres",
+      "email": "charlt4@uci.edu",
+      "hypothesis_slug": "2026-08-29-homospatial-linguistics-x-cognitive-model-adaptation",
+      "filename": "email-linguistics-x-cognitive-model-adaptation-torres.md"
+    },
+    {
+      "send_priority": 73,
+      "sharpness": "BORDERLINE",
+      "coherent": true,
+      "coherence_concern": "",
+      "flagged": false,
+      "points": 55,
+      "department": "Department of Janusian Studies",
+      "dept_slug": "janusian",
+      "target_name": "Alec Worsnop",
+      "email": "aworsnop@umd.edu",
+      "hypothesis_slug": "2026-08-31-janusian-military-strategy-2",
+      "filename": "email-military-strategy-2-worsnop.md"
+    },
+    {
+      "send_priority": 73,
+      "sharpness": "BORDERLINE",
+      "coherent": true,
+      "coherence_concern": "",
+      "flagged": false,
+      "points": 55,
+      "department": "Department of Homospatial Studies",
+      "dept_slug": "homospatial",
+      "target_name": "Aneta Herbut",
+      "email": "aneta.herbut@pwr.edu.pl",
+      "hypothesis_slug": "2026-09-01-homospatial-urban-planning-x-physical-mechanical-vibration",
+      "filename": "email-urban-planning-x-physical-mechanical-vibration-herbut.md"
+    },
+    {
       "send_priority": 72,
       "sharpness": "SHARP",
       "coherent": true,
@@ -223,6 +349,20 @@
       "email": "ssterman@illinois.edu",
       "hypothesis_slug": "2026-08-31-homospatial-creative-improvisation-coordination-x-informational-software-version-control",
       "filename": "email-creative-versioning-sterman.md"
+    },
+    {
+      "send_priority": 71,
+      "sharpness": "BORDERLINE",
+      "coherent": true,
+      "coherence_concern": "",
+      "flagged": false,
+      "points": 55,
+      "department": "Department of Janusian Studies",
+      "dept_slug": "janusian",
+      "target_name": "Abraham M. Rutchick",
+      "email": "rutchick@csun.edu",
+      "hypothesis_slug": "2026-09-01-janusian-ethics",
+      "filename": "email-ethics-rutchick.md"
     },
     {
       "send_priority": 63,
@@ -309,6 +449,20 @@
       "email": "daniel.vajner@physik.uni-stuttgart.de",
       "hypothesis_slug": "2026-08-30-cryptography-x-physical-photon-emission",
       "filename": "email-cryptography-x-physical-photon-emission-vajner.md"
+    },
+    {
+      "send_priority": 73,
+      "sharpness": "BORDERLINE",
+      "coherent": false,
+      "coherence_concern": "The question implies a direct causal mechanism where changes in legal precedents directly influence magnetic field configurations, which suggests a physical connection that the underlying hypothesis does not support. The hypothesis only asserts a shared abstract principle of evolution or adaptation governed by historical outcomes in both domains, not a system where one can physically manipulate the other.",
+      "flagged": true,
+      "points": 55,
+      "department": "Department of Bisociation Studies",
+      "dept_slug": "bisociation",
+      "target_name": "Rilder S. Pires",
+      "email": "rilder@unifor.br",
+      "hypothesis_slug": "2026-08-31-legal-systems-x-physical-magnetic-field-control",
+      "filename": "email-legal-systems-x-physical-magnetic-field-control-pires.md"
     }
   ]
 }
