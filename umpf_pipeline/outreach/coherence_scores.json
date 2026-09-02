@@ -328,5 +328,167 @@
     "question": "Can the Cognitive Play Map emerge from the superimposition of basketball pick-and-roll offense and cognitive attention map evolution?",
     "coherent": true,
     "concern": ""
+  },
+  "email-architecture-x-physical-immune-system-banerjee.md": {
+    "hypothesis_slug": "2026-08-31-architecture-x-physical-immune-system",
+    "question": "Can the relational rule governing the allocation of structural loads in architecture also govern the strategic deployment of immune responses in the physical immune system?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-cell-biology-fried.md": {
+    "hypothesis_slug": "2026-08-31-janusian-cell-biology",
+    "question": "Can both the necessity of protein folding chaperones and the capability of proteins to fold correctly without them be true simultaneously for the same proteins?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-climatology-feldl.md": {
+    "hypothesis_slug": "2026-08-29-janusian-climatology",
+    "question": "Can the ice-albedo feedback loop simultaneously drive warming and localized cooling effects due to changes in ice cover?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-cognitive-ai-hyperparameter-orchestration-zecchin.md": {
+    "hypothesis_slug": "2026-08-30-janusian-cognitive-ai-hyperparameter-orchestration",
+    "question": "Can a model achieve optimal performance both with hyperparameter tuning and without it in the same experimental setup?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-cognitive-ai-weight-initialization-x-creative-arti-jiang.md": {
+    "hypothesis_slug": "2026-08-31-cognitive-ai-weight-initialization-x-creative-artistic-critique",
+    "question": "Can variations in initial weight settings in cognitive AI correlate with the diversity of interpretations in artistic critiques?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-cognitive-attention-map-evolution-x-informational-lee.md": {
+    "hypothesis_slug": "2026-08-29-cognitive-attention-map-evolution-x-informational-event-driven-systems",
+    "question": "Can the patterns of attention allocation in cognitive processes predict the event-handling strategies in informational systems?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-cognitive-psychology-x-finance-farooqui.md": {
+    "hypothesis_slug": "2026-09-01-homospatial-cognitive-psychology-x-finance",
+    "question": "Can the Cognitive Financial Chunking System improve decision-making speed and accuracy in financial transactions?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-computer-science-moss.md": {
+    "hypothesis_slug": "2026-08-31-janusian-computer-science",
+    "question": "Can instruction scheduling improve performance while also degrading it for the same compilation process?",
+    "coherent": false,
+    "concern": "The question suggests a direct causal relationship by implying that instruction scheduling can simultaneously improve and degrade performance in a single instance of a compilation process, which is misleading. The underlying hypothesis indicates that both outcomes can occur in different contexts or scenarios, not within the same execution of the scheduling process."
+  },
+  "email-computer-science-sato.md": {
+    "hypothesis_slug": "2026-08-31-janusian-computer-science",
+    "question": "Can instruction scheduling improve performance while also introducing overhead and increasing complexity in resource management for the same compilation process?",
+    "coherent": false,
+    "concern": "The question implies that instruction scheduling can simultaneously improve performance and introduce overhead in a literal, direct way, with no proposed mechanism to reconcile these two outcomes within the same compilation process. The underlying hypothesis more abstractly supports the coexistence of these effects depending on context, not that they can function together in the way the question suggests."
+  },
+  "email-creative-improvisation-adjustment-x-informational-deshpande.md": {
+    "hypothesis_slug": "2026-08-31-homospatial-creative-improvisation-adjustment-x-informational-measurement-data-evolution",
+    "question": "Can Creative Improvisation Adjustment function as an active component in the Adaptive Creative Feedback Loop that evolves through Informational Measurement Data Evolution?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-culinary-arts-x-human-committee-formation-paris.md": {
+    "hypothesis_slug": "2026-08-31-culinary-arts-x-human-committee-formation",
+    "question": "Can improving the quality of committee members' expertise lead to better decision-making outcomes, analogous to how fresher ingredients enhance dish quality?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-economics-x-human-defense-coordination-li.md": {
+    "hypothesis_slug": "2026-08-29-economics-x-human-defense-coordination",
+    "question": "Can optimizing auction formats for resource allocation yield insights that improve the effectiveness of human defense coordination strategies?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-informational-error-probability-x-physical-immune-yoshido.md": {
+    "hypothesis_slug": "2026-08-31-informational-error-probability-x-physical-immune-system",
+    "question": "Can informational error probability function as an indicator of the physical immune system's response effectiveness?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-informational-scientific-experiment-orchestration-conduit.md": {
+    "hypothesis_slug": "2026-08-31-janusian-informational-scientific-experiment-orchestration",
+    "question": "Can both a rigidly structured experimental design and a flexible unstructured experimental design produce reliable and reproducible scientific results for the same experiment?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-informational-scientific-experiment-orchestration-draelos.md": {
+    "hypothesis_slug": "2026-08-31-janusian-informational-scientific-experiment-orchestration",
+    "question": "Can both a rigidly structured experimental design and a flexible unstructured experimental design produce reliable and reproducible scientific results for the same neuroscience experiment?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-informational-scientific-experiment-orchestration-gottstein.md": {
+    "hypothesis_slug": "2026-08-31-janusian-informational-scientific-experiment-orchestration",
+    "question": "Can both a rigidly structured experimental design and a flexible unstructured experimental design yield reliable results for the same self-driving laboratory experiment?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-informational-scientific-experiment-orchestration-mayani.md": {
+    "hypothesis_slug": "2026-08-31-janusian-informational-scientific-experiment-orchestration",
+    "question": "Can both a rigidly structured experimental design and a flexible unstructured experimental design produce reliable and reproducible scientific results for the same experiment?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-informational-scientific-experiment-orchestration-zhang.md": {
+    "hypothesis_slug": "2026-08-31-janusian-informational-scientific-experiment-orchestration",
+    "question": "Can both a rigidly structured experimental design and a flexible unstructured experimental design yield reliable results for the same experiment?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-informational-signal-jitter-im.md": {
+    "hypothesis_slug": "2026-08-31-janusian-informational-signal-jitter",
+    "question": "Can both degradation and enhancement of information transmission quality due to signal jitter be true simultaneously for the same transmission?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-linguistics-x-cognitive-concept-drift-li.md": {
+    "hypothesis_slug": "2026-08-30-linguistics-x-cognitive-concept-drift",
+    "question": "Can historical sound change function as a cognitive constraint influencing concept drift in language users?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-organizational-theory-x-architecture-tee.md": {
+    "hypothesis_slug": "2026-08-31-organizational-theory-x-architecture",
+    "question": "Can role ambiguity within an organization correlate with a decrease in the structural integrity of modular constructions?",
+    "coherent": false,
+    "concern": "The question implies a direct causal link between role ambiguity in organizations and the structural integrity of modular constructions, suggesting that changes in one could directly affect the other without any proposed mechanism or system connecting the two domains. The underlying hypothesis suggests a shared abstract principle (uncertainty) but does not support a literal physical or causal mechanism."
+  },
+  "email-organizational-theory-x-finance-jobidon.md": {
+    "hypothesis_slug": "2026-08-29-organizational-theory-x-finance",
+    "question": "Can the implementation of self-organizing team principles lead to improved transaction success rates in finance?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-organizational-theory-x-finance-pazos.md": {
+    "hypothesis_slug": "2026-08-29-organizational-theory-x-finance",
+    "question": "Can the implementation of self-organizing principles in finance teams lead to improved transaction success rates and more adaptive portfolio management?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-pharmacology-copeland.md": {
+    "hypothesis_slug": "2026-08-31-janusian-pharmacology",
+    "question": "Can both the concentration-affinity model and the multi-factor model of drug binding kinetics be true simultaneously for the same drug-receptor interaction?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-physical-quantum-measurement-adami.md": {
+    "hypothesis_slug": "2026-08-28-janusian-physical-quantum-measurement",
+    "question": "Can the act of measurement both fundamentally alter the state of a quantum system and not alter the state simultaneously?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-physics-condensed-matter-bose-einstein-condensate-fukuyama.md": {
+    "hypothesis_slug": "2026-09-02-physics-condensed-matter-bose-einstein-condensate-coherence-x-cosmology-early-universe-scalar-field-dynamics",
+    "question": "Can the relational rule governing coherence in Bose-Einstein condensates also govern scalar field dynamics during inflationary phases?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-thermodynamics-x-physical-elastic-deformation-volchenkov.md": {
+    "hypothesis_slug": "2026-08-30-homospatial-thermodynamics-x-physical-elastic-deformation",
+    "question": "Can thermodynamic principles of entropy and physical elastic deformation be fused to reveal emergent behavior in materials under stress?",
+    "coherent": true,
+    "concern": ""
   }
 }

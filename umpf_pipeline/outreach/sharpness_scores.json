@@ -383,5 +383,194 @@
     "sharpness": "BORDERLINE",
     "restates_domain_name": true,
     "reason": "The question closely parallels the topics discussed in the cited paper, mainly involving the basketball pick-and-roll and cognitive maps, without introducing a distinct mechanism or independent variable."
+  },
+  "email-architecture-x-physical-immune-system-banerjee.md": {
+    "hypothesis_slug": "2026-08-31-architecture-x-physical-immune-system",
+    "question": "Can the relational rule governing the allocation of structural loads in architecture also govern the strategic deployment of immune responses in the physical immune system?",
+    "sharpness": "BORDERLINE",
+    "restates_domain_name": false,
+    "reason": "While the question draws a potentially interesting parallel between architectural principles and immune response strategies, it primarily restates known mechanisms without proposing a specific, novel aspect of either field for exploration."
+  },
+  "email-cell-biology-fried.md": {
+    "hypothesis_slug": "2026-08-31-janusian-cell-biology",
+    "question": "Can both the necessity of protein folding chaperones and the capability of proteins to fold correctly without them be true simultaneously for the same proteins?",
+    "sharpness": "BORDERLINE",
+    "restates_domain_name": false,
+    "reason": "The question is relevant and reflects an understanding of the paper's topic, but it largely restates known concepts about protein folding and chaperones without introducing a specific, novel mechanism or hypothesis that would prompt deeper thought."
+  },
+  "email-climatology-feldl.md": {
+    "hypothesis_slug": "2026-08-29-janusian-climatology",
+    "question": "Can the ice-albedo feedback loop simultaneously drive warming and localized cooling effects due to changes in ice cover?",
+    "sharpness": "BORDERLINE",
+    "restates_domain_name": false,
+    "reason": "The question is focused on the ice-albedo feedback loop, but it mainly reiterates concepts discussed in the paper rather than introducing a novel inquiry or mechanism."
+  },
+  "email-cognitive-ai-hyperparameter-orchestration-zecchin.md": {
+    "hypothesis_slug": "2026-08-30-janusian-cognitive-ai-hyperparameter-orchestration",
+    "question": "Can a model achieve optimal performance both with hyperparameter tuning and without it in the same experimental setup?",
+    "sharpness": "BORDERLINE",
+    "restates_domain_name": false,
+    "reason": "The question is relevant but primarily reiterates the paper's focus on hyperparameter tuning without introducing a novel angle or specific mechanism related to the findings."
+  },
+  "email-cognitive-ai-weight-initialization-x-creative-arti-jiang.md": {
+    "hypothesis_slug": "2026-08-31-cognitive-ai-weight-initialization-x-creative-artistic-critique",
+    "question": "Can variations in initial weight settings in cognitive AI correlate with the diversity of interpretations in artistic critiques?",
+    "sharpness": "BORDERLINE",
+    "restates_domain_name": false,
+    "reason": "The question touches on the relationship between initial weight settings and artistic critiques but mainly reiterates known concepts from the paper without addressing a specific mechanism or variable that requires deeper exploration."
+  },
+  "email-cognitive-attention-map-evolution-x-informational-lee.md": {
+    "hypothesis_slug": "2026-08-29-cognitive-attention-map-evolution-x-informational-event-driven-systems",
+    "question": "Can the patterns of attention allocation in cognitive processes predict the event-handling strategies in informational systems?",
+    "sharpness": "BORDERLINE",
+    "restates_domain_name": false,
+    "reason": "While the question addresses attention allocation and its predictive power regarding event-handling strategies, it largely echoes known concepts from the paper rather than probing a specific, nuanced aspect of the findings."
+  },
+  "email-cognitive-psychology-x-finance-farooqui.md": {
+    "hypothesis_slug": "2026-09-01-homospatial-cognitive-psychology-x-finance",
+    "question": "Can the Cognitive Financial Chunking System improve decision-making speed and accuracy in financial transactions?",
+    "sharpness": "BORDERLINE",
+    "restates_domain_name": true,
+    "reason": "The question mostly reiterates known mechanisms from the paper without introducing a new, specific angle, focusing on a general application of the concept in financial decision-making."
+  },
+  "email-computer-science-moss.md": {
+    "hypothesis_slug": "2026-08-31-janusian-computer-science",
+    "question": "Can instruction scheduling improve performance while also degrading it for the same compilation process?",
+    "sharpness": "BORDERLINE",
+    "restates_domain_name": false,
+    "reason": "The question touches on the dual nature of instruction scheduling effects but primarily reiterates a known aspect of the paper without introducing a distinct new variable or specific mechanism for consideration."
+  },
+  "email-computer-science-sato.md": {
+    "hypothesis_slug": "2026-08-31-janusian-computer-science",
+    "question": "Can instruction scheduling improve performance while also introducing overhead and increasing complexity in resource management for the same compilation process?",
+    "sharpness": "BORDERLINE",
+    "restates_domain_name": true,
+    "reason": "The question reiterates known concepts of instruction scheduling's trade-offs without probing into specific mechanisms or variables introduced in the cited paper."
+  },
+  "email-creative-improvisation-adjustment-x-informational-deshpande.md": {
+    "hypothesis_slug": "2026-08-31-homospatial-creative-improvisation-adjustment-x-informational-measurement-data-evolution",
+    "question": "Can Creative Improvisation Adjustment function as an active component in the Adaptive Creative Feedback Loop that evolves through Informational Measurement Data Evolution?",
+    "sharpness": "BORDERLINE",
+    "restates_domain_name": false,
+    "reason": "The question touches on elements from the paper but primarily rephrases known concepts instead of introducing a distinct, probing inquiry that would require deeper expert insight."
+  },
+  "email-culinary-arts-x-human-committee-formation-paris.md": {
+    "hypothesis_slug": "2026-08-31-culinary-arts-x-human-committee-formation",
+    "question": "Can improving the quality of committee members' expertise lead to better decision-making outcomes, analogous to how fresher ingredients enhance dish quality?",
+    "sharpness": "BORDERLINE",
+    "restates_domain_name": true,
+    "reason": "The question parallels the paper's topic by comparing expertise in committees to ingredients in cooking, but it doesn't delve into any specific mechanism or variable relevant to the paper's insights."
+  },
+  "email-economics-x-human-defense-coordination-li.md": {
+    "hypothesis_slug": "2026-08-29-economics-x-human-defense-coordination",
+    "question": "Can optimizing auction formats for resource allocation yield insights that improve the effectiveness of human defense coordination strategies?",
+    "sharpness": "BORDERLINE",
+    "restates_domain_name": true,
+    "reason": "The question restates aspects of the paper's focus on optimization in auction formats and resource allocation without introducing a novel specific mechanism or variable that would make it stand out as an independent inquiry."
+  },
+  "email-informational-error-probability-x-physical-immune-yoshido.md": {
+    "hypothesis_slug": "2026-08-31-informational-error-probability-x-physical-immune-system",
+    "question": "Can informational error probability function as an indicator of the physical immune system's response effectiveness?",
+    "sharpness": "BORDERLINE",
+    "restates_domain_name": true,
+    "reason": "The question touches on a key aspect of the paper but mainly restates general concepts in a way that lacks specificity regarding the mechanisms or variables discussed in the research."
+  },
+  "email-informational-scientific-experiment-orchestration-conduit.md": {
+    "hypothesis_slug": "2026-08-31-janusian-informational-scientific-experiment-orchestration",
+    "question": "Can both a rigidly structured experimental design and a flexible unstructured experimental design produce reliable and reproducible scientific results for the same experiment?",
+    "sharpness": "BORDERLINE",
+    "restates_domain_name": true,
+    "reason": "The question broadly addresses experimental design but mostly restates known concepts about structure and flexibility in scientific workflows without delving into specific mechanisms or variables discussed in the cited paper."
+  },
+  "email-informational-scientific-experiment-orchestration-draelos.md": {
+    "hypothesis_slug": "2026-08-31-janusian-informational-scientific-experiment-orchestration",
+    "question": "Can both a rigidly structured experimental design and a flexible unstructured experimental design produce reliable and reproducible scientific results for the same neuroscience experiment?",
+    "sharpness": "BORDERLINE",
+    "restates_domain_name": false,
+    "reason": "The question is relevant to the paper's focus on experimental design in neuroscience but closely parallels existing discussions about structured vs. unstructured designs without introducing a specific, novel mechanism or variable."
+  },
+  "email-informational-scientific-experiment-orchestration-gottstein.md": {
+    "hypothesis_slug": "2026-08-31-janusian-informational-scientific-experiment-orchestration",
+    "question": "Can both a rigidly structured experimental design and a flexible unstructured experimental design yield reliable results for the same self-driving laboratory experiment?",
+    "sharpness": "BORDERLINE",
+    "restates_domain_name": false,
+    "reason": "The question touches on experimental design but primarily revolves around the general concepts of structure and flexibility without delving into specific mechanisms or variables that relate directly to the paper's content."
+  },
+  "email-informational-scientific-experiment-orchestration-mayani.md": {
+    "hypothesis_slug": "2026-08-31-janusian-informational-scientific-experiment-orchestration",
+    "question": "Can both a rigidly structured experimental design and a flexible unstructured experimental design produce reliable and reproducible scientific results for the same experiment?",
+    "sharpness": "BORDERLINE",
+    "restates_domain_name": true,
+    "reason": "The question primarily reiterates known concepts of experimental design without delving into specific mechanisms or variables related to the cited paper."
+  },
+  "email-informational-scientific-experiment-orchestration-zhang.md": {
+    "hypothesis_slug": "2026-08-31-janusian-informational-scientific-experiment-orchestration",
+    "question": "Can both a rigidly structured experimental design and a flexible unstructured experimental design yield reliable results for the same experiment?",
+    "sharpness": "BORDERLINE",
+    "restates_domain_name": true,
+    "reason": "The question primarily restates common considerations in experimental design without addressing specific mechanisms or insights related to the paper's content on the interoperability and orchestration of experiments."
+  },
+  "email-informational-signal-jitter-im.md": {
+    "hypothesis_slug": "2026-08-31-janusian-informational-signal-jitter",
+    "question": "Can both degradation and enhancement of information transmission quality due to signal jitter be true simultaneously for the same transmission?",
+    "sharpness": "BORDERLINE",
+    "restates_domain_name": true,
+    "reason": "The question reiterates the topic of signal jitter affecting information transmission without specifying particular mechanisms or contexts within the paper."
+  },
+  "email-linguistics-x-cognitive-concept-drift-li.md": {
+    "hypothesis_slug": "2026-08-30-linguistics-x-cognitive-concept-drift",
+    "question": "Can historical sound change function as a cognitive constraint influencing concept drift in language users?",
+    "sharpness": "BORDERLINE",
+    "restates_domain_name": true,
+    "reason": "The question mainly restates known concepts from the paper regarding cognitive constraints and sound change without introducing a specific mechanism or variable that would require deeper thought or insight."
+  },
+  "email-organizational-theory-x-architecture-tee.md": {
+    "hypothesis_slug": "2026-08-31-organizational-theory-x-architecture",
+    "question": "Can role ambiguity within an organization correlate with a decrease in the structural integrity of modular constructions?",
+    "sharpness": "BORDERLINE",
+    "restates_domain_name": false,
+    "reason": "While the question connects role ambiguity to structural integrity in modular constructions, it mainly restates a potential relationship rather than exploring a specific mechanism or variable that could shed light on this connection."
+  },
+  "email-organizational-theory-x-finance-jobidon.md": {
+    "hypothesis_slug": "2026-08-29-organizational-theory-x-finance",
+    "question": "Can the implementation of self-organizing team principles lead to improved transaction success rates in finance?",
+    "sharpness": "BORDERLINE",
+    "restates_domain_name": true,
+    "reason": "The question relates to self-organizing teams but primarily reiterates known principles without specifying unique mechanisms or aspects from the cited paper in the finance context."
+  },
+  "email-organizational-theory-x-finance-pazos.md": {
+    "hypothesis_slug": "2026-08-29-organizational-theory-x-finance",
+    "question": "Can the implementation of self-organizing principles in finance teams lead to improved transaction success rates and more adaptive portfolio management?",
+    "sharpness": "BORDERLINE",
+    "restates_domain_name": false,
+    "reason": "The question addresses the specific application of self-organizing principles but mainly restates known aspects of team dynamics and performance in finance without introducing an independent mechanism or a novel angle."
+  },
+  "email-pharmacology-copeland.md": {
+    "hypothesis_slug": "2026-08-31-janusian-pharmacology",
+    "question": "Can both the concentration-affinity model and the multi-factor model of drug binding kinetics be true simultaneously for the same drug-receptor interaction?",
+    "sharpness": "BORDERLINE",
+    "restates_domain_name": false,
+    "reason": "The question addresses a specific aspect of drug binding kinetics but leans towards restating the known models without probing deeper into their practical implications or interactions in a way that a researcher would find particularly novel."
+  },
+  "email-physical-quantum-measurement-adami.md": {
+    "hypothesis_slug": "2026-08-28-janusian-physical-quantum-measurement",
+    "question": "Can the act of measurement both fundamentally alter the state of a quantum system and not alter the state simultaneously?",
+    "sharpness": "BORDERLINE",
+    "restates_domain_name": true,
+    "reason": "The question restates the known implications of measurement in quantum mechanics without focusing on specific mechanisms or variables relevant to the cited paper."
+  },
+  "email-physics-condensed-matter-bose-einstein-condensate-fukuyama.md": {
+    "hypothesis_slug": "2026-09-02-physics-condensed-matter-bose-einstein-condensate-coherence-x-cosmology-early-universe-scalar-field-dynamics",
+    "question": "Can the relational rule governing coherence in Bose-Einstein condensates also govern scalar field dynamics during inflationary phases?",
+    "sharpness": "SHARP",
+    "restates_domain_name": false,
+    "reason": "The question specifically links a relational rule of Bose-Einstein condensates to scalar field dynamics in inflation, indicating a deeper understanding of the interactions and mechanisms involved, rather than simply restating general concepts."
+  },
+  "email-thermodynamics-x-physical-elastic-deformation-volchenkov.md": {
+    "hypothesis_slug": "2026-08-30-homospatial-thermodynamics-x-physical-elastic-deformation",
+    "question": "Can thermodynamic principles of entropy and physical elastic deformation be fused to reveal emergent behavior in materials under stress?",
+    "sharpness": "SHARP",
+    "restates_domain_name": false,
+    "reason": "The question specifically connects thermodynamic principles of entropy with elastic deformation, addressing the potential for emergent behavior in materials, which indicates a deep engagement with the paper's themes rather than a generic inquiry."
   }
 }

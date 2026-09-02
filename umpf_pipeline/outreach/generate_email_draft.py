@@ -259,6 +259,65 @@ def _surname(name):
     return re.sub(r"[^a-z0-9]", "", surname_part.lower()) or "unknown"
 
 
+def _first_name_token(name):
+    """Real bug found 2026-09-02, batch of 34: a common surname alone is
+    not enough identity to trust -- 'Qiang Yu' (a real, resolved contact
+    at Rice) and 'Qiwei Yu' (the real paper's actual, different author,
+    now at Princeton) share the surname 'Yu' AND the first letter 'Q'
+    -- an initial-only check (this function's first version) still
+    couldn't tell them apart. Returns (token, is_abbreviated) for
+    whatever comes first in the name (respecting the same 'Last, First'
+    vs 'First Last' order _surname already handles) -- token is the
+    cleaned alpha string, is_abbreviated is True when the raw segment
+    was itself initial-shaped ('A.', 'A.A.') rather than a spelled-out
+    name, detected by an internal '.' BEFORE stripping punctuation --
+    stripping alone can't tell 'A.A.' (still just initials) apart from
+    a genuine short name once both become 2-letter strings, which is
+    exactly the case that broke a length-only version of this check on
+    a real regression (Ausaf A. Farooqui cited as 'A.A. Farooqui')."""
+    name = (name or "").strip()
+    if "," in name:
+        rest = name.split(",", 1)[1].strip()
+    else:
+        parts = name.split()
+        rest = parts[0] if len(parts) > 1 else ""  # single-token name has no separate first name
+    is_abbreviated = "." in rest
+    return re.sub(r"[^a-zA-Z]", "", rest).lower(), is_abbreviated
+
+
+def _first_names_conflict(target, real):
+    """True only when both sides gave a real, spelled-out first name
+    (not a bare initial or initial-shaped abbreviation like 'A.A.') AND
+    they disagree. Citation-style author lists often only carry
+    initials, so demanding a full match there would misfire on real
+    matches -- but when BOTH sides spelled out an actual name, require
+    them to actually agree, not just share a first letter: 'Qiang' and
+    'Qiwei' pass initial-only ('Q' == 'Q') but are two different real
+    people, the case that motivated this whole check.
+
+    KNOWN, ACCEPTED false-positive risk, found and left as-is 2026-09-02:
+    a real academic who publishes under a middle name ('J. Eliot B.
+    Moss', who goes by 'Eliot') has his own actual first-name-position
+    token ('J') disagree with his own real paper's byline ('Eliot') --
+    a retroactive check flagged a genuinely correct, already-shipped
+    draft. Confirmed via direct search this was a false positive, not
+    reverted. Distinguishing 'goes by a different name than the formal
+    first name' robustly is a harder problem than this cheap heuristic
+    is meant to solve -- this check is a real net positive (it caught
+    a genuine homonym collision, Qiang vs Qiwei Yu, that shipped a
+    wrong citation before this fix existed) even though it isn't
+    perfectly precise. Treat any AUTHORSHIP_MISMATCH it produces as a
+    strong prior, not infallible -- worth a quick real check before
+    fully trusting a skip, same as everything else in this pipeline."""
+    (target_token, target_abbr) = target
+    (real_token, real_abbr) = real
+    if not target_token or not real_token:
+        return False
+    if not target_abbr and not real_abbr and len(target_token) > 1 and len(real_token) > 1:
+        return target_token != real_token
+    return target_token[0] != real_token[0]
+
+
 def _short_slug(hypothesis_slug):
     s = re.sub(r"^\d{4}-\d{2}-\d{2}-", "", hypothesis_slug)
     s = re.sub(r"^(homospatial|janusian)-", "", s)
@@ -420,10 +479,27 @@ def write_email_file(candidate, draft):
     # is confirmed and the recipient's surname isn't in it, the match
     # itself is wrong -- skip rather than ship a real citation
     # attributed to the wrong person.
+    #
+    # Surname alone isn't always enough identity, though (same batch,
+    # a second real case): 'Qiang Yu' (the resolved contact) and 'Qiwei
+    # Yu' (the real paper's actual, different author) share the surname
+    # AND the first letter 'Q' -- a real homonym collision even an
+    # initial-only check missed. When a real author entry shares the
+    # recipient's surname but _first_names_conflict says the first
+    # names actually disagree (not just "different initial" -- full
+    # names that don't match), treat it as a mismatch too.
     if verified_authors:
-        real_surnames = {_surname(p) for p in _clean_author_list(verified_authors)}
-        if real_surnames and _surname(candidate["target_name"]) not in real_surnames:
-            return "AUTHORSHIP_MISMATCH"
+        target_surname = _surname(candidate["target_name"])
+        target_first = _first_name_token(candidate["target_name"])
+        real_people = _clean_author_list(verified_authors)
+        real_surnames = {_surname(p) for p in real_people}
+        if real_surnames:
+            surname_hits = [p for p in real_people if _surname(p) == target_surname]
+            first_name_conflict = bool(surname_hits) and all(
+                _first_names_conflict(target_first, _first_name_token(p)) for p in surname_hits
+            )
+            if target_surname not in real_surnames or first_name_conflict:
+                return "AUTHORSHIP_MISMATCH"
 
     authors = verified_authors or candidate["source_match_authors"] or ""
     year = draft["paper_year_verified"] or candidate["source_match_year"] or ""
