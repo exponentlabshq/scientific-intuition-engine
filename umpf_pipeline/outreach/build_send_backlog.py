@@ -31,6 +31,7 @@ EMAILS_DIR = os.path.join(PIPELINE_DIR, "outreach", "emails")
 CONTACTS_PATH = os.path.join(PIPELINE_DIR, "outreach", "contacts.jsonl")
 EXPERIENCE_PATH = os.path.join(PIPELINE_DIR, "experience_data.json")
 SCORES_PATH = os.path.join(PIPELINE_DIR, "outreach", "sharpness_scores.json")
+COHERENCE_PATH = os.path.join(PIPELINE_DIR, "outreach", "coherence_scores.json")
 BACKLOG_PATH = os.path.join(PIPELINE_DIR, "outreach", "send_backlog.json")
 
 CURRENT_YEAR = 2026
@@ -71,6 +72,23 @@ def load_contacts_by_slug():
 def load_sharpness_scores():
     if os.path.exists(SCORES_PATH):
         with open(SCORES_PATH, encoding="utf-8") as f:
+            return json.load(f)
+    return {}
+
+
+def load_coherence_scores():
+    """score_email_coherence.py's own output -- a THIRD, separate axis
+    from sharpness (generic-vs-specific). Surfaced for human review,
+    same as sharpness -- never auto-excludes a draft from the ranked
+    list the way a human FLAGGED status does. The two known real flags
+    as of 2026-09-02 (Asaoka: 'drive' vs the source's own 'correlate
+    with' -- a minor precision nitpick; Schooler: likely a false
+    positive, an older hand-authored draft with human-added narrowing
+    context the checker never saw) were both reviewed and judged not
+    Vajner-level -- this signal needs a human read every time, same as
+    sharpness, not blind trust."""
+    if os.path.exists(COHERENCE_PATH):
+        with open(COHERENCE_PATH, encoding="utf-8") as f:
             return json.load(f)
     return {}
 
@@ -119,6 +137,7 @@ def main():
     by_slug_leaderboard = load_leaderboard()
     by_slug_contacts = load_contacts_by_slug()
     scores = load_sharpness_scores()
+    coherence = load_coherence_scores()
     drafted = load_drafted()
 
     unscored = 0
@@ -143,10 +162,15 @@ def main():
         else:
             sharpness = None
             unscored += 1
+        coherence_entry = coherence.get(d["filename"])
+        coherent = coherence_entry["coherent"] if coherence_entry else None
+        coherence_concern = coherence_entry.get("concern", "") if coherence_entry else ""
         send_priority = points + recency_bonus(year) + SHARPNESS_BONUS.get(sharpness, 0)
         entries.append({
             "send_priority": send_priority,
             "sharpness": sharpness or "NOT SCORED",
+            "coherent": coherent,
+            "coherence_concern": coherence_concern,
             "flagged": d["flagged"],
             "points": points,
             "department": DEPT_NAMES.get(mode, mode),
@@ -165,9 +189,12 @@ def main():
     for e in entries:
         by_dept.setdefault(e["department"], []).append(e)
 
+    needs_coherence_review = sum(1 for e in entries if e["coherent"] is False)
     print(f"{len(entries)} unsent, unflagged drafted email(s) in the backlog. {len(flagged_entries)} flagged "
           f"(excluded from ranking below -- human review overrode the sharpness score). "
-          f"{unscored} not yet sharpness-scored (run score_email_sharpness.py first for a complete ranking).\n")
+          f"{unscored} not yet sharpness-scored. {needs_coherence_review} flagged by the coherence checker for "
+          f"human review (marked ⚠ below -- this is a signal to check, not an auto-exclude; see coherence_concern "
+          f"in send_backlog.json).\n")
 
     if flagged_entries:
         print(f"=== ⚠️ FLAGGED — not send-ready regardless of score ({len(flagged_entries)}) ===")
@@ -178,8 +205,9 @@ def main():
     for dept, rows in sorted(by_dept.items(), key=lambda kv: -max(r["send_priority"] for r in kv[1])):
         print(f"=== {dept} ({len(rows)}) ===")
         for r in rows:
+            mark = " ⚠ coherence" if r["coherent"] is False else ""
             print(f"  [{r['send_priority']:+4d}] ({r['sharpness']:10s} points={r['points']:3d}) "
-                  f"{r['target_name']} <{r['email']}> -- {r['filename']}")
+                  f"{r['target_name']} <{r['email']}> -- {r['filename']}{mark}")
         print()
 
     with open(BACKLOG_PATH, "w", encoding="utf-8") as f:
