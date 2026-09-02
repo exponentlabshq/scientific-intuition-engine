@@ -414,7 +414,7 @@ def build_home():
       <div class="stat-box"><div class="n">{TOTAL_ENTRIES}</div><div class="l">papers on record</div></div>
       <div class="stat-box"><div class="n">{len(DOMAINS)}</div><div class="l">subjects taught (real domain pool)</div></div>
       <div class="stat-box"><div class="n">3</div><div class="l">departments, one per generation mode</div></div>
-      <div class="stat-box"><div class="n">$6.75</div><div class="l">total real tuition spent to date (OpenAI tokens)</div></div>
+      <div class="stat-box"><div class="n">$36.61</div><div class="l">total real tuition spent to date (OpenAI tokens) &mdash; <a href="#cost" style="color:inherit;">receipt below &darr;</a></div></div>
     </div>
 
     <h2 id="story-of-fu" style="margin-top:56px;">The Story of FU</h2>
@@ -435,6 +435,11 @@ def build_home():
     <h2 id="campus" style="margin-top:56px;">Campus</h2>
     <p style="color:var(--text-muted); max-width:680px;">There's no real campus &mdash; but if there were, this is what walking across it would look like. <a href="fu-campus-explore.html">Take the full tour on its own page &rarr;</a></p>
     {campus_tour_stops()}
+
+    <h2 id="cost" style="margin-top:56px;">The Real Cost</h2>
+    <p style="color:var(--text-muted); max-width:680px;">Not an estimate, not a mockup &mdash; the actual OpenAI usage dashboard for the account behind every hypothesis on this site and the real Eureka Engine underneath it. $36.61 in, {TOTAL_ENTRIES} hypotheses out.</p>
+    <img src="fu-real-cost.jpg" alt="OpenAI usage dashboard: $36.61 total spend, Exponent Labs LLC, 37,874,804 total tokens, 14,558 total requests" style="width:100%; max-width:900px; border-radius:14px; border:1px solid var(--border); display:block; margin-top:16px;">
+    <p class="real-thing" style="margin-top:10px;">Real thing: Exponent Labs LLC's own OpenAI billing dashboard, screenshotted directly.</p>
   </div>
   {HOVER_VIDEO_JS}'''
     return wrap("FU: Fake University", body, "home")
@@ -1463,7 +1468,7 @@ def build_investors():
     {expandable_pub_rows(top_overall)}
 
     <div class="stat-row" style="margin-top:32px;">
-      <div class="stat-box"><div class="n">$6.75</div><div class="l">total real spend across {TOTAL_ENTRIES} candidates evaluated</div></div>
+      <div class="stat-box"><div class="n">$36.61</div><div class="l">total real spend across {TOTAL_ENTRIES} candidates evaluated &mdash; <a href="fu-home.html#cost" style="color:inherit;">receipt &rarr;</a></div></div>
       <div class="stat-box"><div class="n">{TOTAL_SCORED}</div><div class="l">candidates actually scored</div></div>
       <div class="stat-box"><div class="n">3</div><div class="l">independent reviewers per adversarial pass</div></div>
     </div>
