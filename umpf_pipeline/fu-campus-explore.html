@@ -238,6 +238,29 @@ h1, h2, h3 { font-family: var(--serif); text-wrap: balance; }
 .ar-contact.found a { color: var(--gold); }
 .ar-contact.partial { background: var(--ink); color: var(--text-muted); }
 .ar-contact.not-found { background: var(--ink); color: var(--text-faint); }
+.email-draft { margin-top: 6px; padding: 9px 12px; border-radius: 6px; font-size: 0.8rem; line-height: 1.55; border-left: 2px solid var(--border); }
+.email-draft.ready { background: rgba(111,168,143,0.08); border-left-color: var(--v-adjacent); }
+.email-draft.flagged { background: rgba(201,165,92,0.08); border-left-color: var(--gold); }
+.ed-badge { font-family: var(--sans); font-size: 0.72rem; letter-spacing: 0.02em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 4px; }
+.email-draft.ready .ed-badge { color: var(--v-adjacent); }
+.email-draft.flagged .ed-badge { color: var(--gold); }
+.ed-subject { font-family: var(--serif); font-style: italic; color: var(--text); margin-bottom: 4px; }
+.ed-question { color: var(--text-muted); }
+.ed-flag-reason { margin-top: 6px; padding-top: 6px; border-top: 1px solid var(--border); color: var(--text-faint); font-size: 0.76rem; }
+
+.corr-dept { margin-top: 36px; }
+.corr-dept h2 { font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--border); padding-bottom: 8px; margin-bottom: 16px; }
+.corr-dept-count { color: var(--text-faint); font-family: var(--sans); font-size: 0.8rem; font-weight: 400; }
+.corr-entry { border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; margin-bottom: 12px; background: var(--surface); }
+.corr-entry.ready { border-left: 3px solid var(--v-adjacent); }
+.corr-entry.flagged { border-left: 3px solid var(--gold); }
+.corr-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.corr-who { font-family: var(--sans); font-size: 0.9rem; color: var(--text); }
+.corr-badge { font-family: var(--sans); font-size: 0.72rem; letter-spacing: 0.02em; text-transform: uppercase; color: var(--text-faint); white-space: nowrap; }
+.corr-entry.ready .corr-badge { color: var(--v-adjacent); }
+.corr-entry.flagged .corr-badge { color: var(--gold); }
+.corr-pairing { font-family: var(--mono); font-size: 0.72rem; color: var(--text-faint); margin: 4px 0 8px; }
+.corr-flag-reason { margin-top: 8px; padding-top: 8px; border-top: 1px solid var(--border); color: var(--text-faint); font-size: 0.78rem; }
 
 .course-item { border: 1px solid var(--border); border-radius: 8px; margin-bottom: 6px; background: var(--ink); }
 .course-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 9px 12px; cursor: pointer; font-size: 0.86rem; }
@@ -295,6 +318,7 @@ figure.charter-fig figcaption { color: var(--text-faint); font-size: 0.8rem; mar
       <a href="fu-people.html">About &amp; Org Chart</a>
       <a href="fu-course-catalog.html">Course Catalog</a>
       <a href="fu-leaderboard.html">Leaderboard</a>
+      <a href="fu-correspondence.html">Correspondence</a>
       <a href="fu-investors.html">For Investors &amp; Grant Officers</a>
     </div>
   </div>

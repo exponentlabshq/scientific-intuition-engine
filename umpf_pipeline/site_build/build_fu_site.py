@@ -109,12 +109,92 @@ def load_contacts():
     return by_slug_authors
 
 
+def load_outreach_emails():
+    """Real, drafted outreach emails (generate_email_draft.py, COA 8b,
+    outreach/emails/*.md) -- parsed and keyed on (hypothesis_slug,
+    recipient email), the one identifier every draft and its underlying
+    contacts.jsonl record both carry, so a draft can be looked up right
+    where contact_html() already resolves a real person for a specific
+    active_research_match. Never invents anything not literally present
+    in the drafted file -- an unparseable field is left empty, not
+    guessed. A missing outreach/emails/ directory renders every
+    hypothesis exactly as before, no email-draft block, not a build
+    failure."""
+    path = os.path.join(PIPELINE_DIR, "outreach", "emails")
+    by_slug_email = {}
+    if not os.path.isdir(path):
+        return by_slug_email
+    for fname in sorted(os.listdir(path)):
+        if not fname.endswith(".md") or fname == "README.md":
+            continue
+        fpath = os.path.join(path, fname)
+        try:
+            text = open(fpath, encoding="utf-8").read()
+        except OSError:
+            continue
+        slug_m = re.search(r"\*\*Hypothesis:\*\*\s*`([^`]+)`", text)
+        to_m = re.search(r"\*\*To:\*\*\s*(.+?)\s*\\<([^\\>]+)\\>", text)
+        status_m = re.search(r"\*\*Status:\*\*\s*(.+)", text)
+        subject_m = re.search(r"\*\*Subject:\*\*\s*(.+)", text)
+        question_m = re.search(r"\*\*([A-Z][^*]*?\?)\*\*", text)
+        cite_m = re.search(r"\*\*Match source:\*\*\s*(.+)", text)
+        flag_m = re.search(r"\*\*Flag(?:ged)?:?\*\*\s*(.+)", text)
+        if not (slug_m and to_m):
+            continue
+        status_text = (status_m.group(1).strip() if status_m else "")
+        if re.match(r"^SENT\b", status_text):
+            state = "sent"
+        elif "FLAGGED" in status_text:
+            state = "flagged"
+        else:
+            state = "ready"
+        rec = {
+            "filename": fname,
+            "hypothesis_slug": slug_m.group(1),
+            "target_name": to_m.group(1).strip(),
+            "email": to_m.group(2).strip(),
+            "subject": subject_m.group(1).strip() if subject_m else "",
+            "question": question_m.group(1).strip() if question_m else "",
+            "citation": cite_m.group(1).strip() if cite_m else "",
+            "state": state,
+            "flag_reason": flag_m.group(1).strip() if (flag_m and state == "flagged") else "",
+        }
+        by_slug_email[(rec["hypothesis_slug"], rec["email"].strip().lower())] = rec
+    return by_slug_email
+
+
+def load_contacts_by_slug_email():
+    """Same real outreach/contacts.jsonl read as load_contacts(), keyed
+    instead on (hypothesis_slug, email) -- the one identifier
+    load_outreach_emails() also carries, so the Correspondence page can
+    show a drafted email's institution/role without re-deriving the
+    original (hypothesis_slug, authors-string) match key it doesn't
+    have at that point."""
+    path = os.path.join(PIPELINE_DIR, "outreach", "contacts.jsonl")
+    by_slug_email = {}
+    if os.path.exists(path):
+        with open(path, encoding="utf-8") as f:
+            for line in f:
+                line = line.strip()
+                if not line:
+                    continue
+                rec = json.loads(line)
+                if not rec.get("email"):
+                    continue
+                key = (rec.get("hypothesis_slug"), rec["email"].strip().lower())
+                by_slug_email[key] = rec
+    return by_slug_email
+
+
 ROWS = load_leaderboard_rows()
 DEPT_PERF = load_dept_performance()
 DOMAINS = load_domains()
 TOTAL_ENTRIES, TOTAL_SCORED = load_totals()
 EXP, EXP_BY_PAIRING, EXP_BY_DOMAIN_HEAD = load_experience_data()
+EXP_BY_KEY = {e.get("key"): e for e in EXP if e.get("key")}
 CONTACTS_BY_SLUG_AUTHORS = load_contacts()
+CONTACTS_BY_SLUG_EMAIL = load_contacts_by_slug_email()
+EMAIL_DRAFTS_BY_SLUG_EMAIL = load_outreach_emails()
 
 MODE_META = {
     "janusian": {
@@ -369,6 +449,7 @@ def nav(active):
       {link("fu-people.html", "About &amp; Org Chart", "people")}
       {link("fu-course-catalog.html", "Course Catalog", "catalog")}
       {link("fu-leaderboard.html", "Leaderboard", "leaderboard")}
+      {link("fu-correspondence.html", "Correspondence", "correspondence")}
       {link("fu-investors.html", "For Investors &amp; Grant Officers", "investors")}
     </div>
   </div>
@@ -956,6 +1037,29 @@ ROW_CSS = '''
 .ar-contact.found a { color: var(--gold); }
 .ar-contact.partial { background: var(--ink); color: var(--text-muted); }
 .ar-contact.not-found { background: var(--ink); color: var(--text-faint); }
+.email-draft { margin-top: 6px; padding: 9px 12px; border-radius: 6px; font-size: 0.8rem; line-height: 1.55; border-left: 2px solid var(--border); }
+.email-draft.ready { background: rgba(111,168,143,0.08); border-left-color: var(--v-adjacent); }
+.email-draft.flagged { background: rgba(201,165,92,0.08); border-left-color: var(--gold); }
+.ed-badge { font-family: var(--sans); font-size: 0.72rem; letter-spacing: 0.02em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 4px; }
+.email-draft.ready .ed-badge { color: var(--v-adjacent); }
+.email-draft.flagged .ed-badge { color: var(--gold); }
+.ed-subject { font-family: var(--serif); font-style: italic; color: var(--text); margin-bottom: 4px; }
+.ed-question { color: var(--text-muted); }
+.ed-flag-reason { margin-top: 6px; padding-top: 6px; border-top: 1px solid var(--border); color: var(--text-faint); font-size: 0.76rem; }
+
+.corr-dept { margin-top: 36px; }
+.corr-dept h2 { font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--border); padding-bottom: 8px; margin-bottom: 16px; }
+.corr-dept-count { color: var(--text-faint); font-family: var(--sans); font-size: 0.8rem; font-weight: 400; }
+.corr-entry { border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; margin-bottom: 12px; background: var(--surface); }
+.corr-entry.ready { border-left: 3px solid var(--v-adjacent); }
+.corr-entry.flagged { border-left: 3px solid var(--gold); }
+.corr-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.corr-who { font-family: var(--sans); font-size: 0.9rem; color: var(--text); }
+.corr-badge { font-family: var(--sans); font-size: 0.72rem; letter-spacing: 0.02em; text-transform: uppercase; color: var(--text-faint); white-space: nowrap; }
+.corr-entry.ready .corr-badge { color: var(--v-adjacent); }
+.corr-entry.flagged .corr-badge { color: var(--gold); }
+.corr-pairing { font-family: var(--mono); font-size: 0.72rem; color: var(--text-faint); margin: 4px 0 8px; }
+.corr-flag-reason { margin-top: 8px; padding-top: 8px; border-top: 1px solid var(--border); color: var(--text-faint); font-size: 0.78rem; }
 
 .course-item { border: 1px solid var(--border); border-radius: 8px; margin-bottom: 6px; background: var(--ink); }
 .course-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 9px 12px; cursor: pointer; font-size: 0.86rem; }
@@ -1087,6 +1191,29 @@ def contact_html(contact):
         return f'<div class="ar-contact not-found">No public contact found for {who or "this author"}.</div>'
 
 
+def email_draft_html(draft):
+    """One real, drafted outreach email -- shown inline right after its
+    matching contact_html() block, same 'appears everywhere the
+    hypothesis does' principle. Two real states: a ready draft (the
+    actual subject + question, sendable as-is) and a flagged one (same
+    content, plus the real reason a human review held it back -- never
+    hidden, since a flag is itself real information about this
+    pipeline's own discipline, not something to smooth over)."""
+    subj = re.sub("<", "&lt;", draft.get("subject") or "")
+    q = re.sub("<", "&lt;", draft.get("question") or "")
+    cls = "flagged" if draft["state"] == "flagged" else "ready"
+    badge = "&#9888;&#65039; Flagged for review" if cls == "flagged" else "&#9993;&#65039; Outreach draft ready"
+    html = f'<div class="email-draft {cls}"><div class="ed-badge">{badge}</div>'
+    if subj:
+        html += f'<div class="ed-subject">&ldquo;{subj}&rdquo;</div>'
+    if q:
+        html += f'<div class="ed-question">{q}</div>'
+    if cls == "flagged" and draft.get("flag_reason"):
+        html += f'<div class="ed-flag-reason">{re.sub("<", "&lt;", draft["flag_reason"])}</div>'
+    html += "</div>"
+    return html
+
+
 def exp_row_html(e, rank=None, researcher=None, compact=False):
     """One real, click-expandable publication row -- exact same content
     the original interactive leaderboard showed (domains, badges, score
@@ -1130,6 +1257,10 @@ def exp_row_html(e, rank=None, researcher=None, compact=False):
             contact = CONTACTS_BY_SLUG_AUTHORS.get((e.get("key"), raw_authors.strip().lower()))
             if contact:
                 body += contact_html(contact)
+                if contact.get("email"):
+                    draft = EMAIL_DRAFTS_BY_SLUG_EMAIL.get((e.get("key"), contact["email"].strip().lower()))
+                    if draft:
+                        body += email_draft_html(draft)
             body += "</li>"
         body += "</ul></div>"
 
@@ -1554,6 +1685,88 @@ def build_investors():
   </div>
   {ROW_TOGGLE_JS}'''
     return wrap("For Investors & Grant Officers — FU", body, "investors")
+
+
+# ---------------------------------------------------------------------------
+# fu-correspondence.html -- every real, drafted outreach email FU has sent
+# toward, organized by department then by researcher. The actual artifact
+# this whole engine exists to produce: not a resolved contact, a specific,
+# sourced question addressed to a specific person. Same NOT SENT discipline
+# as outreach/README.md itself -- every entry here is a draft, disclosed as
+# such, never claimed as an actual sent correspondence unless its own
+# Status line says SENT.
+# ---------------------------------------------------------------------------
+
+def correspondence_entry_html(draft, institution, exp_entry):
+    subj = re.sub("<", "&lt;", draft.get("subject") or "")
+    q = re.sub("<", "&lt;", draft.get("question") or "")
+    name = re.sub("<", "&lt;", draft.get("target_name") or "")
+    inst = re.sub("<", "&lt;", institution or "")
+    pairing = " &times; ".join(exp_entry.get("domains") or []) if exp_entry else ""
+    cls = "flagged" if draft["state"] == "flagged" else "ready"
+    badge = "&#9888;&#65039; Flagged for review" if cls == "flagged" else "&#9993;&#65039; Ready"
+    flag_html = ""
+    if cls == "flagged" and draft.get("flag_reason"):
+        flag_html = f'<div class="corr-flag-reason">{re.sub("<", "&lt;", draft["flag_reason"])}</div>'
+    return f'''<div class="corr-entry {cls}">
+    <div class="corr-head">
+      <div class="corr-who"><strong>{name}</strong>{f" &middot; {inst}" if inst else ""}</div>
+      <span class="corr-badge">{badge}</span>
+    </div>
+    {f'<div class="corr-pairing">{pairing}</div>' if pairing else ""}
+    <div class="ed-subject">&ldquo;{subj}&rdquo;</div>
+    <div class="ed-question">{q}</div>
+    {flag_html}
+  </div>'''
+
+
+def build_correspondence():
+    all_drafts = list(EMAIL_DRAFTS_BY_SLUG_EMAIL.values())
+    unsent = [d for d in all_drafts if d["state"] != "sent"]
+    ready = [d for d in unsent if d["state"] == "ready"]
+    flagged = [d for d in unsent if d["state"] == "flagged"]
+    sent = [d for d in all_drafts if d["state"] == "sent"]
+
+    by_dept = {}
+    for d in unsent:
+        e = EXP_BY_KEY.get(d["hypothesis_slug"])
+        mode = (e.get("mode") if e else None) or "calibration"
+        contact = CONTACTS_BY_SLUG_EMAIL.get((d["hypothesis_slug"], d["email"]))
+        institution = contact.get("institution") if contact else ""
+        pts = (e.get("points") if e else 0) or 0
+        by_dept.setdefault(mode, []).append((pts, d, institution, e))
+    for mode in by_dept:
+        by_dept[mode].sort(key=lambda t: (t[1]["state"] == "flagged", -t[0]))
+
+    dept_sections = ""
+    for mode_key in ["janusian", "bisociation", "homospatial"]:
+        rows = by_dept.get(mode_key, [])
+        if not rows:
+            continue
+        meta = MODE_META[mode_key]
+        entries_html = "".join(correspondence_entry_html(d, inst, e) for _, d, inst, e in rows)
+        dept_sections += f'''<div class="corr-dept">
+      <h2>{meta['name']} <span class="corr-dept-count">({len(rows)})</span></h2>
+      {entries_html}
+    </div>'''
+
+    body = f'''<div class="page wide" style="padding-top:40px;">
+    <span class="kicker">Office of External Affairs</span>
+    <h1>Correspondence</h1>
+    <p style="color:var(--text-muted); max-width:700px; font-size:1.05rem;">Every hypothesis on this site that a real, independent researcher's own published work already appears to be circling gets one thing: a short, specific, sourced question addressed directly to them &mdash; not a form letter, not a pitch about FU itself. What follows is every one of those drafts, organized by department, then by name. <b style="color:var(--text);">Nothing here has been sent.</b> Same discipline as everywhere else on this site: a draft stays a draft, disclosed as such, until a human sends it.</p>
+
+    <div class="stat-row" style="margin: 28px 0;">
+      <div class="stat-box"><div class="n">{len(unsent)}</div><div class="l">drafted, unsent</div></div>
+      <div class="stat-box"><div class="n">{len(ready)}</div><div class="l">ready to send</div></div>
+      <div class="stat-box"><div class="n">{len(flagged)}</div><div class="l">flagged for a wording pass</div></div>
+      <div class="stat-box"><div class="n">{len(sent)}</div><div class="l">actually sent</div></div>
+    </div>
+
+    {dept_sections}
+
+    <p style="margin-top:32px; color:var(--text-muted); max-width:700px;">Every contact here was resolved the same way every other real fact on this site was &mdash; found written on a real, public page, never guessed or pattern-matched from a name and an institution. See <a href="whitepaper.html">the Charter</a> for the full discipline this runs on.</p>
+  </div>'''
+    return wrap("Correspondence — FU", body, "correspondence")
 
 
 # ---------------------------------------------------------------------------
@@ -2122,6 +2335,7 @@ def main():
         "fu-leaderboard.html": build_leaderboard(),
         "whitepaper.html": build_whitepaper(),
         "fu-investors.html": build_investors(),
+        "fu-correspondence.html": build_correspondence(),
         "fu-faculty.html": build_faculty_index(),
         "fu-campus-explore.html": build_campus_explore(),
     }

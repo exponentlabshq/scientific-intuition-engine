@@ -1,0 +1,2137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Correspondence — FU</title>
+<script>
+(function() {
+  try {
+    if (sessionStorage.getItem('fu_unlocked') !== '1') { location.replace('fu-password.html'); }
+  } catch (e) {}
+})();
+</script>
+<style>
+:root {
+  --ink: #150e0f; --paper: #1d1214; --surface: #241519; --border: #3d1e22;
+  --text: #f2ead9; --text-muted: #b8a58f; --text-faint: #7a6a5c;
+  --crimson: #c0475a; --crimson-deep: #7a2530; --gold: #c9a55c;
+  --v-adjacent: #6fa88f; --v-refuted: #b56b6b;
+  --serif: ui-serif, Georgia, 'Iowan Old Style', 'Times New Roman', serif;
+  --sans: -apple-system, BlinkMacSystemFont, 'Inter', ui-sans-serif, 'Segoe UI', sans-serif;
+  --mono: ui-monospace, 'SF Mono', Menlo, monospace;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--ink); color: var(--text); font-family: var(--sans);
+  font-size: 16.5px; line-height: 1.7; margin: 0; padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--crimson); }
+.page { max-width: 1040px; margin: 0 auto; padding: 0 24px 100px; }
+
+.hero-section { position: relative; min-height: 68vh; display: flex; align-items: center; overflow: hidden; }
+.hero-bg-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
+.hero-overlay { position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, rgba(21,14,15,0.5) 0%, rgba(21,14,15,0.7) 60%, var(--ink) 100%); }
+.hero-content { position: relative; z-index: 2; padding: 40px 24px; }
+.hero-unmute {
+  position: absolute; z-index: 3; bottom: 20px; right: 20px;
+  background: rgba(21,14,15,0.7); border: 1px solid var(--border); color: var(--text);
+  font-family: var(--mono); font-size: 0.76rem; padding: 8px 14px; border-radius: 100px; cursor: pointer;
+}
+@media (max-width: 640px) { .hero-section { min-height: 78vh; } }
+.wide { max-width: 1240px; }
+
+/* -- FU-specific nav: unobtrusive by default, every title still a real
+   link. Low-contrast translucent bar over the page rather than a solid
+   toolbar; gains a touch of solidity on hover/focus so a reader can
+   still tell it's there without it competing with hero imagery. -- */
+.fu-nav {
+  position: sticky; top: 0; z-index: 200;
+  background: rgba(21,14,15,0.35); backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(58,30,34,0.4);
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+.fu-nav:hover, .fu-nav:focus-within {
+  background: rgba(21,14,15,0.85); border-bottom-color: var(--border);
+}
+.fu-nav-inner {
+  max-width: 1240px; margin: 0 auto; padding: 9px 24px;
+  display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap;
+}
+.fu-nav-brand { display: flex; align-items: center; gap: 8px; text-decoration: none; opacity: 0.92; }
+.fu-nav-brand img { width: 22px; height: 22px; border-radius: 50%; display: block; }
+.fu-nav-brand span { font-family: var(--serif); font-size: 0.92rem; color: var(--gold); font-weight: 600; letter-spacing: 0.01em; }
+.fu-nav-links { display: flex; gap: 18px; flex-wrap: wrap; }
+.fu-nav-links a { font-family: var(--sans); font-size: 0.8rem; color: var(--text-faint); text-decoration: none; transition: color 0.15s; }
+.fu-nav-links a:hover, .fu-nav-links a.is-active { color: var(--gold); }
+.fu-nav-links a.is-active { border-bottom: 1px solid var(--gold); padding-bottom: 2px; }
+.fu-nav-outbound { font-family: var(--sans); font-size: 0.78rem; color: var(--text-faint); text-decoration: none; white-space: nowrap; opacity: 0.8; }
+.fu-nav-outbound:hover { color: var(--gold); opacity: 1; }
+
+.fu-disclosure {
+  background: transparent; border-bottom: 1px solid rgba(58,30,34,0.3);
+  font-family: var(--mono); font-size: 0.7rem; color: var(--text-faint);
+  text-align: center; padding: 5px 16px; opacity: 0.85;
+}
+.fu-disclosure strong { color: var(--text-muted); }
+
+footer.fu-colophon {
+  margin-top: 64px; padding-top: 22px; border-top: 1px solid var(--border);
+  color: var(--text-faint); font-size: 0.82rem; font-family: var(--mono);
+  max-width: 1240px; margin-left: auto; margin-right: auto; padding-left: 24px; padding-right: 24px; padding-bottom: 40px;
+}
+footer.fu-colophon a { color: var(--gold); }
+
+h1, h2, h3 { font-family: var(--serif); text-wrap: balance; }
+.kicker { font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.12em; color: var(--gold); font-size: 0.76rem; }
+
+.real-thing {
+  font-family: var(--mono); font-size: 0.74rem; color: var(--text-faint);
+  margin-top: 6px; line-height: 1.5;
+}
+.real-thing b { color: var(--v-adjacent); font-weight: 600; }
+.real-thing code { background: var(--ink); padding: 1px 5px; border-radius: 3px; color: var(--text-muted); }
+
+.stat-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px,1fr)); gap: 14px; margin: 24px 0; }
+.stat-box { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 16px 18px; }
+.stat-box .n { font-family: var(--serif); font-size: 1.7rem; font-weight: 600; color: var(--gold); }
+.stat-box .l { font-family: var(--sans); font-size: 0.82rem; color: var(--text-muted); margin-top: 4px; }
+
+.pub-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; margin: 18px 0; }
+.pub-table th, .pub-table td { padding: 10px 12px; text-align: left; border-bottom: 1px solid var(--border); vertical-align: top; }
+.pub-table th { font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.04em; font-size: 0.72rem; color: var(--gold); }
+.pub-table td.pts { font-family: var(--mono); font-variant-numeric: tabular-nums; color: var(--gold); font-weight: 600; }
+.pub-table td.tier { white-space: nowrap; }
+.pub-table tr:last-child td { border-bottom: none; }
+.pub-badge { display: inline-block; font-size: 0.72rem; font-family: var(--mono); color: var(--v-adjacent); background: rgba(111,168,143,0.12); padding: 2px 8px; border-radius: 100px; }
+
+.card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 28px 0; }
+.dept-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; text-decoration: none; color: var(--text); display: block; transition: border-color 0.15s; }
+.dept-card:hover { border-color: var(--crimson); }
+.dept-card .hover-media { aspect-ratio: 16/10; }
+.dept-card .body { padding: 18px 20px; }
+.dept-card h3 { margin: 0 0 6px; font-size: 1.15rem; color: var(--gold); }
+.dept-card p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.dept-card .stats { margin-top: 12px; font-family: var(--mono); font-size: 0.78rem; color: var(--text-faint); }
+
+/* Hover-to-video media: an img and a video occupy the exact same box
+   (position:absolute, inset:0, identical object-fit) so swapping which
+   one is visible never changes the element's footprint. The video's
+   src is lazy-assigned from data-src on first hover (never fetched on
+   page load -- a grid can hold 18 of these) and released back to just
+   the poster frame on mouseleave. */
+.hover-media { position: relative; width: 100%; overflow: hidden; }
+.hover-media img, .hover-media video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+.hover-media img { transition: opacity 0.2s ease; }
+.hover-media video { opacity: 0; }
+.hover-media.is-playing img { opacity: 0; }
+.hover-media.is-playing video { opacity: 1; }
+
+.faculty-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 18px; margin: 24px 0; }
+.faculty-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; text-decoration: none; color: var(--text); display: block; transition: border-color 0.15s, transform 0.15s; }
+.faculty-card:hover { border-color: var(--crimson); transform: translateY(-2px); }
+.faculty-card .hover-media { aspect-ratio: 4/3; }
+.faculty-card .body { padding: 14px 16px; }
+.faculty-card .name { font-family: var(--serif); font-size: 1rem; font-weight: 600; color: var(--text); margin: 0 0 2px; }
+.faculty-card .title { font-family: var(--sans); font-size: 0.78rem; color: var(--gold); margin: 0 0 6px; }
+.faculty-card .spec { font-family: var(--mono); font-size: 0.7rem; color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.03em; }
+.faculty-card .n { font-family: var(--mono); font-size: 0.74rem; color: var(--v-adjacent); margin-top: 6px; }
+
+.faculty-filter { display: flex; gap: 10px; flex-wrap: wrap; margin: 20px 0 8px; }
+.faculty-filter button {
+  font-family: var(--mono); font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.05em;
+  padding: 7px 14px; border-radius: 100px; border: 1px solid var(--border); background: transparent;
+  color: var(--text-muted); cursor: pointer; transition: all 0.15s;
+}
+.faculty-filter button:hover { border-color: var(--crimson); color: var(--text); }
+.faculty-filter button.active { background: var(--crimson-deep); border-color: var(--crimson-deep); color: var(--text); }
+
+.feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 24px 0; }
+.feature-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; }
+.feature-card img { width: 100%; aspect-ratio: 16/10; object-fit: cover; display: block; }
+.feature-card .body { padding: 18px 20px; }
+.feature-card h3 { margin: 0 0 8px; font-size: 1.1rem; color: var(--gold); font-family: var(--serif); }
+.feature-card p { margin: 0; color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; }
+
+.tab-toggle { display: flex; gap: 8px; margin: 24px 0 8px; border-bottom: 1px solid var(--border); }
+.tab-toggle button {
+  font-family: var(--mono); font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.05em;
+  padding: 10px 18px; border: none; background: transparent; color: var(--text-faint);
+  cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -1px;
+}
+.tab-toggle button.active { color: var(--gold); border-bottom-color: var(--crimson); }
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+
+.faculty-hero { display: grid; grid-template-columns: 260px 1fr; gap: 28px; align-items: start; margin: 24px 0; }
+.faculty-hero img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 12px; border: 1px solid var(--border); display: block; }
+@media (max-width: 640px) { .faculty-hero { grid-template-columns: 1fr; } }
+.roster-list { margin: 12px 0; padding: 0; list-style: none; }
+.roster-list li { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px dashed var(--border); font-size: 0.9rem; }
+.roster-list li:last-child { border-bottom: none; }
+.roster-list .deg { font-family: var(--mono); font-size: 0.72rem; color: var(--text-faint); }
+
+.tour-stop { margin: 0 0 64px; }
+.tour-stop .tour-imgs { display: grid; grid-template-columns: 1fr; gap: 10px; }
+.tour-stop .tour-imgs.pair { grid-template-columns: 1fr 1fr; }
+@media (max-width: 720px) { .tour-stop .tour-imgs.pair { grid-template-columns: 1fr; } }
+.tour-stop img { width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 14px; border: 1px solid var(--border); display: block; }
+.tour-stop .tour-caption { max-width: 680px; margin-top: 18px; }
+.tour-stop .tour-caption h2 { margin: 0 0 8px; }
+.tour-stop .tour-caption p { color: var(--text-muted); margin: 0 0 6px; }
+.tour-video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 24px 0; }
+.tour-video-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; }
+.tour-video-card video { width: 100%; aspect-ratio: 16/9; display: block; background: #000; }
+.tour-video-card .body { padding: 16px 18px; }
+.tour-video-card h3 { margin: 0 0 6px; font-size: 1rem; color: var(--gold); font-family: var(--serif); }
+.tour-video-card p { margin: 0; color: var(--text-muted); font-size: 0.86rem; line-height: 1.55; }
+.seal-row { display: flex; gap: 16px; flex-wrap: wrap; }
+.seal-row figure { flex: 1; min-width: 200px; margin: 0; text-align: center; }
+.seal-row img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; border: 1px solid var(--border); }
+.seal-row figcaption { font-family: var(--mono); font-size: 0.76rem; color: var(--text-faint); margin-top: 8px; }
+
+
+.row { border: 1px solid var(--border); border-radius: 10px; margin-bottom: 8px; background: var(--surface); overflow: hidden; }
+.row-head { display: flex; align-items: center; gap: 12px; padding: 13px 16px; cursor: pointer; user-select: none; }
+.row-head:hover { background: var(--ink); }
+.row-head .rank { font-family: var(--mono); color: var(--text-faint); font-size: 0.78rem; width: 24px; flex-shrink: 0; text-align: right; }
+.row-head .pairing { flex: 1; min-width: 0; font-weight: 600; font-size: 0.9rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.row-head .researcher { font-family: var(--mono); font-size: 0.72rem; color: var(--text-faint); flex-shrink: 0; }
+.row-head .r-points { font-family: var(--mono); font-variant-numeric: tabular-nums; font-weight: 600; font-size: 0.9rem; width: 46px; text-align: right; flex-shrink: 0; }
+.row-head .r-points.pos { color: var(--v-adjacent); }
+.row-head .r-points.neg { color: var(--v-refuted); }
+.row-head .r-points.zero { color: var(--text-faint); }
+.row-head .caret { color: var(--text-faint); transition: transform 0.15s ease; flex-shrink: 0; font-size: 0.7rem; }
+.row.open .caret { transform: rotate(90deg); }
+.row-body { display: none; padding: 4px 18px 20px; border-top: 1px solid var(--border); }
+.row.open .row-body { display: block; }
+.row-body h4 { font-family: var(--serif); font-size: 0.9rem; color: var(--gold); margin: 16px 0 6px; font-weight: 600; }
+.row-body .domains-line { color: var(--text-muted); font-size: 0.84rem; margin-top: 12px; }
+.row-badge-list { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.row-badge { font-size: 0.7rem; font-family: var(--mono); color: var(--text-muted); border: 1px solid var(--border); padding: 2px 8px; border-radius: 100px; }
+.md-block { font-size: 0.86rem; color: var(--text); line-height: 1.65; }
+.md-block h1, .md-block h2 { font-family: var(--serif); font-size: 0.98rem; color: var(--text); margin: 12px 0 6px; }
+.md-block h1:first-child, .md-block h2:first-child { margin-top: 0; }
+.md-block strong { color: var(--gold); font-weight: 600; }
+.md-block ul { margin: 6px 0; padding-left: 20px; }
+.md-block li { margin: 3px 0; }
+.md-block p { margin: 8px 0; }
+.md-block table { border-collapse: collapse; width: 100%; margin: 10px 0; font-size: 0.82rem; }
+.md-block th, .md-block td { border: 1px solid var(--border); padding: 6px 8px; text-align: left; vertical-align: top; }
+.md-block th { background: var(--ink); font-weight: 600; }
+.md-block hr { border: none; border-top: 1px solid var(--border); margin: 14px 0; }
+.md-block code { font-family: var(--mono); font-size: 0.85em; background: var(--ink); padding: 1px 5px; border-radius: 4px; }
+.breakdown-list { list-style: none; padding: 0; margin: 6px 0; }
+.breakdown-list li { font-family: var(--mono); font-size: 0.8rem; color: var(--text-muted); padding: 3px 0; }
+.active-research-block { background: var(--ink); border: 1px solid var(--gold); border-radius: 8px; padding: 12px 14px; margin: 8px 0 14px; }
+.ar-note { font-size: 0.84rem; color: var(--text); margin: 0 0 8px; line-height: 1.6; }
+.ar-matches { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+.ar-matches li { font-size: 0.84rem; }
+.ar-matches a { color: var(--gold); text-decoration: none; border-bottom: 1px dotted var(--gold); font-weight: 600; }
+.ar-matches a:hover { border-bottom-style: solid; }
+.ar-authors { color: var(--text-muted); }
+.ar-explanation { color: var(--text-faint); font-size: 0.8rem; margin-top: 3px; line-height: 1.5; }
+.ar-contact { margin-top: 6px; padding: 7px 10px; border-radius: 6px; font-size: 0.78rem; line-height: 1.5; border-left: 2px solid var(--border); }
+.ar-contact.found { background: rgba(111,168,143,0.1); border-left-color: var(--v-adjacent); color: var(--text); }
+.ar-contact.found a { color: var(--gold); }
+.ar-contact.partial { background: var(--ink); color: var(--text-muted); }
+.ar-contact.not-found { background: var(--ink); color: var(--text-faint); }
+.email-draft { margin-top: 6px; padding: 9px 12px; border-radius: 6px; font-size: 0.8rem; line-height: 1.55; border-left: 2px solid var(--border); }
+.email-draft.ready { background: rgba(111,168,143,0.08); border-left-color: var(--v-adjacent); }
+.email-draft.flagged { background: rgba(201,165,92,0.08); border-left-color: var(--gold); }
+.ed-badge { font-family: var(--sans); font-size: 0.72rem; letter-spacing: 0.02em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 4px; }
+.email-draft.ready .ed-badge { color: var(--v-adjacent); }
+.email-draft.flagged .ed-badge { color: var(--gold); }
+.ed-subject { font-family: var(--serif); font-style: italic; color: var(--text); margin-bottom: 4px; }
+.ed-question { color: var(--text-muted); }
+.ed-flag-reason { margin-top: 6px; padding-top: 6px; border-top: 1px solid var(--border); color: var(--text-faint); font-size: 0.76rem; }
+
+.corr-dept { margin-top: 36px; }
+.corr-dept h2 { font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--border); padding-bottom: 8px; margin-bottom: 16px; }
+.corr-dept-count { color: var(--text-faint); font-family: var(--sans); font-size: 0.8rem; font-weight: 400; }
+.corr-entry { border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; margin-bottom: 12px; background: var(--surface); }
+.corr-entry.ready { border-left: 3px solid var(--v-adjacent); }
+.corr-entry.flagged { border-left: 3px solid var(--gold); }
+.corr-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.corr-who { font-family: var(--sans); font-size: 0.9rem; color: var(--text); }
+.corr-badge { font-family: var(--sans); font-size: 0.72rem; letter-spacing: 0.02em; text-transform: uppercase; color: var(--text-faint); white-space: nowrap; }
+.corr-entry.ready .corr-badge { color: var(--v-adjacent); }
+.corr-entry.flagged .corr-badge { color: var(--gold); }
+.corr-pairing { font-family: var(--mono); font-size: 0.72rem; color: var(--text-faint); margin: 4px 0 8px; }
+.corr-flag-reason { margin-top: 8px; padding-top: 8px; border-top: 1px solid var(--border); color: var(--text-faint); font-size: 0.78rem; }
+
+.course-item { border: 1px solid var(--border); border-radius: 8px; margin-bottom: 6px; background: var(--ink); }
+.course-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 9px 12px; cursor: pointer; font-size: 0.86rem; }
+.course-head:hover { background: var(--surface); }
+.course-head .cname { flex: 1; color: var(--text); }
+.course-head .ccount { font-family: var(--mono); font-size: 0.72rem; color: var(--text-faint); flex-shrink: 0; }
+.course-head .caret { color: var(--text-faint); transition: transform 0.15s; flex-shrink: 0; font-size: 0.7rem; }
+.course-item.open > .course-head .caret { transform: rotate(90deg); }
+.course-body { display: none; padding: 4px 12px 12px; }
+.course-item.open > .course-body { display: block; }
+
+.lb-toolbar { margin: 20px 0 4px; }
+.lb-search { width: 100%; max-width: 420px; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; color: var(--text); font-family: var(--sans); font-size: 0.9rem; padding: 10px 14px; }
+.lb-search:focus { outline: none; border-color: var(--gold); }
+.lb-filter-label { font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-faint); font-size: 0.7rem; margin: 16px 0 6px; }
+.lb-count { font-family: var(--mono); font-size: 0.78rem; color: var(--text-faint); margin: 10px 0 6px; }
+
+
+.charter-masthead { padding: 48px 0 32px; border-bottom: 2px solid var(--gold); }
+.charter-masthead .dek { color: var(--text-muted); font-size: 1.1rem; max-width: 660px; margin: 14px 0 18px; line-height: 1.6; }
+.charter-masthead .byline { color: var(--text-faint); font-size: 0.85rem; font-family: var(--mono); }
+.charter-abstract { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 24px 26px; margin: 32px 0; font-size: 0.97rem; max-width: 760px; }
+.charter-toc { margin: 32px 0; padding: 20px 24px; border: 1px solid var(--border); border-radius: 10px; max-width: 760px; }
+.charter-toc ol { margin: 0; padding-left: 0; list-style: none; columns: 2; column-gap: 26px; }
+.charter-toc li { margin: 5px 0; font-size: 0.88rem; break-inside: avoid; }
+.charter-toc a { color: var(--text); text-decoration: none; border-bottom: 1px solid transparent; }
+.charter-toc a:hover { border-bottom-color: var(--gold); color: var(--gold); }
+.charter-article { margin: 52px 0; max-width: 760px; }
+.charter-article h2 { font-family: var(--serif); font-size: 1.5rem; font-weight: 600; margin: 0 0 16px; padding-bottom: 10px; border-bottom: 1px solid var(--border); text-wrap: balance; }
+.charter-article h2 .num { color: var(--gold); font-family: var(--mono); font-size: 0.92rem; margin-right: 10px; }
+.charter-article h3 { font-family: var(--serif); font-size: 1.08rem; font-weight: 600; margin: 26px 0 10px; }
+.charter-article p { margin: 13px 0; line-height: 1.7; }
+.charter-article blockquote { margin: 18px 0; padding: 4px 20px; border-left: 3px solid var(--gold); color: var(--text-muted); font-style: italic; font-size: 1rem; }
+.charter-article strong { color: var(--gold); font-weight: 600; }
+.charter-story::first-letter { font-family: var(--serif); font-size: 3.1rem; font-weight: 600; color: var(--gold); float: left; line-height: 0.85; margin: 5px 8px 0 0; }
+.charter-callout { background: var(--surface); border-left: 3px solid var(--gold); border-radius: 0 8px 8px 0; padding: 15px 18px; margin: 18px 0; font-size: 0.92rem; }
+.charter-callout.warn { border-left-color: var(--v-refuted); }
+.charter-callout .cl-label { font-family: var(--mono); text-transform: uppercase; font-size: 0.68rem; letter-spacing: 0.08em; color: var(--gold); display: block; margin-bottom: 6px; }
+.charter-callout.warn .cl-label { color: var(--v-refuted); }
+figure.charter-fig { margin: 26px 0; text-align: center; max-width: 760px; }
+figure.charter-fig img { max-width: 100%; border-radius: 10px; border: 1px solid var(--border); }
+figure.charter-fig figcaption { color: var(--text-faint); font-size: 0.8rem; margin-top: 8px; font-family: var(--mono); }
+</style>
+
+</head>
+<body>
+<nav class="fu-nav">
+  <div class="fu-nav-inner">
+    <a class="fu-nav-brand" href="fu-home.html"><img src="fu-seal.jpg" alt="FU seal"><span>FU &middot; Fake University</span></a>
+    <div class="fu-nav-links">
+      <a href="fu-home.html">Home</a>
+      <a href="fu-departments.html">Academics</a>
+      <a href="fu-faculty.html">Faculty &amp; Research</a>
+      <a href="fu-campus-explore.html">Campus</a>
+      <a href="fu-people.html">About &amp; Org Chart</a>
+      <a href="fu-course-catalog.html">Course Catalog</a>
+      <a href="fu-leaderboard.html">Leaderboard</a>
+      <a href="fu-correspondence.html" class="is-active">Correspondence</a>
+      <a href="fu-investors.html">For Investors &amp; Grant Officers</a>
+    </div>
+  </div>
+</nav>
+<div class="page wide" style="padding-top:40px;">
+    <span class="kicker">Office of External Affairs</span>
+    <h1>Correspondence</h1>
+    <p style="color:var(--text-muted); max-width:700px; font-size:1.05rem;">Every hypothesis on this site that a real, independent researcher's own published work already appears to be circling gets one thing: a short, specific, sourced question addressed directly to them &mdash; not a form letter, not a pitch about FU itself. What follows is every one of those drafts, organized by department, then by name. <b style="color:var(--text);">Nothing here has been sent.</b> Same discipline as everywhere else on this site: a draft stays a draft, disclosed as such, until a human sends it.</p>
+
+    <div class="stat-row" style="margin: 28px 0;">
+      <div class="stat-box"><div class="n">198</div><div class="l">drafted, unsent</div></div>
+      <div class="stat-box"><div class="n">188</div><div class="l">ready to send</div></div>
+      <div class="stat-box"><div class="n">10</div><div class="l">flagged for a wording pass</div></div>
+      <div class="stat-box"><div class="n">3</div><div class="l">actually sent</div></div>
+    </div>
+
+    <div class="corr-dept">
+      <h2>Department of Janusian Studies <span class="corr-dept-count">(40)</span></h2>
+      <div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>James Phelan</strong> &middot; Ohio State University</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Literature — unreliable-narrator technique</div>
+    <div class="ed-subject">&ldquo;Can a narrator's subjective truth and objective unreliability coexist in the same narrative instance?&rdquo;</div>
+    <div class="ed-question">Can a narrator's subjective truth and objective unreliability coexist in the same narrative instance?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>J. Eliot B. Moss</strong> &middot; University of Massachusetts Amherst</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Computer science — compiler instruction scheduling</div>
+    <div class="ed-subject">&ldquo;Can instruction scheduling simultaneously improve and degrade performance?&rdquo;</div>
+    <div class="ed-question">Can instruction scheduling improve performance while also degrading it for the same compilation process?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Toshinori Sato</strong> &middot; Fukuoka University</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Computer science — compiler instruction scheduling</div>
+    <div class="ed-subject">&ldquo;Can instruction scheduling simultaneously improve and degrade performance in compilation?&rdquo;</div>
+    <div class="ed-question">Can instruction scheduling improve performance while also introducing overhead and increasing complexity in resource management for the same compilation process?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Nicole Feldl</strong> &middot; University of California, Los Angeles</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Climatology — feedback loops in ice-albedo effect</div>
+    <div class="ed-subject">&ldquo;Can the ice-albedo feedback loop simultaneously drive global warming and lead to localized cooling effects?&rdquo;</div>
+    <div class="ed-question">Can the ice-albedo feedback loop simultaneously drive warming and localized cooling effects due to changes in ice cover?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Bertrand Beffara</strong> &middot; Institute of Cognitive Science Marc Jeannerod, CNRS</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Cognitive Attention Map Evolution</div>
+    <div class="ed-subject">&ldquo;Can attention maps evolve through both selective focus and indiscriminate engagement simultaneously?&rdquo;</div>
+    <div class="ed-question">Can attention maps evolve through both selective focus and indiscriminate engagement simultaneously?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Raphael Geddert</strong> &middot; Duke University</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Cognitive Concept Drift</div>
+    <div class="ed-subject">&ldquo;Can cognitive concepts exhibit both stability and instability simultaneously?&rdquo;</div>
+    <div class="ed-question">Can cognitive concepts be both stable and unstable simultaneously for the same instances in decision-making contexts?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Juyoung Kim</strong> &middot; The University of Iowa</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Developmental psychology — attachment theory</div>
+    <div class="ed-subject">&ldquo;Can both secure and insecure attachment contribute to healthy emotional development?&rdquo;</div>
+    <div class="ed-question">Can both secure attachment and insecure attachment lead to healthy emotional and social development simultaneously for the same individual?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Abraham M. Rutchick</strong> &middot; California State University, Northridge</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Ethics — trolley-problem moral reasoning</div>
+    <div class="ed-subject">&ldquo;Can both utilitarian and deontological justifications coexist in moral decision-making?&rdquo;</div>
+    <div class="ed-question">Can both pulling the lever to save five lives and not pulling the lever to respect individual rights be true simultaneously in the same ethical scenario?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Alec Worsnop</strong> &middot; University of Maryland, College Park</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Military strategy — asymmetric guerrilla tactics</div>
+    <div class="ed-subject">&ldquo;Can guerrilla tactics achieve short-term victories while leading to strategic failure?&rdquo;</div>
+    <div class="ed-question">Can guerrilla tactics achieve short-term victories while leading to strategic failure?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Junhui Wu</strong> &middot; Nanjing University of Aeronautics and Astronautics</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Physical Electrical Noise</div>
+    <div class="ed-subject">&ldquo;Can physical electrical noise enhance electronic system performance?&rdquo;</div>
+    <div class="ed-question">Can physical electrical noise function as a beneficial factor that enhances the performance of electronic systems?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Christoph Adami</strong> &middot; Michigan State University</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Physical Quantum Measurement</div>
+    <div class="ed-subject">&ldquo;Can measurement act both to alter and not alter the state of a quantum system simultaneously?&rdquo;</div>
+    <div class="ed-question">Can the act of measurement both fundamentally alter the state of a quantum system and not alter the state simultaneously?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Davide Cipullo</strong> &middot; Università Cattolica del Sacro Cuore</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Political science — coalition government formation</div>
+    <div class="ed-subject">&ldquo;Can coalition governments simultaneously create stability and instability?&rdquo;</div>
+    <div class="ed-question">Can coalition governments create political stability and foster instability simultaneously for the same political context?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Michael Taylor</strong> &middot; University of Washington</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Political science — coalition government formation</div>
+    <div class="ed-subject">&ldquo;Can coalition governments create stability while fostering instability?&rdquo;</div>
+    <div class="ed-question">Can coalition governments create political stability and foster instability simultaneously for the same political context?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Jonathan Schooler</strong></div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Creative Block</div>
+    <div class="ed-subject">&ldquo;Quick read — stuck on one unfinished work vs incubation break?&rdquo;</div>
+    <div class="ed-question">For a single unfinished creative work left incomplete — not a break-then-return incubation task — does longer stuck duration both cut interim word/page count and raise judged novelty of the eventual finished piece relative to matched projects finished without a block, or does existing incubation / mind-wandering work already cover that dual role under another name?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Alessandro Giovanni Bertinetto</strong> &middot; University of Turin</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Culinary Arts (Creative & Performance Systems)</div>
+    <div class="ed-subject">&ldquo;Can both recipe adherence and creative improvisation determine a dish's success simultaneously?&rdquo;</div>
+    <div class="ed-question">Can a dish's success depend on both adherence to a recipe and the chef's improvisation simultaneously, affecting the perceived quality based on the diner's expectations?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Robert A. Copeland</strong> &middot; Accent Therapeutics, Inc.</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Pharmacology — drug receptor binding kinetics</div>
+    <div class="ed-subject">&ldquo;Can the concentration-affinity model and multi-factor influences coexist in drug binding kinetics?&rdquo;</div>
+    <div class="ed-question">Can both the concentration-affinity model and the multi-factor model of drug binding kinetics be true simultaneously for the same drug-receptor interaction?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Christos Marmarinos</strong> &middot; National and Kapodistrian University of Athens</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Sports — basketball pick-and-roll offense</div>
+    <div class="ed-subject">&ldquo;Can both precise coordination and chaotic execution enhance pick-and-roll effectiveness?&rdquo;</div>
+    <div class="ed-question">Can both precise coordination and chaotic execution hold simultaneously for the same pick-and-roll play?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Thibault Latrille</strong> &middot; Université Lyon 1</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Biological Systems</div>
+    <div class="ed-subject">&ldquo;Can mutations simultaneously yield both harmful and beneficial outcomes in mammals?&rdquo;</div>
+    <div class="ed-question">Can both harmful and beneficial mutations be true simultaneously for the same organism, as your paper suggests there could be a balance of damaged and restored genomes?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Stephen D. Fried</strong> &middot; Johns Hopkins University</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Cell biology — protein folding chaperones</div>
+    <div class="ed-subject">&ldquo;Can chaperone-dependent and chaperone-independent protein folding coexist?&rdquo;</div>
+    <div class="ed-question">Can both the necessity of protein folding chaperones and the capability of proteins to fold correctly without them be true simultaneously for the same proteins?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Matteo Zecchin</strong> &middot; King's College London</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Cognitive AI Hyperparameter Orchestration</div>
+    <div class="ed-subject">&ldquo;Can hyperparameter tuning be both essential and unnecessary for optimal model performance?&rdquo;</div>
+    <div class="ed-question">Can a model achieve optimal performance both with hyperparameter tuning and without it in the same experimental setup?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Samuel Goree</strong> &middot; Indiana University Bloomington</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Creative Artistic Critique</div>
+    <div class="ed-subject">&ldquo;Can artistic critique be both objective and subjective simultaneously?&rdquo;</div>
+    <div class="ed-question">Can both objective standards and subjective interpretations be true simultaneously for the same critique?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Joris J. Ebbers</strong> &middot; University of Amsterdam</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Creative Film Production Orchestration</div>
+    <div class="ed-subject">&ldquo;Can creative vision coexist with logistical efficiency in film production?&rdquo;</div>
+    <div class="ed-question">Can both preserving creative vision and sacrificing it for logistical efficiency be true simultaneously for the same film production?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Allan Hansen</strong> &middot; Copenhagen Business School</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Creative Film Production Orchestration</div>
+    <div class="ed-subject">&ldquo;Can the interplay of creative vision and logistical efficiency enhance film production outcomes?&rdquo;</div>
+    <div class="ed-question">Can both preserving creative vision and sacrificing it for logistical efficiency be true simultaneously for the same film production?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Uriel Feige</strong> &middot; Weizmann Institute of Science</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Cryptography — zero-knowledge proofs</div>
+    <div class="ed-subject">&ldquo;Can both the possibility and impossibility of proving knowledge of a secret without revealing information coexist?&rdquo;</div>
+    <div class="ed-question">Can both it is possible to prove knowledge of a secret without revealing any information about the secret itself and it is impossible to prove knowledge of a secret without revealing some information about the secret itself be true simultaneously for the same cryptographic protocol?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Shafi Goldwasser</strong> &middot; Massachusetts Institute of Technology</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Cryptography — zero-knowledge proofs</div>
+    <div class="ed-subject">&ldquo;Can it be simultaneously true that zero-knowledge proofs can both reveal and conceal information?&rdquo;</div>
+    <div class="ed-question">Can both it is possible to prove knowledge of a secret without revealing any information about the secret itself and it is impossible to prove knowledge of a secret without revealing some information about the secret itself be true simultaneously for the same cryptographic protocol?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Abul Shamsuddin</strong> &middot; University of Newcastle</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Efficient Market Hypothesis</div>
+    <div class="ed-subject">&ldquo;Can financial markets be both efficient and inefficient simultaneously?&rdquo;</div>
+    <div class="ed-question">Can financial markets be both efficient and inefficient simultaneously, while certain market anomalies persist and others disappear?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Gareth Conduit</strong> &middot; Intellegens</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Informational Scientific Experiment Orchestration</div>
+    <div class="ed-subject">&ldquo;Can both structured and unstructured designs yield reliable scientific results?&rdquo;</div>
+    <div class="ed-question">Can both a rigidly structured experimental design and a flexible unstructured experimental design produce reliable and reproducible scientific results for the same experiment?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Anne Draelos</strong> &middot; University of Michigan</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Informational Scientific Experiment Orchestration</div>
+    <div class="ed-subject">&ldquo;Can both structured and unstructured designs yield reliable results in neuroscience experiments?&rdquo;</div>
+    <div class="ed-question">Can both a rigidly structured experimental design and a flexible unstructured experimental design produce reliable and reproducible scientific results for the same neuroscience experiment?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Willi Gottstein</strong> &middot; University of Toronto</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Informational Scientific Experiment Orchestration</div>
+    <div class="ed-subject">&ldquo;Can both structured and unstructured experimental designs produce reliable results in self-driving laboratories?&rdquo;</div>
+    <div class="ed-question">Can both a rigidly structured experimental design and a flexible unstructured experimental design yield reliable results for the same self-driving laboratory experiment?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Rajiv Mayani</strong> &middot; University of Southern California</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Informational Scientific Experiment Orchestration</div>
+    <div class="ed-subject">&ldquo;Can both structured and unstructured experimental designs yield reliable results for the same scientific experiment?&rdquo;</div>
+    <div class="ed-question">Can both a rigidly structured experimental design and a flexible unstructured experimental design produce reliable and reproducible scientific results for the same experiment?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Wenyu Zhang</strong> &middot; University of British Columbia</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Informational Scientific Experiment Orchestration</div>
+    <div class="ed-subject">&ldquo;Can both structured and unstructured designs enhance reliability in scientific experiments?&rdquo;</div>
+    <div class="ed-question">Can both a rigidly structured experimental design and a flexible unstructured experimental design yield reliable results for the same experiment?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Maesoon Im</strong> &middot; Seoul National University</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Informational Signal Jitter</div>
+    <div class="ed-subject">&ldquo;Can signal jitter enhance information transmission quality simultaneously with degradation?&rdquo;</div>
+    <div class="ed-question">Can both degradation and enhancement of information transmission quality due to signal jitter be true simultaneously for the same transmission?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Ron D. Rothblum</strong> &middot; Weizmann Institute of Science</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Informational Hash Collisions</div>
+    <div class="ed-subject">&ldquo;Can both hash functions be collision-resistant and prone to collisions simultaneously?&rdquo;</div>
+    <div class="ed-question">Can hash functions both be designed to be collision-resistant and also prone to collisions for the same instances of input?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Yuchen Ma</strong> &middot; University of Toronto</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Oceanography — thermocline stratification</div>
+    <div class="ed-subject">&ldquo;Can thermocline stratification exhibit both stability and instability simultaneously?&rdquo;</div>
+    <div class="ed-question">Can both stable and unstable thermocline stratification be true simultaneously for the same oceanic body?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Timour Radko</strong> &middot; Naval Postgraduate School</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Oceanography — thermocline stratification</div>
+    <div class="ed-subject">&ldquo;Can both stable and unstable thermocline stratification coexist simultaneously in oceanic systems?&rdquo;</div>
+    <div class="ed-question">Can both stable and unstable thermocline stratification hold simultaneously for the same oceanic body?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Tobias Egner</strong> &middot; Duke University</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Cognitive Model Adaptation</div>
+    <div class="ed-subject">&ldquo;Can cognitive models exhibit both stability and instability simultaneously?&rdquo;</div>
+    <div class="ed-question">Can both cognitive models being stable and unstable be true simultaneously for the same cognitive instance?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Raphael Geddert</strong> &middot; Duke University</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Cognitive Model Adaptation</div>
+    <div class="ed-subject">&ldquo;Can both cognitive models being stable and unstable occur simultaneously in processing?&rdquo;</div>
+    <div class="ed-question">Can both cognitive models being stable and unstable occur simultaneously for the same cognitive instance?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Jamie A. Hackett</strong> &middot; European Molecular Biology Laboratory (EMBL)</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Epigenetics — gene expression regulation without DNA change</div>
+    <div class="ed-subject">&ldquo;Can gene expression regulation simultaneously require and not require DNA changes?&rdquo;</div>
+    <div class="ed-question">Can gene expression be modified without changing the DNA sequence while also being unmodifiable without changing the DNA sequence at the same time?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Moshe Szyf</strong> &middot; McGill University</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Epigenetics — gene expression regulation without DNA change</div>
+    <div class="ed-subject">&ldquo;Can both gene expression modification without DNA sequence changes and its dependence on DNA sequence be true simultaneously?&rdquo;</div>
+    <div class="ed-question">Can both gene expression can be modified without changing the DNA sequence and gene expression cannot be modified without changing the DNA sequence be true simultaneously for the same gene?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Itiel E. Dror</strong> &middot; Cognitive Consultants International</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Human Cognitive Bias</div>
+    <div class="ed-subject">&ldquo;Can cognitive biases act as both errors and strengths in expert decision-making?&rdquo;</div>
+    <div class="ed-question">Can cognitive biases be both inherent flaws and inherent strengths in human reasoning, allowing for both irrational and effective decision-making simultaneously?</div>
+    
+  </div>
+    </div><div class="corr-dept">
+      <h2>Department of Bisociation Studies <span class="corr-dept-count">(76)</span></h2>
+      <div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Soumya Banerjee</strong> &middot; University of Oxford Mathematical Institute</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Architecture &times; Physical Immune System</div>
+    <div class="ed-subject">&ldquo;Can architectural load management inform immune response efficiency strategies?&rdquo;</div>
+    <div class="ed-question">Can the relational rule governing the allocation of structural loads in architecture also govern the strategic deployment of immune responses in the physical immune system?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Piotr Podlipniak</strong> &middot; Adam Mickiewicz University in Poznań</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Biological Systems &times; Creative Musical Motif Deviation</div>
+    <div class="ed-subject">&ldquo;Can biological mutations parallel deviations in musical motifs for adaptation?&rdquo;</div>
+    <div class="ed-question">Can successful deviations in musical motifs parallel beneficial mutations in biological systems?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Antonio N. Calabrese</strong> &middot; University of Leeds</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Cell Biology &times; Informational Scientific Experiment Orchestration</div>
+    <div class="ed-subject">&ldquo;Can protein folding chaperones adaptively respond to uncertainty?&rdquo;</div>
+    <div class="ed-question">Can protein folding chaperones adaptively respond to uncertainties in their environments in the same way that experimental protocols do?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Benjamin D. Summers</strong></div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Music Theory &times; Physical Acoustic Resonance</div>
+    <div class="ed-subject">&ldquo;Independent convergence on consonance/dissonance as a physical stability rule&rdquo;</div>
+    <div class="ed-question"></div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Huw Cheston</strong> &middot; University of Cambridge</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Creative Improvisation Coordination &times; Informational Signal Jitter</div>
+    <div class="ed-subject">&ldquo;Can adaptive algorithms enhance coordination in networked jazz improvisation?&rdquo;</div>
+    <div class="ed-question">Can the adaptability of performers in creative improvisation function as a mechanism to maintain coherence amidst signal jitter?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Andrea Schiavio</strong> &middot; University of York</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Creative Musical Composition &times; Human Social Influence</div>
+    <div class="ed-subject">&ldquo;Can iterative feedback in musical composition inform the evolution of social norms?&rdquo;</div>
+    <div class="ed-question">Can the patterns of change in social norms due to influence tactics follow the same trajectory as the revisions of musical compositions based on audience reception?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Julian Jara-Ettinger</strong> &middot; Yale University</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Cross Domain Pattern Recognition &times; Human Role Ambiguity</div>
+    <div class="ed-subject">&ldquo;Can structured approaches to role ambiguity mirror patterns in cross-domain pattern recognition?&rdquo;</div>
+    <div class="ed-question">Can structured approaches to resolving ambiguity in human roles yield similar patterns of understanding as those found in successful cross-domain pattern recognition efforts?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Thomas Paris</strong> &middot; HEC Paris</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Culinary Arts &times; Human Committee Formation</div>
+    <div class="ed-subject">&ldquo;Can the quality of committee members' expertise enhance decision-making outcomes like fresh ingredients improve dish quality?&rdquo;</div>
+    <div class="ed-question">Can improving the quality of committee members' expertise lead to better decision-making outcomes, analogous to how fresher ingredients enhance dish quality?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Francesco Branda</strong> &middot; University of Salerno</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Epidemiology — disease outbreak spread &times; Creative Brainstorming Facilitation</div>
+    <div class="ed-subject">&ldquo;Can adaptive brainstorming techniques inspired by epidemiological feedback loops enhance idea generation in group settings?&rdquo;</div>
+    <div class="ed-question">Can adaptive brainstorming techniques inspired by epidemiological feedback loops enhance idea generation in group settings?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Kai Zhang</strong> &middot; University at Albany, State University of New York</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Epigenetics &times; Human Urban Planning</div>
+    <div class="ed-subject">&ldquo;Can community feedback mechanisms correlate with shifts in urban project approvals?&rdquo;</div>
+    <div class="ed-question">Can changes in community feedback mechanisms correlate with shifts in urban project approvals?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>S.K. Voloshin</strong></div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Human Trust Variance &times; Cryptography — Zero-Knowledge Proofs</div>
+    <div class="ed-subject">&ldquo;Can human trust variance model the evolution of zero-knowledge proofs?&rdquo;</div>
+    <div class="ed-question">Can the dynamics of trust variance in human relationships be modeled analogously to the evolution of zero-knowledge proofs in cryptographic systems?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Hardik Rajpal</strong> &middot; Imperial College London</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Informational Mobile System Coordination &times; Physical Ecosystem Succession</div>
+    <div class="ed-subject">&ldquo;Can adaptive responses in mobile systems to environmental changes predict species adaptation patterns?&rdquo;</div>
+    <div class="ed-question">Can adaptive responses in mobile systems to environmental changes predict species adaptation patterns?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>William M. Landes</strong> &middot; University of Chicago Law School</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Law &times; Creative Idea Uncertainty</div>
+    <div class="ed-subject">&ldquo;Can legal precedents influence the acceptance of new creative ideas?&rdquo;</div>
+    <div class="ed-question">Can established legal precedents shape the outcomes of new creative ideas in a similar manner?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Matan Mussel</strong> &middot; University of Haifa</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Materials Science — Phase Transitions &times; Cognitive Streaming Data Processing</div>
+    <div class="ed-subject">&ldquo;Can phase transitions in materials predict data processing configurations?&rdquo;</div>
+    <div class="ed-question">Can the patterns of phase transitions in materials predict optimal configurations for processing data streams in cognitive systems?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Murad Sultanov</strong> &middot; Institute of Physiology Named After Academician A. Garayev, Ministry of Science and Education, Republic of Azerbaijan</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Neuroscience &times; Sports Athletics</div>
+    <div class="ed-subject">&ldquo;Can synaptic pruning in the brain enhance athletic performance by eliminating ineffective strategies?&rdquo;</div>
+    <div class="ed-question">Can synaptic pruning in the brain enhance athletic performance by eliminating ineffective strategies?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Richard Tee</strong> &middot; LUISS University</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Organizational Theory &times; Architecture</div>
+    <div class="ed-subject">&ldquo;Can bureaucratic hierarchy influence the structural integrity of modular constructions?&rdquo;</div>
+    <div class="ed-question">Can role ambiguity within an organization correlate with a decrease in the structural integrity of modular constructions?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Pedro Silva</strong> &middot; Universidade do Porto</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Sports Athletics &times; Cognitive Swarm Intelligence</div>
+    <div class="ed-subject">&ldquo;Can local interactions in athletic training influence swarm behaviors in teams?&rdquo;</div>
+    <div class="ed-question">Can enhancing local strategies in athletic training lead to measurable improvements in team performance metrics, similar to optimizing individual agent behaviors in swarm tasks?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Eita Nakamura</strong> &middot; Kyoto University</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Creative Musical Motif Deviation &times; Evolutionary Biology — Punctuated Equilibrium</div>
+    <div class="ed-subject">&ldquo;Can creative musical motifs evolve in ways analogous to species under punctuated equilibrium?&rdquo;</div>
+    <div class="ed-question">Can patterns of motif evolution in music exhibit rates and types of variation similar to those in species during punctuated equilibrium periods?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Emilio Carlos Gomes Wille</strong> &middot; Universidade Federal de Pernambuco</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Ecology &times; Telecommunications</div>
+    <div class="ed-subject">&ldquo;Can mycorrhizal networks influence packet routing efficiency?&rdquo;</div>
+    <div class="ed-question">Can increasing the connectivity and resilience of mycorrhizal networks lead to more effective data routing and reduced packet loss in telecommunications?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Yan-Fu Li</strong> &middot; Tsinghua University</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Auction Theory &times; Human Defense Coordination</div>
+    <div class="ed-subject">&ldquo;Can optimizing auction formats enhance defense coordination strategies?&rdquo;</div>
+    <div class="ed-question">Can optimizing auction formats for resource allocation yield insights that improve the effectiveness of human defense coordination strategies?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Nicholas Scurich</strong> &middot; University of California, Irvine</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Healthcare &times; Legal Systems</div>
+    <div class="ed-subject">&ldquo;Can missing test results in healthcare correlate with missing evidence in legal outcomes?&rdquo;</div>
+    <div class="ed-question">Can the absence of critical elements in healthcare and legal systems similarly affect decision-making efficacy?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Kana Yoshido</strong> &middot; Kyoto University</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Informational Error Probability &times; Physical Immune System</div>
+    <div class="ed-subject">&ldquo;Can error probability in data transmission predict immune response effectiveness?&rdquo;</div>
+    <div class="ed-question">Can informational error probability function as an indicator of the physical immune system's response effectiveness?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Ying Li</strong> &middot; Max Planck Institute for Human Development</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Linguistics &times; Cognitive Concept Drift</div>
+    <div class="ed-subject">&ldquo;Can systematic shifts in phonological structure reflect cognitive changes driven by context-dependent interactions?&rdquo;</div>
+    <div class="ed-question">Can historical sound change function as a cognitive constraint influencing concept drift in language users?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Robert L. Goldstone</strong> &middot; Indiana University</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Music Theory &times; Informational Database Sharding</div>
+    <div class="ed-subject">&ldquo;Can the adaptive responsiveness in sharded databases mirror jazz improvisation dynamics?&rdquo;</div>
+    <div class="ed-question">Can optimizing query performance in sharded databases exhibit similar patterns of adaptive responsiveness as seen in successful jazz improvisations?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Ruixiang Jiang</strong></div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Cognitive AI Weight Initialization &times; Creative Artistic Critique</div>
+    <div class="ed-subject">&ldquo;Can initial weight settings in cognitive AI affect artistic critique interpretations?&rdquo;</div>
+    <div class="ed-question">Can variations in initial weight settings in cognitive AI correlate with the diversity of interpretations in artistic critiques?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Sarah Hye-yeon Lee</strong> &middot; University of Pennsylvania</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Cognitive Attention Map Evolution &times; Informational Event-Driven Systems</div>
+    <div class="ed-subject">&ldquo;Can cognitive attention allocation be predicted by event-handling strategies?&rdquo;</div>
+    <div class="ed-question">Can the patterns of attention allocation in cognitive processes predict the event-handling strategies in informational systems?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Na Chen</strong> &middot; Beijing University of Chemical Technology</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Cross Domain Pattern Recognition &times; Human Team Collaboration</div>
+    <div class="ed-subject">&ldquo;Can pattern recognition enhancements improve team cohesion?&rdquo;</div>
+    <div class="ed-question">Can enhancing the pattern recognition processes in teams lead to measurable improvements in team performance and cohesion?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>John Yen</strong> &middot; Pennsylvania State University</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Cross Domain Pattern Recognition &times; Human Team Collaboration</div>
+    <div class="ed-subject">&ldquo;Can enhancing pattern recognition processes improve human-agent team performance?&rdquo;</div>
+    <div class="ed-question">Can enhancing the pattern recognition processes in teams lead to measurable improvements in team performance and cohesion?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Aaron Schecter</strong> &middot; University of Georgia</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Human Meeting Participation &times; Informational Event-Driven Systems</div>
+    <div class="ed-subject">&ldquo;Can altered participant sequences in meetings influence event-driven system transitions?&rdquo;</div>
+    <div class="ed-question">Can altering the sequence of participant contributions in a meeting yield a comparable change in the state transitions of an event-driven system?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Zoltán Jobbágy</strong> &middot; National University of Public Service</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Immunology &times; Military Strategy</div>
+    <div class="ed-subject">&ldquo;Can adaptive military strategies mirror the innate immune response for improved outcomes?&rdquo;</div>
+    <div class="ed-question">Can an adaptive military strategy that mirrors the innate immune response show improved outcomes in unpredictable battle scenarios?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Hiroshi Yamamoto</strong> &middot; University of Tokyo</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Informational Backup Systems &times; Physical Magnetic Fluctuation</div>
+    <div class="ed-subject">&ldquo;Can redundancy in magnetic systems improve predictability under fluctuations?&rdquo;</div>
+    <div class="ed-question">Can implementing redundancy in magnetic systems lead to improved predictability of magnetic behavior under fluctuating conditions?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Robert M. MacCallum</strong> &middot; Imperial College London</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Music Sound &times; Physical Circuit Evolution</div>
+    <div class="ed-subject">&ldquo;Can the iterative feedback in music evolution influence circuit reliability?&rdquo;</div>
+    <div class="ed-question">Can an increase in audience feedback during live performances lead to measurable enhancements in musical complexity, similar to how testing feedback improves circuit reliability?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Marie-Eve Jobidon</strong></div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Organizational Theory — Self-Organizing Teams &times; Finance (Human & Social Systems)</div>
+    <div class="ed-subject">&ldquo;Can self-organizing principles enhance transaction success in finance teams?&rdquo;</div>
+    <div class="ed-question">Can the implementation of self-organizing team principles lead to improved transaction success rates in finance?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Pilar Pazos</strong> &middot; Old Dominion University</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Organizational Theory — Self-Organizing Teams &times; Finance (Human & Social Systems)</div>
+    <div class="ed-subject">&ldquo;Can self-organizing principles in finance teams enhance transaction success?&rdquo;</div>
+    <div class="ed-question">Can the implementation of self-organizing principles in finance teams lead to improved transaction success rates and more adaptive portfolio management?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Michiel van Breugel</strong> &middot; National University of Singapore</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Physical Ecosystem Succession &times; Physical Feedback Loop Control</div>
+    <div class="ed-subject">&ldquo;Can ecological succession inform feedback loop adjustments in control systems?&rdquo;</div>
+    <div class="ed-question">Can changes in species composition during ecological succession predictably influence feedback loop adjustments in control systems?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Takeshi Fukuyama</strong> &middot; Ritsumeikan University</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Physics — condensed matter — Bose-Einstein condensate coherence (Gross-Pitaevskii dynamics, quantum pressure) &times; Cosmology — early-universe scalar field dynamics (corpuscular inflation, axion/ultralight BEC dark matter, Fukuyama-Morikawa stagflation)</div>
+    <div class="ed-subject">&ldquo;Can coherence in Bose-Einstein condensates map to early-universe scalar field dynamics?&rdquo;</div>
+    <div class="ed-question">Can the relational rule governing coherence in Bose-Einstein condensates also govern scalar field dynamics during inflationary phases?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Dr. Diana Omigie</strong> &middot; Goldsmiths, University of London</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Behavioral psychology — habit formation loops &times; Creative Musical Motif Deviation</div>
+    <div class="ed-subject">&ldquo;Can habit formation loops enhance musical motif engagement through systematic variation?&rdquo;</div>
+    <div class="ed-question">Can habit formation loops function as a framework to understand how systematic variations in musical motifs lead to increased listener engagement?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Chen-Gia Tsai</strong> &middot; National Taiwan University</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Behavioral psychology — habit formation loops &times; Creative Musical Motif Deviation</div>
+    <div class="ed-subject">&ldquo;Can habit formation loops enhance listener engagement with musical motif deviations?&rdquo;</div>
+    <div class="ed-question">Can systematically varying musical motifs function as a mechanism for reinforcing habit formation loops through cue, routine, and reward components?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Matthew D. Egbert</strong> &middot; University of Hertfordshire</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Behavioral psychology — habit formation loops &times; Informational Sensor Networks</div>
+    <div class="ed-subject">&ldquo;Can habit formation loops in behavioral psychology inform feedback mechanisms in sensor networks?&rdquo;</div>
+    <div class="ed-question">Can increasing feedback frequency in sensor networks lead to more adaptive behaviors, similar to how enhanced rewards strengthen habits in behavioral psychology?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Mengfei Han</strong> &middot; Department of Psychology, Beijing Normal University</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Cell biology — mitochondrial energy production &times; Human Social Network Dynamics</div>
+    <div class="ed-subject">&ldquo;Can mitochondrial energy production influence social network dynamics?&rdquo;</div>
+    <div class="ed-question">Can efficiency in electron transfer during mitochondrial energy production correlate with improved information dissemination within social networks?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Joseph Benzaquen</strong> &middot; Barclays Capital Inc.</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Cryptography &times; Physical Voltage Spikes</div>
+    <div class="ed-subject">&ldquo;Can protective measures in electrical systems maintain integrity like cryptographic keys?&rdquo;</div>
+    <div class="ed-question">Can the effectiveness of a voltage protection system correlate with the strength of its design in maintaining operational integrity, similar to how cryptographic key strength correlates with communication security?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>David Gill</strong> &middot; Purdue University</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Game Theory — Repeated Prisoner's Dilemma &times; Informational Measurement Data Evolution</div>
+    <div class="ed-subject">&ldquo;Can adaptive strategies in repeated prisoner's dilemmas lead to improved data accuracy?&rdquo;</div>
+    <div class="ed-question">Can the evolution of strategies in the repeated prisoner’s dilemma directly influence the reliability and relevance of data in measurement processes?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Julien Laroche or Alessandro D'Ausilio</strong></div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Creative Improvisation Coordination &times; Human Learning Uncertainty</div>
+    <div class="ed-subject">&ldquo;Independent convergence on improvisation as a model for adaptation under uncertainty&rdquo;</div>
+    <div class="ed-question"></div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Martín E. Giuliano</strong> &middot; Universidad Nacional de Mar del Plata</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Physical Electrical Noise &times; Physical Acoustic Resonance</div>
+    <div class="ed-subject">&ldquo;Can electrical noise induce resonant behavior in acoustic systems?&rdquo;</div>
+    <div class="ed-question">Can specific patterns of electrical noise correspond to enhanced resonance frequencies in acoustic systems under controlled experimental conditions?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Angela C. Stelson</strong> &middot; University of Minnesota</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Physical Electrical Noise &times; Physical Acoustic Resonance</div>
+    <div class="ed-subject">&ldquo;Can predictable patterns of electrical noise correspond to acoustic resonance behaviors?&rdquo;</div>
+    <div class="ed-question">Can specific patterns of electrical noise correspond to enhanced resonance frequencies in acoustic systems under controlled experimental conditions?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>William M. Landes</strong> &middot; University of Chicago Law School</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Behavioral Psychology &times; Law</div>
+    <div class="ed-subject">&ldquo;Can reinforcement mechanisms in behavioral psychology guide the application of legal precedents?&rdquo;</div>
+    <div class="ed-question">Can changes in the strength of a legal precedent correlate with changes in the frequency of similar judicial rulings?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Jorge M. Oliveira-Castro</strong> &middot; University of Brasília</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Behavioral Psychology &times; Law</div>
+    <div class="ed-subject">&ldquo;Can reinforcement mechanisms in behavioral psychology correlate with judicial ruling patterns?&rdquo;</div>
+    <div class="ed-question">Can reinforcement mechanisms in behavioral psychology function as drivers for evolving legal interpretations in common law?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Niles Eldredge</strong> &middot; American Museum of Natural History</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Evolutionary Biology &times; Creative Inspiration Variability</div>
+    <div class="ed-subject">&ldquo;Can punctuated equilibrium explain variability in creative inspiration?&rdquo;</div>
+    <div class="ed-question">Can periods of intense creative output be triggered by specific stimuli in the same way that evolutionary changes are initiated by environmental shifts?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Dave Cliff</strong> &middot; University of Bristol</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Gaming Narrative &times; Human Financial Trading Algorithms</div>
+    <div class="ed-subject">&ldquo;Can strategies from gaming narratives enhance financial trading algorithms?&rdquo;</div>
+    <div class="ed-question">Can the strategies developed in gaming narratives to optimize player outcomes apply to enhance the performance of financial trading algorithms in uncertain market conditions?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>J. T. Manhire</strong></div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Human Financial Market Systems &times; Physical Mechanical Spring Systems</div>
+    <div class="ed-subject">&ldquo;Can market price changes be predicted using principles from mechanical systems?&rdquo;</div>
+    <div class="ed-question">Can a model predicting market price changes using principles from spring mechanics yield accurate forecasts for financial asset movements?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Keshav Bhandari</strong> &middot; Imperial College London</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Creative Musical Motif Deviation &times; Informational Bit Flips</div>
+    <div class="ed-subject">&ldquo;Can creative musical motif deviation be systematically linked to patterns in error correction?&rdquo;</div>
+    <div class="ed-question">Can systematic studies of motif deviations in music reveal patterns analogous to error correction in data transmission?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Ron Taieb</strong></div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Creative Musical Motif Deviation &times; Informational Bit Flips</div>
+    <div class="ed-subject">&ldquo;Can creative musical motif deviations emulate informational bit flips in preserving identity?&rdquo;</div>
+    <div class="ed-question">Can systematic studies of musical motif deviations reveal patterns analogous to bit flips in data transmission?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Yucheng Chu</strong> &middot; Michigan State University</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Education (Information & Intelligence Systems) — Atomic: Assignment grade uncertain, Learning succeeds/fails, Multiple styles; Domain: Student knowledge evolves, Educational standards, Log progress; Control: External assessment systems, Concurrent learning paths, Atomic grade updates; Orchestration: Curriculum coordination, Practice vs real-world environments &times; Physical Magnetic Field Control</div>
+    <div class="ed-subject">&ldquo;Can feedback-driven adjustment in grading enhance learning outcomes similarly to magnetic field control?&rdquo;</div>
+    <div class="ed-question">Can increasing the precision of assignment grading correlate with improved student performance, analogous to fine-tuning magnetic fields enhancing particle control effectiveness?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Vanya Ivanova</strong> &middot; University of Plovdiv Paisii Hilendarski</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Education (Information & Intelligence Systems) — Atomic: Assignment grade uncertain, Learning succeeds/fails, Multiple styles; Domain: Student knowledge evolves, Educational standards, Log progress; Control: External assessment systems, Concurrent learning paths, Atomic grade updates; Orchestration: Curriculum coordination, Practice vs real-world environments &times; Physical Magnetic Field Control</div>
+    <div class="ed-subject">&ldquo;Can assignment grades optimize student performance like magnetic field precision enhances particle control?&rdquo;</div>
+    <div class="ed-question">Can the relationship between assignment grading uncertainty and student performance be analogous to how magnetic field strength affects particle trajectories?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Sergio Espeso-Gil</strong> &middot; Centre for Genomic Regulation (CRG), The Barcelona Institute of Science and Technology</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Epigenetics &times; Cognitive Concept Drift</div>
+    <div class="ed-subject">&ldquo;Can reversible environmental influences shape both gene expression and cognitive understanding?&rdquo;</div>
+    <div class="ed-question">Can interventions that alter environmental conditions function to affect both gene expression profiles and conceptual understanding in a parallel manner?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Ida K. Karlsson</strong> &middot; Karolinska Institutet</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Epigenetics &times; Cognitive Concept Drift</div>
+    <div class="ed-subject">&ldquo;Can reversible changes in gene expression parallel cognitive shifts?&rdquo;</div>
+    <div class="ed-question">Can interventions that alter environmental conditions affect both gene expression profiles and conceptual understanding in a parallel manner?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Catherine Jensen Peña</strong> &middot; University of California, Los Angeles</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Epigenetics &times; Cognitive Concept Drift</div>
+    <div class="ed-subject">&ldquo;Can reversible changes in gene expression influence cognitive concept shifts?&rdquo;</div>
+    <div class="ed-question">Can external influences lead to reversible changes in both gene expression profiles and conceptual understanding in a parallel manner?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>John A. Tarduno</strong> &middot; University of Rochester</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Evolutionary biology — punctuated equilibrium &times; Physical Magnetic Field Control</div>
+    <div class="ed-subject">&ldquo;Can evolutionary shifts in punctuated equilibrium parallel rapid state changes in magnetic systems?&rdquo;</div>
+    <div class="ed-question">Can punctuated equilibrium in evolutionary biology demonstrate similar patterns of stability and rapid change as observed in magnetic field control?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Liang Lu</strong> &middot; Carnegie Mellon University</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Linguistics &times; Cognitive AI Preprocessing Pipelines</div>
+    <div class="ed-subject">&ldquo;Can linguistic sound change principles inform data transformations in AI preprocessing?&rdquo;</div>
+    <div class="ed-question">Can the systematic alterations of sounds in historical linguistics function as a basis for predictable transformations in cognitive AI preprocessing pipelines?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>David R. Mortensen</strong> &middot; Carnegie Mellon University</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Linguistics &times; Cognitive AI Preprocessing Pipelines</div>
+    <div class="ed-subject">&ldquo;Can systematic alterations in historical linguistics inform data transformations in cognitive AI preprocessing?&rdquo;</div>
+    <div class="ed-question">Can the principles governing sound change in linguistics lead to analogous effects in cognitive AI preprocessing pipelines?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Johan Söderman</strong> &middot; Lund University</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Music &times; Human Learning Uncertainty</div>
+    <div class="ed-subject">&ldquo;Can sample manipulation in music influence learning strategies?&rdquo;</div>
+    <div class="ed-question">Can variations in sample selection and manipulation techniques correlate with distinct learning outcomes in educational settings?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Atef ATA</strong> &middot; Selcuk University</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Physical Gear System Mechanics &times; Physical Circuit Evolution</div>
+    <div class="ed-subject">&ldquo;Can gear engagement strategies correspond to electrical component arrangements in performance optimization?&rdquo;</div>
+    <div class="ed-question">Can variations in gear engagement strategies correspond to similar variations in electrical component arrangements that optimize circuit performance?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Omar Dakkak</strong> &middot; Karabük University</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Physical Gear System Mechanics &times; Physical Circuit Evolution</div>
+    <div class="ed-subject">&ldquo;Can gear engagement strategies influence electrical component arrangements for optimized performance?&rdquo;</div>
+    <div class="ed-question">Can variations in gear engagement strategies correspond to similar variations in electrical component arrangements that optimize circuit performance?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>A.B. Kurzhanski</strong> &middot; Lomonosov Moscow State University</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Physical Gear System Mechanics &times; Physical Circuit Evolution</div>
+    <div class="ed-subject">&ldquo;Can gear engagement strategies correspond to component arrangements in electrical circuits?&rdquo;</div>
+    <div class="ed-question">Can variations in gear engagement strategies correspond to similar variations in electrical component arrangements that optimize circuit performance?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Yoed N. Kenett</strong> &middot; Bar-Ilan University</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Cognitive Concept Drift &times; Creative Idea Uncertainty</div>
+    <div class="ed-subject">&ldquo;Can cognitive concept drift predict shifts in creative idea acceptance?&rdquo;</div>
+    <div class="ed-question">Can changes in the understanding of a concept predict shifts in the acceptance of related creative ideas?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Amir Hassan Shariatmadari</strong> &middot; University of Virginia</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Cognitive Concept Drift &times; Creative Idea Uncertainty</div>
+    <div class="ed-subject">&ldquo;Can cognitive concept drift influence creative idea uncertainty in biomedical hypothesis generation?&rdquo;</div>
+    <div class="ed-question">Can shifts in the understanding of a concept predict changes in the acceptance of related creative ideas?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>A Ross Otto</strong> &middot; McGill University</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Culinary Arts (Creative & Performance Systems) — Atomic: Recipe succeeds/fails, Ingredient freshness unknown, Multiple flavor combinations; Domain: Dish develops through cooking, Recipes & traditions, Log cooking steps; Control: External food suppliers, Concurrent cooking processes, Atomic seasoning adjustments; Orchestration: Restaurant coordination, Recipe vs service environments &times; Human Individual Indecision</div>
+    <div class="ed-subject">&ldquo;Can culinary techniques enhance decision-making in contexts of individual indecision?&rdquo;</div>
+    <div class="ed-question">Can culinary arts principles function as frameworks for improving choices in individual decision-making processes?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>UMUKORO ARIEYERI PATRICK</strong> &middot; Delta State University Teaching Hospital</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Healthcare &times; Physical Voltage Spikes</div>
+    <div class="ed-subject">&ldquo;Can healthcare strategies enhance voltage spike management in electrical systems?&rdquo;</div>
+    <div class="ed-question">Can real-time monitoring strategies in healthcare influence the management of voltage spikes in electrical systems?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Altan B. Kılıç</strong> &middot; Eindhoven University of Technology</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Informational Error Probability &times; Mathematics — topology — knot invariants</div>
+    <div class="ed-subject">&ldquo;Can informational error probabilities inform knot invariants?&rdquo;</div>
+    <div class="ed-question">Can the relationship between error probabilities and knot classifications yield a novel knot invariant?</div>
+    
+  </div><div class="corr-entry flagged">
+    <div class="corr-head">
+      <div class="corr-who"><strong>David Balchin</strong> &middot; The Francis Crick Institute</div>
+      <span class="corr-badge">&#9888;&#65039; Flagged for review</span>
+    </div>
+    <div class="corr-pairing">Cell Biology &times; Informational Scientific Experiment Orchestration</div>
+    <div class="ed-subject">&ldquo;Can protein folding chaperones adaptively respond like experimental protocols?&rdquo;</div>
+    <div class="ed-question">Can modifications to protein folding chaperones that enhance their responsiveness improve protein folding efficiency as experimental protocols adaptively enhance reliable results?</div>
+    <div class="corr-flag-reason">same Vajner-shaped failure mode -- "Can modifications to protein folding chaperones... improve protein folding efficiency as experimental protocols adaptively enhance reliable results?" implies a direct mechanistic link the underlying hypothesis only claims as an abstract shared pattern of adaptive response. Needs a wording pass before send-ready.</div>
+  </div><div class="corr-entry flagged">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Daniel A. Vajner</strong> &middot; University of Stuttgart</div>
+      <span class="corr-badge">&#9888;&#65039; Flagged for review</span>
+    </div>
+    <div class="corr-pairing">Cryptography &times; Physical Photon Emission</div>
+    <div class="ed-subject">&ldquo;Can controlled uncertainty in zero-knowledge proofs influence photon emission uncertainty?&rdquo;</div>
+    <div class="ed-question">Can manipulating zero-knowledge proof parameters affect the uncertainty of emitted photons?</div>
+    
+  </div><div class="corr-entry flagged">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Simon Deakin</strong> &middot; University of Cambridge</div>
+      <span class="corr-badge">&#9888;&#65039; Flagged for review</span>
+    </div>
+    <div class="corr-pairing">Law &times; Informational Ledger State Evolution</div>
+    <div class="ed-subject">&ldquo;Can legal precedents map to ledger entries in a consistent way?&rdquo;</div>
+    <div class="ed-question">Can inconsistencies in legal rulings correlate with errors or conflicts in ledger state entries?</div>
+    <div class="corr-flag-reason">same Vajner-shaped failure mode -- "Can inconsistencies in legal rulings correlate with errors or conflicts in ledger state entries?" implies a direct link the underlying hypothesis only claims as an abstract shared pattern of consistency-maintenance-via-reference. Needs a wording pass before send-ready. (Same flag applies to the Pimentel draft on this same hypothesis, which shares this exact question.)</div>
+  </div><div class="corr-entry flagged">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Tiago Pimentel</strong> &middot; ETH Zurich</div>
+      <span class="corr-badge">&#9888;&#65039; Flagged for review</span>
+    </div>
+    <div class="corr-pairing">Law &times; Informational Ledger State Evolution</div>
+    <div class="ed-subject">&ldquo;Can legal inconsistencies influence the integrity of informational ledger states?&rdquo;</div>
+    <div class="ed-question">Can inconsistencies in legal rulings correlate with errors or conflicts in ledger state entries?</div>
+    <div class="corr-flag-reason">same Vajner-shaped failure mode as the Deakin draft on this same hypothesis (identical question, same flag applies) -- "Can inconsistencies in legal rulings correlate with errors or conflicts in ledger state entries?" implies a direct link the underlying hypothesis only claims as an abstract shared pattern. Needs a wording pass before send-ready.</div>
+  </div><div class="corr-entry flagged">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Rilder S. Pires</strong> &middot; Universidade de Fortaleza</div>
+      <span class="corr-badge">&#9888;&#65039; Flagged for review</span>
+    </div>
+    <div class="corr-pairing">Legal Systems &times; Physical Magnetic Field Control</div>
+    <div class="ed-subject">&ldquo;Can legal precedent evolution influence magnetic field configurations?&rdquo;</div>
+    <div class="ed-question">Can alterations in legal precedents lead to measurable changes in magnetic field configurations that produce specific effects?</div>
+    <div class="corr-flag-reason">same Vajner-shaped failure mode -- "Can alterations in legal precedents lead to measurable changes in magnetic field configurations?" implies a literal physical link between legal-system evolution and magnetic fields. The underlying hypothesis only claims both domains share an abstract pattern of historically-driven evolution, not a proposed system where one could touch the other. Needs a wording pass (state the abstract pattern explicitly) before this is send-ready.</div>
+  </div><div class="corr-entry flagged">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Donya Quick</strong> &middot; Stevens Institute of Technology</div>
+      <span class="corr-badge">&#9888;&#65039; Flagged for review</span>
+    </div>
+    <div class="corr-pairing">Music Theory &times; Informational Database Sharding</div>
+    <div class="ed-subject">&ldquo;Can adaptive responsiveness in jazz improvisation parallel database query optimization?&rdquo;</div>
+    <div class="ed-question">Can the unpredictability of musical interactions in jazz improvisation directly influence the efficiency of query performance in sharded databases?</div>
+    <div class="corr-flag-reason">genuine, checked against the source hypothesis -- its own falsifiable prediction only claims sharded databases "should exhibit similar patterns of adaptive responsiveness as seen in successful jazz improvisations" (a resemblance claim). The drafted question adds "directly influence," a real literalization the source doesn't support. Notably, the OTHER draft on this same hypothesis (email-music-theory-x-informational-database-sharding-goldstone.md) stayed faithful to the source's own "similar patterns" language and is correctly NOT flagged -- same underlying claim, only this phrasing overreached. Needs a wording pass before send-ready.</div>
+  </div><div class="corr-entry flagged">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Faiçal Barzi</strong> &middot; University of Tunis El Manar</div>
+      <span class="corr-badge">&#9888;&#65039; Flagged for review</span>
+    </div>
+    <div class="corr-pairing">Physical Elastic Deformation &times; Physical Voltage Spikes</div>
+    <div class="ed-subject">&ldquo;Can elastic deformation models analogously predict current behavior in voltage spikes?&rdquo;</div>
+    <div class="ed-question">Can the relational rule governing elastic deformation predict analogous behaviors in electrical circuits experiencing voltage spikes?</div>
+    <div class="corr-flag-reason">the resolved email `faiçal.barzi@enit.rnu.tn` contains a non-ASCII character (ç) in its local part (before the @). This was found verbatim, HIGH confidence, on the recipient's own real SciProfiles page (https://www.sciprofiles.com/profile/1261230) -- not fabricated -- but most real-world mail servers/clients don't reliably support non-ASCII local parts (RFC 6531 internationalized email is not universally deployed), so this address may bounce even though it's genuinely his. Could not independently confirm via search whether the actual deliverable address uses a plain-ASCII "faical" instead. Verify directly (visit the SciProfiles page, or find an alternate ASCII-only contact) before sending.</div>
+  </div>
+    </div><div class="corr-dept">
+      <h2>Department of Homospatial Studies <span class="corr-dept-count">(82)</span></h2>
+      <div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Josh Jarrett</strong> &middot; Staffordshire University</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Anthropology &times; Gaming Narrative</div>
+    <div class="ed-subject">&ldquo;Can player actions be viewed as gifts that enhance narrative dynamics?&rdquo;</div>
+    <div class="ed-question">Can player choices act as cultural exchanges that influence character relationships and narrative progression in games?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Chew Beng Soh</strong> &middot; Singapore University of Technology and Design</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Modular Construction &times; Agricultural Ecosystems</div>
+    <div class="ed-subject">&ldquo;Can AgriModular Ecosystems enhance crop yield efficiency and resource management over traditional farming methods?&rdquo;</div>
+    <div class="ed-question">Can AgriModular Ecosystems enhance crop yield efficiency and resource management over traditional farming methods?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>G Csikvari</strong></div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Architecture — modular/prefab construction &times; Human Defense Coordination</div>
+    <div class="ed-subject">&ldquo;Can modular construction with integrated defense systems enhance adaptability and efficiency in threat response?&rdquo;</div>
+    <div class="ed-question">Can modular construction with integrated defense systems enhance adaptability and efficiency in threat response?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Shu Zhou</strong> &middot; University of Science and Technology of China</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Artificial Intelligence &times; Informational Database State</div>
+    <div class="ed-subject">&ldquo;Can a Dynamic Intelligence Database enhance AI learning efficiency and data retrieval accuracy?&rdquo;</div>
+    <div class="ed-question">Can a Dynamic Intelligence Database enhance AI learning efficiency and data retrieval accuracy?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Michael Ryan Hansen</strong> &middot; Universität Münster</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Self-Assembly of Molecular Structures &times; Informational Event-Driven Systems</div>
+    <div class="ed-subject">&ldquo;Can molecular interactions in adaptation also inform self-organization?&rdquo;</div>
+    <div class="ed-question">Can molecular structures exhibit adaptive changes in response to specific stimuli, akin to event-driven systems?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Mahmoud Badawy</strong> &middot; Bioengineering Department, J.B. Speed School of Engineering, University of Louisville</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Cognitive AI Hyperparameter Orchestration &times; Human Learning Uncertainty</div>
+    <div class="ed-subject">&ldquo;Can adaptive AI hyperparameter orchestration enhance real-time human learning adaptation?&rdquo;</div>
+    <div class="ed-question">Can adaptive AI hyperparameter orchestration enhance real-time human learning adaptation?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Francesco Quinzan</strong> &middot; University of California, Berkeley</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Cognitive AI Hyperparameter Orchestration &times; Human Learning Uncertainty</div>
+    <div class="ed-subject">&ldquo;Can adaptive cognitive orchestration enhance AI performance in human-interactive tasks?&rdquo;</div>
+    <div class="ed-question">Can adaptive cognitive orchestration enhance AI performance in human-interactive tasks?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Wei Yang</strong> &middot; University of Southern California</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Cognitive AI Hyperparameter Orchestration &times; Human Learning Uncertainty</div>
+    <div class="ed-subject">&ldquo;Can adaptive cognitive orchestration enhance AI performance in human-interactive tasks?&rdquo;</div>
+    <div class="ed-question">Can adaptive cognitive orchestration enhance AI performance in human-interactive tasks?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Adem Korkmaz</strong> &middot; Bandirma Onyedi Eylul University</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Cognitive Attention Map Evolution &times; Creative Artistic Critique</div>
+    <div class="ed-subject">&ldquo;Can art critiques reshape viewers' attention to specific artwork elements?&rdquo;</div>
+    <div class="ed-question">Can art critiques reshape viewers' attention to specific artwork elements?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Hanzhong Cao</strong></div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Comedy &times; Cognitive AI Hyperparameter Orchestration</div>
+    <div class="ed-subject">&ldquo;Can Humor-Driven Adaptive Intelligence autonomously generate comedic content that increases audience engagement by at least 30%?&rdquo;</div>
+    <div class="ed-question">Can Humor-Driven Adaptive Intelligence autonomously generate comedic content that increases audience engagement by at least 30%?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Susung Hong</strong> &middot; University of Washington</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Comedy &times; Cognitive AI Hyperparameter Orchestration</div>
+    <div class="ed-subject">&ldquo;Can Humor-Driven Adaptive Intelligence autonomously generate comedic content that increases audience engagement by at least 30% compared to traditional static comedy performances?&rdquo;</div>
+    <div class="ed-question">Can Humor-Driven Adaptive Intelligence autonomously generate comedic content that increases audience engagement by at least 30% compared to traditional static comedy performances?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Elger Abrahamse</strong> &middot; Tilburg University</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Creative Artistic Critique &times; Creative Idea Uncertainty</div>
+    <div class="ed-subject">&ldquo;Can CritiqueFlux enhance collaborative art critique outcomes?&rdquo;</div>
+    <div class="ed-question">Can CritiqueFlux enhance collaborative art critique outcomes?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Shuhei Kitamura</strong></div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Creative Artistic Critique &times; Physical Thermal Variation</div>
+    <div class="ed-subject">&ldquo;Can sensory temperature feedback influence artistic interpretation?&rdquo;</div>
+    <div class="ed-question">Can environmental temperature variations function as a dynamic factor in Creative Artistic Critique, altering emotional responses and interpretations of art?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Yun Wan</strong></div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Creative Narrative Arc Development &times; Human Committee Formation</div>
+    <div class="ed-subject">&ldquo;Can committee collaboration reshape narrative structures?&rdquo;</div>
+    <div class="ed-question">Can narratives developed through committee collaboration exhibit unique plot structures and character dynamics distinct from those created by individual authors?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Robert J. Youmans</strong> &middot; California State University, Northridge</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Human Cognitive Bias &times; Informational Backup Systems</div>
+    <div class="ed-subject">&ldquo;Can cognitive biases shape the operation of backup systems in decision-making?&rdquo;</div>
+    <div class="ed-question">Can cognitive biases embedded in informational backup systems influence data retention patterns, favoring user preconceptions over objective data?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Jimeng Sun</strong> &middot; University of Illinois Urbana-Champaign</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Law &times; Informational Database State</div>
+    <div class="ed-subject">&ldquo;Can the Judicial Knowledgebase predict legal outcomes based on historical case interrelations?&rdquo;</div>
+    <div class="ed-question">Can the Judicial Knowledgebase maintain legal integrity while allowing for the evolution of legal interpretations in response to new case law?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Charles John Torres</strong> &middot; University of California, Irvine</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Linguistics — Creole Genesis &times; Cognitive Model Adaptation</div>
+    <div class="ed-subject">&ldquo;Can Cognitolect enhance cognitive flexibility through creole structures?&rdquo;</div>
+    <div class="ed-question">Can Cognitolect enhance cognitive flexibility through creole structures?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Panos C. Papageorgiou</strong></div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Neuroscience — Synaptic Pruning &times; Physical Power Grid Orchestration</div>
+    <div class="ed-subject">&ldquo;Synaptic pruning as the control principle for microgrid line management?&rdquo;</div>
+    <div class="ed-question">Can the same rule the brain uses to prune underused synapses — continuously assessing connections and cutting or rerouting the weak ones — run as the actual control principle for a power grid, so redundant lines get pruned and load gets rerouted in real time the way a developing brain reorganizes itself, rather than the biological framing just being a metaphor for existing grid-management logic?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Nozomi Asaoka</strong> &middot; The University of Tokyo</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Neuroscience — cortical map reorganization &times; Behavioral psychology — habit formation loops</div>
+    <div class="ed-subject">&ldquo;Can cortical map reorganization drive habit formation loops?&rdquo;</div>
+    <div class="ed-question">Can cortical map reorganization drive habit formation loops?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>QS. Bernard David Massami</strong> &middot; Kazian School of Management, Mumbai</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Neuroscience &times; Law</div>
+    <div class="ed-subject">&ldquo;Can iterative refinement in legal agreements reduce disputes and enhance clarity?&rdquo;</div>
+    <div class="ed-question">Can iterative refinement in legal agreements reduce disputes and enhance clarity?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Fernando Haas</strong> &middot; Federal University of Rio Grande do Sul</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Quantum Physics &times; Physical Magnetic Field Control</div>
+    <div class="ed-subject">&ldquo;Can quantum particles' superposition states be controlled via magnetic fields?&rdquo;</div>
+    <div class="ed-question">Can quantum particles' superposition states be controlled via magnetic fields?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Coral Falcó</strong> &middot; Western Norway University of Applied Sciences</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Basketball Pick-and-Roll Offense &times; Cognitive Attention Map Evolution</div>
+    <div class="ed-subject">&ldquo;Can basketball pick-and-roll dynamics inform cognitive attention mapping?&rdquo;</div>
+    <div class="ed-question">Can the Cognitive Play Map emerge from the superimposition of basketball pick-and-roll offense and cognitive attention map evolution?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Joseph Uguet, Nicola Tollin, or Jordi Morato</strong></div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Adaptive Immune Memory &times; Human Urban Planning</div>
+    <div class="ed-subject">&ldquo;Independent convergence on "urban immunity" — adaptive memory in cities&rdquo;</div>
+    <div class="ed-question"></div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Aneta Herbut</strong> &middot; Wroclaw University of Science and Technology</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Urban planning — zoning and land use &times; Physical Mechanical Vibration</div>
+    <div class="ed-subject">&ldquo;Can Vibrational Urban Dynamics enhance structural integrity during vibrational events?&rdquo;</div>
+    <div class="ed-question">Can Vibrational Urban Dynamics enhance structural integrity during vibrational events?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Ausaf A. Farooqui</strong></div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Cognitive psychology — working memory and chunking &times; Finance (Human & Social Systems) — Atomic: Transaction succeeds/fails, Account lookup missing, Multiple positions; Domain: Portfolio evolves, Market context, Audit logging; Control: External trades & APIs, Streaming market data, Atomic account updates; Orchestration: Regulatory coordination, Simulation vs live trading</div>
+    <div class="ed-subject">&ldquo;Can cognitive chunking influence financial decision-making efficacy?&rdquo;</div>
+    <div class="ed-question">Can the Cognitive Financial Chunking System improve decision-making speed and accuracy in financial transactions?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Manoj Deshpande</strong> &middot; JPMorgan Chase & Co.</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Creative Improvisation Adjustment &times; Informational Measurement Data Evolution</div>
+    <div class="ed-subject">&ldquo;Can Creative Improvisation Adjustment integrate with Informational Measurement Data Evolution to enhance audience engagement?&rdquo;</div>
+    <div class="ed-question">Can Creative Improvisation Adjustment function as an active component in the Adaptive Creative Feedback Loop that evolves through Informational Measurement Data Evolution?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Sarah Sterman</strong> &middot; University of Illinois Urbana-Champaign</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Creative Improvisation Coordination &times; Informational Software Version Control</div>
+    <div class="ed-subject">&ldquo;Version control as the archive of a live improvisation session?&rdquo;</div>
+    <div class="ed-question">Can a version-control layer sit underneath a live creative-improvisation session — logging each contribution as a distinct, retrievable entry in real time — so the session's own history becomes a structured archive you can analyze for pattern and evolution after the fact, without slowing the improvisation itself down?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Mario Martinez-Saito</strong> &middot; National Research University Higher School of Economics</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Auction Theory &times; Cognitive Attention Map Evolution</div>
+    <div class="ed-subject">&ldquo;Can attention dynamics shape bidding strategies in auctions?&rdquo;</div>
+    <div class="ed-question">Can bidders' attention allocation function as a driving force in shaping their bidding strategies during auctions?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Soumya Banerjee</strong> &middot; University of Oxford</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Informational Load Balancing &times; Physical Immune System</div>
+    <div class="ed-subject">&ldquo;Can the Immuno-Informatic Response System enhance efficiency in both data processing and immune response?&rdquo;</div>
+    <div class="ed-question">Can the Immuno-Informatic Response System (IIRS) operate as a cohesive unit that processes both data and biological threats simultaneously?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Anna Grandori</strong> &middot; Bocconi University</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Law &times; Creative Idea Uncertainty</div>
+    <div class="ed-subject">&ldquo;Can contract formation enhance creativity under uncertainty in collaborative projects?&rdquo;</div>
+    <div class="ed-question">Can the processes of contract formation function as a framework for fostering Creative Contractuality in uncertain creative contexts?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Bryan C. Daniels</strong> &middot; Arizona State University</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Physical Chemical Reaction Networks &times; Human Committee Formation</div>
+    <div class="ed-subject">&ldquo;Can decision-making efficiency mirror reaction rates in chemical networks?&rdquo;</div>
+    <div class="ed-question">Can the interactions and feedback loops among participants in a Decision Reaction Network influence decision-making efficiency and quality similarly to reaction rates in a chemical network?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Vlastimil Křivan</strong> &middot; University of South Bohemia</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Physical Chemical Reaction Networks &times; Human Committee Formation</div>
+    <div class="ed-subject">&ldquo;Can decision-making efficiency be modeled like chemical reaction rates?&rdquo;</div>
+    <div class="ed-question">Can a Decision Reaction Network function as a predictive model for decision-making efficiency akin to chemical reaction kinetics?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Dimitri Volchenkov</strong> &middot; Texas Tech University</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Thermodynamics &times; Physical Elastic Deformation</div>
+    <div class="ed-subject">&ldquo;Can elastic deformation influence entropy in thermodynamic systems?&rdquo;</div>
+    <div class="ed-question">Can thermodynamic principles of entropy and physical elastic deformation be fused to reveal emergent behavior in materials under stress?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Sean P. Goldy</strong> &middot; University of California, Irvine</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Astrophysics &times; Human Social Influence</div>
+    <div class="ed-subject">&ldquo;Can celestial phenomena influence social behavior patterns?&rdquo;</div>
+    <div class="ed-question">Can changes in social behavior patterns directly correlate with observable cosmic events, indicating a predictive relationship between the two domains?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Jay F. Nunamaker Jr.</strong> &middot; University of Arizona</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Decision Support Systems &times; Creative Brainstorming Facilitation</div>
+    <div class="ed-subject">&ldquo;Can decision support systems enhance creative brainstorming facilitation in emerging frameworks?&rdquo;</div>
+    <div class="ed-question">Can decision support systems and creative brainstorming facilitation function together to create the Creative Decision Nexus as predicted?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Florian Lange</strong> &middot; Hannover Medical School</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Informational Cache Miss Handling &times; Human Individual Indecision</div>
+    <div class="ed-subject">&ldquo;Can Cognitive Cache Indecision mirror strategies in Computational Cache Miss Handling?&rdquo;</div>
+    <div class="ed-question">Can Cognitive Cache Indecision function as a systematic exploration of choices akin to cache miss handling in computing?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Avi Press</strong> &middot; Scarf</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Informational Cache Miss Handling &times; Human Individual Indecision</div>
+    <div class="ed-subject">&ldquo;Can Cognitive Cache Indecision mirror caching strategies in computational memory?&rdquo;</div>
+    <div class="ed-question">Can the patterns of decision-making in individuals experiencing indecision be modeled similarly to caching algorithms in computer memory?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>A. Chacoma</strong> &middot; Instituto de Física Enrique Gaviola (IFEG-CONICET)</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Linguistics &times; Fluid Dynamics</div>
+    <div class="ed-subject">&ldquo;Can patterns of sound change exhibit both predictable pathways and chaotic shifts?&rdquo;</div>
+    <div class="ed-question">Can phonetic turbulence demonstrate both stable transitions and sudden, chaotic shifts that correlate with specific social influences?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>German Enciso</strong> &middot; University of California Irvine</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Control Theory &times; Physical Chemical Reaction Networks</div>
+    <div class="ed-subject">&ldquo;Kalman-filtered feedback as a reaction network's own control law?&rdquo;</div>
+    <div class="ed-question">Can a Kalman-filtered feedback loop function as a chemical reaction network's own control law — continuously re-estimating reactant/product concentrations from noisy kinetic data and adjusting reaction conditions in real time?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Michael Levin</strong> &middot; Tufts University</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Cognitive Neuron Activation &times; Physical Ecosystem Succession</div>
+    <div class="ed-subject">&ldquo;Can neural activation patterns reflect stages of ecological succession?&rdquo;</div>
+    <div class="ed-question">Can patterns of neural activation in response to learning experiences exhibit measurable similarities to the stages of ecological succession, revealing predictable pathways of cognitive development?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Florian Cafiero</strong> &middot; École Normale Supérieure (ENS)</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Comedy &times; Physical Gear System Mechanics</div>
+    <div class="ed-subject">&ldquo;Can audience engagement patterns operate as inputs in comedic timing dynamics?&rdquo;</div>
+    <div class="ed-question">Can audience engagement during performances act as force inputs that directly influence the timing and effectiveness of comedic delivery?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Yongqian Peng</strong></div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Comedy &times; Physical Gear System Mechanics</div>
+    <div class="ed-subject">&ldquo;Can audience engagement in comedy act as a force input for Comedic Gear Dynamics?&rdquo;</div>
+    <div class="ed-question">Can the analysis of audience engagement during performances reveal distinct patterns of interaction that directly influence the timing and effectiveness of comedic delivery?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Vanessa C. Pope</strong> &middot; King's College London</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Comedy &times; Physical Gear System Mechanics</div>
+    <div class="ed-subject">&ldquo;Can Comedic Gear Dynamics provide distinct patterns of audience engagement in performances?&rdquo;</div>
+    <div class="ed-question">Can Comedic Gear Dynamics emerge as a system where audience engagement influences timing and effectiveness of comedic delivery?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Robin Hanson</strong> &middot; George Mason University</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Auction Theory &times; Astrophysics</div>
+    <div class="ed-subject">&ldquo;Can competitive bidding structures inform celestial resource allocation?&rdquo;</div>
+    <div class="ed-question">Can auction theory and astrophysics function as a framework where Astro-Auction Dynamics emerges?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Isidoros Doxas</strong> &middot; Northrop Grumman Corporation</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Fluid Dynamics &times; Creative Narrative Arc Development</div>
+    <div class="ed-subject">&ldquo;Can fluid dynamics reveal phases within narrative structure?&rdquo;</div>
+    <div class="ed-question">Can analyzing a story's structure through the lens of fluid dynamics reveal distinct phases of turbulence and laminar flow that correlate with audience engagement metrics?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Riccardo Fedriga</strong> &middot; Università di Bologna</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Fluid Dynamics &times; Creative Narrative Arc Development</div>
+    <div class="ed-subject">&ldquo;Can fluid dynamics illuminate narrative structure in literary texts?&rdquo;</div>
+    <div class="ed-question">Can fluid dynamics function as a lens to analyze narrative structure in stories, revealing phases of turbulence and laminar flow that correlate with audience engagement metrics?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Federico Pianzola</strong> &middot; University of Groningen</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Fluid Dynamics &times; Creative Narrative Arc Development</div>
+    <div class="ed-subject">&ldquo;Can fluid dynamics inform creative narrative arc development through Narrative Fluidity?&rdquo;</div>
+    <div class="ed-question">Can analyzing a story's structure through the lens of fluid dynamics reveal distinct phases of turbulence and laminar flow that correlate with audience engagement metrics?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Gesa-Kristina Petersen</strong> &middot; University of Amsterdam</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Human Individual Indecision &times; Physical Voltage Spikes</div>
+    <div class="ed-subject">&ldquo;Can human indecision manifest as neural activity spikes similar to those seen in voltage phenomena?&rdquo;</div>
+    <div class="ed-question">Can human individual indecision function as a catalyst for fluctuating electrical activity in the brain, akin to physical voltage spikes?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Ignacio Saez</strong> &middot; Icahn School of Medicine at Mount Sinai</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Human Individual Indecision &times; Physical Voltage Spikes</div>
+    <div class="ed-subject">&ldquo;Can Decisional Voltage mirror neural dynamics during human decision-making?&rdquo;</div>
+    <div class="ed-question">Can Indecision function as a trigger for fluctuations in brain activity that resemble voltage spikes in electrical circuits?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Adam Lipowski</strong> &middot; Adam Mickiewicz University in Poznań</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Language Linguistics &times; Cognitive Reinforcement Learning</div>
+    <div class="ed-subject">&ldquo;Can language evolve into a Linguistic Adaptive Learning System through reinforcement mechanisms?&rdquo;</div>
+    <div class="ed-question">Can language linguistics and cognitive reinforcement learning converge to create a dynamic, adaptive system that evolves based on user feedback mechanisms?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Elizabeth Hellmuth Margulis</strong> &middot; University of Arkansas</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Music Sound &times; Human Cognitive Bias</div>
+    <div class="ed-subject">&ldquo;Can musical performance be shaped by audience cognitive bias?&rdquo;</div>
+    <div class="ed-question">Can music sound and human cognitive bias interact to create a performance system like Cognimusic?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Arve Voldsund</strong> &middot; University of Oslo</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Music Theory &times; Auction Theory</div>
+    <div class="ed-subject">&ldquo;Can jazz improvisation and auction dynamics operate in the same space to create BidJam?&rdquo;</div>
+    <div class="ed-question">Can patterns of improvisational contributions in BidJam exhibit measurable shifts in response to audience engagement?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Clive M. Harrison</strong> &middot; University of Newcastle</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Music Theory &times; Sports</div>
+    <div class="ed-subject">&ldquo;Can jazz improvisation and baseball pitch sequencing create Harmonic Pitchcraft?&rdquo;</div>
+    <div class="ed-question">Can jazz improvisation and baseball pitch sequencing function as a unified system in the framework of Harmonic Pitchcraft?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Nora El-Gohary</strong></div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Architecture &times; Cross Domain Pattern Recognition</div>
+    <div class="ed-subject">&ldquo;Quick read — as-built outcomes rewriting the next permit check?&rdquo;</div>
+    <div class="ed-question">After a building is constructed and inspected, do the as-built BIM and inspection outcomes write new compliance cases into a shared library that then accepts or rejects the next project's permit check — such that changing the code extract remaps which designs get approved — or is automated compliance checking still only one-way (design model checked against fixed rules)?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Jiansong Zhang</strong></div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Architecture &times; Cross Domain Pattern Recognition</div>
+    <div class="ed-subject">&ldquo;Quick read — as-built outcomes rewriting the next permit check?&rdquo;</div>
+    <div class="ed-question">After a building is constructed and inspected, do the as-built BIM and inspection outcomes write new compliance cases into a shared library that then accepts or rejects the next project's permit check — such that changing the code extract remaps which designs get approved — or is automated compliance checking still only one-way (design model checked against fixed rules)?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Arnav Prasad</strong></div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Baseball Pitch Sequencing &times; Informational Protocol Coordination</div>
+    <div class="ed-subject">&ldquo;Independent convergence on pitch sequencing as a communication protocol&rdquo;</div>
+    <div class="ed-question"></div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Ehab Basta, Sunit K. Gupta, or Oumar R. Barry</strong></div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Physical Mechanical Vibration &times; Physical Power Grid Orchestration</div>
+    <div class="ed-subject">&ldquo;Independent convergence on mechanical vibration control in power grids&rdquo;</div>
+    <div class="ed-question"></div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>C. T. Hann</strong> &middot; Yale University</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Informational Backup Systems &times; Physical Acoustic Resonance</div>
+    <div class="ed-subject">&ldquo;Can informational backup systems interact with physical acoustic resonance to enhance data retrieval?&rdquo;</div>
+    <div class="ed-question">Can Resonant Data Echo allow distinct data sets to be retrieved through specific sound frequencies in a resonance-based storage medium?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Marc Vidal</strong> &middot; IPEM, University of Ghent</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Fluid Dynamics &times; Human Emotional Fluctuation</div>
+    <div class="ed-subject">&ldquo;Can emotional turbulence exhibit measurable stability thresholds linked to fluid dynamics?&rdquo;</div>
+    <div class="ed-question">Can Emotifluidity manifest as emotional turbulence measured by EEG dynamics?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Maximilian Mittenbühler</strong> &middot; University of California, Berkeley</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Behavioral psychology — habit formation loops &times; Informational Error Probability</div>
+    <div class="ed-subject">&ldquo;Can habit formation loops influence information reliability in behavior?&rdquo;</div>
+    <div class="ed-question">Can the Habitual Information Loop function as a framework that connects habit formation rates to the level of information accuracy encountered by individuals?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Pavan C Shekar</strong></div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Cognitive AI Attention &times; Informational Software Version Control</div>
+    <div class="ed-subject">&ldquo;Can cognitive AI attention enhance version control systems?&rdquo;</div>
+    <div class="ed-question">Can Cognitive AI Attention and Informational Software Version Control function together to create an Adaptive Attention Control System that demonstrates improved decision-making speed and accuracy?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Haobo Hu</strong></div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Cognitive Streaming Data Processing &times; Creative Film Production Orchestration</div>
+    <div class="ed-subject">&ldquo;Can cognitive streaming data processing inform cinematic storytelling methods?&rdquo;</div>
+    <div class="ed-question">Can cognitive streaming data processing function as an adaptive framework for real-time film production?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Chenyu Mu</strong></div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Cognitive Streaming Data Processing &times; Creative Film Production Orchestration</div>
+    <div class="ed-subject">&ldquo;Can cognitive streaming data processing and creative film production orchestration combine to create a Cognitive Filmstream?&rdquo;</div>
+    <div class="ed-question">Can the Cognitive Filmstream emerge from forcing cognitive streaming data processing and creative film production orchestration into the same space?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Shufeng Nan</strong> &middot; Fudan University</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Cognitive Streaming Data Processing &times; Creative Film Production Orchestration</div>
+    <div class="ed-subject">&ldquo;Can cognitive streaming data processing enhance creative film production orchestration?&rdquo;</div>
+    <div class="ed-question">Can cognitive streaming data processing function as a mechanism that informs every aspect of creative film production orchestration to create a Cognitive Filmstream?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Tianyidan Xie</strong></div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Cognitive Streaming Data Processing &times; Creative Film Production Orchestration</div>
+    <div class="ed-subject">&ldquo;Can cognitive streaming data processing enhance creative film production orchestration?&rdquo;</div>
+    <div class="ed-question">Can cognitive streaming data processing function as an adaptive feedback mechanism within creative film production orchestration to yield the Cognitive Filmstream?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Zidong Wang</strong> &middot; Brunel University London</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Control Theory — Kalman Filtering &times; Informational Bit Flips</div>
+    <div class="ed-subject">&ldquo;Can Kalman filtering and informational bit flips integrate to enhance state estimation?&rdquo;</div>
+    <div class="ed-question">Can Kalman filtering and informational bit flips function together to create an Error-Resilient Estimation System (ERES) that shows statistically significant improvement in estimation accuracy under noisy conditions?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Javier Peña</strong> &middot; University of Deusto</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Creative Idea Uncertainty &times; Physical Electrical Noise</div>
+    <div class="ed-subject">&ldquo;Can creative idea uncertainty interact with electrical noise to enhance creativity?&rdquo;</div>
+    <div class="ed-question">Can analyzing creative outputs produced in environments with varying levels of electrical noise reveal distinct patterns of idea generation that correlate with noise characteristics?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Stuart Bartlett</strong> &middot; California Institute of Technology</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Informational Load Balancing &times; Physical Evolutionary Selection</div>
+    <div class="ed-subject">&ldquo;Can informational load balancing enhance evolutionary adaptation in a dynamic system?&rdquo;</div>
+    <div class="ed-question">Can the Adaptive Information Ecology emerge from the interplay between informational load balancing and physical evolutionary selection, exhibiting improved resilience over time?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Antonio Carvajal-Rodríguez</strong> &middot; Universidade de Vigo</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Informational Load Balancing &times; Physical Evolutionary Selection</div>
+    <div class="ed-subject">&ldquo;Can informational load balancing operate as a mechanism for evolutionary adaptation?&rdquo;</div>
+    <div class="ed-question">Can informational load balancing function as a force of physical evolutionary selection in the emergence of Adaptive Information Ecology?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Costin Bădică</strong> &middot; University of Craiova</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Knowledge Systems &times; Informational Distributed Consensus</div>
+    <div class="ed-subject">&ldquo;Can the Consensus Knowledge Network enhance accuracy in decentralized cognition?&rdquo;</div>
+    <div class="ed-question">Can the Consensus Knowledge Network improve the accuracy and adaptability of knowledge insights through decentralized decision-making?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Roman Uliasz</strong> &middot; University of Rzeszów</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Linguistics — creole genesis &times; Law — contract formation and offer/acceptance</div>
+    <div class="ed-subject">&ldquo;Can creole genesis inform our understanding of contract formation?&rdquo;</div>
+    <div class="ed-question">Can creole genesis and contract formation coexist to create Lexicon Pactum in multilingual negotiation contexts?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Emmanouil Lakiotakis</strong> &middot; Foundation for Research and Technology - Hellas (FORTH)</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Telecommunications — packet switching and routing &times; Music Sound (Creative & Performance Systems) — Atomic: Note pitch flat/sharp, Instrument availability uncertain, Multiple harmonic possibilities; Domain: Musical composition evolves, Music theory context, Log performances; Control: Live audience feedback, Concurrent musician coordination, Atomic tempo synchronization; Orchestration: Music industry coordination, Composition vs performance environments</div>
+    <div class="ed-subject">&ldquo;Can packet switching enhance real-time musical performance adaptation?&rdquo;</div>
+    <div class="ed-question">Can packet switching function as a mechanism to adapt live musical performances in real-time based on audience feedback and musician coordination?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Kęstutis Matulaitis</strong> &middot; Lithuanian Sports University</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Basketball Pick-and-Roll Offense &times; Physical Flux Regulation</div>
+    <div class="ed-subject">&ldquo;Can the Dynamic Flux Offense enhance scoring efficiency in elite basketball?&rdquo;</div>
+    <div class="ed-question">Can the Dynamic Flux Offense function as a self-regulating system that increases scoring opportunities compared to traditional static plays?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Hiram Calvo</strong> &middot; Center for Computing Research (CIC), Instituto Politécnico Nacional (IPN)</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Cognitive AI Hyperparameter Orchestration &times; Creative Narrative Arc Development</div>
+    <div class="ed-subject">&ldquo;Can hyperparameter tuning enhance narrative development in AI systems?&rdquo;</div>
+    <div class="ed-question">Can Cognitive AI Hyperparameter Orchestration enhance Creative Narrative Arc Development to produce more emotionally engaging stories?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Weihua Yue</strong> &middot; Peking University Sixth Hospital, Peking University Institute of Mental Health, NHC Key Laboratory of Mental Health (Peking University), National Clinical Research Center for Mental Disorders (Peking University Sixth Hospital)</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Cognitive Development &times; Physical Immune System</div>
+    <div class="ed-subject">&ldquo;Can Cognitive Development operate as an adaptive response mechanism for the Physical Immune System?&rdquo;</div>
+    <div class="ed-question">Can Cognitive Development function as a mechanism for recognizing and responding to challenges, akin to how the Physical Immune System adapts to pathogens?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Yaya Zhai</strong> &middot; Duke University</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Cognitive Development &times; Physical Immune System</div>
+    <div class="ed-subject">&ldquo;Can Cognitive Development enhance problem-solving adaptability in immune response contexts?&rdquo;</div>
+    <div class="ed-question">Can diverse learning experiences function as mechanisms that improve adaptability in problem-solving tasks related to immune function severity?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Alessandro Vespignani</strong> &middot; Northeastern University</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Geology — sedimentary layering and stratigraphy &times; Epidemiology — herd immunity thresholds</div>
+    <div class="ed-subject">&ldquo;Can sedimentary layering inform epidemiological herd immunity thresholds?&rdquo;</div>
+    <div class="ed-question">Can sedimentary layering and herd immunity thresholds be merged to predict outbreaks more accurately than traditional models?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Ryota Takamido</strong></div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Baseball Pitch Sequencing &times; Finance Transaction Dynamics</div>
+    <div class="ed-subject">&ldquo;Can Pitch-Transaction Dynamics enhance transaction success rates...?&rdquo;</div>
+    <div class="ed-question">Can Pitch-Transaction Dynamics operate as a framework that improves transaction success rates by adapting in real-time to market feedback, similar to a pitcher adjusting their pitch sequences based on batter responses?</div>
+    
+  </div><div class="corr-entry ready">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Ruokun Wang</strong> &middot; Nanjing Vocation Institute of Railway Technology</div>
+      <span class="corr-badge">&#9993;&#65039; Ready</span>
+    </div>
+    <div class="corr-pairing">Urban Planning Traffic Flow Optimization &times; Informational Cache Miss Handling</div>
+    <div class="ed-subject">&ldquo;Can traffic signal optimization act as a dynamic cache controller for urban transportation?&rdquo;</div>
+    <div class="ed-question">Can urban planning traffic flow optimization function as informational cache miss handling within a Traffic Dataflow Optimization System?</div>
+    
+  </div><div class="corr-entry flagged">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Beau Sievers</strong> &middot; Dartmouth College</div>
+      <span class="corr-badge">&#9888;&#65039; Flagged for review</span>
+    </div>
+    <div class="corr-pairing">Human Meeting Participation &times; Physical Quantum Measurement</div>
+    <div class="ed-subject">&ldquo;Can group decision-making demonstrate patterns akin to quantum measurement?&rdquo;</div>
+    <div class="ed-question">Can Consensus Quantum Dynamics emerge when human meeting participation parallels physical quantum measurement?</div>
+    <div class="corr-flag-reason">genuine, checked against the source hypothesis -- its own falsifiable prediction only claims group decisions will show patterns that "align with quantum measurement principles" (a resemblance claim). The drafted question asks whether "Consensus Quantum Dynamics" can literally "emerge" from human meetings -- a real literalization the source doesn't support. Needs a wording pass before send-ready.</div>
+  </div><div class="corr-entry flagged">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Ann-Kathrin Stock</strong> &middot; Technische Universität Dresden</div>
+      <span class="corr-badge">&#9888;&#65039; Flagged for review</span>
+    </div>
+    <div class="corr-pairing">Creative Idea Uncertainty &times; Physical Electrical Noise</div>
+    <div class="ed-subject">&ldquo;Can creative idea uncertainty amplify electrical noise effects on novel idea generation?&rdquo;</div>
+    <div class="ed-question">Can Creativity Noise Fusion emerge when creative idea uncertainty interacts with physical electrical noise?</div>
+    <div class="corr-flag-reason">genuine, same Sievers-shaped pattern -- the source hypothesis only claims noise-environment creative outputs will "reveal distinct patterns of idea generation that correlate with the noise characteristics" (a correlation claim). The drafted question asks whether "Creativity Noise Fusion" can literally "emerge," a real literalization beyond what the source tests. Needs a wording pass before send-ready.</div>
+  </div><div class="corr-entry flagged">
+    <div class="corr-head">
+      <div class="corr-who"><strong>Keith Sawyer</strong> &middot; The University of North Carolina at Chapel Hill</div>
+      <span class="corr-badge">&#9888;&#65039; Flagged for review</span>
+    </div>
+    <div class="corr-pairing">Astronomy — Stellar Nucleosynthesis &times; Creative Improvisation Coordination</div>
+    <div class="ed-subject">&ldquo;Can collaborative creative sessions yield innovative outcomes akin to stellar nucleosynthesis?&rdquo;</div>
+    <div class="ed-question">Can stellar nucleosynthesis and creative improvisation coordination fuse to produce Improv-nucleosynthesis in collaborative sessions?</div>
+    <div class="corr-flag-reason">genuine, checked against the source hypothesis -- its own falsifiable prediction only claims "collaborative creative sessions will yield outputs that demonstrate a complexity and novelty that cannot be achieved through individual contributions alone," with no astronomy content in the operationalized claim at all. The drafted question asks whether stellar nucleosynthesis and improv can literally "fuse," a real literalization the source doesn't test. Needs a wording pass before send-ready.</div>
+  </div>
+    </div>
+
+    <p style="margin-top:32px; color:var(--text-muted); max-width:700px;">Every contact here was resolved the same way every other real fact on this site was &mdash; found written on a real, public page, never guessed or pattern-matched from a name and an institution. See <a href="whitepaper.html">the Charter</a> for the full discipline this runs on.</p>
+  </div>
+<footer class="fu-colophon">
+    FU: Fake University &middot; a positioning frame for <a href="whitepaper.html">The Eureka Engine</a> (Exponent Labs LLC) &middot; every real number sourced live from <code>leaderboard.md</code> (750 entries) and <code>domains.json</code> (111 domains) at build time
+  </footer>
+</body>
+</html>
