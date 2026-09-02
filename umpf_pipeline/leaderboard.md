@@ -11,7 +11,7 @@ Per-mode averages, computed fresh from the live ledger every run — not a one-t
 | Mode | n | Avg points | NO_SIGNAL rate |
 |---|---|---|---|
 | janusian | 216 | +31.9 | 8% |
-| bisociation | 275 | +23.1 | 25% |
+| bisociation | 275 | +23.7 | 25% |
 | homospatial | 246 | +20.7 | 36% |
 | case-study | 12 | +6.2 | 25% |
 
@@ -44,14 +44,14 @@ The composability pre-filter never gates generation — it only logs a signal (s
 | 4 | 🛡️ Survived Refutation | Cognitive psychology — working memory and chunking | **+57** | ADJACENT_ACTIVE | 67% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 🛡️ Survived the Gauntlet 🔬 Actively Researched |
 | 5 | 🛡️ Survived Refutation | Zoology — animal migration navigation | **+57** | ADJACENT_ACTIVE | 67% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 🛡️ Survived the Gauntlet 🔬 Actively Researched |
 | 6 | 🛡️ Survived Refutation | Mathematics — topology — knot invariants | **+52** | ADJACENT_ACTIVE | 67% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 🛡️ Survived the Gauntlet 🔬 Actively Researched (historical) |
-| 7 | 🛡️ Survived Refutation | Oceanography — thermocline stratification | **+27** | NO_SIGNAL | 67% survived | — | 🎭 Janusian 🛡️ Survived the Gauntlet 🔬 Actively Researched |
-| 8 | 🛡️ Survived Refutation | Nash — Game Theory × Evolutionary Biology | **+20** | COLLISION | 100% survived | — | 🧬 Bisociative 🏆 Nobel Ground Truth (calibration benchmark, not engine-generated) 🏛️ Established Department 🛡️ Survived the Gauntlet |
-| 9 | 🛡️ Survived Refutation | Kahneman & Tversky — Cognitive Bias × Rational-Choice Theory | **+12** | COLLISION | 67% survived | — | 🧬 Bisociative 🏆 Nobel Ground Truth (calibration benchmark, not engine-generated) 🏛️ Established Department 🛡️ Survived the Gauntlet |
-| 10 | 🛡️ Survived Refutation | Planck — Quantization × Thermodynamics | **+12** | ADJACENT_ACTIVE | 67% survived | — | 🧬 Bisociative 🏆 Nobel Ground Truth (calibration benchmark, not engine-generated) 🗺️ Frontier Research Group 🛡️ Survived the Gauntlet |
-| 11 | 🛡️ Survived Refutation | Jacob & Monod — Gene Regulation × Control Engineering | **+12** | NO_SIGNAL | 67% survived | — | 🧬 Bisociative 🏆 Nobel Ground Truth (calibration benchmark, not engine-generated) 🛡️ Survived the Gauntlet |
-| 12 | 🛡️ Survived Refutation | Ostrom — Commons Governance × Ecology | **+12** | ADJACENT_ACTIVE | 67% survived | — | 🧬 Bisociative 🏆 Nobel Ground Truth (calibration benchmark, not engine-generated) 🗺️ Frontier Research Group 🛡️ Survived the Gauntlet |
-| 13 | 🛡️ Survived Refutation | Simon — Bounded Rationality × Heuristic Search | **+12** | COLLISION | 67% survived | — | 🧬 Bisociative 🏆 Nobel Ground Truth (calibration benchmark, not engine-generated) 🏛️ Established Department 🛡️ Survived the Gauntlet |
-| 14 | 🛡️ Survived Refutation | Hayek — Dispersed Knowledge × Market Price Signals | **+12** | ADJACENT_ACTIVE | 67% survived | — | 🧬 Bisociative 🏆 Nobel Ground Truth (calibration benchmark, not engine-generated) 🗺️ Frontier Research Group 🛡️ Survived the Gauntlet |
+| 7 | 🛡️ Survived Refutation | Planck — Quantization × Thermodynamics | **+37** | ADJACENT_ACTIVE | 67% survived | — | 🧬 Bisociative 🏆 Nobel Ground Truth (calibration benchmark, not engine-generated) 🗺️ Frontier Research Group 🛡️ Survived the Gauntlet 🔬🔥 Actively Researched (current) |
+| 8 | 🛡️ Survived Refutation | Hayek — Dispersed Knowledge × Market Price Signals | **+37** | ADJACENT_ACTIVE | 67% survived | — | 🧬 Bisociative 🏆 Nobel Ground Truth (calibration benchmark, not engine-generated) 🗺️ Frontier Research Group 🛡️ Survived the Gauntlet 🔬🔥 Actively Researched (current) |
+| 9 | 🛡️ Survived Refutation | Nash — Game Theory × Evolutionary Biology | **+35** | COLLISION | 100% survived | — | 🧬 Bisociative 🏆 Nobel Ground Truth (calibration benchmark, not engine-generated) 🏛️ Established Department 🛡️ Survived the Gauntlet 🔬 Actively Researched |
+| 10 | 🛡️ Survived Refutation | Jacob & Monod — Gene Regulation × Control Engineering | **+27** | NO_SIGNAL | 67% survived | — | 🧬 Bisociative 🏆 Nobel Ground Truth (calibration benchmark, not engine-generated) 🛡️ Survived the Gauntlet 🔬 Actively Researched |
+| 11 | 🛡️ Survived Refutation | Ostrom — Commons Governance × Ecology | **+27** | ADJACENT_ACTIVE | 67% survived | — | 🧬 Bisociative 🏆 Nobel Ground Truth (calibration benchmark, not engine-generated) 🗺️ Frontier Research Group 🛡️ Survived the Gauntlet 🔬 Actively Researched |
+| 12 | 🛡️ Survived Refutation | Oceanography — thermocline stratification | **+27** | NO_SIGNAL | 67% survived | — | 🎭 Janusian 🛡️ Survived the Gauntlet 🔬 Actively Researched |
+| 13 | 🛡️ Survived Refutation | Simon — Bounded Rationality × Heuristic Search | **+22** | COLLISION | 67% survived | — | 🧬 Bisociative 🏆 Nobel Ground Truth (calibration benchmark, not engine-generated) 🏛️ Established Department 🛡️ Survived the Gauntlet 🔬 Actively Researched (historical) |
+| 14 | 🛡️ Survived Refutation | Kahneman & Tversky — Cognitive Bias × Rational-Choice Theory | **+12** | COLLISION | 67% survived | — | 🧬 Bisociative 🏆 Nobel Ground Truth (calibration benchmark, not engine-generated) 🏛️ Established Department 🛡️ Survived the Gauntlet |
 | 15 | 🛡️ Survived Refutation | Einstein — Special Relativity × Maxwell — Electromagnetism | **+12** | ADJACENT_ACTIVE | 67% survived | — | 🧬 Bisociative 🏆 Nobel Ground Truth (calibration benchmark, not engine-generated) 🗺️ Frontier Research Group 🛡️ Survived the Gauntlet |
 | 16 | 🗺️ Verified, Unrefuted | Linguistics — Historical Sound Change | **+55** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
 | 17 | 🗺️ Verified, Unrefuted | Self-Assembly of Molecular Structures × Gaming Narrative Systems | **+55** | ADJACENT_ACTIVE | — | — | 🪞 Homospatial 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
@@ -372,11 +372,11 @@ The composability pre-filter never gates generation — it only logs a signal (s
 | 332 | 🌗 Contested | Aerospace engineering — aerodynamic stall | **+50** | ADJACENT_ACTIVE | 33% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 🌗 Contested (1-of-3) 🔬🔥 Actively Researched (current) |
 | 333 | 🌗 Contested | Acoustics — resonance and standing waves | **+35** | ADJACENT_ACTIVE | 33% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 🌗 Contested (1-of-3) 🔬 Actively Researched (historical) |
 | 334 | 🌗 Contested | Gaming Narrative × Human Financial Trading Algorithms | **+20** | NO_SIGNAL | 33% survived | — | 🧬 Bisociative 🌗 Contested (1-of-3) 🔬🔥 Actively Researched (current) |
-| 335 | 🌗 Contested | Watson & Crick — Molecular Biology × Franklin — X-Ray Crystallography | **-5** | COLLISION | 33% survived | — | 🧬 Bisociative 🏆 Nobel Ground Truth (calibration benchmark, not engine-generated) 🏛️ Established Department 🌗 Contested (1-of-3) |
-| 336 | 🌗 Contested | Hopfield — Statistical Physics × Neural Networks | **-5** | COLLISION | 33% survived | — | 🧬 Bisociative 🏆 Nobel Ground Truth (calibration benchmark, not engine-generated) 🏛️ Established Department 🌗 Contested (1-of-3) |
-| 337 | 🌗 Contested | Coase — Transaction Costs × Property Rights | **-5** | ADJACENT_ACTIVE | 33% survived | — | 🧬 Bisociative 🏆 Nobel Ground Truth (calibration benchmark, not engine-generated) 🗺️ Frontier Research Group 🌗 Contested (1-of-3) |
-| 338 | 🌗 Contested | Becker — Rational Choice × Household Behavior | **-5** | COLLISION | 33% survived | — | 🧬 Bisociative 🏆 Nobel Ground Truth (calibration benchmark, not engine-generated) 🏛️ Established Department 🌗 Contested (1-of-3) |
-| 339 | 🌗 Contested | Feynman — quantum mechanics × Computation — simulation | **-5** | COLLISION | 33% survived | — | 🧬 Bisociative 🏆 Nobel Ground Truth (calibration benchmark, not engine-generated) 🏛️ Established Department 🌗 Contested (1-of-3) |
+| 335 | 🌗 Contested | Coase — Transaction Costs × Property Rights | **+20** | ADJACENT_ACTIVE | 33% survived | — | 🧬 Bisociative 🏆 Nobel Ground Truth (calibration benchmark, not engine-generated) 🗺️ Frontier Research Group 🌗 Contested (1-of-3) 🔬🔥 Actively Researched (current) |
+| 336 | 🌗 Contested | Watson & Crick — Molecular Biology × Franklin — X-Ray Crystallography | **+5** | COLLISION | 33% survived | — | 🧬 Bisociative 🏆 Nobel Ground Truth (calibration benchmark, not engine-generated) 🏛️ Established Department 🌗 Contested (1-of-3) 🔬 Actively Researched (historical) |
+| 337 | 🌗 Contested | Feynman — quantum mechanics × Computation — simulation | **+5** | COLLISION | 33% survived | — | 🧬 Bisociative 🏆 Nobel Ground Truth (calibration benchmark, not engine-generated) 🏛️ Established Department 🌗 Contested (1-of-3) 🔬 Actively Researched (historical) |
+| 338 | 🌗 Contested | Hopfield — Statistical Physics × Neural Networks | **-5** | COLLISION | 33% survived | — | 🧬 Bisociative 🏆 Nobel Ground Truth (calibration benchmark, not engine-generated) 🏛️ Established Department 🌗 Contested (1-of-3) |
+| 339 | 🌗 Contested | Becker — Rational Choice × Household Behavior | **-5** | COLLISION | 33% survived | — | 🧬 Bisociative 🏆 Nobel Ground Truth (calibration benchmark, not engine-generated) 🏛️ Established Department 🌗 Contested (1-of-3) |
 | 340 | 💀 Refuted / Rejected | Control theory — Kalman filtering × Physical Magnetic Fluctuation | **+57** | ADJACENT_ACTIVE | 67% survived | formalism-shaped | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 🛡️ Survived the Gauntlet 🔬🔥 Actively Researched (current) |
 | 341 | 💀 Refuted / Rejected | Political science — coalition government formation | **+47** | ADJACENT_ACTIVE | 67% survived | — | 🎭 Janusian 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 🛡️ Survived the Gauntlet 🔬 Actively Researched |
 | 342 | 💀 Refuted / Rejected | Cognitive Attention Map Evolution × Informational Event-Driven Systems | **+40** | ADJACENT_ACTIVE | 0% survived | — | 🧬 Bisociative 🗺️ Frontier Research Group 💀 Refuted 🔬🔥 Actively Researched (current) |
@@ -836,6 +836,36 @@ The composability pre-filter never gates generation — it only logs a signal (s
 - Adversarial refutation survived (2-of-3): +12
 - Actively researched, most recent evidence 2001 — real, but not a currently live thread: +10
 
+### Planck — Quantization × Thermodynamics — 🛡️ Survived Refutation (+37)
+
+- Phase 2 ADJACENT_ACTIVE: +0 (ground truth — no discovery credit, see below)
+- Adversarial refutation survived (2-of-3): +12
+- Actively researched, most recent evidence 2026 (0y old — a live, current research thread): +25
+
+### Hayek — Dispersed Knowledge × Market Price Signals — 🛡️ Survived Refutation (+37)
+
+- Phase 2 ADJACENT_ACTIVE: +0 (ground truth — no discovery credit, see below)
+- Adversarial refutation survived (2-of-3): +12
+- Actively researched, most recent evidence 2024 (2y old — a live, current research thread): +25
+
+### Nash — Game Theory × Evolutionary Biology — 🛡️ Survived Refutation (+35)
+
+- Phase 2 COLLISION: +0 (ground truth — no discovery credit, see below)
+- Adversarial refutation survived (3-of-3): +20
+- Actively researched, most recent evidence 2018 (8y old): +15
+
+### Jacob & Monod — Gene Regulation × Control Engineering — 🛡️ Survived Refutation (+27)
+
+- Phase 2 NO_SIGNAL: +0 (pending)
+- Adversarial refutation survived (2-of-3): +12
+- Actively researched, most recent evidence 2021 (5y old): +15
+
+### Ostrom — Commons Governance × Ecology — 🛡️ Survived Refutation (+27)
+
+- Phase 2 ADJACENT_ACTIVE: +0 (ground truth — no discovery credit, see below)
+- Adversarial refutation survived (2-of-3): +12
+- Actively researched, most recent evidence 2016 (10y old): +15
+
 ### Oceanography — thermocline stratification — 🛡️ Survived Refutation (+27)
 
 - Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5
@@ -843,39 +873,15 @@ The composability pre-filter never gates generation — it only logs a signal (s
 - Adversarial refutation survived (2-of-3): +12
 - Actively researched, most recent evidence 2022 (4y old): +15
 
-### Nash — Game Theory × Evolutionary Biology — 🛡️ Survived Refutation (+20)
+### Simon — Bounded Rationality × Heuristic Search — 🛡️ Survived Refutation (+22)
 
 - Phase 2 COLLISION: +0 (ground truth — no discovery credit, see below)
-- Adversarial refutation survived (3-of-3): +20
+- Adversarial refutation survived (2-of-3): +12
+- Actively researched, most recent evidence 2014 — real, but not a currently live thread: +10
 
 ### Kahneman & Tversky — Cognitive Bias × Rational-Choice Theory — 🛡️ Survived Refutation (+12)
 
 - Phase 2 COLLISION: +0 (ground truth — no discovery credit, see below)
-- Adversarial refutation survived (2-of-3): +12
-
-### Planck — Quantization × Thermodynamics — 🛡️ Survived Refutation (+12)
-
-- Phase 2 ADJACENT_ACTIVE: +0 (ground truth — no discovery credit, see below)
-- Adversarial refutation survived (2-of-3): +12
-
-### Jacob & Monod — Gene Regulation × Control Engineering — 🛡️ Survived Refutation (+12)
-
-- Phase 2 NO_SIGNAL: +0 (pending)
-- Adversarial refutation survived (2-of-3): +12
-
-### Ostrom — Commons Governance × Ecology — 🛡️ Survived Refutation (+12)
-
-- Phase 2 ADJACENT_ACTIVE: +0 (ground truth — no discovery credit, see below)
-- Adversarial refutation survived (2-of-3): +12
-
-### Simon — Bounded Rationality × Heuristic Search — 🛡️ Survived Refutation (+12)
-
-- Phase 2 COLLISION: +0 (ground truth — no discovery credit, see below)
-- Adversarial refutation survived (2-of-3): +12
-
-### Hayek — Dispersed Knowledge × Market Price Signals — 🛡️ Survived Refutation (+12)
-
-- Phase 2 ADJACENT_ACTIVE: +0 (ground truth — no discovery credit, see below)
 - Adversarial refutation survived (2-of-3): +12
 
 ### Einstein — Special Relativity × Maxwell — Electromagnetism — 🛡️ Survived Refutation (+12)
@@ -2727,11 +2733,26 @@ The composability pre-filter never gates generation — it only logs a signal (s
 -   independently confirmed (3 separate agents, full agreement)
 - Actively researched, most recent evidence 2026 (0y old — a live, current research thread): +25
 
-### Watson & Crick — Molecular Biology × Franklin — X-Ray Crystallography — 🌗 Contested (-5)
+### Coase — Transaction Costs × Property Rights — 🌗 Contested (+20)
+
+- Phase 2 ADJACENT_ACTIVE: +0 (ground truth — no discovery credit, see below)
+- Adversarial refutation REFUTED, but a real near-miss (1-of-3 survive): -5
+-   independently confirmed (3 separate agents, full agreement)
+- Actively researched, most recent evidence 2024 (2y old — a live, current research thread): +25
+
+### Watson & Crick — Molecular Biology × Franklin — X-Ray Crystallography — 🌗 Contested (+5)
 
 - Phase 2 COLLISION: +0 (ground truth — no discovery credit, see below)
 - Adversarial refutation REFUTED, but a real near-miss (1-of-3 survive): -5
 -   independently confirmed (3 separate agents, full agreement)
+- Actively researched, most recent evidence 1993 — real, but not a currently live thread: +10
+
+### Feynman — quantum mechanics × Computation — simulation — 🌗 Contested (+5)
+
+- Phase 2 COLLISION: +0 (ground truth — no discovery credit, see below)
+- Adversarial refutation REFUTED, but a real near-miss (1-of-3 survive): -5
+-   independently confirmed (3 separate agents, full agreement)
+- Actively researched, most recent evidence 2013 — real, but not a currently live thread: +10
 
 ### Hopfield — Statistical Physics × Neural Networks — 🌗 Contested (-5)
 
@@ -2739,19 +2760,7 @@ The composability pre-filter never gates generation — it only logs a signal (s
 - Adversarial refutation REFUTED, but a real near-miss (1-of-3 survive): -5
 -   independently confirmed (3 separate agents, full agreement)
 
-### Coase — Transaction Costs × Property Rights — 🌗 Contested (-5)
-
-- Phase 2 ADJACENT_ACTIVE: +0 (ground truth — no discovery credit, see below)
-- Adversarial refutation REFUTED, but a real near-miss (1-of-3 survive): -5
--   independently confirmed (3 separate agents, full agreement)
-
 ### Becker — Rational Choice × Household Behavior — 🌗 Contested (-5)
-
-- Phase 2 COLLISION: +0 (ground truth — no discovery credit, see below)
-- Adversarial refutation REFUTED, but a real near-miss (1-of-3 survive): -5
--   independently confirmed (3 separate agents, full agreement)
-
-### Feynman — quantum mechanics × Computation — simulation — 🌗 Contested (-5)
 
 - Phase 2 COLLISION: +0 (ground truth — no discovery credit, see below)
 - Adversarial refutation REFUTED, but a real near-miss (1-of-3 survive): -5

@@ -34585,11 +34585,11 @@
     "refutation_filename": "refutations/nobel-ground-truth-kahneman-tversky-refutation.md",
     "refutation_content": "# Adversarial Refutation: Bisociation — Kahneman & Tversky — Cognitive Bias × Rational-Choice Theory\n\n**Original**: `hypotheses/nobel-ground-truth-kahneman_tversky.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 2 of 3 survive → **SURVIVES** (promoted out of NO_SIGNAL)\n\n- **Coherence — SURVIVES.** The core claim rests on the shared term 'independence axiom,' which refers to the same formal principle in both psychology (as it relates to cognitive biases) and economics (as it pertains to rational-choice theory). While the mechanisms producing the observed behaviors differ between the two domains, the term itself denotes the same formal object, thus avoiding equivocation. The mapping between cognitive biases and rational-choice theory is coherent, as it highlights a structured departure from traditional economic models, supported by empirical evidence.\n- **Testability — SURVIVES.** The core claim names specific, checkable evidence in the form of the Allais paradox and Prospect Theory, both of which are well-documented and have been validated through empirical research. The claim clearly operationalizes the hypothesis by referencing the independence axiom of expected-utility theory and the structured departure from it, thus providing a concrete basis for testing and verification.\n- **Triviality — REFUTED.** The core claim states that human choices systematically violate a specific axiom of expected-utility theory due to loss aversion, formalized as Prospect Theory. When stripped of domain-specific vocabulary, the claim reduces to a general assertion about complex systems exhibiting predictable deviations from a theoretical model based on a specific mechanism (loss aversion). This generic formulation applies to many complex systems, thus failing the triviality test.\n\n## What survived, and why this matters\n\n2 of 3 independent lenses could not kill this claim. Per the promotion rule (2-of-3 survival), this hypothesis moves out of NO_SIGNAL — real signal the claim isn't vacuous, not proof it's correct. Still worth Phase 3 outreach consideration if a real researcher in the adjacent field can be identified.\n",
     "refutation_independently_confirmed": true,
-    "actively_researched": null,
-    "active_research_note": null,
-    "active_research_matches": null,
+    "actively_researched": false,
+    "active_research_note": "While Daniel Kahneman and Amos Tversky's work on cognitive biases and rational-choice theory is foundational, no specific claim or mechanism was provided to verify against existing research. Their extensive studies, such as the development of prospect theory and the identification of various cognitive biases, have been widely documented. However, without a precise claim to assess, it's challenging to confirm the existence of corresponding research.",
+    "active_research_matches": [],
     "active_research_most_recent_year": null,
-    "active_research_checked_date": null
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "nobel-ground-truth-watson-crick-franklin",
@@ -34600,17 +34600,19 @@
       "Franklin — X-Ray Crystallography"
     ],
     "verdict": "COLLISION",
-    "points": -5,
+    "points": 5,
     "badges": [
       "🧬 Bisociative",
       "🏆 Nobel Ground Truth (calibration benchmark, not engine-generated)",
       "🏛️ Established Department",
-      "🌗 Contested (1-of-3)"
+      "🌗 Contested (1-of-3)",
+      "🔬 Actively Researched (historical)"
     ],
     "breakdown": [
       "Phase 2 COLLISION: +0 (ground truth — no discovery credit, see below)",
       "Adversarial refutation REFUTED, but a real near-miss (1-of-3 survive): -5",
-      "  independently confirmed (3 separate agents, full agreement)"
+      "  independently confirmed (3 separate agents, full agreement)",
+      "Actively researched, most recent evidence 1993 — real, but not a currently live thread: +10"
     ],
     "held_out_reason": null,
     "tier_rank": 4,
@@ -34628,11 +34630,33 @@
     "refutation_filename": "refutations/nobel-ground-truth-watson-crick-franklin-refutation.md",
     "refutation_content": "# Adversarial Refutation: Bisociation — Watson & Crick — Molecular Biology × Franklin — X-Ray Crystallography\n\n**Original**: `hypotheses/nobel-ground-truth-watson_crick_franklin.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 1 of 3 survive → **REFUTED**\n\n- **Coherence — REFUTED.** The claim relies on the term 'double helix' to connect the geometric constraints from Franklin's X-ray diffraction pattern with the chemical structure of DNA. However, 'double helix' in the context of molecular biology refers specifically to the arrangement of nucleotides and their interactions, while in crystallography, it refers to the geometric representation of the diffraction pattern. These are not the same formal objects; the term is being used to conflate distinct meanings in each domain, leading to equivocation.\n- **Testability — SURVIVES.** The claim operationalizes the hypothesis by naming specific geometric constraints from Rosalind Franklin's X-ray diffraction pattern (Photo 51) that directly relate to the chemical structure of DNA. It also cites the Meselson-Stahl experiment (1958) as a distinct, independently-tested consequence of the proposed structure, providing a clear metric and rejection threshold. Thus, the claim is testable and not vague.\n- **Triviality — REFUTED.** The claim describes specific geometric constraints from Rosalind Franklin's X-ray diffraction pattern that lead to a unique chemical structure of DNA, which is a precise relationship rather than a general statement about complex systems. When stripped of domain-specific vocabulary, the claim does not reduce to something true of almost any two complex systems, as it relies on specific measurements and outcomes that do not apply broadly. The phrase being tested for genericness, 'the real geometric constraints in X-ray diffraction patterns uniquely constrain the chemical structure of a molecule,' is not a trivial statement applicable to all complex systems.\n\n## No steelman offered\n\nAll three lenses independently converged on REFUTED for this case. If revisited, it would need a genuinely tighter formulation, not a restatement of the same claim.\n",
     "refutation_independently_confirmed": true,
-    "actively_researched": null,
-    "active_research_note": null,
-    "active_research_matches": null,
-    "active_research_most_recent_year": null,
-    "active_research_checked_date": null
+    "actively_researched": true,
+    "active_research_note": "The provided matches include real, specific research evidence directly addressing the mechanism of DNA's double helix structure, as elucidated by Watson and Crick, and supported by X-ray crystallography data from Rosalind Franklin and others.",
+    "active_research_matches": [
+      {
+        "title": "GENETICAL IMPLICATIONS OF THE STRUCTURE OF DEOXYRIBONUCLEIC ACID",
+        "researcher_or_authors": "J.D. Watson, F.H.C. Crick",
+        "year": 1993,
+        "url": "https://jamanetwork.com/journals/jama/article-abstract/405515",
+        "explanation": "This 1993 article by Watson and Crick discusses the genetic implications of their proposed DNA structure, referencing X-ray evidence from King's College, London, which supports their model."
+      },
+      {
+        "title": "The molecular configuration of deoxyribonucleic acid: II. Molecular models and their fourier transforms",
+        "researcher_or_authors": "J.D. Watson, F.H.C. Crick",
+        "year": 1960,
+        "url": "https://www.sciencedirect.com/science/article/pii/S0022283660800058",
+        "explanation": "This 1960 paper by Watson and Crick presents molecular models of DNA based on X-ray diffraction data, confirming the double helix structure."
+      },
+      {
+        "title": "The structure of DNA as deduced from fiber X-ray crystallography",
+        "researcher_or_authors": "S. Arnott",
+        "year": 1973,
+        "url": "https://www.sciencedirect.com/science/article/pii/S0092824073800308",
+        "explanation": "This 1973 study by S. Arnott analyzes X-ray diffraction patterns of DNA fibers, providing theoretical support for the double helix model."
+      }
+    ],
+    "active_research_most_recent_year": 1993,
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "nobel-ground-truth-hopfield",
@@ -34671,11 +34695,11 @@
     "refutation_filename": "refutations/nobel-ground-truth-hopfield-refutation.md",
     "refutation_content": "# Adversarial Refutation: Bisociation — Hopfield — Statistical Physics × Neural Networks\n\n**Original**: `hypotheses/nobel-ground-truth-hopfield.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 1 of 3 survive → **REFUTED**\n\n- **Coherence — REFUTED.** The claim relies on the term 'energy function' which, while it appears in both statistical physics and neural networks, denotes different underlying concepts. In statistical physics, the energy function describes the state of a physical system, while in neural networks, it represents a computational objective for optimization. Thus, the claim does not establish a genuine structural mapping but rather conflates two distinct referents, leading to equivocation.\n- **Testability — SURVIVES.** The core claim explicitly names the Hopfield network and its mathematical relationship to the Ising model, providing a specific, checkable piece of evidence. The claim asserts that the energy function of the Hopfield network is identical to that of the Ising model, which serves as the operationalized metric. The reference to the Nobel Prize further supports the claim's validity, as it indicates recognition of the foundational work in this area.\n- **Triviality — REFUTED.** The core claim states that a network of interconnected binary units converges to a local minimum of an energy function with the exact mathematical form of the Ising model, not merely an analogy. When stripped of domain-specific vocabulary, the claim reduces to a statement about two complex systems converging to a specific mathematical form, which is a trivial assertion applicable to many systems. This generic nature indicates that the claim lacks the necessary specificity to be considered novel or significant.\n\n## No steelman offered\n\nAll three lenses independently converged on REFUTED for this case. If revisited, it would need a genuinely tighter formulation, not a restatement of the same claim.\n",
     "refutation_independently_confirmed": true,
-    "actively_researched": null,
-    "active_research_note": null,
-    "active_research_matches": null,
+    "actively_researched": false,
+    "active_research_note": "The search did not yield any specific matches to the exact mechanism described in the claim. While there are numerous studies on Hopfield neural networks within the domains of statistical physics and neural networks, none directly correspond to the specific mechanism outlined in the claim.",
+    "active_research_matches": [],
     "active_research_most_recent_year": null,
-    "active_research_checked_date": null
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "nobel-ground-truth-nash-evolution",
@@ -34686,16 +34710,18 @@
       "Evolutionary Biology"
     ],
     "verdict": "COLLISION",
-    "points": 20,
+    "points": 35,
     "badges": [
       "🧬 Bisociative",
       "🏆 Nobel Ground Truth (calibration benchmark, not engine-generated)",
       "🏛️ Established Department",
-      "🛡️ Survived the Gauntlet"
+      "🛡️ Survived the Gauntlet",
+      "🔬 Actively Researched"
     ],
     "breakdown": [
       "Phase 2 COLLISION: +0 (ground truth — no discovery credit, see below)",
-      "Adversarial refutation survived (3-of-3): +20"
+      "Adversarial refutation survived (3-of-3): +20",
+      "Actively researched, most recent evidence 2018 (8y old): +15"
     ],
     "held_out_reason": null,
     "tier_rank": 1,
@@ -34713,11 +34739,33 @@
     "refutation_filename": "refutations/nobel-ground-truth-nash-evolution-refutation.md",
     "refutation_content": "# Adversarial Refutation: Bisociation — Nash — Game Theory × Evolutionary Biology\n\n**Original**: `hypotheses/nobel-ground-truth-nash_evolution.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 3 of 3 survive → **SURVIVES** (promoted out of NO_SIGNAL)\n\n- **Coherence — SURVIVES.** The core claim identifies the term 'Nash equilibrium' as a shared formal object in both game theory and evolutionary biology. In both domains, it refers to a state where strategies are stable against deviations, whether through conscious reasoning in game theory or through differential reproductive success in evolutionary contexts. This demonstrates a coherent structural mapping without equivocation, as both domains utilize the same mathematical framework to describe stability, albeit under different mechanisms.\n- **Testability — SURVIVES.** The claim names the concept of 'evolutionarily stable strategy' (ESS) as introduced by Maynard Smith and Price in 1973, which is a specific, checkable theorem in evolutionary biology. This theorem operationalizes the hypothesis by establishing that an ESS is a Nash equilibrium, thus providing a clear metric, comparison condition, and rejection threshold. The claim is therefore not vague and is grounded in established theoretical frameworks.\n- **Triviality — SURVIVES.** The core claim maintains specificity by asserting that an evolutionarily stable strategy can exist independently of conscious decision-making while still being a Nash equilibrium. The phrase tested for genericness, 'A strategy can be evolutionarily stable -- resistant to invasion by any alternative strategy -- without any player consciously choosing it or reasoning strategically at all,' does not reduce to a trivial statement applicable to most complex systems, as it retains the unique relationship between evolutionary stability and Nash equilibria.\n\n## What survived, and why this matters\n\n3 of 3 independent lenses could not kill this claim. Per the promotion rule (2-of-3 survival), this hypothesis moves out of NO_SIGNAL — real signal the claim isn't vacuous, not proof it's correct. Still worth Phase 3 outreach consideration if a real researcher in the adjacent field can be identified.\n",
     "refutation_independently_confirmed": true,
-    "actively_researched": null,
-    "active_research_note": null,
-    "active_research_matches": null,
-    "active_research_most_recent_year": null,
-    "active_research_checked_date": null
+    "actively_researched": true,
+    "active_research_note": "These studies provide concrete examples of research that connects Nash equilibrium concepts with evolutionary stability in biological contexts, addressing the specific mechanism of interest.",
+    "active_research_matches": [
+      {
+        "title": "Nash equilibrium and evolutionary stability in large- and finite-population \"playing the field\" models",
+        "researcher_or_authors": "V.P. Crawford",
+        "year": 1990,
+        "url": "https://doi.org/10.1016/S0022-5193(05)80536-3",
+        "explanation": "This study examines the relationship between Nash equilibrium and evolutionary stability in large and finite populations, demonstrating that evolutionarily stable strategies (ESS) correspond to symmetric Nash equilibria in large populations."
+      },
+      {
+        "title": "On Nash Equilibrium and Evolutionarily Stable States That Are Not Characterised by the Folk Theorem",
+        "researcher_or_authors": "Jiawei Li, Graham Kendall",
+        "year": 2015,
+        "url": "https://doi.org/10.1371/journal.pone.0136032",
+        "explanation": "This research explores Nash equilibria and evolutionarily stable states beyond those defined by the folk theorem, introducing the concept of type-k equilibria where groups of players coordinate their actions."
+      },
+      {
+        "title": "Evolutionary games and matching rules",
+        "researcher_or_authors": "Martin Kaae Jensen, Alexandros Rigos",
+        "year": 2018,
+        "url": "https://link.springer.com/article/10.1007/s00182-018-0630-1",
+        "explanation": "This paper investigates evolutionary games with non-uniform matching, analyzing how different matching rules affect Nash equilibria and evolutionary stability in population games."
+      }
+    ],
+    "active_research_most_recent_year": 2018,
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "nobel-ground-truth-planck",
@@ -34728,16 +34776,18 @@
       "Thermodynamics"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 12,
+    "points": 37,
     "badges": [
       "🧬 Bisociative",
       "🏆 Nobel Ground Truth (calibration benchmark, not engine-generated)",
       "🗺️ Frontier Research Group",
-      "🛡️ Survived the Gauntlet"
+      "🛡️ Survived the Gauntlet",
+      "🔬🔥 Actively Researched (current)"
     ],
     "breakdown": [
       "Phase 2 ADJACENT_ACTIVE: +0 (ground truth — no discovery credit, see below)",
-      "Adversarial refutation survived (2-of-3): +12"
+      "Adversarial refutation survived (2-of-3): +12",
+      "Actively researched, most recent evidence 2026 (0y old — a live, current research thread): +25"
     ],
     "held_out_reason": null,
     "tier_rank": 1,
@@ -34755,11 +34805,33 @@
     "refutation_filename": "refutations/nobel-ground-truth-planck-refutation.md",
     "refutation_content": "# Adversarial Refutation: Bisociation — Planck — Quantization × Thermodynamics\n\n**Original**: `hypotheses/nobel-ground-truth-planck.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 2 of 3 survive → **SURVIVES** (promoted out of NO_SIGNAL)\n\n- **Coherence — SURVIVES.** The core claim rests on the shared term 'energy exchange,' which refers to the same formal concept in both domains: the quantization of energy in Planck's theory and the thermodynamic behavior of blackbody radiation. In both contexts, energy exchange is treated as a discrete process, allowing for a coherent mapping between the two domains without equivocation. The claim successfully demonstrates how the introduction of quantization resolves the ultraviolet catastrophe, maintaining the integrity of both domains.\n- **Testability — SURVIVES.** The claim explicitly names a specific historical experiment and result, namely Planck's resolution of the ultraviolet catastrophe through the introduction of energy quanta (E = hf). This is a checkable piece of evidence that operationalizes the hypothesis, satisfying the testability lens without requiring additional metrics or thresholds.\n- **Triviality — REFUTED.** The core claim states that the observed blackbody radiation spectrum cannot be derived from classical physics' assumption of continuous energy exchange, and that quantized energy exchange reproduces the observed spectrum. When stripped of domain-specific vocabulary, this reduces to a statement about the behavior of energy exchange in complex systems. The phrase being tested for genericness is: 'The observed spectrum cannot be derived from the assumption that energy exchange is continuous.' This is a general statement that could apply to many complex systems, thus failing the triviality lens.\n\n## What survived, and why this matters\n\n2 of 3 independent lenses could not kill this claim. Per the promotion rule (2-of-3 survival), this hypothesis moves out of NO_SIGNAL — real signal the claim isn't vacuous, not proof it's correct. Still worth Phase 3 outreach consideration if a real researcher in the adjacent field can be identified.\n",
     "refutation_independently_confirmed": true,
-    "actively_researched": null,
-    "active_research_note": null,
-    "active_research_matches": null,
-    "active_research_most_recent_year": null,
-    "active_research_checked_date": null
+    "actively_researched": true,
+    "active_research_note": "The provided matches include real research papers that specifically address the mechanism of Planck's quantization in thermodynamics, as evidenced by their titles, authors, publication years, and URLs.",
+    "active_research_matches": [
+      {
+        "title": "Continuous Reformulation of Planck’s Law",
+        "researcher_or_authors": "Jaafar Gaber",
+        "year": 2025,
+        "url": "https://www.researchgate.net/publication/398874461_Continuous_Reformulation_of_Planck%27s_Law",
+        "explanation": "This paper presents a continuous reformulation of Planck’s quantization law within a continuous and geometric thermodynamic framework, generalizing the discrete spectrum underlying the traditional Planck distribution."
+      },
+      {
+        "title": "The extended phase space thermodynamics of Planck-scale-corrected Reissner-Nordström-anti-de Sitter black hole",
+        "researcher_or_authors": "Iarley Lobo, Luis Cesar Nunes dos Santos, Valdir B. Bezerra, J. P. Morais Graça",
+        "year": 2021,
+        "url": "https://www.sciencedirect.com/science/article/pii/S0550321321002650",
+        "explanation": "This study analyzes the effect of Planck-scale modified radiation equation of state on the Reissner-Nordström-anti-de Sitter black hole, discussing deformed thermodynamic quantities and phase transitions."
+      },
+      {
+        "title": "Quantum corrected thermodynamics and horizon quantization of the Reissner–Nordström black hole",
+        "researcher_or_authors": "S. Jalalzadeh, H. Moradpour",
+        "year": 2026,
+        "url": "https://www.sciencedirect.com/science/article/pii/S0370269326001711",
+        "explanation": "This letter develops a unified semiclassical framework for the thermodynamics and quantization of the Reissner–Nordström black hole, formulating a horizon-by-horizon first law and Smarr relation."
+      }
+    ],
+    "active_research_most_recent_year": 2026,
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "nobel-ground-truth-jacob-monod",
@@ -34770,15 +34842,17 @@
       "Control Engineering"
     ],
     "verdict": "NO_SIGNAL",
-    "points": 12,
+    "points": 27,
     "badges": [
       "🧬 Bisociative",
       "🏆 Nobel Ground Truth (calibration benchmark, not engine-generated)",
-      "🛡️ Survived the Gauntlet"
+      "🛡️ Survived the Gauntlet",
+      "🔬 Actively Researched"
     ],
     "breakdown": [
       "Phase 2 NO_SIGNAL: +0 (pending)",
-      "Adversarial refutation survived (2-of-3): +12"
+      "Adversarial refutation survived (2-of-3): +12",
+      "Actively researched, most recent evidence 2021 (5y old): +15"
     ],
     "held_out_reason": null,
     "tier_rank": 1,
@@ -34796,11 +34870,33 @@
     "refutation_filename": "refutations/nobel-ground-truth-jacob-monod-refutation.md",
     "refutation_content": "# Adversarial Refutation: Bisociation — Jacob & Monod — Gene Regulation × Control Engineering\n\n**Original**: `hypotheses/nobel-ground-truth-jacob_monod.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 2 of 3 survive → **SURVIVES** (promoted out of NO_SIGNAL)\n\n- **Coherence — SURVIVES.** The core claim identifies a specific shared structure: the feedback control mechanism in both the lac operon and control engineering systems. In both domains, the term 'feedback' refers to a formal object that describes a system's response to changes in its environment, despite the underlying processes differing (molecular vs. engineering). This mapping does not equivocate on terms, as both domains utilize the same formal structure of feedback control, thus fulfilling the criteria for bisociation without equivocation.\n- **Testability — SURVIVES.** The core claim names a specific, checkable result from the work of Jacob, Monod, and Lwoff regarding the lac operon, which is a well-documented genetic control mechanism. This historical experiment and its findings serve as the operationalized metric, comparison condition, and rejection threshold for the hypothesis. The claim is thus testable and not vague, satisfying the criteria for the testability lens.\n- **Triviality — REFUTED.** The core claim describes a specific mechanism of gene regulation in E. coli, detailing the role of a repressor protein and its interaction with DNA. When stripped of domain-specific vocabulary, the claim reduces to a general statement about feedback control systems in complex biological processes, which is true of many systems beyond just genetics and control engineering. The phrase being tested for genericness is: 'a real molecular feedback-control circuit, formally identical to negative feedback in control engineering.' This is a broader statement that applies to various complex systems, thus failing the triviality lens.\n\n## What survived, and why this matters\n\n2 of 3 independent lenses could not kill this claim. Per the promotion rule (2-of-3 survival), this hypothesis moves out of NO_SIGNAL — real signal the claim isn't vacuous, not proof it's correct. Still worth Phase 3 outreach consideration if a real researcher in the adjacent field can be identified.\n",
     "refutation_independently_confirmed": true,
-    "actively_researched": null,
-    "active_research_note": null,
-    "active_research_matches": null,
-    "active_research_most_recent_year": null,
-    "active_research_checked_date": null
+    "actively_researched": true,
+    "active_research_note": "The cited papers directly address the operon model of gene regulation proposed by Jacob and Monod, indicating ongoing research into this specific mechanism.",
+    "active_research_matches": [
+      {
+        "title": "Design of the lac gene circuit revisited",
+        "researcher_or_authors": "Michael A. Savageau",
+        "year": 2011,
+        "url": "https://doi.org/10.1016/j.mbs.2011.03.008",
+        "explanation": "This paper revisits the lac operon model proposed by Jacob and Monod, analyzing its design and function in gene regulation."
+      },
+      {
+        "title": "Artificial Gene Regulatory Networks—A Review",
+        "researcher_or_authors": "Not specified",
+        "year": 2017,
+        "url": "https://direct.mit.edu/artl/article/24/4/296/2909/Artificial-Gene-Regulatory-Networks-A-Review",
+        "explanation": "This review discusses the concept of gene regulation, including the operon model, and its applications in artificial gene regulatory networks."
+      },
+      {
+        "title": "Designing Biological Circuits: Synthetic Biology Within the Operon Model and Beyond",
+        "researcher_or_authors": "Not specified",
+        "year": 2021,
+        "url": "https://eurekamag.com/research/079/148/079148241.php",
+        "explanation": "This article examines how the operon model laid the foundation for synthetic gene networks and the field of synthetic biology."
+      }
+    ],
+    "active_research_most_recent_year": 2021,
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "nobel-ground-truth-ostrom",
@@ -34811,16 +34907,18 @@
       "Ecology"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 12,
+    "points": 27,
     "badges": [
       "🧬 Bisociative",
       "🏆 Nobel Ground Truth (calibration benchmark, not engine-generated)",
       "🗺️ Frontier Research Group",
-      "🛡️ Survived the Gauntlet"
+      "🛡️ Survived the Gauntlet",
+      "🔬 Actively Researched"
     ],
     "breakdown": [
       "Phase 2 ADJACENT_ACTIVE: +0 (ground truth — no discovery credit, see below)",
-      "Adversarial refutation survived (2-of-3): +12"
+      "Adversarial refutation survived (2-of-3): +12",
+      "Actively researched, most recent evidence 2016 (10y old): +15"
     ],
     "held_out_reason": null,
     "tier_rank": 1,
@@ -34838,11 +34936,33 @@
     "refutation_filename": "refutations/nobel-ground-truth-ostrom-refutation.md",
     "refutation_content": "# Adversarial Refutation: Bisociation — Ostrom — Commons Governance × Ecology\n\n**Original**: `hypotheses/nobel-ground-truth-ostrom.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 2 of 3 survive → **SURVIVES** (promoted out of NO_SIGNAL)\n\n- **Coherence — SURVIVES.** The core claim rests on the shared term 'governance,' which refers to the same formal object in both domains: the management of common-pool resources. In institutional economics, governance pertains to the rules and structures that facilitate collective action, while in ecology, it refers to the mechanisms that sustain resource use without depletion. Both domains analyze how communities organize themselves to manage shared resources effectively, demonstrating a coherent structural mapping without equivocation.\n- **Testability — SURVIVES.** The core claim references Elinor Ostrom's work, specifically her book 'Governing the Commons,' which provides empirical evidence and identifies design principles for effective governance of common-pool resources. This constitutes a specific, checkable piece of evidence that operationalizes the hypothesis, satisfying the testability lens. The claim is not vague and clearly outlines the mechanisms through which local communities can manage resources sustainably.\n- **Triviality — REFUTED.** The core claim asserts that local communities can sustainably manage common-pool resources through self-organized governance, which is a specific assertion about the mechanisms of governance in shared resource contexts. When stripped of domain-specific vocabulary, the claim reduces to a general statement about complex systems managing shared resources, which is true of many systems and lacks the specificity required to be a unique or novel insight. The phrase being tested for genericness is: 'local communities repeatedly self-organize durable governance institutions that sustainably manage common-pool resources without either privatization or centralized regulation.' This is indeed a broader statement applicable to various complex systems, thus failing the triviality test.\n\n## What survived, and why this matters\n\n2 of 3 independent lenses could not kill this claim. Per the promotion rule (2-of-3 survival), this hypothesis moves out of NO_SIGNAL — real signal the claim isn't vacuous, not proof it's correct. Still worth Phase 3 outreach consideration if a real researcher in the adjacent field can be identified.\n",
     "refutation_independently_confirmed": true,
-    "actively_researched": null,
-    "active_research_note": null,
-    "active_research_matches": null,
-    "active_research_most_recent_year": null,
-    "active_research_checked_date": null
+    "actively_researched": true,
+    "active_research_note": "The Ostrom Workshop at Indiana University is a leading center for research on commons governance, directly building upon Elinor Ostrom's work. Additionally, studies like Baggio et al. (2016) and Folke (2007) further investigate the dynamics of commons governance, demonstrating active research in this specific area.",
+    "active_research_matches": [
+      {
+        "title": "Commons Governance Program: Research",
+        "researcher_or_authors": "Ostrom Workshop, Indiana University",
+        "year": null,
+        "url": "https://ostrom.indiana.edu/research/commons-governance/index.html",
+        "explanation": "The Ostrom Workshop at Indiana University conducts multidisciplinary research on commons governance, building upon Elinor Ostrom's foundational work in this field."
+      },
+      {
+        "title": "Explaining success and failure in the commons: the configural nature of Ostrom's institutional design principles",
+        "researcher_or_authors": "Jacopo A. Baggio, Allain J. Barnett, Irene Perez-Ibarra, Ute Brady, Elicia Ratajczyk, Nathan Rollins, Cathy Rubiños, Hoon C. Shin, David J. Yu, Rimjhim Aggarwal, John M. Anderies, Marco A. Janssen",
+        "year": 2016,
+        "url": "https://thecommonsjournal.org/articles/10.18352/ijc.634",
+        "explanation": "This study analyzes the success and failure of commons governance by examining the interrelatedness of Ostrom's institutional design principles."
+      },
+      {
+        "title": "Social–ecological systems and adaptive governance of the commons",
+        "researcher_or_authors": "Carl Folke",
+        "year": 2007,
+        "url": "https://esj-journals.onlinelibrary.wiley.com/doi/10.1007/s11284-006-0074-0",
+        "explanation": "Carl Folke explores the adaptive governance of commons within social-ecological systems, contributing to the understanding of sustainable resource management."
+      }
+    ],
+    "active_research_most_recent_year": 2016,
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "nobel-ground-truth-simon",
@@ -34853,16 +34973,18 @@
       "Heuristic Search"
     ],
     "verdict": "COLLISION",
-    "points": 12,
+    "points": 22,
     "badges": [
       "🧬 Bisociative",
       "🏆 Nobel Ground Truth (calibration benchmark, not engine-generated)",
       "🏛️ Established Department",
-      "🛡️ Survived the Gauntlet"
+      "🛡️ Survived the Gauntlet",
+      "🔬 Actively Researched (historical)"
     ],
     "breakdown": [
       "Phase 2 COLLISION: +0 (ground truth — no discovery credit, see below)",
-      "Adversarial refutation survived (2-of-3): +12"
+      "Adversarial refutation survived (2-of-3): +12",
+      "Actively researched, most recent evidence 2014 — real, but not a currently live thread: +10"
     ],
     "held_out_reason": null,
     "tier_rank": 1,
@@ -34880,11 +35002,33 @@
     "refutation_filename": "refutations/nobel-ground-truth-simon-refutation.md",
     "refutation_content": "# Adversarial Refutation: Bisociation — Simon — Bounded Rationality × Heuristic Search\n\n**Original**: `hypotheses/nobel-ground-truth-simon.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 2 of 3 survive → **SURVIVES** (promoted out of NO_SIGNAL)\n\n- **Coherence — SURVIVES.** The core claim effectively maps the concept of bounded rationality in psychology to heuristic search in computer science without equivocation. Both domains utilize the same underlying principle of limiting the search space to find satisfactory solutions rather than optimal ones, which is a shared formal structure. The terms 'bounded rationality' and 'heuristic search' refer to the same decision-making process under constraints, thus maintaining coherence in the bisociation.\n- **Testability — SURVIVES.** The core claim explicitly references Herbert Simon's concept of bounded rationality and its implications for decision-making, which is a named and checkable theory. Additionally, it connects this theory to the development of heuristic search algorithms in AI, citing Simon's collaboration with Newell and the creation of the 'Logic Theorist.' This provides a clear operationalization of the hypothesis, satisfying the testability criteria.\n- **Triviality — REFUTED.** The core claim states that decision-makers do not optimize over the full space of alternatives but instead satisfice by searching a limited space using heuristics. When stripped of domain-specific vocabulary, this reduces to a general statement about complex systems using limited resources to find satisfactory solutions, which is true of many systems beyond human decision-making and AI. The specific mechanisms of bounded rationality and heuristic search are lost in this generalization, making the claim trivial.\n\n## What survived, and why this matters\n\n2 of 3 independent lenses could not kill this claim. Per the promotion rule (2-of-3 survival), this hypothesis moves out of NO_SIGNAL — real signal the claim isn't vacuous, not proof it's correct. Still worth Phase 3 outreach consideration if a real researcher in the adjacent field can be identified.\n",
     "refutation_independently_confirmed": true,
-    "actively_researched": null,
-    "active_research_note": null,
-    "active_research_matches": null,
-    "active_research_most_recent_year": null,
-    "active_research_checked_date": null
+    "actively_researched": true,
+    "active_research_note": "These publications provide concrete evidence of ongoing research into Herbert Simon's theories of bounded rationality and heuristic search, demonstrating their continued relevance and application in various fields.",
+    "active_research_matches": [
+      {
+        "title": "Computable and computational complexity theoretic bases for Herbert Simon’s cognitive behavioral economics",
+        "researcher_or_authors": "Ying-Fang Kao, K. Vela Velupillai",
+        "year": 2014,
+        "url": "https://www.sciencedirect.com/science/article/pii/S1389041713000405",
+        "explanation": "This paper interprets and formalizes Herbert Simon's concepts of bounded rationality, satisficing, and heuristics using computability and computational complexity theories, directly addressing Simon's work on bounded rationality and heuristic search."
+      },
+      {
+        "title": "Models of Bounded Rationality: The Approach of Fast and Frugal Heuristics",
+        "researcher_or_authors": "Gerd Gigerenzer, Peter M. Todd, the ABC Research Group",
+        "year": 2004,
+        "url": "https://www.researchgate.net/publication/23779792_Models_of_Bounded_Rationality_The_Approach_of_Fast_and_Frugal_Heuristics",
+        "explanation": "This review introduces the concept of 'fast and frugal heuristics,' building upon Simon's theory of bounded rationality and heuristic search, and provides empirical evidence of their use in decision-making."
+      },
+      {
+        "title": "Complexity, Bounded Rationality, and Heuristic Search",
+        "researcher_or_authors": "W. Bentley MacLeod",
+        "year": 1999,
+        "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=170989",
+        "explanation": "This paper explores the use of heuristic search algorithms to model human decision-making, consistent with Simon's concepts of bounded rationality and satisficing."
+      }
+    ],
+    "active_research_most_recent_year": 2014,
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "nobel-ground-truth-coase",
@@ -34895,17 +35039,19 @@
       "Property Rights"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": -5,
+    "points": 20,
     "badges": [
       "🧬 Bisociative",
       "🏆 Nobel Ground Truth (calibration benchmark, not engine-generated)",
       "🗺️ Frontier Research Group",
-      "🌗 Contested (1-of-3)"
+      "🌗 Contested (1-of-3)",
+      "🔬🔥 Actively Researched (current)"
     ],
     "breakdown": [
       "Phase 2 ADJACENT_ACTIVE: +0 (ground truth — no discovery credit, see below)",
       "Adversarial refutation REFUTED, but a real near-miss (1-of-3 survive): -5",
-      "  independently confirmed (3 separate agents, full agreement)"
+      "  independently confirmed (3 separate agents, full agreement)",
+      "Actively researched, most recent evidence 2024 (2y old — a live, current research thread): +25"
     ],
     "held_out_reason": null,
     "tier_rank": 4,
@@ -34923,11 +35069,33 @@
     "refutation_filename": "refutations/nobel-ground-truth-coase-refutation.md",
     "refutation_content": "# Adversarial Refutation: Bisociation — Coase — Transaction Costs × Property Rights\n\n**Original**: `hypotheses/nobel-ground-truth-coase.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 1 of 3 survive → **REFUTED**\n\n- **Coherence — REFUTED.** The hypothesis relies on the term 'transaction costs,' which has different referents in the domains of law and economics versus resource allocation. In law and economics, transaction costs refer to the costs associated with negotiating and enforcing agreements, while in resource allocation, they may imply broader economic inefficiencies. This equivocation undermines the coherence of the claim, as it conflates distinct meanings of the term without establishing a genuine structural mapping.\n- **Testability — SURVIVES.** The hypothesis explicitly names the Coase theorem, which is a specific, checkable result in law and economics regarding transaction costs and property rights. This theorem serves as the operationalized metric, comparison condition, and rejection threshold, satisfying the testability lens. The claim is therefore not vague and can be empirically tested against the established framework of the Coase theorem.\n- **Triviality — REFUTED.** The core claim reduces to a statement about the relationship between initial assignments and efficiency in resource allocation, which is a common characteristic of many complex systems. Specifically, the phrase being tested for genericness is: 'In the absence of transaction costs, the initial legal assignment of a property right does not affect the efficiency of the final allocation of resources.' This is a general principle that can apply to various systems beyond the specific domains of law and economics, indicating that the claim lacks the necessary specificity to be considered novel.\n\n## No steelman offered\n\nAll three lenses independently converged on REFUTED for this case. If revisited, it would need a genuinely tighter formulation, not a restatement of the same claim.\n",
     "refutation_independently_confirmed": true,
-    "actively_researched": null,
-    "active_research_note": null,
-    "active_research_matches": null,
-    "active_research_most_recent_year": null,
-    "active_research_checked_date": null
+    "actively_researched": true,
+    "active_research_note": "These publications provide empirical and theoretical analyses directly related to Coase's theories on transaction costs and property rights, confirming active research in this specific area.",
+    "active_research_matches": [
+      {
+        "title": "Property rights, transaction costs, and the limits of the market",
+        "researcher_or_authors": "Carmine Guerriero",
+        "year": 2023,
+        "url": "https://link.springer.com/article/10.1007/s10101-023-00290-9",
+        "explanation": "This paper examines how transaction costs influence the design of property rights, particularly in contexts where consensual transfer is inefficient or where input costs are nonverifiable and non-contractible."
+      },
+      {
+        "title": "Williamson and Coase: Transaction Costs or Rent-Seeking in the Formation of Institutions",
+        "researcher_or_authors": "Gary D. Libecap",
+        "year": 2024,
+        "url": "https://www.nber.org/papers/w32603",
+        "explanation": "This study analyzes the application of Coase's transaction cost framework in environmental policy, comparing it to rent-seeking behaviors in institutional formation."
+      },
+      {
+        "title": "Transaction Costs and the Robustness of the Coase Theorem",
+        "researcher_or_authors": "Luca Anderlini, Leonardo Felli",
+        "year": 2006,
+        "url": "https://academic.oup.com/ej/article/116/508/223/5089402",
+        "explanation": "This paper explores how ex ante transaction costs can lead to failures of the Coase Theorem, particularly focusing on the hold-up problem in negotiations."
+      }
+    ],
+    "active_research_most_recent_year": 2024,
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "nobel-ground-truth-hayek",
@@ -34938,16 +35106,18 @@
       "Market Price Signals"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 12,
+    "points": 37,
     "badges": [
       "🧬 Bisociative",
       "🏆 Nobel Ground Truth (calibration benchmark, not engine-generated)",
       "🗺️ Frontier Research Group",
-      "🛡️ Survived the Gauntlet"
+      "🛡️ Survived the Gauntlet",
+      "🔬🔥 Actively Researched (current)"
     ],
     "breakdown": [
       "Phase 2 ADJACENT_ACTIVE: +0 (ground truth — no discovery credit, see below)",
-      "Adversarial refutation survived (2-of-3): +12"
+      "Adversarial refutation survived (2-of-3): +12",
+      "Actively researched, most recent evidence 2024 (2y old — a live, current research thread): +25"
     ],
     "held_out_reason": null,
     "tier_rank": 1,
@@ -34965,11 +35135,33 @@
     "refutation_filename": "refutations/nobel-ground-truth-hayek-refutation.md",
     "refutation_content": "# Adversarial Refutation: Bisociation — Hayek — Dispersed Knowledge × Market Price Signals\n\n**Original**: `hypotheses/nobel-ground-truth-hayek.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 2 of 3 survive → **SURVIVES** (promoted out of NO_SIGNAL)\n\n- **Coherence — SURVIVES.** The claim rests on the shared term 'dispersed knowledge,' which refers to the same formal concept in both economics and market theory. In Hayek's context, it denotes the fragmented information held by individuals, while in market theory, it describes how this information is aggregated through price signals. Both domains utilize the same underlying principle of decentralized information processing, thus avoiding equivocation.\n- **Testability — SURVIVES.** The claim references Friedrich Hayek's 1945 essay, 'The Use of Knowledge in Society,' which provides a specific, checkable piece of evidence supporting the hypothesis about dispersed knowledge and market price signals. This essay articulates the mechanism by which the price system aggregates dispersed knowledge, fulfilling the requirement for a named theorem or historical evidence that operationalizes the claim.\n- **Triviality — REFUTED.** The core claim states that the knowledge necessary for efficient resource allocation is dispersed among individuals and that the market price system aggregates this knowledge into a single signal. When stripped of domain-specific vocabulary, the claim reduces to a general assertion about complex systems where information is distributed and aggregated through a signaling mechanism. This is a common characteristic of many complex systems, making the claim trivial and not unique to Hayek's economic theory.\n\n## What survived, and why this matters\n\n2 of 3 independent lenses could not kill this claim. Per the promotion rule (2-of-3 survival), this hypothesis moves out of NO_SIGNAL — real signal the claim isn't vacuous, not proof it's correct. Still worth Phase 3 outreach consideration if a real researcher in the adjacent field can be identified.\n",
     "refutation_independently_confirmed": true,
-    "actively_researched": null,
-    "active_research_note": null,
-    "active_research_matches": null,
-    "active_research_most_recent_year": null,
-    "active_research_checked_date": null
+    "actively_researched": true,
+    "active_research_note": "The listed papers directly address Hayek's concepts of dispersed knowledge and the role of market price signals in coordinating economic activities, providing concrete evidence of ongoing research in this area.",
+    "active_research_matches": [
+      {
+        "title": "Dispersed Information, Nominal Rigidities and Monetary Business Cycles: A Hayekian Perspective",
+        "researcher_or_authors": "Christian Hellwig & Venky Venkateswaran",
+        "year": 2024,
+        "url": "https://www.nber.org/papers/w33215",
+        "explanation": "This paper examines how dispersed information and nominal rigidities affect monetary business cycles, aligning with Hayek's ideas on the role of market prices in coordinating dispersed knowledge."
+      },
+      {
+        "title": "Hayek on the Wisdom of Prices: A Reassessment",
+        "researcher_or_authors": "Richard Bronk",
+        "year": 2013,
+        "url": "https://philpapers.org/rec/BROHOT-2",
+        "explanation": "Bronk reassesses Hayek's insights into the problem of knowledge in markets, discussing the role of market prices in communicating information and coordinating transactions."
+      },
+      {
+        "title": "Retrospectives: Friedrich Hayek and the Market Algorithm",
+        "researcher_or_authors": "Samuel Bowles, Alan Kirman, Rajiv Sethi",
+        "year": 2017,
+        "url": "https://www.aeaweb.org/articles?id=10.1257%2Fjep.31.3.215",
+        "explanation": "This article discusses Hayek's vision of the market economy as an information processing system, emphasizing the role of market prices in coordinating dispersed knowledge."
+      }
+    ],
+    "active_research_most_recent_year": 2024,
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "nobel-ground-truth-becker",
@@ -35008,11 +35200,11 @@
     "refutation_filename": "refutations/nobel-ground-truth-becker-refutation.md",
     "refutation_content": "# Adversarial Refutation: Bisociation — Becker — Rational Choice × Household Behavior\n\n**Original**: `hypotheses/nobel-ground-truth-becker.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 1 of 3 survive → **REFUTED**\n\n- **Coherence — SURVIVES.** The core claim rests on the shared term 'rational choice,' which denotes the same formal object in both economics and household behavior: the framework of individuals maximizing utility under constraints. While the contexts differ—market behavior versus family decision-making—the underlying structure of decision-making remains consistent. Thus, there is no equivocation, as both domains utilize the same rational-choice model to analyze behavior.\n- **Testability — REFUTED.** The core claim does not operationalize a specific, testable prediction that can be empirically verified or falsified. While it references Becker's Nobel Prize and his contributions to economic analysis, it lacks a named metric, comparison condition, or rejection threshold that would allow for a clear experimental test. The claim remains vague in terms of how one would definitively test the application of rational choice theory to household behavior.\n- **Triviality — REFUTED.** The core claim reduces to a general statement about how complex systems allocate scarce resources to maximize utility under constraints. This is a common characteristic of many complex systems, not unique to Becker's application of rational choice to household behavior. The specific mechanisms and context of Becker's claim are lost when stripped of domain-specific vocabulary, making it a trivial assertion applicable to numerous systems.\n\n## No steelman offered\n\nAll three lenses independently converged on REFUTED for this case. If revisited, it would need a genuinely tighter formulation, not a restatement of the same claim.\n",
     "refutation_independently_confirmed": true,
-    "actively_researched": null,
-    "active_research_note": null,
-    "active_research_matches": null,
+    "actively_researched": false,
+    "active_research_note": "While Gary Becker's work on rational choice theory and household behavior has been foundational, there is no specific evidence of current research directly addressing the exact mechanism in question. The provided search results primarily reference Becker's seminal contributions and subsequent analyses, but do not indicate ongoing studies focusing on the same specific mechanism.",
+    "active_research_matches": [],
     "active_research_most_recent_year": null,
-    "active_research_checked_date": null
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "nobel-ground-truth-feynman",
@@ -35023,17 +35215,19 @@
       "Computation — simulation"
     ],
     "verdict": "COLLISION",
-    "points": -5,
+    "points": 5,
     "badges": [
       "🧬 Bisociative",
       "🏆 Nobel Ground Truth (calibration benchmark, not engine-generated)",
       "🏛️ Established Department",
-      "🌗 Contested (1-of-3)"
+      "🌗 Contested (1-of-3)",
+      "🔬 Actively Researched (historical)"
     ],
     "breakdown": [
       "Phase 2 COLLISION: +0 (ground truth — no discovery credit, see below)",
       "Adversarial refutation REFUTED, but a real near-miss (1-of-3 survive): -5",
-      "  independently confirmed (3 separate agents, full agreement)"
+      "  independently confirmed (3 separate agents, full agreement)",
+      "Actively researched, most recent evidence 2013 — real, but not a currently live thread: +10"
     ],
     "held_out_reason": null,
     "tier_rank": 4,
@@ -35051,11 +35245,33 @@
     "refutation_filename": "refutations/nobel-ground-truth-feynman-refutation.md",
     "refutation_content": "# Adversarial Refutation: Bisociation — Feynman — Quantum Mechanics × Computation\n\n**Original**: `hypotheses/nobel-ground-truth-feynman.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 1 of 3 survive → **REFUTED**\n\n- **Coherence — REFUTED.** The core claim relies on the term 'quantum systems' which is used in both domains but denotes different referents. In quantum mechanics, it refers to physical systems governed by quantum laws, while in computation, it refers to the abstract representation of these systems in a computational framework. This equivocation undermines the coherence of the argument, as it conflates the physical properties of quantum systems with their computational representations, leading to a misunderstanding of the scaling implications.\n- **Testability — SURVIVES.** The core claim names a specific historical proposal by Richard Feynman from 1981 regarding the limitations of classical computers in simulating quantum systems and the potential of quantum computers to overcome these limitations. This proposal is well-documented and serves as a checkable piece of evidence that operationalizes the hypothesis, satisfying the testability lens.\n- **Triviality — REFUTED.** The claim reduces to a statement about the computational efficiency of systems based on their underlying mechanics, which is a common characteristic of many complex systems. Specifically, the phrase being tested is: 'Classical computers require computational resources that scale exponentially with the number of particles being simulated when modeling quantum-mechanical systems.' This is a general observation that can apply to various systems beyond quantum mechanics, thus failing to maintain the specificity required to avoid triviality.\n\n## No steelman offered\n\nAll three lenses independently converged on REFUTED for this case. If revisited, it would need a genuinely tighter formulation, not a restatement of the same claim.\n",
     "refutation_independently_confirmed": true,
-    "actively_researched": null,
-    "active_research_note": null,
-    "active_research_matches": null,
-    "active_research_most_recent_year": null,
-    "active_research_checked_date": null
+    "actively_researched": true,
+    "active_research_note": "The provided matches include seminal works by Richard P. Feynman and subsequent research that directly address the challenges and methodologies of simulating quantum systems, aligning with the specified domains of quantum mechanics and computation through simulation.",
+    "active_research_matches": [
+      {
+        "title": "Simulating Physics with Computers",
+        "researcher_or_authors": "Richard P. Feynman",
+        "year": 1982,
+        "url": "https://doi.org/10.1007/BF02650179",
+        "explanation": "In this seminal 1982 paper, Feynman discusses the challenges of simulating quantum systems on classical computers and proposes the development of quantum computers to effectively model quantum phenomena."
+      },
+      {
+        "title": "Universal Quantum Simulators",
+        "researcher_or_authors": "Seth Lloyd",
+        "year": 1996,
+        "url": "https://doi.org/10.1126/science.273.5278.1073",
+        "explanation": "Lloyd's 1996 paper demonstrates that quantum computers can be programmed to simulate any local quantum system, validating Feynman's conjecture from 1982."
+      },
+      {
+        "title": "Feynman’s clock, a new variational principle, and parallel-in-time quantum dynamics",
+        "researcher_or_authors": "Jarrod R. McClean, John A. Parkhill, Alán Aspuru-Guzik",
+        "year": 2013,
+        "url": "https://doi.org/10.1073/pnas.1308069110",
+        "explanation": "This 2013 study introduces a variational principle inspired by Feynman's clock to model quantum dynamics, extending ground-state quantum many-body theory to quantum dynamics."
+      }
+    ],
+    "active_research_most_recent_year": 2013,
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "nobel-ground-truth-einstein-maxwell",
@@ -35093,11 +35309,11 @@
     "refutation_filename": "refutations/nobel-ground-truth-einstein-maxwell-refutation.md",
     "refutation_content": "# Adversarial Refutation: Bisociation — Einstein — Special Relativity × Maxwell — Electromagnetism\n\n**Original**: `hypotheses/nobel-ground-truth-einstein_maxwell.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 2 of 3 survive → **SURVIVES** (promoted out of NO_SIGNAL)\n\n- **Coherence — SURVIVES.** The core claim effectively maps the structural relationship between Maxwell's equations and Einstein's special relativity without equivocation. Both domains utilize the concept of 'frame-dependence' in a coherent manner: in electromagnetism, it refers to the invariance of the speed of light across reference frames, while in relativity, it pertains to the transformations of space and time measurements. The shared term 'frame-dependence' denotes the same formal relationship in both contexts, thus supporting the bisociation without conflating different meanings.\n- **Testability — SURVIVES.** The core claim references Einstein's 1905 paper 'On the Electrodynamics of Moving Bodies,' which is a specific, checkable historical document that operationalizes the hypothesis. This paper provides a clear derivation of special relativity from Maxwell's equations, establishing a direct link between the two domains. The claim is thus not vague and meets the criteria for testability.\n- **Triviality — REFUTED.** The claim reduces to a statement about the relationship between two theoretical frameworks, specifically that one framework (Maxwell's equations) necessitates modifications to another (Galilean relativity) to maintain consistency across reference frames. This is a common characteristic of many complex systems where adjustments in one system's parameters lead to the need for corresponding changes in another system's framework. The phrase being tested for genericness is: 'Maxwell's equations predict a fixed speed for electromagnetic waves in vacuum, independent of any reference frame.' This is a general statement that could apply to various pairs of complex systems, thus failing the triviality lens.\n\n## What survived, and why this matters\n\n2 of 3 independent lenses could not kill this claim. Per the promotion rule (2-of-3 survival), this hypothesis moves out of NO_SIGNAL — real signal the claim isn't vacuous, not proof it's correct. Still worth Phase 3 outreach consideration if a real researcher in the adjacent field can be identified.\n",
     "refutation_independently_confirmed": true,
-    "actively_researched": null,
-    "active_research_note": null,
-    "active_research_matches": null,
+    "actively_researched": false,
+    "active_research_note": "The search did not yield specific evidence of a researcher, lab, paper, preprint, dissertation, or project investigating a particular mechanism involving both Einstein's Special Relativity and Maxwell's Electromagnetism. While there are numerous studies exploring the relationship between these two theories, none address a specific mechanism as described in the query.",
+    "active_research_matches": [],
     "active_research_most_recent_year": null,
-    "active_research_checked_date": null
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-31-marconi-x-telegraphy",

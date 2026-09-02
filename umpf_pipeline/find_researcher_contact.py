@@ -273,6 +273,25 @@ def _sanity_check(result, title):
             "confidence": "LOW",
             "notes": f"Sanity check rejected the email in this result: it was the literal text '{email}' -- a site's email-obfuscation placeholder (e.g. ResearchGate's anti-scraping stub), not a real decoded address. Original notes: {result.get('notes', '')}",
         }
+    if "*" in email:
+        # Sixth real failure mode, found 2026-09-02 in the
+        # nobel-ground-truth Phase 2 pass: a people-search / lead-gen
+        # site (lead411.com) rendered a real address as a paywalled
+        # teaser -- "j*******@google.com" for Jarrod R. McClean -- and
+        # the model lifted the literal masked string as if it were the
+        # real, usable address, HIGH confidence. Same shape as the
+        # ResearchGate "[email protected]" stub above (a site's own
+        # redaction pattern mistaken for real data), different site and
+        # different masking convention (asterisks mid-string, not a
+        # bracketed placeholder), so it needs its own check: no real
+        # email a person actually uses ever legitimately contains "*".
+        return {
+            **result,
+            "email": "",
+            "email_source_url": "",
+            "confidence": "LOW",
+            "notes": f"Sanity check rejected the email in this result: it was the literal text '{email}' -- a site's own asterisk-masked/paywalled teaser (e.g. a lead-gen directory site), not a real decoded address. Original notes: {result.get('notes', '')}",
+        }
     return result
 
 
