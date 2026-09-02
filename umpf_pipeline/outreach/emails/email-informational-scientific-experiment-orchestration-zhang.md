@@ -5,6 +5,7 @@
 **Match source:** Wenyu Zhang, Lucy Hao, Jacob Jessiman, Jiayu Zhang, Maria Politi, Matthew E. Reish, Rebekah Greenwood, Noah Depner, Jiyoon Min, Rama El-khawaldeh, Paloma Prieto, Ekaterina Trushina, Jason E. Hein, "IvoryOS: an interoperable web interface for orchestrating Python-based self-driving laboratories", *Nature Communications*, 2025 — https://www.nature.com/articles/s41467-025-60514-w
 **Contact source:** resolved via `find_researcher_contact.py`, HIGH confidence
 **Generation notes:** The page clearly lists the authors of the paper and states the journal and publication year.
+**Correction (2026-09-02):** the body's citation originally dropped a real co-author, "Jiayu Zhang," because `_coauthors_excluding_recipient` was excluding anyone who shared the recipient's surname regardless of first name -- fixed in `generate_email_draft.py` and restored below.
 
 ---
 
@@ -18,7 +19,7 @@ Prof. Zhang,
 
 I'm with Exponent Labs' Eureka Engine.
 
-**Can both a rigidly structured experimental design and a flexible unstructured experimental design yield reliable results for the same experiment?** Your 2025 paper with Lucy Hao, Jacob Jessiman, Maria Politi, Matthew E. Reish, Rebekah Greenwood, Noah Depner, Jiyoon Min, Rama El-khawaldeh, Paloma Prieto, Ekaterina Trushina, Jason E. Hein, "IvoryOS: an interoperable web interface for orchestrating Python-based self-driving laboratories," looks like it's addressing exactly this territory.
+**Can both a rigidly structured experimental design and a flexible unstructured experimental design yield reliable results for the same experiment?** Your 2025 paper with Lucy Hao, Jacob Jessiman, Jiayu Zhang, Maria Politi, Matthew E. Reish, Rebekah Greenwood, Noah Depner, Jiyoon Min, Rama El-khawaldeh, Paloma Prieto, Ekaterina Trushina, Jason E. Hein, "IvoryOS: an interoperable web interface for orchestrating Python-based self-driving laboratories," looks like it's addressing exactly this territory.
 
 We have a syndicate of investors.
 

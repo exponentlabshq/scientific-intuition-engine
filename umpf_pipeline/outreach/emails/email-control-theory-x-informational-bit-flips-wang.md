@@ -5,6 +5,7 @@
 **Match source:** Yu-Ang Wang, Zidong Wang, Lei Zou, Fan Wang, Hongli Dong, "Resilient state estimation for nonlinear cyber–physical systems under probabilistic bit flips: A token bucket protocol", *Automatica*, 2026 — https://doi.org/10.1016/j.automatica.2026.112823
 **Contact source:** resolved via `find_researcher_contact.py`, HIGH confidence
 **Generation notes:** The paper was published in Automatica on January 10, 2026, and lists Yu-Ang Wang, Zidong Wang, Lei Zou, Fan Wang, and Hongli Dong as the authors.
+**Correction (2026-09-02):** the body's citation originally dropped two real co-authors, "Yu-Ang Wang" and "Fan Wang," because `_coauthors_excluding_recipient` was excluding anyone who shared the recipient's surname regardless of first name -- fixed in `generate_email_draft.py` and restored below.
 
 ---
 
@@ -18,7 +19,7 @@ Prof. Wang,
 
 I'm with Exponent Labs' Eureka Engine.
 
-**Can Kalman filtering and informational bit flips function together to create an Error-Resilient Estimation System (ERES) that shows statistically significant improvement in estimation accuracy under noisy conditions?** Your 2026 paper with Lei Zou, Hongli Dong, "Resilient state estimation for nonlinear cyber–physical systems under probabilistic bit flips: A token bucket protocol," looks like it's addressing exactly this territory.
+**Can Kalman filtering and informational bit flips function together to create an Error-Resilient Estimation System (ERES) that shows statistically significant improvement in estimation accuracy under noisy conditions?** Your 2026 paper with Yu-Ang Wang, Lei Zou, Fan Wang, Hongli Dong, "Resilient state estimation for nonlinear cyber–physical systems under probabilistic bit flips: A token bucket protocol," looks like it's addressing exactly this territory.
 
 We have a syndicate of investors.
 

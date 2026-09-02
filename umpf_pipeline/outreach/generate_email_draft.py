@@ -453,9 +453,45 @@ def _coauthors_excluding_recipient(authors_str, recipient_name):
     a real multi-author list. Cleans via _clean_author_list first (so
     an institution-shaped artifact is never treated as a co-author
     either), then drops whoever shares the recipient's surname, and
-    returns the real remaining co-authors (or empty if none)."""
+    returns the real remaining co-authors (or empty if none).
+
+    Second real bug found 2026-09-02, coherence-flag review pass: a
+    blunt surname-only drop silently erased genuinely DIFFERENT
+    co-authors who happen to share the recipient's surname -- three
+    real cases shipped this way: Ruokun Wang's paper also has a
+    distinct co-author 'X. Y. Wang' (dropped), Zidong Wang's paper
+    also has distinct co-authors 'Yu-Ang Wang' and 'Fan Wang' (both
+    dropped), and Wenyu Zhang's paper also has a distinct co-author
+    'Jiayu Zhang' (dropped) -- three real people erased from their
+    own citation because of a surname collision with the recipient,
+    silently understating real authorship. Fixed narrowly: only keep
+    a same-surname candidate when BOTH the recipient's name and the
+    candidate's name spell out a real (non-abbreviated) first name
+    that disagrees -- reusing _first_names_conflict's strict branch
+    only, never its initial-only fallback. The fallback branch is
+    deliberately NOT used here (unlike the AUTHORSHIP_MISMATCH guard)
+    because its failure mode is asymmetric: for that guard, a false
+    conflict just skips generating one email (safe); here, it would
+    reintroduce the exact self-citation bug this function exists to
+    prevent -- 'Eliot B. Moss' cited as 'J. Eliot B. Moss's own
+    co-author, since 'J' vs 'Eliot' looks like a conflict on the
+    initial-only fallback despite being the same real person. When
+    the ambiguity can't be resolved this way (e.g. the source list
+    itself only carries initials for both the recipient and a real
+    distinct co-author, as in the Ruokun Wang / X. Y. Wang case),
+    this still defaults to dropping -- a known, accepted residual gap,
+    safer than risking a self-citation."""
     recipient_surname = _surname(recipient_name)
-    others = [p for p in _clean_author_list(authors_str) if _surname(p) != recipient_surname]
+    recipient_first = _first_name_token(recipient_name)
+    others = []
+    for p in _clean_author_list(authors_str):
+        if _surname(p) != recipient_surname:
+            others.append(p)
+            continue
+        p_first = _first_name_token(p)
+        both_spelled_out = not recipient_first[1] and not p_first[1]
+        if both_spelled_out and recipient_first[0] != p_first[0]:
+            others.append(p)  # same surname, but a real, different spelled-out first name
     return ", ".join(others)
 
 

@@ -199,20 +199,6 @@
     {
       "send_priority": 75,
       "sharpness": "BORDERLINE",
-      "coherent": false,
-      "coherence_concern": "The question implies that cortical map reorganization directly drives habit formation loops as if one can manipulate one to produce a direct causal effect on the other. However, the underlying claim merely suggests these two processes are interconnected through a shared framework (NeuroHabit Architecture) without asserting that one can literally provoke the other through direct manipulation.",
-      "flagged": false,
-      "points": 55,
-      "department": "Department of Homospatial Studies",
-      "dept_slug": "homospatial",
-      "target_name": "Nozomi Asaoka",
-      "email": "asaoka@mol.f.u-tokyo.ac.jp",
-      "hypothesis_slug": "2026-08-31-homospatial-neuroscience-x-behavioral-psychology",
-      "filename": "email-neuroscience-x-behavioral-psychology-asaoka.md"
-    },
-    {
-      "send_priority": 75,
-      "sharpness": "BORDERLINE",
       "coherent": true,
       "coherence_concern": "",
       "flagged": false,
@@ -2285,20 +2271,6 @@
     {
       "send_priority": 20,
       "sharpness": "BORDERLINE",
-      "coherent": false,
-      "coherence_concern": "The question implies a direct causal relationship that equates cognitive development with a mechanism for recognizing challenges in the same way the immune system addresses pathogens. However, the underlying idea is only that both domains share abstract principles of adaptation and learning, not that one can function as a literal mechanism for the other without a proposed system linking them.",
-      "flagged": false,
-      "points": 0,
-      "department": "Department of Homospatial Studies",
-      "dept_slug": "homospatial",
-      "target_name": "Weihua Yue",
-      "email": "dryue@bjmu.edu.cn",
-      "hypothesis_slug": "2026-08-30-homospatial-cognitive-development-x-physical-immune-system",
-      "filename": "email-cognitive-development-x-physical-immune-system-yue.md"
-    },
-    {
-      "send_priority": 20,
-      "sharpness": "BORDERLINE",
       "coherent": true,
       "coherence_concern": "",
       "flagged": false,
@@ -2351,20 +2323,6 @@
       "email": "takamido@turing.ac.jp",
       "hypothesis_slug": "2026-08-29-homospatial-sports-x-finance",
       "filename": "email-sports-x-finance-takamido.md"
-    },
-    {
-      "send_priority": 20,
-      "sharpness": "BORDERLINE",
-      "coherent": false,
-      "coherence_concern": "The question implies a direct functional application of urban traffic flow optimization as a literal mechanism for handling cache misses, which overstates the relationship between the two concepts. While both share an abstract theme of optimizing flow, there is no proposed system that connects them in a way that allows one to function as the other, leading to a misleading interpretation of their relationship.",
-      "flagged": false,
-      "points": 0,
-      "department": "Department of Homospatial Studies",
-      "dept_slug": "homospatial",
-      "target_name": "Ruokun Wang",
-      "email": "2014560010@njrts.edu.cn",
-      "hypothesis_slug": "2026-08-31-homospatial-urban-planning-x-informational-cache-miss-handling",
-      "filename": "email-urban-planning-x-informational-cache-miss-handling-wang.md"
     },
     {
       "send_priority": 18,
@@ -2579,6 +2537,20 @@
       "filename": "email-cryptography-x-physical-photon-emission-vajner.md"
     },
     {
+      "send_priority": 75,
+      "sharpness": "BORDERLINE",
+      "coherent": false,
+      "coherence_concern": "The question implies that cortical map reorganization directly drives habit formation loops as if one can manipulate one to produce a direct causal effect on the other. However, the underlying claim merely suggests these two processes are interconnected through a shared framework (NeuroHabit Architecture) without asserting that one can literally provoke the other through direct manipulation.",
+      "flagged": true,
+      "points": 55,
+      "department": "Department of Homospatial Studies",
+      "dept_slug": "homospatial",
+      "target_name": "Nozomi Asaoka",
+      "email": "asaoka@mol.f.u-tokyo.ac.jp",
+      "hypothesis_slug": "2026-08-31-homospatial-neuroscience-x-behavioral-psychology",
+      "filename": "email-neuroscience-x-behavioral-psychology-asaoka.md"
+    },
+    {
       "send_priority": 73,
       "sharpness": "BORDERLINE",
       "coherent": false,
@@ -2703,6 +2675,34 @@
       "email": "keith@keithsawyer.com",
       "hypothesis_slug": "2026-08-31-homospatial-astronomy-x-creative-improvisation-coordination",
       "filename": "email-astronomy-x-creative-improvisation-coordination-sawyer.md"
+    },
+    {
+      "send_priority": 20,
+      "sharpness": "BORDERLINE",
+      "coherent": false,
+      "coherence_concern": "The question implies a direct causal relationship that equates cognitive development with a mechanism for recognizing challenges in the same way the immune system addresses pathogens. However, the underlying idea is only that both domains share abstract principles of adaptation and learning, not that one can function as a literal mechanism for the other without a proposed system linking them.",
+      "flagged": true,
+      "points": 0,
+      "department": "Department of Homospatial Studies",
+      "dept_slug": "homospatial",
+      "target_name": "Weihua Yue",
+      "email": "dryue@bjmu.edu.cn",
+      "hypothesis_slug": "2026-08-30-homospatial-cognitive-development-x-physical-immune-system",
+      "filename": "email-cognitive-development-x-physical-immune-system-yue.md"
+    },
+    {
+      "send_priority": 20,
+      "sharpness": "BORDERLINE",
+      "coherent": false,
+      "coherence_concern": "The question implies a direct functional application of urban traffic flow optimization as a literal mechanism for handling cache misses, which overstates the relationship between the two concepts. While both share an abstract theme of optimizing flow, there is no proposed system that connects them in a way that allows one to function as the other, leading to a misleading interpretation of their relationship.",
+      "flagged": true,
+      "points": 0,
+      "department": "Department of Homospatial Studies",
+      "dept_slug": "homospatial",
+      "target_name": "Ruokun Wang",
+      "email": "2014560010@njrts.edu.cn",
+      "hypothesis_slug": "2026-08-31-homospatial-urban-planning-x-informational-cache-miss-handling",
+      "filename": "email-urban-planning-x-informational-cache-miss-handling-wang.md"
     }
   ]
 }
