@@ -241,8 +241,22 @@ def draft_one(candidate):
 
 
 def _surname(name):
-    parts = (name or "unknown").strip().split()
-    return re.sub(r"[^a-z0-9]", "", parts[-1].lower()) if parts else "unknown"
+    """Real bug found 2026-09-02, same batch as the semicolon-splitting
+    fix: 'Last word = surname' is only true for 'First Last' order. A
+    'Last, First' formatted entry from a semicolon-split author list
+    ('Schiavio, Andrea') has the FIRST name last, so the old logic
+    extracted 'andrea' as the 'surname' -- which would have made the
+    AUTHORSHIP_MISMATCH guard incorrectly reject Andrea Schiavio as
+    not being his own paper's author, a false positive on a genuinely
+    correct match. If a comma is present, use the part BEFORE it
+    (standard 'Last, First' convention) instead of the last word."""
+    name = (name or "unknown").strip()
+    if "," in name:
+        surname_part = name.split(",")[0].strip()
+    else:
+        parts = name.split()
+        surname_part = parts[-1] if parts else "unknown"
+    return re.sub(r"[^a-z0-9]", "", surname_part.lower()) or "unknown"
 
 
 def _short_slug(hypothesis_slug):
@@ -327,10 +341,32 @@ def _clean_author_list(authors_str):
     cleaning step both the metadata citation line and the body's
     co-author clause build on, so an institution name or other
     non-person artifact can never reach either one. Returns a list of
-    real name strings (possibly empty)."""
+    real name strings (possibly empty).
+
+    Real bug found 2026-09-02, second 21-draft batch: Exa's own
+    extracted author lists sometimes use "Lastname, Firstname;
+    Lastname, Firstname" academic style -- comma WITHIN each name,
+    semicolon BETWEEN names. The original comma-only split treated an
+    unpunctuated semicolon list ('Zhivar Sourati; Filip Ilievski; Pia
+    Sommerauer; Yifan Jiang') as one 8-word blob that failed the
+    <=4-word person-name check entirely, returning an EMPTY list --
+    which silently defeated write_email_file()'s AUTHORSHIP_MISMATCH
+    guard (an empty real_surnames set can't fail to contain anyone) and
+    let a real, confirmed-wrong match (Helen Yannakoudakis, who is NOT
+    an author of the cited paper) ship as a real draft. A second,
+    'Lastname, Firstname;'-style string happened to reconstruct
+    correctly by coincidence when comma-split then rejoined with ', '
+    -- not a real fix, just luck that didn't hold for the first case.
+    Fixed by splitting on ';' first when present (treating the comma
+    inside 'Last, First' as part of one name, not a separator between
+    two) -- only falling back to the original comma/'&'/'and' split
+    for lists that never used semicolons at all."""
     if not authors_str or authors_str == "authors not specified in excerpt":
         return []
-    parts = re.split(r",|&|\band\b", authors_str)
+    if ";" in authors_str:
+        parts = authors_str.split(";")
+    else:
+        parts = re.split(r",|&|\band\b", authors_str)
     return [p for p in (p.strip().strip(".") for p in parts) if p and _looks_like_person_name(p)]
 
 

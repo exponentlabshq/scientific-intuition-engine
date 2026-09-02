@@ -278,5 +278,110 @@
     "sharpness": "BORDERLINE",
     "restates_domain_name": false,
     "reason": "The question touches on a relevant topic in legal informatics, but it primarily rephrases concepts from the paper without introducing a new, specific variable or mechanism for discussion."
+  },
+  "email-anthropology-x-gaming-narrative-jarrett.md": {
+    "hypothesis_slug": "2026-08-31-homospatial-anthropology-x-gaming-narrative",
+    "question": "Can player choices act as cultural exchanges that influence character relationships and narrative progression in games?",
+    "sharpness": "BORDERLINE",
+    "restates_domain_name": false,
+    "reason": "The question relates to the paper's themes of player interaction and narrative but mainly reiterates known concepts in game studies without identifying specific mechanisms or unique variables that would provoke a deeper analysis."
+  },
+  "email-biological-systems-x-creative-musical-motif-deviat-podlipniak.md": {
+    "hypothesis_slug": "2026-08-29-biological-systems-x-creative-musical-motif-deviation",
+    "question": "Can successful deviations in musical motifs parallel beneficial mutations in biological systems?",
+    "sharpness": "BORDERLINE",
+    "restates_domain_name": false,
+    "reason": "The question connects musical motifs to biological mutations, which is intriguing, but it primarily rephrases themes from the paper without introducing a distinct mechanism or exploring a specific aspect that would prompt deeper consideration."
+  },
+  "email-cell-biology-x-informational-scientific-experiment-balchin.md": {
+    "hypothesis_slug": "2026-08-31-cell-biology-x-informational-scientific-experiment-orchestration",
+    "question": "Can modifications to protein folding chaperones that enhance their responsiveness improve protein folding efficiency as experimental protocols adaptively enhance reliable results?",
+    "sharpness": "BORDERLINE",
+    "restates_domain_name": true,
+    "reason": "The question primarily restates concepts from the paper's title, such as protein folding, chaperones, and efficiency, without exploring a specific mechanism or providing an original angle."
+  },
+  "email-cell-biology-x-informational-scientific-experiment-calabrese.md": {
+    "hypothesis_slug": "2026-08-31-cell-biology-x-informational-scientific-experiment-orchestration",
+    "question": "Can protein folding chaperones adaptively respond to uncertainties in their environments in the same way that experimental protocols do?",
+    "sharpness": "BORDERLINE",
+    "restates_domain_name": true,
+    "reason": "The question restates a concept related to experimental protocols without delving into the specific mechanisms or nuanced interactions of chaperones, lacking depth that would indicate a thorough understanding of the paper's content."
+  },
+  "email-chemistry-x-informational-event-driven-systems-hansen.md": {
+    "hypothesis_slug": "2026-08-29-homospatial-chemistry-x-informational-event-driven-systems",
+    "question": "Can molecular structures exhibit adaptive changes in response to specific stimuli, akin to event-driven systems?",
+    "sharpness": "BORDERLINE",
+    "restates_domain_name": true,
+    "reason": "The question reflects the general concept of molecular response to stimuli but does not specify unique mechanisms or variables explored in the paper, making it feel more like a paraphrase of the domain rather than a provocative inquiry."
+  },
+  "email-cognitive-concept-drift-geddert.md": {
+    "hypothesis_slug": "2026-08-30-janusian-cognitive-concept-drift",
+    "question": "Can cognitive concepts be both stable and unstable simultaneously for the same instances in decision-making contexts?",
+    "sharpness": "BORDERLINE",
+    "restates_domain_name": false,
+    "reason": "The question references the concepts of stability and instability in cognitive processes but does not clarify which specific mechanisms or examples are being referred to, making it feel more like a general inquiry about the topic rather than a focused question derived from the paper's unique contributions."
+  },
+  "email-creative-artistic-critique-x-physical-thermal-vari-kitamura.md": {
+    "hypothesis_slug": "2026-08-31-homospatial-creative-artistic-critique-x-physical-thermal-variation",
+    "question": "Can environmental temperature variations function as a dynamic factor in Creative Artistic Critique, altering emotional responses and interpretations of art?",
+    "sharpness": "BORDERLINE",
+    "restates_domain_name": false,
+    "reason": "While the question addresses a specific mechanism (environmental temperature variations), it mainly restates general concepts related to climate's influence on art without exploring novel or precise variables from the paper."
+  },
+  "email-creative-improvisation-coordination-x-informationa-cheston.md": {
+    "hypothesis_slug": "2026-08-31-creative-improvisation-coordination-x-informational-signal-jitter",
+    "question": "Can\u00a0the adaptability of performers in creative improvisation function as a mechanism to maintain coherence amidst signal jitter?",
+    "sharpness": "SHARP",
+    "restates_domain_name": false,
+    "reason": "The question specifically addresses the role of adaptability in performers and its relationship to coherence in the context of signal jitter, which requires a deeper understanding of the mechanics discussed in the paper rather than a generic restatement of its topics."
+  },
+  "email-creative-musical-composition-x-human-social-influe-schiavio.md": {
+    "hypothesis_slug": "2026-08-31-creative-musical-composition-x-human-social-influence",
+    "question": "Can the patterns of change in social norms due to influence tactics follow the same trajectory as the revisions of musical compositions based on audience reception?",
+    "sharpness": "BORDERLINE",
+    "restates_domain_name": false,
+    "reason": "While the question connects social norms and musical compositions through a specific mechanism (audience reception), it primarily restates the interplay of social influence and reaction without exploring a novel angle or mechanism that would prompt deeper thought."
+  },
+  "email-epigenetics-x-human-urban-planning-zhang.md": {
+    "hypothesis_slug": "2026-08-31-epigenetics-x-human-urban-planning",
+    "question": "Can changes in community feedback mechanisms correlate with shifts in urban project approvals?",
+    "sharpness": "BORDERLINE",
+    "restates_domain_name": true,
+    "reason": "The question restates known concepts about community feedback and urban projects without presenting a unique mechanism or a specific variable that relates directly to the paper's content."
+  },
+  "email-human-trust-variance-x-cryptography-voloshin.md": {
+    "hypothesis_slug": "2026-08-28-human-trust-variance-x-cryptography",
+    "question": "Can the dynamics of trust variance in human relationships be modeled analogously to the evolution of zero-knowledge proofs in cryptographic systems?",
+    "sharpness": "BORDERLINE",
+    "restates_domain_name": true,
+    "reason": "The question restates known concepts about trust in human relationships and cryptographic proofs without probing a specific mechanism or variable that would engage a researcher in a meaningful way."
+  },
+  "email-law-x-informational-ledger-state-evolution-deakin.md": {
+    "hypothesis_slug": "2026-08-31-law-x-informational-ledger-state-evolution",
+    "question": "Can inconsistencies in legal rulings correlate with errors or conflicts in ledger state entries?",
+    "sharpness": "BORDERLINE",
+    "restates_domain_name": false,
+    "reason": "The question attempts to link legal inconsistencies with ledger entry errors, which is relevant but primarily restates themes from the paper without offering a specific mechanism or novel inquiry."
+  },
+  "email-law-x-informational-ledger-state-evolution-pimentel.md": {
+    "hypothesis_slug": "2026-08-31-law-x-informational-ledger-state-evolution",
+    "question": "Can inconsistencies in legal rulings correlate with errors or conflicts in ledger state entries?",
+    "sharpness": "BORDERLINE",
+    "restates_domain_name": true,
+    "reason": "The question essentially reiterates the paper's theme of legal inconsistencies without introducing a specific mechanism or variable that would require deeper analysis."
+  },
+  "email-materials-science-x-cognitive-streaming-data-proce-mussel.md": {
+    "hypothesis_slug": "2026-08-29-materials-science-x-cognitive-streaming-data-processing",
+    "question": "Can the patterns of phase transitions in materials predict optimal configurations for processing data streams in cognitive systems?",
+    "sharpness": "BORDERLINE",
+    "restates_domain_name": false,
+    "reason": "While the question connects the concepts of phase transitions and cognitive systems, it largely reiterates known ideas from the paper without posing a novel inquiry that delves deeper into specific mechanisms or variables."
+  },
+  "email-sports-x-cognitive-attention-map-evolution-falc.md": {
+    "hypothesis_slug": "2026-08-31-homospatial-sports-x-cognitive-attention-map-evolution",
+    "question": "Can the Cognitive Play Map emerge from the superimposition of basketball pick-and-roll offense and cognitive attention map evolution?",
+    "sharpness": "BORDERLINE",
+    "restates_domain_name": true,
+    "reason": "The question closely parallels the topics discussed in the cited paper, mainly involving the basketball pick-and-roll and cognitive maps, without introducing a distinct mechanism or independent variable."
   }
 }

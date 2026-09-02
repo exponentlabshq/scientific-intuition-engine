@@ -238,5 +238,95 @@
     "question": "Can the Judicial Knowledgebase maintain legal integrity while allowing for the evolution of legal interpretations in response to new case law?",
     "coherent": true,
     "concern": ""
+  },
+  "email-anthropology-x-gaming-narrative-jarrett.md": {
+    "hypothesis_slug": "2026-08-31-homospatial-anthropology-x-gaming-narrative",
+    "question": "Can player choices act as cultural exchanges that influence character relationships and narrative progression in games?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-biological-systems-x-creative-musical-motif-deviat-podlipniak.md": {
+    "hypothesis_slug": "2026-08-29-biological-systems-x-creative-musical-motif-deviation",
+    "question": "Can successful deviations in musical motifs parallel beneficial mutations in biological systems?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-cell-biology-x-informational-scientific-experiment-balchin.md": {
+    "hypothesis_slug": "2026-08-31-cell-biology-x-informational-scientific-experiment-orchestration",
+    "question": "Can modifications to protein folding chaperones that enhance their responsiveness improve protein folding efficiency as experimental protocols adaptively enhance reliable results?",
+    "coherent": false,
+    "concern": "The question implies that modifications to protein folding chaperones can be directly linked to improving experimental results in a specific, mechanistic way. However, the hypothesis only suggests an abstract relationship between the adaptive responses in the two domains, without a clear mechanism or system connecting changes in chaperone responsiveness to experimental outcomes."
+  },
+  "email-cell-biology-x-informational-scientific-experiment-calabrese.md": {
+    "hypothesis_slug": "2026-08-31-cell-biology-x-informational-scientific-experiment-orchestration",
+    "question": "Can protein folding chaperones adaptively respond to uncertainties in their environments in the same way that experimental protocols do?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-chemistry-x-informational-event-driven-systems-hansen.md": {
+    "hypothesis_slug": "2026-08-29-homospatial-chemistry-x-informational-event-driven-systems",
+    "question": "Can molecular structures exhibit adaptive changes in response to specific stimuli, akin to event-driven systems?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-cognitive-concept-drift-geddert.md": {
+    "hypothesis_slug": "2026-08-30-janusian-cognitive-concept-drift",
+    "question": "Can cognitive concepts be both stable and unstable simultaneously for the same instances in decision-making contexts?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-creative-artistic-critique-x-physical-thermal-vari-kitamura.md": {
+    "hypothesis_slug": "2026-08-31-homospatial-creative-artistic-critique-x-physical-thermal-variation",
+    "question": "Can environmental temperature variations function as a dynamic factor in Creative Artistic Critique, altering emotional responses and interpretations of art?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-creative-improvisation-coordination-x-informationa-cheston.md": {
+    "hypothesis_slug": "2026-08-31-creative-improvisation-coordination-x-informational-signal-jitter",
+    "question": "Can\u00a0the adaptability of performers in creative improvisation function as a mechanism to maintain coherence amidst signal jitter?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-creative-musical-composition-x-human-social-influe-schiavio.md": {
+    "hypothesis_slug": "2026-08-31-creative-musical-composition-x-human-social-influence",
+    "question": "Can the patterns of change in social norms due to influence tactics follow the same trajectory as the revisions of musical compositions based on audience reception?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-epigenetics-x-human-urban-planning-zhang.md": {
+    "hypothesis_slug": "2026-08-31-epigenetics-x-human-urban-planning",
+    "question": "Can changes in community feedback mechanisms correlate with shifts in urban project approvals?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-human-trust-variance-x-cryptography-voloshin.md": {
+    "hypothesis_slug": "2026-08-28-human-trust-variance-x-cryptography",
+    "question": "Can the dynamics of trust variance in human relationships be modeled analogously to the evolution of zero-knowledge proofs in cryptographic systems?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-law-x-informational-ledger-state-evolution-deakin.md": {
+    "hypothesis_slug": "2026-08-31-law-x-informational-ledger-state-evolution",
+    "question": "Can inconsistencies in legal rulings correlate with errors or conflicts in ledger state entries?",
+    "coherent": false,
+    "concern": "The question implies a direct correlation between legal rulings and ledger state entries without proposing a specific mechanism or system that could link the two. It assumes that inconsistencies in rulings would directly manifest as errors in ledger states, rather than suggesting that both might simply reflect an underlying pattern of inconsistency governed by different mechanisms."
+  },
+  "email-law-x-informational-ledger-state-evolution-pimentel.md": {
+    "hypothesis_slug": "2026-08-31-law-x-informational-ledger-state-evolution",
+    "question": "Can inconsistencies in legal rulings correlate with errors or conflicts in ledger state entries?",
+    "coherent": false,
+    "concern": "The question suggests a direct correlation between inconsistencies in legal rulings and conflicts in ledger entries, implying a literal, mechanistic relationship. However, the underlying hypothesis only establishes that both fields may share an abstract principle of maintaining consistency through references; it does not propose a specific mechanism by which one directly influences the other."
+  },
+  "email-materials-science-x-cognitive-streaming-data-proce-mussel.md": {
+    "hypothesis_slug": "2026-08-29-materials-science-x-cognitive-streaming-data-processing",
+    "question": "Can the patterns of phase transitions in materials predict optimal configurations for processing data streams in cognitive systems?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-sports-x-cognitive-attention-map-evolution-falc.md": {
+    "hypothesis_slug": "2026-08-31-homospatial-sports-x-cognitive-attention-map-evolution",
+    "question": "Can the Cognitive Play Map emerge from the superimposition of basketball pick-and-roll offense and cognitive attention map evolution?",
+    "coherent": true,
+    "concern": ""
   }
 }
