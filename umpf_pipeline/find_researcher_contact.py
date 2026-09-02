@@ -201,6 +201,24 @@ def _sanity_check(result, title):
             "confidence": "LOW",
             "notes": f"Sanity check rejected the email in this result: its cited source ('{email_src}') is a bare domain homepage unconnected to {name}'s own name, which cannot actually display one specific person's email -- almost certainly a pattern-guessed address, not a real citation. Original notes: {result.get('notes', '')}",
         }
+    email = (result.get("email") or "")
+    if "protected" in email.lower() and "email" in email.lower():
+        # Third real failure mode, same day: ResearchGate (and other
+        # sites) render an obfuscated contact as literal page text --
+        # "[email protected]" (real pages use a non-breaking space, not
+        # an ASCII one) -- decoded client-side by JS the model's page
+        # fetch never runs. Two separate real results both lifted that
+        # literal placeholder string as if it were the actual address,
+        # both marked HIGH confidence. This is not a guessed pattern
+        # like the berkeley.edu case; it's mistaking a website's own
+        # anti-scraping stub for real data.
+        return {
+            **result,
+            "email": "",
+            "email_source_url": "",
+            "confidence": "LOW",
+            "notes": f"Sanity check rejected the email in this result: it was the literal text '{email}' -- a site's email-obfuscation placeholder (e.g. ResearchGate's anti-scraping stub), not a real decoded address. Original notes: {result.get('notes', '')}",
+        }
     return result
 
 

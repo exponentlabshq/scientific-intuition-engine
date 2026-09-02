@@ -3760,10 +3760,10 @@
     "refutation_content": "# Adversarial Refutation: Bisociation — Creative Brainstorming Facilitation × Physical Electrical Noise\n\n**Original**: `hypotheses/2026-08-29-creative-brainstorming-facilitation-x-physical-electrical-noise.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 0 of 3 survive → **REFUTED**\n\n- **Coherence — REFUTED.** The hypothesis equivocates on the term 'noise,' using it to describe both creative uncertainty and electrical interference without demonstrating a genuine structural mapping. The claim presents a side-by-side comparison rather than a true bisociation, lacking a coherent fusion of the two domains. The mapping relies on superficial analogies rather than a shared underlying mechanism, failing the coherence test.\n- **Testability — REFUTED.** The hypothesis lacks a clear operationalized prediction that can be tested. The mapping between creative brainstorming and electrical noise is described in abstract terms without specifying measurable metrics, comparison conditions, or rejection thresholds. The use of terms like 'uncertainty' and 'evolution of state' are too vague to design a concrete experiment, and the 'or vice versa' hedge implies direction-agnosticism, making the claim unfalsifiable.\n- **Triviality — REFUTED.** The hypothesis reduces to a trivial mapping between two complex systems: creative brainstorming and electrical noise. Both systems involve elements of uncertainty and evolution, which are common to many complex systems. The claim that facilitation techniques correspond to noise reduction is a generic analogy applicable to any system where control mechanisms are used to manage variability. Thus, the hypothesis falls into the umbrella trap, lacking specificity beyond a broad analogy.\n\n## No steelman offered\n\nAll three lenses independently converged on REFUTED for this case. If revisited, it would need a genuinely tighter formulation, not a restatement of the same claim.\n",
     "refutation_independently_confirmed": true,
     "actively_researched": false,
-    "active_research_note": "I searched for research specifically examining the relationship between effective brainstorming techniques and the clarity of electrical signals in noisy environments. However, I did not find any studies that directly address this specific mechanism. While there is extensive research on brainstorming techniques and their effectiveness in idea generation, and also studies on methods to reduce electrical noise in signal processing, there appears to be no existing research that links these two areas in the manner described.",
+    "active_research_note": "The claim regarding the relationship between brainstorming techniques and the clarity of electrical signals in noisy environments does not find a direct correspondence in any of the candidate papers. While some papers discuss brainstorming techniques and creativity in relation to noise levels, they do not address the specific mechanism proposed in the claim — the measurable improvement in electrical signals as a direct consequence of enhanced brainstorming. None of the studies explicitly link improved brainstorming to changes in electrical signal clarity, which is a critical element of the claim.",
     "active_research_matches": [],
     "active_research_most_recent_year": null,
-    "active_research_checked_date": "2026-09-01"
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-29-homospatial-human-individual-indecision-x-physical-voltage-spikes",
@@ -3774,17 +3774,19 @@
       "Physical Voltage Spikes"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 15,
+    "points": 30,
     "badges": [
       "🪞 Homospatial",
       "🗺️ Frontier Research Group",
-      "💀 Refuted"
+      "💀 Refuted",
+      "🔬 Actively Researched"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5",
       "Phase 2 ADJACENT_ACTIVE: +30",
       "Adversarial refutation REFUTED, unanimous (0-of-3 survive): -15",
-      "  independently confirmed (3 separate agents, full agreement)"
+      "  independently confirmed (3 separate agents, full agreement)",
+      "Actively researched, most recent evidence 2022 (4y old): +15"
     ],
     "held_out_reason": null,
     "tier_rank": 5,
@@ -3802,11 +3804,26 @@
     "refutation_filename": "refutations/2026-08-29-homospatial-human-individual-indecision-x-physical-voltage-spikes-refutation.md",
     "refutation_content": "# Adversarial Refutation: Homospatial — Human Individual Indecision ⊕ Physical Voltage Spikes\n\n**Original**: `hypotheses/2026-08-29-homospatial-human-individual-indecision-x-physical-voltage-spikes.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 0 of 3 survive → **REFUTED**\n\n- **Coherence — REFUTED.** The hypothesis presents 'Decisional Voltage' as a fusion of human indecision and physical voltage spikes, but it lacks genuine structural mapping. The term 'voltage' is used metaphorically for neural activity, not as a literal electrical phenomenon, leading to equivocation. This is a side-by-side comparison rather than a true homospatial fusion, failing the coherence test.\n- **Testability — REFUTED.** The hypothesis lacks a clear operationalization of the 'Decisional Voltage' concept. It does not specify a measurable metric, comparison condition, or rejection threshold for testing the proposed link between indecision and neural activity. Without these, the claim remains too vague to be falsifiable, as no experiment could definitively confirm or deny its existence.\n- **Triviality — REFUTED.** The hypothesis reduces to a claim that indecision in humans is linked to chaotic neural activity, which is a common feature of many cognitive states. The analogy to physical voltage spikes is superficial and does not provide a meaningful or novel insight into the mechanisms of indecision. This is a classic umbrella trap, as chaotic neural activity can be associated with numerous psychological phenomena, making the claim trivially true for any complex system involving decision-making and neural processes.\n\n## No steelman offered\n\nAll three lenses independently converged on REFUTED for this case. If revisited, it would need a genuinely tighter formulation, not a restatement of the same claim.\n",
     "refutation_independently_confirmed": true,
-    "actively_researched": false,
-    "active_research_note": "The specific claim regarding 'Decisional Voltage'—a concept suggesting that individuals experiencing high levels of indecision exhibit measurable spikes in brain activity akin to electrical voltage spikes in circuits, particularly in regions associated with decision-making and emotional regulation—does not correspond to any known research or established terminology in neuroscience. While there is extensive research on brain activity related to decision-making and emotional regulation, none of it specifically addresses the concept of 'Decisional Voltage' or the proposed mechanism of electrical voltage spikes in the brain during indecision. Therefore, there is no real evidence supporting this specific claim.",
-    "active_research_matches": [],
-    "active_research_most_recent_year": null,
-    "active_research_checked_date": "2026-09-01"
+    "actively_researched": true,
+    "active_research_note": "The first paper specifically discusses neural correlates of indecision and provides evidence for spikes in brain activity during conflicts in decision-making. The second paper demonstrates how multi-regional neural dynamics contribute to decision-making, which includes escalating neural signals potentially analogous to voltage spikes. Both relate closely to the claim regarding neural activity during periods of high indecision.",
+    "active_research_matches": [
+      {
+        "title": "The conflict negativity: A neural correlate of value conflict and indecision during financial decision making",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2017,
+        "url": "https://doi.org/10.1101/174136",
+        "explanation": "This paper investigates the conflict negativity (CN), an electrophysiological marker linked to decision-making that reflects indecision, especially when faced with choices of equal value. It provides direct neural evidence supporting the claim that individuals experiencing high levels of indecision will exhibit measurable neural activity related to their decision processes."
+      },
+      {
+        "title": "Multi-areal neural dynamics encode human decision making",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2022,
+        "url": "https://doi.org/10.1101/2022.08.05.502992",
+        "explanation": "This study examines how decision-making processes are encoded by high-frequency neural dynamics across multiple brain areas. The findings support the claim by showing that decision-making involves fluctuating neural activity that could be analogous to electrical voltage spikes."
+      }
+    ],
+    "active_research_most_recent_year": 2022,
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-29-janusian-epidemiology",
@@ -3873,14 +3890,16 @@
       "Physical Magnetic Field Control"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 30,
+    "points": 40,
     "badges": [
       "🪞 Homospatial",
-      "🗺️ Frontier Research Group"
+      "🗺️ Frontier Research Group",
+      "🔬 Actively Researched (historical)"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5",
-      "Phase 2 ADJACENT_ACTIVE: +30"
+      "Phase 2 ADJACENT_ACTIVE: +30",
+      "Actively researched, most recent evidence 1988 — real, but not a currently live thread: +10"
     ],
     "held_out_reason": null,
     "tier_rank": 2,
@@ -3898,10 +3917,32 @@
     "refutation_filename": null,
     "refutation_content": null,
     "refutation_independently_confirmed": false,
-    "actively_researched": false,
-    "active_research_note": "After an extensive search, I found no specific research directly investigating the integration of operant conditioning with programmable magnetic field manifolds to form a 'Magneto-Operant Schedule.' While there are studies examining the effects of magnetic fields on operant behavior in rats, such as those by Thomas et al. (1986) ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/3801058/?utm_source=openai)) and Nakagawa and Matsuda (1988) ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/3345212/?utm_source=openai)), these do not involve programmable magnetic field manifolds or the specific mechanisms outlined in your claim. Additionally, research on magnetic field-based reward shaping in reinforcement learning ([arxiv.org](https://arxiv.org/abs/2307.08033?utm_source=openai)) pertains to artificial intelligence and does not address the proposed biological mechanism. Therefore, there is no existing evidence of research into the specific mechanism you've described.",
-    "active_research_matches": [],
-    "active_research_most_recent_year": null,
+    "actively_researched": true,
+    "active_research_note": "The candidate papers retrieved sufficiently address the core aspects of the claim. They investigate how operant behavior interacts with magnetic fields, providing empirical evidence of behavior modulation by magnetic exposure, which is central to the proposed Magneto-Operant Schedules. They align with the specific mechanisms and predictions laid out in the claim.",
+    "active_research_matches": [
+      {
+        "title": "Low‐intensity magnetic fields alter operant behavior in rats",
+        "researcher_or_authors": "John de Lorge, M. Jackson Marr",
+        "year": 1986,
+        "url": "https://doi.org/10.1002/bem.2250070402",
+        "explanation": "This paper discusses how a combination of a magnetic field influences operant behavior in rats, demonstrating that the magnetic field affects the rate and pattern of responding during an operant schedule, addressing similar mechanisms of behavior and magnetic field interaction."
+      },
+      {
+        "title": "A strong static‐magnetic field alters operant responding by rats",
+        "researcher_or_authors": "Smirnova Np, I Pelyhe, István Mészaros, Éva Sárvári",
+        "year": 1988,
+        "url": "https://doi.org/10.1002/bem.2250090103",
+        "explanation": "The study shows that exposure to a strong static magnetic field significantly alters operant responses in rats, indicating a relationship between behavior and magnetic field exposure that aligns closely with the prediction of behavior being dependent on the magnetic manifold."
+      },
+      {
+        "title": "Effect of magnetic field on the behavior of operantly conditioned mice",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 1988,
+        "url": "http://osti.gov/scitech/biblio/6654909",
+        "explanation": "This research indicates that operant responses in mice are negatively affected by the presence of a magnetic field, directly supporting the idea that behavior can be influenced by programmed magnetic field contexts."
+      }
+    ],
+    "active_research_most_recent_year": 1988,
     "active_research_checked_date": "2026-09-02"
   },
   {
@@ -3941,10 +3982,10 @@
     "refutation_content": "# Adversarial Refutation: Homospatial — Informational Scientific Experiment Orchestration ⊕ Physical Magnetic Fluctuation\n\n**Original**: `hypotheses/2026-08-29-homospatial-informational-scientific-experiment-orchestration-x-physical-magnetic-fluctuation.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 0 of 3 survive → **REFUTED**\n\n- **Coherence — REFUTED.** The core claim of 'Magneto-Experimental Orchestration' relies on the term 'orchestration' to imply a fusion of two distinct domains: informational scientific experiment management and physical magnetic fluctuation. However, 'orchestration' in the context of scientific experiments typically refers to the management of processes and data, while in the context of magnetic fluctuations, it refers to the physical phenomena of magnetic fields. These are not the same formal objects or relationships; they represent different referents. Therefore, the claim exhibits equivocation on the term 'orchestration' as it conflates distinct meanings across the two domains, failing to establish a coherent fusion. Thus, the claim does not survive this lens.\n- **Testability — REFUTED.** The core claim introduces a novel concept, Magneto-Experimental Orchestration, but does not reference any specific, checkable evidence or established theorem that operationalizes its predictions. While it describes a system that integrates magnetic data into experimental design, it lacks a named experiment, dataset, or mathematical proof that could validate or invalidate the claim. Therefore, it remains vague and does not meet the criteria for testability, as it does not provide a clear metric, comparison condition, or rejection threshold.\n- **Triviality — REFUTED.** The core claim describes a specific system that autonomously integrates real-time magnetic field data into scientific experimentation. When stripped of domain-specific vocabulary, the claim reduces to a general assertion about a system that adapts experimental parameters based on fluctuating environmental data. This is a common characteristic of many complex systems, making the claim trivial. The exact phrase being tested for genericness is: \"a system that autonomously manages scientific experiments by integrating real-time magnetic field data into the design and execution of experiments.\" This phrase is indeed broader and more generic than the specific mechanisms described in the original claim, indicating that it does not hold up under scrutiny.\n\n## No steelman offered\n\nAll three lenses independently converged on REFUTED for this case. If revisited, it would need a genuinely tighter formulation, not a restatement of the same claim.\n",
     "refutation_independently_confirmed": true,
     "actively_researched": false,
-    "active_research_note": "I searched for research specifically addressing 'Magneto-Experimental Orchestration' and its impact on the accuracy and relevance of experiments conducted within fluctuating magnetic fields compared to traditional static experimental designs. However, I did not find any studies or publications that directly discuss this specific mechanism. While there are numerous studies on magnetic fields and their effects on various experimental setups, none specifically address the proposed mechanism of 'Magneto-Experimental Orchestration' as described.",
+    "active_research_note": "The specific claim about Magneto-Experimental Orchestration suggests that experiments in fluctuating magnetic fields yield more accurate results compared to static designs. The candidates focus on various aspects of magnetic field effects and stabilization techniques, but none evaluate or compare the outcomes of experiments in fluctuating fields against static designs in terms of accuracy or relevance. Therefore, while there are discussions on magnetic field fluctuations, none directly address the proposed mechanism of enhanced results from fluctuating fields as stated in the claim.",
     "active_research_matches": [],
     "active_research_most_recent_year": null,
-    "active_research_checked_date": "2026-09-01"
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-29-physical-ecosystem-succession-x-physical-immune-system",
@@ -4019,14 +4060,16 @@
       "Human Defense Coordination"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 30,
+    "points": 45,
     "badges": [
       "🧬 Bisociative",
-      "🗺️ Frontier Research Group"
+      "🗺️ Frontier Research Group",
+      "🔬 Actively Researched"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5",
-      "Phase 2 ADJACENT_ACTIVE: +30"
+      "Phase 2 ADJACENT_ACTIVE: +30",
+      "Actively researched, most recent evidence 2023 (3y old): +15"
     ],
     "held_out_reason": null,
     "tier_rank": 2,
@@ -4044,11 +4087,33 @@
     "refutation_filename": null,
     "refutation_content": null,
     "refutation_independently_confirmed": false,
-    "actively_researched": false,
-    "active_research_note": "While auction theory has been extensively studied, including its applications in various fields, there is no specific evidence of research directly linking the optimization of auction formats for resource allocation to the improvement of human defense coordination strategies. The existing literature primarily focuses on auction theory and its applications in economics and multi-agent systems, without establishing a direct connection to human defense coordination.",
-    "active_research_matches": [],
-    "active_research_most_recent_year": null,
-    "active_research_checked_date": "2026-09-01"
+    "actively_researched": true,
+    "active_research_note": "The selected papers all explore mechanisms related to optimally allocating resources in multi-defender scenarios, explicitly addressing the coordination challenges noted in the claim. They are aligned with the fundamental relationship proposed between optimizing auction formats and improving defense coordination strategies.",
+    "active_research_matches": [
+      {
+        "title": "Mechanism design for defense coordination in security games",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2020,
+        "url": "https://exa.ai/library/publication/kkkdj7lv77b",
+        "explanation": "This paper directly addresses the coordination of multiple defenders allocating security resources, aligning with the claim's emphasis on optimizing auction formats for resource allocation to enhance human defense strategies."
+      },
+      {
+        "title": "Risk-Sharing Mechanism Design in Non-Cooperative Multi-Defender Stackelberg Defense Resources Allocation Game",
+        "researcher_or_authors": "Cheng-Wu Shao, Yan-Fu Li",
+        "year": 2023,
+        "url": "https://doi.org/10.1109/tase.2023.3328903",
+        "explanation": "The study explores a Stackelberg model for multi-defender resource allocation, which intersects with the claim regarding optimizing resource allocation mechanisms to improve human defense coordination."
+      },
+      {
+        "title": "Defender (Mis)coordination in Security Games",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2018,
+        "url": "https://doi.org/10.1184/r1/6604694",
+        "explanation": "This paper quantifies losses incurred from miscoordination among defenders in security games and discusses the importance of coordination mechanisms, aligning with the claim's focus on optimizing defense coordination strategies."
+      }
+    ],
+    "active_research_most_recent_year": 2023,
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-29-homospatial-architecture-x-informational-load-balancing",
@@ -4087,10 +4152,10 @@
     "refutation_content": "# Adversarial Refutation: Homospatial — Load-Bearing Structural Design ⊕ Informational Load Balancing\n\n**Original**: `hypotheses/2026-08-29-homospatial-architecture-x-informational-load-balancing.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 0 of 3 survive → **REFUTED**\n\n- **Coherence — REFUTED.** The hypothesis claims a fusion of load-bearing structural design and informational load balancing into a single cohesive unit, termed 'Load-Balanced Architecture'. However, it appears to juxtapose two distinct domains without demonstrating a genuine fusion. The description suggests parallel operations rather than an integrated mechanism, lacking evidence of a coherent structural mapping that unifies the physical and informational components into a single entity. This indicates a side-by-side comparison rather than a true homospatial fusion.\n- **Testability — REFUTED.** The hypothesis lacks a clear operationalized prediction that can be tested. It describes a concept of 'Load-Balanced Architecture' but does not specify measurable metrics, comparison conditions, or rejection thresholds. Without these, it is impossible to design an experiment that could definitively confirm or refute the claim, making it unfalsifiable in its current form.\n- **Triviality — REFUTED.** The hypothesis reduces to the idea of integrating two complex systems (physical structures and data management) to adapt dynamically. This is a common concept applicable to many domains, such as smart grids or cyber-physical systems, where physical and informational systems interact. The claim lacks specificity and novelty, as it does not provide a unique mechanism or insight beyond the general notion of system integration and adaptation, which is true for many complex systems.\n\n## No steelman offered\n\nAll three lenses independently converged on REFUTED for this case. If revisited, it would need a genuinely tighter formulation, not a restatement of the same claim.\n",
     "refutation_independently_confirmed": true,
     "actively_researched": false,
-    "active_research_note": "The term 'Load-Balanced Architecture' as applied to building design does not appear to be a recognized concept in structural engineering or architecture. While load balancing is a well-established principle in computing and network systems to distribute workloads efficiently, there is no evidence of its application to structural design in buildings. Therefore, the specific claim regarding 'Load-Balanced Architecture' in building design lacks supporting research or documentation.",
+    "active_research_note": "The specific claim about 'Load-Balanced Architecture' aiming for improved resilience and efficiency in structural performance and data processing during peak loads is not directly addressed by any of the candidate papers. The papers either focus on adaptive load-bearing structures, AI in seismic systems, structural resilience in extreme events, or cloud-based load balancing, which, while related to structural design, do not specifically evaluate the performance or processing efficiency of a 'Load-Balanced Architecture' as defined in the claim.",
     "active_research_matches": [],
     "active_research_most_recent_year": null,
-    "active_research_checked_date": "2026-09-01"
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-29-homospatial-cognitive-attention-map-evolution-x-informational-sensor-networks",
@@ -4101,14 +4166,16 @@
       "Informational Sensor Networks"
     ],
     "verdict": "COLLISION",
-    "points": 5,
+    "points": 20,
     "badges": [
       "🪞 Homospatial",
-      "🏛️ Established Department"
+      "🏛️ Established Department",
+      "🔬 Actively Researched"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5",
-      "Phase 2 COLLISION (genuine): +5"
+      "Phase 2 COLLISION (genuine): +5",
+      "Actively researched, most recent evidence 2023 (3y old): +15"
     ],
     "held_out_reason": null,
     "tier_rank": 2,
@@ -4126,11 +4193,54 @@
     "refutation_filename": null,
     "refutation_content": null,
     "refutation_independently_confirmed": false,
-    "actively_researched": false,
-    "active_research_note": "I searched for research specifically addressing the claim that integrating cognitive attention with real-time sensor data processing enhances decision-making efficiency, but found no direct evidence. While studies on selective attention and decision-making exist, they do not focus on the integration of cognitive attention with real-time sensor data processing. Therefore, there is no direct evidence supporting this specific claim.",
-    "active_research_matches": [],
-    "active_research_most_recent_year": null,
-    "active_research_checked_date": "2026-09-01"
+    "actively_researched": true,
+    "active_research_note": "Several papers from the provided list directly explore the integration of cognitive attention mechanisms with sensor data to enhance decision-making efficiency. These studies leverage cognitive maps, sensor fusion, and adaptive attention mechanisms, explicitly addressing the claims made regarding the Cognisensorium and its anticipated effects in environments reliant on real-time data.",
+    "active_research_matches": [
+      {
+        "title": "Crowd-Based Cognitive Perception of the Physical World: Towards the Internet of Senses",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2020,
+        "url": "https://www.mdpi.com/1424-8220/20/9/2437",
+        "explanation": "This paper discusses how cognitive processes are leveraged through integrated sensor networks to enhance environmental awareness and decision-making. It directly relates to the claim by examining how real-time processing of sensor data influences cognitive attention and decision-making efficiency in contextually aware systems."
+      },
+      {
+        "title": "Using Models of Cognitive Maps for Wireless Sensor Network Monitoring",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2019,
+        "url": "https://doi.org/10.1109/dynamics47113.2019.8944723",
+        "explanation": "This study explores the application of cognitive maps within wireless sensor networks to improve decision-making in dynamic environments. The focus on how cognitive models can enhance information processing directly relates to demonstrating decision-making efficiency linked to sensor data."
+      },
+      {
+        "title": "A Cross-Layer Framework for Network Management in Wireless Sensor Networks Using Weighted Cognitive Maps",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2013,
+        "url": "https://journals.sagepub.com/doi/10.1155/2013/568580",
+        "explanation": "The formulation of a cross-layer framework that utilizes cognitive maps to manage sensor networks suggests a link between sensor data processing and decision outcomes. This aligns closely with the claim regarding enhanced decision-making efficiency when cognitive attention is integrated with real-time data."
+      },
+      {
+        "title": "Robotics: Environmental awareness through cognitive sensor fusion",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2010,
+        "url": "http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.728.5135",
+        "explanation": "The paper presents a cognitive sensor fusion architecture aimed at creating environmental awareness. By focusing on real-time data, it correlates closely with the claim about decision-making efficiency in environments where cognitive processes adapt to sensor inputs."
+      },
+      {
+        "title": "A cognitive approach to multimodal attention",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2009,
+        "url": "https://doi.org/10.14198/jopha.2009.3.1.07",
+        "explanation": "This study investigates mechanisms for adaptive attention in sensory information processing, which directly supports the claim on enhancing decision-making efficiency by integrating cognitive attention with real-time sensor data."
+      },
+      {
+        "title": "Neuro-Cognitive Locomotion with Dynamic Attention on Topological Structure",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2023,
+        "url": "https://doi.org/10.3390/machines11060619",
+        "explanation": "This paper discusses a cognitive model that integrates attention with environmental data for behavioral adaptation in robots, illustrating how the processing of sensory information can enhance decision-making efficiency in real-time scenarios."
+      }
+    ],
+    "active_research_most_recent_year": 2023,
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-29-janusian-physical-bridge-cable-tension",
@@ -4169,10 +4279,10 @@
     "refutation_content": "# Adversarial Refutation: Janusian — Physical Bridge Cable Tension\n\n**Original**: `hypotheses/2026-08-29-janusian-physical-bridge-cable-tension.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 0 of 3 survive → **REFUTED**\n\n- **Coherence — REFUTED.** The hypothesis claims a paradoxical effect of simultaneous increased and decreased tension in bridge cables, but this is not a genuine same-instance paradox. It disguises a context-dependent compromise, as tension cannot simultaneously increase and decrease in the same cable under the same conditions. The claim lacks coherence in its structural mapping, equivocating on the concept of 'tension' without a clear mechanism for how both states could coexist.\n- **Testability — REFUTED.** The hypothesis lacks a clear operationalized prediction. It suggests that simultaneous increased and decreased tension in bridge cables could improve stability, but does not specify how this would be measured or tested. There is no named metric, comparison condition, or rejection threshold provided, making it impossible to design an experiment that could definitively confirm or refute the claim. The 'unexpected dynamic responses' are too vague to be testable.\n- **Triviality — REFUTED.** The hypothesis reduces to a claim that simultaneous opposing forces can lead to unexpected stability in complex systems. This is a trivial observation applicable to many systems where dynamic equilibrium is achieved through balancing forces. The claim lacks specificity to bridge cable tension and does not provide a novel insight beyond general principles of dynamic stability in complex systems.\n\n## No steelman offered\n\nAll three lenses independently converged on REFUTED for this case. If revisited, it would need a genuinely tighter formulation, not a restatement of the same claim.\n",
     "refutation_independently_confirmed": true,
     "actively_researched": false,
-    "active_research_note": "The search did not yield any specific studies or research papers that directly investigate the simultaneous effects of both increased and decreased tension in bridge cables leading to unexpected dynamic responses that enhance stability under varying load conditions. While there is extensive research on cable tension measurement techniques and the dynamic behavior of cables under various conditions, none of the sources identified address the specific claim regarding the combined effects of increased and decreased tension on bridge stability.",
+    "active_research_note": "None of the candidate papers directly address the specific claim about simultaneous increased and decreased tension in bridge cables leading to unexpected dynamic responses. While they discuss cable tension and its effects on dynamics and stability, they do not explore the combined effect of both increased and decreased tensions acting at the same time, which is crucial for a match. Therefore, the articles remain relevant to the general topic but do not match the exact mechanism proposed in the claim.",
     "active_research_matches": [],
     "active_research_most_recent_year": null,
-    "active_research_checked_date": "2026-09-01"
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-29-artificial-intelligence-x-informational-queue-overflow",
@@ -4212,10 +4322,10 @@
     "refutation_content": "# Adversarial Refutation: Bisociation — Artificial Intelligence × Informational Queue Overflow\n\n**Original**: `hypotheses/2026-08-29-artificial-intelligence-x-informational-queue-overflow.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 0 of 3 survive → **REFUTED**\n\n- **Coherence — REFUTED.** The hypothesis equivocates on 'uncertainty' and 'state', using these terms to describe different mechanisms in AI and queue overflow without demonstrating a genuine structural mapping. The claim presents a side-by-side comparison rather than a true bisociation, lacking a coherent fusion of concepts across domains.\n- **Testability — REFUTED.** The hypothesis lacks a clear operationalized prediction that can be tested. It describes mappings between AI and queue overflow concepts but does not specify a measurable metric, comparison condition, or rejection threshold. The use of terms like 'uncertainty' and 'coordination' without precise definitions or testable conditions makes it impossible to design an experiment that could definitively confirm or refute the claim. The absence of a falsifiable prediction renders the hypothesis unfalsifiable.\n- **Triviality — REFUTED.** The hypothesis reduces to a generic mapping between uncertainty and capacity constraints, which is a common feature of many complex systems. The mapping of neural activation uncertainty to data processing uncertainty, evolving model weights to queue state, and AI coordination to data flow management are all broad analogies that could apply to numerous systems beyond AI and queue overflow. This suggests the hypothesis falls into the umbrella trap of triviality.\n\n## No steelman offered\n\nAll three lenses independently converged on REFUTED for this case. If revisited, it would need a genuinely tighter formulation, not a restatement of the same claim.\n",
     "refutation_independently_confirmed": true,
     "actively_researched": false,
-    "active_research_note": "I searched for research specifically examining the correlation between increased uncertainty in neural activation during AI training and a higher incidence of informational queue overflow in systems processing incoming data. However, I did not find any studies directly addressing this specific mechanism. While there is extensive research on uncertainty in neural networks and its impact on various aspects of AI systems, ([nature.com](https://www.nature.com/articles/s41593-023-01444-y?utm_source=openai)) none of these studies explicitly link neural activation uncertainty to informational queue overflow. Therefore, there is no direct evidence of research on this specific claim.",
+    "active_research_note": "None of the candidate papers directly address the specific mechanism proposed in the claim, which involves a correlation between neural activation uncertainty during AI training and informational queue overflow. While some papers discuss queue dynamics and the impact of processing elements like output lengths on queue performance, they do not establish or explore the proposed causal relationship between neural activation and queue overflow, which is crucial to the claim.",
     "active_research_matches": [],
     "active_research_most_recent_year": null,
-    "active_research_checked_date": "2026-09-01"
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-29-homospatial-creative-artistic-critique-x-creative-idea-uncertainty",
@@ -4226,14 +4336,16 @@
       "Creative Idea Uncertainty"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 30,
+    "points": 55,
     "badges": [
       "🪞 Homospatial",
-      "🗺️ Frontier Research Group"
+      "🗺️ Frontier Research Group",
+      "🔬🔥 Actively Researched (current)"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5",
-      "Phase 2 ADJACENT_ACTIVE: +30"
+      "Phase 2 ADJACENT_ACTIVE: +30",
+      "Actively researched, most recent evidence 2026 (0y old — a live, current research thread): +25"
     ],
     "held_out_reason": null,
     "tier_rank": 2,
@@ -4251,11 +4363,26 @@
     "refutation_filename": null,
     "refutation_content": null,
     "refutation_independently_confirmed": false,
-    "actively_researched": false,
-    "active_research_note": "I searched for research specifically examining a mechanism where artistic critiques, termed 'CritiqueFlux,' lead to measurable increases in innovative interpretations and collaborative outcomes in environments embracing uncertainty compared to traditional critique methods. However, I did not find any studies or projects that directly investigate this specific mechanism. While there are studies on collaborative critique practices and the role of uncertainty in art evaluation, none specifically address the 'CritiqueFlux' mechanism as described.",
-    "active_research_matches": [],
-    "active_research_most_recent_year": null,
-    "active_research_checked_date": "2026-09-01"
+    "actively_researched": true,
+    "active_research_note": "The selected papers directly address the specific mechanisms of artistic critique and its impact on creativity under conditions of uncertainty. The first paper investigates how epistemic uncertainty affects creative idea generation, providing empirical support for the claim, while the second explores how constructive criticism within cooperative contexts can enhance innovative outcomes. Both confirm the proposed relationship regarding the effects of critique in uncertain environments.",
+    "active_research_matches": [
+      {
+        "title": "How Epistemic Uncertainty Tolerance Affects Creative Idea Generation in Design",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2026,
+        "url": "https://research.tilburguniversity.edu/en/publications/feeed06a-a18a-4ff9-b68a-ac8d5f4f3499",
+        "explanation": "This study investigates how epistemic uncertainty influences creativity in collaborative design settings, suggesting that environments embracing uncertainty can lead to increased originality in ideas, which aligns with the claim's focus on innovative interpretations and collaborative outcomes."
+      },
+      {
+        "title": "Cooperative Criticism: When Criticism Enhances Creativity in Brainstorming and Negotiation",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2021,
+        "url": "https://doi.org/10.1287/orsc.2020.1420",
+        "explanation": "This paper examines how cooperative contexts allow criticism to enhance creativity, suggesting that when critique is delivered positively in uncertain environments, it can lead to more innovative ideas—thus connecting directly with the claim regarding critique in uncertain artistic settings."
+      }
+    ],
+    "active_research_most_recent_year": 2026,
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-29-janusian-control-theory",
@@ -4291,10 +4418,10 @@
     "refutation_content": null,
     "refutation_independently_confirmed": false,
     "actively_researched": false,
-    "active_research_note": "I searched for research addressing the specific claim that if both a PID controller can stabilize a system and a PID controller cannot stabilize a system hold simultaneously, then the stability of a PID-controlled system will unpredictably oscillate between stable and unstable behavior based on real-time parameter variations. However, I did not find any studies or publications that directly investigate this exact scenario. While there is extensive research on PID controller stability, parameter tuning, and the effects of real-time parameter variations, none of the sources explicitly discuss the simultaneous holding of both stabilization and destabilization conditions leading to unpredictable oscillations in PID-controlled systems.",
+    "active_research_note": "The claim suggests a specific scenario where both the stability and instability of a PID-controlled system can coexist, leading to unpredictable oscillations based on parameter variations. None of the candidate papers addresses this specific mechanism or proposes a system where these conditions are analyzed simultaneously. Instead, they primarily focus on analyzing conditions for stabilization or computational methods without exploring the effects of parameter variations causing oscillations, which is crucial to the claim.",
     "active_research_matches": [],
     "active_research_most_recent_year": null,
-    "active_research_checked_date": "2026-09-01"
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-29-anthropology-x-physical-evolutionary-selection",
@@ -4369,14 +4496,16 @@
       "Human Emotional Fluctuation"
     ],
     "verdict": "FACT_CHECK_FAIL",
-    "points": -10,
+    "points": 15,
     "badges": [
       "🪞 Homospatial",
-      "⚠️ Retracted"
+      "⚠️ Retracted",
+      "🔬🔥 Actively Researched (current)"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5",
-      "Phase 2 FACT_CHECK_FAIL: -10"
+      "Phase 2 FACT_CHECK_FAIL: -10",
+      "Actively researched, most recent evidence 2026 (0y old — a live, current research thread): +25"
     ],
     "held_out_reason": null,
     "tier_rank": 5,
@@ -4394,11 +4523,26 @@
     "refutation_filename": null,
     "refutation_content": null,
     "refutation_independently_confirmed": false,
-    "actively_researched": false,
-    "active_research_note": "The term 'Emotifluidity' does not appear in any of the provided research papers or articles. While there is substantial research on the dynamics of emotional regulation and its measurement, none of the sources specifically address the concept of 'Emotifluidity' or its correlation with fluid dynamic principles such as stability thresholds and turbulence indicators. Therefore, there is no direct evidence supporting the specific claim regarding 'Emotifluidity' in the available literature.",
-    "active_research_matches": [],
-    "active_research_most_recent_year": null,
-    "active_research_checked_date": "2026-09-01"
+    "actively_researched": true,
+    "active_research_note": "The papers identified explore the relationship between emotional dynamics and principles consistent with fluid dynamics, particularly turbulence and regulation patterns. They address mechanisms that reflect the claim's hypothesis regarding measurable emotional regulation linked to dynamic principles, creating a clear connection.",
+    "active_research_matches": [
+      {
+        "title": "Modeling Emotional Arousal With Turbulence Measured by EEG",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2025,
+        "url": "https://doi.org/10.1111/psyp.70093",
+        "explanation": "This paper investigates turbulence-like dynamics in brain activity related to emotional states, directly aligning with the premise that emotional regulation patterns can be characterized using fluid dynamic principles such as turbulence indicators."
+      },
+      {
+        "title": "Emotion regulation as an idiographic dynamic system: Individual differences in success of goal-directed regulation in daily life",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2026,
+        "url": "https://osf.io/dhauc",
+        "explanation": "The use of dynamical systems theory to analyze changes in emotions and regulation strategies supports the claim's notion that emotional states in individuals can demonstrate measurable patterns, akin to stability thresholds in fluid dynamics."
+      }
+    ],
+    "active_research_most_recent_year": 2026,
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-29-creative-performance-monitoring-x-physical-voltage-spikes",
@@ -4438,10 +4582,10 @@
     "refutation_content": "# Adversarial Refutation: Bisociation — Creative Performance Monitoring × Physical Voltage Spikes\n\n**Original**: `hypotheses/2026-08-29-creative-performance-monitoring-x-physical-voltage-spikes.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 0 of 3 survive → **REFUTED**\n\n- **Coherence — REFUTED.** The hypothesis equivocates on 'uncertainty' and 'feedback mechanisms,' treating them as equivalent across domains without demonstrating genuine structural mapping. The claim relies on superficial similarities rather than a coherent fusion, presenting a side-by-side comparison rather than a true bisociation. This lacks the necessary depth to establish a meaningful cross-domain connection.\n- **Testability — REFUTED.** The hypothesis lacks a clear operationalization of its falsifiable prediction. It does not specify a named metric, comparison condition, or rejection threshold for testing the proposed mapping between creative performance monitoring and physical voltage spikes. Without these elements, the hypothesis remains too vague to be tested empirically, as no real experiment could definitively confirm or refute the claim.\n- **Triviality — REFUTED.** The hypothesis reduces to a generic mapping of uncertainty and feedback mechanisms between two complex systems, which is trivially true for many domains. Both creative performance and voltage spikes involve uncertainty and iterative feedback, but this is a common feature of numerous systems, not a novel insight. The claim lacks specificity and fails to demonstrate a unique or meaningful connection beyond this trivial observation.\n\n## No steelman offered\n\nAll three lenses independently converged on REFUTED for this case. If revisited, it would need a genuinely tighter formulation, not a restatement of the same claim.\n",
     "refutation_independently_confirmed": true,
     "actively_researched": false,
-    "active_research_note": "I searched for research specifically examining the impact of implementing structured feedback mechanisms in creative performance monitoring on the unpredictability of voltage spikes in electrical systems. While there is substantial literature on the effects of feedback environments on creative performance, such as studies by Gong and Zhang (2017) ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/28861025/?utm_source=openai)) and de Stobbeleir et al. (2011) ([journals.aom.org](https://journals.aom.org/doi/pdf/10.5465/amj.2011.64870144?utm_source=openai)), these studies do not address the specific claim regarding the relationship between creative performance monitoring and voltage spike unpredictability. Additionally, research on the use of digital feedback in improving the performance of TES bolometers ([arxiv.org](https://arxiv.org/abs/1210.4967?utm_source=openai)) focuses on sensor performance in astrophysics and does not relate to creative performance monitoring. Therefore, there is no direct evidence supporting the specific claim about the interplay between creative performance monitoring and voltage spike unpredictability.",
+    "active_research_note": "None of the candidate papers address the specific mechanism described in the claim, which links a structured feedback mechanism in creative performance monitoring to a measurable change in the unpredictability of voltage spikes in electrical systems. The papers either focus on creative performance in organizational contexts, neuropsychological monitoring, or general electrical monitoring and do not investigate the direct relationship between structured feedback and voltage spike predictability.",
     "active_research_matches": [],
     "active_research_most_recent_year": null,
-    "active_research_checked_date": "2026-09-01"
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-29-homospatial-biological-systems-x-human-social-network-dynamics",
@@ -4635,17 +4779,19 @@
       "Efficient Market Hypothesis"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 15,
+    "points": 40,
     "badges": [
       "🎭 Janusian",
       "🗺️ Frontier Research Group",
-      "💀 Refuted"
+      "💀 Refuted",
+      "🔬🔥 Actively Researched (current)"
     ],
     "breakdown": [
       "Phase 1 self-report (5/5): not scored — near-zero predictive signal, see Failure 5",
       "Phase 2 ADJACENT_ACTIVE: +30",
       "Adversarial refutation REFUTED, unanimous (0-of-3 survive): -15",
-      "  independently confirmed (3 separate agents, full agreement)"
+      "  independently confirmed (3 separate agents, full agreement)",
+      "Actively researched, most recent evidence 2026 (0y old — a live, current research thread): +25"
     ],
     "held_out_reason": null,
     "tier_rank": 5,
@@ -4663,11 +4809,33 @@
     "refutation_filename": "refutations/2026-08-29-janusian-efficient-market-hypothesis-refutation.md",
     "refutation_content": "# Adversarial Refutation: Janusian — Efficient Market Hypothesis\n\n**Original**: `hypotheses/2026-08-29-janusian-efficient-market-hypothesis.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 0 of 3 survive → **REFUTED**\n\n- **Coherence — REFUTED.** The hypothesis claims a paradox of simultaneous market efficiency and inefficiency, but this is not a genuine same-instance paradox. It is a context-dependent compromise, where some anomalies persist due to inefficiencies while others disappear due to efficiencies. This is not a true paradox but rather a dual-context scenario mislabeled as paradoxical.\n- **Testability — REFUTED.** The hypothesis lacks a clear operationalization of its core claim. It does not specify which market anomalies are expected to persist or disappear, nor does it define a metric or threshold for measuring simultaneous efficiency and inefficiency. Without these specifics, the hypothesis cannot be tested in a way that would allow for a definitive 'yes' or 'no' outcome, making it unfalsifiable.\n- **Triviality — REFUTED.** The hypothesis reduces to a trivial observation about complex systems: that they can exhibit both stable and unstable behaviors simultaneously. This is a common feature of many complex systems, not unique to financial markets. The claim lacks specificity and does not provide a novel insight into the dynamics of market anomalies beyond this general observation.\n\n## No steelman offered\n\nAll three lenses independently converged on REFUTED for this case. If revisited, it would need a genuinely tighter formulation, not a restatement of the same claim.\n",
     "refutation_independently_confirmed": true,
-    "actively_researched": false,
-    "active_research_note": "The specific claim suggests that the simultaneous acceptance of both efficient and inefficient market conditions leads to the persistence of certain anomalies while others disappear, a scenario not predicted by either condition alone. Upon reviewing the available literature, no studies explicitly address this precise mechanism. While numerous papers discuss market anomalies and their implications for the Efficient Market Hypothesis (EMH), none specifically examine the combined effect of concurrent efficiency and inefficiency on the persistence or disappearance of anomalies. Therefore, there is no direct evidence supporting this specific claim.",
-    "active_research_matches": [],
-    "active_research_most_recent_year": null,
-    "active_research_checked_date": "2026-09-01"
+    "actively_researched": true,
+    "active_research_note": "The matches found directly address the complex interaction between market efficiency and inefficiency as proposed in the claim. They explore how these states can coexist, affect market anomalies, and shift based on external influences, providing a robust theoretical and empirical foundation for the claim's assertion.",
+    "active_research_matches": [
+      {
+        "title": "Evidence that financial markets are efficient sometimes and inefficient most of the times",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2016,
+        "url": "https://doi.org/10.25316/ir-7396",
+        "explanation": "This paper directly supports the notion that markets can exhibit both efficiency and inefficiency, proposing an adaptive model where market conditions fluctuate between these states. It mathematically proves the adaptability of market efficiency, addressing the claim's premise of simultaneous existence of efficiency and inefficiency."
+      },
+      {
+        "title": "Stock return predictability and the adaptive markets hypothesis: Evidence from century-long U.S. data",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": null,
+        "url": "https://www.sciencedirect.com/science/article/abs/pii/S0927539811000612",
+        "explanation": "The study investigates how market efficiency varies with changing conditions, consistent with the claim that anomalies may persist or vanish in an adaptive market, addressing the specific relationship between market states and anomalies."
+      },
+      {
+        "title": "Adaptive Market Hypothesis: A Narrative Review of Evidence, Methods, and Research Frontiers",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2026,
+        "url": "https://doi.org/10.25258/ijddt.16.55s.44",
+        "explanation": "This review discusses how the Adaptive Market Hypothesis reconciles variations in market efficiency over time with behavioral theories, directly relating to the claim about the persistence and disappearance of anomalies under different market conditions."
+      }
+    ],
+    "active_research_most_recent_year": 2026,
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-29-gaming-narrative-x-cognitive-attention-map-evolution",
@@ -4768,10 +4936,10 @@
     "refutation_content": null,
     "refutation_independently_confirmed": false,
     "actively_researched": false,
-    "active_research_note": "I searched for research specifically on 'Cognitive Cryptography' as a dual-key learning framework aimed at enhancing knowledge retention and skill acquisition efficiency. However, I found no evidence of such a concept being studied or implemented in the academic literature. While there are studies on cognitive skill acquisition and cryptographic methods, none combine these elements into a 'Cognitive Cryptography' framework as described.",
+    "active_research_note": "While the retrieved papers discuss aspects of cryptography education and cognitive processing, none of them directly address the specific claim about the impact of a 'dual-key learning framework' on knowledge retention and skill acquisition efficiency compared to traditional learning models. The studies focus more generally on instructional methods, representational fluency, and cognitive processing without making comparative evaluations against traditional learning models specifically framed in the context of 'dual-key learning.' Thus, they do not match the claim accurately.",
     "active_research_matches": [],
     "active_research_most_recent_year": null,
-    "active_research_checked_date": "2026-09-01"
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-29-homospatial-linguistics-x-economics",
@@ -4810,10 +4978,10 @@
     "refutation_content": "# Adversarial Refutation: Homospatial — Linguistics — Creole Genesis ⊕ Economics — Market Microstructure and Order Books\n\n**Original**: `hypotheses/2026-08-29-homospatial-linguistics-x-economics.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 0 of 3 survive → **REFUTED**\n\n- **Coherence — REFUTED.** The hypothesis claims a fusion between creole genesis and market microstructure to form 'Econolect,' but it lacks coherence. The term 'Econolect' is coined without demonstrating a genuine fusion of linguistic and economic mechanisms. Instead, it juxtaposes two domains side-by-side, using the term 'fusion' without substantiating how these distinct processes integrate into a single, coherent system. This is a disguised comparison rather than a true homospatial fusion.\n- **Testability — REFUTED.** The hypothesis lacks a clear operationalized prediction that can be tested. It introduces 'Econolect' as a fusion of creole genesis and market microstructure but does not specify a metric, comparison condition, or rejection threshold to evaluate its existence or characteristics. Without these elements, the claim remains too vague to be falsifiable, as no experiment could definitively confirm or deny the presence of such a system.\n- **Triviality — REFUTED.** The hypothesis reduces to the idea that a specialized communication system emerges in any complex environment where diverse inputs are streamlined for efficiency. This is trivially true for any domain where specialized jargon develops, such as technical fields or professional communities. The claim lacks specificity beyond this general observation, failing to demonstrate a unique or non-trivial intersection between creole genesis and market microstructure.\n\n## No steelman offered\n\nAll three lenses independently converged on REFUTED for this case. If revisited, it would need a genuinely tighter formulation, not a restatement of the same claim.\n",
     "refutation_independently_confirmed": true,
     "actively_researched": false,
-    "active_research_note": "I searched for research on 'Econolect' in the context of high-frequency trading (HFT) but found no references to this term in the available literature. While there is extensive research on HFT and its impact on market efficiency, transaction speed, and accuracy, none of these studies mention 'Econolect' as a specific trading language or communication protocol. Therefore, I conclude that 'Econolect' is not a recognized concept in the field of HFT.",
+    "active_research_note": "The candidate papers primarily explore various aspects of communication efficiency in financial markets and the trade-offs related to speed and algorithm sophistication. However, none specifically examine the proposed relationship between Econolect and its measurable improvement in transaction speed and accuracy in high-frequency trading environments as described in the claim. They do not address the particular dynamics of Econolect as a distinct language facilitating better communication among traders in high-frequency contexts, which is the crux of the hypothesis.",
     "active_research_matches": [],
     "active_research_most_recent_year": null,
-    "active_research_checked_date": "2026-09-01"
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-29-janusian-climatology",
@@ -4823,14 +4991,16 @@
       "Climatology — feedback loops in ice-albedo effect"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 30,
+    "points": 55,
     "badges": [
       "🎭 Janusian",
-      "🗺️ Frontier Research Group"
+      "🗺️ Frontier Research Group",
+      "🔬🔥 Actively Researched (current)"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5",
-      "Phase 2 ADJACENT_ACTIVE: +30"
+      "Phase 2 ADJACENT_ACTIVE: +30",
+      "Actively researched, most recent evidence 2025 (1y old — a live, current research thread): +25"
     ],
     "held_out_reason": null,
     "tier_rank": 2,
@@ -4848,11 +5018,33 @@
     "refutation_filename": null,
     "refutation_content": null,
     "refutation_independently_confirmed": false,
-    "actively_researched": false,
-    "active_research_note": "The specific claim suggests that if both the ice-albedo feedback loop is a critical driver of global warming and it does not significantly drive global warming, then certain regions may experience simultaneous warming and localized cooling effects due to changes in ice cover. This presents a logical contradiction, as it posits that the ice-albedo feedback is both a critical driver and not a significant driver of global warming simultaneously. Such a claim is inherently self-contradictory and does not align with established scientific understanding. Therefore, there is no real evidence or research addressing this specific mechanism.",
-    "active_research_matches": [],
-    "active_research_most_recent_year": null,
-    "active_research_checked_date": "2026-09-01"
+    "actively_researched": true,
+    "active_research_note": "The selected papers delve into the interconnections between ice-albedo feedback mechanisms and localized climatic changes, such as warming and cooling. They specifically highlight how variations in sea ice concentration can lead to unexpected temperature responses in different regions, which directly engages with the implications of the original claim regarding the complexity of the climate system.",
+    "active_research_matches": [
+      {
+        "title": "Sea ice pattern effect on Earth’s energy budget is characterized by hemispheric asymmetry",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2025,
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11870058/",
+        "explanation": "This paper discusses the spatial distribution of sea ice concentration changes and their impact on global radiative effects, specifically focusing on how these changes can lead to both warming and cooling effects in different regions, directly addressing the simultaneous warming and localized cooling effects posited in the claim."
+      },
+      {
+        "title": "The role of sea ice in present and future Arctic amplification | Communications Earth & Environment",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2025,
+        "url": "https://preview-www.nature.com/articles/s43247-025-02834-9",
+        "explanation": "This study examines the complex feedbacks associated with sea ice loss, including how the interplay between surface albedo feedback and other feedback processes can influence local temperature changes, thus supporting the claim's argument about localized cooling effects despite overall warming."
+      },
+      {
+        "title": "Sea ice and atmospheric circulation shape the high-latitude lapse rate feedback | npj Climate and Atmospheric Science",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2020,
+        "url": "https://preview-www.nature.com/articles/s41612-020-00146-7",
+        "explanation": "The paper focuses on how local sea ice loss affects temperature feedback mechanisms, emphasizing that these interactions can lead to heightened warming while simultaneously altering local climatic conditions, which aligns with the claim about the dual effects of ice cover changes."
+      }
+    ],
+    "active_research_most_recent_year": 2025,
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-29-janusian-human-learning-uncertainty",
@@ -5053,14 +5245,16 @@
       "Creative Musical Motif Deviation"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 30,
+    "points": 55,
     "badges": [
       "🧬 Bisociative",
-      "🗺️ Frontier Research Group"
+      "🗺️ Frontier Research Group",
+      "🔬🔥 Actively Researched (current)"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5",
-      "Phase 2 ADJACENT_ACTIVE: +30"
+      "Phase 2 ADJACENT_ACTIVE: +30",
+      "Actively researched, most recent evidence 2026 (0y old — a live, current research thread): +25"
     ],
     "held_out_reason": null,
     "tier_rank": 2,
@@ -5078,11 +5272,33 @@
     "refutation_filename": null,
     "refutation_content": null,
     "refutation_independently_confirmed": false,
-    "actively_researched": false,
-    "active_research_note": "I searched for research specifically examining the parallel between successful deviations in musical motifs and beneficial mutations in biological systems, focusing on adaptation and evolution based on contextual factors. However, I did not find any studies directly addressing this specific comparison. While there is extensive research on adaptation and evolution in biological systems, and studies on musical motif development, no existing research explicitly draws this parallel.",
-    "active_research_matches": [],
-    "active_research_most_recent_year": null,
-    "active_research_checked_date": "2026-09-01"
+    "actively_researched": true,
+    "active_research_note": "Three candidate papers directly relate to the claim of parallelism between musical motif deviations and biological adaptation. They explore the mechanisms of adaptation in both domains, emphasizing concepts of evolution, evolutionarily derived behaviors, and adaptive change under contextual influences. This suggests strong correspondence with the proposed hypothesis.",
+    "active_research_matches": [
+      {
+        "title": "The Role of Canalization and Plasticity in the Evolution of Musical Creativity",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2021,
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8007929/",
+        "explanation": "This paper discusses how musical creativity can be viewed through the lens of evolutionary mechanisms, specifically canalization and plasticity, paralleling concepts of adaptation in biological systems. Both musical motifs and biological traits adapt based on environmental contexts, directly relating to the claim about successful deviations and beneficial mutations."
+      },
+      {
+        "title": "Using Galant Schemata as Evidence for Universal Darwinism",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2013,
+        "url": "https://doi.org/10.1179/0308018813z.00000000042",
+        "explanation": "This paper draws parallels between Darwinian evolution and cultural phenomena, including music, suggesting that similar evolutionary algorithms operate in both realms. It frames musical culture within a Darwinian context, akin to biological evolution, addressing the core of the claim about adaptive patterns."
+      },
+      {
+        "title": "Musicality in protein interaction dynamics informs the multi-scale evolution of prosocial behaviour",
+        "researcher_or_authors": "authors not specified in excerpt",
+        "year": 2026,
+        "url": "https://doi.org/10.1098/rsif.2025.0290",
+        "explanation": "This study suggests that musicality reflects adaptive behaviors at various biological scales and posits that principles seen in music may contribute to evolutionary mechanisms. This supports the claim that both musical motifs and biological systems can exhibit similar patterns of adaptation."
+      }
+    ],
+    "active_research_most_recent_year": 2026,
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-29-biological-systems-x-informational-scientific-experiment-orchestration",
@@ -5183,10 +5399,10 @@
     "refutation_content": null,
     "refutation_independently_confirmed": false,
     "actively_researched": false,
-    "active_research_note": "I searched for research or projects that apply principles of chemical self-assembly to the orchestration of cohesive album productions but found no specific evidence of such interdisciplinary work. While both fields involve complex systems and organization, the direct application of chemical self-assembly principles to music production does not appear to be a recognized area of study.",
+    "active_research_note": "The specific claim discusses the predictive relationship between principles of self-assembly in chemistry and cohesive orchestration in album production. None of the candidate papers genuinely address the same mechanism of predicting effective strategies for either self-assembly in chemistry or cohesive album productions in a manner that closely aligns the two fields. The papers may touch on related ideas or analogies between music and chemistry, but they do not offer the direct mechanistic comparison required to validate the claim.",
     "active_research_matches": [],
     "active_research_most_recent_year": null,
-    "active_research_checked_date": "2026-09-01"
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-29-climatology-ocean-current-circulation-x-cognitive-model-adaptation",
@@ -5226,10 +5442,10 @@
     "refutation_content": "# Adversarial Refutation: Bisociation — Climatology × Cognitive Model Adaptation\n\n**Original**: `hypotheses/2026-08-29-climatology-ocean-current-circulation-x-cognitive-model-adaptation.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 0 of 3 survive → **REFUTED**\n\n- **Coherence — REFUTED.** The hypothesis equivocates on the term 'uncertainty' by treating it as a match across climatology and cognitive model adaptation without demonstrating that the underlying mechanisms are genuinely analogous. The mapping relies on broad parallels rather than a coherent structural fusion, suggesting a side-by-side comparison rather than a true bisociation. This lack of genuine structural mapping coherence leads to refutation.\n- **Testability — REFUTED.** The hypothesis lacks operationalized metrics and clear rejection thresholds for its claims. The mapping between climatology and cognitive model adaptation is described in vague terms without specifying how uncertainty, state changes, or interaction boundaries would be measured or tested in either domain. The absence of a defined experimental setup or criteria for falsification makes the hypothesis unfalsifiable, as no real experiment could definitively confirm or refute the proposed mappings.\n- **Triviality — REFUTED.** The hypothesis reduces to a generic comparison of uncertainty and adaptation in complex systems, which is a common feature across many domains. The mapping of ocean currents to cognitive models based on state changes and interaction boundaries is an umbrella-trap scenario, as these are broad characteristics applicable to numerous complex systems. Without specific mechanisms or novel insights, the claim lacks substantive novelty and is trivially true.\n\n## No steelman offered\n\nAll three lenses independently converged on REFUTED for this case. If revisited, it would need a genuinely tighter formulation, not a restatement of the same claim.\n",
     "refutation_independently_confirmed": true,
     "actively_researched": false,
-    "active_research_note": "I searched for research specifically examining the relationship between improvements in predictive models of ocean current behavior and the adaptability of cognitive models in complex systems. While there are studies on ocean circulation models and cognitive modeling, none directly address the proposed mechanism linking these two areas. Therefore, there is no real evidence of research on this specific claim.",
+    "active_research_note": "The candidates retrieved deal broadly with cognitive models and complexity in systems but do not specifically address the proposed relationship between predictive models of ocean current behavior and cognitive model adaptability. The first paper focuses on information dynamics in cognitive systems rather than oceanic behavior; the second is on social-ecological systems, and the third, while discussing systems thinking in agriculture, does not touch on ocean currents or their influence on cognitive models. None of the papers directly engage with the mechanisms described in the specific claim.",
     "active_research_matches": [],
     "active_research_most_recent_year": null,
-    "active_research_checked_date": "2026-09-01"
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-29-creative-instrument-track-development-x-informational-load-balancing",
@@ -5268,10 +5484,10 @@
     "refutation_content": "# Adversarial Refutation: Bisociation — Creative Instrument Track Development × Informational Load Balancing\n\n**Original**: `hypotheses/2026-08-29-creative-instrument-track-development-x-informational-load-balancing.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 0 of 3 survive → **REFUTED**\n\n- **Coherence — REFUTED.** The core claim relies on the term 'decision-making processes' to connect the two domains. In the context of Creative Instrument Track Development, this refers to artistic choices made by musicians, while in Informational Load Balancing, it pertains to algorithmic task allocation. These are fundamentally different referents: one is subjective and creative, the other is objective and computational. Thus, the claim does not hold as a genuine bisociation, as it conflates distinct meanings of 'decision-making processes' without establishing a coherent structural mapping between the two domains.\n- **Testability — REFUTED.** The core claim presents a mapping between two domains but does not operationalize any specific, checkable evidence or metrics that would allow for a clear experimental test of the hypothesis. While it outlines a structure for comparison, it lacks named experiments, datasets, or theorems that could validate the proposed mapping. The use of vague terms like 'Maybe' and 'Free' further obscures the testability of the claim, making it difficult to derive a clear rejection threshold. Therefore, the claim is too vague to be considered testable.\n- **Triviality — REFUTED.** The core claim presents a mapping between two distinct domains, asserting that their decision-making processes exhibit similar structures. However, when stripped of domain-specific vocabulary, the claim reduces to a general assertion about adaptive decision-making in complex systems. The specific mechanisms of musical decision-making and task allocation in load balancing are not inherently similar, and the claim does not hold as a trivial truth applicable to almost any two complex systems. Therefore, the claim is not trivial but rather specific to the domains involved.\n\n## No steelman offered\n\nAll three lenses independently converged on REFUTED for this case. If revisited, it would need a genuinely tighter formulation, not a restatement of the same claim.\n",
     "refutation_independently_confirmed": true,
     "actively_researched": false,
-    "active_research_note": "I searched for research specifically examining the relationship between the complexity or uncertainty in a music track's arrangement and the efficiency of task allocation in an informational load balancing system. However, I did not find any studies that directly address this specific mechanism. While there are studies on the computational complexity of music arrangement ([sciencedirect.com](https://www.sciencedirect.com/science/article/pii/S1877050925036646?utm_source=openai)) and on load balancing in computing ([en.wikipedia.org](https://en.wikipedia.org/wiki/Load_balancing_%28computing%29?utm_source=openai)), these do not explore the interplay between musical arrangement complexity and load balancing efficiency.",
+    "active_research_note": "None of the candidate papers directly address the specific mechanism of task allocation efficiency in relation to complexity or uncertainty in music track arrangements. The first paper discusses musical entropy and improvisation but does not link this to efficiency in informational load balancing systems as required by the claim. The second paper explores perceived musical complexity based on information theory but does not connect this to task allocation or efficiency. The other papers either focus on instrumentational complexity or broader studies of musical arrangement without addressing the specified relationship of the claim.",
     "active_research_matches": [],
     "active_research_most_recent_year": null,
-    "active_research_checked_date": "2026-09-01"
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-29-creative-musical-composition-x-human-emotional-fluctuation",

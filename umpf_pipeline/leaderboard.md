@@ -10,9 +10,9 @@ Per-mode averages, computed fresh from the live ledger every run — not a one-t
 
 | Mode | n | Avg points | NO_SIGNAL rate |
 |---|---|---|---|
-| janusian | 216 | +29.3 | 8% |
-| bisociation | 275 | +17.8 | 25% |
-| homospatial | 246 | +11.2 | 36% |
+| janusian | 216 | +29.5 | 8% |
+| bisociation | 275 | +17.9 | 25% |
+| homospatial | 246 | +11.5 | 36% |
 | case-study | 12 | +6.2 | 25% |
 
 ## Pre-filter signal (Phase 0.5, observe-only)
@@ -66,137 +66,137 @@ The composability pre-filter never gates generation — it only logs a signal (s
 | 26 | 🗺️ Verified, Unrefuted | Cognitive Attention Map Evolution × Creative Artistic Critique | **+55** | ADJACENT_ACTIVE | — | — | 🪞 Homospatial 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
 | 27 | 🗺️ Verified, Unrefuted | Social Systems × Human Team Collaboration | **+55** | ADJACENT_ACTIVE | — | — | 🧬 Bisociative 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
 | 28 | 🗺️ Verified, Unrefuted | Creative Narrative Arc Development × Human Committee Formation | **+55** | ADJACENT_ACTIVE | — | — | 🪞 Homospatial 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
-| 29 | 🗺️ Verified, Unrefuted | Swarm Robotics × Creative Performance Monitoring | **+55** | ADJACENT_ACTIVE | — | — | 🪞 Homospatial 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
-| 30 | 🗺️ Verified, Unrefuted | Informational Database Sharding | **+55** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
-| 31 | 🗺️ Verified, Unrefuted | Language Linguistics × Military Strategy | **+55** | ADJACENT_ACTIVE | — | — | 🧬 Bisociative 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
-| 32 | 🗺️ Verified, Unrefuted | Ocean Current Circulation × Epigenetics | **+55** | ADJACENT_ACTIVE | — | — | 🪞 Homospatial 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
-| 33 | 🗺️ Verified, Unrefuted | Healthcare (Human & Social Systems) × Creative Idea Uncertainty | **+55** | ADJACENT_ACTIVE | — | — | 🪞 Homospatial 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
-| 34 | 🗺️ Verified, Unrefuted | Creative Inspiration Variability | **+55** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
-| 35 | 🗺️ Verified, Unrefuted | Human Financial Market Systems | **+55** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
-| 36 | 🗺️ Verified, Unrefuted | Education (Information & Intelligence Systems) × Human Meeting Participation | **+55** | ADJACENT_ACTIVE | — | — | 🧬 Bisociative 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
-| 37 | 🗺️ Verified, Unrefuted | Climate Science × Gaming Narrative | **+55** | ADJACENT_ACTIVE | — | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
-| 38 | 🗺️ Verified, Unrefuted | Human Urban Planning × Physical Ecosystem Succession | **+55** | ADJACENT_ACTIVE | — | narrative-shaped | 🪞 Homospatial 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
-| 39 | 🗺️ Verified, Unrefuted | Informational Error Probability × Physical Circuit Evolution | **+55** | ADJACENT_ACTIVE | — | formalism-shaped | 🧬 Bisociative 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
-| 40 | 🗺️ Verified, Unrefuted | Supply Chain Logistics × Cryptography | **+55** | ADJACENT_ACTIVE | — | mixed-uncertain | 🪞 Homospatial 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
-| 41 | 🗺️ Verified, Unrefuted | Human Urban Planning | **+55** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
-| 42 | 🗺️ Verified, Unrefuted | Sports Athletics × Physical Thermal Variation | **+55** | ADJACENT_ACTIVE | — | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
-| 43 | 🗺️ Verified, Unrefuted | Human Financial Trading Algorithms × Physical Power Grid Orchestration | **+55** | ADJACENT_ACTIVE | — | narrative-shaped | 🪞 Homospatial 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
-| 44 | 🗺️ Verified, Unrefuted | Physical Gear System Mechanics | **+55** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
-| 45 | 🗺️ Verified, Unrefuted | Physical Power Grid Orchestration | **+55** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
-| 46 | 🗺️ Verified, Unrefuted | Epigenetics × Physical Magnetic Fluctuation | **+55** | ADJACENT_ACTIVE | — | mixed-uncertain | 🪞 Homospatial 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
-| 47 | 🗺️ Verified, Unrefuted | Creative Improvisation Coordination × Physical Evolutionary Selection | **+55** | ADJACENT_ACTIVE | — | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
-| 48 | 🗺️ Verified, Unrefuted | Healthcare × Creative Album Production Orchestration | **+55** | ADJACENT_ACTIVE | — | narrative-shaped | 🧬 Bisociative 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
-| 49 | 🗺️ Verified, Unrefuted | Music Theory × Physical Acoustic Resonance | **+55** | ADJACENT_ACTIVE | — | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
-| 50 | 🗺️ Verified, Unrefuted | Control Theory — Kalman Filtering × Quantum Physics | **+55** | ADJACENT_ACTIVE | — | formalism-shaped | 🪞 Homospatial 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
-| 51 | 🗺️ Verified, Unrefuted | Thermodynamics × Creative Inspiration Variability | **+55** | ADJACENT_ACTIVE | — | mixed-uncertain | 🪞 Homospatial 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
-| 52 | 🗺️ Verified, Unrefuted | Urban Planning × Telecommunications | **+55** | ADJACENT_ACTIVE | — | narrative-shaped | 🧬 Bisociative 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
-| 53 | 🗺️ Verified, Unrefuted | Knowledge Systems × Physical Power Grid Orchestration | **+55** | ADJACENT_ACTIVE | — | mixed-uncertain | 🪞 Homospatial 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
-| 54 | 🗺️ Verified, Unrefuted | Comedy × Cognitive AI Attention | **+55** | ADJACENT_ACTIVE | — | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
-| 55 | 🗺️ Verified, Unrefuted | Economics × Cognitive AI Attention | **+55** | ADJACENT_ACTIVE | — | narrative-shaped | 🧬 Bisociative 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
-| 56 | 🗺️ Verified, Unrefuted | Game Theory × Gaming Narrative | **+55** | ADJACENT_ACTIVE | — | narrative-shaped | 🧬 Bisociative 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
-| 57 | 🗺️ Verified, Unrefuted | Informational Routing Policy Enforcement × Physical Evolutionary Selection | **+55** | ADJACENT_ACTIVE | — | mixed-uncertain | 🪞 Homospatial 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
-| 58 | 🗺️ Verified, Unrefuted | Cognitive AI Pipeline Orchestration | **+55** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
-| 59 | 🗺️ Verified, Unrefuted | Cognitive Streaming Data Processing × Creative Film Production Orchestration | **+55** | ADJACENT_ACTIVE | — | narrative-shaped | 🧬 Bisociative 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
-| 60 | 🗺️ Verified, Unrefuted | Banking — fractional reserve credit multiplier | **+55** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
-| 61 | 🗺️ Verified, Unrefuted | Dance — choreographic phrase repetition | **+55** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
-| 62 | 🗺️ Verified, Unrefuted | Metallurgy — annealing and grain refinement | **+55** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
-| 63 | 🗺️ Verified, Unrefuted | Military strategy — asymmetric guerrilla tactics | **+55** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
-| 64 | 🗺️ Verified, Unrefuted | Informational Database Sharding × Informational Distributed Consensus | **+55** | ADJACENT_ACTIVE | — | formalism-shaped | 🧬 Bisociative 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
-| 65 | 🗺️ Verified, Unrefuted | Physics — particle physics — Standard Model symmetry breaking × Physics — optics — diffraction and interference patterns | **+55** | ADJACENT_ACTIVE | — | formalism-shaped | 🧬 Bisociative 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
-| 66 | 🗺️ Verified, Unrefuted | Physical Circuit Evolution × Physical Mechanical Vibration | **+55** | ADJACENT_ACTIVE | — | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
-| 67 | 🗺️ Verified, Unrefuted | Ethics — trolley-problem moral reasoning | **+55** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
-| 68 | 🗺️ Verified, Unrefuted | Ecology × Telecommunications | **+45** | ADJACENT_ACTIVE | — | — | 🧬 Bisociative 🗺️ Frontier Research Group 🔬 Actively Researched |
-| 69 | 🗺️ Verified, Unrefuted | Materials Science — Crystal Lattice Defects | **+45** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬 Actively Researched |
-| 70 | 🗺️ Verified, Unrefuted | Anthropology × Military Strategy | **+45** | ADJACENT_ACTIVE | — | — | 🧬 Bisociative 🗺️ Frontier Research Group 🔬 Actively Researched |
-| 71 | 🗺️ Verified, Unrefuted | Creative Musical Motif Deviation × Evolutionary Biology — Punctuated Equilibrium | **+45** | ADJACENT_ACTIVE | — | — | 🧬 Bisociative 🗺️ Frontier Research Group 🔬 Actively Researched |
-| 72 | 🗺️ Verified, Unrefuted | Human Financial Trading Algorithms × Ecology — Predator-Prey Population Dynamics | **+45** | ADJACENT_ACTIVE | — | — | 🧬 Bisociative 🗺️ Frontier Research Group 🔬 Actively Researched |
-| 73 | 🗺️ Verified, Unrefuted | Creative Block | **+45** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬 Actively Researched |
-| 74 | 🗺️ Verified, Unrefuted | Physical Chemical Reaction Networks × Human Committee Formation | **+45** | ADJACENT_ACTIVE | — | — | 🪞 Homospatial 🗺️ Frontier Research Group 🔬 Actively Researched |
-| 75 | 🗺️ Verified, Unrefuted | Culinary Arts (Creative & Performance Systems) | **+45** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬 Actively Researched |
-| 76 | 🗺️ Verified, Unrefuted | Epidemiology — Herd Immunity Thresholds | **+45** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬 Actively Researched |
-| 77 | 🗺️ Verified, Unrefuted | Physical Ecosystem Succession × Physical Immune System | **+45** | ADJACENT_ACTIVE | — | — | 🧬 Bisociative 🗺️ Frontier Research Group 🔬 Actively Researched |
-| 78 | 🗺️ Verified, Unrefuted | Biological Systems × Human Social Network Dynamics | **+45** | ADJACENT_ACTIVE | — | — | 🪞 Homospatial 🗺️ Frontier Research Group 🔬 Actively Researched |
-| 79 | 🗺️ Verified, Unrefuted | Gaming Narrative × Cognitive Attention Map Evolution | **+45** | ADJACENT_ACTIVE | — | — | 🧬 Bisociative 🗺️ Frontier Research Group 🔬 Actively Researched |
-| 80 | 🗺️ Verified, Unrefuted | Biological Systems × Informational Scientific Experiment Orchestration | **+45** | ADJACENT_ACTIVE | — | — | 🧬 Bisociative 🗺️ Frontier Research Group 🔬 Actively Researched |
-| 81 | 🗺️ Verified, Unrefuted | Creative Narrative Arc Development × Human Team Collaboration | **+45** | ADJACENT_ACTIVE | — | — | 🧬 Bisociative 🗺️ Frontier Research Group 🔬 Actively Researched |
-| 82 | 🗺️ Verified, Unrefuted | Human Meeting Participation | **+45** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬 Actively Researched |
-| 83 | 🗺️ Verified, Unrefuted | Immunology × Behavioral Psychology | **+45** | ADJACENT_ACTIVE | — | — | 🪞 Homospatial 🗺️ Frontier Research Group 🔬 Actively Researched |
-| 84 | 🗺️ Verified, Unrefuted | Architecture — load-bearing structural design | **+45** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬 Actively Researched |
-| 85 | 🗺️ Verified, Unrefuted | Telecommunications × Quantum Physics | **+45** | ADJACENT_ACTIVE | — | mixed-uncertain | 🪞 Homospatial 🗺️ Frontier Research Group 🔬 Actively Researched |
-| 86 | 🗺️ Verified, Unrefuted | Creative Musical Composition | **+45** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬 Actively Researched |
-| 87 | 🗺️ Verified, Unrefuted | Urban Planning × Creative Improvisation Adjustment | **+45** | ADJACENT_ACTIVE | — | narrative-shaped | 🧬 Bisociative 🗺️ Frontier Research Group 🔬 Actively Researched |
-| 88 | 🗺️ Verified, Unrefuted | Creative Instrument Track Development | **+45** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬 Actively Researched |
-| 89 | 🗺️ Verified, Unrefuted | Physical Evolutionary Selection | **+45** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬 Actively Researched |
-| 90 | 🗺️ Verified, Unrefuted | Chemistry × Human Social Network Dynamics | **+45** | ADJACENT_ACTIVE | — | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group 🔬 Actively Researched |
-| 91 | 🗺️ Verified, Unrefuted | Informational Software Version Control | **+45** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬 Actively Researched |
-| 92 | 🗺️ Verified, Unrefuted | Telecommunications × Cognitive Streaming Data Processing | **+45** | ADJACENT_ACTIVE | — | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group 🔬 Actively Researched |
-| 93 | 🗺️ Verified, Unrefuted | Urban Planning × Cryptography | **+45** | ADJACENT_ACTIVE | — | mixed-uncertain | 🪞 Homospatial 🗺️ Frontier Research Group 🔬 Actively Researched |
-| 94 | 🗺️ Verified, Unrefuted | Human Social Influence × Informational Sensor Networks | **+45** | ADJACENT_ACTIVE | — | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group 🔬 Actively Researched |
-| 95 | 🗺️ Verified, Unrefuted | Music Theory × Human Social Network Dynamics | **+45** | ADJACENT_ACTIVE | — | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group 🔬 Actively Researched |
-| 96 | 🗺️ Verified, Unrefuted | Healthcare × Creative Film Production Orchestration | **+45** | ADJACENT_ACTIVE | — | narrative-shaped | 🧬 Bisociative 🗺️ Frontier Research Group 🔬 Actively Researched |
-| 97 | 🗺️ Verified, Unrefuted | Urban Planning × Physical Chemical Reaction Networks | **+45** | ADJACENT_ACTIVE | — | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group 🔬 Actively Researched |
-| 98 | 🗺️ Verified, Unrefuted | Anthropology × Creative Film Production Orchestration | **+45** | ADJACENT_ACTIVE | — | narrative-shaped | 🧬 Bisociative 🗺️ Frontier Research Group 🔬 Actively Researched |
-| 99 | 🗺️ Verified, Unrefuted | Urban Planning × Informational Sensor Networks | **+45** | ADJACENT_ACTIVE | — | narrative-shaped | 🧬 Bisociative 🗺️ Frontier Research Group 🔬 Actively Researched |
-| 100 | 🗺️ Verified, Unrefuted | Education (Information & Intelligence Systems) | **+45** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬 Actively Researched |
-| 101 | 🗺️ Verified, Unrefuted | Chemistry × Physical Immune System | **+45** | ADJACENT_ACTIVE | — | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group 🔬 Actively Researched |
-| 102 | 🗺️ Verified, Unrefuted | Cognitive Reinforcement Learning × Informational OS Thread Scheduling | **+45** | ADJACENT_ACTIVE | — | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group 🔬 Actively Researched |
-| 103 | 🗺️ Verified, Unrefuted | Physical Thermal Variation | **+45** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬 Actively Researched |
-| 104 | 🗺️ Verified, Unrefuted | Organizational Theory × Creative Inspiration Variability | **+45** | ADJACENT_ACTIVE | — | narrative-shaped | 🧬 Bisociative 🗺️ Frontier Research Group 🔬 Actively Researched |
-| 105 | 🗺️ Verified, Unrefuted | Urban Planning × Agriculture | **+45** | ADJACENT_ACTIVE | — | narrative-shaped | 🧬 Bisociative 🗺️ Frontier Research Group 🔬 Actively Researched |
-| 106 | 🗺️ Verified, Unrefuted | Music theory — counterpoint and voice leading | **+45** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬 Actively Researched |
-| 107 | 🗺️ Verified, Unrefuted | Creative Artistic Arrangement × Informational Distributed Consensus | **+45** | ADJACENT_ACTIVE | — | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group 🔬 Actively Researched |
-| 108 | 🗺️ Verified, Unrefuted | Human Meeting Participation × Informational Sensor Networks | **+45** | ADJACENT_ACTIVE | — | mixed-uncertain | 🪞 Homospatial 🗺️ Frontier Research Group 🔬 Actively Researched |
-| 109 | 🗺️ Verified, Unrefuted | Physical Chemical Reaction Networks × Physical Magnetic Fluctuation | **+45** | ADJACENT_ACTIVE | — | mixed-uncertain | 🪞 Homospatial 🗺️ Frontier Research Group 🔬 Actively Researched |
-| 110 | 🗺️ Verified, Unrefuted | Prigogine — thermodynamics × Complex systems | **+45** | ADJACENT_ACTIVE | — | formalism-shaped | 🧬 Bisociative 🗺️ Frontier Research Group 🔬 Actively Researched |
-| 111 | 🗺️ Verified, Unrefuted | Watson & Crick — DNA × Information theory | **+45** | ADJACENT_ACTIVE | — | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group 🔬 Actively Researched |
-| 112 | 🗺️ Verified, Unrefuted | Genetics — Mendelian inheritance and linkage | **+45** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬 Actively Researched |
-| 113 | 🗺️ Verified, Unrefuted | Logic — Gödel incompleteness and self-reference | **+45** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬 Actively Researched |
-| 114 | 🗺️ Verified, Unrefuted | Sociology — social network diffusion of innovation | **+45** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬 Actively Researched |
-| 115 | 🗺️ Verified, Unrefuted | Viticulture — terroir and grape ripening | **+45** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬 Actively Researched |
-| 116 | 🗺️ Verified, Unrefuted | Astrophysics — orbital resonance | **+45** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬 Actively Researched |
-| 117 | 🗺️ Verified, Unrefuted | Forestry — controlled burn succession | **+45** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬 Actively Researched |
-| 118 | 🗺️ Verified, Unrefuted | Microbiology — biofilm formation | **+45** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬 Actively Researched |
-| 119 | 🗺️ Verified, Unrefuted | Veterinary medicine — zoonotic disease transmission | **+45** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬 Actively Researched |
-| 120 | 🗺️ Verified, Unrefuted | Physical Flux Regulation × Materials science — phase transitions | **+45** | ADJACENT_ACTIVE | — | formalism-shaped | 🧬 Bisociative 🗺️ Frontier Research Group 🔬 Actively Researched |
-| 121 | 🗺️ Verified, Unrefuted | Physical Thermal Variation × Materials science — crystal lattice defects | **+45** | ADJACENT_ACTIVE | — | formalism-shaped | 🧬 Bisociative 🗺️ Frontier Research Group 🔬 Actively Researched |
-| 122 | 🗺️ Verified, Unrefuted | Physical Circuit Evolution × Physical Magnetic Field Control | **+45** | ADJACENT_ACTIVE | — | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group 🔬 Actively Researched |
-| 123 | 🗺️ Verified, Unrefuted | Physical Circuit Evolution × Physical Electrical Noise | **+45** | ADJACENT_ACTIVE | — | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group 🔬 Actively Researched |
-| 124 | 🗺️ Verified, Unrefuted | Compiler optimization × Neural network training | **+40** | ADJACENT_ACTIVE | — | — | 📜 Pre-existing case study 🗺️ Frontier Research Group 🔬 Actively Researched (historical) |
-| 125 | 🗺️ Verified, Unrefuted | Finance (Human & Social Systems) | **+40** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬 Actively Researched (historical) |
-| 126 | 🗺️ Verified, Unrefuted | Informational Cache Miss Handling × Human Individual Indecision | **+40** | ADJACENT_ACTIVE | — | — | 🪞 Homospatial 🗺️ Frontier Research Group 🔬 Actively Researched (historical) |
-| 127 | 🗺️ Verified, Unrefuted | Immunology × Military Strategy | **+40** | ADJACENT_ACTIVE | — | — | 🧬 Bisociative 🗺️ Frontier Research Group 🔬 Actively Researched (historical) |
-| 128 | 🗺️ Verified, Unrefuted | Physical Feedback Loop Control | **+40** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬 Actively Researched (historical) |
-| 129 | 🗺️ Verified, Unrefuted | Game Theory Nash Bargaining × Human Social Network Dynamics | **+40** | ADJACENT_ACTIVE | — | — | 🪞 Homospatial 🗺️ Frontier Research Group 🔬 Actively Researched (historical) |
-| 130 | 🗺️ Verified, Unrefuted | Informational Database State | **+40** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬 Actively Researched (historical) |
-| 131 | 🗺️ Verified, Unrefuted | Anthropology × Physical Evolutionary Selection | **+40** | ADJACENT_ACTIVE | — | — | 🧬 Bisociative 🗺️ Frontier Research Group 🔬 Actively Researched (historical) |
-| 132 | 🗺️ Verified, Unrefuted | Human Social Influence | **+40** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬 Actively Researched (historical) |
-| 133 | 🗺️ Verified, Unrefuted | Physical Immune System | **+40** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬 Actively Researched (historical) |
-| 134 | 🗺️ Verified, Unrefuted | Informational OS Thread Scheduling | **+40** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬 Actively Researched (historical) |
-| 135 | 🗺️ Verified, Unrefuted | Climatology — Ocean Current Circulation (Thermohaline) | **+40** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬 Actively Researched (historical) |
-| 136 | 🗺️ Verified, Unrefuted | Informational Event-Driven Systems | **+40** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬 Actively Researched (historical) |
-| 137 | 🗺️ Verified, Unrefuted | Supply Chain Logistics — Bullwhip Effect | **+40** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬 Actively Researched (historical) |
-| 138 | 🗺️ Verified, Unrefuted | Physical Photon Emission | **+40** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬 Actively Researched (historical) |
-| 139 | 🗺️ Verified, Unrefuted | Creative Performance Monitoring | **+40** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬 Actively Researched (historical) |
-| 140 | 🗺️ Verified, Unrefuted | Creative Instrument Track Development × Physical Circuit Evolution | **+40** | ADJACENT_ACTIVE | — | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group 🔬 Actively Researched (historical) |
-| 141 | 🗺️ Verified, Unrefuted | Law — Contract Formation and Offer/Acceptance | **+40** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬 Actively Researched (historical) |
-| 142 | 🗺️ Verified, Unrefuted | Social Systems × Physical Feedback Loop Control | **+40** | ADJACENT_ACTIVE | — | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group 🔬 Actively Researched (historical) |
-| 143 | 🗺️ Verified, Unrefuted | History — path dependence in institutional change | **+40** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬 Actively Researched (historical) |
-| 144 | 🗺️ Verified, Unrefuted | Marketing — diffusion of innovation adoption curve | **+40** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬 Actively Researched (historical) |
-| 145 | 🗺️ Verified, Unrefuted | Robotics — inverse kinematics | **+40** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬 Actively Researched (historical) |
-| 146 | 🗺️ Verified, Unrefuted | Law — common law precedent and stare decisis | **+30** | COLLISION | — | — | 🎭 Janusian 🏛️ Established Department 🔬🔥 Actively Researched (current) |
-| 147 | 🗺️ Verified, Unrefuted | Distributed Consensus Algorithms (Raft, PBFT) × Distributed Cache Coherence Protocols (MESI, Directory-based) | **+30** | ADJACENT_ACTIVE | — | — | 📜 Pre-existing case study 🗺️ Frontier Research Group |
-| 148 | 🗺️ Verified, Unrefuted | Dirac's large numbers hypothesis × Belnap four-valued logic / explainable AI | **+30** | ADJACENT_ACTIVE | — | — | 📜 Pre-existing case study 🗺️ Frontier Research Group |
-| 149 | 🗺️ Verified, Unrefuted | Astronomy — gravitational lensing | **+30** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group |
-| 150 | 🗺️ Verified, Unrefuted | Informational Hash Collisions × Human Social Network Dynamics | **+30** | ADJACENT_ACTIVE | — | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group |
-| 151 | 🗺️ Verified, Unrefuted | Game Theory — Nash Bargaining × Music — Sample-Based Hip-Hop Production | **+30** | ADJACENT_ACTIVE | — | — | 🧬 Bisociative 🗺️ Frontier Research Group |
-| 152 | 🗺️ Verified, Unrefuted | Architecture × Cross Domain Pattern Recognition | **+30** | ADJACENT_ACTIVE | — | — | 🪞 Homospatial 🗺️ Frontier Research Group |
-| 153 | 🗺️ Verified, Unrefuted | Behavioral Psychology Operant Conditioning × Physical Magnetic Field Control | **+30** | ADJACENT_ACTIVE | — | — | 🪞 Homospatial 🗺️ Frontier Research Group |
-| 154 | 🗺️ Verified, Unrefuted | Auction Theory × Human Defense Coordination | **+30** | ADJACENT_ACTIVE | — | — | 🧬 Bisociative 🗺️ Frontier Research Group |
-| 155 | 🗺️ Verified, Unrefuted | Creative Artistic Critique × Creative Idea Uncertainty | **+30** | ADJACENT_ACTIVE | — | — | 🪞 Homospatial 🗺️ Frontier Research Group |
-| 156 | 🗺️ Verified, Unrefuted | Control theory — PID feedback loops | **+30** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group |
-| 157 | 🗺️ Verified, Unrefuted | Cryptography × Cognitive Development | **+30** | ADJACENT_ACTIVE | — | — | 🪞 Homospatial 🗺️ Frontier Research Group |
-| 158 | 🗺️ Verified, Unrefuted | Climatology — feedback loops in ice-albedo effect | **+30** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group |
-| 159 | 🗺️ Verified, Unrefuted | Biological Systems × Creative Musical Motif Deviation | **+30** | ADJACENT_ACTIVE | — | — | 🧬 Bisociative 🗺️ Frontier Research Group |
+| 29 | 🗺️ Verified, Unrefuted | Creative Artistic Critique × Creative Idea Uncertainty | **+55** | ADJACENT_ACTIVE | — | — | 🪞 Homospatial 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
+| 30 | 🗺️ Verified, Unrefuted | Swarm Robotics × Creative Performance Monitoring | **+55** | ADJACENT_ACTIVE | — | — | 🪞 Homospatial 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
+| 31 | 🗺️ Verified, Unrefuted | Informational Database Sharding | **+55** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
+| 32 | 🗺️ Verified, Unrefuted | Climatology — feedback loops in ice-albedo effect | **+55** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
+| 33 | 🗺️ Verified, Unrefuted | Language Linguistics × Military Strategy | **+55** | ADJACENT_ACTIVE | — | — | 🧬 Bisociative 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
+| 34 | 🗺️ Verified, Unrefuted | Biological Systems × Creative Musical Motif Deviation | **+55** | ADJACENT_ACTIVE | — | — | 🧬 Bisociative 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
+| 35 | 🗺️ Verified, Unrefuted | Ocean Current Circulation × Epigenetics | **+55** | ADJACENT_ACTIVE | — | — | 🪞 Homospatial 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
+| 36 | 🗺️ Verified, Unrefuted | Healthcare (Human & Social Systems) × Creative Idea Uncertainty | **+55** | ADJACENT_ACTIVE | — | — | 🪞 Homospatial 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
+| 37 | 🗺️ Verified, Unrefuted | Creative Inspiration Variability | **+55** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
+| 38 | 🗺️ Verified, Unrefuted | Human Financial Market Systems | **+55** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
+| 39 | 🗺️ Verified, Unrefuted | Education (Information & Intelligence Systems) × Human Meeting Participation | **+55** | ADJACENT_ACTIVE | — | — | 🧬 Bisociative 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
+| 40 | 🗺️ Verified, Unrefuted | Climate Science × Gaming Narrative | **+55** | ADJACENT_ACTIVE | — | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
+| 41 | 🗺️ Verified, Unrefuted | Human Urban Planning × Physical Ecosystem Succession | **+55** | ADJACENT_ACTIVE | — | narrative-shaped | 🪞 Homospatial 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
+| 42 | 🗺️ Verified, Unrefuted | Informational Error Probability × Physical Circuit Evolution | **+55** | ADJACENT_ACTIVE | — | formalism-shaped | 🧬 Bisociative 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
+| 43 | 🗺️ Verified, Unrefuted | Supply Chain Logistics × Cryptography | **+55** | ADJACENT_ACTIVE | — | mixed-uncertain | 🪞 Homospatial 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
+| 44 | 🗺️ Verified, Unrefuted | Human Urban Planning | **+55** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
+| 45 | 🗺️ Verified, Unrefuted | Sports Athletics × Physical Thermal Variation | **+55** | ADJACENT_ACTIVE | — | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
+| 46 | 🗺️ Verified, Unrefuted | Human Financial Trading Algorithms × Physical Power Grid Orchestration | **+55** | ADJACENT_ACTIVE | — | narrative-shaped | 🪞 Homospatial 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
+| 47 | 🗺️ Verified, Unrefuted | Physical Gear System Mechanics | **+55** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
+| 48 | 🗺️ Verified, Unrefuted | Physical Power Grid Orchestration | **+55** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
+| 49 | 🗺️ Verified, Unrefuted | Epigenetics × Physical Magnetic Fluctuation | **+55** | ADJACENT_ACTIVE | — | mixed-uncertain | 🪞 Homospatial 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
+| 50 | 🗺️ Verified, Unrefuted | Creative Improvisation Coordination × Physical Evolutionary Selection | **+55** | ADJACENT_ACTIVE | — | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
+| 51 | 🗺️ Verified, Unrefuted | Healthcare × Creative Album Production Orchestration | **+55** | ADJACENT_ACTIVE | — | narrative-shaped | 🧬 Bisociative 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
+| 52 | 🗺️ Verified, Unrefuted | Music Theory × Physical Acoustic Resonance | **+55** | ADJACENT_ACTIVE | — | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
+| 53 | 🗺️ Verified, Unrefuted | Control Theory — Kalman Filtering × Quantum Physics | **+55** | ADJACENT_ACTIVE | — | formalism-shaped | 🪞 Homospatial 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
+| 54 | 🗺️ Verified, Unrefuted | Thermodynamics × Creative Inspiration Variability | **+55** | ADJACENT_ACTIVE | — | mixed-uncertain | 🪞 Homospatial 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
+| 55 | 🗺️ Verified, Unrefuted | Urban Planning × Telecommunications | **+55** | ADJACENT_ACTIVE | — | narrative-shaped | 🧬 Bisociative 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
+| 56 | 🗺️ Verified, Unrefuted | Knowledge Systems × Physical Power Grid Orchestration | **+55** | ADJACENT_ACTIVE | — | mixed-uncertain | 🪞 Homospatial 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
+| 57 | 🗺️ Verified, Unrefuted | Comedy × Cognitive AI Attention | **+55** | ADJACENT_ACTIVE | — | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
+| 58 | 🗺️ Verified, Unrefuted | Economics × Cognitive AI Attention | **+55** | ADJACENT_ACTIVE | — | narrative-shaped | 🧬 Bisociative 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
+| 59 | 🗺️ Verified, Unrefuted | Game Theory × Gaming Narrative | **+55** | ADJACENT_ACTIVE | — | narrative-shaped | 🧬 Bisociative 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
+| 60 | 🗺️ Verified, Unrefuted | Informational Routing Policy Enforcement × Physical Evolutionary Selection | **+55** | ADJACENT_ACTIVE | — | mixed-uncertain | 🪞 Homospatial 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
+| 61 | 🗺️ Verified, Unrefuted | Cognitive AI Pipeline Orchestration | **+55** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
+| 62 | 🗺️ Verified, Unrefuted | Cognitive Streaming Data Processing × Creative Film Production Orchestration | **+55** | ADJACENT_ACTIVE | — | narrative-shaped | 🧬 Bisociative 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
+| 63 | 🗺️ Verified, Unrefuted | Banking — fractional reserve credit multiplier | **+55** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
+| 64 | 🗺️ Verified, Unrefuted | Dance — choreographic phrase repetition | **+55** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
+| 65 | 🗺️ Verified, Unrefuted | Metallurgy — annealing and grain refinement | **+55** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
+| 66 | 🗺️ Verified, Unrefuted | Military strategy — asymmetric guerrilla tactics | **+55** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
+| 67 | 🗺️ Verified, Unrefuted | Informational Database Sharding × Informational Distributed Consensus | **+55** | ADJACENT_ACTIVE | — | formalism-shaped | 🧬 Bisociative 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
+| 68 | 🗺️ Verified, Unrefuted | Physics — particle physics — Standard Model symmetry breaking × Physics — optics — diffraction and interference patterns | **+55** | ADJACENT_ACTIVE | — | formalism-shaped | 🧬 Bisociative 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
+| 69 | 🗺️ Verified, Unrefuted | Physical Circuit Evolution × Physical Mechanical Vibration | **+55** | ADJACENT_ACTIVE | — | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
+| 70 | 🗺️ Verified, Unrefuted | Ethics — trolley-problem moral reasoning | **+55** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬🔥 Actively Researched (current) |
+| 71 | 🗺️ Verified, Unrefuted | Ecology × Telecommunications | **+45** | ADJACENT_ACTIVE | — | — | 🧬 Bisociative 🗺️ Frontier Research Group 🔬 Actively Researched |
+| 72 | 🗺️ Verified, Unrefuted | Materials Science — Crystal Lattice Defects | **+45** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬 Actively Researched |
+| 73 | 🗺️ Verified, Unrefuted | Anthropology × Military Strategy | **+45** | ADJACENT_ACTIVE | — | — | 🧬 Bisociative 🗺️ Frontier Research Group 🔬 Actively Researched |
+| 74 | 🗺️ Verified, Unrefuted | Creative Musical Motif Deviation × Evolutionary Biology — Punctuated Equilibrium | **+45** | ADJACENT_ACTIVE | — | — | 🧬 Bisociative 🗺️ Frontier Research Group 🔬 Actively Researched |
+| 75 | 🗺️ Verified, Unrefuted | Human Financial Trading Algorithms × Ecology — Predator-Prey Population Dynamics | **+45** | ADJACENT_ACTIVE | — | — | 🧬 Bisociative 🗺️ Frontier Research Group 🔬 Actively Researched |
+| 76 | 🗺️ Verified, Unrefuted | Creative Block | **+45** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬 Actively Researched |
+| 77 | 🗺️ Verified, Unrefuted | Physical Chemical Reaction Networks × Human Committee Formation | **+45** | ADJACENT_ACTIVE | — | — | 🪞 Homospatial 🗺️ Frontier Research Group 🔬 Actively Researched |
+| 78 | 🗺️ Verified, Unrefuted | Culinary Arts (Creative & Performance Systems) | **+45** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬 Actively Researched |
+| 79 | 🗺️ Verified, Unrefuted | Epidemiology — Herd Immunity Thresholds | **+45** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬 Actively Researched |
+| 80 | 🗺️ Verified, Unrefuted | Physical Ecosystem Succession × Physical Immune System | **+45** | ADJACENT_ACTIVE | — | — | 🧬 Bisociative 🗺️ Frontier Research Group 🔬 Actively Researched |
+| 81 | 🗺️ Verified, Unrefuted | Auction Theory × Human Defense Coordination | **+45** | ADJACENT_ACTIVE | — | — | 🧬 Bisociative 🗺️ Frontier Research Group 🔬 Actively Researched |
+| 82 | 🗺️ Verified, Unrefuted | Biological Systems × Human Social Network Dynamics | **+45** | ADJACENT_ACTIVE | — | — | 🪞 Homospatial 🗺️ Frontier Research Group 🔬 Actively Researched |
+| 83 | 🗺️ Verified, Unrefuted | Gaming Narrative × Cognitive Attention Map Evolution | **+45** | ADJACENT_ACTIVE | — | — | 🧬 Bisociative 🗺️ Frontier Research Group 🔬 Actively Researched |
+| 84 | 🗺️ Verified, Unrefuted | Biological Systems × Informational Scientific Experiment Orchestration | **+45** | ADJACENT_ACTIVE | — | — | 🧬 Bisociative 🗺️ Frontier Research Group 🔬 Actively Researched |
+| 85 | 🗺️ Verified, Unrefuted | Creative Narrative Arc Development × Human Team Collaboration | **+45** | ADJACENT_ACTIVE | — | — | 🧬 Bisociative 🗺️ Frontier Research Group 🔬 Actively Researched |
+| 86 | 🗺️ Verified, Unrefuted | Human Meeting Participation | **+45** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬 Actively Researched |
+| 87 | 🗺️ Verified, Unrefuted | Immunology × Behavioral Psychology | **+45** | ADJACENT_ACTIVE | — | — | 🪞 Homospatial 🗺️ Frontier Research Group 🔬 Actively Researched |
+| 88 | 🗺️ Verified, Unrefuted | Architecture — load-bearing structural design | **+45** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬 Actively Researched |
+| 89 | 🗺️ Verified, Unrefuted | Telecommunications × Quantum Physics | **+45** | ADJACENT_ACTIVE | — | mixed-uncertain | 🪞 Homospatial 🗺️ Frontier Research Group 🔬 Actively Researched |
+| 90 | 🗺️ Verified, Unrefuted | Creative Musical Composition | **+45** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬 Actively Researched |
+| 91 | 🗺️ Verified, Unrefuted | Urban Planning × Creative Improvisation Adjustment | **+45** | ADJACENT_ACTIVE | — | narrative-shaped | 🧬 Bisociative 🗺️ Frontier Research Group 🔬 Actively Researched |
+| 92 | 🗺️ Verified, Unrefuted | Creative Instrument Track Development | **+45** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬 Actively Researched |
+| 93 | 🗺️ Verified, Unrefuted | Physical Evolutionary Selection | **+45** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬 Actively Researched |
+| 94 | 🗺️ Verified, Unrefuted | Chemistry × Human Social Network Dynamics | **+45** | ADJACENT_ACTIVE | — | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group 🔬 Actively Researched |
+| 95 | 🗺️ Verified, Unrefuted | Informational Software Version Control | **+45** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬 Actively Researched |
+| 96 | 🗺️ Verified, Unrefuted | Telecommunications × Cognitive Streaming Data Processing | **+45** | ADJACENT_ACTIVE | — | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group 🔬 Actively Researched |
+| 97 | 🗺️ Verified, Unrefuted | Urban Planning × Cryptography | **+45** | ADJACENT_ACTIVE | — | mixed-uncertain | 🪞 Homospatial 🗺️ Frontier Research Group 🔬 Actively Researched |
+| 98 | 🗺️ Verified, Unrefuted | Human Social Influence × Informational Sensor Networks | **+45** | ADJACENT_ACTIVE | — | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group 🔬 Actively Researched |
+| 99 | 🗺️ Verified, Unrefuted | Music Theory × Human Social Network Dynamics | **+45** | ADJACENT_ACTIVE | — | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group 🔬 Actively Researched |
+| 100 | 🗺️ Verified, Unrefuted | Healthcare × Creative Film Production Orchestration | **+45** | ADJACENT_ACTIVE | — | narrative-shaped | 🧬 Bisociative 🗺️ Frontier Research Group 🔬 Actively Researched |
+| 101 | 🗺️ Verified, Unrefuted | Urban Planning × Physical Chemical Reaction Networks | **+45** | ADJACENT_ACTIVE | — | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group 🔬 Actively Researched |
+| 102 | 🗺️ Verified, Unrefuted | Anthropology × Creative Film Production Orchestration | **+45** | ADJACENT_ACTIVE | — | narrative-shaped | 🧬 Bisociative 🗺️ Frontier Research Group 🔬 Actively Researched |
+| 103 | 🗺️ Verified, Unrefuted | Urban Planning × Informational Sensor Networks | **+45** | ADJACENT_ACTIVE | — | narrative-shaped | 🧬 Bisociative 🗺️ Frontier Research Group 🔬 Actively Researched |
+| 104 | 🗺️ Verified, Unrefuted | Education (Information & Intelligence Systems) | **+45** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬 Actively Researched |
+| 105 | 🗺️ Verified, Unrefuted | Chemistry × Physical Immune System | **+45** | ADJACENT_ACTIVE | — | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group 🔬 Actively Researched |
+| 106 | 🗺️ Verified, Unrefuted | Cognitive Reinforcement Learning × Informational OS Thread Scheduling | **+45** | ADJACENT_ACTIVE | — | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group 🔬 Actively Researched |
+| 107 | 🗺️ Verified, Unrefuted | Physical Thermal Variation | **+45** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬 Actively Researched |
+| 108 | 🗺️ Verified, Unrefuted | Organizational Theory × Creative Inspiration Variability | **+45** | ADJACENT_ACTIVE | — | narrative-shaped | 🧬 Bisociative 🗺️ Frontier Research Group 🔬 Actively Researched |
+| 109 | 🗺️ Verified, Unrefuted | Urban Planning × Agriculture | **+45** | ADJACENT_ACTIVE | — | narrative-shaped | 🧬 Bisociative 🗺️ Frontier Research Group 🔬 Actively Researched |
+| 110 | 🗺️ Verified, Unrefuted | Music theory — counterpoint and voice leading | **+45** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬 Actively Researched |
+| 111 | 🗺️ Verified, Unrefuted | Creative Artistic Arrangement × Informational Distributed Consensus | **+45** | ADJACENT_ACTIVE | — | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group 🔬 Actively Researched |
+| 112 | 🗺️ Verified, Unrefuted | Human Meeting Participation × Informational Sensor Networks | **+45** | ADJACENT_ACTIVE | — | mixed-uncertain | 🪞 Homospatial 🗺️ Frontier Research Group 🔬 Actively Researched |
+| 113 | 🗺️ Verified, Unrefuted | Physical Chemical Reaction Networks × Physical Magnetic Fluctuation | **+45** | ADJACENT_ACTIVE | — | mixed-uncertain | 🪞 Homospatial 🗺️ Frontier Research Group 🔬 Actively Researched |
+| 114 | 🗺️ Verified, Unrefuted | Prigogine — thermodynamics × Complex systems | **+45** | ADJACENT_ACTIVE | — | formalism-shaped | 🧬 Bisociative 🗺️ Frontier Research Group 🔬 Actively Researched |
+| 115 | 🗺️ Verified, Unrefuted | Watson & Crick — DNA × Information theory | **+45** | ADJACENT_ACTIVE | — | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group 🔬 Actively Researched |
+| 116 | 🗺️ Verified, Unrefuted | Genetics — Mendelian inheritance and linkage | **+45** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬 Actively Researched |
+| 117 | 🗺️ Verified, Unrefuted | Logic — Gödel incompleteness and self-reference | **+45** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬 Actively Researched |
+| 118 | 🗺️ Verified, Unrefuted | Sociology — social network diffusion of innovation | **+45** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬 Actively Researched |
+| 119 | 🗺️ Verified, Unrefuted | Viticulture — terroir and grape ripening | **+45** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬 Actively Researched |
+| 120 | 🗺️ Verified, Unrefuted | Astrophysics — orbital resonance | **+45** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬 Actively Researched |
+| 121 | 🗺️ Verified, Unrefuted | Forestry — controlled burn succession | **+45** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬 Actively Researched |
+| 122 | 🗺️ Verified, Unrefuted | Microbiology — biofilm formation | **+45** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬 Actively Researched |
+| 123 | 🗺️ Verified, Unrefuted | Veterinary medicine — zoonotic disease transmission | **+45** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬 Actively Researched |
+| 124 | 🗺️ Verified, Unrefuted | Physical Flux Regulation × Materials science — phase transitions | **+45** | ADJACENT_ACTIVE | — | formalism-shaped | 🧬 Bisociative 🗺️ Frontier Research Group 🔬 Actively Researched |
+| 125 | 🗺️ Verified, Unrefuted | Physical Thermal Variation × Materials science — crystal lattice defects | **+45** | ADJACENT_ACTIVE | — | formalism-shaped | 🧬 Bisociative 🗺️ Frontier Research Group 🔬 Actively Researched |
+| 126 | 🗺️ Verified, Unrefuted | Physical Circuit Evolution × Physical Magnetic Field Control | **+45** | ADJACENT_ACTIVE | — | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group 🔬 Actively Researched |
+| 127 | 🗺️ Verified, Unrefuted | Physical Circuit Evolution × Physical Electrical Noise | **+45** | ADJACENT_ACTIVE | — | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group 🔬 Actively Researched |
+| 128 | 🗺️ Verified, Unrefuted | Compiler optimization × Neural network training | **+40** | ADJACENT_ACTIVE | — | — | 📜 Pre-existing case study 🗺️ Frontier Research Group 🔬 Actively Researched (historical) |
+| 129 | 🗺️ Verified, Unrefuted | Finance (Human & Social Systems) | **+40** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬 Actively Researched (historical) |
+| 130 | 🗺️ Verified, Unrefuted | Informational Cache Miss Handling × Human Individual Indecision | **+40** | ADJACENT_ACTIVE | — | — | 🪞 Homospatial 🗺️ Frontier Research Group 🔬 Actively Researched (historical) |
+| 131 | 🗺️ Verified, Unrefuted | Immunology × Military Strategy | **+40** | ADJACENT_ACTIVE | — | — | 🧬 Bisociative 🗺️ Frontier Research Group 🔬 Actively Researched (historical) |
+| 132 | 🗺️ Verified, Unrefuted | Physical Feedback Loop Control | **+40** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬 Actively Researched (historical) |
+| 133 | 🗺️ Verified, Unrefuted | Game Theory Nash Bargaining × Human Social Network Dynamics | **+40** | ADJACENT_ACTIVE | — | — | 🪞 Homospatial 🗺️ Frontier Research Group 🔬 Actively Researched (historical) |
+| 134 | 🗺️ Verified, Unrefuted | Informational Database State | **+40** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬 Actively Researched (historical) |
+| 135 | 🗺️ Verified, Unrefuted | Behavioral Psychology Operant Conditioning × Physical Magnetic Field Control | **+40** | ADJACENT_ACTIVE | — | — | 🪞 Homospatial 🗺️ Frontier Research Group 🔬 Actively Researched (historical) |
+| 136 | 🗺️ Verified, Unrefuted | Anthropology × Physical Evolutionary Selection | **+40** | ADJACENT_ACTIVE | — | — | 🧬 Bisociative 🗺️ Frontier Research Group 🔬 Actively Researched (historical) |
+| 137 | 🗺️ Verified, Unrefuted | Human Social Influence | **+40** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬 Actively Researched (historical) |
+| 138 | 🗺️ Verified, Unrefuted | Physical Immune System | **+40** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬 Actively Researched (historical) |
+| 139 | 🗺️ Verified, Unrefuted | Informational OS Thread Scheduling | **+40** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬 Actively Researched (historical) |
+| 140 | 🗺️ Verified, Unrefuted | Climatology — Ocean Current Circulation (Thermohaline) | **+40** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬 Actively Researched (historical) |
+| 141 | 🗺️ Verified, Unrefuted | Informational Event-Driven Systems | **+40** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬 Actively Researched (historical) |
+| 142 | 🗺️ Verified, Unrefuted | Supply Chain Logistics — Bullwhip Effect | **+40** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬 Actively Researched (historical) |
+| 143 | 🗺️ Verified, Unrefuted | Physical Photon Emission | **+40** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬 Actively Researched (historical) |
+| 144 | 🗺️ Verified, Unrefuted | Creative Performance Monitoring | **+40** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬 Actively Researched (historical) |
+| 145 | 🗺️ Verified, Unrefuted | Creative Instrument Track Development × Physical Circuit Evolution | **+40** | ADJACENT_ACTIVE | — | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group 🔬 Actively Researched (historical) |
+| 146 | 🗺️ Verified, Unrefuted | Law — Contract Formation and Offer/Acceptance | **+40** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬 Actively Researched (historical) |
+| 147 | 🗺️ Verified, Unrefuted | Social Systems × Physical Feedback Loop Control | **+40** | ADJACENT_ACTIVE | — | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group 🔬 Actively Researched (historical) |
+| 148 | 🗺️ Verified, Unrefuted | History — path dependence in institutional change | **+40** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬 Actively Researched (historical) |
+| 149 | 🗺️ Verified, Unrefuted | Marketing — diffusion of innovation adoption curve | **+40** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬 Actively Researched (historical) |
+| 150 | 🗺️ Verified, Unrefuted | Robotics — inverse kinematics | **+40** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group 🔬 Actively Researched (historical) |
+| 151 | 🗺️ Verified, Unrefuted | Law — common law precedent and stare decisis | **+30** | COLLISION | — | — | 🎭 Janusian 🏛️ Established Department 🔬🔥 Actively Researched (current) |
+| 152 | 🗺️ Verified, Unrefuted | Distributed Consensus Algorithms (Raft, PBFT) × Distributed Cache Coherence Protocols (MESI, Directory-based) | **+30** | ADJACENT_ACTIVE | — | — | 📜 Pre-existing case study 🗺️ Frontier Research Group |
+| 153 | 🗺️ Verified, Unrefuted | Dirac's large numbers hypothesis × Belnap four-valued logic / explainable AI | **+30** | ADJACENT_ACTIVE | — | — | 📜 Pre-existing case study 🗺️ Frontier Research Group |
+| 154 | 🗺️ Verified, Unrefuted | Astronomy — gravitational lensing | **+30** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group |
+| 155 | 🗺️ Verified, Unrefuted | Informational Hash Collisions × Human Social Network Dynamics | **+30** | ADJACENT_ACTIVE | — | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group |
+| 156 | 🗺️ Verified, Unrefuted | Game Theory — Nash Bargaining × Music — Sample-Based Hip-Hop Production | **+30** | ADJACENT_ACTIVE | — | — | 🧬 Bisociative 🗺️ Frontier Research Group |
+| 157 | 🗺️ Verified, Unrefuted | Architecture × Cross Domain Pattern Recognition | **+30** | ADJACENT_ACTIVE | — | — | 🪞 Homospatial 🗺️ Frontier Research Group |
+| 158 | 🗺️ Verified, Unrefuted | Control theory — PID feedback loops | **+30** | ADJACENT_ACTIVE | — | — | 🎭 Janusian 🗺️ Frontier Research Group |
+| 159 | 🗺️ Verified, Unrefuted | Cryptography × Cognitive Development | **+30** | ADJACENT_ACTIVE | — | — | 🪞 Homospatial 🗺️ Frontier Research Group |
 | 160 | 🗺️ Verified, Unrefuted | Chemistry × Creative Album Production Orchestration | **+30** | ADJACENT_ACTIVE | — | — | 🧬 Bisociative 🗺️ Frontier Research Group |
 | 161 | 🗺️ Verified, Unrefuted | Creative Musical Composition × Human Emotional Fluctuation | **+30** | COLLISION | — | — | 🧬 Bisociative 🏛️ Established Department 🔬🔥 Actively Researched (current) |
 | 162 | 🗺️ Verified, Unrefuted | Comedy × Cognitive AI Hyperparameter Orchestration | **+30** | ADJACENT_ACTIVE | — | — | 🪞 Homospatial 🗺️ Frontier Research Group |
@@ -349,17 +349,17 @@ The composability pre-filter never gates generation — it only logs a signal (s
 | 309 | 🗺️ Verified, Unrefuted | Jazz Improvisation × Counterpoint and Voice Leading | **+20** | COLLISION | — | — | 🧬 Bisociative 🏛️ Established Department 🔬 Actively Researched |
 | 310 | 🗺️ Verified, Unrefuted | Informational — distributed consensus | **+20** | COLLISION | — | — | 🎭 Janusian 🏛️ Established Department 🔬 Actively Researched |
 | 311 | 🗺️ Verified, Unrefuted | Informational — load balancing | **+20** | COLLISION | — | — | 🎭 Janusian 🏛️ Established Department 🔬 Actively Researched |
-| 312 | 🗺️ Verified, Unrefuted | Climate Science × Creative Artistic Arrangement | **+20** | COLLISION | — | — | 🪞 Homospatial 🏛️ Established Department 🔬 Actively Researched |
-| 313 | 🗺️ Verified, Unrefuted | Human Emotional Fluctuation | **+20** | COLLISION | — | — | 🎭 Janusian 🏛️ Established Department 🔬 Actively Researched |
-| 314 | 🗺️ Verified, Unrefuted | Fluid dynamics — turbulence and laminar flow | **+20** | COLLISION | — | — | 🎭 Janusian 🏛️ Established Department 🔬 Actively Researched |
-| 315 | 🗺️ Verified, Unrefuted | Healthcare (Human & Social Systems) × Physical Circuit Evolution | **+20** | COLLISION | — | mixed-uncertain | 🪞 Homospatial 🏛️ Established Department 🔬 Actively Researched |
-| 316 | 🗺️ Verified, Unrefuted | Ecology — Mycorrhizal Fungal Networks | **+20** | COLLISION | — | — | 🎭 Janusian 🏛️ Established Department 🔬 Actively Researched |
-| 317 | 🗺️ Verified, Unrefuted | Genetic algorithms × Simulated annealing | **+15** | COLLISION | — | — | 📜 Pre-existing case study 🏛️ Established Department 🔬 Actively Researched (historical) |
-| 318 | 🗺️ Verified, Unrefuted | Raft consensus × PBFT consensus | **+15** | COLLISION | — | — | 📜 Pre-existing case study 🏛️ Established Department 🔬 Actively Researched (historical) |
-| 319 | 🗺️ Verified, Unrefuted | Urban planning — traffic flow optimization | **+15** | COLLISION | — | — | 🎭 Janusian 🏛️ Established Department 🔬 Actively Researched (historical) |
-| 320 | 🗺️ Verified, Unrefuted | Finance — options pricing and volatility smile | **+15** | COLLISION | — | — | 🎭 Janusian 🏛️ Established Department 🔬 Actively Researched (historical) |
-| 321 | 🗺️ Verified, Unrefuted | Graph traversal algorithms (Dijkstra's, A*) × Minimax game tree search | **+5** | COLLISION | — | — | 📜 Pre-existing case study 🏛️ Established Department |
-| 322 | 🗺️ Verified, Unrefuted | Cognitive Attention Map Evolution × Informational Sensor Networks | **+5** | COLLISION | — | — | 🪞 Homospatial 🏛️ Established Department |
+| 312 | 🗺️ Verified, Unrefuted | Cognitive Attention Map Evolution × Informational Sensor Networks | **+20** | COLLISION | — | — | 🪞 Homospatial 🏛️ Established Department 🔬 Actively Researched |
+| 313 | 🗺️ Verified, Unrefuted | Climate Science × Creative Artistic Arrangement | **+20** | COLLISION | — | — | 🪞 Homospatial 🏛️ Established Department 🔬 Actively Researched |
+| 314 | 🗺️ Verified, Unrefuted | Human Emotional Fluctuation | **+20** | COLLISION | — | — | 🎭 Janusian 🏛️ Established Department 🔬 Actively Researched |
+| 315 | 🗺️ Verified, Unrefuted | Fluid dynamics — turbulence and laminar flow | **+20** | COLLISION | — | — | 🎭 Janusian 🏛️ Established Department 🔬 Actively Researched |
+| 316 | 🗺️ Verified, Unrefuted | Healthcare (Human & Social Systems) × Physical Circuit Evolution | **+20** | COLLISION | — | mixed-uncertain | 🪞 Homospatial 🏛️ Established Department 🔬 Actively Researched |
+| 317 | 🗺️ Verified, Unrefuted | Ecology — Mycorrhizal Fungal Networks | **+20** | COLLISION | — | — | 🎭 Janusian 🏛️ Established Department 🔬 Actively Researched |
+| 318 | 🗺️ Verified, Unrefuted | Genetic algorithms × Simulated annealing | **+15** | COLLISION | — | — | 📜 Pre-existing case study 🏛️ Established Department 🔬 Actively Researched (historical) |
+| 319 | 🗺️ Verified, Unrefuted | Raft consensus × PBFT consensus | **+15** | COLLISION | — | — | 📜 Pre-existing case study 🏛️ Established Department 🔬 Actively Researched (historical) |
+| 320 | 🗺️ Verified, Unrefuted | Urban planning — traffic flow optimization | **+15** | COLLISION | — | — | 🎭 Janusian 🏛️ Established Department 🔬 Actively Researched (historical) |
+| 321 | 🗺️ Verified, Unrefuted | Finance — options pricing and volatility smile | **+15** | COLLISION | — | — | 🎭 Janusian 🏛️ Established Department 🔬 Actively Researched (historical) |
+| 322 | 🗺️ Verified, Unrefuted | Graph traversal algorithms (Dijkstra's, A*) × Minimax game tree search | **+5** | COLLISION | — | — | 📜 Pre-existing case study 🏛️ Established Department |
 | 323 | 🗺️ Verified, Unrefuted | Informational Measurement Data Evolution | **+5** | COLLISION | — | — | 🎭 Janusian 🏛️ Established Department |
 | 324 | 🗺️ Verified, Unrefuted | Human Financial Market Systems × Physical Mechanical Spring Systems | **+5** | COLLISION | — | mixed-uncertain | 🧬 Bisociative 🏛️ Established Department |
 | 325 | 🗺️ Verified, Unrefuted | Language Linguistics × Cognitive Reinforcement Learning | **+5** | COLLISION | — | mixed-uncertain | 🪞 Homospatial 🏛️ Established Department |
@@ -384,250 +384,250 @@ The composability pre-filter never gates generation — it only logs a signal (s
 | 344 | 💀 Refuted / Rejected | Linguistics × Fluid Dynamics | **+40** | ADJACENT_ACTIVE | 0% survived | — | 🪞 Homospatial 🗺️ Frontier Research Group 💀 Refuted 🔬🔥 Actively Researched (current) |
 | 345 | 💀 Refuted / Rejected | Cognitive AI Preprocessing Pipelines | **+40** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬🔥 Actively Researched (current) |
 | 346 | 💀 Refuted / Rejected | Organizational Theory — Self-Organizing Teams × Finance (Human & Social Systems) | **+40** | ADJACENT_ACTIVE | 0% survived | — | 🧬 Bisociative 🗺️ Frontier Research Group 💀 Refuted 🔬🔥 Actively Researched (current) |
-| 347 | 💀 Refuted / Rejected | Human Learning Uncertainty | **+40** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬🔥 Actively Researched (current) |
-| 348 | 💀 Refuted / Rejected | Artificial Intelligence (Information & Intelligence Systems) | **+40** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬🔥 Actively Researched (current) |
-| 349 | 💀 Refuted / Rejected | Creative Improvisation Adjustment | **+40** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬🔥 Actively Researched (current) |
-| 350 | 💀 Refuted / Rejected | Music theory — jazz improvisation over changes | **+40** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬🔥 Actively Researched (current) |
-| 351 | 💀 Refuted / Rejected | Healthcare (Human & Social Systems) | **+40** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬🔥 Actively Researched (current) |
-| 352 | 💀 Refuted / Rejected | Immunology — Innate Immune Response | **+40** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬🔥 Actively Researched (current) |
-| 353 | 💀 Refuted / Rejected | Immunology — Adaptive Immune Memory | **+40** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬🔥 Actively Researched (current) |
-| 354 | 💀 Refuted / Rejected | Legal Systems | **+40** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬🔥 Actively Researched (current) |
-| 355 | 💀 Refuted / Rejected | Economics — Auction Theory | **+40** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬🔥 Actively Researched (current) |
-| 356 | 💀 Refuted / Rejected | Gaming Narrative (Creative & Performance Systems) | **+40** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬🔥 Actively Researched (current) |
-| 357 | 💀 Refuted / Rejected | Creative Idea Uncertainty | **+40** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬🔥 Actively Researched (current) |
-| 358 | 💀 Refuted / Rejected | Informational Ledger State Evolution | **+40** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬🔥 Actively Researched (current) |
-| 359 | 💀 Refuted / Rejected | Sports — baseball pitch sequencing | **+40** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬🔥 Actively Researched (current) |
-| 360 | 💀 Refuted / Rejected | Quantum Physics | **+40** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬🔥 Actively Researched (current) |
-| 361 | 💀 Refuted / Rejected | Creative Improvisation Coordination | **+40** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬🔥 Actively Researched (current) |
-| 362 | 💀 Refuted / Rejected | Language Linguistics (Information & Intelligence Systems) | **+40** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬🔥 Actively Researched (current) |
-| 363 | 💀 Refuted / Rejected | Creative Brainstorming Facilitation | **+40** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬🔥 Actively Researched (current) |
-| 364 | 💀 Refuted / Rejected | Human Facilitator Cueing | **+40** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬🔥 Actively Researched (current) |
-| 365 | 💀 Refuted / Rejected | Social Systems | **+40** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬🔥 Actively Researched (current) |
-| 366 | 💀 Refuted / Rejected | Cognitive Reinforcement Learning | **+40** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬🔥 Actively Researched (current) |
-| 367 | 💀 Refuted / Rejected | Game Theory — Nash Bargaining | **+40** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬🔥 Actively Researched (current) |
-| 368 | 💀 Refuted / Rejected | Creative Performance Monitoring × Human Cognitive Bias | **+40** | ADJACENT_ACTIVE | 0% survived | narrative-shaped | 🪞 Homospatial 🗺️ Frontier Research Group 💀 Refuted 🔬🔥 Actively Researched (current) |
-| 369 | 💀 Refuted / Rejected | Informational Packet Buffer Management | **+40** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬🔥 Actively Researched (current) |
-| 370 | 💀 Refuted / Rejected | Creative Artistic Arrangement | **+40** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬🔥 Actively Researched (current) |
-| 371 | 💀 Refuted / Rejected | Human Social Network Dynamics | **+40** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬🔥 Actively Researched (current) |
-| 372 | 💀 Refuted / Rejected | Agriculture — crop rotation and soil health | **+40** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬🔥 Actively Researched (current) |
-| 373 | 💀 Refuted / Rejected | Physical Acoustic Resonance × Physical Photon Emission | **+40** | ADJACENT_ACTIVE | 33% survived | formalism-shaped | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 🌗 Contested (1-of-3) 🔬🔥 Actively Researched (current) |
-| 374 | 💀 Refuted / Rejected | Physical Bridge Cable Tension × Physical Elastic Deformation | **+40** | ADJACENT_ACTIVE | 33% survived | formalism-shaped | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 🌗 Contested (1-of-3) 🔬🔥 Actively Researched (current) |
-| 375 | 💀 Refuted / Rejected | Physics — condensed matter — Bose-Einstein condensate coherence (Gross-Pitaevskii dynamics, quantum pressure) × Cosmology — early-universe scalar field dynamics (corpuscular inflation, axion/ultralight BEC dark matter, Fukuyama-Morikawa stagflation) | **+40** | ADJACENT_ACTIVE | 33% survived | — | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 🌗 Contested (1-of-3) 🔬🔥 Actively Researched (current) |
-| 376 | 💀 Refuted / Rejected | Ecology × Materials Science | **+30** | ADJACENT_ACTIVE | 0% survived | — | 🧬 Bisociative 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched |
-| 377 | 💀 Refuted / Rejected | Game Theory — Repeated Prisoner's Dilemma × Informational Measurement Data Evolution | **+30** | ADJACENT_ACTIVE | 0% survived | — | 🧬 Bisociative 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched |
-| 378 | 💀 Refuted / Rejected | Behavioral psychology — habit formation loops | **+30** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched |
-| 379 | 💀 Refuted / Rejected | Neuroscience — cortical map reorganization | **+30** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched |
-| 380 | 💀 Refuted / Rejected | Thermodynamics × Informational Signal Jitter | **+30** | ADJACENT_ACTIVE | 33% survived | — | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 🌗 Contested (1-of-3) 🔬 Actively Researched |
-| 381 | 💀 Refuted / Rejected | Fluid Dynamics × Physical Telescope Telemetry | **+30** | ADJACENT_ACTIVE | 33% survived | — | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 🌗 Contested (1-of-3) 🔬 Actively Researched |
-| 382 | 💀 Refuted / Rejected | Adaptive Immune Memory × Human Defense Coordination | **+30** | ADJACENT_ACTIVE | 0% survived | — | 🪞 Homospatial 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched |
-| 383 | 💀 Refuted / Rejected | Swarm Robotics — Ant Colony Optimization | **+30** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted 🔬🔥 Actively Researched (current) |
-| 384 | 💀 Refuted / Rejected | Human Financial Trading Algorithms | **+30** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched |
-| 385 | 💀 Refuted / Rejected | Physical Ecosystem Succession | **+30** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched |
-| 386 | 💀 Refuted / Rejected | Human Committee Formation | **+30** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched |
-| 387 | 💀 Refuted / Rejected | Informational Protocol Coordination | **+30** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched |
-| 388 | 💀 Refuted / Rejected | Cell biology — mitochondrial energy production | **+30** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched |
-| 389 | 💀 Refuted / Rejected | Architecture × Human Financial Trading Algorithms | **+30** | ADJACENT_ACTIVE | 0% survived | narrative-shaped | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted 🔬🔥 Actively Researched (current) |
-| 390 | 💀 Refuted / Rejected | Cognitive Swarm Intelligence | **+30** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched |
-| 391 | 💀 Refuted / Rejected | Human Role Ambiguity | **+30** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched |
-| 392 | 💀 Refuted / Rejected | Linguistics — Creole Genesis | **+30** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched |
-| 393 | 💀 Refuted / Rejected | Telecommunications — packet switching and routing | **+30** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched |
-| 394 | 💀 Refuted / Rejected | Human Team Collaboration | **+30** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched |
-| 395 | 💀 Refuted / Rejected | Organizational theory — self-organizing teams | **+30** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched |
-| 396 | 💀 Refuted / Rejected | Creative Musical Motif Deviation × Informational Error Probability | **+30** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted 🔬🔥 Actively Researched (current) |
-| 397 | 💀 Refuted / Rejected | Climate Science (Physical & Natural Systems) | **+30** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched |
-| 398 | 💀 Refuted / Rejected | Music — sample-based hip-hop production | **+30** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched |
-| 399 | 💀 Refuted / Rejected | Cross Domain Pattern Recognition (Cognitive & Pattern Recognition Systems) | **+30** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched |
-| 400 | 💀 Refuted / Rejected | Swarm Robotics — Flocking / Boids Behavior | **+30** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched |
-| 401 | 💀 Refuted / Rejected | Chemistry — self-assembly of molecular structures | **+30** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched |
-| 402 | 💀 Refuted / Rejected | Physical Mechanical Vibration | **+30** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched |
-| 403 | 💀 Refuted / Rejected | Astrophysics (Physical & Natural Systems) | **+30** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched |
-| 404 | 💀 Refuted / Rejected | Informational Error Probability | **+30** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched |
-| 405 | 💀 Refuted / Rejected | Physical Protein Folding | **+30** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched |
-| 406 | 💀 Refuted / Rejected | Cognitive Swarm Intelligence × Human Trust Variance | **+30** | ADJACENT_ACTIVE | 0% survived | narrative-shaped | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted 🔬🔥 Actively Researched (current) |
-| 407 | 💀 Refuted / Rejected | Learning Systems (Cognitive & Pattern Recognition Systems) — Atomic: Learning outcomes uncertain, Skill acquisition succeeds/fails, Multiple learning states; Domain: Learning progresses, Educational context, Log development; Control: External learning resources, Parallel skill development, Atomic knowledge updates; Orchestration: Individual vs collective learning coordination | **+30** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched |
-| 408 | 💀 Refuted / Rejected | Neuroscience — synaptic pruning | **+30** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched |
-| 409 | 💀 Refuted / Rejected | Knowledge Systems (Cognitive & Pattern Recognition Systems) — Atomic: Data interpretation uncertain, Model output ambiguous, Multiple insights; Domain: Knowledge evolves, Historical context, Log insights; Control: Distributed analysis, Parallel computation, Atomic integration; Orchestration: Knowledge deployment coordination × Informational Scientific Experiment Orchestration | **+30** | ADJACENT_ACTIVE | 0% survived | narrative-shaped | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted 🔬🔥 Actively Researched (current) |
-| 410 | 💀 Refuted / Rejected | Immunology — innate immune response | **+30** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched |
-| 411 | 💀 Refuted / Rejected | Informational Mobile System Coordination | **+30** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched |
-| 412 | 💀 Refuted / Rejected | Political science — coalition government formation | **+30** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched |
-| 413 | 💀 Refuted / Rejected | Political science — coalition government formation | **+30** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched |
-| 414 | 💀 Refuted / Rejected | Toxicology — dose-response curves | **+30** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched |
-| 415 | 💀 Refuted / Rejected | Physical Elastic Deformation × Materials science — crystal lattice defects | **+30** | ADJACENT_ACTIVE | 33% survived | formalism-shaped | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 🌗 Contested (1-of-3) 🔬 Actively Researched |
-| 416 | 💀 Refuted / Rejected | Physical Magnetic Field Control × Physical Voltage Spikes | **+30** | ADJACENT_ACTIVE | 33% survived | formalism-shaped | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 🌗 Contested (1-of-3) 🔬 Actively Researched |
-| 417 | 💀 Refuted / Rejected | Informational Protocol Coordination × Cryptography — public-key infrastructure | **+30** | ADJACENT_ACTIVE | 33% survived | formalism-shaped | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 🌗 Contested (1-of-3) 🔬 Actively Researched |
-| 418 | 💀 Refuted / Rejected | Physical Immune System × Materials science — phase transitions | **+30** | ADJACENT_ACTIVE | 0% survived | formalism-shaped | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted 🔬🔥 Actively Researched (current) |
-| 419 | 💀 Refuted / Rejected | Physical Mechanical Spring Systems × Physical Circuit Evolution | **+30** | ADJACENT_ACTIVE | 33% survived | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 🌗 Contested (1-of-3) 🔬 Actively Researched |
-| 420 | 💀 Refuted / Rejected | Physical Mechanical Spring Systems × Physical Mechanical Vibration | **+30** | ADJACENT_ACTIVE | 33% survived | formalism-shaped | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 🌗 Contested (1-of-3) 🔬 Actively Researched |
-| 421 | 💀 Refuted / Rejected | Physical Acoustic Resonance × Physical Mechanical Vibration | **+30** | ADJACENT_ACTIVE | 33% survived | formalism-shaped | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 🌗 Contested (1-of-3) 🔬 Actively Researched |
-| 422 | 💀 Refuted / Rejected | Physical Electrical Noise × Physical Gear System Mechanics | **+30** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted 🔬🔥 Actively Researched (current) |
-| 423 | 💀 Refuted / Rejected | Physical Mechanical Vibration × Physical Gear System Mechanics | **+30** | ADJACENT_ACTIVE | 33% survived | formalism-shaped | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 🌗 Contested (1-of-3) 🔬 Actively Researched |
-| 424 | 💀 Refuted / Rejected | Behavioral psychology — habit formation loops × Creative Musical Motif Deviation | **+30** | ADJACENT_ACTIVE | 0% survived | narrative-shaped | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted 🔬🔥 Actively Researched (current) |
-| 425 | 💀 Refuted / Rejected | Knowledge Systems (Cognitive & Pattern Recognition Systems) | **+25** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched (historical) |
-| 426 | 💀 Refuted / Rejected | Astronomy × Telecommunications | **+25** | ADJACENT_ACTIVE | 0% survived | — | 🧬 Bisociative 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched (historical) |
-| 427 | 💀 Refuted / Rejected | Informational Cache Miss Handling | **+25** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched (historical) |
-| 428 | 💀 Refuted / Rejected | Human Individual Indecision | **+25** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched (historical) |
-| 429 | 💀 Refuted / Rejected | Cognitive Development (Information & Intelligence Systems) | **+25** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched (historical) |
-| 430 | 💀 Refuted / Rejected | Informational Sensor Networks | **+25** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched (historical) |
-| 431 | 💀 Refuted / Rejected | Immunology — Adaptive Immune Memory | **+25** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched (historical) |
-| 432 | 💀 Refuted / Rejected | Supply Chain Logistics — Just-in-Time Inventory | **+25** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched (historical) |
-| 433 | 💀 Refuted / Rejected | Physical Magnetic Fluctuation | **+25** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched (historical) |
-| 434 | 💀 Refuted / Rejected | Cognitive Streaming Data Processing | **+25** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched (historical) |
-| 435 | 💀 Refuted / Rejected | Economics — market microstructure and order books | **+25** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched (historical) |
-| 436 | 💀 Refuted / Rejected | Epidemiology — disease outbreak spread | **+25** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched (historical) |
-| 437 | 💀 Refuted / Rejected | Physical Chemical Reaction Networks | **+25** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched (historical) |
-| 438 | 💀 Refuted / Rejected | Cognitive Neuron Activation | **+20** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted 🔬 Actively Researched |
-| 439 | 💀 Refuted / Rejected | Education (Information & Intelligence Systems) × Human Social Influence | **+20** | ADJACENT_ACTIVE | 0% survived | — | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted 🔬 Actively Researched |
-| 440 | 💀 Refuted / Rejected | Materials Science × Architecture | **+20** | ADJACENT_ACTIVE | 0% survived | — | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted 🔬 Actively Researched |
-| 441 | 💀 Refuted / Rejected | Organizational Theory × Physical Magnetic Field Control | **+20** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted 🔬 Actively Researched |
-| 442 | 💀 Refuted / Rejected | Finance × Informational Routing Policy Enforcement | **+20** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted 🔬 Actively Researched |
-| 443 | 💀 Refuted / Rejected | Game Theory — Repeated Prisoner's Dilemma | **+20** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted 🔬 Actively Researched |
-| 444 | 💀 Refuted / Rejected | Human Team Collaboration × Physical Flux Regulation | **+20** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted 🔬 Actively Researched |
-| 445 | 💀 Refuted / Rejected | Quantum Physics (Physical & Natural Systems) — Atomic: Particle position uncertain, Measurement binary, Superposition states; Domain: Quantum system evolves, Physical laws context, Log measurements; Control: Measurement apparatus, Parallel quantum processes, Atomic wavefunction collapse; Orchestration: Universal law coordination, Theoretical vs experimental environments × Informational Signal Jitter | **+20** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted 🔬 Actively Researched |
-| 446 | 💀 Refuted / Rejected | Fleming — bacteriology × Contamination | **+20** | ADJACENT_ACTIVE | 0% survived | narrative-shaped | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted 🔬 Actively Researched |
-| 447 | 💀 Refuted / Rejected | Nash — equilibrium × Malthus — scarcity | **+20** | ADJACENT_ACTIVE | 0% survived | narrative-shaped | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted 🔬 Actively Researched |
-| 448 | 💀 Refuted / Rejected | Physical Mechanical Vibration × Physical Circuit Evolution | **+20** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted 🔬 Actively Researched |
-| 449 | 💀 Refuted / Rejected | Physical Acoustic Resonance × Physical Mechanical Spring Systems | **+20** | ADJACENT_ACTIVE | 0% survived | formalism-shaped | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted 🔬 Actively Researched |
-| 450 | 💀 Refuted / Rejected | Astronomy — gravitational lensing × Physics — optics — diffraction and interference patterns | **+20** | COLLISION | — | formalism-shaped | 🧬 Bisociative 🏛️ Established Department ⚠️ Failed Honesty Check 🔬🔥 Actively Researched (current) |
-| 451 | 💀 Refuted / Rejected | Materials science — phase transitions × Informational Distributed Consensus | **+20** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted 🔬 Actively Researched |
-| 452 | 💀 Refuted / Rejected | Fluid dynamics — turbulence and laminar flow × Physical Magnetic Fluctuation | **+20** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted 🔬 Actively Researched |
-| 453 | 💀 Refuted / Rejected | Physical Mechanical Spring Systems × Physical Gear System Mechanics | **+20** | ADJACENT_ACTIVE | 0% survived | formalism-shaped | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted 🔬 Actively Researched |
-| 454 | 💀 Refuted / Rejected | Physical Acoustic Resonance × Physical Gear System Mechanics | **+20** | ADJACENT_ACTIVE | 0% survived | formalism-shaped | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted 🔬 Actively Researched |
-| 455 | 💀 Refuted / Rejected | Physical Electrical Noise × Physical Mechanical Vibration | **+20** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted 🔬 Actively Researched |
-| 456 | 💀 Refuted / Rejected | Physical Mechanical Spring Systems | **+15** | FACT_CHECK_FAIL | — | — | 🎭 Janusian ⚠️ Retracted 🔬🔥 Actively Researched (current) |
-| 457 | 💀 Refuted / Rejected | Urban planning — zoning and land use | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted |
-| 458 | 💀 Refuted / Rejected | Supply Chain Logistics × Physical Thermal Variation | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🧬 Bisociative 🗺️ Frontier Research Group 💀 Refuted |
-| 459 | 💀 Refuted / Rejected | Human Individual Indecision × Physical Voltage Spikes | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🪞 Homospatial 🗺️ Frontier Research Group 💀 Refuted |
-| 460 | 💀 Refuted / Rejected | Physical Bridge Cable Tension | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted |
-| 461 | 💀 Refuted / Rejected | Artificial Intelligence × Informational Queue Overflow | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🧬 Bisociative 🗺️ Frontier Research Group 💀 Refuted |
-| 462 | 💀 Refuted / Rejected | Creative Performance Monitoring × Physical Voltage Spikes | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🧬 Bisociative 🗺️ Frontier Research Group 💀 Refuted |
-| 463 | 💀 Refuted / Rejected | Efficient Market Hypothesis | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted |
-| 464 | 💀 Refuted / Rejected | Climatology × Cognitive Model Adaptation | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🧬 Bisociative 🗺️ Frontier Research Group 💀 Refuted |
-| 465 | 💀 Refuted / Rejected | Ecology × Informational Ledger State Evolution | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🧬 Bisociative 🗺️ Frontier Research Group 💀 Refuted |
-| 466 | 💀 Refuted / Rejected | Creative Idea Uncertainty × Creative Musical Motif Deviation | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🪞 Homospatial 🗺️ Frontier Research Group 💀 Refuted |
-| 467 | 💀 Refuted / Rejected | Physical Telescope Telemetry | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted |
-| 468 | 💀 Refuted / Rejected | Biological Systems × Cognitive Concept Drift | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🪞 Homospatial 🗺️ Frontier Research Group 💀 Refuted |
-| 469 | 💀 Refuted / Rejected | Music Theory × Sports | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🪞 Homospatial 🗺️ Frontier Research Group 💀 Refuted |
-| 470 | 💀 Refuted / Rejected | Cognitive AI Hyperparameter Orchestration | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted |
-| 471 | 💀 Refuted / Rejected | Creative Musical Motif Deviation | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted |
-| 472 | 💀 Refuted / Rejected | Decision Support (Cognitive & Pattern Recognition Systems) | **+15** | COLLISION | 0% survived | — | 🎭 Janusian 🏛️ Established Department 💀 Refuted 🔬🔥 Actively Researched (current) |
-| 473 | 💀 Refuted / Rejected | Finance (Human & Social Systems) | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted |
-| 474 | 💀 Refuted / Rejected | Astrophysics × Military Strategy | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🪞 Homospatial 🗺️ Frontier Research Group 💀 Refuted |
-| 475 | 💀 Refuted / Rejected | Geology × Cognitive Attention Map Evolution | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🪞 Homospatial 🗺️ Frontier Research Group 💀 Refuted |
-| 476 | 💀 Refuted / Rejected | Informational Cache Miss Handling × Physical Telescope Telemetry | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🪞 Homospatial 🗺️ Frontier Research Group 💀 Refuted |
-| 477 | 💀 Refuted / Rejected | Organizational Theory — Bureaucratic Hierarchy × Informational Bit Flips | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🪞 Homospatial 🗺️ Frontier Research Group 💀 Refuted |
-| 478 | 💀 Refuted / Rejected | Creative Artistic Critique | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted |
-| 479 | 💀 Refuted / Rejected | Ecology — predator-prey population dynamics | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted |
-| 480 | 💀 Refuted / Rejected | Epigenetics × Physical Bridge Cable Tension | **+15** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group 💀 Refuted |
-| 481 | 💀 Refuted / Rejected | Neuroscience — cortical map reorganization × Economics — market microstructure and order books | **+15** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🪞 Homospatial 🗺️ Frontier Research Group 💀 Refuted |
-| 482 | 💀 Refuted / Rejected | Swarm Robotics × Law | **+15** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🪞 Homospatial 🗺️ Frontier Research Group 💀 Refuted |
-| 483 | 💀 Refuted / Rejected | Geology — sedimentary layering and stratigraphy | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted |
-| 484 | 💀 Refuted / Rejected | Astrophysics × Human Social Influence | **+15** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🪞 Homospatial 🗺️ Frontier Research Group 💀 Refuted |
-| 485 | 💀 Refuted / Rejected | Human Role Ambiguity × Informational Error Probability | **+15** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🪞 Homospatial 🗺️ Frontier Research Group 💀 Refuted |
-| 486 | 💀 Refuted / Rejected | Music Sound × Human Cognitive Bias | **+15** | ADJACENT_ACTIVE | 0% survived | narrative-shaped | 🪞 Homospatial 🗺️ Frontier Research Group 💀 Refuted |
-| 487 | 💀 Refuted / Rejected | Human Role Ambiguity × Informational Hash Collisions | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🪞 Homospatial 🗺️ Frontier Research Group 💀 Refuted |
-| 488 | 💀 Refuted / Rejected | Human Defense Coordination | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted |
-| 489 | 💀 Refuted / Rejected | Climatology × Creative Instrument Track Development | **+15** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🪞 Homospatial 🗺️ Frontier Research Group 💀 Refuted |
-| 490 | 💀 Refuted / Rejected | Informational Software Version Control × Physical Flux Regulation | **+15** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🪞 Homospatial 🗺️ Frontier Research Group 💀 Refuted |
-| 491 | 💀 Refuted / Rejected | Biological Systems | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted |
-| 492 | 💀 Refuted / Rejected | Cognitive AI Weight Initialization | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted |
-| 493 | 💀 Refuted / Rejected | Linguistics — Creole Genesis × Creative Film Production Orchestration | **+15** | ADJACENT_ACTIVE | 0% survived | narrative-shaped | 🪞 Homospatial 🗺️ Frontier Research Group 💀 Refuted |
-| 494 | 💀 Refuted / Rejected | Creative Album Production Orchestration | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted |
-| 495 | 💀 Refuted / Rejected | Music Theory × Informational Ledger State Evolution | **+15** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group 💀 Refuted |
-| 496 | 💀 Refuted / Rejected | Auction Theory × Astrophysics | **+15** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🪞 Homospatial 🗺️ Frontier Research Group 💀 Refuted |
-| 497 | 💀 Refuted / Rejected | Informational Backup Systems | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted |
-| 498 | 💀 Refuted / Rejected | Physical Magnetic Field Control | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted |
-| 499 | 💀 Refuted / Rejected | Human Trust Variance | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted 🔬 Actively Researched (historical) |
-| 500 | 💀 Refuted / Rejected | Informational Signal Jitter | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted |
-| 501 | 💀 Refuted / Rejected | Music Sound (Creative & Performance Systems) | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted |
-| 502 | 💀 Refuted / Rejected | Cognitive AI Weight Initialization × Creative Artistic Critique | **+15** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group 💀 Refuted |
-| 503 | 💀 Refuted / Rejected | Materials Science — Phase Transitions | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted |
-| 504 | 💀 Refuted / Rejected | Organizational theory — bureaucratic hierarchy | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted |
-| 505 | 💀 Refuted / Rejected | Informational Scientific Experiment Orchestration | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted |
-| 506 | 💀 Refuted / Rejected | Mitochondrial Energy Production × Physical Electrical Noise | **+15** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🪞 Homospatial 🗺️ Frontier Research Group 💀 Refuted |
-| 507 | 💀 Refuted / Rejected | Cognitive Attention Map Evolution × Informational Protocol Coordination | **+15** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🪞 Homospatial 🗺️ Frontier Research Group 💀 Refuted |
-| 508 | 💀 Refuted / Rejected | Cell biology — protein folding chaperones | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted |
-| 509 | 💀 Refuted / Rejected | Creative Narrative Arc Development | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted |
-| 510 | 💀 Refuted / Rejected | Mitochondrial Energy Production × Human Financial Market Systems | **+15** | ADJACENT_ACTIVE | 0% survived | narrative-shaped | 🪞 Homospatial 🗺️ Frontier Research Group 💀 Refuted |
-| 511 | 💀 Refuted / Rejected | Cognitive AI Attention | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted |
-| 512 | 💀 Refuted / Rejected | Thermodynamics — entropy and irreversibility | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted |
-| 513 | 💀 Refuted / Rejected | Informational Backup Systems × Physical Acoustic Resonance | **+15** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🪞 Homospatial 🗺️ Frontier Research Group 💀 Refuted |
-| 514 | 💀 Refuted / Rejected | Black–Scholes — financial pricing × Physics — diffusion equations | **+15** | ADJACENT_ACTIVE | 0% survived | formalism-shaped | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted 🔬 Actively Researched (historical) |
-| 515 | 💀 Refuted / Rejected | Creative Instrument Track Development × Informational Error Probability | **+15** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted 🔬 Actively Researched (historical) |
-| 516 | 💀 Refuted / Rejected | Cell biology — protein folding chaperones × Creative Musical Composition | **+15** | ADJACENT_ACTIVE | 0% survived | narrative-shaped | 🪞 Homospatial 🗺️ Frontier Research Group 💀 Refuted |
-| 517 | 💀 Refuted / Rejected | Creative Album Production Orchestration × Physical Voltage Spikes | **+15** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🪞 Homospatial 🗺️ Frontier Research Group 💀 Refuted |
-| 518 | 💀 Refuted / Rejected | Social psychology — conformity and groupthink | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted 🔬 Actively Researched (historical) |
-| 519 | 💀 Refuted / Rejected | Textile engineering — weave structure and tensile strength | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted |
-| 520 | 💀 Refuted / Rejected | Cryptography — zero-knowledge proofs × Mathematics — topology — knot invariants | **+15** | ADJACENT_ACTIVE | 33% survived | formalism-shaped | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 🌗 Contested (1-of-3) |
-| 521 | 💀 Refuted / Rejected | Informational Backup Systems × Informational Packet Buffer Management | **+15** | ADJACENT_ACTIVE | 0% survived | formalism-shaped | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted 🔬 Actively Researched (historical) |
-| 522 | 💀 Refuted / Rejected | Physical Photon Emission × Quantum Physics (Physical & Natural Systems) — Atomic: Particle position uncertain, Measurement binary, Superposition states; Domain: Quantum system evolves, Physical laws context, Log measurements; Control: Measurement apparatus, Parallel quantum processes, Atomic wavefunction collapse; Orchestration: Universal law coordination, Theoretical vs experimental environments | **+15** | ADJACENT_ACTIVE | 0% survived | formalism-shaped | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted 🔬 Actively Researched (historical) |
-| 523 | 💀 Refuted / Rejected | Cryptography — public-key infrastructure × Mathematics — combinatorics — extremal counting | **+15** | ADJACENT_ACTIVE | 33% survived | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 🌗 Contested (1-of-3) |
-| 524 | 💀 Refuted / Rejected | Physical Mechanical Spring Systems × Physical Electrical Noise | **+15** | ADJACENT_ACTIVE | 33% survived | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 🌗 Contested (1-of-3) |
-| 525 | 💀 Refuted / Rejected | Cognitive AI Hyperparameter Orchestration × Physical Immune System | **+10** | NO_SIGNAL | 0% survived | — | 🪞 Homospatial 💀 Refuted 🔬🔥 Actively Researched (current) |
-| 526 | 💀 Refuted / Rejected | Informational Bit Flips | **+10** | NO_SIGNAL | 0% survived | — | 🎭 Janusian 💀 Refuted 🔬🔥 Actively Researched (current) |
-| 527 | 💀 Refuted / Rejected | Military Strategy × Creative Album Production Orchestration | **+10** | NO_SIGNAL | 0% survived | narrative-shaped | 🪞 Homospatial 💀 Refuted 🔬🔥 Actively Researched (current) |
-| 528 | 💀 Refuted / Rejected | Epidemiology — herd immunity thresholds × Human Trust Variance | **+10** | NO_SIGNAL | 0% survived | mixed-uncertain | 🪞 Homospatial 💀 Refuted 🔬🔥 Actively Researched (current) |
-| 529 | 💀 Refuted / Rejected | Human Learning Uncertainty × Physical Quantum Measurement | **+10** | NO_SIGNAL | 0% survived | mixed-uncertain | 🧬 Bisociative 💀 Refuted 🔬🔥 Actively Researched (current) |
-| 530 | 💀 Refuted / Rejected | Black–Scholes — finance × Wiener processes | **+10** | COLLISION | — | formalism-shaped | 🧬 Bisociative 🏛️ Established Department ⚠️ Failed Honesty Check 🔬 Actively Researched |
-| 531 | 💀 Refuted / Rejected | Informational Ledger State Evolution × Cryptography — zero-knowledge proofs | **+10** | COLLISION | — | formalism-shaped | 🧬 Bisociative 🏛️ Established Department ⚠️ Failed Honesty Check 🔬 Actively Researched |
-| 532 | 💀 Refuted / Rejected | Comedy × Sports | **+5** | COLLISION | 0% survived | — | 🪞 Homospatial 🏛️ Established Department ⚠️ Failed Honesty Check 💀 Refuted 🔬🔥 Actively Researched (current) |
-| 533 | 💀 Refuted / Rejected | Human Cognitive Bias | **+5** | FACT_CHECK_FAIL | — | — | 🎭 Janusian ⚠️ Retracted 🔬 Actively Researched |
-| 534 | 💀 Refuted / Rejected | Basketball Pick-and-Roll Offense × Physical Flux Regulation | **+5** | COLLISION | 0% survived | — | 🪞 Homospatial 🏛️ Established Department 💀 Refuted 🔬 Actively Researched |
-| 535 | 💀 Refuted / Rejected | Cognitive Neuron Activation × Physical Ecosystem Succession | **+5** | ADJACENT_ACTIVE | 0% survived | — | 🪞 Homospatial 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted |
-| 536 | 💀 Refuted / Rejected | Control theory — Kalman filtering | **+5** | COLLISION | 0% survived | — | 🎭 Janusian 🏛️ Established Department 💀 Refuted 🔬 Actively Researched |
-| 537 | 💀 Refuted / Rejected | Cognitive Model Adaptation × Physical Bridge Cable Tension | **+5** | ADJACENT_ACTIVE | 0% survived | — | 🪞 Homospatial 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted |
-| 538 | 💀 Refuted / Rejected | Linguistics × Creative Idea Uncertainty | **+5** | ADJACENT_ACTIVE | 0% survived | — | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted |
-| 539 | 💀 Refuted / Rejected | Game Theory Nash Bargaining × Cell Biology Protein Folding Chaperones | **+5** | ADJACENT_ACTIVE | 0% survived | — | 🪞 Homospatial 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted |
-| 540 | 💀 Refuted / Rejected | Behavioral Psychology × Law | **+5** | ADJACENT_ACTIVE | 0% survived | — | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted |
-| 541 | 💀 Refuted / Rejected | Culinary Arts × Physical Bridge Cable Tension | **+5** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🪞 Homospatial 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted |
-| 542 | 💀 Refuted / Rejected | Informational Routing Policy Enforcement | **+5** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted |
-| 543 | 💀 Refuted / Rejected | Human Meeting Participation × Physical Quantum Measurement | **+5** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🪞 Homospatial 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted |
-| 544 | 💀 Refuted / Rejected | Creative Instrument Track Development × Physical Chemical Reaction Networks | **+5** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🪞 Homospatial 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted |
-| 545 | 💀 Refuted / Rejected | Cryptography × Physical Voltage Spikes | **+5** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted |
-| 546 | 💀 Refuted / Rejected | Supply Chain Logistics × Physical Evolutionary Selection | **+5** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🪞 Homospatial 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted |
-| 547 | 💀 Refuted / Rejected | Comedy × Physical Gear System Mechanics | **+5** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🪞 Homospatial 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted |
-| 548 | 💀 Refuted / Rejected | Social Systems × Physical Chemical Reaction Networks | **+5** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🪞 Homospatial 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted |
-| 549 | 💀 Refuted / Rejected | Mycorrhizal Fungal Networks × Quantum Physics | **+5** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🪞 Homospatial 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted |
-| 550 | 💀 Refuted / Rejected | Music Theory × Human Trust Variance | **+5** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🪞 Homospatial 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted |
-| 551 | 💀 Refuted / Rejected | Education × Language Linguistics | **+5** | ADJACENT_ACTIVE | 0% survived | narrative-shaped | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted |
-| 552 | 💀 Refuted / Rejected | Cognitive Concept Drift × Human Meeting Participation | **+5** | ADJACENT_ACTIVE | 0% survived | narrative-shaped | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted |
-| 553 | 💀 Refuted / Rejected | Music Theory × Auction Theory | **+5** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🪞 Homospatial 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted |
-| 554 | 💀 Refuted / Rejected | Informational Hash Collisions × Physical Ecosystem Succession | **+5** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🪞 Homospatial 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted |
-| 555 | 💀 Refuted / Rejected | Fluid Dynamics × Behavioral Psychology | **+5** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🪞 Homospatial 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted |
-| 556 | 💀 Refuted / Rejected | Evolutionary Biology × Creative Inspiration Variability | **+5** | ADJACENT_ACTIVE | 0% survived | narrative-shaped | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted |
-| 557 | 💀 Refuted / Rejected | Human Facilitator Cueing × Informational Cache Miss Handling | **+5** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🪞 Homospatial 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted |
-| 558 | 💀 Refuted / Rejected | Cognitive Neuron Activation × Informational Software Version Control | **+5** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted |
-| 559 | 💀 Refuted / Rejected | Physical Acoustic Resonance | **+5** | COLLISION | 0% survived | — | 🎭 Janusian 🏛️ Established Department 💀 Refuted 🔬 Actively Researched |
-| 560 | 💀 Refuted / Rejected | Behavioral psychology — habit formation loops × Informational Sensor Networks | **+5** | ADJACENT_ACTIVE | 0% survived | narrative-shaped | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted |
-| 561 | 💀 Refuted / Rejected | Economics — auction theory × Informational Ledger State Evolution | **+5** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted |
-| 562 | 💀 Refuted / Rejected | Immunology — innate immune response × Informational Sensor Networks | **+5** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🪞 Homospatial 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted |
-| 563 | 💀 Refuted / Rejected | Cell biology — mitochondrial energy production × Human Social Network Dynamics | **+5** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted |
-| 564 | 💀 Refuted / Rejected | Agriculture — crop rotation and soil health | **+5** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted |
-| 565 | 💀 Refuted / Rejected | Marconi — radio × Telegraphy | **+5** | ADJACENT_ACTIVE | 0% survived | narrative-shaped | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted |
-| 566 | 💀 Refuted / Rejected | Astronomy — gravitational lensing × Human Defense Coordination | **+5** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted |
-| 567 | 💀 Refuted / Rejected | Music theory — jazz improvisation over changes × Linguistics — creole genesis | **+5** | ADJACENT_ACTIVE | 0% survived | narrative-shaped | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted |
-| 568 | 💀 Refuted / Rejected | Informational Database State × Mathematics — combinatorics — extremal counting | **+5** | ADJACENT_ACTIVE | 0% survived | formalism-shaped | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted |
-| 569 | 💀 Refuted / Rejected | Informational Database State × Mathematics — topology — knot invariants | **+5** | ADJACENT_ACTIVE | 0% survived | formalism-shaped | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted |
-| 570 | 💀 Refuted / Rejected | Physical Electrical Noise × Physical Acoustic Resonance | **+5** | ADJACENT_ACTIVE | 0% survived | formalism-shaped | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted |
-| 571 | 💀 Refuted / Rejected | Physical Flux Regulation | **+0** | NO_SIGNAL | 0% survived | — | 🎭 Janusian 💀 Refuted 🔬 Actively Researched |
-| 572 | 💀 Refuted / Rejected | Informational Queue Overflow | **+0** | NO_SIGNAL | 0% survived | — | 🎭 Janusian 💀 Refuted 🔬 Actively Researched |
-| 573 | 💀 Refuted / Rejected | Agriculture × Human Team Collaboration | **+0** | NO_SIGNAL | 0% survived | — | 🧬 Bisociative ⚠️ Failed Honesty Check 💀 Refuted 🔬🔥 Actively Researched (current) |
-| 574 | 💀 Refuted / Rejected | Creative Improvisation Coordination × Human Individual Indecision | **+0** | NO_SIGNAL | 0% survived | — | 🧬 Bisociative 💀 Refuted 🔬 Actively Researched |
-| 575 | 💀 Refuted / Rejected | Learning Systems × Informational Load Balancing | **+0** | NO_SIGNAL | 0% survived | — | 🪞 Homospatial 💀 Refuted 🔬 Actively Researched |
-| 576 | 💀 Refuted / Rejected | Physical Circuit Evolution | **+0** | NO_SIGNAL | 0% survived | — | 🎭 Janusian 💀 Refuted 🔬 Actively Researched |
-| 577 | 💀 Refuted / Rejected | Anthropology — gift economies and reciprocity | **+0** | NO_SIGNAL | 0% survived | — | 🎭 Janusian 💀 Refuted 🔬 Actively Researched |
-| 578 | 💀 Refuted / Rejected | Materials Science — Phase Transitions × Human Social Movements | **+0** | NO_SIGNAL | 0% survived | — | 🧬 Bisociative ⚠️ Failed Honesty Check 💀 Refuted 🔬🔥 Actively Researched (current) |
-| 579 | 💀 Refuted / Rejected | Sports Athletics (Creative & Performance Systems) — Atomic: Performance succeeds/fails, Opponent capabilities unknown, Multiple strategic approaches; Domain: Athletic performance evolves, Sports rules, Log training sessions; Control: Performance monitoring, Concurrent team coordination, Atomic score updates; Orchestration: Sports federation coordination, Training vs championship environments | **+0** | NO_SIGNAL | 0% survived | — | 🎭 Janusian 💀 Refuted 🔬 Actively Researched |
-| 580 | 💀 Refuted / Rejected | Physics — optics — diffraction and interference patterns | **+0** | NO_SIGNAL | 0% survived | — | 🎭 Janusian 💀 Refuted 🔬 Actively Researched |
-| 581 | 💀 Refuted / Rejected | Physical Mechanical Vibration × Materials science — crystal lattice defects | **+0** | NO_SIGNAL | 0% survived | formalism-shaped | 🧬 Bisociative ⚠️ Failed Honesty Check 💀 Refuted 🔬🔥 Actively Researched (current) |
-| 582 | 💀 Refuted / Rejected | Graph traversal algorithms × State space search algorithms | **-5** | COLLISION | — | — | 📜 Pre-existing case study 🚫 Not a Valid Bisociation |
-| 583 | 💀 Refuted / Rejected | Quantum entanglement / Bell inequalities × Quantum information science | **-5** | COLLISION | — | — | 📜 Pre-existing case study 🚫 Not a Valid Bisociation |
-| 584 | 💀 Refuted / Rejected | Trigonometric function analysis × Fourier transform / spectral decomposition | **-5** | COLLISION | — | — | 📜 Pre-existing case study 🚫 Not a Valid Bisociation |
-| 585 | 💀 Refuted / Rejected | Human Committee Formation × Physical Acoustic Resonance | **-5** | NO_SIGNAL | 0% survived | mixed-uncertain | 🧬 Bisociative 💀 Refuted 🔬 Actively Researched (historical) |
-| 586 | 💀 Refuted / Rejected | Astronomy — stellar nucleosynthesis | **-5** | NO_SIGNAL | 0% survived | — | 🎭 Janusian 💀 Refuted 🔬 Actively Researched (historical) |
-| 587 | 💀 Refuted / Rejected | Thermodynamics × Physical Power Grid Orchestration | **-5** | NO_SIGNAL | 0% survived | narrative-shaped | 🪞 Homospatial 💀 Refuted 🔬 Actively Researched (historical) |
-| 588 | 💀 Refuted / Rejected | Evolutionary biology — punctuated equilibrium | **-5** | NO_SIGNAL | 0% survived | — | 🎭 Janusian 💀 Refuted 🔬 Actively Researched (historical) |
-| 589 | 💀 Refuted / Rejected | Culinary arts — flavor pairing and Maillard reaction | **-5** | NO_SIGNAL | 0% survived | — | 🎭 Janusian 💀 Refuted 🔬 Actively Researched (historical) |
-| 590 | 💀 Refuted / Rejected | Fluid Dynamics × Human Emotional Fluctuation | **-10** | FACT_CHECK_FAIL | — | — | 🪞 Homospatial ⚠️ Retracted |
+| 347 | 💀 Refuted / Rejected | Efficient Market Hypothesis | **+40** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬🔥 Actively Researched (current) |
+| 348 | 💀 Refuted / Rejected | Human Learning Uncertainty | **+40** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬🔥 Actively Researched (current) |
+| 349 | 💀 Refuted / Rejected | Artificial Intelligence (Information & Intelligence Systems) | **+40** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬🔥 Actively Researched (current) |
+| 350 | 💀 Refuted / Rejected | Creative Improvisation Adjustment | **+40** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬🔥 Actively Researched (current) |
+| 351 | 💀 Refuted / Rejected | Music theory — jazz improvisation over changes | **+40** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬🔥 Actively Researched (current) |
+| 352 | 💀 Refuted / Rejected | Healthcare (Human & Social Systems) | **+40** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬🔥 Actively Researched (current) |
+| 353 | 💀 Refuted / Rejected | Immunology — Innate Immune Response | **+40** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬🔥 Actively Researched (current) |
+| 354 | 💀 Refuted / Rejected | Immunology — Adaptive Immune Memory | **+40** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬🔥 Actively Researched (current) |
+| 355 | 💀 Refuted / Rejected | Legal Systems | **+40** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬🔥 Actively Researched (current) |
+| 356 | 💀 Refuted / Rejected | Economics — Auction Theory | **+40** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬🔥 Actively Researched (current) |
+| 357 | 💀 Refuted / Rejected | Gaming Narrative (Creative & Performance Systems) | **+40** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬🔥 Actively Researched (current) |
+| 358 | 💀 Refuted / Rejected | Creative Idea Uncertainty | **+40** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬🔥 Actively Researched (current) |
+| 359 | 💀 Refuted / Rejected | Informational Ledger State Evolution | **+40** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬🔥 Actively Researched (current) |
+| 360 | 💀 Refuted / Rejected | Sports — baseball pitch sequencing | **+40** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬🔥 Actively Researched (current) |
+| 361 | 💀 Refuted / Rejected | Quantum Physics | **+40** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬🔥 Actively Researched (current) |
+| 362 | 💀 Refuted / Rejected | Creative Improvisation Coordination | **+40** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬🔥 Actively Researched (current) |
+| 363 | 💀 Refuted / Rejected | Language Linguistics (Information & Intelligence Systems) | **+40** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬🔥 Actively Researched (current) |
+| 364 | 💀 Refuted / Rejected | Creative Brainstorming Facilitation | **+40** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬🔥 Actively Researched (current) |
+| 365 | 💀 Refuted / Rejected | Human Facilitator Cueing | **+40** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬🔥 Actively Researched (current) |
+| 366 | 💀 Refuted / Rejected | Social Systems | **+40** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬🔥 Actively Researched (current) |
+| 367 | 💀 Refuted / Rejected | Cognitive Reinforcement Learning | **+40** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬🔥 Actively Researched (current) |
+| 368 | 💀 Refuted / Rejected | Game Theory — Nash Bargaining | **+40** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬🔥 Actively Researched (current) |
+| 369 | 💀 Refuted / Rejected | Creative Performance Monitoring × Human Cognitive Bias | **+40** | ADJACENT_ACTIVE | 0% survived | narrative-shaped | 🪞 Homospatial 🗺️ Frontier Research Group 💀 Refuted 🔬🔥 Actively Researched (current) |
+| 370 | 💀 Refuted / Rejected | Informational Packet Buffer Management | **+40** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬🔥 Actively Researched (current) |
+| 371 | 💀 Refuted / Rejected | Creative Artistic Arrangement | **+40** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬🔥 Actively Researched (current) |
+| 372 | 💀 Refuted / Rejected | Human Social Network Dynamics | **+40** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬🔥 Actively Researched (current) |
+| 373 | 💀 Refuted / Rejected | Agriculture — crop rotation and soil health | **+40** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬🔥 Actively Researched (current) |
+| 374 | 💀 Refuted / Rejected | Physical Acoustic Resonance × Physical Photon Emission | **+40** | ADJACENT_ACTIVE | 33% survived | formalism-shaped | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 🌗 Contested (1-of-3) 🔬🔥 Actively Researched (current) |
+| 375 | 💀 Refuted / Rejected | Physical Bridge Cable Tension × Physical Elastic Deformation | **+40** | ADJACENT_ACTIVE | 33% survived | formalism-shaped | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 🌗 Contested (1-of-3) 🔬🔥 Actively Researched (current) |
+| 376 | 💀 Refuted / Rejected | Physics — condensed matter — Bose-Einstein condensate coherence (Gross-Pitaevskii dynamics, quantum pressure) × Cosmology — early-universe scalar field dynamics (corpuscular inflation, axion/ultralight BEC dark matter, Fukuyama-Morikawa stagflation) | **+40** | ADJACENT_ACTIVE | 33% survived | — | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 🌗 Contested (1-of-3) 🔬🔥 Actively Researched (current) |
+| 377 | 💀 Refuted / Rejected | Ecology × Materials Science | **+30** | ADJACENT_ACTIVE | 0% survived | — | 🧬 Bisociative 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched |
+| 378 | 💀 Refuted / Rejected | Game Theory — Repeated Prisoner's Dilemma × Informational Measurement Data Evolution | **+30** | ADJACENT_ACTIVE | 0% survived | — | 🧬 Bisociative 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched |
+| 379 | 💀 Refuted / Rejected | Human Individual Indecision × Physical Voltage Spikes | **+30** | ADJACENT_ACTIVE | 0% survived | — | 🪞 Homospatial 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched |
+| 380 | 💀 Refuted / Rejected | Behavioral psychology — habit formation loops | **+30** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched |
+| 381 | 💀 Refuted / Rejected | Neuroscience — cortical map reorganization | **+30** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched |
+| 382 | 💀 Refuted / Rejected | Thermodynamics × Informational Signal Jitter | **+30** | ADJACENT_ACTIVE | 33% survived | — | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 🌗 Contested (1-of-3) 🔬 Actively Researched |
+| 383 | 💀 Refuted / Rejected | Fluid Dynamics × Physical Telescope Telemetry | **+30** | ADJACENT_ACTIVE | 33% survived | — | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 🌗 Contested (1-of-3) 🔬 Actively Researched |
+| 384 | 💀 Refuted / Rejected | Adaptive Immune Memory × Human Defense Coordination | **+30** | ADJACENT_ACTIVE | 0% survived | — | 🪞 Homospatial 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched |
+| 385 | 💀 Refuted / Rejected | Swarm Robotics — Ant Colony Optimization | **+30** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted 🔬🔥 Actively Researched (current) |
+| 386 | 💀 Refuted / Rejected | Human Financial Trading Algorithms | **+30** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched |
+| 387 | 💀 Refuted / Rejected | Physical Ecosystem Succession | **+30** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched |
+| 388 | 💀 Refuted / Rejected | Human Committee Formation | **+30** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched |
+| 389 | 💀 Refuted / Rejected | Informational Protocol Coordination | **+30** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched |
+| 390 | 💀 Refuted / Rejected | Cell biology — mitochondrial energy production | **+30** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched |
+| 391 | 💀 Refuted / Rejected | Architecture × Human Financial Trading Algorithms | **+30** | ADJACENT_ACTIVE | 0% survived | narrative-shaped | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted 🔬🔥 Actively Researched (current) |
+| 392 | 💀 Refuted / Rejected | Cognitive Swarm Intelligence | **+30** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched |
+| 393 | 💀 Refuted / Rejected | Human Role Ambiguity | **+30** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched |
+| 394 | 💀 Refuted / Rejected | Linguistics — Creole Genesis | **+30** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched |
+| 395 | 💀 Refuted / Rejected | Telecommunications — packet switching and routing | **+30** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched |
+| 396 | 💀 Refuted / Rejected | Human Team Collaboration | **+30** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched |
+| 397 | 💀 Refuted / Rejected | Organizational theory — self-organizing teams | **+30** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched |
+| 398 | 💀 Refuted / Rejected | Creative Musical Motif Deviation × Informational Error Probability | **+30** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted 🔬🔥 Actively Researched (current) |
+| 399 | 💀 Refuted / Rejected | Climate Science (Physical & Natural Systems) | **+30** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched |
+| 400 | 💀 Refuted / Rejected | Music — sample-based hip-hop production | **+30** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched |
+| 401 | 💀 Refuted / Rejected | Cross Domain Pattern Recognition (Cognitive & Pattern Recognition Systems) | **+30** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched |
+| 402 | 💀 Refuted / Rejected | Swarm Robotics — Flocking / Boids Behavior | **+30** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched |
+| 403 | 💀 Refuted / Rejected | Chemistry — self-assembly of molecular structures | **+30** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched |
+| 404 | 💀 Refuted / Rejected | Physical Mechanical Vibration | **+30** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched |
+| 405 | 💀 Refuted / Rejected | Astrophysics (Physical & Natural Systems) | **+30** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched |
+| 406 | 💀 Refuted / Rejected | Informational Error Probability | **+30** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched |
+| 407 | 💀 Refuted / Rejected | Physical Protein Folding | **+30** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched |
+| 408 | 💀 Refuted / Rejected | Cognitive Swarm Intelligence × Human Trust Variance | **+30** | ADJACENT_ACTIVE | 0% survived | narrative-shaped | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted 🔬🔥 Actively Researched (current) |
+| 409 | 💀 Refuted / Rejected | Learning Systems (Cognitive & Pattern Recognition Systems) — Atomic: Learning outcomes uncertain, Skill acquisition succeeds/fails, Multiple learning states; Domain: Learning progresses, Educational context, Log development; Control: External learning resources, Parallel skill development, Atomic knowledge updates; Orchestration: Individual vs collective learning coordination | **+30** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched |
+| 410 | 💀 Refuted / Rejected | Neuroscience — synaptic pruning | **+30** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched |
+| 411 | 💀 Refuted / Rejected | Knowledge Systems (Cognitive & Pattern Recognition Systems) — Atomic: Data interpretation uncertain, Model output ambiguous, Multiple insights; Domain: Knowledge evolves, Historical context, Log insights; Control: Distributed analysis, Parallel computation, Atomic integration; Orchestration: Knowledge deployment coordination × Informational Scientific Experiment Orchestration | **+30** | ADJACENT_ACTIVE | 0% survived | narrative-shaped | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted 🔬🔥 Actively Researched (current) |
+| 412 | 💀 Refuted / Rejected | Immunology — innate immune response | **+30** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched |
+| 413 | 💀 Refuted / Rejected | Informational Mobile System Coordination | **+30** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched |
+| 414 | 💀 Refuted / Rejected | Political science — coalition government formation | **+30** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched |
+| 415 | 💀 Refuted / Rejected | Political science — coalition government formation | **+30** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched |
+| 416 | 💀 Refuted / Rejected | Toxicology — dose-response curves | **+30** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched |
+| 417 | 💀 Refuted / Rejected | Physical Elastic Deformation × Materials science — crystal lattice defects | **+30** | ADJACENT_ACTIVE | 33% survived | formalism-shaped | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 🌗 Contested (1-of-3) 🔬 Actively Researched |
+| 418 | 💀 Refuted / Rejected | Physical Magnetic Field Control × Physical Voltage Spikes | **+30** | ADJACENT_ACTIVE | 33% survived | formalism-shaped | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 🌗 Contested (1-of-3) 🔬 Actively Researched |
+| 419 | 💀 Refuted / Rejected | Informational Protocol Coordination × Cryptography — public-key infrastructure | **+30** | ADJACENT_ACTIVE | 33% survived | formalism-shaped | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 🌗 Contested (1-of-3) 🔬 Actively Researched |
+| 420 | 💀 Refuted / Rejected | Physical Immune System × Materials science — phase transitions | **+30** | ADJACENT_ACTIVE | 0% survived | formalism-shaped | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted 🔬🔥 Actively Researched (current) |
+| 421 | 💀 Refuted / Rejected | Physical Mechanical Spring Systems × Physical Circuit Evolution | **+30** | ADJACENT_ACTIVE | 33% survived | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 🌗 Contested (1-of-3) 🔬 Actively Researched |
+| 422 | 💀 Refuted / Rejected | Physical Mechanical Spring Systems × Physical Mechanical Vibration | **+30** | ADJACENT_ACTIVE | 33% survived | formalism-shaped | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 🌗 Contested (1-of-3) 🔬 Actively Researched |
+| 423 | 💀 Refuted / Rejected | Physical Acoustic Resonance × Physical Mechanical Vibration | **+30** | ADJACENT_ACTIVE | 33% survived | formalism-shaped | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 🌗 Contested (1-of-3) 🔬 Actively Researched |
+| 424 | 💀 Refuted / Rejected | Physical Electrical Noise × Physical Gear System Mechanics | **+30** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted 🔬🔥 Actively Researched (current) |
+| 425 | 💀 Refuted / Rejected | Physical Mechanical Vibration × Physical Gear System Mechanics | **+30** | ADJACENT_ACTIVE | 33% survived | formalism-shaped | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 🌗 Contested (1-of-3) 🔬 Actively Researched |
+| 426 | 💀 Refuted / Rejected | Behavioral psychology — habit formation loops × Creative Musical Motif Deviation | **+30** | ADJACENT_ACTIVE | 0% survived | narrative-shaped | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted 🔬🔥 Actively Researched (current) |
+| 427 | 💀 Refuted / Rejected | Knowledge Systems (Cognitive & Pattern Recognition Systems) | **+25** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched (historical) |
+| 428 | 💀 Refuted / Rejected | Astronomy × Telecommunications | **+25** | ADJACENT_ACTIVE | 0% survived | — | 🧬 Bisociative 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched (historical) |
+| 429 | 💀 Refuted / Rejected | Informational Cache Miss Handling | **+25** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched (historical) |
+| 430 | 💀 Refuted / Rejected | Human Individual Indecision | **+25** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched (historical) |
+| 431 | 💀 Refuted / Rejected | Cognitive Development (Information & Intelligence Systems) | **+25** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched (historical) |
+| 432 | 💀 Refuted / Rejected | Informational Sensor Networks | **+25** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched (historical) |
+| 433 | 💀 Refuted / Rejected | Immunology — Adaptive Immune Memory | **+25** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched (historical) |
+| 434 | 💀 Refuted / Rejected | Supply Chain Logistics — Just-in-Time Inventory | **+25** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched (historical) |
+| 435 | 💀 Refuted / Rejected | Physical Magnetic Fluctuation | **+25** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched (historical) |
+| 436 | 💀 Refuted / Rejected | Cognitive Streaming Data Processing | **+25** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched (historical) |
+| 437 | 💀 Refuted / Rejected | Economics — market microstructure and order books | **+25** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched (historical) |
+| 438 | 💀 Refuted / Rejected | Epidemiology — disease outbreak spread | **+25** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched (historical) |
+| 439 | 💀 Refuted / Rejected | Physical Chemical Reaction Networks | **+25** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted 🔬 Actively Researched (historical) |
+| 440 | 💀 Refuted / Rejected | Cognitive Neuron Activation | **+20** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted 🔬 Actively Researched |
+| 441 | 💀 Refuted / Rejected | Education (Information & Intelligence Systems) × Human Social Influence | **+20** | ADJACENT_ACTIVE | 0% survived | — | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted 🔬 Actively Researched |
+| 442 | 💀 Refuted / Rejected | Materials Science × Architecture | **+20** | ADJACENT_ACTIVE | 0% survived | — | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted 🔬 Actively Researched |
+| 443 | 💀 Refuted / Rejected | Organizational Theory × Physical Magnetic Field Control | **+20** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted 🔬 Actively Researched |
+| 444 | 💀 Refuted / Rejected | Finance × Informational Routing Policy Enforcement | **+20** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted 🔬 Actively Researched |
+| 445 | 💀 Refuted / Rejected | Game Theory — Repeated Prisoner's Dilemma | **+20** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted 🔬 Actively Researched |
+| 446 | 💀 Refuted / Rejected | Human Team Collaboration × Physical Flux Regulation | **+20** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted 🔬 Actively Researched |
+| 447 | 💀 Refuted / Rejected | Quantum Physics (Physical & Natural Systems) — Atomic: Particle position uncertain, Measurement binary, Superposition states; Domain: Quantum system evolves, Physical laws context, Log measurements; Control: Measurement apparatus, Parallel quantum processes, Atomic wavefunction collapse; Orchestration: Universal law coordination, Theoretical vs experimental environments × Informational Signal Jitter | **+20** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted 🔬 Actively Researched |
+| 448 | 💀 Refuted / Rejected | Fleming — bacteriology × Contamination | **+20** | ADJACENT_ACTIVE | 0% survived | narrative-shaped | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted 🔬 Actively Researched |
+| 449 | 💀 Refuted / Rejected | Nash — equilibrium × Malthus — scarcity | **+20** | ADJACENT_ACTIVE | 0% survived | narrative-shaped | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted 🔬 Actively Researched |
+| 450 | 💀 Refuted / Rejected | Physical Mechanical Vibration × Physical Circuit Evolution | **+20** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted 🔬 Actively Researched |
+| 451 | 💀 Refuted / Rejected | Physical Acoustic Resonance × Physical Mechanical Spring Systems | **+20** | ADJACENT_ACTIVE | 0% survived | formalism-shaped | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted 🔬 Actively Researched |
+| 452 | 💀 Refuted / Rejected | Astronomy — gravitational lensing × Physics — optics — diffraction and interference patterns | **+20** | COLLISION | — | formalism-shaped | 🧬 Bisociative 🏛️ Established Department ⚠️ Failed Honesty Check 🔬🔥 Actively Researched (current) |
+| 453 | 💀 Refuted / Rejected | Materials science — phase transitions × Informational Distributed Consensus | **+20** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted 🔬 Actively Researched |
+| 454 | 💀 Refuted / Rejected | Fluid dynamics — turbulence and laminar flow × Physical Magnetic Fluctuation | **+20** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted 🔬 Actively Researched |
+| 455 | 💀 Refuted / Rejected | Physical Mechanical Spring Systems × Physical Gear System Mechanics | **+20** | ADJACENT_ACTIVE | 0% survived | formalism-shaped | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted 🔬 Actively Researched |
+| 456 | 💀 Refuted / Rejected | Physical Acoustic Resonance × Physical Gear System Mechanics | **+20** | ADJACENT_ACTIVE | 0% survived | formalism-shaped | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted 🔬 Actively Researched |
+| 457 | 💀 Refuted / Rejected | Physical Electrical Noise × Physical Mechanical Vibration | **+20** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted 🔬 Actively Researched |
+| 458 | 💀 Refuted / Rejected | Physical Mechanical Spring Systems | **+15** | FACT_CHECK_FAIL | — | — | 🎭 Janusian ⚠️ Retracted 🔬🔥 Actively Researched (current) |
+| 459 | 💀 Refuted / Rejected | Urban planning — zoning and land use | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted |
+| 460 | 💀 Refuted / Rejected | Supply Chain Logistics × Physical Thermal Variation | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🧬 Bisociative 🗺️ Frontier Research Group 💀 Refuted |
+| 461 | 💀 Refuted / Rejected | Physical Bridge Cable Tension | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted |
+| 462 | 💀 Refuted / Rejected | Artificial Intelligence × Informational Queue Overflow | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🧬 Bisociative 🗺️ Frontier Research Group 💀 Refuted |
+| 463 | 💀 Refuted / Rejected | Fluid Dynamics × Human Emotional Fluctuation | **+15** | FACT_CHECK_FAIL | — | — | 🪞 Homospatial ⚠️ Retracted 🔬🔥 Actively Researched (current) |
+| 464 | 💀 Refuted / Rejected | Creative Performance Monitoring × Physical Voltage Spikes | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🧬 Bisociative 🗺️ Frontier Research Group 💀 Refuted |
+| 465 | 💀 Refuted / Rejected | Climatology × Cognitive Model Adaptation | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🧬 Bisociative 🗺️ Frontier Research Group 💀 Refuted |
+| 466 | 💀 Refuted / Rejected | Ecology × Informational Ledger State Evolution | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🧬 Bisociative 🗺️ Frontier Research Group 💀 Refuted |
+| 467 | 💀 Refuted / Rejected | Creative Idea Uncertainty × Creative Musical Motif Deviation | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🪞 Homospatial 🗺️ Frontier Research Group 💀 Refuted |
+| 468 | 💀 Refuted / Rejected | Physical Telescope Telemetry | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted |
+| 469 | 💀 Refuted / Rejected | Biological Systems × Cognitive Concept Drift | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🪞 Homospatial 🗺️ Frontier Research Group 💀 Refuted |
+| 470 | 💀 Refuted / Rejected | Music Theory × Sports | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🪞 Homospatial 🗺️ Frontier Research Group 💀 Refuted |
+| 471 | 💀 Refuted / Rejected | Cognitive AI Hyperparameter Orchestration | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted |
+| 472 | 💀 Refuted / Rejected | Creative Musical Motif Deviation | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted |
+| 473 | 💀 Refuted / Rejected | Decision Support (Cognitive & Pattern Recognition Systems) | **+15** | COLLISION | 0% survived | — | 🎭 Janusian 🏛️ Established Department 💀 Refuted 🔬🔥 Actively Researched (current) |
+| 474 | 💀 Refuted / Rejected | Finance (Human & Social Systems) | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted |
+| 475 | 💀 Refuted / Rejected | Astrophysics × Military Strategy | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🪞 Homospatial 🗺️ Frontier Research Group 💀 Refuted |
+| 476 | 💀 Refuted / Rejected | Geology × Cognitive Attention Map Evolution | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🪞 Homospatial 🗺️ Frontier Research Group 💀 Refuted |
+| 477 | 💀 Refuted / Rejected | Informational Cache Miss Handling × Physical Telescope Telemetry | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🪞 Homospatial 🗺️ Frontier Research Group 💀 Refuted |
+| 478 | 💀 Refuted / Rejected | Organizational Theory — Bureaucratic Hierarchy × Informational Bit Flips | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🪞 Homospatial 🗺️ Frontier Research Group 💀 Refuted |
+| 479 | 💀 Refuted / Rejected | Creative Artistic Critique | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted |
+| 480 | 💀 Refuted / Rejected | Ecology — predator-prey population dynamics | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted |
+| 481 | 💀 Refuted / Rejected | Epigenetics × Physical Bridge Cable Tension | **+15** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group 💀 Refuted |
+| 482 | 💀 Refuted / Rejected | Neuroscience — cortical map reorganization × Economics — market microstructure and order books | **+15** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🪞 Homospatial 🗺️ Frontier Research Group 💀 Refuted |
+| 483 | 💀 Refuted / Rejected | Swarm Robotics × Law | **+15** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🪞 Homospatial 🗺️ Frontier Research Group 💀 Refuted |
+| 484 | 💀 Refuted / Rejected | Geology — sedimentary layering and stratigraphy | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted |
+| 485 | 💀 Refuted / Rejected | Astrophysics × Human Social Influence | **+15** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🪞 Homospatial 🗺️ Frontier Research Group 💀 Refuted |
+| 486 | 💀 Refuted / Rejected | Human Role Ambiguity × Informational Error Probability | **+15** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🪞 Homospatial 🗺️ Frontier Research Group 💀 Refuted |
+| 487 | 💀 Refuted / Rejected | Music Sound × Human Cognitive Bias | **+15** | ADJACENT_ACTIVE | 0% survived | narrative-shaped | 🪞 Homospatial 🗺️ Frontier Research Group 💀 Refuted |
+| 488 | 💀 Refuted / Rejected | Human Role Ambiguity × Informational Hash Collisions | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🪞 Homospatial 🗺️ Frontier Research Group 💀 Refuted |
+| 489 | 💀 Refuted / Rejected | Human Defense Coordination | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted |
+| 490 | 💀 Refuted / Rejected | Climatology × Creative Instrument Track Development | **+15** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🪞 Homospatial 🗺️ Frontier Research Group 💀 Refuted |
+| 491 | 💀 Refuted / Rejected | Informational Software Version Control × Physical Flux Regulation | **+15** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🪞 Homospatial 🗺️ Frontier Research Group 💀 Refuted |
+| 492 | 💀 Refuted / Rejected | Biological Systems | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted |
+| 493 | 💀 Refuted / Rejected | Cognitive AI Weight Initialization | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted |
+| 494 | 💀 Refuted / Rejected | Linguistics — Creole Genesis × Creative Film Production Orchestration | **+15** | ADJACENT_ACTIVE | 0% survived | narrative-shaped | 🪞 Homospatial 🗺️ Frontier Research Group 💀 Refuted |
+| 495 | 💀 Refuted / Rejected | Creative Album Production Orchestration | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted |
+| 496 | 💀 Refuted / Rejected | Music Theory × Informational Ledger State Evolution | **+15** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group 💀 Refuted |
+| 497 | 💀 Refuted / Rejected | Auction Theory × Astrophysics | **+15** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🪞 Homospatial 🗺️ Frontier Research Group 💀 Refuted |
+| 498 | 💀 Refuted / Rejected | Informational Backup Systems | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted |
+| 499 | 💀 Refuted / Rejected | Physical Magnetic Field Control | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted |
+| 500 | 💀 Refuted / Rejected | Human Trust Variance | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted 🔬 Actively Researched (historical) |
+| 501 | 💀 Refuted / Rejected | Informational Signal Jitter | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted |
+| 502 | 💀 Refuted / Rejected | Music Sound (Creative & Performance Systems) | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted |
+| 503 | 💀 Refuted / Rejected | Cognitive AI Weight Initialization × Creative Artistic Critique | **+15** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group 💀 Refuted |
+| 504 | 💀 Refuted / Rejected | Materials Science — Phase Transitions | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted |
+| 505 | 💀 Refuted / Rejected | Organizational theory — bureaucratic hierarchy | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted |
+| 506 | 💀 Refuted / Rejected | Informational Scientific Experiment Orchestration | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted |
+| 507 | 💀 Refuted / Rejected | Mitochondrial Energy Production × Physical Electrical Noise | **+15** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🪞 Homospatial 🗺️ Frontier Research Group 💀 Refuted |
+| 508 | 💀 Refuted / Rejected | Cognitive Attention Map Evolution × Informational Protocol Coordination | **+15** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🪞 Homospatial 🗺️ Frontier Research Group 💀 Refuted |
+| 509 | 💀 Refuted / Rejected | Cell biology — protein folding chaperones | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted |
+| 510 | 💀 Refuted / Rejected | Creative Narrative Arc Development | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted |
+| 511 | 💀 Refuted / Rejected | Mitochondrial Energy Production × Human Financial Market Systems | **+15** | ADJACENT_ACTIVE | 0% survived | narrative-shaped | 🪞 Homospatial 🗺️ Frontier Research Group 💀 Refuted |
+| 512 | 💀 Refuted / Rejected | Cognitive AI Attention | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted |
+| 513 | 💀 Refuted / Rejected | Thermodynamics — entropy and irreversibility | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted |
+| 514 | 💀 Refuted / Rejected | Informational Backup Systems × Physical Acoustic Resonance | **+15** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🪞 Homospatial 🗺️ Frontier Research Group 💀 Refuted |
+| 515 | 💀 Refuted / Rejected | Black–Scholes — financial pricing × Physics — diffusion equations | **+15** | ADJACENT_ACTIVE | 0% survived | formalism-shaped | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted 🔬 Actively Researched (historical) |
+| 516 | 💀 Refuted / Rejected | Creative Instrument Track Development × Informational Error Probability | **+15** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted 🔬 Actively Researched (historical) |
+| 517 | 💀 Refuted / Rejected | Cell biology — protein folding chaperones × Creative Musical Composition | **+15** | ADJACENT_ACTIVE | 0% survived | narrative-shaped | 🪞 Homospatial 🗺️ Frontier Research Group 💀 Refuted |
+| 518 | 💀 Refuted / Rejected | Creative Album Production Orchestration × Physical Voltage Spikes | **+15** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🪞 Homospatial 🗺️ Frontier Research Group 💀 Refuted |
+| 519 | 💀 Refuted / Rejected | Social psychology — conformity and groupthink | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted 🔬 Actively Researched (historical) |
+| 520 | 💀 Refuted / Rejected | Textile engineering — weave structure and tensile strength | **+15** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group 💀 Refuted |
+| 521 | 💀 Refuted / Rejected | Cryptography — zero-knowledge proofs × Mathematics — topology — knot invariants | **+15** | ADJACENT_ACTIVE | 33% survived | formalism-shaped | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 🌗 Contested (1-of-3) |
+| 522 | 💀 Refuted / Rejected | Informational Backup Systems × Informational Packet Buffer Management | **+15** | ADJACENT_ACTIVE | 0% survived | formalism-shaped | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted 🔬 Actively Researched (historical) |
+| 523 | 💀 Refuted / Rejected | Physical Photon Emission × Quantum Physics (Physical & Natural Systems) — Atomic: Particle position uncertain, Measurement binary, Superposition states; Domain: Quantum system evolves, Physical laws context, Log measurements; Control: Measurement apparatus, Parallel quantum processes, Atomic wavefunction collapse; Orchestration: Universal law coordination, Theoretical vs experimental environments | **+15** | ADJACENT_ACTIVE | 0% survived | formalism-shaped | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted 🔬 Actively Researched (historical) |
+| 524 | 💀 Refuted / Rejected | Cryptography — public-key infrastructure × Mathematics — combinatorics — extremal counting | **+15** | ADJACENT_ACTIVE | 33% survived | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 🌗 Contested (1-of-3) |
+| 525 | 💀 Refuted / Rejected | Physical Mechanical Spring Systems × Physical Electrical Noise | **+15** | ADJACENT_ACTIVE | 33% survived | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 🌗 Contested (1-of-3) |
+| 526 | 💀 Refuted / Rejected | Cognitive AI Hyperparameter Orchestration × Physical Immune System | **+10** | NO_SIGNAL | 0% survived | — | 🪞 Homospatial 💀 Refuted 🔬🔥 Actively Researched (current) |
+| 527 | 💀 Refuted / Rejected | Informational Bit Flips | **+10** | NO_SIGNAL | 0% survived | — | 🎭 Janusian 💀 Refuted 🔬🔥 Actively Researched (current) |
+| 528 | 💀 Refuted / Rejected | Military Strategy × Creative Album Production Orchestration | **+10** | NO_SIGNAL | 0% survived | narrative-shaped | 🪞 Homospatial 💀 Refuted 🔬🔥 Actively Researched (current) |
+| 529 | 💀 Refuted / Rejected | Epidemiology — herd immunity thresholds × Human Trust Variance | **+10** | NO_SIGNAL | 0% survived | mixed-uncertain | 🪞 Homospatial 💀 Refuted 🔬🔥 Actively Researched (current) |
+| 530 | 💀 Refuted / Rejected | Human Learning Uncertainty × Physical Quantum Measurement | **+10** | NO_SIGNAL | 0% survived | mixed-uncertain | 🧬 Bisociative 💀 Refuted 🔬🔥 Actively Researched (current) |
+| 531 | 💀 Refuted / Rejected | Black–Scholes — finance × Wiener processes | **+10** | COLLISION | — | formalism-shaped | 🧬 Bisociative 🏛️ Established Department ⚠️ Failed Honesty Check 🔬 Actively Researched |
+| 532 | 💀 Refuted / Rejected | Informational Ledger State Evolution × Cryptography — zero-knowledge proofs | **+10** | COLLISION | — | formalism-shaped | 🧬 Bisociative 🏛️ Established Department ⚠️ Failed Honesty Check 🔬 Actively Researched |
+| 533 | 💀 Refuted / Rejected | Comedy × Sports | **+5** | COLLISION | 0% survived | — | 🪞 Homospatial 🏛️ Established Department ⚠️ Failed Honesty Check 💀 Refuted 🔬🔥 Actively Researched (current) |
+| 534 | 💀 Refuted / Rejected | Human Cognitive Bias | **+5** | FACT_CHECK_FAIL | — | — | 🎭 Janusian ⚠️ Retracted 🔬 Actively Researched |
+| 535 | 💀 Refuted / Rejected | Basketball Pick-and-Roll Offense × Physical Flux Regulation | **+5** | COLLISION | 0% survived | — | 🪞 Homospatial 🏛️ Established Department 💀 Refuted 🔬 Actively Researched |
+| 536 | 💀 Refuted / Rejected | Cognitive Neuron Activation × Physical Ecosystem Succession | **+5** | ADJACENT_ACTIVE | 0% survived | — | 🪞 Homospatial 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted |
+| 537 | 💀 Refuted / Rejected | Control theory — Kalman filtering | **+5** | COLLISION | 0% survived | — | 🎭 Janusian 🏛️ Established Department 💀 Refuted 🔬 Actively Researched |
+| 538 | 💀 Refuted / Rejected | Cognitive Model Adaptation × Physical Bridge Cable Tension | **+5** | ADJACENT_ACTIVE | 0% survived | — | 🪞 Homospatial 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted |
+| 539 | 💀 Refuted / Rejected | Linguistics × Creative Idea Uncertainty | **+5** | ADJACENT_ACTIVE | 0% survived | — | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted |
+| 540 | 💀 Refuted / Rejected | Game Theory Nash Bargaining × Cell Biology Protein Folding Chaperones | **+5** | ADJACENT_ACTIVE | 0% survived | — | 🪞 Homospatial 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted |
+| 541 | 💀 Refuted / Rejected | Behavioral Psychology × Law | **+5** | ADJACENT_ACTIVE | 0% survived | — | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted |
+| 542 | 💀 Refuted / Rejected | Culinary Arts × Physical Bridge Cable Tension | **+5** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🪞 Homospatial 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted |
+| 543 | 💀 Refuted / Rejected | Informational Routing Policy Enforcement | **+5** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted |
+| 544 | 💀 Refuted / Rejected | Human Meeting Participation × Physical Quantum Measurement | **+5** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🪞 Homospatial 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted |
+| 545 | 💀 Refuted / Rejected | Creative Instrument Track Development × Physical Chemical Reaction Networks | **+5** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🪞 Homospatial 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted |
+| 546 | 💀 Refuted / Rejected | Cryptography × Physical Voltage Spikes | **+5** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted |
+| 547 | 💀 Refuted / Rejected | Supply Chain Logistics × Physical Evolutionary Selection | **+5** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🪞 Homospatial 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted |
+| 548 | 💀 Refuted / Rejected | Comedy × Physical Gear System Mechanics | **+5** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🪞 Homospatial 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted |
+| 549 | 💀 Refuted / Rejected | Social Systems × Physical Chemical Reaction Networks | **+5** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🪞 Homospatial 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted |
+| 550 | 💀 Refuted / Rejected | Mycorrhizal Fungal Networks × Quantum Physics | **+5** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🪞 Homospatial 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted |
+| 551 | 💀 Refuted / Rejected | Music Theory × Human Trust Variance | **+5** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🪞 Homospatial 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted |
+| 552 | 💀 Refuted / Rejected | Education × Language Linguistics | **+5** | ADJACENT_ACTIVE | 0% survived | narrative-shaped | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted |
+| 553 | 💀 Refuted / Rejected | Cognitive Concept Drift × Human Meeting Participation | **+5** | ADJACENT_ACTIVE | 0% survived | narrative-shaped | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted |
+| 554 | 💀 Refuted / Rejected | Music Theory × Auction Theory | **+5** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🪞 Homospatial 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted |
+| 555 | 💀 Refuted / Rejected | Informational Hash Collisions × Physical Ecosystem Succession | **+5** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🪞 Homospatial 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted |
+| 556 | 💀 Refuted / Rejected | Fluid Dynamics × Behavioral Psychology | **+5** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🪞 Homospatial 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted |
+| 557 | 💀 Refuted / Rejected | Evolutionary Biology × Creative Inspiration Variability | **+5** | ADJACENT_ACTIVE | 0% survived | narrative-shaped | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted |
+| 558 | 💀 Refuted / Rejected | Human Facilitator Cueing × Informational Cache Miss Handling | **+5** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🪞 Homospatial 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted |
+| 559 | 💀 Refuted / Rejected | Cognitive Neuron Activation × Informational Software Version Control | **+5** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted |
+| 560 | 💀 Refuted / Rejected | Physical Acoustic Resonance | **+5** | COLLISION | 0% survived | — | 🎭 Janusian 🏛️ Established Department 💀 Refuted 🔬 Actively Researched |
+| 561 | 💀 Refuted / Rejected | Behavioral psychology — habit formation loops × Informational Sensor Networks | **+5** | ADJACENT_ACTIVE | 0% survived | narrative-shaped | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted |
+| 562 | 💀 Refuted / Rejected | Economics — auction theory × Informational Ledger State Evolution | **+5** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted |
+| 563 | 💀 Refuted / Rejected | Immunology — innate immune response × Informational Sensor Networks | **+5** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🪞 Homospatial 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted |
+| 564 | 💀 Refuted / Rejected | Cell biology — mitochondrial energy production × Human Social Network Dynamics | **+5** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted |
+| 565 | 💀 Refuted / Rejected | Agriculture — crop rotation and soil health | **+5** | ADJACENT_ACTIVE | 0% survived | — | 🎭 Janusian 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted |
+| 566 | 💀 Refuted / Rejected | Marconi — radio × Telegraphy | **+5** | ADJACENT_ACTIVE | 0% survived | narrative-shaped | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted |
+| 567 | 💀 Refuted / Rejected | Astronomy — gravitational lensing × Human Defense Coordination | **+5** | ADJACENT_ACTIVE | 0% survived | mixed-uncertain | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted |
+| 568 | 💀 Refuted / Rejected | Music theory — jazz improvisation over changes × Linguistics — creole genesis | **+5** | ADJACENT_ACTIVE | 0% survived | narrative-shaped | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted |
+| 569 | 💀 Refuted / Rejected | Informational Database State × Mathematics — combinatorics — extremal counting | **+5** | ADJACENT_ACTIVE | 0% survived | formalism-shaped | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted |
+| 570 | 💀 Refuted / Rejected | Informational Database State × Mathematics — topology — knot invariants | **+5** | ADJACENT_ACTIVE | 0% survived | formalism-shaped | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted |
+| 571 | 💀 Refuted / Rejected | Physical Electrical Noise × Physical Acoustic Resonance | **+5** | ADJACENT_ACTIVE | 0% survived | formalism-shaped | 🧬 Bisociative 🗺️ Frontier Research Group ⚠️ Failed Honesty Check 💀 Refuted |
+| 572 | 💀 Refuted / Rejected | Physical Flux Regulation | **+0** | NO_SIGNAL | 0% survived | — | 🎭 Janusian 💀 Refuted 🔬 Actively Researched |
+| 573 | 💀 Refuted / Rejected | Informational Queue Overflow | **+0** | NO_SIGNAL | 0% survived | — | 🎭 Janusian 💀 Refuted 🔬 Actively Researched |
+| 574 | 💀 Refuted / Rejected | Agriculture × Human Team Collaboration | **+0** | NO_SIGNAL | 0% survived | — | 🧬 Bisociative ⚠️ Failed Honesty Check 💀 Refuted 🔬🔥 Actively Researched (current) |
+| 575 | 💀 Refuted / Rejected | Creative Improvisation Coordination × Human Individual Indecision | **+0** | NO_SIGNAL | 0% survived | — | 🧬 Bisociative 💀 Refuted 🔬 Actively Researched |
+| 576 | 💀 Refuted / Rejected | Learning Systems × Informational Load Balancing | **+0** | NO_SIGNAL | 0% survived | — | 🪞 Homospatial 💀 Refuted 🔬 Actively Researched |
+| 577 | 💀 Refuted / Rejected | Physical Circuit Evolution | **+0** | NO_SIGNAL | 0% survived | — | 🎭 Janusian 💀 Refuted 🔬 Actively Researched |
+| 578 | 💀 Refuted / Rejected | Anthropology — gift economies and reciprocity | **+0** | NO_SIGNAL | 0% survived | — | 🎭 Janusian 💀 Refuted 🔬 Actively Researched |
+| 579 | 💀 Refuted / Rejected | Materials Science — Phase Transitions × Human Social Movements | **+0** | NO_SIGNAL | 0% survived | — | 🧬 Bisociative ⚠️ Failed Honesty Check 💀 Refuted 🔬🔥 Actively Researched (current) |
+| 580 | 💀 Refuted / Rejected | Sports Athletics (Creative & Performance Systems) — Atomic: Performance succeeds/fails, Opponent capabilities unknown, Multiple strategic approaches; Domain: Athletic performance evolves, Sports rules, Log training sessions; Control: Performance monitoring, Concurrent team coordination, Atomic score updates; Orchestration: Sports federation coordination, Training vs championship environments | **+0** | NO_SIGNAL | 0% survived | — | 🎭 Janusian 💀 Refuted 🔬 Actively Researched |
+| 581 | 💀 Refuted / Rejected | Physics — optics — diffraction and interference patterns | **+0** | NO_SIGNAL | 0% survived | — | 🎭 Janusian 💀 Refuted 🔬 Actively Researched |
+| 582 | 💀 Refuted / Rejected | Physical Mechanical Vibration × Materials science — crystal lattice defects | **+0** | NO_SIGNAL | 0% survived | formalism-shaped | 🧬 Bisociative ⚠️ Failed Honesty Check 💀 Refuted 🔬🔥 Actively Researched (current) |
+| 583 | 💀 Refuted / Rejected | Graph traversal algorithms × State space search algorithms | **-5** | COLLISION | — | — | 📜 Pre-existing case study 🚫 Not a Valid Bisociation |
+| 584 | 💀 Refuted / Rejected | Quantum entanglement / Bell inequalities × Quantum information science | **-5** | COLLISION | — | — | 📜 Pre-existing case study 🚫 Not a Valid Bisociation |
+| 585 | 💀 Refuted / Rejected | Trigonometric function analysis × Fourier transform / spectral decomposition | **-5** | COLLISION | — | — | 📜 Pre-existing case study 🚫 Not a Valid Bisociation |
+| 586 | 💀 Refuted / Rejected | Human Committee Formation × Physical Acoustic Resonance | **-5** | NO_SIGNAL | 0% survived | mixed-uncertain | 🧬 Bisociative 💀 Refuted 🔬 Actively Researched (historical) |
+| 587 | 💀 Refuted / Rejected | Astronomy — stellar nucleosynthesis | **-5** | NO_SIGNAL | 0% survived | — | 🎭 Janusian 💀 Refuted 🔬 Actively Researched (historical) |
+| 588 | 💀 Refuted / Rejected | Thermodynamics × Physical Power Grid Orchestration | **-5** | NO_SIGNAL | 0% survived | narrative-shaped | 🪞 Homospatial 💀 Refuted 🔬 Actively Researched (historical) |
+| 589 | 💀 Refuted / Rejected | Evolutionary biology — punctuated equilibrium | **-5** | NO_SIGNAL | 0% survived | — | 🎭 Janusian 💀 Refuted 🔬 Actively Researched (historical) |
+| 590 | 💀 Refuted / Rejected | Culinary arts — flavor pairing and Maillard reaction | **-5** | NO_SIGNAL | 0% survived | — | 🎭 Janusian 💀 Refuted 🔬 Actively Researched (historical) |
 | 591 | 💀 Refuted / Rejected | Cognitive AI Hyperparameter Orchestration × Physical Mechanical Spring Systems | **-10** | COLLISION | 0% survived | — | 🧬 Bisociative 🏛️ Established Department 💀 Refuted |
 | 592 | 💀 Refuted / Rejected | Human Team Collaboration × Informational Load Balancing | **-10** | COLLISION | 0% survived | — | 🪞 Homospatial 🏛️ Established Department 💀 Refuted |
 | 593 | 💀 Refuted / Rejected | Cryptography × Cognitive AI Hyperparameter Orchestration | **-10** | COLLISION | 0% survived | mixed-uncertain | 🧬 Bisociative 🏛️ Established Department 💀 Refuted |
@@ -960,6 +960,12 @@ The composability pre-filter never gates generation — it only logs a signal (s
 - Phase 2 ADJACENT_ACTIVE: +30
 - Actively researched, most recent evidence 2025 (1y old — a live, current research thread): +25
 
+### Creative Artistic Critique × Creative Idea Uncertainty — 🗺️ Verified, Unrefuted (+55)
+
+- Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5
+- Phase 2 ADJACENT_ACTIVE: +30
+- Actively researched, most recent evidence 2026 (0y old — a live, current research thread): +25
+
 ### Swarm Robotics × Creative Performance Monitoring — 🗺️ Verified, Unrefuted (+55)
 
 - Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5
@@ -972,7 +978,19 @@ The composability pre-filter never gates generation — it only logs a signal (s
 - Phase 2 ADJACENT_ACTIVE: +30
 - Actively researched, most recent evidence 2024 (2y old — a live, current research thread): +25
 
+### Climatology — feedback loops in ice-albedo effect — 🗺️ Verified, Unrefuted (+55)
+
+- Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5
+- Phase 2 ADJACENT_ACTIVE: +30
+- Actively researched, most recent evidence 2025 (1y old — a live, current research thread): +25
+
 ### Language Linguistics × Military Strategy — 🗺️ Verified, Unrefuted (+55)
+
+- Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5
+- Phase 2 ADJACENT_ACTIVE: +30
+- Actively researched, most recent evidence 2026 (0y old — a live, current research thread): +25
+
+### Biological Systems × Creative Musical Motif Deviation — 🗺️ Verified, Unrefuted (+55)
 
 - Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5
 - Phase 2 ADJACENT_ACTIVE: +30
@@ -1253,6 +1271,12 @@ The composability pre-filter never gates generation — it only logs a signal (s
 - Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5
 - Phase 2 ADJACENT_ACTIVE: +30
 - Actively researched, most recent evidence 2022 (4y old): +15
+
+### Auction Theory × Human Defense Coordination — 🗺️ Verified, Unrefuted (+45)
+
+- Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5
+- Phase 2 ADJACENT_ACTIVE: +30
+- Actively researched, most recent evidence 2023 (3y old): +15
 
 ### Biological Systems × Human Social Network Dynamics — 🗺️ Verified, Unrefuted (+45)
 
@@ -1571,6 +1595,12 @@ The composability pre-filter never gates generation — it only logs a signal (s
 - Phase 2 ADJACENT_ACTIVE: +30
 - Actively researched, most recent evidence 2004 — real, but not a currently live thread: +10
 
+### Behavioral Psychology Operant Conditioning × Physical Magnetic Field Control — 🗺️ Verified, Unrefuted (+40)
+
+- Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5
+- Phase 2 ADJACENT_ACTIVE: +30
+- Actively researched, most recent evidence 1988 — real, but not a currently live thread: +10
+
 ### Anthropology × Physical Evolutionary Selection — 🗺️ Verified, Unrefuted (+40)
 
 - Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5
@@ -1695,37 +1725,12 @@ The composability pre-filter never gates generation — it only logs a signal (s
 - Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5
 - Phase 2 ADJACENT_ACTIVE: +30
 
-### Behavioral Psychology Operant Conditioning × Physical Magnetic Field Control — 🗺️ Verified, Unrefuted (+30)
-
-- Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5
-- Phase 2 ADJACENT_ACTIVE: +30
-
-### Auction Theory × Human Defense Coordination — 🗺️ Verified, Unrefuted (+30)
-
-- Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5
-- Phase 2 ADJACENT_ACTIVE: +30
-
-### Creative Artistic Critique × Creative Idea Uncertainty — 🗺️ Verified, Unrefuted (+30)
-
-- Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5
-- Phase 2 ADJACENT_ACTIVE: +30
-
 ### Control theory — PID feedback loops — 🗺️ Verified, Unrefuted (+30)
 
 - Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5
 - Phase 2 ADJACENT_ACTIVE: +30
 
 ### Cryptography × Cognitive Development — 🗺️ Verified, Unrefuted (+30)
-
-- Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5
-- Phase 2 ADJACENT_ACTIVE: +30
-
-### Climatology — feedback loops in ice-albedo effect — 🗺️ Verified, Unrefuted (+30)
-
-- Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5
-- Phase 2 ADJACENT_ACTIVE: +30
-
-### Biological Systems × Creative Musical Motif Deviation — 🗺️ Verified, Unrefuted (+30)
 
 - Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5
 - Phase 2 ADJACENT_ACTIVE: +30
@@ -2498,6 +2503,12 @@ The composability pre-filter never gates generation — it only logs a signal (s
 - Phase 2 COLLISION (genuine): +5
 - Actively researched, most recent evidence 2023 (3y old): +15
 
+### Cognitive Attention Map Evolution × Informational Sensor Networks — 🗺️ Verified, Unrefuted (+20)
+
+- Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5
+- Phase 2 COLLISION (genuine): +5
+- Actively researched, most recent evidence 2023 (3y old): +15
+
 ### Climate Science × Creative Artistic Arrangement — 🗺️ Verified, Unrefuted (+20)
 
 - Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5
@@ -2552,11 +2563,6 @@ The composability pre-filter never gates generation — it only logs a signal (s
 
 ### Graph traversal algorithms (Dijkstra's, A*) × Minimax game tree search — 🗺️ Verified, Unrefuted (+5)
 
-- Phase 2 COLLISION (genuine): +5
-
-### Cognitive Attention Map Evolution × Informational Sensor Networks — 🗺️ Verified, Unrefuted (+5)
-
-- Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5
 - Phase 2 COLLISION (genuine): +5
 
 ### Informational Measurement Data Evolution — 🗺️ Verified, Unrefuted (+5)
@@ -2712,6 +2718,14 @@ The composability pre-filter never gates generation — it only logs a signal (s
 - Adversarial refutation REFUTED, unanimous (0-of-3 survive): -15
 -   independently confirmed (3 separate agents, full agreement)
 - Actively researched, most recent evidence 2025 (1y old — a live, current research thread): +25
+
+### Efficient Market Hypothesis — 💀 Refuted / Rejected (+40)
+
+- Phase 1 self-report (5/5): not scored — near-zero predictive signal, see Failure 5
+- Phase 2 ADJACENT_ACTIVE: +30
+- Adversarial refutation REFUTED, unanimous (0-of-3 survive): -15
+-   independently confirmed (3 separate agents, full agreement)
+- Actively researched, most recent evidence 2026 (0y old — a live, current research thread): +25
 
 ### Human Learning Uncertainty — 💀 Refuted / Rejected (+40)
 
@@ -2957,6 +2971,14 @@ The composability pre-filter never gates generation — it only logs a signal (s
 - Actively researched, most recent evidence 2017 (9y old): +15
 
 ### Game Theory — Repeated Prisoner's Dilemma × Informational Measurement Data Evolution — 💀 Refuted / Rejected (+30)
+
+- Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5
+- Phase 2 ADJACENT_ACTIVE: +30
+- Adversarial refutation REFUTED, unanimous (0-of-3 survive): -15
+-   independently confirmed (3 separate agents, full agreement)
+- Actively researched, most recent evidence 2022 (4y old): +15
+
+### Human Individual Indecision × Physical Voltage Spikes — 💀 Refuted / Rejected (+30)
 
 - Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5
 - Phase 2 ADJACENT_ACTIVE: +30
@@ -3641,13 +3663,6 @@ The composability pre-filter never gates generation — it only logs a signal (s
 - Adversarial refutation REFUTED, unanimous (0-of-3 survive): -15
 -   independently confirmed (3 separate agents, full agreement)
 
-### Human Individual Indecision × Physical Voltage Spikes — 💀 Refuted / Rejected (+15)
-
-- Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5
-- Phase 2 ADJACENT_ACTIVE: +30
-- Adversarial refutation REFUTED, unanimous (0-of-3 survive): -15
--   independently confirmed (3 separate agents, full agreement)
-
 ### Physical Bridge Cable Tension — 💀 Refuted / Rejected (+15)
 
 - Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5
@@ -3662,16 +3677,15 @@ The composability pre-filter never gates generation — it only logs a signal (s
 - Adversarial refutation REFUTED, unanimous (0-of-3 survive): -15
 -   independently confirmed (3 separate agents, full agreement)
 
+### Fluid Dynamics × Human Emotional Fluctuation — 💀 Refuted / Rejected (+15)
+
+- Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5
+- Phase 2 FACT_CHECK_FAIL: -10
+- Actively researched, most recent evidence 2026 (0y old — a live, current research thread): +25
+
 ### Creative Performance Monitoring × Physical Voltage Spikes — 💀 Refuted / Rejected (+15)
 
 - Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5
-- Phase 2 ADJACENT_ACTIVE: +30
-- Adversarial refutation REFUTED, unanimous (0-of-3 survive): -15
--   independently confirmed (3 separate agents, full agreement)
-
-### Efficient Market Hypothesis — 💀 Refuted / Rejected (+15)
-
-- Phase 1 self-report (5/5): not scored — near-zero predictive signal, see Failure 5
 - Phase 2 ADJACENT_ACTIVE: +30
 - Adversarial refutation REFUTED, unanimous (0-of-3 survive): -15
 -   independently confirmed (3 separate agents, full agreement)
@@ -4625,11 +4639,6 @@ The composability pre-filter never gates generation — it only logs a signal (s
 - Adversarial refutation REFUTED, unanimous (0-of-3 survive): -15
 -   independently confirmed (3 separate agents, full agreement)
 - Actively researched, most recent evidence 2013 — real, but not a currently live thread: +10
-
-### Fluid Dynamics × Human Emotional Fluctuation — 💀 Refuted / Rejected (-10)
-
-- Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5
-- Phase 2 FACT_CHECK_FAIL: -10
 
 ### Cognitive AI Hyperparameter Orchestration × Physical Mechanical Spring Systems — 💀 Refuted / Rejected (-10)
 
