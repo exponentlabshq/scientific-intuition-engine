@@ -83,11 +83,38 @@ def load_experience_data():
     return entries, by_pairing, by_domain_head
 
 
+def load_contacts():
+    """Real, resolved researcher contacts (find_researcher_contact.py,
+    COA 6, outreach/contacts.jsonl) -- keyed on (hypothesis_slug, the
+    exact source_match_authors string), the same key space
+    find_researcher_contact.py's own dedup uses, since that's the only
+    thing known at lookup time inside exp_row_html() (a specific
+    active_research_match on a specific hypothesis, not yet a resolved
+    person). Later records win on a re-run of the same match, same
+    'append-only, latest wins' shape as everything else this pipeline
+    persists as a ledger. Optional read -- an empty or missing file
+    renders every hypothesis exactly as before, just without a contact
+    block, not a build failure."""
+    path = os.path.join(PIPELINE_DIR, "outreach", "contacts.jsonl")
+    by_slug_authors = {}
+    if os.path.exists(path):
+        with open(path, encoding="utf-8") as f:
+            for line in f:
+                line = line.strip()
+                if not line:
+                    continue
+                rec = json.loads(line)
+                key = (rec.get("hypothesis_slug"), (rec.get("source_match_authors") or "").strip().lower())
+                by_slug_authors[key] = rec
+    return by_slug_authors
+
+
 ROWS = load_leaderboard_rows()
 DEPT_PERF = load_dept_performance()
 DOMAINS = load_domains()
 TOTAL_ENTRIES, TOTAL_SCORED = load_totals()
 EXP, EXP_BY_PAIRING, EXP_BY_DOMAIN_HEAD = load_experience_data()
+CONTACTS_BY_SLUG_AUTHORS = load_contacts()
 
 MODE_META = {
     "janusian": {
@@ -924,6 +951,11 @@ ROW_CSS = '''
 .ar-matches a:hover { border-bottom-style: solid; }
 .ar-authors { color: var(--text-muted); }
 .ar-explanation { color: var(--text-faint); font-size: 0.8rem; margin-top: 3px; line-height: 1.5; }
+.ar-contact { margin-top: 6px; padding: 7px 10px; border-radius: 6px; font-size: 0.78rem; line-height: 1.5; border-left: 2px solid var(--border); }
+.ar-contact.found { background: rgba(111,168,143,0.1); border-left-color: var(--v-adjacent); color: var(--text); }
+.ar-contact.found a { color: var(--gold); }
+.ar-contact.partial { background: var(--ink); color: var(--text-muted); }
+.ar-contact.not-found { background: var(--ink); color: var(--text-faint); }
 
 .course-item { border: 1px solid var(--border); border-radius: 8px; margin-bottom: 6px; background: var(--ink); }
 .course-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 9px 12px; cursor: pointer; font-size: 0.86rem; }
@@ -1030,6 +1062,31 @@ def md_to_html(md):
     return "\n".join(out)
 
 
+def contact_html(contact):
+    """One real, resolved researcher-contact block for a single
+    active_research_match -- shown inline wherever that match already
+    renders (leaderboard, faculty pages, department pages, course
+    catalog, investors page, the Charter's own embedded examples), so
+    this data appears everywhere a hypothesis does, not on one dedicated
+    page. Three real states, same never-invent discipline as the rest of
+    this pipeline: a real found email (with its real source, linked),
+    a real resolved person/institution with no public email, or an
+    honest not-found. Nothing here is guessed."""
+    name = re.sub("<", "&lt;", contact.get("target_name") or "")
+    institution = re.sub("<", "&lt;", contact.get("institution") or "")
+    role = re.sub("<", "&lt;", contact.get("role_title") or "")
+    who = " &middot; ".join(x for x in [f"<strong>{name}</strong>" if name else "", institution, role] if x)
+    if contact.get("email"):
+        email = contact["email"]
+        src = contact.get("email_source_url") or ""
+        src_html = f' &mdash; <a href="{src}" target="_blank" rel="noopener noreferrer">source</a>' if src.startswith("http") else ""
+        return f'<div class="ar-contact found">&#128231; Real contact found: {who} &middot; <a href="mailto:{email}">{email}</a>{src_html}</div>'
+    elif contact.get("resolved"):
+        return f'<div class="ar-contact partial">{who} &mdash; no public email found.</div>'
+    else:
+        return f'<div class="ar-contact not-found">No public contact found for {who or "this author"}.</div>'
+
+
 def exp_row_html(e, rank=None, researcher=None, compact=False):
     """One real, click-expandable publication row -- exact same content
     the original interactive leaderboard showed (domains, badges, score
@@ -1062,13 +1119,17 @@ def exp_row_html(e, rank=None, researcher=None, compact=False):
         body += '<ul class="ar-matches">'
         for m in matches:
             title = re.sub("<", "&lt;", m.get("title") or "Untitled")
-            authors = re.sub("<", "&lt;", m.get("researcher_or_authors") or "")
+            raw_authors = m.get("researcher_or_authors") or ""
+            authors = re.sub("<", "&lt;", raw_authors)
             year = f' ({m["year"]})' if m.get("year") else ""
             url = m.get("url") or ""
             title_html = f'<a href="{url}" target="_blank" rel="noopener noreferrer">{title}</a>' if url.startswith("http") else title
             body += f"<li>{title_html}{year}" + (f' &mdash; <span class="ar-authors">{authors}</span>' if authors else "")
             if m.get("explanation"):
                 body += f'<div class="ar-explanation">{re.sub("<", "&lt;", m["explanation"])}</div>'
+            contact = CONTACTS_BY_SLUG_AUTHORS.get((e.get("key"), raw_authors.strip().lower()))
+            if contact:
+                body += contact_html(contact)
             body += "</li>"
         body += "</ul></div>"
 

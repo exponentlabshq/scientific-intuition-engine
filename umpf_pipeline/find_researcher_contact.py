@@ -131,6 +131,18 @@ def resolve_one(researcher_or_authors, title, year, source_url, domains, slug=No
     return json.loads(resp.output_text), resp.usage
 
 
+def _clean(s):
+    """Strip stray control characters (observed for real 2026-09-02: a
+    NUL byte in place of an accented character -- "El\\x00as Castellanos"
+    for "Elías Castellanos" -- in one structured response's target_name,
+    likely a rare tokenizer/encoding edge case on the API side, not
+    anything this script did). Leaves real text untouched; only removes
+    C0/C1 control codes a JSON string should never legitimately contain."""
+    if not isinstance(s, str):
+        return s
+    return "".join(c for c in s if c == "\n" or c == "\t" or not (0 <= ord(c) < 32 or 127 <= ord(c) < 160))
+
+
 def append_contact_record(slug, match, result):
     entry = {
         "hypothesis_slug": slug,
@@ -139,15 +151,15 @@ def append_contact_record(slug, match, result):
         "source_match_year": match.get("year"),
         "source_match_url": match.get("url"),
         "resolved": result["resolved"],
-        "target_name": result["target_name"],
-        "institution": result["institution"],
-        "department": result["department"],
-        "role_title": result["role_title"],
-        "email": result["email"],
+        "target_name": _clean(result["target_name"]),
+        "institution": _clean(result["institution"]),
+        "department": _clean(result["department"]),
+        "role_title": _clean(result["role_title"]),
+        "email": _clean(result["email"]),
         "email_source_url": result["email_source_url"],
         "profile_url": result["profile_url"],
         "confidence": result["confidence"],
-        "notes": result["notes"],
+        "notes": _clean(result["notes"]),
         "checked_date": datetime.now(timezone.utc).date().isoformat(),
         "method": "find_researcher_contact.py (gpt-4o-mini + web_search, structured)",
     }

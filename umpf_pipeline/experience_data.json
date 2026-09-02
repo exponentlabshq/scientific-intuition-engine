@@ -8,16 +8,14 @@
       "Telecommunications"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 40,
+    "points": 30,
     "badges": [
       "🧬 Bisociative",
-      "🗺️ Frontier Research Group",
-      "🔬 Actively Researched (historical)"
+      "🗺️ Frontier Research Group"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5",
-      "Phase 2 ADJACENT_ACTIVE: +30",
-      "Actively researched (no date recovered) — real, but not a currently live thread: +10"
+      "Phase 2 ADJACENT_ACTIVE: +30"
     ],
     "held_out_reason": null,
     "tier_rank": 2,
@@ -35,11 +33,11 @@
     "refutation_filename": null,
     "refutation_content": null,
     "refutation_independently_confirmed": false,
-    "actively_researched": true,
-    "active_research_note": "arXiv 2509.08434 ('Internet of Plants') is Sept 2025 -- genuinely current.",
-    "active_research_matches": null,
+    "actively_researched": false,
+    "active_research_note": "After an extensive search, I found no research specifically investigating the direct relationship between the connectivity and resilience of mycorrhizal networks in ecosystems and the efficiency of data routing or packet loss in telecommunications networks. While there are studies on mycorrhizal networks' ecological roles and their structural diversity, and research on bio-inspired algorithms for routing in mobile ad hoc networks (MANETs) based on fungal networks, these do not establish a direct link between the two domains as proposed. Therefore, there is no existing evidence supporting the specific claim that increasing the connectivity and resilience of mycorrhizal networks will lead to more efficient data routing and reduced packet loss in telecommunications networks, or vice versa.",
+    "active_research_matches": [],
     "active_research_most_recent_year": null,
-    "active_research_checked_date": null
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-21-music-theory-jazz-improvisation-over-changes-x-music-theory-counterpoint-and-voice-leading",
@@ -930,16 +928,14 @@
       "Astronomy — gravitational lensing"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 40,
+    "points": 30,
     "badges": [
       "🎭 Janusian",
-      "🗺️ Frontier Research Group",
-      "🔬 Actively Researched (historical)"
+      "🗺️ Frontier Research Group"
     ],
     "breakdown": [
       "Phase 1 self-report (5/5): not scored — near-zero predictive signal, see Failure 5",
-      "Phase 2 ADJACENT_ACTIVE: +30",
-      "Actively researched (no date recovered) — real, but not a currently live thread: +10"
+      "Phase 2 ADJACENT_ACTIVE: +30"
     ],
     "held_out_reason": null,
     "tier_rank": 2,
@@ -957,11 +953,11 @@
     "refutation_filename": null,
     "refutation_content": null,
     "refutation_independently_confirmed": false,
-    "actively_researched": true,
-    "active_research_note": "arXiv 2411.06945 (Nov 2024) and arXiv 2604.06791 (2026) -- both genuinely current, active modified-gravity subfield.",
-    "active_research_matches": null,
+    "actively_researched": false,
+    "active_research_note": "The specific claim suggests that light may exhibit unexpected behaviors in gravitational lensing scenarios, which cannot be explained by mass alone. However, current research in gravitational lensing consistently supports the understanding that light bending is solely due to the mass of the lensing object, as predicted by Einstein's theory of general relativity. No studies have identified instances where light behaves in ways that mass alone cannot explain.",
+    "active_research_matches": [],
     "active_research_most_recent_year": null,
-    "active_research_checked_date": null
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-28-janusian-finance",
@@ -1120,16 +1116,14 @@
       "Cryptography — Zero-Knowledge Proofs"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 40,
+    "points": 30,
     "badges": [
       "🧬 Bisociative",
-      "🗺️ Frontier Research Group",
-      "🔬 Actively Researched (historical)"
+      "🗺️ Frontier Research Group"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5",
-      "Phase 2 ADJACENT_ACTIVE: +30",
-      "Actively researched (no date recovered) — real, but not a currently live thread: +10"
+      "Phase 2 ADJACENT_ACTIVE: +30"
     ],
     "held_out_reason": null,
     "tier_rank": 2,
@@ -1147,11 +1141,11 @@
     "refutation_filename": null,
     "refutation_content": null,
     "refutation_independently_confirmed": false,
-    "actively_researched": true,
-    "active_research_note": "arXiv 2601.02254 (Vouchsafe) is Jan 2026 -- as current as this dataset gets.",
-    "active_research_matches": null,
+    "actively_researched": false,
+    "active_research_note": "After an extensive search, I found no specific research or publications that directly model the dynamics of trust variance in human relationships using analogies to the evolution of zero-knowledge proofs in cryptographic systems. While both fields involve complex systems and the management of trust, the specific claim about their analogous dynamics does not appear to be addressed in existing literature.",
+    "active_research_matches": [],
     "active_research_most_recent_year": null,
-    "active_research_checked_date": null
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-28-physical-bridge-cable-tension-x-organizational-theory",
@@ -1162,18 +1156,16 @@
       "Organizational Theory — Bureaucratic Hierarchy"
     ],
     "verdict": "NO_SIGNAL",
-    "points": -5,
+    "points": -15,
     "badges": [
       "🧬 Bisociative",
-      "💀 Refuted",
-      "🔬 Actively Researched (historical)"
+      "💀 Refuted"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5",
       "Phase 2 NO_SIGNAL: +0 (pending)",
       "Adversarial refutation REFUTED, unanimous (0-of-3 survive): -15",
-      "  independently confirmed (3 separate agents, full agreement)",
-      "Actively researched (no date recovered) — real, but not a currently live thread: +10"
+      "  independently confirmed (3 separate agents, full agreement)"
     ],
     "held_out_reason": null,
     "tier_rank": 5,
@@ -1191,11 +1183,11 @@
     "refutation_filename": "refutations/2026-08-28-physical-bridge-cable-tension-x-organizational-theory-refutation.md",
     "refutation_content": "# Adversarial Refutation: Bisociation — Physical Bridge Cable Tension × Organizational Theory — Bureaucratic Hierarchy\n\n**Original**: `hypotheses/2026-08-28-physical-bridge-cable-tension-x-organizational-theory.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 0 of 3 survive → **REFUTED**\n\n- **Coherence — REFUTED.** The core claim relies on the term 'tension' as a shared concept between physical bridge cables and organizational hierarchies. However, in the context of physical cables, 'tension' refers to a measurable physical force, while in organizational theory, it refers to the clarity of roles and responsibilities, which are fundamentally different referents. This indicates equivocation, as the term does not denote the same formal object or relationship in both domains. Therefore, the mapping does not hold as a coherent bisociation.\n- **Testability — REFUTED.** The core claim proposes a mapping between physical bridge cable tension and organizational theory, but it lacks specific, named metrics, comparison conditions, or rejection thresholds that would allow for empirical testing. While it outlines relationships between concepts, it does not operationalize these relationships in a way that can be directly tested or falsified. The absence of a clear, checkable experiment or theorem means the claim remains vague and unfalsifiable.\n- **Triviality — REFUTED.** The core claim presents a mapping between physical bridge cable tension and organizational theory, asserting specific relationships such as uncertainty in cable tension mapping to uncertainty in role clarity. However, when stripped of domain-specific vocabulary, the claim reduces to a general assertion about imbalances in one system affecting another, which is a common observation across many complex systems. The specific mechanisms and relationships outlined do not hold unique significance, as they can apply to various pairs of complex systems, thus failing to demonstrate a novel or non-obvious connection. Therefore, the claim is trivial in nature.\n\n## No steelman offered\n\nAll three lenses independently converged on REFUTED for this case. If revisited, it would need a genuinely tighter formulation, not a restatement of the same claim.\n",
     "refutation_independently_confirmed": true,
-    "actively_researched": true,
-    "active_research_note": "ScienceDirect 'Making sense in less-hierarchical forms of organizing' is a 2025 paper.",
-    "active_research_matches": null,
+    "actively_researched": false,
+    "active_research_note": "I searched for research that directly investigates the relationship between cable tension imbalances in bridges and the effectiveness of bureaucratic organizational structures. While there is extensive literature on both topics individually, I did not find any studies that specifically examine the proposed correlation between these two distinct areas. Therefore, there is no direct evidence supporting this specific claim.",
+    "active_research_matches": [],
     "active_research_most_recent_year": null,
-    "active_research_checked_date": null
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-28-creative-musical-motif-deviation-x-evolutionary-biology",
@@ -1206,16 +1198,16 @@
       "Evolutionary Biology — Punctuated Equilibrium"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 40,
+    "points": 45,
     "badges": [
       "🧬 Bisociative",
       "🗺️ Frontier Research Group",
-      "🔬 Actively Researched (historical)"
+      "🔬 Actively Researched"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5",
       "Phase 2 ADJACENT_ACTIVE: +30",
-      "Actively researched (no date recovered) — real, but not a currently live thread: +10"
+      "Actively researched, most recent evidence 2022 (4y old): +15"
     ],
     "held_out_reason": null,
     "tier_rank": 2,
@@ -1234,10 +1226,32 @@
     "refutation_content": null,
     "refutation_independently_confirmed": false,
     "actively_researched": true,
-    "active_research_note": "PMC9667142 (cultural evolution, punctuated vs gradual) is 2022.",
-    "active_research_matches": null,
-    "active_research_most_recent_year": null,
-    "active_research_checked_date": null
+    "active_research_note": "The cited studies provide evidence of patterns in musical evolution that parallel those observed in biological evolution, including regularities across cultures and instances of punctuated change.",
+    "active_research_matches": [
+      {
+        "title": "Sequence alignment of folk song melodies reveals cross-cultural regularities of musical evolution",
+        "researcher_or_authors": "Patrick E. Savage, Sam Passmore, Gakuto Chiba, Thomas E. Currie, Haruo Suzuki, Quentin D. Atkinson",
+        "year": 2022,
+        "url": "https://doi.org/10.1016/j.cub.2022.01.039",
+        "explanation": "This study analyzes the evolution of folk song melodies across cultures, revealing patterns that suggest regularities in musical evolution, akin to those observed in biological evolution."
+      },
+      {
+        "title": "Punctuated evolution in the learned songs of African sunbirds",
+        "researcher_or_authors": "Jay P. McEntee, Gleb Zhelezov, Chacha Werema, Nadje Najar, Joshua V. Peñalba, Elia Mulungu, Maneno Mbilinyi, Sylvester Karimi, Lyubov Chumakova, J Gordon Burleigh, Rauri C K Bowie",
+        "year": 2021,
+        "url": "https://doi.org/10.1098/rspb.2021.2062",
+        "explanation": "This research provides evidence of punctuated evolution in the learned songs of African sunbirds, demonstrating rapid changes in song patterns interspersed with periods of stasis."
+      },
+      {
+        "title": "Statistical Evolutionary Laws in Music Styles",
+        "researcher_or_authors": "Eita Nakamura, Kunihiko Kaneko",
+        "year": 2019,
+        "url": "https://doi.org/10.1038/s41598-019-52380-6",
+        "explanation": "This study identifies statistical evolutionary laws in music styles, suggesting that music evolves in a manner similar to genetic evolution, with periods of stability and rapid change."
+      }
+    ],
+    "active_research_most_recent_year": 2022,
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-28-informational-hash-collisions-x-human-social-network-dynamics",
@@ -1248,16 +1262,14 @@
       "Human Social Network Dynamics"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 40,
+    "points": 30,
     "badges": [
       "🧬 Bisociative",
-      "🗺️ Frontier Research Group",
-      "🔬 Actively Researched (historical)"
+      "🗺️ Frontier Research Group"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5",
-      "Phase 2 ADJACENT_ACTIVE: +30",
-      "Actively researched (no date recovered) — real, but not a currently live thread: +10"
+      "Phase 2 ADJACENT_ACTIVE: +30"
     ],
     "held_out_reason": null,
     "tier_rank": 2,
@@ -1275,11 +1287,11 @@
     "refutation_filename": null,
     "refutation_content": null,
     "refutation_independently_confirmed": false,
-    "actively_researched": true,
-    "active_research_note": "arXiv 2304.01108 ('Coincidental Generation') is April 2023.",
-    "active_research_matches": null,
+    "actively_researched": false,
+    "active_research_note": "After an extensive search, I found no specific research or evidence directly linking the concept of 'informational hash collisions' with the rate of new social connections formed in human networks. The term 'informational hash collisions' is not commonly used in the context of social network dynamics. While there is substantial research on information diffusion and link prediction in social networks, these studies do not reference 'informational hash collisions' as a factor influencing the formation of new social connections.",
+    "active_research_matches": [],
     "active_research_most_recent_year": null,
-    "active_research_checked_date": null
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-28-human-financial-trading-algorithms-x-ecology",
@@ -1290,16 +1302,16 @@
       "Ecology — Predator-Prey Population Dynamics"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 40,
+    "points": 45,
     "badges": [
       "🧬 Bisociative",
       "🗺️ Frontier Research Group",
-      "🔬 Actively Researched (historical)"
+      "🔬 Actively Researched"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5",
       "Phase 2 ADJACENT_ACTIVE: +30",
-      "Actively researched (no date recovered) — real, but not a currently live thread: +10"
+      "Actively researched, most recent evidence 2021 (5y old): +15"
     ],
     "held_out_reason": null,
     "tier_rank": 2,
@@ -1318,10 +1330,32 @@
     "refutation_content": null,
     "refutation_independently_confirmed": false,
     "actively_researched": true,
-    "active_research_note": "Named, ongoing 'market ecology' research tradition (HFTE model + multiple papers), not a one-off finding.",
-    "active_research_matches": null,
-    "active_research_most_recent_year": null,
-    "active_research_checked_date": null
+    "active_research_note": "These studies provide real evidence of research into the analogy between financial trading algorithms and predator-prey population dynamics, supporting the claim that successful trading strategies can predict market fluctuations analogous to population changes in ecosystems.",
+    "active_research_matches": [
+      {
+        "title": "Introducing the HFTE Model: A Multi-Species Predator-Prey Ecosystem for High-Frequency Quantitative Financial Strategies",
+        "researcher_or_authors": "Babak Mahdavi-Damghani",
+        "year": 2017,
+        "url": "https://onlinelibrary.wiley.com/doi/10.1002/wilm.10594",
+        "explanation": "This study introduces the HFTE model, which applies predator-prey dynamics to high-frequency trading strategies, suggesting that successful trading strategies can predict market fluctuations analogous to population changes in ecosystems."
+      },
+      {
+        "title": "How market ecology explains market malfunction",
+        "researcher_or_authors": "Maarten P. Scholl, Anisoara Calinescu, J. Doyne Farmer",
+        "year": 2021,
+        "url": "https://www.pnas.org/doi/10.1073/pnas.2015574118",
+        "explanation": "This research develops a mathematical analogy between financial trading strategies and biological species, applying ecological concepts to financial markets to explain market malfunctions."
+      },
+      {
+        "title": "Predator-Prey: An Alternative Model of Stock Market Bubbles and the Business Cycle",
+        "researcher_or_authors": "Eduard Gracia",
+        "year": 2004,
+        "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=625961",
+        "explanation": "This paper proposes a predator-prey model to explain stock market bubbles and business cycles, indicating that financial market dynamics can be understood through ecological analogies."
+      }
+    ],
+    "active_research_most_recent_year": 2021,
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-28-janusian-informational-distributed-consensus",
@@ -1394,16 +1428,16 @@
       "Human Cognitive Bias"
     ],
     "verdict": "FACT_CHECK_FAIL",
-    "points": 0,
+    "points": 5,
     "badges": [
       "🎭 Janusian",
       "⚠️ Retracted",
-      "🔬 Actively Researched (historical)"
+      "🔬 Actively Researched"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5",
       "Phase 2 FACT_CHECK_FAIL: -10",
-      "Actively researched (no date recovered) — real, but not a currently live thread: +10"
+      "Actively researched, most recent evidence 2022 (4y old): +15"
     ],
     "held_out_reason": null,
     "tier_rank": 5,
@@ -1422,10 +1456,32 @@
     "refutation_content": null,
     "refutation_independently_confirmed": false,
     "actively_researched": true,
-    "active_research_note": "Ecological rationality is an active, cited research program with ongoing publications contrasting it against mainstream behavioral economics.",
-    "active_research_matches": null,
-    "active_research_most_recent_year": null,
-    "active_research_checked_date": null
+    "active_research_note": "The identified studies provide evidence that human decision-making involves both cognitive biases and strengths, leading to varying outcomes based on information complexity. These findings support the claim that individuals can exhibit both irrational and effective decision-making in the same context, depending on the complexity of the information presented.",
+    "active_research_matches": [
+      {
+        "title": "Hierarchical inference as a source of human biases",
+        "researcher_or_authors": "Paul B. Sharp, Isaac Fradkin, Eran Eldar",
+        "year": 2022,
+        "url": "https://doi.org/10.3758/s13415-022-01020-0",
+        "explanation": "This study examines how hierarchical inference processes in human cognition can lead to systematic biases, suggesting that both inherent flaws and strengths in reasoning can coexist, influencing decision-making depending on information complexity."
+      },
+      {
+        "title": "Cognitive and Human Factors in Expert Decision Making: Six Fallacies and the Eight Sources of Bias",
+        "researcher_or_authors": "Itiel E. Dror",
+        "year": 2020,
+        "url": "https://pubs.acs.org/doi/10.1021/acs.analchem.0c00704",
+        "explanation": "Dror identifies various cognitive and motivational biases affecting expert decision-making, highlighting that these biases can lead to both flawed and effective decisions, influenced by the complexity of the information presented."
+      },
+      {
+        "title": "Good judgments do not require complex cognition",
+        "researcher_or_authors": "Julian N. Marewski, Wolfgang Gaissmaier, Gerd Gigerenzer",
+        "year": 2009,
+        "url": "https://link.springer.com/article/10.1007/s10339-009-0337-0",
+        "explanation": "This article argues that simple cognitive strategies can lead to good judgments, indicating that both cognitive biases and strengths can influence decision-making effectiveness, depending on the context and complexity of information."
+      }
+    ],
+    "active_research_most_recent_year": 2022,
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-28-janusian-physical-quantum-measurement",
@@ -1435,16 +1491,16 @@
       "Physical Quantum Measurement"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 40,
+    "points": 55,
     "badges": [
       "🎭 Janusian",
       "🗺️ Frontier Research Group",
-      "🔬 Actively Researched (historical)"
+      "🔬🔥 Actively Researched (current)"
     ],
     "breakdown": [
       "Phase 1 self-report (5/5): not scored — near-zero predictive signal, see Failure 5",
       "Phase 2 ADJACENT_ACTIVE: +30",
-      "Actively researched (no date recovered) — real, but not a currently live thread: +10"
+      "Actively researched, most recent evidence 2026 (0y old — a live, current research thread): +25"
     ],
     "held_out_reason": null,
     "tier_rank": 2,
@@ -1463,10 +1519,32 @@
     "refutation_content": null,
     "refutation_independently_confirmed": false,
     "actively_researched": true,
-    "active_research_note": "Many-worlds/decoherence is a live, actively-published area of quantum foundations research (current arXiv papers on the interpretation).",
-    "active_research_matches": null,
-    "active_research_most_recent_year": null,
-    "active_research_checked_date": null
+    "active_research_note": "The provided research papers directly address the specific mechanism described in the claim, discussing how quantum measurements can simultaneously alter the state of a quantum system and allow for persistent wave functions under certain conditions, leading to definitive outcomes.",
+    "active_research_matches": [
+      {
+        "title": "Markovian and Non-Markovian Quantum Measurements",
+        "researcher_or_authors": "Jennifer R. Glick, Christoph Adami",
+        "year": 2020,
+        "url": "https://link.springer.com/article/10.1007/s10701-020-00362-4",
+        "explanation": "This paper discusses how consecutive measurements on the same quantum system can reveal fundamental insights into quantum theory’s causal structure, probing different aspects of the quantum measurement problem. It addresses the impact of measurement on the quantum state and the persistence of the wave function under specific conditions."
+      },
+      {
+        "title": "Quantum reversibility is relative, or does a quantum measurement reset initial conditions?",
+        "researcher_or_authors": "Wojciech H. Zurek",
+        "year": 2018,
+        "url": "https://pubmed.ncbi.nlm.nih.gov/29807894/",
+        "explanation": "This work examines the relationship between information flows in measurements and the ability of observers to reverse evolutions, discussing how quantum measurements can affect the state of a system and the reversibility of these effects."
+      },
+      {
+        "title": "Measurement Without Collapse: Outcomes as Physical Records",
+        "researcher_or_authors": "Jorge Roig",
+        "year": 2026,
+        "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6806958",
+        "explanation": "This paper argues that outcomes in quantum measurements are stable physical records produced in measurement interactions, allowing them to be formalized as coarse-grained equivalence classes of physical states that persist in time and support consistent interaction across systems."
+      }
+    ],
+    "active_research_most_recent_year": 2026,
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-28-janusian-creative-creative-block",
@@ -1476,16 +1554,14 @@
       "Creative Block"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 40,
+    "points": 30,
     "badges": [
       "🎭 Janusian",
-      "🗺️ Frontier Research Group",
-      "🔬 Actively Researched (historical)"
+      "🗺️ Frontier Research Group"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5",
-      "Phase 2 ADJACENT_ACTIVE: +30",
-      "Actively researched (no date recovered) — real, but not a currently live thread: +10"
+      "Phase 2 ADJACENT_ACTIVE: +30"
     ],
     "held_out_reason": null,
     "tier_rank": 2,
@@ -1503,11 +1579,11 @@
     "refutation_filename": null,
     "refutation_content": null,
     "refutation_independently_confirmed": false,
-    "actively_researched": true,
-    "active_research_note": "Incubation / mind-wandering / procrastination–creativity literature — context-split relative to same-instance bar",
-    "active_research_matches": null,
+    "actively_researched": false,
+    "active_research_note": "After reviewing the available literature, I did not find any specific studies or research papers that directly investigate the claim that creative block both hinders and enhances creativity simultaneously, leading individuals who experience it to produce more innovative work than those who do not. While there are studies examining how constraints and challenges can influence creativity, none specifically address the dual role of creative block in the manner described.",
+    "active_research_matches": [],
     "active_research_most_recent_year": null,
-    "active_research_checked_date": null
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-28-janusian-informational-load-balancing",
@@ -1517,16 +1593,16 @@
       "Informational — load balancing"
     ],
     "verdict": "COLLISION",
-    "points": 15,
+    "points": 20,
     "badges": [
       "🎭 Janusian",
       "🏛️ Established Department",
-      "🔬 Actively Researched (historical)"
+      "🔬 Actively Researched"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5",
       "Phase 2 COLLISION (genuine): +5",
-      "Actively researched (no date recovered) — real, but not a currently live thread: +10"
+      "Actively researched, most recent evidence 2023 (3y old): +15"
     ],
     "held_out_reason": null,
     "tier_rank": 2,
@@ -1545,10 +1621,32 @@
     "refutation_content": null,
     "refutation_independently_confirmed": false,
     "actively_researched": true,
-    "active_research_note": "Edge-cloud hybrid architectures and hybrid federated/centralized learning are a current, fast-moving ML-systems research area.",
-    "active_research_matches": null,
-    "active_research_most_recent_year": null,
-    "active_research_checked_date": null
+    "active_research_note": "The identified studies provide real evidence of research into hybrid systems that combine both distributing and concentrating information processing tasks. These hybrid approaches aim to leverage the strengths of both methods to improve performance, which aligns with the specific claim being checked.",
+    "active_research_matches": [
+      {
+        "title": "Hybrid load balancing method with failover capability in server cluster using SDN",
+        "researcher_or_authors": "Ok-Chol Ri, Yong-Jin Kim, You-Jin Jong",
+        "year": 2023,
+        "url": "https://arxiv.org/abs/2307.05552",
+        "explanation": "This study presents a hybrid load balancing method that combines static and dynamic approaches to enhance performance and failover capabilities in server clusters using Software-Defined Networking (SDN)."
+      },
+      {
+        "title": "Hybrid load balancing strategy of sequential tasks for grid computing environments",
+        "researcher_or_authors": "Not specified",
+        "year": 2009,
+        "url": "https://www.sciencedirect.com/science/article/abs/pii/S0167739X09000193",
+        "explanation": "This paper introduces a hybrid load balancing strategy that integrates static and dynamic load balancing techniques to optimize the distribution of sequential tasks in grid computing environments."
+      },
+      {
+        "title": "Hybrid SDN Performance: Switching between Centralized and Distributed Modes under Unreliable Control Communication Channels",
+        "researcher_or_authors": "Mohammed Osman, Josep Mangues-Bafalluy",
+        "year": 2021,
+        "url": "https://www.mdpi.com/2224-2708/10/3/57",
+        "explanation": "This research evaluates the impact of unreliable control channels on Software-Defined Networking (SDN) performance and proposes a hybrid SDN solution that switches between centralized and distributed operational modes based on network conditions."
+      }
+    ],
+    "active_research_most_recent_year": 2023,
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-28-homospatial-physical-mechanical-spring-systems-x-human-emotional-fluctuation",
@@ -1559,16 +1657,14 @@
       "Human Emotional Fluctuation"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 40,
+    "points": 30,
     "badges": [
       "🪞 Homospatial",
-      "🗺️ Frontier Research Group",
-      "🔬 Actively Researched (historical)"
+      "🗺️ Frontier Research Group"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5",
-      "Phase 2 ADJACENT_ACTIVE: +30",
-      "Actively researched (no date recovered) — real, but not a currently live thread: +10"
+      "Phase 2 ADJACENT_ACTIVE: +30"
     ],
     "held_out_reason": null,
     "tier_rank": 2,
@@ -1586,11 +1682,11 @@
     "refutation_filename": null,
     "refutation_content": null,
     "refutation_independently_confirmed": false,
-    "actively_researched": true,
-    "active_research_note": "Mathematical modeling of emotion (affective computing) is an active, published field, though the specific spring-mechanics framing is not part of it yet.",
-    "active_research_matches": null,
+    "actively_researched": false,
+    "active_research_note": "After an extensive search, I found no evidence of a specific research project, paper, or study that investigates 'Emotomechanical Resonance'—a concept proposing that emotional responses in individuals can be predicted using a mathematical model analogous to Hooke's Law, where emotional intensity correlates with the degree of stimuli experienced. While there are studies examining the relationship between mechanical systems and emotional responses, none specifically address this proposed mechanism. For instance, research on the acoustoelastic effect explores how sound velocities in materials change under stress, but it does not relate to emotional responses. ([en.wikipedia.org](https://en.wikipedia.org/wiki/Acoustoelastic_effect?utm_source=openai)) Similarly, studies on sympathetic resonance in musical instruments focus on physical vibrations without connecting to emotional intensity. ([en.wikipedia.org](https://en.wikipedia.org/wiki/Sympathetic_resonance?utm_source=openai)) Therefore, based on the available information, there is no documented research specifically investigating the mechanism of 'Emotomechanical Resonance.'",
+    "active_research_matches": [],
     "active_research_most_recent_year": null,
-    "active_research_checked_date": null
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-28-homospatial-creative-narrative-arc-development-x-informational-distributed-consensus",
@@ -1601,16 +1697,14 @@
       "Informational Distributed Consensus"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 40,
+    "points": 30,
     "badges": [
       "🪞 Homospatial",
-      "🗺️ Frontier Research Group",
-      "🔬 Actively Researched (historical)"
+      "🗺️ Frontier Research Group"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5",
-      "Phase 2 ADJACENT_ACTIVE: +30",
-      "Actively researched (no date recovered) — real, but not a currently live thread: +10"
+      "Phase 2 ADJACENT_ACTIVE: +30"
     ],
     "held_out_reason": null,
     "tier_rank": 2,
@@ -1628,11 +1722,11 @@
     "refutation_filename": null,
     "refutation_content": null,
     "refutation_independently_confirmed": false,
-    "actively_researched": true,
-    "active_research_note": "Collaborative story co-creation research is active and current (2025-2026 papers on VR story co-creation and audience-driven narrative).",
-    "active_research_matches": null,
+    "actively_researched": false,
+    "active_research_note": "The specific concept of the 'Collective Narrative Consensus Arc' does not appear to be a recognized framework in existing research. While there are studies on narrative structures and audience engagement, none directly address this particular model. For instance, research by Boyd et al. (2020) identifies core narrative structures through text analysis but does not link them to audience engagement metrics. ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC7413736/?utm_source=openai)) Similarly, studies on collective storytelling and audience engagement, such as those by Wang et al. (2024), focus on user-generated content and its impact on cultural products but do not reference the 'Collective Narrative Consensus Arc.' ([nature.com](https://www.nature.com/articles/s41599-024-03636-8?utm_source=openai)) Therefore, there is no direct evidence supporting the claim that stories developed within the 'Collective Narrative Consensus Arc' framework lead to higher audience engagement and satisfaction compared to traditionally structured narratives.",
+    "active_research_matches": [],
     "active_research_most_recent_year": null,
-    "active_research_checked_date": null
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-28-homospatial-physical-chemical-reaction-networks-x-human-committee-formation",
@@ -1725,16 +1819,14 @@
       "Human Individual Indecision"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 40,
+    "points": 30,
     "badges": [
       "🪞 Homospatial",
-      "🗺️ Frontier Research Group",
-      "🔬 Actively Researched (historical)"
+      "🗺️ Frontier Research Group"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5",
-      "Phase 2 ADJACENT_ACTIVE: +30",
-      "Actively researched (no date recovered) — real, but not a currently live thread: +10"
+      "Phase 2 ADJACENT_ACTIVE: +30"
     ],
     "held_out_reason": null,
     "tier_rank": 2,
@@ -1752,11 +1844,11 @@
     "refutation_filename": null,
     "refutation_content": null,
     "refutation_independently_confirmed": false,
-    "actively_researched": true,
-    "active_research_note": "ACT-R and cognitive-architecture modeling of memory retrieval is active, ongoing research (recent arXiv comparisons and extensions).",
-    "active_research_matches": null,
+    "actively_researched": false,
+    "active_research_note": "After an extensive search, I found no specific research directly linking 'Cognitive Cache Indecision'—a proposed mechanism where individuals experiencing indecision exhibit information retrieval and decision-making patterns analogous to computational cache miss handling. While there are studies on decision-making and information retrieval, none specifically address this exact mechanism. For instance, research by Ferrari and Dovidio (2001) examined how indecisive individuals search for information differently under cognitive load, but it does not relate to computational cache miss handling. ([researchgate.net](https://www.researchgate.net/publication/223209743_Behavioral_information_search_by_indecisives?utm_source=openai)) Similarly, studies on cognitive costs of decision-making strategies using the ACT-R model focus on resource demands but do not connect to computational cache miss handling. ([sciencedirect.com](https://www.sciencedirect.com/science/article/pii/S0010027717302408?utm_source=openai)) Therefore, there is no existing evidence supporting the specific claim that indecisive individuals' information retrieval and decision-making patterns mirror those in computational cache miss handling.",
+    "active_research_matches": [],
     "active_research_most_recent_year": null,
-    "active_research_checked_date": null
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-29-cognitive-attention-map-evolution-x-informational-event-driven-systems",
@@ -1944,16 +2036,14 @@
       "Music — Sample-Based Hip-Hop Production"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 40,
+    "points": 30,
     "badges": [
       "🧬 Bisociative",
-      "🗺️ Frontier Research Group",
-      "🔬 Actively Researched (historical)"
+      "🗺️ Frontier Research Group"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5",
-      "Phase 2 ADJACENT_ACTIVE: +30",
-      "Actively researched (no date recovered) — real, but not a currently live thread: +10"
+      "Phase 2 ADJACENT_ACTIVE: +30"
     ],
     "held_out_reason": null,
     "tier_rank": 2,
@@ -1971,11 +2061,11 @@
     "refutation_filename": null,
     "refutation_content": null,
     "refutation_independently_confirmed": false,
-    "actively_researched": true,
-    "active_research_note": "Peter DiCola — Sequential Musical Creation and Sample Licensing; McLeod & DiCola Creative License",
-    "active_research_matches": null,
+    "actively_researched": false,
+    "active_research_note": "After an extensive search, I found no specific research directly connecting Nash Bargaining strategies with sampling techniques in hip-hop production. While Nash Bargaining has been applied in various contexts, such as determining reasonable royalties in intellectual property disputes ([arxiv.org](https://arxiv.org/abs/2005.10158?utm_source=openai)), there is no evidence of its application to the specific mechanisms of sampling in hip-hop music. Similarly, while there is substantial research on the impact of copyright law on hip-hop sampling practices ([onlinelibrary.wiley.com](https://onlinelibrary.wiley.com/doi/10.1111/jpms.12078?utm_source=openai)), none of these studies employ Nash Bargaining strategies to predict successful sampling techniques. Therefore, the specific claim regarding the application of Nash Bargaining to hip-hop sampling lacks direct supporting evidence.",
+    "active_research_matches": [],
     "active_research_most_recent_year": null,
-    "active_research_checked_date": null
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-29-homospatial-architecture-x-cross-domain-pattern-recognition",
@@ -1986,16 +2076,14 @@
       "Cross Domain Pattern Recognition"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 40,
+    "points": 30,
     "badges": [
       "🪞 Homospatial",
-      "🗺️ Frontier Research Group",
-      "🔬 Actively Researched (historical)"
+      "🗺️ Frontier Research Group"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5",
-      "Phase 2 ADJACENT_ACTIVE: +30",
-      "Actively researched (no date recovered) — real, but not a currently live thread: +10"
+      "Phase 2 ADJACENT_ACTIVE: +30"
     ],
     "held_out_reason": null,
     "tier_rank": 2,
@@ -2013,11 +2101,11 @@
     "refutation_filename": null,
     "refutation_content": null,
     "refutation_independently_confirmed": false,
-    "actively_researched": true,
-    "active_research_note": "BIM ACC / LLM compliance / Rhonda-class permitting AI — closest neighbors, not full closed loop",
-    "active_research_matches": null,
+    "actively_researched": false,
+    "active_research_note": "While there is substantial research on architectural aesthetics and design methodologies, there is no specific evidence of a system termed 'Architectural Pattern Synthesis' that demonstrates a statistically significant improvement in compliance with both aesthetic standards and regulatory requirements compared to traditional architectural methods. The existing studies focus on various aspects of architectural design, such as the mathematical foundations of aesthetics, the impact of symmetry, and the use of AI in design, but do not specifically address the proposed mechanism.",
+    "active_research_matches": [],
     "active_research_most_recent_year": null,
-    "active_research_checked_date": null
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-29-homospatial-chemistry-x-informational-event-driven-systems",
@@ -2054,10 +2142,10 @@
     "refutation_content": null,
     "refutation_independently_confirmed": false,
     "actively_researched": false,
-    "active_research_note": "While there is extensive research on molecular systems exhibiting adaptive structural changes in response to environmental stimuli, the specific term 'MolecuLogic Systems' does not appear in the scientific literature. The term 'Moleculogic' is associated with a proprietary platform for designing and simulating logic-based therapeutic complexes, but this is not a research study or project. ([metaldrug.com](https://metaldrug.com/fdc/?utm_source=openai)) Therefore, there is no real evidence of research specifically on 'MolecuLogic Systems' as described.",
+    "active_research_note": "I searched for research specifically addressing 'MolecuLogic Systems' exhibiting adaptive structural changes in response to environmental stimuli, demonstrating a measurable correlation between molecular interactions and resulting configurations. However, I did not find any publications or projects that directly correspond to this specific mechanism. While there are studies on molecular adaptation and self-assembly in response to stimuli, they do not specifically focus on 'MolecuLogic Systems' or the exact mechanism described.",
     "active_research_matches": [],
     "active_research_most_recent_year": null,
-    "active_research_checked_date": "2026-09-01"
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-29-homospatial-immunology-x-human-urban-planning",
@@ -2239,16 +2327,16 @@
       "Physical Acoustic Resonance"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 40,
+    "points": 55,
     "badges": [
       "🪞 Homospatial",
       "🗺️ Frontier Research Group",
-      "🔬 Actively Researched (historical)"
+      "🔬🔥 Actively Researched (current)"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5",
       "Phase 2 ADJACENT_ACTIVE: +30",
-      "Actively researched (no date recovered) — real, but not a currently live thread: +10"
+      "Actively researched, most recent evidence 2025 (1y old — a live, current research thread): +25"
     ],
     "held_out_reason": null,
     "tier_rank": 2,
@@ -2267,10 +2355,32 @@
     "refutation_content": null,
     "refutation_independently_confirmed": false,
     "actively_researched": true,
-    "active_research_note": "Ziepke, Maryshev, Aranson, Frey — Acoustic Signaling Enables Collective Perception and Control in Active Matter Systems (PRX 2025; arXiv:2410.02940). Agents emit/detect, sync to acoustic field, migrate to strongest signal; collective sonar. Closest neighbor — not full collision with cavity-resonance blackboard claim.",
-    "active_research_matches": null,
-    "active_research_most_recent_year": null,
-    "active_research_checked_date": null
+    "active_research_note": "The identified studies provide real evidence of research into swarm robotics utilizing acoustic interactions, aligning with the concept of Resonant Swarms coordinating through shared acoustic fields. These studies explore the use of acoustophoretic interactions in robot swarms, the auditory description of swarm movements, and the creation of speech zones with self-distributing acoustic swarms, all of which are pertinent to the proposed mechanism.",
+    "active_research_matches": [
+      {
+        "title": "AcoustoBots: A swarm of robots for acoustophoretic multimodal interactions",
+        "researcher_or_authors": "Narsimlu Kemsaram, James Hardwick, Jincheng Wang, Bonot Gautam, Ceylan Besevli, Giorgos Christopoulos, Sourabh Dogra, Lei Gao, Akin Delibasi, Diego Martinez Plasencia, Orestis Georgiou, Marianna Obrist, Ryuji Hirayama, Sriram Subramanian",
+        "year": 2025,
+        "url": "https://pubmed.ncbi.nlm.nih.gov/40469914/",
+        "explanation": "This study explores the use of acoustophoretic interactions in a swarm of robots, focusing on multimodal interactions facilitated by acoustic fields, aligning with the concept of a Resonant Swarm coordinating through a shared acoustic-field blackboard."
+      },
+      {
+        "title": "The Sound of Swarm. Auditory Description of Swarm Robotic Movements",
+        "researcher_or_authors": "Maria Mannone, Valeria Seidita, Antonio Chella",
+        "year": 2023,
+        "url": "https://doi.org/10.1145/3596203",
+        "explanation": "This research develops a theoretical framework relating musical parameters to robotic motion parameters, potentially informing the design of Resonant Swarms that coordinate through acoustic signals."
+      },
+      {
+        "title": "Creating speech zones with self-distributing acoustic swarms",
+        "researcher_or_authors": "Malek Itani, Tuochao Chen, Takuya Yoshioka, Shyamnath Gollakota",
+        "year": 2023,
+        "url": "https://www.nature.com/articles/s41467-023-40869-8",
+        "explanation": "This work demonstrates the creation of speech zones using self-distributing acoustic swarms, showcasing the potential of acoustic coordination in swarm robotics."
+      }
+    ],
+    "active_research_most_recent_year": 2025,
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-29-immunology-x-military-strategy",
@@ -3388,16 +3498,14 @@
       "Physical Magnetic Field Control"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 40,
+    "points": 30,
     "badges": [
       "🪞 Homospatial",
-      "🗺️ Frontier Research Group",
-      "🔬 Actively Researched (historical)"
+      "🗺️ Frontier Research Group"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5",
-      "Phase 2 ADJACENT_ACTIVE: +30",
-      "Actively researched (no date recovered) — real, but not a currently live thread: +10"
+      "Phase 2 ADJACENT_ACTIVE: +30"
     ],
     "held_out_reason": null,
     "tier_rank": 2,
@@ -3415,11 +3523,11 @@
     "refutation_filename": null,
     "refutation_content": null,
     "refutation_independently_confirmed": false,
-    "actively_researched": true,
-    "active_research_note": "Thomas, Schrot, Liboff (1986) Bioelectromagnetics — low-intensity MF alters operant FR/DRL patterns; fields as exposure modulators of food-reinforced behavior. Closest neighbor — not field-as-schedule. Also Phillips magnetoreception mazes; Alsop 1987 failed magnetic SD.",
-    "active_research_matches": null,
+    "actively_researched": false,
+    "active_research_note": "After an extensive search, I found no specific research directly investigating the integration of operant conditioning with programmable magnetic field manifolds to form a 'Magneto-Operant Schedule.' While there are studies examining the effects of magnetic fields on operant behavior in rats, such as those by Thomas et al. (1986) ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/3801058/?utm_source=openai)) and Nakagawa and Matsuda (1988) ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/3345212/?utm_source=openai)), these do not involve programmable magnetic field manifolds or the specific mechanisms outlined in your claim. Additionally, research on magnetic field-based reward shaping in reinforcement learning ([arxiv.org](https://arxiv.org/abs/2307.08033?utm_source=openai)) pertains to artificial intelligence and does not address the proposed biological mechanism. Therefore, there is no existing evidence of research into the specific mechanism you've described.",
+    "active_research_matches": [],
     "active_research_most_recent_year": null,
-    "active_research_checked_date": null
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-08-29-homospatial-informational-scientific-experiment-orchestration-x-physical-magnetic-fluctuation",
@@ -36637,19 +36745,21 @@
       "Creative Musical Motif Deviation"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 5,
+    "points": 30,
     "badges": [
       "🧬 Bisociative",
       "🗺️ Frontier Research Group",
       "⚠️ Failed Honesty Check",
-      "💀 Refuted"
+      "💀 Refuted",
+      "🔬🔥 Actively Researched (current)"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5",
       "Phase 2 ADJACENT_ACTIVE: +30",
       "Mechanical honesty check failed twice (disguised compromise, uncorrected): -10",
       "Adversarial refutation REFUTED, unanimous (0-of-3 survive): -15",
-      "  independently confirmed (3 separate agents, full agreement)"
+      "  independently confirmed (3 separate agents, full agreement)",
+      "Actively researched, most recent evidence 2024 (2y old — a live, current research thread): +25"
     ],
     "held_out_reason": null,
     "tier_rank": 5,
@@ -36667,11 +36777,33 @@
     "refutation_filename": "refutations/2026-09-01-behavioral-psychology-x-creative-musical-motif-deviation-refutation.md",
     "refutation_content": "# Adversarial Refutation: Bisociation — Behavioral psychology — habit formation loops × Creative Musical Motif Deviation\n\n**Original**: `hypotheses/2026-09-01-behavioral-psychology-x-creative-musical-motif-deviation.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 0 of 3 survive → **REFUTED**\n\n- **Coherence — REFUTED.** The core claim rests on the term 'cyclical process,' which is used in both domains. In behavioral psychology, it refers to the Cue-Routine-Reward model, while in music, it pertains to the development of motifs. However, these processes do not denote the same formal object; the psychological model is about behavior reinforcement, while the musical motif development is about thematic variation. Thus, the claim does not establish a genuine mapping between the two domains but rather presents a superficial similarity in structure without a shared referent. Therefore, this constitutes equivocation.\n- **Testability — REFUTED.** The core claim presents a specific relationship between habit formation loops and musical motif deviation, identifying clear components in both domains (cues, routines, rewards, motifs, variations, emotional responses). However, it lacks a named metric, comparison condition, or rejection threshold that would allow for empirical testing of this relationship. The claim is too vague in its operationalization, making it difficult to design a concrete experiment that could yield a definitive 'no' outcome. Therefore, it does not survive the testability lens.\n- **Triviality — REFUTED.** The core claim states that both habit formation loops and musical motif deviation exhibit a cyclical process where initial elements lead to a transformation resulting in a consistent outcome. When stripped of domain-specific vocabulary, the claim reduces to a general statement about two complex systems where initial inputs lead to transformations that yield consistent results. This structure is indeed common to many complex systems, making the claim trivial. The specific mechanisms of habit formation and musical motif development do not add unique depth to the claim when generalized, as they can apply to numerous other systems. Therefore, the claim does not survive the triviality lens.\n\n## No steelman offered\n\nAll three lenses independently converged on REFUTED for this case. If revisited, it would need a genuinely tighter formulation, not a restatement of the same claim.\n",
     "refutation_independently_confirmed": true,
-    "actively_researched": null,
-    "active_research_note": null,
-    "active_research_matches": null,
-    "active_research_most_recent_year": null,
-    "active_research_checked_date": null
+    "actively_researched": true,
+    "active_research_note": "The identified studies provide empirical evidence supporting the claim that variations in musical motifs can enhance listener engagement, paralleling how consistent rewards influence habit formation. They demonstrate that musical cues and temporal structures significantly impact listener attention and motivation, aligning with the proposed mechanism.",
+    "active_research_matches": [
+      {
+        "title": "Motivated cognitive control during cued anticipation and receipt of unfamiliar musical themes: An fMRI study",
+        "researcher_or_authors": "Chia-Wei Li, Chen-Gia Tsai",
+        "year": 2024,
+        "url": "https://pubmed.ncbi.nlm.nih.gov/38147907/",
+        "explanation": "This study examines how listeners' anticipation and reception of musical themes are influenced by cues, highlighting the role of temporal structure in musical engagement."
+      },
+      {
+        "title": "Characterizing Listener Engagement with Popular Songs Using Large-Scale Music Discovery Data",
+        "researcher_or_authors": "Blair Kaneshiro, Feng Ruan, Casey W. Baker, Jonathan Berger",
+        "year": 2017,
+        "url": "https://pubmed.ncbi.nlm.nih.gov/28386241/",
+        "explanation": "This research analyzes large-scale data to understand how variations in musical elements affect listener engagement, providing insights into the impact of musical motifs on listener behavior."
+      },
+      {
+        "title": "A model of time-varying music engagement",
+        "researcher_or_authors": "Diana Omigie, Iris Mencke",
+        "year": 2024,
+        "url": "https://pubmed.ncbi.nlm.nih.gov/38104598/",
+        "explanation": "This model explores how listener engagement with music changes over time, considering factors like musical variations and their effects on listener attention and enjoyment."
+      }
+    ],
+    "active_research_most_recent_year": 2024,
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-09-01-control-theory-x-genomics",
@@ -36711,11 +36843,11 @@
     "refutation_filename": "refutations/2026-09-01-control-theory-x-genomics-refutation.md",
     "refutation_content": "# Adversarial Refutation: Bisociation — Control theory — Kalman filtering × Genomics — GWAS and polygenic risk\n\n**Original**: `hypotheses/2026-09-01-control-theory-x-genomics.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 0 of 3 survive → **REFUTED**\n\n- **Coherence — REFUTED.** The core claim rests on the term 'state estimates,' which in control theory refers to the estimated values of system states based on noisy measurements, while in genomics, 'polygenic risk scores' represent a calculated risk based on the cumulative effect of multiple genetic variants. These terms denote different referents: 'state estimates' are dynamic and related to system control, whereas 'polygenic risk scores' are static and related to genetic predisposition. Thus, the claim does not hold as a genuine bisociation, as it relies on an equivocation of terms that do not represent the same formal object or relationship in both domains.\n- **Testability — REFUTED.** The core claim suggests a direct functional relationship between Kalman filtering in control theory and polygenic risk scores in genomics. However, while there are applications of Kalman filtering in genomics, specifically in modeling gene regulatory networks and estimating disease states, there is no operationalized evidence or specific metrics linking Kalman filtering directly to polygenic risk scores or GWAS. This lack of a clear, named metric or rejection threshold for the proposed relationship renders the claim vague and unfalsifiable.\n- **Triviality — REFUTED.** The core claim states that Kalman filtering state estimates can be mapped to polygenic risk scores, asserting a specific functional relationship between the two domains. When stripped of domain-specific vocabulary, the claim reduces to a general assertion about two systems that refine predictions over time using noisy data. This is a common characteristic of many complex systems, making the claim trivial. The specific mechanisms of Kalman filtering and polygenic risk scores do not provide a unique or non-obvious connection, as the underlying principle of refining predictions from incomplete data is widely applicable across various fields.\n\n## No steelman offered\n\nAll three lenses independently converged on REFUTED for this case. If revisited, it would need a genuinely tighter formulation, not a restatement of the same claim.\n",
     "refutation_independently_confirmed": true,
-    "actively_researched": null,
-    "active_research_note": null,
-    "active_research_matches": null,
+    "actively_researched": false,
+    "active_research_note": "After an extensive search, I found no specific research directly investigating the application of Kalman filtering techniques to the calculation of polygenic risk scores (PRS). While both Kalman filtering and PRS involve updating predictions based on new data inputs, they are applied in different contexts—Kalman filtering in control theory and PRS in genomics. The absence of direct research suggests that this specific mechanism has not been explored.",
+    "active_research_matches": [],
     "active_research_most_recent_year": null,
-    "active_research_checked_date": null
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-09-01-homospatial-cognitive-psychology-x-finance",
@@ -36751,11 +36883,11 @@
     "refutation_filename": null,
     "refutation_content": null,
     "refutation_independently_confirmed": false,
-    "actively_researched": null,
-    "active_research_note": null,
-    "active_research_matches": null,
+    "actively_researched": false,
+    "active_research_note": "After an extensive search, I found no specific research or evidence directly addressing the proposed 'Cognitive Financial Chunking System' that integrates working memory and atomic financial transactions. While there is substantial research on chunking in working memory and its applications in various domains, including finance, none specifically combine these elements in the manner described. For instance, studies have explored how chunking can aid working memory ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/29698045/?utm_source=openai)) and how cognitive load affects financial decision-making ([sciencedirect.com](https://www.sciencedirect.com/science/article/pii/S1544612325000881?utm_source=openai)), but these do not propose a unified system as outlined. Therefore, the specific claim regarding the 'Cognitive Financial Chunking System' lacks direct supporting evidence.",
+    "active_research_matches": [],
     "active_research_most_recent_year": null,
-    "active_research_checked_date": null
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-09-01-homospatial-urban-planning-x-physical-mechanical-vibration",
@@ -36791,11 +36923,11 @@
     "refutation_filename": null,
     "refutation_content": null,
     "refutation_independently_confirmed": false,
-    "actively_researched": null,
-    "active_research_note": null,
-    "active_research_matches": null,
+    "actively_researched": false,
+    "active_research_note": "I searched for research specifically addressing 'Vibrational Urban Dynamics'—a framework combining urban planning with physical mechanical vibration to enhance structural integrity and functionality during vibrational events. However, I found no evidence of such a concept being actively researched. While there are studies on traffic-induced vibrations and their effects on buildings, they do not propose a unified framework like 'Vibrational Urban Dynamics' to improve urban design for vibrational resilience.",
+    "active_research_matches": [],
     "active_research_most_recent_year": null,
-    "active_research_checked_date": null
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-09-01-janusian-ethics",
@@ -36805,14 +36937,16 @@
       "Ethics — trolley-problem moral reasoning"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 30,
+    "points": 55,
     "badges": [
       "🎭 Janusian",
-      "🗺️ Frontier Research Group"
+      "🗺️ Frontier Research Group",
+      "🔬🔥 Actively Researched (current)"
     ],
     "breakdown": [
       "Phase 1 self-report (5/5): not scored — near-zero predictive signal, see Failure 5",
-      "Phase 2 ADJACENT_ACTIVE: +30"
+      "Phase 2 ADJACENT_ACTIVE: +30",
+      "Actively researched, most recent evidence 2024 (2y old — a live, current research thread): +25"
     ],
     "held_out_reason": null,
     "tier_rank": 2,
@@ -36830,11 +36964,33 @@
     "refutation_filename": null,
     "refutation_content": null,
     "refutation_independently_confirmed": false,
-    "actively_researched": null,
-    "active_research_note": null,
-    "active_research_matches": null,
-    "active_research_most_recent_year": null,
-    "active_research_checked_date": null
+    "actively_researched": true,
+    "active_research_note": "These studies provide evidence that individuals often experience conflicting moral intuitions and justifications when faced with trolley problem scenarios, supporting the claim that both pulling the lever and not pulling the lever can hold simultaneously, leading to conflicting justifications.",
+    "active_research_matches": [
+      {
+        "title": "An Experimental Investigation of Emotions and Reasoning in the Trolley Problem",
+        "researcher_or_authors": "Alessandro Lanteri, Chiara Chelini, Salvatore Rizzello",
+        "year": 2008,
+        "url": "https://doi.org/10.1007/s10551-008-9665-8",
+        "explanation": "This study examines how explicit reasoning and moral emotions influence responses to different versions of the trolley problem, revealing inconsistencies in moral judgments when individuals engage in explicit reasoning."
+      },
+      {
+        "title": "The Effects of Explicit Reasoning on Moral Judgements",
+        "researcher_or_authors": "Daniel Corral, Abraham M Rutchick",
+        "year": 2024,
+        "url": "https://doi.org/10.1177/17470218231179685",
+        "explanation": "This research investigates how explicit reasoning affects moral judgments in trolley problem scenarios, highlighting variations in moral decisions based on the type of reasoning employed."
+      },
+      {
+        "title": "Moral Pluralism on the Trolley Tracks: Different Normative Principles Are Used for Different Reasons in Justifying Moral Judgments",
+        "researcher_or_authors": "Büşra Aktaş, Onurcan Yılmaz, Hasan G. Bahçekapili",
+        "year": 2023,
+        "url": "https://doi.org/10.1017/jdm.2022.68",
+        "explanation": "This study explores how different normative principles are applied in justifying moral judgments in trolley problem scenarios, indicating that individuals use various ethical frameworks to support their decisions."
+      }
+    ],
+    "active_research_most_recent_year": 2024,
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-09-01-janusian-political-science",
@@ -36844,18 +37000,20 @@
       "Political science — coalition government formation"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 32,
+    "points": 47,
     "badges": [
       "🎭 Janusian",
       "🗺️ Frontier Research Group",
       "⚠️ Failed Honesty Check",
-      "🛡️ Survived the Gauntlet"
+      "🛡️ Survived the Gauntlet",
+      "🔬 Actively Researched"
     ],
     "breakdown": [
       "Phase 1 self-report (5/5): not scored — near-zero predictive signal, see Failure 5",
       "Phase 2 ADJACENT_ACTIVE: +30",
       "Mechanical honesty check failed twice (disguised compromise, uncorrected): -10",
-      "Adversarial refutation survived (2-of-3): +12"
+      "Adversarial refutation survived (2-of-3): +12",
+      "Actively researched, most recent evidence 2020 (6y old): +15"
     ],
     "held_out_reason": null,
     "tier_rank": 5,
@@ -36873,11 +37031,26 @@
     "refutation_filename": "refutations/2026-09-01-janusian-political-science-refutation.md",
     "refutation_content": "# Adversarial Refutation: Janusian — Political science — coalition government formation\n\n**Original**: `hypotheses/2026-09-01-janusian-political-science.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 2 of 3 survive → **SURVIVES** (promoted out of NO_SIGNAL)\n\n- **Coherence — REFUTED.** The core claim rests on the term 'political stability and instability,' which is used to describe the outcomes of coalition governments. In political science, 'stability' typically refers to the ability of a government to maintain its authority and function effectively, while 'instability' often denotes conflict and dysfunction within that same government. These terms do not refer to the same formal object; rather, they denote different states of governance that can coexist in a coalition context. Therefore, the claim does equivocate on these terms, as it treats them as compatible outcomes without clearly delineating their distinct meanings in the context of coalition governance. Thus, the claim does not survive this lens.\n- **Testability — SURVIVES.** The core claim presents a falsifiable prediction that can be operationalized through specific observations of coalition governments. It specifies that both effective governance and significant intra-coalition conflicts should be observed simultaneously, which provides a clear metric for testing the hypothesis. The claim is not vague, as it directly relates to observable phenomena in political science, particularly in the context of coalition dynamics. Therefore, the claim survives this lens.\n- **Triviality — SURVIVES.** The core claim states that coalition governments can create both political stability and instability simultaneously, which is a specific assertion about the dynamics of coalition governance. When stripped of domain-specific vocabulary, the claim reduces to a statement about complex systems exhibiting dual characteristics of stability and instability. The phrase being tested for genericness is: \"Both coalition governments create political stability and foster instability simultaneously for the same political context; the theory must contain both.\" This statement does not describe a common feature of most complex systems, as it specifies a unique interaction between stability and instability that is not universally applicable. Therefore, the claim does not reduce to something trivially true of almost any two complex systems.\n\n## What survived, and why this matters\n\n2 of 3 independent lenses could not kill this claim. Per the promotion rule (2-of-3 survival), this hypothesis moves out of NO_SIGNAL — real signal the claim isn't vacuous, not proof it's correct. Still worth Phase 3 outreach consideration if a real researcher in the adjacent field can be identified.\n",
     "refutation_independently_confirmed": true,
-    "actively_researched": null,
-    "active_research_note": null,
-    "active_research_matches": null,
-    "active_research_most_recent_year": null,
-    "active_research_checked_date": null
+    "actively_researched": true,
+    "active_research_note": "The cited studies provide empirical evidence that coalition governments can simultaneously create political stability and foster instability, aligning with the specific claim and its falsifiable prediction.",
+    "active_research_matches": [
+      {
+        "title": "Party Systems and Government Stability",
+        "researcher_or_authors": "Michael Taylor, V. M. Herman",
+        "year": 2014,
+        "url": "https://www.cambridge.org/core/journals/american-political-science-review/article/abs/party-systems-and-government-stability/B0BE87179021CAD697A636808FCDAD34",
+        "explanation": "This study examines the relationship between party system fragmentation and government stability, finding that increased fragmentation correlates with decreased government stability, indicating that coalition governments can simultaneously foster instability."
+      },
+      {
+        "title": "Divided They Fall. Fragmented Parliaments and Government Stability",
+        "researcher_or_authors": "Felipe Carozzi, Davide Cipullo, Luca Repetto",
+        "year": 2020,
+        "url": "https://cepr.org/publications/dp14619",
+        "explanation": "This paper analyzes how political fragmentation affects government stability, showing that each additional party in parliament increases the probability of government replacement, suggesting that coalition governments can simultaneously create political stability and foster instability."
+      }
+    ],
+    "active_research_most_recent_year": 2020,
+    "active_research_checked_date": "2026-09-02"
   },
   {
     "key": "2026-09-02-physics-condensed-matter-bose-einstein-condensate-coherence-x-cosmology-early-universe-scalar-field-dynamics",
@@ -36888,19 +37061,21 @@
       "Cosmology — early-universe scalar field dynamics (corpuscular inflation, axion/ultralight BEC dark matter, Fukuyama-Morikawa stagflation)"
     ],
     "verdict": "ADJACENT_ACTIVE",
-    "points": 15,
+    "points": 40,
     "badges": [
       "🧬 Bisociative",
       "🗺️ Frontier Research Group",
       "⚠️ Failed Honesty Check",
-      "🌗 Contested (1-of-3)"
+      "🌗 Contested (1-of-3)",
+      "🔬🔥 Actively Researched (current)"
     ],
     "breakdown": [
       "Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5",
       "Phase 2 ADJACENT_ACTIVE: +30",
       "Mechanical honesty check failed twice (disguised compromise, uncorrected): -10",
       "Adversarial refutation REFUTED, but a real near-miss (1-of-3 survive): -5",
-      "  independently confirmed (3 separate agents, full agreement)"
+      "  independently confirmed (3 separate agents, full agreement)",
+      "Actively researched, most recent evidence 2026 (0y old — a live, current research thread): +25"
     ],
     "held_out_reason": null,
     "tier_rank": 5,
@@ -36918,10 +37093,32 @@
     "refutation_filename": "refutations/2026-09-02-physics-condensed-matter-bose-einstein-condensate-coherence-x-cosmology-early-universe-scalar-field-dynamics-refutation.md",
     "refutation_content": "# Adversarial Refutation: Bisociation — Physics — condensed matter — Bose-Einstein condensate coherence (Gross-Pitaevskii dynamics, quantum pressure) × Cosmology — early-universe scalar field dynamics (corpuscular inflation, axion/ultralight BEC dark matter, Fukuyama-Morikawa stagflation)\n\n**Original**: `hypotheses/2026-09-02-physics-condensed-matter-bose-einstein-condensate-coherence-x-cosmology-early-universe-scalar-field-dynamics.md`\n**Method**: 3 independent OpenAI completions, one per lens (`refute_hypothesis.py`, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost\n\n## Tally: 1 of 3 survive → **REFUTED**\n\n- **Coherence — REFUTED.** The core claim rests on the shared term 'coherence dynamics' as it relates to both Bose-Einstein condensates and early-universe scalar fields. However, while both domains exhibit collective behavior, the specific dynamics governed by the Gross-Pitaevskii equation in condensed matter physics and the scalar field dynamics in cosmology do not denote the same formal object. The Gross-Pitaevskii equation describes a specific quantum mechanical system, while the scalar field dynamics involve different theoretical constructs and implications in cosmology. Therefore, the claim does not hold as a genuine mapping due to the differing referents of the terms involved.\n- **Testability — SURVIVES.** The core claim operationalizes the relationship between Bose-Einstein condensate (BEC) coherence dynamics and early-universe scalar field dynamics by explicitly referencing the Gross-Pitaevskii equation. This equation serves as a named, checkable metric that can be tested against empirical observations in cosmology, particularly regarding axion dark matter. The claim is not vague; it directly connects established theoretical frameworks in both domains, allowing for potential experimental validation or refutation.\n- **Triviality — REFUTED.** The core claim states that the dynamics of Bose-Einstein condensate (BEC) coherence can be mapped to early-universe scalar field dynamics through the Gross-Pitaevskii equation. When stripped of domain-specific vocabulary, the claim reduces to a statement about the coherence dynamics of two complex systems exhibiting similar governing equations. This is a common characteristic of many complex systems, making the claim trivial. The specific mechanisms and equations do not prevent it from being a generic statement about coherent behavior in complex systems.\n\n## No steelman offered\n\nAll three lenses independently converged on REFUTED for this case. If revisited, it would need a genuinely tighter formulation, not a restatement of the same claim.\n",
     "refutation_independently_confirmed": true,
-    "actively_researched": null,
-    "active_research_note": null,
-    "active_research_matches": null,
-    "active_research_most_recent_year": null,
-    "active_research_checked_date": null
+    "actively_researched": true,
+    "active_research_note": "The identified studies provide concrete evidence of research exploring the relationship between Bose-Einstein condensate coherence and scalar field dynamics in the early universe, particularly through the application of the Gross-Pitaevskii equation.",
+    "active_research_matches": [
+      {
+        "title": "Stagflation: Bose-Einstein condensation in the early universe",
+        "researcher_or_authors": "Takeshi Fukuyama, Masahiro Morikawa",
+        "year": 2009,
+        "url": "https://journals.aps.org/prd/abstract/10.1103/PhysRevD.80.063520",
+        "explanation": "This study introduces a unified model of dark energy and dark matter by incorporating Bose-Einstein condensation (BEC) in the early universe, demonstrating the relevance of BEC coherence to early-universe scalar field dynamics."
+      },
+      {
+        "title": "Bose-Einstein condensate cosmology within the framework of QCD axion",
+        "researcher_or_authors": "Takeshi Fukuyama",
+        "year": 2026,
+        "url": "https://link.springer.com/article/10.1007/JHEP02%282026%29047",
+        "explanation": "This recent work analyzes BEC cosmology within a string-inspired axion model, highlighting the connection between BEC coherence and early-universe scalar field dynamics."
+      },
+      {
+        "title": "Scalar Field as a Bose-Einstein Condensate?",
+        "researcher_or_authors": "Elías Castellanos, Alfredo Macías, Darío Núñez",
+        "year": 2014,
+        "url": "https://arxiv.org/abs/1310.3319",
+        "explanation": "This paper discusses the analogy between a classical scalar field with a self-interacting potential and a trapped Bose-Einstein condensate, emphasizing the shared coherence dynamics governed by the Gross-Pitaevskii equation."
+      }
+    ],
+    "active_research_most_recent_year": 2026,
+    "active_research_checked_date": "2026-09-02"
   }
 ]
