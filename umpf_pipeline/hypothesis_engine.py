@@ -93,22 +93,88 @@ HYPOTHESES_DIR = os.path.join(PIPELINE_DIR, "hypotheses")
 
 # Sector tags for distance-biased pair sampling (COA 2). First matching
 # keyword wins; unknown domains land in "other" and still pair freely.
+#
+# Two real keyword-collision bugs fixed 2026-09-02, found while wiring up
+# _SCHWERPUNKT_MULTIPLIERS below (the fix that motivated actually reading
+# this function closely for the first time in a while):
+#   1. A bare "network" keyword in "informational" caught "Human Social
+#      Network Dynamics" (-> wrongly "informational", should be
+#      human_social) and "Ecology — Mycorrhizal Fungal Networks" (-> wrongly
+#      "informational", should be biological) -- both real domains in the
+#      live pool, both directly relevant to the multipliers just added.
+#      Narrowed to specific compounds ("computer network", "neural
+#      network", etc.) that don't collide.
+#   2. A bare "cognitive" keyword in "cognitive" (human psychology) caught
+#      every "Cognitive AI *" domain (Attention, Development, Neuron
+#      Activation, Reinforcement Learning, Streaming Data Processing, Swarm
+#      Intelligence, ...) even though those are ML/AI-systems-engineering
+#      domains per this pool's own seed tagging ("Information & Intelligence
+#      Systems"), not human-cognition domains -- meaning the real
+#      hypotheses that drove the informational x creative finding (e.g.
+#      "Comedy x Cognitive AI Attention") were landing in cognitive x
+#      creative instead, silently missing that multiplier. Narrowed
+#      "cognitive" sector to require actual psychology signal; moved
+#      "cognitive ai" into informational as its own compound keyword.
 _SECTOR_KEYWORDS = {
-    "physical": ("physical", "physics", "mechan", "thermal", "electr", "optical",
+    "physical": ("physical", "physics", "mechan", "thermal", "thermo", "electr", "optical",
                  "acoustic", "fluid", "bridge", "voltage", "photon", "telescope",
-                 "spring", "magnetic", "climat", "ocean", "geology", "astronomy"),
+                 "spring", "magnetic", "climat", "ocean", "geology", "astronomy",
+                 # broadened 2026-09-02, same real-coverage pass:
+                 "materials science", "metallurg", "chemistry", "chemical",
+                 "cosmology", "aerospace", "civil engineering", "robotics",
+                 "textile", "control theory"),
     "biological": ("bio", "neuro", "immune", "genetic", "ecology", "evolution",
-                   "organism", "cell", "dna", "epigenetic", "healthcare", "medical"),
-    "informational": ("informational", "computer", "algorithm", "network", "database",
+                   "organism", "cell", "dna", "epigenetic", "healthcare", "medical",
+                   # broadened 2026-09-02, same real-coverage pass: real pool
+                   # entries like "Ecology — Mycorrhizal Fungal Networks" and
+                   # "Epidemiology" matched none of the original keywords.
+                   "epidemiolog", "genomic", "botan", "toxicolog", "veterinary",
+                   "pharmacolog", "fisher", "forestry", "zoology",
+                   "phototropism", "horticulture", "mycorrhiz", "fungal",
+                   "predator-prey", "protein", "mitochondri"),
+    "informational": ("informational", "computer", "algorithm", "cognitive ai",
+                      # fixed 2026-09-02, same real-coverage pass: "art" in
+                      # creative's own keyword list was catching "ARTificial
+                      # Intelligence" before informational's own (later,
+                      # weaker) keywords got a chance -- pre-existing bug,
+                      # found while verifying the pass above, not introduced
+                      # by it. "artificial intelligence" checked first fixes it.
+                      "artificial intelligence",
+                      "computer network", "neural network", "packet",
+                      "learning system", "knowledge system", "database",
                       "cache", "hash", "cryptograph", "compiler", "queue", "sensor",
-                      "distributed consensus", "load balanc", "telecommunication"),
+                      "distributed consensus", "load balanc", "telecommunication",
+                      # broadened 2026-09-02: real pool entries ("Cognitive
+                      # Concept Drift", "Cognitive Model Adaptation", etc.)
+                      # are the same ML-systems-engineering class as
+                      # "Cognitive AI Attention" but don't contain "ai" --
+                      # were falling into "other" (56/222 of the real pool
+                      # did before this pass), missing the boost meant for
+                      # exactly these hypotheses.
+                      "cognitive concept drift", "cognitive model adaptation",
+                      "cognitive reinforcement", "cognitive streaming",
+                      "cognitive swarm", "cognitive hyperparameter",
+                      "cognitive preprocessing", "cognitive pipeline",
+                      "cognitive weight", "cognitive attention"),
     "human_social": ("human", "social", "organiz", "bureaucrat", "trust", "team",
                      "committee", "economic", "finance", "market", "law", "military",
-                     "anthropolog", "urban", "institution"),
-    "cognitive": ("cognitive", "psycholog", "attention", "learning", "decision",
-                  "indecision", "emotion", "model adaptation"),
+                     "anthropolog", "urban", "institution",
+                     # broadened 2026-09-02, same real-coverage pass:
+                     "politic", "banking", "supply chain", "negotiat", "game theory"),
+    "cognitive": ("psycholog", "working memory", "synaptic", "cortical map",
+                  "habit formation", "attachment theory", "conformity",
+                  "groupthink", "cognitive bias"),
     "creative": ("creative", "music", "narrative", "art", "comedy", "gaming",
-                 "culinary", "architecture", "album", "motif", "improvis"),
+                 "culinary", "architecture", "album", "motif", "improvis",
+                 "dance", "film —", "literature", "sculpture"),
+    # Added 2026-09-02 (Schwerpunkt analysis, see below): "math"/"logic"
+    # domains were silently falling into "other" (a neutral 1.5, no
+    # penalty) despite being a real, data-confirmed loser when paired
+    # with informational domains. Split out so that specific pairing can
+    # actually be demoted instead of hiding inside the catch-all bucket.
+    "math_logic": ("mathematic", "logic", "knot invariant", "combinatoric",
+                    "topology", "gödel", "trigonometric", "fourier",
+                    "wiener process", "sample variance", "statistical estimation"),
 }
 
 
@@ -120,14 +186,82 @@ def _sector_of(domain: str) -> str:
     return "other"
 
 
+# Schwerpunkt sector-pair multipliers, 2026-09-02 -- built off a real,
+# dated data pull, not intuition: 499 real two-domain hypotheses (bisociation
+# + homospatial, canaries excluded) cross-tabulated against actual verdict
+# tier, whether real published research was found, how recent that research
+# is (2023+, a proxy for "researchers active now"), and real contact
+# resolution. Baseline across all 499: 44.5% good verdict, 66.3% find any
+# match, 41.7% find 2023+ research.
+#
+# creative x human_social (n=25): 76.0% good verdict, 88.0% any match, 64.0%
+# recent-active, 77.3% high-confidence contact, ZERO coherence flags -- beats
+# baseline by 20-30pp on every axis simultaneously, which nothing else in
+# the data does. Reading the actual 25: it isn't inventing a connection --
+# it's landing on real, populated interdisciplinary subfields that already
+# study how humans organize/decide/behave around a creative practice
+# (anthropology of art, arts-in-healthcare, organizational behavior of
+# creative industries). Winners: Anthropology x Gaming Narrative, Healthcare
+# x Creative Album/Film Production, Organizational Theory x Architecture.
+# Boosted well above the generic cross-sector weight.
+#
+# informational x creative (n=41, largest real-N winner): 61.0% good verdict,
+# 88.5% high-confidence contact, only 3.7% flagged -- but driven heavily by
+# "Cognitive AI [pipeline component] x Creative [practice]" pairs riding the
+# real, currently-active AI-and-creativity research wave (2023-2026). Real
+# and worth exploiting now, but a trend bet, not a structural strength like
+# creative x human_social -- given a smaller boost, not the top one.
+#
+# biological x physical (n=11): 90.9% REFUTED, worst decent-sample pair.
+# Failures read well as a sentence and die on refutation -- Mycorrhizal
+# Fungal Networks x Quantum Physics, Stellar Nucleosynthesis x Epidemiology
+# -- cute metaphors with no real intersecting literature. Demoted below
+# even the generic same-sector penalty.
+#
+# informational x math_logic (n=5): 100% refuted, only 20% find any match --
+# too formally abstract on both sides, no applied literature bridges them.
+# Demoted.
+#
+# human_social x physical (n=33 incl. the economics-flavored subset, n=10
+# specifically "Economics/Finance/Game Theory x Physical Sciences" at 70%
+# refuted): "econophysics"-style metaphors (markets as thermodynamic
+# systems) that read as a well-worn pop-econ trope and mostly don't survive
+# rigorous checking. Moderately demoted -- distinct sector pair from
+# creative x human_social, so this doesn't touch that boost.
+#
+# physical x physical (same-sector, already demoted by the generic rule):
+# 100% find matching research (physics subfields share literal math, so a
+# match is always findable) but only 31.0% good verdict -- confirms the
+# generic same-sector demotion is doing the right thing here; no override
+# needed, the base rule already gets this one right.
+#
+# Full methodology, every number, and the individual hypotheses behind each
+# bucket: reported to Michael 2026-09-02, session transcript.
+_SCHWERPUNKT_MULTIPLIERS = {
+    frozenset(["creative", "human_social"]): 2.0,
+    frozenset(["informational", "creative"]): 1.4,
+    frozenset(["biological", "physical"]): 0.15,
+    frozenset(["informational", "math_logic"]): 0.2,
+    frozenset(["human_social", "physical"]): 0.5,
+}
+
+
 def _pair_distance_weight(a: str, b: str) -> float:
-    """Higher weight = more preferred. Cross-sector pairs beat same-sector."""
+    """Higher weight = more preferred. Cross-sector pairs beat same-sector;
+    on top of that base rule, _SCHWERPUNKT_MULTIPLIERS (above) further
+    boosts or demotes specific sector pairs the 2026-09-02 data pull
+    actually confirmed win or lose, so autonomous generation spends its
+    budget where real verdicts, real research, and real reachable
+    researchers have already shown up -- not just wherever the generic
+    cross-sector heuristic happens to reach."""
     sa, sb = _sector_of(a), _sector_of(b)
     if sa == "other" or sb == "other":
-        return 1.5
-    if sa == sb:
-        return 0.25  # demote same-sector (often restatement, not bisociation)
-    return 3.0
+        base = 1.5
+    elif sa == sb:
+        base = 0.25  # demote same-sector (often restatement, not bisociation)
+    else:
+        base = 3.0
+    return base * _SCHWERPUNKT_MULTIPLIERS.get(frozenset([sa, sb]), 1.0)
 
 
 def load_gold_pairs(mode: str = "bisociation") -> list:
