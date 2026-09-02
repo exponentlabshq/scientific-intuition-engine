@@ -41,6 +41,40 @@ python3 sharpen_hypothesis.py hypotheses/<slug>.md \
 
 Exemplars: Resonant Swarm; Magneto-Operant Schedule.
 
+## COA 6 — Real contact resolution (2026-09-02)
+
+Closes the exact gap `emails/README.md`'s own "Phase 4" section named and refused to
+paper over: `active_research_check.py` already finds real researchers/papers genuinely
+working the same territory as a hypothesis (20/20 of the current top-scoring hypotheses
+already have real `active_research_matches`) — but turning a name from a paper into a
+real, current, sourced institutional email was, until now, 100% manual, one recipient at
+a time. `find_researcher_contact.py` is that missing link: same architecture as
+`active_research_check.py` / `verify_hypothesis.py` (OpenAI `web_search`, one structured
+call per candidate, `token_tracker` logging). Same non-negotiable rule as every other
+real-fact field in this pipeline: an email is only ever real if the model found it
+**literally written on a real, cited page** — never a `firstname.lastname@university.edu`
+pattern-guess. No hit → `resolved: false` / empty email, written down honestly, not
+guessed.
+
+```bash
+python3 find_researcher_contact.py <slug> [<slug> ...]
+python3 find_researcher_contact.py --all-shortlist --limit 10
+python3 find_researcher_contact.py --all-shortlist --dry-run   # preview, no write
+```
+
+Real first run (2026-09-02), 3 slugs, 7 researcher lookups: **4 real, sourced emails
+found**, 3 honestly resolved with no email (institution/profile only). Cost: ~8.3K
+tokens/lookup on `gpt-4o-mini`, a small fraction of a cent each.
+
+Writes to `contacts.jsonl` only — this script never touches `packets/`, `emails/`, or
+sends anything. Turning a resolved contact into an actual draft is still the existing,
+separate, human-in-the-loop step above. Disclosed limitation: which co-author gets
+picked as the target, and which of several real citable pages gets surfaced, is not
+fully deterministic between runs on an ambiguous multi-author match — re-running the
+same match can occasionally resolve a different (still real) person or source. The
+dedup skip (keyed on the source match, not the resolved name) still prevents re-spending
+on a match already attempted once; pass `--force` to re-roll one deliberately.
+
 ## Packet contents
 
 See `packets/*.md`: hypothesis, generative relation, Phase 2 evidence, queries,
@@ -58,4 +92,5 @@ Append a new ledger line (never rewrite) with `outreach_status`:
 - `shortlist.json` — outreach-rank (COA 5)
 - `packets_manifest.json` — drafted packet index (`sharpened`, `hard_claim_one_liner`)
 - `emails/` — copy-paste Phase 3 emails with public faculty To: addresses (see `emails/README.md`)
+- `contacts.jsonl` — resolved researcher contacts (COA 6, `../find_researcher_contact.py`)
 - `../sharpen_hypothesis.py` — COA 2d ritual

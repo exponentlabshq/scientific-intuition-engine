@@ -1,0 +1,280 @@
+#!/usr/bin/env python3
+"""
+find_researcher_contact.py -- COA A (2026-09-02): the one real gap
+outreach/emails/README.md's own "Phase 4" section already named and
+explicitly refused to paper over: active_research_check.py already finds
+real researchers/papers genuinely working the same territory as this
+pipeline's own hypotheses (verified 2026-09-02: 20/20 of the current
+top-scoring hypotheses already have real active_research_matches) -- but
+turning "Jonathan Schooler wrote this paper" into a real, current,
+sourced institutional email has, until now, been 100% manual, one
+recipient at a time (that is literally how Schooler's, Aronson's,
+Frey's, and Phillips's contact info was found).
+
+This script is that missing link, not a new system: same architecture as
+active_research_check.py and verify_hypothesis.py (OpenAI web_search,
+one structured call per target, token_tracker logging, an append-only
+ledger). Same non-negotiable discipline as every other real-fact field in
+this pipeline: an email is only ever real if the model found it literally
+written on a real, cited public page (a university faculty directory, a
+lab site, a departmental staff listing) -- never a firstname.lastname@
+university.edu pattern-guess from a name and an institution, which is
+the specific, named failure mode the system prompt below exists to rule
+out. When nothing real can be found, the honest result is `resolved:
+false` / empty email, written down as such -- not a plausible guess.
+
+This script only ever WRITES a record to outreach/contacts.jsonl. It
+does not touch outreach/emails/, outreach/packets/, or send anything --
+matching this whole pipeline's standing NOT SENT discipline. Turning a
+resolved contact into an actual draft is still the existing, separate,
+human-in-the-loop step in outreach/README.md.
+
+Usage:
+    python3 find_researcher_contact.py <slug> [<slug> ...]
+    python3 find_researcher_contact.py --all-shortlist [--limit N]
+    python3 find_researcher_contact.py --all-shortlist --dry-run
+"""
+import argparse
+import json
+import os
+import sys
+from datetime import datetime, timezone
+
+from dotenv import load_dotenv
+from openai import OpenAI
+
+import token_tracker
+
+PIPELINE_DIR = os.path.dirname(os.path.abspath(__file__))
+CONTACTS_PATH = os.path.join(PIPELINE_DIR, "outreach", "contacts.jsonl")
+SHORTLIST_PATH = os.path.join(PIPELINE_DIR, "outreach", "shortlist.json")
+
+load_dotenv("/Users/michaeljagdeo/Downloads/talentOS-2026/.env")
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+if not OPENAI_API_KEY:
+    raise SystemExit("OPENAI_API_KEY is not set — add it to the vault-root .env")
+client = OpenAI(api_key=OPENAI_API_KEY)
+
+MODEL = "gpt-4o-mini"
+
+CONTACT_SCHEMA = {
+    "type": "object",
+    "properties": {
+        "resolved": {"type": "boolean", "description": "True only if a real, current-or-most-recently-known institutional affiliation was found for a specific named individual."},
+        "target_name": {"type": "string", "description": "The one specific individual this result is about -- must be a real name from the input author list, or a real corresponding author found via search. Never invented."},
+        "institution": {"type": "string", "description": "Real institutional affiliation (university, lab, company). Empty string if unknown."},
+        "department": {"type": "string", "description": "Empty string if unknown."},
+        "role_title": {"type": "string", "description": "e.g. 'Associate Professor', 'PhD Candidate', 'Research Scientist'. Empty string if unknown."},
+        "email": {
+            "type": "string",
+            "description": (
+                "A real email address ONLY if it was found literally written on a real public "
+                "page returned by search (a faculty directory, lab page, or staff listing). "
+                "NEVER construct, guess, or pattern-match an email from a name and an "
+                "institution's domain -- if you did not see this exact address written on a "
+                "real page, leave this empty."
+            ),
+        },
+        "email_source_url": {"type": "string", "description": "The real URL where the email above was found, verbatim. Empty string if email is empty."},
+        "profile_url": {"type": "string", "description": "A real faculty/lab/personal-academic page for this person, if found, even if it had no email on it. Empty string if none."},
+        "confidence": {"type": "string", "enum": ["HIGH", "MEDIUM", "LOW"]},
+        "notes": {"type": "string", "description": "1-2 sentences: what was actually found, and any real caveat (e.g. page undated, appears to have since moved institutions, email found but on a 2019-dated page)."},
+    },
+    "required": ["resolved", "target_name", "institution", "department", "role_title", "email", "email_source_url", "profile_url", "confidence", "notes"],
+    "additionalProperties": False,
+}
+
+SYSTEM_PROMPT = (
+    "You are resolving real, current contact information for ONE specific researcher, given "
+    "a paper or project they are a real author or contributor on. Your only job is to find "
+    "where they actually are now (or most recently were) and how to actually reach them, "
+    "using real web search -- not to guess.\n\n"
+    "The single most important rule: an email address is only real if you found it literally "
+    "written, character for character, on a real page search returned to you -- a university "
+    "faculty directory, a lab or group website, a departmental staff listing, or a personal "
+    "academic homepage. Universities very often do publish faculty and staff emails on "
+    "exactly these kinds of pages, so a genuine search frequently succeeds -- but the address "
+    "must come from a page you can cite, not from combining a name with an institution's "
+    "domain into a plausible-looking pattern (firstname.lastname@, first-initial-lastname@, "
+    "etc.). That specific shortcut is exactly what you must never do, no matter how standard "
+    "the institution's email format looks from other real examples on the same page -- a "
+    "pattern is not a citation. If you cannot find the actual address written down, leave the "
+    "email field empty and say so in notes; an honest empty result is correct, a guessed "
+    "address is not.\n\n"
+    "If the author list has multiple names, use judgment to identify the single best real "
+    "contact -- typically a corresponding author, a PI, or whoever the paper/page itself "
+    "identifies as the point of contact -- rather than an arbitrary first name. Prefer a "
+    "person whose current institutional page you can actually find and cite. Report their "
+    "institution, department, and role/title only if you find real, current (or most "
+    "recently known) evidence of them -- leave any field empty rather than infer it."
+)
+
+
+def resolve_one(researcher_or_authors, title, year, source_url, domains, slug=None):
+    text = (
+        f"Author(s) on the real paper/project: {researcher_or_authors}\n"
+        f"Title: {title}\n"
+        f"Year: {year if year else 'unknown'}\n"
+        f"Original source URL: {source_url or '(none given)'}\n"
+        f"Domain(s) this relates to: {', '.join(domains) if domains else '(none given)'}\n\n"
+        "Find the single best real, current contact for this work."
+    )
+    resp = client.responses.create(
+        model=MODEL,
+        tools=[{"type": "web_search"}],
+        instructions=SYSTEM_PROMPT,
+        input=text,
+        max_output_tokens=1200,
+        text={"format": {"type": "json_schema", "name": "researcher_contact", "schema": CONTACT_SCHEMA, "strict": True}},
+    )
+    token_tracker.log_usage("outreach_contact", MODEL, resp.usage, hypothesis_slug=slug)
+    return json.loads(resp.output_text), resp.usage
+
+
+def append_contact_record(slug, match, result):
+    entry = {
+        "hypothesis_slug": slug,
+        "source_match_title": match.get("title"),
+        "source_match_authors": match.get("researcher_or_authors"),
+        "source_match_year": match.get("year"),
+        "source_match_url": match.get("url"),
+        "resolved": result["resolved"],
+        "target_name": result["target_name"],
+        "institution": result["institution"],
+        "department": result["department"],
+        "role_title": result["role_title"],
+        "email": result["email"],
+        "email_source_url": result["email_source_url"],
+        "profile_url": result["profile_url"],
+        "confidence": result["confidence"],
+        "notes": result["notes"],
+        "checked_date": datetime.now(timezone.utc).date().isoformat(),
+        "method": "find_researcher_contact.py (gpt-4o-mini + web_search, structured)",
+    }
+    os.makedirs(os.path.dirname(CONTACTS_PATH), exist_ok=True)
+    with open(CONTACTS_PATH, "a", encoding="utf-8") as f:
+        f.write(json.dumps(entry) + "\n")
+    return entry
+
+
+def load_resolved_matches():
+    """Source matches already resolved (successfully or not) in a prior
+    run, so a re-run over the same or an overlapping shortlist doesn't
+    re-spend real API cost re-searching the same paper/author-list again.
+
+    Keyed on the raw source_match_authors string -- deliberately NOT on
+    the resolved target_name, even though that reads as the more natural
+    key for "have we found this person before." Found and fixed
+    2026-09-02, by direct observation on the second real run: the
+    skip-check at call time only ever has the raw match's author-list
+    string available (target_name doesn't exist yet -- resolving it is
+    the whole point of the call), so a target_name-keyed index silently
+    never matches for any multi-author match and dedup quietly does
+    nothing beyond the trivial single-author case. Keying on the same
+    field the check actually compares against is what makes the skip
+    real. The real, disclosed tradeoff this keeps: a genuinely
+    already-resolved person can still get re-processed if they show up
+    again as part of a *different* author-list string (e.g. a second
+    paper with a different co-author) -- accepted rather than chased
+    further, since which individual an ambiguous multi-author match
+    resolves to is itself not fully deterministic between runs (see
+    resolve_one's own docstring note)."""
+    seen = {}
+    if os.path.exists(CONTACTS_PATH):
+        with open(CONTACTS_PATH, encoding="utf-8") as f:
+            for line in f:
+                line = line.strip()
+                if not line:
+                    continue
+                rec = json.loads(line)
+                key = (rec.get("source_match_authors") or "").strip().lower()
+                if key:
+                    seen[key] = rec
+    return seen
+
+
+def matches_for_slug(slug, by_slug):
+    e = by_slug.get(slug)
+    if not e:
+        return None, []
+    return e, (e.get("active_research_matches") or [])
+
+
+def main():
+    parser = argparse.ArgumentParser(description="Resolve real institutional contact info for researchers behind this pipeline's own active_research_matches")
+    parser.add_argument("slugs", nargs="*")
+    parser.add_argument("--all-shortlist", action="store_true", help="Resolve for every slug in outreach/shortlist.json")
+    parser.add_argument("--limit", type=int, default=None, help="Cap how many researcher lookups to run this pass")
+    parser.add_argument("--force", action="store_true", help="Re-resolve even a name already found in outreach/contacts.jsonl")
+    parser.add_argument("--dry-run", action="store_true", help="Print results only; do not write to outreach/contacts.jsonl")
+    args = parser.parse_args()
+
+    sys.path.insert(0, PIPELINE_DIR)
+    from ledger import load_latest_entries
+    by_slug = {e.get("hypothesis_slug"): e for e in load_latest_entries() if e.get("hypothesis_slug")}
+
+    slugs = list(args.slugs)
+    if args.all_shortlist:
+        if not os.path.exists(SHORTLIST_PATH):
+            raise SystemExit(f"{SHORTLIST_PATH} not found — run: python3 score_hypotheses.py --outreach")
+        shortlist = json.load(open(SHORTLIST_PATH, encoding="utf-8"))
+        slugs.extend(row["slug"] for row in shortlist.get("rows", []) if row.get("slug"))
+    if not slugs:
+        raise SystemExit("Pass one or more hypothesis slugs, or use --all-shortlist.")
+
+    already = {} if args.force else load_resolved_matches()
+
+    # Flatten to one (slug, match) pair per real active_research_match,
+    # skipping slugs with none and (unless --force) names already resolved.
+    jobs = []
+    skipped_no_matches = []
+    for slug in dict.fromkeys(slugs):  # de-dupe, preserve order
+        e, matches = matches_for_slug(slug, by_slug)
+        if e is None:
+            print(f"SKIPPED (not in ledger): {slug}")
+            continue
+        if not matches:
+            skipped_no_matches.append(slug)
+            continue
+        for m in matches:
+            key = (m.get("researcher_or_authors") or "").strip().lower()
+            if key in already:
+                continue
+            jobs.append((slug, e.get("domains", []), m))
+
+    if skipped_no_matches:
+        print(f"{len(skipped_no_matches)} slug(s) have no active_research_matches yet (run active_research_check.py first): {', '.join(skipped_no_matches[:5])}{'...' if len(skipped_no_matches) > 5 else ''}")
+
+    if args.limit:
+        jobs = jobs[: args.limit]
+
+    if not jobs:
+        print("Nothing to resolve (everything already in outreach/contacts.jsonl — pass --force to re-check).")
+        return
+
+    print(f"Resolving {len(jobs)} researcher contact(s)...")
+    resolved_count = 0
+    for i, (slug, domains, m) in enumerate(jobs, 1):
+        authors = m.get("researcher_or_authors") or "(unknown)"
+        print(f"[{i}/{len(jobs)}] {slug} — {authors[:60]} ...", flush=True)
+        try:
+            result, usage = resolve_one(authors, m.get("title"), m.get("year"), m.get("url"), domains, slug=slug)
+            status = "FOUND EMAIL" if result.get("email") else ("RESOLVED (no email)" if result["resolved"] else "NOT FOUND")
+            print(f"    {status} — {result.get('target_name')} · {result.get('institution') or '(institution unknown)'} · {usage.total_tokens} tokens", flush=True)
+            if result.get("email"):
+                print(f"      {result['email']}  (source: {result.get('email_source_url')})")
+                resolved_count += 1
+            if not args.dry_run:
+                append_contact_record(slug, m, result)
+        except Exception as ex:
+            print(f"    ERROR: {ex}", flush=True)
+
+    print()
+    print(f"Done. {resolved_count}/{len(jobs)} real emails found this pass.")
+    if not args.dry_run:
+        print(f"Written to {CONTACTS_PATH}")
+    print("Nothing was sent. Turning a resolved contact into a draft is still the existing outreach/ step.")
+
+
+if __name__ == "__main__":
+    main()
