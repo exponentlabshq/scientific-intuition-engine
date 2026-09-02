@@ -1064,6 +1064,9 @@ ROW_CSS = '''
 .ed-full[open] summary::before { content: '\\25be\\0020'; }
 .ed-full summary:hover { text-decoration: underline; }
 .ed-full-body { margin-top: 8px; padding: 10px 12px; background: var(--ink); border-radius: 6px; border-left: 2px solid var(--border); }
+.ed-lineage { margin-top: 6px; font-family: var(--mono); font-size: 0.72rem; color: var(--text-faint); display: flex; flex-wrap: wrap; gap: 4px 10px; }
+.ed-lineage a { color: var(--text-muted); text-decoration: none; border-bottom: 1px dotted var(--border); }
+.ed-lineage a:hover { color: var(--gold); border-bottom-color: var(--gold); }
 
 .corr-dept { margin-top: 36px; }
 .corr-dept h2 { font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--border); padding-bottom: 8px; margin-bottom: 16px; }
@@ -1210,7 +1213,53 @@ def contact_html(contact):
         return f'<div class="ar-contact not-found">No public contact found for {who or "this author"}.</div>'
 
 
-def email_draft_html(draft):
+def lineage_links_html(draft, contact):
+    """Real gap found 2026-09-02, Michael's own words: 'Add email
+    addresses and other links like professor page (if we have it)
+    links to papers etc. for each of the correspondences... this is to
+    establish the lineage of FU's Hypotheses.' All three facts already
+    exist on disk -- the recipient's real email (generate_email_draft.
+    py's own To: line), the real paper URL (the citation line's own
+    trailing '-- url', the same source the drafted question cites),
+    and, when find_researcher_contact.py found one, the researcher's
+    own real profile page (contacts.jsonl's profile_url) -- this turns
+    all three into real, clickable links sitting right next to the
+    draft they belong to, rather than leaving them implicit or
+    scattered elsewhere on the page. Paper URL prefers the citation
+    line's own URL (the exact source the drafted question cites) and
+    falls back to the contact record's source_match_url only if that
+    line didn't parse -- never invents a URL neither source has.
+
+    Real bug found 2026-09-02, first render: several citation lines
+    carry a disclosure parenthetical AFTER the URL (e.g. '... --
+    https://doi.org/... (corrected via real web search 2026-09-02)')
+    -- a real, deliberate note about how that citation was verified,
+    matching this pipeline's own disclose-everything discipline. An
+    end-anchored regex missed the URL entirely on every one of those,
+    silently dropping the paper link on 5 real drafts. Fixed to find
+    the URL anywhere in the line and stop at the first whitespace or
+    parenthesis, not just at the string's end."""
+    links = []
+    email = draft.get("email") or ""
+    if email:
+        links.append(f'<a href="mailto:{email}">&#9993;&#65039; {email}</a>')
+    paper_url = ""
+    m = re.search(r"(https?://[^\s()]+)", draft.get("citation") or "")
+    if m:
+        paper_url = m.group(1).rstrip(".")
+    elif contact and (contact.get("source_match_url") or "").startswith("http"):
+        paper_url = contact["source_match_url"]
+    if paper_url:
+        links.append(f'<a href="{paper_url}" target="_blank" rel="noopener noreferrer">&#128220; the paper</a>')
+    profile_url = (contact or {}).get("profile_url") or ""
+    if profile_url.startswith("http"):
+        links.append(f'<a href="{profile_url}" target="_blank" rel="noopener noreferrer">&#127891; their page</a>')
+    if not links:
+        return ""
+    return f'<div class="ed-lineage">{" &middot; ".join(links)}</div>'
+
+
+def email_draft_html(draft, contact=None):
     """One real, drafted outreach email -- shown inline right after its
     matching contact_html() block, same 'appears everywhere the
     hypothesis does' principle. Two real states: a ready draft (the
@@ -1238,6 +1287,7 @@ def email_draft_html(draft):
         html += f'<div class="ed-subject">&ldquo;{subj}&rdquo;</div>'
     if q:
         html += f'<div class="ed-question">{q}</div>'
+    html += lineage_links_html(draft, contact)
     if cls == "flagged" and draft.get("flag_reason"):
         html += f'<div class="ed-flag-reason">{re.sub("<", "&lt;", draft["flag_reason"])}</div>'
     if draft.get("body"):
@@ -1295,7 +1345,7 @@ def exp_row_html(e, rank=None, researcher=None, compact=False):
                 if contact.get("email"):
                     draft = EMAIL_DRAFTS_BY_SLUG_EMAIL.get((e.get("key"), contact["email"].strip().lower()))
                     if draft:
-                        body += email_draft_html(draft)
+                        body += email_draft_html(draft, contact)
             body += "</li>"
         body += "</ul></div>"
 
@@ -1732,7 +1782,7 @@ def build_investors():
 # Status line says SENT.
 # ---------------------------------------------------------------------------
 
-def correspondence_entry_html(draft, institution, exp_entry):
+def correspondence_entry_html(draft, contact, exp_entry):
     """Michael's own words, 2026-09-02: 'the full email is the
     pre-champagne moment and I want it documented.' This page exists
     specifically to hold that -- so unlike email_draft_html()'s inline
@@ -1741,11 +1791,18 @@ def correspondence_entry_html(draft, institution, exp_entry):
     directly, open, no click required. The subject + bolded question
     stay above it as the scan line -- so a reader can still skim 280+
     entries by researcher/pairing -- but the actual sendable text sits
-    right there underneath every one of them."""
+    right there underneath every one of them.
+
+    Second real gap, same day: 'Add email addresses and other links
+    like professor page (if we have it) links to papers etc. for each
+    of the correspondences... to establish the lineage of FU's
+    Hypotheses.' lineage_links_html() supplies the mailto/paper/
+    profile links; takes the full contact record (not just its
+    institution string) so it has profile_url to work with."""
     subj = re.sub("<", "&lt;", draft.get("subject") or "")
     q = re.sub("<", "&lt;", draft.get("question") or "")
     name = re.sub("<", "&lt;", draft.get("target_name") or "")
-    inst = re.sub("<", "&lt;", institution or "")
+    inst = re.sub("<", "&lt;", (contact or {}).get("institution") or "")
     pairing = " &times; ".join(exp_entry.get("domains") or []) if exp_entry else ""
     cls = "flagged" if draft["state"] == "flagged" else "ready"
     badge = "&#9888;&#65039; Flagged for review" if cls == "flagged" else "&#9993;&#65039; Ready"
@@ -1763,6 +1820,7 @@ def correspondence_entry_html(draft, institution, exp_entry):
     {f'<div class="corr-pairing">{pairing}</div>' if pairing else ""}
     <div class="ed-subject">&ldquo;{subj}&rdquo;</div>
     <div class="ed-question">{q}</div>
+    {lineage_links_html(draft, contact)}
     {flag_html}
     {body_html}
   </div>'''
@@ -1779,10 +1837,9 @@ def build_correspondence():
     for d in unsent:
         e = EXP_BY_KEY.get(d["hypothesis_slug"])
         mode = (e.get("mode") if e else None) or "calibration"
-        contact = CONTACTS_BY_SLUG_EMAIL.get((d["hypothesis_slug"], d["email"]))
-        institution = contact.get("institution") if contact else ""
+        contact = CONTACTS_BY_SLUG_EMAIL.get((d["hypothesis_slug"], d["email"].strip().lower()))
         pts = (e.get("points") if e else 0) or 0
-        by_dept.setdefault(mode, []).append((pts, d, institution, e))
+        by_dept.setdefault(mode, []).append((pts, d, contact, e))
     for mode in by_dept:
         by_dept[mode].sort(key=lambda t: (t[1]["state"] == "flagged", -t[0]))
 
@@ -1792,7 +1849,7 @@ def build_correspondence():
         if not rows:
             continue
         meta = MODE_META[mode_key]
-        entries_html = "".join(correspondence_entry_html(d, inst, e) for _, d, inst, e in rows)
+        entries_html = "".join(correspondence_entry_html(d, contact, e) for _, d, contact, e in rows)
         dept_sections += f'''<div class="corr-dept">
       <h2>{meta['name']} <span class="corr-dept-count">({len(rows)})</span></h2>
       {entries_html}
