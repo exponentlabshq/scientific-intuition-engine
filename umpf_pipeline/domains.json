@@ -2,6 +2,10 @@
   "_comment": "Seed domain pool for the Eureka Engine (hypothesis_engine.py), which now has two independent generation modes: bisociation (two domains) and janusian (one domain, its assumption inverted). already_paired lists domain pairs already explored via bisociation, including full case studies pre-dating this engine in the-rosetta-stone/case-studies/ — excluded by default so autonomous mode reaches for genuinely novel bisociations. already_janused lists domains already explored via Janusian mode, tracked independently -- a domain can appear in both lists without conflict, since inverting a domain's own assumption and pairing it against another domain are different operations. domain_pool is deliberately broad across physical, informational, biological, social, and creative domains so a random or deliberate pick has real room to be distant, not adjacent. 2026-08-31: pool exhausted for Janusian mode (0 remaining un-janused of 59) mid-cycle -- added 50 new, hand-reviewed domains (proposal-005, Option 1) covering fields the original pool didn't touch (physics, CS/math, genetics, psychology, humanities, arts, engineering, natural sciences), matching the existing style and the pool's own breadth principle. See refutations/ (or Ops/Event Log.md) for the real trigger.",
   "already_paired": [
     [
+      "Physics — condensed matter — Bose-Einstein condensate coherence (Gross-Pitaevskii dynamics, quantum pressure)",
+      "Cosmology — early-universe scalar field dynamics (corpuscular inflation, axion/ultralight BEC dark matter, Fukuyama-Morikawa stagflation)"
+    ],
+    [
       "Dynamic Cache-coherent Architectures (DCA)",
       "Cache-coherent protocols"
     ],
@@ -2189,7 +2193,9 @@
     "Electrical engineering — circuit resonance and impedance matching",
     "Statistics — Bayesian posterior updating",
     "Logic — Gödel incompleteness and self-reference",
-    "Negotiation theory — BATNA and anchoring"
+    "Negotiation theory — BATNA and anchoring",
+    "Physics — condensed matter — Bose-Einstein condensate coherence",
+    "Cosmology — early-universe scalar field dynamics"
   ],
   "usage_notes": {
     "pairing_rule": "Prefer pairs that cross at least two of: Physical, Informational, Human/Social, Creative (per the UMPF domain classification in scientific-intuition-engine/readme.md). A pair drawn from the same category (e.g. two pure-CS domains) is allowed but should be flagged as lower-novelty in the output's self-critique.",
