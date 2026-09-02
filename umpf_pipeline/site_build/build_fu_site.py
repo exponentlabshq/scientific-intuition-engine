@@ -1998,52 +1998,22 @@ def build_password():
       <div class="gate-error" id="gate-error"></div>
     </form>
     <div class="gate-hint">Not real security &mdash; a small pause before you go in. Everything past this door is disclosed in full at <a href="whitepaper.html">the real whitepaper</a>. The video behind this card is the same drone shot that opens the home page.</div>
-    <div id="gate-video-status" style="font-family:var(--mono); font-size:0.66rem; color:var(--text-faint); opacity:0.55; margin-top:10px;"></div>
   </div>
 </div>
 <script>
 (function() {{
   var v = document.getElementById('gate-video');
   var btn = document.getElementById('gate-unmute');
-  var status = document.getElementById('gate-video-status');
-  // TEMPORARY diagnostic readout (2026-09-02): the video has been
-  // reported as never showing (poster-only) twice now, on two different
-  // source files, with the deploy independently verified correct both
-  // times (curl confirms the video/mp4 file and the <video> tag's
-  // attributes) -- so the failure is happening client-side, somewhere
-  // this session can't reproduce or see. This line exists purely so the
-  // next report can include what it actually says, instead of another
-  // round of blind guessing. Safe to remove once the real cause is
-  // identified and fixed.
-  if (v && status) {{
-    var report = function(msg) {{ status.textContent = 'video: ' + msg; }};
-    report('loading (readyState ' + v.readyState + ')');
-    v.addEventListener('loadstart', function() {{ report('loadstart'); }});
-    v.addEventListener('canplay', function() {{ report('canplay'); }});
-    v.addEventListener('playing', function() {{ report('playing'); }});
-    v.addEventListener('stalled', function() {{ report('stalled'); }});
-    v.addEventListener('suspend', function() {{ report('suspend (readyState ' + v.readyState + ')'); }});
-    v.addEventListener('error', function() {{
-      var codes = {{1:'ABORTED',2:'NETWORK',3:'DECODE',4:'SRC_NOT_SUPPORTED'}};
-      var code = v.error ? v.error.code : null;
-      report('ERROR ' + (codes[code] || code));
-    }});
-  }}
   if (v) {{
     // Belt-and-suspenders: the autoplay/muted/loop attributes should be
     // enough on their own, but some mobile browsers (iOS Low Power Mode,
     // some Android data-saver modes) silently ignore declarative autoplay
     // and just show the poster frame. Setting .muted via JS too and
-    // calling .play() explicitly recovers those cases.
+    // calling .play() explicitly recovers those cases; a rejected
+    // .play() promise (still blocked) is swallowed on purpose -- the
+    // poster frame is a fine fallback, not an error to surface.
     v.muted = true;
-    var tryPlay = function() {{
-      v.play().then(function() {{
-        if (status) report_play_ok();
-      }}).catch(function(err) {{
-        if (status) status.textContent = 'video: play() blocked (' + (err && err.name || err) + ')';
-      }});
-    }};
-    function report_play_ok() {{ if (status) status.textContent = 'video: play() resolved'; }}
+    var tryPlay = function() {{ v.play().catch(function() {{}}); }};
     if (v.readyState >= 2) {{ tryPlay(); }} else {{ v.addEventListener('loadeddata', tryPlay, {{ once: true }}); }}
     document.addEventListener('visibilitychange', function() {{ if (!document.hidden) tryPlay(); }});
   }}
