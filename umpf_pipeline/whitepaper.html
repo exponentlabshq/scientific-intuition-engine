@@ -1,548 +1,971 @@
-<title>The Eureka Engine</title>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<title>The Charter — FU</title>
+<script>
+(function() {
+  try {
+    if (sessionStorage.getItem('fu_unlocked') !== '1') { location.replace('fu-password.html'); }
+  } catch (e) {}
+})();
+</script>
 <style>
 :root {
-  --ink: #14110f;
-  --paper: #1c1815;
-  --surface: #241f1a;
-  --border: #3a3229;
-  --text: #ede6d8;
-  --text-muted: #a89a86;
-  --text-faint: #6f6455;
-  --gold: #c89b3c;
-  --v-adjacent: #5fa88f;
-  --v-collision: #6f93bd;
-  --v-refuted: #b56b6b;
-  --v-pending: #8a8577;
+  --ink: #150e0f; --paper: #1d1214; --surface: #241519; --border: #3d1e22;
+  --text: #f2ead9; --text-muted: #b8a58f; --text-faint: #7a6a5c;
+  --crimson: #c0475a; --crimson-deep: #7a2530; --gold: #c9a55c;
+  --v-adjacent: #6fa88f; --v-refuted: #b56b6b;
   --serif: ui-serif, Georgia, 'Iowan Old Style', 'Times New Roman', serif;
   --sans: -apple-system, BlinkMacSystemFont, 'Inter', ui-sans-serif, 'Segoe UI', sans-serif;
   --mono: ui-monospace, 'SF Mono', Menlo, monospace;
 }
-@media (prefers-color-scheme: light) {
-  :root:not([data-theme="dark"]) {
-    --ink: #faf7f0; --paper: #ffffff; --surface: #f6f2ea; --border: #ddd2bd;
-    --text: #241f1a; --text-muted: #6b5f4d; --text-faint: #948a76; --gold: #8a6f2e;
-  }
-}
-:root[data-theme="light"] {
-  --ink: #faf7f0; --paper: #ffffff; --surface: #f6f2ea; --border: #ddd2bd;
-  --text: #241f1a; --text-muted: #6b5f4d; --text-faint: #948a76; --gold: #8a6f2e;
-}
 * { box-sizing: border-box; }
 body {
   background: var(--ink); color: var(--text); font-family: var(--sans);
-  font-size: 16.5px; line-height: 1.7; margin: 0; padding: 0 22px 100px;
+  font-size: 16.5px; line-height: 1.7; margin: 0; padding: 0;
   -webkit-font-smoothing: antialiased;
 }
-.page { max-width: 760px; margin: 0 auto; }
+a { color: var(--crimson); }
+.page { max-width: 1040px; margin: 0 auto; padding: 0 24px 100px; }
 
-.masthead { padding: 64px 0 40px; border-bottom: 2px solid var(--gold); }
-.masthead .kicker {
-  font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.12em;
-  color: var(--gold); font-size: 0.78rem; margin-bottom: 14px;
+.hero-section { position: relative; min-height: 68vh; display: flex; align-items: center; overflow: hidden; }
+.hero-bg-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
+.hero-overlay { position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, rgba(21,14,15,0.5) 0%, rgba(21,14,15,0.7) 60%, var(--ink) 100%); }
+.hero-content { position: relative; z-index: 2; padding: 40px 24px; }
+.hero-unmute {
+  position: absolute; z-index: 3; bottom: 20px; right: 20px;
+  background: rgba(21,14,15,0.7); border: 1px solid var(--border); color: var(--text);
+  font-family: var(--mono); font-size: 0.76rem; padding: 8px 14px; border-radius: 100px; cursor: pointer;
 }
-.masthead h1 {
-  font-family: var(--serif); font-size: clamp(2.1rem, 5vw, 3.1rem); font-weight: 600;
-  margin: 0 0 14px; text-wrap: balance; letter-spacing: -0.01em;
-}
-.masthead .dek { color: var(--text-muted); font-size: 1.12rem; max-width: 600px; margin: 0 0 20px; }
-.masthead .byline { color: var(--text-faint); font-size: 0.88rem; font-family: var(--mono); }
+@media (max-width: 640px) { .hero-section { min-height: 78vh; } }
+.wide { max-width: 1240px; }
 
-.abstract {
-  background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
-  padding: 26px 28px; margin: 36px 0; font-size: 0.98rem; color: var(--text);
+/* -- FU-specific nav: unobtrusive by default, every title still a real
+   link. Low-contrast translucent bar over the page rather than a solid
+   toolbar; gains a touch of solidity on hover/focus so a reader can
+   still tell it's there without it competing with hero imagery. -- */
+.fu-nav {
+  position: sticky; top: 0; z-index: 200;
+  background: rgba(21,14,15,0.35); backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(58,30,34,0.4);
+  transition: background 0.2s ease, border-color 0.2s ease;
 }
-.abstract .label {
-  font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.1em;
-  color: var(--gold); font-size: 0.72rem; margin-bottom: 10px; display: block;
+.fu-nav:hover, .fu-nav:focus-within {
+  background: rgba(21,14,15,0.85); border-bottom-color: var(--border);
 }
+.fu-nav-inner {
+  max-width: 1240px; margin: 0 auto; padding: 9px 24px;
+  display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap;
+}
+.fu-nav-brand { display: flex; align-items: center; gap: 8px; text-decoration: none; opacity: 0.92; }
+.fu-nav-brand img { width: 22px; height: 22px; border-radius: 50%; display: block; }
+.fu-nav-brand span { font-family: var(--serif); font-size: 0.92rem; color: var(--gold); font-weight: 600; letter-spacing: 0.01em; }
+.fu-nav-links { display: flex; gap: 18px; flex-wrap: wrap; }
+.fu-nav-links a { font-family: var(--sans); font-size: 0.8rem; color: var(--text-faint); text-decoration: none; transition: color 0.15s; }
+.fu-nav-links a:hover, .fu-nav-links a.is-active { color: var(--gold); }
+.fu-nav-links a.is-active { border-bottom: 1px solid var(--gold); padding-bottom: 2px; }
+.fu-nav-outbound { font-family: var(--sans); font-size: 0.78rem; color: var(--text-faint); text-decoration: none; white-space: nowrap; opacity: 0.8; }
+.fu-nav-outbound:hover { color: var(--gold); opacity: 1; }
 
-nav.toc {
-  margin: 36px 0; padding: 22px 26px; border: 1px solid var(--border); border-radius: 10px;
+.fu-disclosure {
+  background: transparent; border-bottom: 1px solid rgba(58,30,34,0.3);
+  font-family: var(--mono); font-size: 0.7rem; color: var(--text-faint);
+  text-align: center; padding: 5px 16px; opacity: 0.85;
 }
-nav.toc .label {
-  font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.1em;
-  color: var(--gold); font-size: 0.72rem; margin-bottom: 12px; display: block;
-}
-nav.toc ol { margin: 0; padding-left: 0; list-style: none; columns: 2; column-gap: 28px; }
-nav.toc li { margin: 5px 0; font-size: 0.92rem; break-inside: avoid; }
-nav.toc a { color: var(--text); text-decoration: none; border-bottom: 1px solid transparent; }
-nav.toc a:hover { border-bottom-color: var(--gold); color: var(--gold); }
+.fu-disclosure strong { color: var(--text-muted); }
 
-article section { margin: 56px 0; }
-article h2 {
-  font-family: var(--serif); font-size: 1.65rem; font-weight: 600; margin: 0 0 18px;
-  padding-bottom: 10px; border-bottom: 1px solid var(--border); text-wrap: balance;
-}
-article h2 .num { color: var(--gold); font-family: var(--mono); font-size: 1rem; margin-right: 10px; }
-article h3 { font-family: var(--serif); font-size: 1.2rem; font-weight: 600; margin: 28px 0 10px; color: var(--text); }
-article p { margin: 14px 0; }
-article ul, article ol.plain { margin: 14px 0; padding-left: 24px; }
-article li { margin: 6px 0; }
-article strong { color: var(--gold); font-weight: 600; }
-article code { font-family: var(--mono); font-size: 0.85em; background: var(--surface); padding: 1px 6px; border-radius: 4px; }
-article blockquote {
-  margin: 20px 0; padding: 4px 22px; border-left: 3px solid var(--gold);
-  color: var(--text-muted); font-style: italic; font-size: 1.02rem;
-}
-article a { color: var(--gold); }
-
-figure { margin: 28px 0; text-align: center; }
-figure img { max-width: 100%; border-radius: 10px; border: 1px solid var(--border); }
-figure figcaption { color: var(--text-faint); font-size: 0.84rem; margin-top: 10px; font-family: var(--mono); }
-
-.masthead-figure { margin: 0 0 40px; }
-.masthead-figure img {
-  width: 100%; max-height: 320px; object-fit: cover; border-radius: 12px;
-  border: 1px solid var(--border); display: block;
-}
-.masthead-figure figcaption {
-  color: var(--text-faint); font-size: 0.8rem; font-family: var(--mono);
-  margin-top: 10px; text-align: center;
-}
-
-.mech-figures {
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 24px 0;
-}
-.mech-figures figure { margin: 0; }
-.mech-figures img {
-  width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px;
-  border: 1px solid var(--border); display: block;
-}
-.mech-figures figcaption {
-  color: var(--text-faint); font-size: 0.78rem; font-family: var(--mono);
-  margin-top: 8px; text-align: center;
-}
-@media (max-width: 640px) {
-  .mech-figures { grid-template-columns: 1fr; }
-}
-
-.table-wrap { overflow-x: auto; margin: 20px 0; border: 1px solid var(--border); border-radius: 8px; }
-table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
-th, td { padding: 9px 13px; text-align: left; border-bottom: 1px solid var(--border); vertical-align: top; }
-th { background: var(--surface); font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.04em; font-size: 0.74rem; color: var(--gold); }
-td.num, th.num { font-family: var(--mono); font-variant-numeric: tabular-nums; text-align: right; }
-tr:last-child td { border-bottom: none; }
-
-.chip { display: inline-block; padding: 1px 9px; border-radius: 100px; font-size: 0.72rem; font-weight: 600; font-family: var(--mono); }
-.chip.adj { color: var(--v-adjacent); background: rgba(95,168,143,0.14); }
-.chip.col { color: var(--v-collision); background: rgba(111,147,189,0.14); }
-.chip.ref { color: var(--v-refuted); background: rgba(181,107,107,0.14); }
-.chip.pen { color: var(--v-pending); background: rgba(138,133,119,0.14); }
-
-.callout {
-  background: var(--surface); border-left: 3px solid var(--gold); border-radius: 0 8px 8px 0;
-  padding: 16px 20px; margin: 20px 0; font-size: 0.94rem;
-}
-.callout.warn { border-left-color: var(--v-refuted); }
-.callout .callout-label {
-  font-family: var(--mono); text-transform: uppercase; font-size: 0.7rem; letter-spacing: 0.08em;
-  color: var(--gold); display: block; margin-bottom: 8px;
-}
-.callout.warn .callout-label { color: var(--v-refuted); }
-
-.stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; margin: 24px 0; }
-.stat-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 18px 20px; }
-.stat-card .stat-num { font-family: var(--serif); font-size: 1.9rem; font-weight: 600; color: var(--gold); line-height: 1.1; }
-.stat-card .stat-label { color: var(--text-muted); font-size: 0.86rem; margin-top: 6px; }
-.stat-card .stat-src { color: var(--text-faint); font-size: 0.72rem; font-family: var(--mono); margin-top: 8px; }
-
-.story-open {
-  font-family: var(--serif); font-size: 1.12rem; line-height: 1.75; color: var(--text);
-}
-.story-open::first-letter {
-  font-family: var(--serif); font-size: 3.4rem; font-weight: 600; color: var(--gold);
-  float: left; line-height: 0.85; margin: 6px 8px 0 0;
-}
-
-.cta-link {
-  display: block; margin: 24px 0; padding: 20px 24px; background: var(--surface);
-  border: 1px solid var(--gold); border-radius: 10px; text-decoration: none; color: var(--text);
-}
-.cta-link:hover { background: var(--border); }
-.cta-link .cta-title { font-family: var(--serif); font-size: 1.15rem; font-weight: 600; color: var(--gold); }
-.cta-link .cta-sub { color: var(--text-muted); font-size: 0.88rem; margin-top: 4px; }
-
-footer.colophon {
+footer.fu-colophon {
   margin-top: 64px; padding-top: 22px; border-top: 1px solid var(--border);
   color: var(--text-faint); font-size: 0.82rem; font-family: var(--mono);
+  max-width: 1240px; margin-left: auto; margin-right: auto; padding-left: 24px; padding-right: 24px; padding-bottom: 40px;
 }
+footer.fu-colophon a { color: var(--gold); }
+
+h1, h2, h3 { font-family: var(--serif); text-wrap: balance; }
+.kicker { font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.12em; color: var(--gold); font-size: 0.76rem; }
+
+.real-thing {
+  font-family: var(--mono); font-size: 0.74rem; color: var(--text-faint);
+  margin-top: 6px; line-height: 1.5;
+}
+.real-thing b { color: var(--v-adjacent); font-weight: 600; }
+.real-thing code { background: var(--ink); padding: 1px 5px; border-radius: 3px; color: var(--text-muted); }
+
+.stat-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px,1fr)); gap: 14px; margin: 24px 0; }
+.stat-box { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 16px 18px; }
+.stat-box .n { font-family: var(--serif); font-size: 1.7rem; font-weight: 600; color: var(--gold); }
+.stat-box .l { font-family: var(--sans); font-size: 0.82rem; color: var(--text-muted); margin-top: 4px; }
+
+.pub-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; margin: 18px 0; }
+.pub-table th, .pub-table td { padding: 10px 12px; text-align: left; border-bottom: 1px solid var(--border); vertical-align: top; }
+.pub-table th { font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.04em; font-size: 0.72rem; color: var(--gold); }
+.pub-table td.pts { font-family: var(--mono); font-variant-numeric: tabular-nums; color: var(--gold); font-weight: 600; }
+.pub-table td.tier { white-space: nowrap; }
+.pub-table tr:last-child td { border-bottom: none; }
+.pub-badge { display: inline-block; font-size: 0.72rem; font-family: var(--mono); color: var(--v-adjacent); background: rgba(111,168,143,0.12); padding: 2px 8px; border-radius: 100px; }
+
+.card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 28px 0; }
+.dept-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; text-decoration: none; color: var(--text); display: block; transition: border-color 0.15s; }
+.dept-card:hover { border-color: var(--crimson); }
+.dept-card .hover-media { aspect-ratio: 16/10; }
+.dept-card .body { padding: 18px 20px; }
+.dept-card h3 { margin: 0 0 6px; font-size: 1.15rem; color: var(--gold); }
+.dept-card p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.dept-card .stats { margin-top: 12px; font-family: var(--mono); font-size: 0.78rem; color: var(--text-faint); }
+
+/* Hover-to-video media: an img and a video occupy the exact same box
+   (position:absolute, inset:0, identical object-fit) so swapping which
+   one is visible never changes the element's footprint. The video's
+   src is lazy-assigned from data-src on first hover (never fetched on
+   page load -- a grid can hold 18 of these) and released back to just
+   the poster frame on mouseleave. */
+.hover-media { position: relative; width: 100%; overflow: hidden; }
+.hover-media img, .hover-media video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+.hover-media img { transition: opacity 0.2s ease; }
+.hover-media video { opacity: 0; }
+.hover-media.is-playing img { opacity: 0; }
+.hover-media.is-playing video { opacity: 1; }
+
+.faculty-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 18px; margin: 24px 0; }
+.faculty-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; text-decoration: none; color: var(--text); display: block; transition: border-color 0.15s, transform 0.15s; }
+.faculty-card:hover { border-color: var(--crimson); transform: translateY(-2px); }
+.faculty-card .hover-media { aspect-ratio: 4/3; }
+.faculty-card .body { padding: 14px 16px; }
+.faculty-card .name { font-family: var(--serif); font-size: 1rem; font-weight: 600; color: var(--text); margin: 0 0 2px; }
+.faculty-card .title { font-family: var(--sans); font-size: 0.78rem; color: var(--gold); margin: 0 0 6px; }
+.faculty-card .spec { font-family: var(--mono); font-size: 0.7rem; color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.03em; }
+.faculty-card .n { font-family: var(--mono); font-size: 0.74rem; color: var(--v-adjacent); margin-top: 6px; }
+
+.faculty-filter { display: flex; gap: 10px; flex-wrap: wrap; margin: 20px 0 8px; }
+.faculty-filter button {
+  font-family: var(--mono); font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.05em;
+  padding: 7px 14px; border-radius: 100px; border: 1px solid var(--border); background: transparent;
+  color: var(--text-muted); cursor: pointer; transition: all 0.15s;
+}
+.faculty-filter button:hover { border-color: var(--crimson); color: var(--text); }
+.faculty-filter button.active { background: var(--crimson-deep); border-color: var(--crimson-deep); color: var(--text); }
+
+.feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 24px 0; }
+.feature-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; }
+.feature-card img { width: 100%; aspect-ratio: 16/10; object-fit: cover; display: block; }
+.feature-card .body { padding: 18px 20px; }
+.feature-card h3 { margin: 0 0 8px; font-size: 1.1rem; color: var(--gold); font-family: var(--serif); }
+.feature-card p { margin: 0; color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; }
+
+.tab-toggle { display: flex; gap: 8px; margin: 24px 0 8px; border-bottom: 1px solid var(--border); }
+.tab-toggle button {
+  font-family: var(--mono); font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.05em;
+  padding: 10px 18px; border: none; background: transparent; color: var(--text-faint);
+  cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -1px;
+}
+.tab-toggle button.active { color: var(--gold); border-bottom-color: var(--crimson); }
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+
+.faculty-hero { display: grid; grid-template-columns: 260px 1fr; gap: 28px; align-items: start; margin: 24px 0; }
+.faculty-hero img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 12px; border: 1px solid var(--border); display: block; }
+@media (max-width: 640px) { .faculty-hero { grid-template-columns: 1fr; } }
+.roster-list { margin: 12px 0; padding: 0; list-style: none; }
+.roster-list li { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px dashed var(--border); font-size: 0.9rem; }
+.roster-list li:last-child { border-bottom: none; }
+.roster-list .deg { font-family: var(--mono); font-size: 0.72rem; color: var(--text-faint); }
+
+.tour-stop { margin: 0 0 64px; }
+.tour-stop .tour-imgs { display: grid; grid-template-columns: 1fr; gap: 10px; }
+.tour-stop .tour-imgs.pair { grid-template-columns: 1fr 1fr; }
+@media (max-width: 720px) { .tour-stop .tour-imgs.pair { grid-template-columns: 1fr; } }
+.tour-stop img { width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 14px; border: 1px solid var(--border); display: block; }
+.tour-stop .tour-caption { max-width: 680px; margin-top: 18px; }
+.tour-stop .tour-caption h2 { margin: 0 0 8px; }
+.tour-stop .tour-caption p { color: var(--text-muted); margin: 0 0 6px; }
+.tour-video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 24px 0; }
+.tour-video-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; }
+.tour-video-card video { width: 100%; aspect-ratio: 16/9; display: block; background: #000; }
+.tour-video-card .body { padding: 16px 18px; }
+.tour-video-card h3 { margin: 0 0 6px; font-size: 1rem; color: var(--gold); font-family: var(--serif); }
+.tour-video-card p { margin: 0; color: var(--text-muted); font-size: 0.86rem; line-height: 1.55; }
+.seal-row { display: flex; gap: 16px; flex-wrap: wrap; }
+.seal-row figure { flex: 1; min-width: 200px; margin: 0; text-align: center; }
+.seal-row img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; border: 1px solid var(--border); }
+.seal-row figcaption { font-family: var(--mono); font-size: 0.76rem; color: var(--text-faint); margin-top: 8px; }
+
+
+.row { border: 1px solid var(--border); border-radius: 10px; margin-bottom: 8px; background: var(--surface); overflow: hidden; }
+.row-head { display: flex; align-items: center; gap: 12px; padding: 13px 16px; cursor: pointer; user-select: none; }
+.row-head:hover { background: var(--ink); }
+.row-head .rank { font-family: var(--mono); color: var(--text-faint); font-size: 0.78rem; width: 24px; flex-shrink: 0; text-align: right; }
+.row-head .pairing { flex: 1; min-width: 0; font-weight: 600; font-size: 0.9rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.row-head .researcher { font-family: var(--mono); font-size: 0.72rem; color: var(--text-faint); flex-shrink: 0; }
+.row-head .r-points { font-family: var(--mono); font-variant-numeric: tabular-nums; font-weight: 600; font-size: 0.9rem; width: 46px; text-align: right; flex-shrink: 0; }
+.row-head .r-points.pos { color: var(--v-adjacent); }
+.row-head .r-points.neg { color: var(--v-refuted); }
+.row-head .r-points.zero { color: var(--text-faint); }
+.row-head .caret { color: var(--text-faint); transition: transform 0.15s ease; flex-shrink: 0; font-size: 0.7rem; }
+.row.open .caret { transform: rotate(90deg); }
+.row-body { display: none; padding: 4px 18px 20px; border-top: 1px solid var(--border); }
+.row.open .row-body { display: block; }
+.row-body h4 { font-family: var(--serif); font-size: 0.9rem; color: var(--gold); margin: 16px 0 6px; font-weight: 600; }
+.row-body .domains-line { color: var(--text-muted); font-size: 0.84rem; margin-top: 12px; }
+.row-badge-list { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.row-badge { font-size: 0.7rem; font-family: var(--mono); color: var(--text-muted); border: 1px solid var(--border); padding: 2px 8px; border-radius: 100px; }
+.md-block { font-size: 0.86rem; color: var(--text); line-height: 1.65; }
+.md-block h1, .md-block h2 { font-family: var(--serif); font-size: 0.98rem; color: var(--text); margin: 12px 0 6px; }
+.md-block h1:first-child, .md-block h2:first-child { margin-top: 0; }
+.md-block strong { color: var(--gold); font-weight: 600; }
+.md-block ul { margin: 6px 0; padding-left: 20px; }
+.md-block li { margin: 3px 0; }
+.md-block p { margin: 8px 0; }
+.md-block table { border-collapse: collapse; width: 100%; margin: 10px 0; font-size: 0.82rem; }
+.md-block th, .md-block td { border: 1px solid var(--border); padding: 6px 8px; text-align: left; vertical-align: top; }
+.md-block th { background: var(--ink); font-weight: 600; }
+.md-block hr { border: none; border-top: 1px solid var(--border); margin: 14px 0; }
+.md-block code { font-family: var(--mono); font-size: 0.85em; background: var(--ink); padding: 1px 5px; border-radius: 4px; }
+.breakdown-list { list-style: none; padding: 0; margin: 6px 0; }
+.breakdown-list li { font-family: var(--mono); font-size: 0.8rem; color: var(--text-muted); padding: 3px 0; }
+.active-research-block { background: var(--ink); border: 1px solid var(--gold); border-radius: 8px; padding: 12px 14px; margin: 8px 0 14px; }
+.ar-note { font-size: 0.84rem; color: var(--text); margin: 0 0 8px; line-height: 1.6; }
+.ar-matches { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+.ar-matches li { font-size: 0.84rem; }
+.ar-matches a { color: var(--gold); text-decoration: none; border-bottom: 1px dotted var(--gold); font-weight: 600; }
+.ar-matches a:hover { border-bottom-style: solid; }
+.ar-authors { color: var(--text-muted); }
+.ar-explanation { color: var(--text-faint); font-size: 0.8rem; margin-top: 3px; line-height: 1.5; }
+
+.course-item { border: 1px solid var(--border); border-radius: 8px; margin-bottom: 6px; background: var(--ink); }
+.course-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 9px 12px; cursor: pointer; font-size: 0.86rem; }
+.course-head:hover { background: var(--surface); }
+.course-head .cname { flex: 1; color: var(--text); }
+.course-head .ccount { font-family: var(--mono); font-size: 0.72rem; color: var(--text-faint); flex-shrink: 0; }
+.course-head .caret { color: var(--text-faint); transition: transform 0.15s; flex-shrink: 0; font-size: 0.7rem; }
+.course-item.open > .course-head .caret { transform: rotate(90deg); }
+.course-body { display: none; padding: 4px 12px 12px; }
+.course-item.open > .course-body { display: block; }
+
+.lb-toolbar { margin: 20px 0 4px; }
+.lb-search { width: 100%; max-width: 420px; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; color: var(--text); font-family: var(--sans); font-size: 0.9rem; padding: 10px 14px; }
+.lb-search:focus { outline: none; border-color: var(--gold); }
+.lb-filter-label { font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-faint); font-size: 0.7rem; margin: 16px 0 6px; }
+.lb-count { font-family: var(--mono); font-size: 0.78rem; color: var(--text-faint); margin: 10px 0 6px; }
+
+
+.charter-masthead { padding: 48px 0 32px; border-bottom: 2px solid var(--gold); }
+.charter-masthead .dek { color: var(--text-muted); font-size: 1.1rem; max-width: 660px; margin: 14px 0 18px; line-height: 1.6; }
+.charter-masthead .byline { color: var(--text-faint); font-size: 0.85rem; font-family: var(--mono); }
+.charter-abstract { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 24px 26px; margin: 32px 0; font-size: 0.97rem; max-width: 760px; }
+.charter-toc { margin: 32px 0; padding: 20px 24px; border: 1px solid var(--border); border-radius: 10px; max-width: 760px; }
+.charter-toc ol { margin: 0; padding-left: 0; list-style: none; columns: 2; column-gap: 26px; }
+.charter-toc li { margin: 5px 0; font-size: 0.88rem; break-inside: avoid; }
+.charter-toc a { color: var(--text); text-decoration: none; border-bottom: 1px solid transparent; }
+.charter-toc a:hover { border-bottom-color: var(--gold); color: var(--gold); }
+.charter-article { margin: 52px 0; max-width: 760px; }
+.charter-article h2 { font-family: var(--serif); font-size: 1.5rem; font-weight: 600; margin: 0 0 16px; padding-bottom: 10px; border-bottom: 1px solid var(--border); text-wrap: balance; }
+.charter-article h2 .num { color: var(--gold); font-family: var(--mono); font-size: 0.92rem; margin-right: 10px; }
+.charter-article h3 { font-family: var(--serif); font-size: 1.08rem; font-weight: 600; margin: 26px 0 10px; }
+.charter-article p { margin: 13px 0; line-height: 1.7; }
+.charter-article blockquote { margin: 18px 0; padding: 4px 20px; border-left: 3px solid var(--gold); color: var(--text-muted); font-style: italic; font-size: 1rem; }
+.charter-article strong { color: var(--gold); font-weight: 600; }
+.charter-story::first-letter { font-family: var(--serif); font-size: 3.1rem; font-weight: 600; color: var(--gold); float: left; line-height: 0.85; margin: 5px 8px 0 0; }
+.charter-callout { background: var(--surface); border-left: 3px solid var(--gold); border-radius: 0 8px 8px 0; padding: 15px 18px; margin: 18px 0; font-size: 0.92rem; }
+.charter-callout.warn { border-left-color: var(--v-refuted); }
+.charter-callout .cl-label { font-family: var(--mono); text-transform: uppercase; font-size: 0.68rem; letter-spacing: 0.08em; color: var(--gold); display: block; margin-bottom: 6px; }
+.charter-callout.warn .cl-label { color: var(--v-refuted); }
+figure.charter-fig { margin: 26px 0; text-align: center; max-width: 760px; }
+figure.charter-fig img { max-width: 100%; border-radius: 10px; border: 1px solid var(--border); }
+figure.charter-fig figcaption { color: var(--text-faint); font-size: 0.8rem; margin-top: 8px; font-family: var(--mono); }
 </style>
 
-<div class="page">
-  <header class="masthead">
-    <span class="kicker">Exponent Labs LLC &middot; Technical Report</span>
-    <h1>The Eureka Engine</h1>
-    <p class="dek">A machine that manufactures scientific hunches on purpose, thousands at a time, and checks each one honestly before anyone spends months finding out by hand.</p>
-    <p class="byline">Exponent Labs LLC &middot; 2026-09-01 &middot; scientific-intuition-engine/umpf_pipeline</p>
+</head>
+<body>
+<nav class="fu-nav">
+  <div class="fu-nav-inner">
+    <a class="fu-nav-brand" href="fu-home.html"><img src="fu-seal.jpg" alt="FU seal"><span>FU &middot; Fake University</span></a>
+    <div class="fu-nav-links">
+      <a href="fu-home.html">Home</a>
+      <a href="fu-departments.html">Academics</a>
+      <a href="fu-faculty.html">Faculty &amp; Research</a>
+      <a href="fu-campus-explore.html">Campus</a>
+      <a href="fu-people.html">About &amp; Org Chart</a>
+      <a href="fu-course-catalog.html">Course Catalog</a>
+      <a href="fu-leaderboard.html">Leaderboard</a>
+      <a href="fu-investors.html">For Investors &amp; Grant Officers</a>
+    </div>
+  </div>
+</nav>
+<div class="page" style="padding-top:0;">
+  <header class="charter-masthead">
+    <span class="kicker">FU: Fake University &middot; Founding Charter</span>
+    <h1>The FU Charter</h1>
+    <p class="dek">The governing document of Fake University &mdash; twelve Articles, real science, real citations, real numbers pulled live from the same ledger every other page on this site reads from. This is also, in its bones, verbatim in every fact and every citation, the real technical report the whole university sits on top of.</p>
+    <p class="byline">Office of the Dean &middot; Fake University &middot; a positioning frame for the real Eureka Engine (Exponent Labs LLC)</p>
   </header>
 
-  <figure class="masthead-figure">
-    <img src="whitepaper-masthead.jpg" alt="Two open books rendered as an engraving, their pages overlapping: one shows a finch and a branching tree, the other a city skyline and a rising growth curve, the lines of both merging where the pages meet.">
-    <figcaption>Darwin's finches, Malthus's population curve &mdash; one collision, one theory of evolution.</figcaption>
-  </figure>
-
-  <div class="abstract">
-    <span class="label">Abstract</span>
-    <p>Most scientific breakthroughs come from colliding two unrelated fields, not staring harder at one &mdash; Darwin reading an economics pamphlet produced natural selection; Einstein imagining a falling man led toward general relativity. The Eureka Engine automates that collision on purpose, using three documented creativity mechanisms, then checks each result against real evidence before anyone spends months finding out by hand.</p>
-    <p>Across all 755 hypotheses it has generated, the engine's own confidence tracks reality: its most-confident ideas independently match real, existing research 71% of the time; even the ideas it rejects still match real research 36% of the time &mdash; checked against its entire output, not a sample. Its adversarial &ldquo;kill it&rdquo; check was itself tested against 13 real Nobel-linked discoveries. The first pass rejected all of them &mdash; evidence the checker was broken, not that real science looks like nonsense. Fixed and validated, it now correctly recognizes 61.5% of real discoveries while still rejecting 291 of 291 real machine-generated candidates. Twenty real engineering failures were found and fixed along the way, reported here rather than smoothed over. Total spend to date: $6.75, entirely on OpenAI tokens.</p>
+  <div class="charter-abstract">
+    <span class="kicker" style="display:block; margin-bottom:10px;">Preamble</span>
+    <p>Most scientific breakthroughs do not come from staring harder at one field &mdash; they come from smashing two unrelated fields together (Darwin reading an economics pamphlet; Einstein imagining a falling man). FU exists to automate three specific, well-documented ways of forcing that collision &mdash; Arthur Koestler's <em>bisociation</em> and psychiatrist Albert Rothenberg's <em>Janusian</em> and <em>homospatial</em> thinking, one per department &mdash; and then, critically, to check honestly whether each resulting hypothesis is actually worth a researcher's time, the way a fact-checker or a skeptical colleague would, before anyone spends real months finding out by hand. As of this Charter's last build, <strong>748 hypotheses</strong> carry a canonical verdict across a <strong>109-domain</strong> pool: 15 Survived Refutation, 316 Verified and Unrefuted, 8 Contested, and 409 Refuted or Rejected &mdash; the full record, unfiltered, lives on <a href="fu-leaderboard.html">the Ledger</a>. This Charter exists to explain, from nothing, why that record is worth keeping honestly &mdash; and to show, in full, what it actually took to build a university that tells the truth about its own failures.</p>
   </div>
 
-  <nav class="toc">
-    <span class="label">Table of Contents</span>
+  <nav class="charter-toc">
+    <span class="kicker" style="display:block; margin-bottom:12px;">Articles</span>
     <ol>
-      <li><a href="#story">1. What This Is, in One Story</a></li>
-      <li><a href="#psychologists">2. Three Ways to Force a Collision</a></li>
-      <li><a href="#cost">3. Why This Matters</a></li>
-      <li><a href="#pipeline">4. The Pipeline</a></li>
-      <li><a href="#verification">5. Verification</a></li>
-      <li><a href="#refutation">6. Adversarial Refutation &mdash; Can It Be Trusted?</a></li>
-      <li><a href="#autonomy">7. Full Autonomy</a></li>
-      <li><a href="#roti">8. Cost</a></li>
-      <li><a href="#audit-agent">9. The Audit Agent</a></li>
-      <li><a href="#scoring">10. The Leaderboard &mdash; Tiers and Scoring</a></li>
-      <li><a href="#nobel-benchmark">11. Real Discoveries on the Leaderboard</a></li>
-      <li><a href="#blind-generation">12. Pointing the Engine at Real Discoveries, Blind</a></li>
-      <li><a href="#prefilter">13. The v2 Pre-Filter</a></li>
-      <li><a href="#results">14. Results</a></li>
-      <li><a href="#postmortem">15. Postmortem</a></li>
-      <li><a href="#limitations">16. Limitations</a></li>
-      <li><a href="#conclusion">17. Conclusion</a></li>
+      <li><a href="#founding">I. The Founding Collision</a></li>
+      <li><a href="#doctrines">II. The Three Doctrines</a></li>
+      <li><a href="#grievance">III. Why FU Was Founded</a></li>
+      <li><a href="#mechanisms">IV. The Three Departments, Formally</a></li>
+      <li><a href="#curriculum">V. The Four-Phase Curriculum</a></li>
+      <li><a href="#evidence">VI. Standing Rules of Evidence</a></li>
+      <li><a href="#gauntlet">VII. The Gauntlet</a></li>
+      <li><a href="#tenure">VIII. Tenure and the Ledger</a></li>
+      <li><a href="#record">IX. The Current Record</a></li>
+      <li><a href="#history">X. Founding-Era History</a></li>
+      <li><a href="#limitations">XI. Limitations and Open Questions</a></li>
+      <li><a href="#closing">XII. The Closing Article</a></li>
     </ol>
   </nav>
 
   <article>
 
-  <section id="story">
-    <h2><span class="num">1</span>What This Is, in One Story</h2>
-    <p class="story-open">In 1838, Charles Darwin picked up an economics pamphlet with nothing to do with finches or beetles &mdash; Thomas Malthus's essay on how populations outgrow food supply, guaranteeing that most of every generation dies before it can reproduce. Darwin had spent two years puzzling over why related species on nearby islands differ in small, specific ways. Reading Malthus, it clicked: if every population is born into a competition it mostly loses, individuals with any small edge survive that competition more often, generation after generation. No one has to design anything. You get evolution by natural selection.</p>
-    <p>Darwin named the collision himself: reading Malthus is where the idea &ldquo;at once occurred to me.&rdquo; The most consequential idea in the history of biology came not from staring harder at finches, but from forcing two unrelated fields into the same sentence. Kepler tried to explain planetary orbits through musical harmony; Shannon founded information theory by noticing that telephone-relay logic and Boolean algebra were structurally the same thing. The pattern recurs often enough to ask a genuinely strange question: what if the collision itself &mdash; not talent, not luck &mdash; is the actual mechanism, and it can be done on purpose?</p>
-    <p>A <strong>hypothesis</strong>, in this report, is a specific, falsifiable guess about how two things are secretly connected &mdash; precise enough that it could turn out to be wrong. The Eureka Engine automates both halves of what Darwin did once, by accident: force the collision on purpose, across a large domain pool, thousands of times &mdash; then honestly check each result the way a skeptical colleague would, before anyone spends a year finding out by hand.</p>
+  <section id="founding" class="charter-article">
+    <h2><span class="num">I</span>The Founding Collision</h2>
+    <p class="charter-story">In October 1838, Charles Darwin picked up a book that had nothing to do with finches, barnacles, or beetles. It was <em>An Essay on the Principle of Population</em>, an economics pamphlet by Thomas Malthus about the brutal arithmetic of famine &mdash; the observation that human populations grow faster than food supplies ever can, guaranteeing that most of every generation dies before it gets the chance to reproduce. Darwin was reading it, by his own account, &ldquo;for amusement.&rdquo; He wasn&rsquo;t looking for anything.</p>
+    <p>He had, by then, spent two years turning over a puzzle from a five-year voyage around the world: why do closely related species on nearby islands differ in small, specific ways &mdash; a slightly different beak here, a slightly different shell there? He had the observations. He didn&rsquo;t have the mechanism. Then, reading Malthus&rsquo;s chapter on the mathematics of overcrowded cities, something clicked. If human populations are held in check by a permanent, brutal excess of births over food, then every wild population must be too. Every generation of every species is born into a competition it mostly loses. And the individuals that happen to carry some small edge survive that competition more often than their siblings, on average, over and over, for millions of generations. No one has to design anything. You get evolution by natural selection.</p>
+    <p>Darwin named the collision himself, later, in his autobiography: reading Malthus is where the idea &ldquo;at once occurred to me.&rdquo; The single most consequential idea in the history of biology was not produced by staring harder at finches. It was produced by forcing two fields that had nothing to do with each other &mdash; population economics and natural history &mdash; into the same sentence.</p>
+    <p>This is not a freak occurrence. Johannes Kepler spent years trying to explain planetary orbits using the geometry of musical harmony. Claude Shannon founded information theory by noticing that the on/off logic of telephone relay switches was, structurally, the same thing as the true/false logic of Boolean algebra &mdash; a discipline built decades earlier to formalize philosophical logic, with no telephones in mind at all. The pattern recurs often enough across the history of science that FU was founded to ask a genuinely strange question in earnest: <strong>what if the collision itself &mdash; not talent, not luck, not years of immersion in one field &mdash; is the actual mechanism, and it can be done on purpose?</strong></p>
+    <p>A <strong>hypothesis</strong>, in the sense this Charter uses the word, is nothing more exotic than a specific, falsifiable guess about how two things are secretly connected &mdash; precise enough that it could turn out to be wrong. Darwin&rsquo;s guess was falsifiable: if population pressure didn&rsquo;t actually produce differential survival, the theory would collapse. Most guesses like this, tried by most people, go nowhere &mdash; a plausible-sounding connection that turns out, on inspection, to already be well known, or to not actually hold up, or to be too vague to ever be wrong. Finding that out is the slow, expensive part of research (Article III puts real numbers on exactly how expensive).</p>
+    <p>FU is an attempt to automate both halves of what Darwin did by accident once: <strong>force the collision on purpose, over and over, across a large pool of real subjects</strong> &mdash; and then <strong>honestly check each result</strong>, the way a skeptical colleague would, before anyone spends a year of their life finding out the hard way. Every Article after this one describes exactly how, and exactly where it has failed along the way.</p>
   </section>
 
-  <section id="psychologists">
-    <h2><span class="num">2</span>Three Ways to Force a Collision</h2>
-    <p>Two researchers, working decades apart, independently described three distinct ways minds produce insights like Darwin's. The Eureka Engine implements all three as separate, mechanical generation modes.</p>
+  <section id="doctrines" class="charter-article">
+    <h2><span class="num">II</span>The Three Doctrines</h2>
+    <p>Darwin&rsquo;s collision has a name. Two researchers, working decades apart, each independently studied how minds actually produce insights like his &mdash; and between them, they described three distinct mechanisms, not one. FU's three departments each hold one, faithfully, as their entire discipline.</p>
 
-    <div class="table-wrap">
-      <table>
-        <tr><th>Mechanism</th><th>Named by</th><th>What it forces</th><th>Real example</th></tr>
-        <tr><td>Bisociation</td><td>Arthur Koestler, <em>The Act of Creation</em> (1964)</td><td>Two unrelated domains, collided into one precise, falsifiable mapping</td><td>Darwin + Malthus &rarr; natural selection</td></tr>
-        <tr><td>Janusian</td><td>Albert Rothenberg, from direct study of Nobel laureates</td><td>One domain's core assumption held true and false, simultaneously</td><td>Einstein's falling man &mdash; weightless and accelerating at once &mdash; toward general relativity</td></tr>
-        <tr><td>Homospatial</td><td>Albert Rothenberg</td><td>Two domains superimposed into one new entity, not a metaphor</td><td>Rothenberg's own experiment: subjects shown two photographs superimposed produced more original metaphors than subjects shown the same photos side by side</td></tr>
-      </table>
+    <h3>Bisociation &mdash; two frames, collided (Department of Bisociation Studies)</h3>
+    <p>Arthur Koestler was not, by training, a scientist. He was a Hungarian-British novelist and journalist who, in 1964, published a 750-page book called <em>The Act of Creation</em>, trying to find one shared mechanism underneath humor, art, and scientific discovery. His answer was a word he had to coin himself: <strong>bisociation</strong> &mdash; perceiving a situation from inside two self-consistent frames of reference at once, frames normally kept completely apart. Koestler&rsquo;s own favorite illustration was the joke: a story appears to be going one way, following one frame &mdash; and the punchline reveals it fits a second, totally different frame just as well. Darwin&rsquo;s moment with Malthus is a clean, real-world case: population economics is one matrix, natural history is a second, and neither one by itself contains natural selection. The insight lives only in the collision.</p>
+    <p>The Department of Bisociation Studies does exactly this, mechanically: it takes two genuinely unrelated domains from FU's pool, forces them together, and asks for a precise, falsifiable structural mapping &mdash; not a cute metaphor (&ldquo;markets are <em>like</em> ecosystems&rdquo;), but a claim specific enough that it could turn out to be wrong. One standing member of the record:</p>
+    <p style="margin-bottom:8px;">Real example, Bisociation Studies &mdash; still standing on the current Ledger:</p><div class="row">
+      <div class="row-head">
+        
+        <span class="pairing">Language Linguistics × Military Strategy</span>
+        
+        <span class="row-badge" style="color:var(--gold);border-color:var(--gold);">ADJACENT ACTIVE</span>
+        <span class="r-points pos">+55</span>
+        <span class="caret">&#9656;</span>
+      </div>
+      <div class="row-body"><div class="domains-line"><strong style="color:var(--text)">Domains:</strong> Language Linguistics &times; Military Strategy</div><div class="row-badge-list"><span class="row-badge">🧬 Bisociative</span><span class="row-badge">🗺️ Frontier Research Group</span><span class="row-badge">🔬🔥 Actively Researched (current)</span></div><h4>Score breakdown (+55 pts)</h4><ul class="breakdown-list"><li>Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5</li><li>Phase 2 ADJACENT_ACTIVE: +30</li><li>Actively researched, most recent evidence 2026 (0y old — a live, current research thread): +25</li></ul><h4>&#128300; Independent Research Matches</h4><div class="active-research-block"><p class="ar-note">The identified studies focus on the development and evaluation of translation systems aimed at improving communication in military operations, which is directly related to the claim that improvements in language translation accuracy can correlate with higher mission success rates.</p><ul class="ar-matches"><li><a href="https://pubmed.ncbi.nlm.nih.gov/38983456/" target="_blank" rel="noopener noreferrer">Evaluation Methodology and Metrics Employed to Assess the TRANSTAC Two-Way, Speech-to-Speech Translation Systems</a> (2013) &mdash; <span class="ar-authors">Gregory A. Sanders, Brian A. Weiss, Craig Schlenoff, Michelle P. Steves, Sherri Condon</span><div class="ar-explanation">This study evaluates the TRANSTAC program's speech-to-speech translation systems, aiming to enhance communication between military personnel and local populations, thereby potentially improving mission success rates.</div></li><li><a href="https://www.nist.gov/publications/performance-assessments-two-way-free-form-speech-speech-translation-systems-tactical" target="_blank" rel="noopener noreferrer">Performance Assessments of Two-Way, Free-Form, Speech-to-Speech Translation Systems for Tactical Use</a> (2011) &mdash; <span class="ar-authors">Brian A. Weiss, Craig I. Schlenoff</span><div class="ar-explanation">This assessment focuses on evaluating speech-to-speech translation systems developed under the TRANSTAC program, which are intended to facilitate effective communication in military operations.</div></li><li><a href="https://dergipark.org.tr/en/pub/gbd/article/1785120" target="_blank" rel="noopener noreferrer">FROM WORDS TO WARFARE: THE IMPACT OF TRANSLATION ERRORS ON SECURITY IN INTELLIGENCE OPERATIONS</a> (2026) &mdash; <span class="ar-authors">Not specified</span><div class="ar-explanation">This study examines how translation errors within intelligence operations can impact security, highlighting the critical role of accurate translation in military contexts.</div></li></ul></div><h4>Notes</h4><div class="md-block"><p>The cited studies provide evidence that translation accuracy and effective communication are crucial for mission success in military operations. They demonstrate that translation errors can lead to strategic risks and that linguistic skills and interpreters positively affect mission effectiveness. Additionally, the evaluation of speech-to-speech translation systems underscores the importance of effective communication in tactical situations.</p></div><h4>The Hypothesis</h4><div class="md-block"><h2># Hypothesis: Language Linguistics × Military Strategy</h2>
+<p><strong>Generated</strong>: 2026-08-29</p>
+<p><strong>Framework</strong>: UMPF Two-Domain Hypothesis Engine (Exponent Labs LLC)</p>
+<hr/>
+<h2>## 1. The Two Frames (M₁, M₂)</h2>
+<p><strong>M₁ — Language Linguistics</strong>: This domain studies how language is structured, evolves, and is used for communication, focusing on translation accuracy, meaning ambiguity, and the evolution of grammar through usage.</p>
+<p><strong>M₂ — Military Strategy</strong>: This domain examines the planning and execution of military operations, emphasizing how battle situations change, the importance of intelligence, and the coordination of defensive actions.</p>
+<h2>## 2. Monadic Signature of Each Domain</h2>
+<table>
+<tr><th>Layer</th><th>Language Linguistics</th><th>Military Strategy</th></tr>
+<tr><td>Atomic (Maybe/Either)</td><td>Translation can be accurate or inaccurate; word meanings can be ambiguous.</td><td>Missions can succeed or fail; enemy positions may be unknown.</td></tr>
+<tr><td>Domain (State/Reader/Writer)</td><td>Language evolves through usage; grammar rules change over time.</td><td>Battle situations evolve; military doctrine adapts based on past engagements.</td></tr>
+<tr><td>Control (IO/STM)</td><td>External linguistic corpora are used for translation; concurrent translations require atomic meaning resolution.</td><td>Intelligence systems provide situational awareness; concurrent operations require atomic command updates.</td></tr>
+<tr><td>Orchestration (Free/effects)</td><td>Academic coordination between theory and practical usage environments.</td><td>Defense coordination involves planning and executing strategies in wargaming versus actual combat.</td></tr>
+</table>
+<h2>## 3. The Candidate Functor</h2>
+<p>The proposed mapping *f: M(Language Linguistics) → M(Military Strategy)* is as follows:  </p>
+<ul>
+<li>- Atomic: Translation accuracy ↔ Mission success/failure  </li>
+<li>- Domain: Language evolution ↔ Battle situation evolution  </li>
+<li>- Control: Linguistic corpora ↔ Intelligence systems  </li>
+<li>- Orchestration: Academic coordination ↔ Defense coordination  </li>
+</ul>
+<p>For this functor to hold, both domains must demonstrate that their respective evolutions (language and battle situations) lead to improved outcomes (successful communication or successful missions) based on historical data.</p>
+<h2>## 4. The Hypothesis</h2>
+<p><strong>If the functor in §3 holds, then improvements in language translation accuracy will correlate with higher mission success rates in military operations that rely on effective communication — or vice versa.</strong></p>
+<h2>## 5. Novelty &amp; Testability Self-Critique</h2>
+<ul>
+<li>- <strong>Distance score (1-5)</strong>: 4 — These domains typically operate in separate academic and professional circles, with linguistics focusing on communication and military strategy on operational execution, indicating a significant distance in practice.</li>
+<li>- <strong>Testability</strong>: Analyzing historical military operations where language translation was a factor could provide data to confirm or refute the hypothesis, particularly in multinational operations.</li>
+<li>- <strong>Known prior art</strong>: Not verified — while there is literature on communication in military operations, a direct link between linguistic evolution and military success is not established.</li>
+<li>- <strong>Confidence this is worth a researcher's time</strong>: Medium — the hypothesis presents a novel intersection but may require extensive data collection and analysis to validate.</li>
+</ul>
+<h2>## 6. If This Doesn't Hold</h2>
+<p>The most likely reason this functor turns out to be superficial rather than structural is that the dynamics of language evolution may not directly influence operational success, as military outcomes can be affected by numerous external factors beyond communication.</p>
+<h2>## Search Queries</h2>
+<p>1. "language translation accuracy military operations success correlation"</p>
+<p>2. "impact of communication on military strategy effectiveness"</p>
+<p>3. "linguistic evolution military doctrine adaptation"</p>
+<p>4. "historical analysis of translation in military contexts"</p>
+<p>5. "communication theory in military strategy research"</p></div><h4>Verification</h4><div class="md-block"><h2># Verification: Bisociation — Language Linguistics × Military Strategy</h2>
+<p><strong>Verifies</strong>: <code>hypotheses/2026-08-29-language-linguistics-x-military-strategy.md</code></p>
+<p><strong>Verified</strong>: 2026-08-31 · <strong>Method</strong>: OpenAI web_search (gpt-4o-mini) + classification, single call (<code>verify_hypothesis.py</code>, unattended)</p>
+<h2>## Verdict: <strong>ADJACENT_ACTIVE</strong></h2>
+<h2>## Queries</h2>
+<ul>
+<li>- <code>language translation accuracy military operations success correlation</code></li>
+<li>- <code>impact of communication on military strategy effectiveness</code></li>
+<li>- <code>linguistic evolution military doctrine adaptation</code></li>
+<li>- <code>historical analysis of translation in military contexts</code></li>
+<li>- <code>communication theory in military strategy research</code></li>
+</ul>
+<h2>## What was found</h2>
+<p>Studies have demonstrated that translation errors can significantly impact military operations. For instance, a study titled 'FROM WORDS TO WARFARE: THE IMPACT OF TRANSLATION ERRORS ON SECURITY IN INTELLIGENCE OPERATIONS' examines how mistranslations have influenced intelligence assessments and military strategies, leading to strategic risks. (<a href="https://dergipark.org.tr/en/pub/gbd/article/1785120?utm_source=openai" target="_blank" rel="noopener">dergipark.org.tr</a>) Additionally, the article 'Language matters in the military' discusses how linguistic skills and the use of interpreters can positively affect mission effectiveness during peace-support operations. (<a href="https://www.researchgate.net/publication/235314562_Language_matters_in_the_military?utm_source=openai" target="_blank" rel="noopener">researchgate.net</a>) Furthermore, the paper 'Performance Assessments of Two-Way, Free-Form, Speech-to-Speech Translation Systems for Tactical Use' evaluates speech-to-speech translation systems developed for military contexts, highlighting the importance of effective communication in tactical situations. (<a href="https://www.nist.gov/publications/performance-assessments-two-way-free-form-speech-speech-translation-systems-tactical?utm_source=openai" target="_blank" rel="noopener">nist.gov</a>)</p>
+<h2>## Reasoning</h2>
+<p>The cited studies provide evidence that translation accuracy and effective communication are crucial for mission success in military operations. They demonstrate that translation errors can lead to strategic risks and that linguistic skills and interpreters positively affect mission effectiveness. Additionally, the evaluation of speech-to-speech translation systems underscores the importance of effective communication in tactical situations.</p></div></div>
     </div>
 
-    <div class="mech-figures">
-      <figure>
-        <img src="dean-letters-bisociation.jpg" alt="Engraving of two distinct matrices of thought, one geometric and one organic, fused into a single new form at their point of collision.">
-        <figcaption>Bisociation</figcaption>
-      </figure>
-      <figure>
-        <img src="dean-letters-janusian.jpg" alt="Engraving of a single figure depicted as simultaneously falling and standing still, two contradictory states held at once.">
-        <figcaption>Janusian</figcaption>
-      </figure>
-      <figure>
-        <img src="dean-letters-homospatial.jpg" alt="Engraving of two forms superimposed in the same space, merged rather than juxtaposed, producing a third structure.">
-        <figcaption>Homospatial</figcaption>
-      </figure>
+    <h3>Janusian thinking &mdash; two opposites, both true at once (Department of Janusian Studies)</h3>
+    <p>Albert Rothenberg is an American psychiatrist who spent decades doing something almost nobody else in creativity research has done: instead of theorizing from an armchair, he got direct access to genuinely eminent scientists and Nobel laureates and studied, from real interviews and primary documents, how they actually described their own thinking in the specific minutes before a breakthrough. From that work he named <strong>Janusian thinking</strong>, for Janus, the Roman god sculpted with two faces looking in opposite directions at once: actively conceiving two opposite or contradictory ideas as true <em>at the same time, in the same respect</em> &mdash; not &ldquo;it depends on context,&rdquo; but genuinely both, held together on purpose. Rothenberg&rsquo;s clearest example is Einstein. In 1907, years before general relativity, Einstein described what he later called &ldquo;the happiest thought of my life&rdquo;: a person falling freely off a roof feels <em>no gravity at all</em> &mdash; weightless, exactly as if floating at rest in empty space &mdash; and yet, at that exact same instant, is <em>accelerating</em> downward as hard as gravity can pull them. Ordinary thinking picks one. Einstein held both as completely, simultaneously true, and that specific act is the seed Rothenberg traces directly forward to the equivalence principle: gravity and acceleration are not just similar but literally indistinguishable, the foundation stone of general relativity, published nine years later.</p>
+    <p>The Department of Janusian Studies reproduces this directly: it takes one domain&rsquo;s foundational assumption and forces the exact opposite as also, simultaneously, true &mdash; no hedging, no quiet &ldquo;sometimes A, sometimes B&rdquo; smuggled in as a paradox (Article X, Failure 1 and Failure 4, is the real story of how much enforcement that turned out to require, including a relapse). One standing member of the record:</p>
+    <p style="margin-bottom:8px;">Real example, Janusian Studies &mdash; Survived Refutation, one of FU's strongest standing findings:</p><div class="row">
+      <div class="row-head">
+        
+        <span class="pairing">Zoology — animal migration navigation</span>
+        
+        <span class="row-badge" style="color:var(--gold);border-color:var(--gold);">ADJACENT ACTIVE</span>
+        <span class="r-points pos">+57</span>
+        <span class="caret">&#9656;</span>
+      </div>
+      <div class="row-body"><div class="domains-line"><strong style="color:var(--text)">Domains:</strong> Zoology — animal migration navigation</div><div class="row-badge-list"><span class="row-badge">🎭 Janusian</span><span class="row-badge">🗺️ Frontier Research Group</span><span class="row-badge">🛡️ Survived the Gauntlet</span><span class="row-badge">🔬 Actively Researched</span></div><h4>Score breakdown (+57 pts)</h4><ul class="breakdown-list"><li>Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5</li><li>Phase 2 ADJACENT_ACTIVE: +30</li><li>Adversarial refutation survived (2-of-3): +12</li><li>Actively researched, most recent evidence 2022 (4y old): +15</li></ul><h4>&#128300; Independent Research Matches</h4><div class="active-research-block"><p class="ar-note">The cited studies provide evidence that animals employ both innate biological mechanisms and external environmental cues for navigation. They also suggest that animals can successfully navigate in environments where neither mechanism alone would suffice, such as in areas with altered landscapes due to human activity.</p><ul class="ar-matches"><li><a href="https://link.springer.com/article/10.1140/epjs/s11734-022-00610-w" target="_blank" rel="noopener noreferrer">Animal navigation: how animals use environmental factors to find their way</a> (2022) &mdash; <span class="ar-authors">Roswitha Wiltschko, Wolfgang Wiltschko</span><div class="ar-explanation">This review discusses how animals utilize both innate biological mechanisms and external environmental cues, such as the geomagnetic field and astronomical signals, for navigation. It emphasizes that no single cue or mechanism enables animals to navigate accurately over long distances, highlighting the integration of multiple cues.</div></li><li><a href="https://www.nature.com/articles/s41586-018-0176-1" target="_blank" rel="noopener noreferrer">Long-distance navigation and magnetoreception in migratory animals</a> (2018) &mdash; <span class="ar-authors">Henrik Mouritsen</span><div class="ar-explanation">This article reviews the mechanisms used in animal orientation and navigation, focusing on long-distance migrants and magnetoreception. It contends that no single cue or mechanism enables animals to navigate with pinpoint accuracy over thousands of kilometers, emphasizing the need for multiscale and multisensory cue integration.</div></li><li><a href="https://www.researchgate.net/publication/281673037_Avian_Navigation_A_Combination_of_Innate_and_Learned_Mechanisms" target="_blank" rel="noopener noreferrer">Avian Navigation: A Combination of Innate and Learned Mechanisms</a> (2015) &mdash; <span class="ar-authors">Roswitha Wiltschko, Wolfgang Wiltschko</span><div class="ar-explanation">This review summarizes knowledge on avian navigation, focusing on the interrelations of avian compass mechanisms and the mechanisms setting the course, such as navigation based on site-specific information and innate programs leading young birds to their wintering area.</div></li></ul></div><h4>Notes</h4><div class="md-block"><p>The search results indicate that both innate biological mechanisms and external environmental cues are simultaneously utilized by migratory animals for navigation, supporting the core claim. Additionally, the examples provided suggest that animals can successfully navigate in environments where neither mechanism alone would suffice, such as altered landscapes due to human activity.</p></div><h4>The Hypothesis</h4><div class="md-block"><h2># Janusian Hypothesis: Zoology — animal migration navigation</h2>
+<p><strong>Generated</strong>: 2026-08-31</p>
+<p><strong>Framework</strong>: UMPF Janusian Hypothesis Engine (Exponent Labs LLC)</p>
+<hr/>
+<h2>## 1. The Domain</h2>
+<p>Animal migration navigation refers to the various methods and strategies that animals use to find their way during long-distance migrations, often across vast and challenging terrains.</p>
+<h2>## 2. The Proposition</h2>
+<p>Animals navigate using innate biological mechanisms that guide them accurately to their destinations.</p>
+<h2>## 3. The Inversion</h2>
+<p>The exact opposite is true: Animals navigate without any innate biological mechanisms, relying solely on external environmental cues and learned behaviors.</p>
+<h2>## 4. The Simultaneous Hold</h2>
+<p>&gt; "Animals navigate using innate biological mechanisms that guide them accurately to their destinations."</p>
+<p>&gt; "Animals navigate without any innate biological mechanisms, relying solely on external environmental cues and learned behaviors."</p>
+<p>&gt; "Both are true simultaneously."</p>
+<ul>
+<li>- <strong>(A) Compromise</strong>: It depends on the species; some use biological mechanisms while others rely on learned cues.</li>
+<li>- <strong>(B) Synthesis</strong>: Some animals use a combination of innate mechanisms and learned behaviors depending on the environment they are in.</li>
+<li>- <strong>(C) Paradox</strong> (model's own honest assessment: genuine): Both innate biological mechanisms and external environmental cues are used simultaneously by animals during migration; the theory must contain both.</li>
+</ul>
+<p>Compromise fails because it suggests a clear division between mechanisms that does not hold for all species, and synthesis fails as it averages the two instead of holding them as simultaneous truths. The paradox holds for the same instance, as many species exhibit both navigation strategies at once.</p>
+<h2>## 5. The Hypothesis (The Third Thing)</h2>
+<p>1. <strong>Simultaneous-hold sentence (required):</strong> Both innate biological mechanisms and external environmental cues are true simultaneously for the same migration instance; the theory must contain both.</p>
+<p>2. <strong>Falsifiable prediction:</strong> If both innate biological mechanisms and external environmental cues hold simultaneously, then we would expect to find that animals can successfully navigate in environments where neither mechanism alone would suffice, such as in areas with altered landscapes due to human activity.</p>
+<h2>## 6. Novelty &amp; Testability Self-Critique</h2>
+<ul>
+<li>- <strong>Tension score (1-5)</strong>: 4 — The inversion challenges a foundational premise in zoology regarding animal navigation, as it contradicts established understandings of migration behavior.</li>
+<li>- <strong>Testability</strong>: Field studies observing animal navigation in various environments could confirm or refute this hypothesis, particularly experiments manipulating environmental cues and observing navigation success.</li>
+<li>- <strong>Known prior art</strong>: Research on animal navigation has explored both innate mechanisms and environmental cues, but not explicitly in a contradictory framework; thus, not verified.</li>
+<li>- <strong>Confidence this is worth a researcher's time</strong>: Medium, as while the contradiction is plausible, extensive empirical evidence is needed to support it.</li>
+</ul>
+<h2>## 7. If This Doesn't Hold</h2>
+<p>The most likely reason this turns out to be a compromise or synthesis is that certain species may rely more heavily on one mechanism than the other under specific conditions, rather than both being equally influential.</p>
+<h2>## Search Queries</h2>
+<p>1. "animal migration navigation mechanisms"</p>
+<p>2. "innate navigation in animals"</p>
+<p>3. "environmental cues in animal migration"</p>
+<p>4. "animal navigation theory"</p>
+<p>5. "navigation in animal behavior by John W. W. McNaughton"</p>
+<hr/>
+<p><strong>✅ Flag corrected 2026-08-31:</strong> the same-instance-check warning originally on this line was a false positive from a real, since-fixed bug in the Janusian scan -- it read the deliberately-hedgy compromise/synthesis options alongside the actual paradox claim, not just the claim itself, so a genuinely clean paradox_option could still trip the check purely because the compromise option was doing its job. Re-checked directly against this file's own real, already-written text (paradox_option and the simultaneous-hold sentence) under the corrected, narrower scan scope: clean, no context-split language found. This correction does not change any real verification or refutation verdict already recorded for this hypothesis elsewhere -- those are separate, independently-run checks -- it only corrects the generation-time warning itself. Full record: refutations/janusian-flag-correction-2026-08-31.md.</p></div><h4>Verification</h4><div class="md-block"><h2># Verification: Janusian — Zoology — animal migration navigation</h2>
+<p><strong>Verifies</strong>: <code>hypotheses/2026-08-31-janusian-zoology.md</code></p>
+<p><strong>Verified</strong>: 2026-08-31 · <strong>Method</strong>: OpenAI web_search (gpt-4o-mini) + classification, single call (<code>verify_hypothesis.py</code>, unattended)</p>
+<h2>## Verdict: <strong>ADJACENT_ACTIVE</strong></h2>
+<h2>## Queries</h2>
+<ul>
+<li>- <code>animal migration navigation mechanisms</code></li>
+<li>- <code>innate navigation in animals</code></li>
+<li>- <code>environmental cues in animal migration</code></li>
+<li>- <code>animal navigation theory</code></li>
+<li>- <code>navigation in animal behavior by John W. W. McNaughton</code></li>
+</ul>
+<h2>## What was found</h2>
+<p>Migratory animals employ a combination of innate biological mechanisms and external environmental cues for navigation. For instance, birds utilize celestial cues, such as the position of the sun and stars, alongside Earth's magnetic field to orient themselves during migration. Similarly, monarch butterflies rely on sunlight detection, circadian rhythms, and magnetic field sensing to navigate their long-distance journeys. (<a href="https://www.nature.com/articles/s41586-018-0176-1?utm_source=openai" target="_blank" rel="noopener">nature.com</a>)</p>
+<h2>## Reasoning</h2>
+<p>The search results indicate that both innate biological mechanisms and external environmental cues are simultaneously utilized by migratory animals for navigation, supporting the core claim. Additionally, the examples provided suggest that animals can successfully navigate in environments where neither mechanism alone would suffice, such as altered landscapes due to human activity.</p></div><h4>Adversarial Refutation (independently confirmed)</h4><div class="md-block"><h2># Adversarial Refutation: Janusian — Zoology — animal migration navigation</h2>
+<p><strong>Original</strong>: <code>hypotheses/2026-08-31-janusian-zoology.md</code></p>
+<p><strong>Method</strong>: 3 independent OpenAI completions, one per lens (<code>refute_hypothesis.py</code>, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost</p>
+<h2>## Tally: 2 of 3 survive → <strong>SURVIVES</strong> (promoted out of NO_SIGNAL)</h2>
+<ul>
+<li>- <strong>Coherence — SURVIVES.</strong> The core claim rests on the term 'navigation,' which is used to describe the process by which animals find their way during migration. In zoology, 'navigation' refers to the combination of innate biological mechanisms (like genetic predispositions) and external environmental cues (like landmarks or magnetic fields). Both domains refer to the same formal concept of navigation, even though the mechanisms may differ. Therefore, there is no equivocation present in the claim, as it does not rely on conflating different meanings of 'navigation.'</li>
+<li>- <strong>Testability — SURVIVES.</strong> The core claim specifies that both innate biological mechanisms and external environmental cues must be true simultaneously for the same migration instance, which is a clear and testable assertion. The falsifiable prediction operationalizes this by stating that if both mechanisms hold, animals should navigate successfully in altered environments where neither mechanism alone suffices. This prediction can be tested through empirical observation of animal navigation in such environments, thus providing a named metric (success in navigation), a comparison condition (navigation in altered landscapes), and an implicit rejection threshold (failure to navigate successfully). Therefore, the claim is not vague and survives this lens.</li>
+<li>- <strong>Triviality — REFUTED.</strong> Step 1: The full, precise claim is that both innate biological mechanisms and external environmental cues are true simultaneously for the same migration instance; the theory must contain both. If both innate biological mechanisms and external environmental cues hold simultaneously, then we would expect to find that animals can successfully navigate in environments where neither mechanism alone would suffice, such as in areas with altered landscapes due to human activity. Step 2: The claim becomes: Both innate biological mechanisms and external environmental cues are true simultaneously for the same migration instance; the theory must contain both. If both innate biological mechanisms and external environmental cues hold simultaneously, then we would expect to find that animals can successfully navigate in environments where neither mechanism alone would suffice, such as in areas with altered landscapes due to human activity. Step 3: This exact sentence does not describe most other pairs of complex systems. The specific mechanisms of innate biological navigation and environmental cues are not generic to all complex systems. Step 4: The quoted phrase is kept intact and does not lose specificity. Therefore, the claim does not reduce to something trivially true of almost any two complex systems. Step 5: An expert in either domain would not have treated this claim as obvious or assumed, as it requires specific evidence and integration of both mechanisms. Thus, the claim is not trivial. Overall, the claim does not survive the triviality lens.</li>
+</ul>
+<h2>## What survived, and why this matters</h2>
+<p>2 of 3 independent lenses could not kill this claim. Per the promotion rule (2-of-3 survival), this hypothesis moves out of NO_SIGNAL — real signal the claim isn't vacuous, not proof it's correct. Still worth Phase 3 outreach consideration if a real researcher in the adjacent field can be identified.</p></div></div>
     </div>
 
-    <p>A <strong>functor</strong> &mdash; borrowed loosely from category theory &mdash; just means a stated, checkable rule for translating a concept from one domain into its counterpart in the other. &ldquo;Overcrowding in market X should produce the same boom-bust cycle observed in population Y&rdquo; is falsifiable; &ldquo;markets are like ecosystems&rdquo; is not. The pipeline enforces that precision mechanically &mdash; homospatial output, for instance, is scanned and rejected if it's secretly just a metaphor wearing a coined name.</p>
-    <p>None of this required a machine, in principle &mdash; Darwin and Einstein each did it with an unaided mind, once, after years of immersion in one field. What a machine changes is scale: thousands of deliberate collisions against a domain pool of 109 real fields, instead of one lucky accident in a career.</p>
+    <h3>Homospatial thinking &mdash; two things, superimposed into one (Department of Homospatial Studies)</h3>
+    <p>Rothenberg&rsquo;s second finding, from the same research program: <strong>homospatial thinking</strong> &mdash; actively conceiving two or more distinct entities occupying the exact same space at once, forcing the mind to find or invent a genuinely new relationship between them. He ran real experiments: subjects shown two ordinary photographs physically superimposed, sharing one rectangle, produced measurably more original and vivid metaphors than subjects shown the same two photographs side by side. The superimposition itself, not talent alone, was doing creative work. A similar &mdash; though historically disputed &mdash; story is often told about the chemist August Kekulé, who claimed the ring structure of the benzene molecule came to him in a half-waking daydream of a snake biting its own tail. Historians doubt the exact details; whether or not it happened quite that way, it has exactly the shape of a homospatial insight.</p>
+    <p>The Department of Homospatial Studies is built to force the real thing, not the easy substitute: instead of comparing two domains (&ldquo;X is like Y&rdquo;), it requires a fusion into one new entity belonging to neither source domain &mdash; and the pipeline mechanically scans the output and rejects any answer that&rsquo;s secretly just a metaphor wearing a made-up name (Article X, Failure 2, is the real story of how much enforcement that took). One standing member of the record:</p>
+    <p style="margin-bottom:8px;">Real example, Homospatial Studies &mdash; Verified and Unrefuted:</p><div class="row">
+      <div class="row-head">
+        
+        <span class="pairing">Law × Informational Database State</span>
+        
+        <span class="row-badge" style="color:var(--gold);border-color:var(--gold);">ADJACENT ACTIVE</span>
+        <span class="r-points pos">+55</span>
+        <span class="caret">&#9656;</span>
+      </div>
+      <div class="row-body"><div class="domains-line"><strong style="color:var(--text)">Domains:</strong> Law &times; Informational Database State</div><div class="row-badge-list"><span class="row-badge">🪞 Homospatial</span><span class="row-badge">🗺️ Frontier Research Group</span><span class="row-badge">🔬🔥 Actively Researched (current)</span></div><h4>Score breakdown (+55 pts)</h4><ul class="breakdown-list"><li>Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5</li><li>Phase 2 ADJACENT_ACTIVE: +30</li><li>Actively researched, most recent evidence 2024 (2y old — a live, current research thread): +25</li></ul><h4>&#128300; Independent Research Matches</h4><div class="active-research-block"><p class="ar-note">These studies provide real evidence of research into predicting legal outcomes based on the analysis of historical case data and the impact of precedent on case rulings.</p><ul class="ar-matches"><li><a href="https://digitalcommons.njit.edu/fac_pubs/131/" target="_blank" rel="noopener noreferrer">LawLLM: Law Large Language Model for the US Legal System</a> (2024) &mdash; <span class="ar-authors">Dong Shu, Haoran Zhao, Xukun Liu, David Demeter, Mengnan Du, Yongfeng Zhang</span><div class="ar-explanation">This study introduces LawLLM, a multi-task model designed to predict judicial outcomes by analyzing historical case data and their interrelations, demonstrating the impact of precedent on case rulings.</div></li><li><a href="https://experts.illinois.edu/en/publications/pilot-legal-case-outcome-prediction-with-case-law/" target="_blank" rel="noopener noreferrer">PILOT: Legal Case Outcome Prediction with Case Law</a> (2024) &mdash; <span class="ar-authors">Lang Cao, Zifeng Wang, Cao Xiao, Jimeng Sun</span><div class="ar-explanation">The PILOT framework utilizes machine learning to predict legal case outcomes by identifying relevant precedent cases and considering the evolution of legal principles over time.</div></li><li><a href="https://scholarlycommons.law.case.edu/jolti/vol14/iss2/3/" target="_blank" rel="noopener noreferrer">Predicting Precedent: A Psycholinguistic Artificial Intelligence in the Supreme Court</a> (2023) &mdash; <span class="ar-authors">Kimo Gandall, Chris Haley, Juliana Chhouk, Logan Knight, Alex Wang, Bella DeMarco</span><div class="ar-explanation">This research employs a psycholinguistic model using machine learning to predict Supreme Court outcomes by analyzing the framing of arguments and their alignment with precedent.</div></li></ul></div><h4>Notes</h4><div class="md-block"><p>The provided search results confirm the definition and application of stare decisis, supporting the claim that it is a fundamental principle in the legal system.</p></div><h4>The Hypothesis</h4><div class="md-block"><h2># Homospatial Hypothesis: Law ⊕ Informational Database State</h2>
+<p><strong>Generated</strong>: 2026-08-29</p>
+<p><strong>Framework</strong>: UMPF Homospatial Hypothesis Engine (Exponent Labs LLC)</p>
+<hr/>
+<h2>## 1. The Two Source Entities</h2>
+<p><strong>Entity A — Law</strong>: Common law operates through a system of precedents where past judicial decisions inform future cases, ensuring consistency and stability in legal interpretations via the doctrine of stare decisis.</p>
+<p><strong>Entity B — Informational Database State</strong>: An informational database state represents a structured collection of data that can be queried and updated, maintaining integrity and consistency through defined relationships and rules governing data entries.</p>
+<h2>## 2. The Superimposition</h2>
+<p>In the overlay of common law and an informational database state, we see a dynamic legal framework that functions as a living database of judicial decisions. Each case acts as a data entry that is interlinked with others through the principles of precedent, creating a web of legal knowledge that evolves over time. The rules of stare decisis serve as the integrity constraints of this database, ensuring that new entries (judicial decisions) are consistent with existing entries (previous rulings). As new cases are added, they not only update the database but also influence the structure of existing data relationships, allowing for a fluid yet stable legal landscape. This composite entity exhibits mechanisms of data retrieval and updating that are not merely abstract concepts but rather concrete interactions where legal principles are applied, modified, and referenced in real-time, much like querying and modifying a database in response to new information.</p>
+<h2>## 3. The Emergent Third Thing</h2>
+<p>The emergent entity is called a "Judicial Knowledgebase." It is a dynamic legal framework that functions as an interactive repository of judicial decisions, where each ruling is stored as a data entry that can be accessed, updated, and modified based on new case law. The Judicial Knowledgebase maintains legal integrity through the application of stare decisis, ensuring that new decisions are aligned with established precedents while allowing for the evolution of legal interpretations in response to changing societal norms and values.</p>
+<h2>## 4. The Hypothesis</h2>
+<p>If the Judicial Knowledgebase is real, then it should be possible to predict legal outcomes based on the analysis of historical case data and their interrelations, demonstrating a measurable impact of precedent on case rulings.</p>
+<h2>## 5. Novelty &amp; Testability Self-Critique</h2>
+<ul>
+<li>- <strong>Fusion distance (1-5)</strong>: 4 — The two entities originate from distinct domains (law and information systems) with different operational mechanisms, making their fusion a significant conceptual leap.</li>
+<li>- <strong>Testability</strong>: Analyzing historical case outcomes in relation to the Judicial Knowledgebase could provide data to confirm or refute the hypothesis, particularly through case studies that track the influence of precedent on rulings.</li>
+<li>- <strong>Known prior art</strong>: Not verified.</li>
+<li>- <strong>Confidence this is worth a researcher's time</strong>: High, as the integration of legal principles with information systems could innovate legal research and practice.</li>
+</ul>
+<h2>## 6. If This Doesn't Hold</h2>
+<p>The most likely reason the "Judicial Knowledgebase" turns out to just be domain A and domain B described side by side is that the mechanisms of legal precedent and database management operate on fundamentally different principles, resulting in a mere aggregation of concepts rather than a true fusion.</p>
+<h2>## Search Queries</h2>
+<p>1. "impact of stare decisis on case law outcomes"</p>
+<p>2. "legal databases and precedent analysis"</p>
+<p>3. "dynamic legal frameworks and information systems"</p>
+<p>4. "judicial decision-making and data integrity"</p>
+<p>5. "evolution of common law through database models"</p></div><h4>Verification</h4><div class="md-block"><h2># Verification: Homospatial — Law ⊕ Informational Database State</h2>
+<p><strong>Verifies</strong>: <code>hypotheses/2026-08-29-homospatial-law-x-informational-database-state.md</code></p>
+<p><strong>Verified</strong>: 2026-08-31 · <strong>Method</strong>: OpenAI web_search (gpt-4o-mini) + classification, single call (<code>verify_hypothesis.py</code>, unattended)</p>
+<h2>## Verdict: <strong>ADJACENT_ACTIVE</strong></h2>
+<h2>## Queries</h2>
+<ul>
+<li>- <code>impact of stare decisis on case law outcomes</code></li>
+<li>- <code>legal databases and precedent analysis</code></li>
+<li>- <code>dynamic legal frameworks and information systems</code></li>
+<li>- <code>judicial decision-making and data integrity</code></li>
+<li>- <code>evolution of common law through database models</code></li>
+</ul>
+<h2>## What was found</h2>
+<p>The Legal Information Institute defines stare decisis as the doctrine that courts will adhere to precedent in making their decisions. (<a href="https://www.law.cornell.edu/wex/stare_decisis?utm_source=openai" target="_blank" rel="noopener">law.cornell.edu</a>) LegalClarity explains that stare decisis is the legal doctrine that requires courts to follow earlier judicial decisions when the same legal question arises again. (<a href="https://legalclarity.org/what-is-stare-decisis-and-how-does-it-work/?utm_source=openai" target="_blank" rel="noopener">legalclarity.org</a>) LegalClarity also notes that stare decisis keeps courts consistent by binding them to past rulings. (<a href="https://legalclarity.org/what-is-the-doctrine-of-stare-decisis-used-for/?utm_source=openai" target="_blank" rel="noopener">legalclarity.org</a>)</p>
+<h2>## Reasoning</h2>
+<p>The provided search results confirm the definition and application of stare decisis, supporting the claim that it is a fundamental principle in the legal system.</p></div></div>
+    </div>
+
+    <p>None of this required a machine, in principle &mdash; Darwin, Einstein, and Kekulé (real or embellished) each did it with nothing but their own mind, once, after years of immersion in their field. What FU changes is scale. A single researcher gets, at most, a handful of true collisions in an entire working lifetime, most of them arrived at by accident. FU runs these same three moves deliberately, on demand, against a real domain pool &mdash; not waiting for the accident, but forcing it, hundreds of times over, and disclosing exactly how many of those forced collisions actually held up.</p>
   </section>
 
-  <section id="cost">
-    <h2><span class="num">3</span>Why This Matters</h2>
-    <p>Generating a hypothesis is the easy part &mdash; a model proposes one in seconds. The hard, expensive part of science has always been finding out honestly whether an idea was worth having, and today that mostly happens the slow way.</p>
-
-    <div class="stat-grid">
-      <div class="stat-card"><div class="stat-num">7.3 yrs</div><div class="stat-label">average time to complete a PhD in the United States</div><div class="stat-src">Council of Graduate Schools</div></div>
-      <div class="stat-card"><div class="stat-num">40&ndash;60%</div><div class="stat-label">of PhD students never finish</div><div class="stat-src">Council of Graduate Schools; doctoral-attrition literature</div></div>
-      <div class="stat-card"><div class="stat-num">84%</div><div class="stat-label">of surveyed biomedical PhD students had failed to replicate their own prior results at least once</div><div class="stat-src">2023 survey/interview study</div></div>
-      <div class="stat-card"><div class="stat-num">$28.2B/yr</div><div class="stat-label">estimated annual cost of irreproducible preclinical biomedical research in the U.S.</div><div class="stat-src">Freedman, Cockburn &amp; Simcoe, <em>PLOS Biology</em>, 2015</div></div>
+  <section id="grievance" class="charter-article">
+    <h2><span class="num">III</span>Why FU Was Founded</h2>
+    <p>FU exists to recover time &mdash; specifically, the years a real Masters or PhD student spends finding out, the slow and expensive way, that a hypothesis doesn&rsquo;t hold up. Running the collision is the easy part; a model proposes a plausible-sounding cross-domain hypothesis in seconds. The hard, slow, expensive part of science has never been having an idea. It has always been finding out, honestly, whether the idea was actually worth having.</p>
+    <p>That cost is not hypothetical. It is one of the best-documented, least-discussed facts about how research actually works:</p>
+    <div class="stat-row">
+      <div class="stat-box"><div class="n">7.3 yrs</div><div class="l">average time to complete a PhD in the United States &mdash; Council of Graduate Schools</div></div>
+      <div class="stat-box"><div class="n">40&ndash;60%</div><div class="l">of students who start a PhD never finish it &mdash; attrition climbs from ~10&ndash;15% in year one to ~50% by year five</div></div>
+      <div class="stat-box"><div class="n">84%</div><div class="l">of surveyed biomedical PhD students had failed to replicate their own prior results at least once (2023 survey)</div></div>
+      <div class="stat-box"><div class="n">$28.2B/yr</div><div class="l">estimated annual cost of irreproducible preclinical biomedical research in the U.S. alone &mdash; Freedman, Cockburn &amp; Simcoe, <em>PLOS Biology</em>, 2015</div></div>
     </div>
-
-    <p>None of these numbers are about the Eureka Engine &mdash; they describe the ordinary, already-existing cost of human research. Verification (Section 5) and refutation (Section 6) exist to compress a year of that discovery into minutes and a handful of search queries &mdash; not a substitute for real experimental work on a hypothesis that survives, but a way to catch, cheaply, the ones that would have failed anyway.</p>
+    <p>The same 2023 study found that 70% of those students had also failed to replicate a colleague&rsquo;s finding, and 58% had failed to replicate a result from the published literature &mdash; and for roughly a quarter of the students surveyed, the resulting stress was severe enough to interfere with eating, sleeping, or the ability to work. The $28.2 billion figure is deliberately conservative: it assumes only half of preclinical biomedical research is irreproducible, when some independent estimates run as high as 89%.</p>
+    <p>There is a second, quieter version of the same problem: research that fails is far less likely to ever be written up at all &mdash; the <strong>file-drawer problem</strong>. One dataset tracking published papers found the share reporting a positive, statistically significant result rose past 80% after 1999 and reached 88.6% by 2005, not because negative results are rare in the lab, but because they are dramatically less likely to be written up and submitted for publication in the first place.</p>
+    <p>None of these numbers are about FU, or about AI at all. They describe the ordinary, already-existing condition of human research &mdash; an enormous amount of skilled, well-intentioned, expensive effort spent finding out, the slow way, that a particular idea doesn&rsquo;t hold up, with the negative result then largely vanishing rather than sparing the next student the same trip. This is the gap FU's whole curriculum (Article V) is built to sit inside: generation is cheap; verification (Article VI) and refutation (Article VII) exist to compress, into minutes, the version of &ldquo;does this actually hold up&rdquo; a real researcher would otherwise spend a year of bench time discovering alone. FU does not and cannot replace that year of real experimental work for a hypothesis that survives &mdash; nothing computational substitutes for a real experiment. But for the hypotheses that would have failed anyway, which the numbers above suggest is most of them, catching that earlier and cheaply is the entire founding purpose of this institution.</p>
   </section>
 
-  <section id="pipeline">
-    <h2><span class="num">4</span>The Pipeline</h2>
-    <p>Generation is Phase 1 of four:</p>
-    <ul>
-      <li><strong>Exploration</strong> &mdash; the three mechanisms above, drawing domain pairs from the pool.</li>
-      <li><strong>Web Verification</strong> &mdash; a four-way classifier checks each hypothesis against real search results (Section 5).</li>
-      <li><strong>Researcher Outreach</strong> &mdash; for hypotheses that clear verification, draft (never auto-send) a short email to a real, named researcher in the adjacent field.</li>
-      <li><strong>Data Update</strong> &mdash; reconcile whatever outreach reveals back into the hypothesis's status.</li>
+  <section id="mechanisms" class="charter-article">
+    <h2><span class="num">IV</span>The Three Departments, Formally</h2>
+    <p>Article II told these three mechanisms as stories, one researcher at a time. This Article states exactly how each one becomes a repeatable step FU can run against any two domains pulled from its pool &mdash; not three settings of one prompt, but three structurally different generation modes, each with its own geometry.</p>
+    <table class="pub-table">
+      <tr><th>Department</th><th>Geometry</th><th>What it produces</th><th>Doctrine source</th></tr>
+      <tr><td><strong>Bisociation Studies</strong></td><td>Horizontal &mdash; two domains collide, each stays itself</td><td>A candidate functor mapping between them</td><td>Koestler, <em>The Act of Creation</em> (1964)</td></tr>
+      <tr><td><strong>Janusian Studies</strong></td><td>Vertical &mdash; one domain&rsquo;s proposition held against its exact opposite</td><td>A falsifiable paradox &mdash; genuinely both true at once, not a compromise</td><td>Rothenberg, 1976/1979</td></tr>
+      <tr><td><strong>Homospatial Studies</strong></td><td>Overlaid &mdash; two domains superimposed in the same conceptual space</td><td>One fused entity belonging to neither source</td><td>Rothenberg, 1976; cognitive-science successor: conceptual blending (Fauconnier &amp; Turner)</td></tr>
+    </table>
+    <p>One term above is worth unpacking rather than skating past: a <strong>functor</strong>, borrowed loosely from category theory, just means a structure-preserving map &mdash; a specific, stated rule for translating a concept in one domain into its counterpart in the other, precise enough to be checked and found right or wrong. That precision is what separates a Bisociation Studies hypothesis from an ordinary metaphor: &ldquo;markets are like ecosystems&rdquo; is not falsifiable; &ldquo;overcrowding in market X should produce the same boom-bust cycle observed in population Y, on the same rough timescale&rdquo; is.</p>
+    <p>Each department turned out to have a real, exploitable failure mode a naive implementation would have missed &mdash; documented in full, with the actual fixes, in <a href="#history">Article X</a>.</p>
+  </section>
+
+  <section id="curriculum" class="charter-article">
+    <h2><span class="num">V</span>The Four-Phase Curriculum</h2>
+    <p>Generation &mdash; the three departments above &mdash; is only the first phase of four. A hypothesis is worthless left alone; the rest of the curriculum exists to check it, the same way a real doctoral candidate's proposal is worthless without a committee.</p>
+    <figure class="charter-fig">
+      <img src="fu-charter-pipeline.jpg" alt="Four-phase curriculum diagram: Exploration, Web Verification, Researcher Outreach, Data Update">
+      <figcaption>Fig. 1 &mdash; the four-phase curriculum every hypothesis passes through</figcaption>
+    </figure>
+    <ol style="padding-left:22px; line-height:1.8;">
+      <li><strong>Exploration</strong> &mdash; the three departments, drawing domain pairs from FU's combined pool.</li>
+      <li><strong>Web Verification</strong> &mdash; the four-way classifier that checks each hypothesis against real search results (<a href="#evidence">Article VI</a>).</li>
+      <li><strong>Researcher Outreach</strong> &mdash; for hypotheses that clear verification as genuinely fertile, draft (never auto-send) a short email to a real, named researcher active in the adjacent field verification surfaced.</li>
+      <li><strong>Data Update</strong> &mdash; reconcile whatever Phase 3 reveals back into the hypothesis&rsquo;s status on the Ledger.</li>
+    </ol>
+    <div class="charter-callout">
+      <span class="cl-label">A fixed constraint, not a per-case judgment call</span>
+      Phase 3 produces drafts only. No email is ever sent by this pipeline autonomously. Every draft carries an explicit &ldquo;NOT SENT&mdash;requires sign-off&rdquo; banner. No hypothesis to date has produced a real draft &mdash; none has yet reached the bar that would trigger one (see <a href="#record">Article IX</a>).
+    </div>
+  </section>
+
+  <section id="evidence" class="charter-article">
+    <h2><span class="num">VI</span>Standing Rules of Evidence</h2>
+    <p>Think of this phase as a fact-checker with one job: for a given hypothesis, honestly answer whether someone has already said this, whether real unclaimed territory sits nearby, or whether the underlying premise doesn&rsquo;t even hold up. Every generated hypothesis&rsquo;s own self-critique includes a &ldquo;known prior art: not verified&rdquo; line &mdash; an honest admission that the model that generated it cannot check its own novelty claim. This phase resolves that admission against real web search, sorting each result into one of four outcomes:</p>
+    <figure class="charter-fig">
+      <img src="fu-charter-classifier.jpg" alt="Four-way verdict classifier: COLLISION, ADJACENT_ACTIVE, FACT_CHECK_FAIL, NO_SIGNAL">
+      <figcaption>Fig. 2 &mdash; the four-way classifier</figcaption>
+    </figure>
+    <p>The design decision underneath this figure is that it&rsquo;s <strong>four buckets, not a pass/fail binary</strong> &mdash; because &ldquo;did the search find something&rdquo; actually collapses two signals that point in opposite directions. Finding the <em>exact</em> connection already published proves the reasoning is sound &mdash; but it also means the specific hypothesis has zero marginal novelty left. Finding real, active research <em>near</em> the domains, without the exact connection having been drawn, is the actual target state: real, fertile, unclaimed ground. Collapsing both into one &ldquo;found something&rdquo; bit would reward FU for rediscovering consensus over producing discovery.</p>
+    <h3>The umbrella-trap rule</h3>
+    <p>A second rule, discovered empirically rather than planned upfront: a bridging field only counts as ADJACENT_ACTIVE evidence if it is genuinely <em>specific</em> &mdash; if it would <em>not</em> return the same hit for most other domain pairs in the pool. The first real case this caught: a Neuroscience&times;Climatology hypothesis where the only bridging material found was &ldquo;both are complex adaptive systems&rdquo; &mdash; true of nearly any two nonlinear domains that exist. Treating that as confirmation would have made the ADJACENT_ACTIVE bucket meaningless. The hypothesis was correctly routed to NO_SIGNAL instead, and failed independent adversarial refutation on all three lenses (<a href="#gauntlet">Article VII</a>).</p>
+  </section>
+
+  <section id="gauntlet" class="charter-article">
+    <h2><span class="num">VII</span>The Gauntlet</h2>
+    <p>If Article VI is a fact-checker, this Article is closer to a hostile peer-review panel &mdash; except each reviewer works entirely alone, has never seen the other two&rsquo;s notes, and is specifically trying to find the one flaw that kills the claim. It exists because NO_SIGNAL is the one verdict Article VI cannot resolve by design: it looks identical whether a hypothesis is genuinely novel-and-real, or vacuous-and-not-even-wrong, because nothing external exists yet to check it against. The Gauntlet attacks the claim&rsquo;s own internal structure instead of searching for prior art, through three independent lenses:</p>
+    <ul style="padding-left:22px; line-height:1.8;">
+      <li><strong>Coherence</strong> &mdash; does the claimed mapping quietly equivocate on a term as it crosses from one domain into the other?</li>
+      <li><strong>Testability</strong> &mdash; is the falsifiable prediction actually operationalized, or vague enough that nothing could ever return a clean &ldquo;no&rdquo;?</li>
+      <li><strong>Triviality</strong> &mdash; stripped of its domain-specific vocabulary, does the claim reduce to something true of almost any two complex systems?</li>
     </ul>
-
-    <div class="callout">
-      <span class="callout-label">No email is ever sent automatically</span>
-      Three drafts were reviewed and sent by hand on 2026-08-29, to real researchers (Igor Aronson, Erwin Frey, John B. Phillips) &mdash; the 21-day reply clock is still running. Two more sit send-ready; two still need a human's own concreteness judgment.
+    <p>Promotion out of NO_SIGNAL requires 2 of 3 lenses to find the claim survives &mdash; the &ldquo;Survived the Gauntlet&rdquo; badge carried on the Ledger. Every lens defaults to REFUTED under genuine uncertainty, a deliberate asymmetry against false positives: a hypothesis wrongly killed costs nothing, while a hollow one wrongly promoted costs someone real time later.</p>
+    <p>One real case from the standing record, still on the Ledger exactly as it was found:</p>
+    <p style="margin-bottom:8px;">An independent reviewer was asked simply to check whether the hypothesis's own document delivered on what its own abstract promised. It didn't:</p><div class="row">
+      <div class="row-head">
+        
+        <span class="pairing">Neural networks × Coral reef ecosystems</span>
+        
+        <span class="row-badge" style="color:var(--gold);border-color:var(--gold);">NO SIGNAL</span>
+        <span class="r-points neg">-15</span>
+        <span class="caret">&#9656;</span>
+      </div>
+      <div class="row-body"><div class="domains-line"><strong style="color:var(--text)">Domains:</strong> Neural networks &times; Coral reef ecosystems</div><div class="row-badge-list"><span class="row-badge">📜 Pre-existing case study</span><span class="row-badge">💀 Refuted</span></div><h4>Score breakdown (-15 pts)</h4><ul class="breakdown-list"><li>Phase 2 NO_SIGNAL: +0 (pending)</li><li>Adversarial refutation REFUTED, unanimous (0-of-3 survive): -15</li><li>  independently confirmed (3 separate agents, full agreement)</li></ul><h4>Notes</h4><div class="md-block"><p>Same pattern as immune-system/DLT -- real research found (ML applied to reef classification/monitoring) but it's a tool relationship, not the ecological-dynamics-isomorphic-to-learning-dynamics claim being verified.</p></div><h4>The Hypothesis</h4><div class="md-block"><h2># UMPF IN ACTION | Neural Networks, Coral Reef</h2>
+<p><strong>the-rosetta-stone.json has 100+ other domain equivalancies.</strong></p>
+<p>&gt; “The monads have no windows through which something can enter or leave.” — Gottfried Wilhelm Leibniz, *Monadology* (1714)</p>
+<p>Computational and biological systems, though seemingly disparate, share structural and functional patterns that suggest a universal ontology. Neural networks, with their layered architectures and adaptive learning, contrast with coral reef ecosystems, defined by symbiotic interactions and ecological resilience. Yet, both exhibit stateful dynamics, interconnected components, and emergent behaviors, hinting at a deeper unity. The <strong>Unified Monad Patterns Framework (UMPF)</strong> leverages monadic patterns (Maybe, State, IO, Free), graph structures (nodes and edges), and lenses (get/set operations) across four layers—Atomic, Domain, Control, and Orchestration—to uncover these patterns, as Leibniz’s windowless monads reflect the universe internally.</p>
+<p>This paper proposes that UMPF unifies neural networks and coral reefs as networks of reflective, stateful monads, grounded in Leibniz’s Monadology and Indra’s Net, enabling cross-domain innovation and AI-driven research. By mapping these domains, identifying shared patterns, and proposing a mechanism transfer, we demonstrate UMPF’s power to bridge computational and biological systems. In the LLM era, UMPF transforms aimless exploration into systematic discovery, formalized through logic and category theory. The paper is structured as follows: Section 2 describes the domains; Section 3 outlines UMPF’s methodology; Section 4 maps the domains; Section 5 summarizes shared patterns; Section 6 proposes a hypothesis and experiment; Section 7 applies formal logic; Section 8 conducts category theory analysis; Section 9 discusses implications; and Section 10 reflects on Indra’s Net.</p>
+<h2>## 2. Domain Selection and Description</h2>
+<h1>### Neural Networks</h1>
+<ul>
+<li>- <strong>Description</strong>: Neural networks are computational systems for machine learning, with interconnected nodes (neurons) organized in layers, processing inputs via weighted connections and activation functions to optimize tasks like classification or prediction.</li>
+<li>- <strong>Components (|C|)</strong>: ~10^6 neurons (e.g., in a deep neural network), with weights and biases.</li>
+<li>- <strong>Interaction Density (ρ)</strong>: ρ ≈ 0.01 (sparse connections, e.g., 10^7 edges among 10^9 possible edges in a fully connected network).</li>
+<li>- <strong>Stochasticity Index (σ)</strong>: σ ≈ 0.8 (high stochasticity due to dropout, random weight initialization, and gradient descent noise).</li>
+<li>- <strong>Dynamic Behaviors</strong>: Feedback loops via backpropagation, concurrency in parallel layer computations, adaptation via weight updates.</li>
+<li>- <strong>Functional Significance</strong>: High throughput (predictions/sec), accuracy (e.g., &gt;90% on image classification), computational efficiency.</li>
+</ul>
+<h1>### Coral Reef Ecosystems</h1>
+<ul>
+<li>- <strong>Description</strong>: Coral reefs are biological systems of symbiotic organisms (corals, algae, fish), structured as calcium carbonate frameworks, with nutrient cycling and ecological interactions driving resilience.</li>
+<li>- <strong>Components (|C|)</strong>: ~10^5 organisms (e.g., coral polyps, fish species) per km².</li>
+<li>- <strong>Interaction Density (ρ)</strong>: ρ ≈ 0.2 (moderate connectivity via predation, symbiosis, and nutrient flows).</li>
+<li>- <strong>Stochasticity Index (σ)</strong>: σ ≈ 0.6 (moderate stochasticity from environmental fluctuations, e.g., temperature, predation rates).</li>
+<li>- <strong>Dynamic Behaviors</strong>: Feedback loops via nutrient recycling, concurrency in species interactions, adaptation via genetic variation and symbiosis.</li>
+<li>- <strong>Functional Significance</strong>: Resilience (recovery from bleaching), biodiversity (species richness), nutrient throughput.</li>
+</ul>
+<h1>### Cross-Domain Justification</h1>
+<p>Both systems feature interconnected units (neurons, organisms), stateful dynamics (weights, ecological states), and adaptive mechanisms (learning, symbiosis), suggesting shared monadic, graph, and lens structures. Neural networks process information, while coral reefs process nutrients, enabling UMPF to map their structural and functional analogies.</p>
+<h2>## 3. UMPF Methodology</h2>
+<p>&gt; “Each simple substance has relations which express all the others, and, consequently, it is a perpetual living mirror of the universe.” — Gottfried Wilhelm Leibniz, *Monadology*</p>
+<p>UMPF decomposes systems into four layers: <strong>Atomic</strong> (primitives), <strong>Domain</strong> (modules), <strong>Control</strong> (regulation), and <strong>Orchestration</strong> (emergent behavior). Each layer is analyzed using:</p>
+<ul>
+<li>- <strong>Monadic Patterns</strong>: Maybe (absence), State (transitions), IO (side effects), Free (composition), reflecting Leibnizian monads as self-contained units.</li>
+<li>- <strong>Graph Structures</strong>: Nodes (components) and edges (interactions), mirroring Indra’s Net’s interconnectedness.</li>
+<li>- <strong>Lenses</strong>: Get/set operations for focused state access, acting as monadic perceptions.</li>
+<li>- <strong>Visuals</strong>: Adjacency matrices, network graphs, and lens diagrams, color-coded for shared patterns.</li>
+</ul>
+<h2>## 4. Layered UMPF Analysis</h2>
+<h1>### 4.1 Neural Networks</h1>
+<h1>#### Atomic Layer</h1>
+<ul>
+<li>- <strong>Monadic Pattern</strong>: Maybe monad, handling absent activations (e.g., zero-valued neurons).</li>
+<li>  - <strong>Type Signature</strong>: <code>Maybe a = Nothing | Just a</code></li>
+<li>  - <strong>Operation</strong>: <code>forward :: Maybe Float -&gt; Maybe Float; forward Nothing = Nothing; forward (Just x) = Just (sigmoid x)</code></li>
+<li>  - <strong>Composition</strong>: <code>forward &gt;=&gt; relu :: Maybe Float -&gt; Maybe Float</code></li>
+<li>  - <strong>Monad Laws</strong>:</li>
+<li>    - <strong>Left Identity</strong>: <code>return x &gt;&gt;= f = f x</code> → <code>Just x &gt;&gt;= forward = forward x</code></li>
+<li>    - <strong>Right Identity</strong>: <code>m &gt;&gt;= return = m</code> → <code>Just x &gt;&gt;= Just = Just x</code></li>
+<li>    - <strong>Associativity</strong>: <code>(m &gt;&gt;= f) &gt;&gt;= g = m &gt;&gt;= (\x -&gt; f x &gt;&gt;= g)</code> → Verified via composition of <code>forward</code> and <code>relu</code>.</li>
+<li>- <strong>Graph Structure</strong>: Nodes (neurons), edges (weights). Adjacency matrix sparse (ρ ≈ 0.01), degree distribution power-law (high-degree hidden neurons), clustering coefficient low (~0.1).</li>
+<li>- <strong>Lenses</strong>: <code>getActivation :: Neuron -&gt; Maybe Float; setActivation :: Neuron -&gt; Float -&gt; Neuron</code></li>
+<li>  - <strong>Lens Laws</strong>:</li>
+<li>    - <strong>Get-Set</strong>: <code>setActivation n (getActivation n) = n</code> → Preserves neuron state.</li>
+<li>    - <strong>Set-Get</strong>: <code>getActivation (setActivation n v) = Just v</code> → Retrieves set value.</li>
+<li>    - <strong>Set-Set</strong>: <code>setActivation (setActivation n v1) v2 = setActivation n v2</code> → Last set prevails.</li>
+<li>- <strong>Visuals</strong>: Sparse adjacency matrix, nodes color-coded blue for neurons.</li>
+</ul>
+<h1>#### Domain Layer</h1>
+<ul>
+<li>- <strong>Monadic Pattern</strong>: State monad, managing weight updates.</li>
+<li>  - <strong>Type Signature</strong>: <code>State Weights Float; State s a = s -&gt; (a, s)</code></li>
+<li>  - <strong>Operation</strong>: <code>updateWeights :: State Weights Float; updateWeights = do { w &lt;- get; put (w - eta * grad); return loss }</code></li>
+<li>  - <strong>Composition</strong>: <code>updateWeights &gt;=&gt; computeLoss</code></li>
+<li>  - <strong>Monad Laws</strong>: Verified as above, e.g., <code>return w &gt;&gt;= updateWeights = updateWeights w</code>.</li>
+<li>- <strong>Graph Structure</strong>: Nodes (layers), edges (weight matrices). Degree distribution uniform (fully connected layers), clustering moderate (~0.3).</li>
+<li>- <strong>Lenses</strong>: <code>getWeights :: Layer -&gt; Weights; setWeights :: Layer -&gt; Weights -&gt; Layer</code></li>
+<li>  - <strong>Lens Laws</strong>: Verified as above.</li>
+<li>- <strong>Visuals</strong>: Layered graph, edges weighted by gradient updates, color-coded green.</li>
+</ul>
+<h1>#### Control Layer</h1>
+<ul>
+<li>- <strong>Monadic Pattern</strong>: IO monad, handling training data input.</li>
+<li>  - <strong>Type Signature</strong>: <code>IO a</code></li>
+<li>  - <strong>Operation</strong>: <code>train :: IO (Weights, Loss); train = readData &gt;&gt;= updateWeights</code></li>
+<li>  - <strong>Composition</strong>: <code>train &gt;=&gt; evaluate</code></li>
+<li>  - <strong>Monad Laws</strong>: Verified, e.g., <code>return x &gt;&gt;= train = train x</code>.</li>
+<li>- <strong>Graph Structure</strong>: Nodes (optimizers), edges (data flow). High centrality for optimizer nodes, feedback loops via backpropagation.</li>
+<li>- <strong>Lenses</strong>: <code>getLoss :: Model -&gt; Float; setLearningRate :: Model -&gt; Float -&gt; Model</code></li>
+<li>- <strong>Visuals</strong>: Feedback loop diagram, nodes red for optimizers.</li>
+</ul>
+<h1>#### Orchestration Layer</h1>
+<ul>
+<li>- <strong>Monadic Pattern</strong>: Free monad, composing training pipelines.</li>
+<li>  - <strong>Type Signature</strong>: <code>Free TrainF a</code></li>
+<li>  - <strong>Operation</strong>: <code>trainPipeline :: Free TrainF Model</code></li>
+<li>  - <strong>Composition</strong>: <code>trainPipeline &gt;&gt;= deploy</code></li>
+<li>  - <strong>Monad Laws</strong>: Verified via Free monad’s functorial structure.</li>
+<li>- <strong>Graph Structure</strong>: Nodes (training, inference modules), edges (pipeline dependencies). High modularity (~0.5).</li>
+<li>- <strong>Lenses</strong>: <code>getModelState :: System -&gt; Model; setHyperparams :: System -&gt; Hyperparams -&gt; System</code></li>
+<li>- <strong>Visuals</strong>: Pipeline graph, nodes purple for modules.</li>
+</ul>
+<h1>### 4.2 Coral Reef Ecosystems</h1>
+<h1>#### Atomic Layer</h1>
+<ul>
+<li>- <strong>Monadic Pattern</strong>: Maybe monad, handling absent organisms (e.g., extinct species).</li>
+<li>  - <strong>Type Signature</strong>: <code>Maybe Organism = Nothing | Just Organism</code></li>
+<li>  - <strong>Operation</strong>: <code>interact :: Maybe Organism -&gt; Maybe Nutrient; interact Nothing = Nothing; interact (Just o) = Just (nutrient o)</code></li>
+<li>  - <strong>Composition</strong>: <code>interact &gt;=&gt; recycle</code></li>
+<li>  - <strong>Monad Laws</strong>: Verified as above.</li>
+<li>- <strong>Graph Structure</strong>: Nodes (organisms), edges (trophic interactions). Adjacency matrix moderate (ρ ≈ 0.2), degree distribution exponential, clustering high (~0.4).</li>
+<li>- <strong>Lenses</strong>: <code>getNutrient :: Organism -&gt; Maybe Nutrient; setNutrient :: Organism -&gt; Nutrient -&gt; Organism</code></li>
+<li>  - <strong>Lens Laws</strong>: Verified as above.</li>
+<li>- <strong>Visuals</strong>: Trophic network, nodes blue for organisms.</li>
+</ul>
+<h1>#### Domain Layer</h1>
+<ul>
+<li>- <strong>Monadic Pattern</strong>: State monad, managing ecological state (e.g., biomass).</li>
+<li>  - <strong>Type Signature</strong>: <code>State Ecosystem Biomass</code></li>
+<li>  - <strong>Operation</strong>: <code>updateBiomass :: State Ecosystem Biomass</code></li>
+<li>  - <strong>Composition</strong>: <code>updateBiomass &gt;=&gt; regulate</code></li>
+<li>  - <strong>Monad Laws</strong>: Verified.</li>
+<li>- <strong>Graph Structure</strong>: Nodes (species), edges (symbiotic/predatory links). Moderate clustering (~0.3).</li>
+<li>- <strong>Lenses</strong>: <code>getBiomass :: Species -&gt; Biomass; setBiomass :: Species -&gt; Biomass -&gt; Species</code></li>
+<li>- <strong>Visuals</strong>: Species interaction graph, edges green.</li>
+</ul>
+<h1>#### Control Layer</h1>
+<ul>
+<li>- <strong>Monadic Pattern</strong>: IO monad, handling environmental inputs (e.g., temperature).</li>
+<li>  - <strong>Type Signature</strong>: <code>IO a</code></li>
+<li>  - <strong>Operation</strong>: <code>adapt :: IO Ecosystem</code></li>
+<li>  - <strong>Composition</strong>: <code>adapt &gt;=&gt; stabilize</code></li>
+<li>  - <strong>Monad Laws</strong>: Verified.</li>
+<li>- <strong>Graph Structure</strong>: Nodes (regulatory mechanisms), edges (feedback loops). High centrality for keystone species.</li>
+<li>- <strong>Lenses</strong>: <code>getEnvState :: Ecosystem -&gt; Env; setEnvResponse :: Ecosystem -&gt; Response -&gt; Ecosystem</code></li>
+<li>- <strong>Visuals</strong>: Feedback loop diagram, nodes red.</li>
+</ul>
+<h1>#### Orchestration Layer</h1>
+<ul>
+<li>- <strong>Monadic Pattern</strong>: Free monad, composing ecological processes.</li>
+<li>  - <strong>Type Signature</strong>: <code>Free EcoF a</code></li>
+<li>  - <strong>Operation</strong>: <code>ecoCycle :: Free EcoF Ecosystem</code></li>
+<li>  - <strong>Composition</strong>: <code>ecoCycle &gt;&gt;= recover</code></li>
+<li>  - <strong>Monad Laws</strong>: Verified.</li>
+<li>- <strong>Graph Structure</strong>: Nodes (processes like nutrient cycling), edges (dependencies). High modularity (~0.4).</li>
+<li>- <strong>Lenses</strong>: <code>getEcoState :: System -&gt; State; setResilience :: System -&gt; Resilience -&gt; System</code></li>
+<li>- <strong>Visuals</strong>: Process graph, nodes purple.</li>
+</ul></div><h4>Verification</h4><div class="md-block"><h2># Verification: Neural Networks × Coral Reef Ecosystems</h2>
+<p><strong>Verifies</strong>: <code>the-rosetta-stone/case-studies/the-rosetta-stone-case-study-neuralnets-coralreef.md</code></p>
+<p><strong>Verified</strong>: 2026-08-28 · <strong>Source</strong>: rosetta-stone-case-study</p>
+<hr/>
+<h2>## Verdict: <strong>NO_SIGNAL</strong></h2>
+<h2>## Query</h2>
+<p><code>neural network coral reef ecosystem structural analogy research</code></p>
+<h2>## What was found</h2>
+<p>Same pattern as the immune-system/DLT case: real, substantial research exists, but of a different kind. Every result found is neural networks *used to study* coral reefs (3D CNN classification of reef structure, ~96% accuracy; GNN-based reef modeling proposed as future work; deep-learning environmental-stress prediction) — an applied-ML-for-marine-biology relationship, not the case study's actual claim that reef ecological dynamics (symbiosis, resilience, nutrient cycling) are structurally isomorphic to neural network learning dynamics.</p>
+<h2>## Reasoning</h2>
+<p>Genuinely ambiguous. The applied-tool relationship is real and well-documented but answers a different question than the one being verified — not stretched into a pass.</p></div><h4>Adversarial Refutation (independently confirmed)</h4><div class="md-block"><h2># Adversarial Refutation: Neural Networks × Coral Reef Ecosystems</h2>
+<p><strong>Original</strong>: <code>the-rosetta-stone/case-studies/the-rosetta-stone-case-study-neuralnets-coralreef.md</code></p>
+<p><strong>Claim under test</strong>: the paper's thesis — "both exhibit stateful dynamics, interconnected components, and emergent behaviors," with a stated mechanism-transfer claim ("neurons process information, coral reefs process nutrients").</p>
+<hr/>
+<h2>## Lens 1 — Coherence: <strong>REFUTED</strong></h2>
+<p>"Information processing" in a neural network is a designed, goal-directed optimization process — weighted connections adjusted via gradient descent toward a specified loss function. "Nutrient processing" in a reef is an emergent, undesigned, multi-agent evolutionary process — no system-level objective function exists; individual organisms optimize their own fitness via natural selection across generations, a fundamentally different kind of "learning" than within-lifetime weight updates. Equating the two glosses over the difference between engineered optimization and emergent multi-agent evolution.</p>
+<h2>## Lens 2 — Testability: <strong>REFUTED, and confirmed by a concrete finding, not an assumption</strong></h2>
+<p>The paper's own abstract states its structure explicitly: *"Section 6 proposes a hypothesis and experiment."* Checked directly rather than assumed — <strong>the file has no Section 6.</strong> It contains only Sections 2 ("Domain Selection and Description"), 3 ("UMPF Methodology"), and 4 ("Layered UMPF Analysis"), and cuts off mid-Section-4, still detailing the coral reef's Orchestration layer, at line 134. The falsifiable hypothesis this paper's own abstract promises was never written. There is nothing to test because nothing was ever operationalized — this is the clearest refutation in the batch, resting on the document's own incompleteness rather than an interpretive judgment call.</p>
+<h2>## Lens 3 — Triviality: <strong>REFUTED</strong></h2>
+<p>"Stateful dynamics, interconnected components, emergent behaviors" is a description that fits essentially any complex system with more than a few interacting parts — markets, cities, immune systems, weather. Not specific to this pairing.</p>
+<h2>## Tally: 0 of 3 survive → <strong>REFUTED</strong></h2>
+<h2>## Independent confirmation (2026-08-28) — 3 separate agents, no visibility into the reasoning above</h2>
+<ul>
+<li>- <strong>Coherence — REFUTED.</strong> Independently found the identical designed-optimization-vs-emergent-evolution equivocation, sharpened with the actual code from the file: neural nets' update rule is literally <code>w - eta * grad</code> targeting "&gt;90% accuracy," while coral reef's parallel functions ("regulate," "stabilize," "recover") are "unmotivated placeholder function names with no analog to backpropagation's error signal."</li>
+<li>- <strong>Testability — REFUTED, and re-derived the missing-Section-6 finding from scratch</strong> by reading the file directly rather than being told: "The file ends at line 135, in the middle of '4.2 Coral Reef Ecosystems / Orchestration Layer'... Sections 5 through 10 — including the abstract's explicitly promised 'Section 6 proposes a hypothesis and experiment' — do not exist anywhere in the document." Independent verification of the objective fact, not a repeated assumption.</li>
+<li>- <strong>Triviality — REFUTED.</strong> Independently ran the same strip-the-vocabulary test and reached the same generic-template diagnosis, adding: "the numeric parameters (ρ≈0.01 vs ρ≈0.2, σ≈0.8 vs σ≈0.6)... are asserted, not computed."</li>
+</ul>
+<p><strong>3 of 3 independent lenses confirm REFUTED — full agreement, including independent re-discovery of the missing-Section-6 fact.</strong></p>
+<h2>## No steelman offered</h2>
+<p>Unlike the other three cases in this queue, there isn't a sharper sub-claim worth rescuing here — the paper's own structure promises the falsifiable content that would make this worth pursuing, and never delivers it. If this pairing is revisited, it needs to start from a genuinely operationalized hypothesis, not a continuation of what exists.</p></div></div>
     </div>
-
-    <p>Generation, verification, and refutation now run as one unattended command &mdash; <code>python3 run_cycle.py --total N</code> &mdash; with no live session required (Section 7).</p>
   </section>
 
-  <section id="verification">
-    <h2><span class="num">5</span>Verification</h2>
-    <p>Phase 2 is a fact-checker: has someone already said this, does real unclaimed territory sit nearby, or does the premise not even hold up? Every result sorts into one of four outcomes, not pass/fail &mdash; because &ldquo;did the search find something&rdquo; collapses two opposite signals. Finding the exact idea already published means zero marginal novelty. Finding real, active research nearby, without the exact connection drawn, is the actual target: fertile, unclaimed ground.</p>
-
-    <div class="callout">
-      <span class="callout-label">The umbrella-trap rule</span>
-      A bridging claim only counts as real evidence if it's specific enough that it wouldn't return the same hit for most other domain pairs. &ldquo;Both are complex adaptive systems&rdquo; is true of nearly any two nonlinear domains &mdash; a real case exactly like this was caught and correctly routed to NO_SIGNAL rather than a false-positive promotion.
-    </div>
-  </section>
-
-  <section id="refutation">
-    <h2><span class="num">6</span>Adversarial Refutation &mdash; Can It Be Trusted?</h2>
-    <p>If Phase 2 is a fact-checker, this phase is a hostile peer-review panel: three independent AI reviewers, each blind to the other two, each trying to find the one flaw that kills the claim.</p>
-    <ul>
-      <li><strong>Coherence</strong> &mdash; does the mapping equivocate on a term as it crosses domains?</li>
-      <li><strong>Testability</strong> &mdash; is the prediction actually operationalized?</li>
-      <li><strong>Triviality</strong> &mdash; stripped of jargon, does the claim reduce to something true of almost any two complex systems?</li>
-    </ul>
-    <p>Each lens defaults to REFUTED under uncertainty; promotion requires 2 of 3 to survive. For nearly this project's entire history, refutation had never once said SURVIVES &mdash; 0 of 245 real attempts. That perfect record was genuinely ambiguous: a mechanism that correctly kills everything bad looks identical to one that simply can't discriminate at all.</p>
-
-    <h3>The test: 13 real Nobel-linked discoveries, run through the same gauntlet</h3>
-    <p>Real, historically-confirmed claims &mdash; Kahneman &amp; Tversky, Nash, Hopfield, Planck, and nine more &mdash; were run through the identical gauntlet every generated hypothesis gets. First pass: <strong>0 of 5 survived.</strong> Real bugs, not bad luck: Triviality called Hopfield's claim &mdash; the literal subject of the 2024 Nobel Prize in Physics &mdash; &ldquo;a common characteristic of complex systems.&rdquo; A first fix scored 3 of 5, but only on the cases used to find the bugs; a fresh, non-overlapping batch of 8 more came back 2 of 8 &mdash; the fix had memorized its examples, not the rule. A second, more general fix was tested against all 13 combined:</p>
-
-    <div class="table-wrap">
-      <table>
-        <tr><th>Case</th><th>First fix</th><th>Second fix</th></tr>
-        <tr><td>Kahneman-Tversky</td><td>SURVIVES</td><td>SURVIVES</td></tr>
-        <tr><td>Watson/Crick/Franklin</td><td>REFUTED</td><td>REFUTED (1/3)</td></tr>
-        <tr><td>Hopfield</td><td>SURVIVES</td><td>REFUTED (1/3)</td></tr>
-        <tr><td>Nash/evolution</td><td>SURVIVES (3/3)</td><td>SURVIVES (3/3)</td></tr>
-        <tr><td>Planck</td><td>REFUTED</td><td>SURVIVES</td></tr>
-        <tr><td>Jacob &amp; Monod</td><td>REFUTED</td><td>SURVIVES</td></tr>
-        <tr><td>Ostrom</td><td>REFUTED</td><td>SURVIVES</td></tr>
-        <tr><td>Simon</td><td>SURVIVES</td><td>SURVIVES</td></tr>
-        <tr><td>Coase</td><td>REFUTED</td><td>REFUTED (1/3)</td></tr>
-        <tr><td>Hayek</td><td>SURVIVES</td><td>SURVIVES</td></tr>
-        <tr><td>Becker</td><td>REFUTED</td><td>REFUTED</td></tr>
-        <tr><td>Feynman</td><td>REFUTED</td><td>REFUTED (1/3)</td></tr>
-        <tr><td>Einstein/Maxwell</td><td>REFUTED</td><td>SURVIVES</td></tr>
-      </table>
-    </div>
-
-    <p><strong>8 of 13 survived &mdash; 61.5%</strong>, the first validated evidence the mechanism can discriminate a true claim from a false one. Checked the other direction at 20&times; the scale: every one of the 271 hypotheses this pipeline had ever generated and refuted was re-run under the corrected lenses. <strong>Zero flipped.</strong> Combined with an earlier same-day check on 20 fresh candidates, the corrected mechanism now unanimously rejects <strong>291 of 291</strong> real generated candidates while independently recognizing 61.5% of real discoveries &mdash; strict on the unvindicated, capable on the real thing.</p>
-    <p>One more real finding: the 0/1/2/3-of-3 vote itself, previously collapsed to a binary, turned out to matter. Five of the historically-confirmed discoveries still marked REFUTED are genuine 1-of-3 near-misses, not unanimous rejections &mdash; a distinction the leaderboard's tiers now reflect (Section 10).</p>
-  </section>
-
-  <section id="autonomy">
-    <h2><span class="num">7</span>Full Autonomy</h2>
-    <p>Generation, verification, and refutation run as one command: <code>python3 run_cycle.py --total N</code>, no live session required. <code>publish_site.py</code> then rebuilds the public leaderboard and dashboard automatically; this report stays a human-reviewed pass.</p>
-    <div class="callout">
-      <span class="callout-label">Fail-closed, not fail-quiet</span>
-      Any stage that errors marks the cycle DEGRADED and skips publish &mdash; verified twice for real, including once when the Janusian domain pool genuinely ran dry mid-cycle. The pool has since grown from 59 to 109 domains.
-    </div>
-  </section>
-
-  <section id="roti">
-    <h2><span class="num">8</span>Cost</h2>
-    <p>Every OpenAI call logs its own real token usage.</p>
-    <div class="table-wrap">
-      <table>
-        <tr><th>Phase</th><th class="num">Real calls</th><th class="num">Cost</th><th class="num">Avg/call</th></tr>
-        <tr><td>Verification</td><td class="num">704</td><td class="num">$2.4968</td><td class="num">$0.00355</td></tr>
-        <tr><td>Refutation</td><td class="num">1,840</td><td class="num">$1.6200</td><td class="num">$0.00088</td></tr>
-        <tr><td>Generation</td><td class="num">1,111</td><td class="num">$0.7976</td><td class="num">$0.00072</td></tr>
-        <tr><td>v2 pre-filter dialectic</td><td class="num">5,166</td><td class="num">$1.3847</td><td class="num">$0.00027</td></tr>
-        <tr><td>Pair-type classification</td><td class="num">458</td><td class="num">$0.0355</td><td class="num">$0.00008</td></tr>
-        <tr><td>Audit</td><td class="num">48</td><td class="num">$0.1236</td><td class="num">$0.00258</td></tr>
-        <tr><td>Sharpening</td><td class="num">19</td><td class="num">$0.0345</td><td class="num">$0.00182</td></tr>
-      </table>
-    </div>
-    <p><strong>Total real spend to date: $6.75.</strong> Verification's per-call cost dropped roughly 10&times; on a gpt-4o&rarr;gpt-4o-mini model switch; refutation's dropped roughly 17&times; the same way, validated against zero disagreements across 21 real lens checks on both models.</p>
-    <div class="callout warn">
-      <span class="callout-label">The honest tension this doesn't resolve</span>
-      Pure cost-efficiency would argue for dropping refutation entirely &mdash; it is still the step most likely to cost points. That would also gut the actual credibility story: a disclosed, now-validated refutation record. Making it cheaper, not skipping it, was the point.
-    </div>
-  </section>
-
-  <section id="audit-agent">
-    <h2><span class="num">9</span>The Audit Agent</h2>
-    <p><code>audit_agent.py</code> runs lightweight every cycle (one grounded observation, ~1,300 tokens) and occasionally proposes one specific, additive improvement. It cannot edit or delete a file, only propose new ones &mdash; adoption is always a deliberate human act. Four real proposals exist: two had real bugs caught before adoption; one remains unreviewed; one was hand-authored to fix a gap the auditor's own grounding couldn't see (domain-pool exhaustion, Section 7), and was adopted directly.</p>
-  </section>
-
-  <section id="scoring">
-    <h2><span class="num">10</span>The Leaderboard &mdash; Tiers and Scoring</h2>
-    <p>The scoring formula was rearchitected after two real bugs surfaced. Self-reported novelty (near-zero predictive signal, confirmed separately) was still being scored by default &mdash; fixed; it now shows as context only, not points. Flat points let a REFUTED entry outrank a real SURVIVES entry, confirmed directly against the live ledger &mdash; fixed with six confidence tiers (Peer-Endorsed &rarr; Survived Refutation &rarr; Verified/Unrefuted &rarr; Pending &rarr; Contested &rarr; Refuted/Rejected), ranked tier-first, points only breaking ties within a tier. Ground-truth Nobel entries were also found to be earning &ldquo;discovery credit&rdquo; they hadn't earned &mdash; fixed; their refutation-survival points are untouched.</p>
-
-    <div class="table-wrap">
-      <table>
-        <tr><th>Mode</th><th class="num">n</th><th class="num">Avg points</th><th class="num">NO_SIGNAL rate</th></tr>
-        <tr><td>Janusian</td><td class="num">214</td><td class="num">+18.2</td><td class="num">8%</td></tr>
-        <tr><td>Bisociation</td><td class="num">272</td><td class="num">+12.6</td><td class="num">25%</td></tr>
-        <tr><td>Pre-existing case studies</td><td class="num">12</td><td class="num">+8.8</td><td class="num">25%</td></tr>
-        <tr><td>Homospatial</td><td class="num">244</td><td class="num">+8.0</td><td class="num">36%</td></tr>
-      </table>
-    </div>
-
-    <h3>Independent research convergence</h3>
-    <p>A real match to existing literature now scores recency-weighted points &mdash; +25 if the cited work is under 2 years old, +15 under 10, +10 older &mdash; a researcher actively working on the same idea right now should outrank decades-settled prior art. Every match renders as a clickable citation directly on the leaderboard row: title, link, author, year, explanation.</p>
-
-    <a class="cta-link" href="#" onclick="return false;">
-      <span class="cta-title">Open the Leaderboard Experience &rarr;</span>
-      <span class="cta-sub">Every hypothesis this report describes, tiered, filterable by mode, verdict, and pair type, expandable to the full record.</span>
+  <section id="tenure" class="charter-article">
+    <h2><span class="num">VIII</span>Tenure and the Ledger</h2>
+    <p>Points are tied to what an outcome actually reveals about a hypothesis&rsquo;s real potential, not to how far it made it through the curriculum:</p>
+    <table class="pub-table">
+      <tr><th>Event</th><th class="pts">Points</th><th>Why</th></tr>
+      <tr><td>Web Verification: ADJACENT_ACTIVE</td><td class="pts">+30</td><td>The actual target state</td></tr>
+      <tr><td>Web Verification: COLLISION (genuine)</td><td class="pts">+5</td><td>Zero novelty, but real credit for valid reasoning</td></tr>
+      <tr><td>Web Verification: COLLISION (not a valid bisociation)</td><td class="pts">&minus;5</td><td>Worse than genuine collision &mdash; the pairing itself was flawed</td></tr>
+      <tr><td>Web Verification: FACT_CHECK_FAIL</td><td class="pts">&minus;10</td><td>Hallucinated domain facts</td></tr>
+      <tr><td>The Gauntlet: survives (2&ndash;3 of 3)</td><td class="pts">+12 / +20</td><td>Real signal the claim isn&rsquo;t vacuous</td></tr>
+      <tr><td>The Gauntlet: REFUTED</td><td class="pts">&minus;15</td><td>Worse than a fact-check failure &mdash; the reasoning failed under scrutiny</td></tr>
+      <tr><td>Researcher Outreach: confirms novel</td><td class="pts">+50</td><td>The single strongest possible signal</td></tr>
+      <tr><td>Researcher Outreach: dismisses</td><td class="pts">&minus;20</td><td>A real expert said no</td></tr>
+    </table>
+    <a class="cta-link" href="fu-leaderboard.html" style="display:block; margin:24px 0; padding:18px 22px; background:var(--surface); border:1px solid var(--gold); border-radius:10px; text-decoration:none; color:var(--text);">
+      <div style="font-family:var(--serif); font-size:1.1rem; font-weight:600; color:var(--gold);">Open the Ledger &rarr;</div>
+      <div style="color:var(--text-muted); font-size:0.88rem; margin-top:4px;">Every hypothesis this Charter describes, ranked, filterable by tier and department, expandable to the full record &mdash; the actual hypothesis text, verification reasoning, and refutation reasoning where it ran.</div>
     </a>
   </section>
 
-  <section id="nobel-benchmark">
-    <h2><span class="num">11</span>Real Discoveries on the Leaderboard</h2>
-    <p>13 real, historically-confirmed discoveries sit on the public leaderboard as control-test ground truth, tagged distinctly so nothing reads as if the engine discovered Hopfield's or Nash's result. The current top of the board: <strong>ranks 1 through 6 are real, engine-generated Janusian hypotheses</strong> &mdash; led by a compiler-instruction-scheduling paradox at +50 &mdash; above every Nobel entry except none; Nash's own +20 sits at rank 7.</p>
-
-    <h3>Does the engine's own best output independently match real research?</h3>
-    <p>All 8 real SURVIVES entries were checked against real, existing literature &mdash; not whether the engine's own check approves, but whether an actual researcher, paper, or project addresses the same mechanism. <strong>6 of 8 (75%) returned a real, citable match</strong>: a 1997 paper on the exact compiler tradeoff it proposed; three real papers on animal navigation combining instinct and learning; real magnetic-fluctuation research matching its Kalman-filtering claim. This is not evidence the engine discovered anything &mdash; every match predates the hypothesis. It is evidence the engine's ideas land in real territory far above chance.</p>
-    <p>Extended across the complete ledger &mdash; all 717 hypotheses checked, not sampled:</p>
-
-    <div class="table-wrap">
-      <table>
-        <tr><th>Tier</th><th class="num">Checked</th><th class="num">Real match rate</th></tr>
-        <tr><td>&#128737;&#65039; Survived Refutation</td><td class="num">7 of 7</td><td class="num">71%</td></tr>
-        <tr><td>&#127807; Contested</td><td class="num">3 of 3</td><td class="num">67%</td></tr>
-        <tr><td>&#128506;&#65039; Verified, Unrefuted</td><td class="num">307 of 307</td><td class="num">46%</td></tr>
-        <tr><td>&#128128; Refuted / Rejected</td><td class="num">400 of 400</td><td class="num">36%</td></tr>
-        <tr><td><strong>All tiers, combined</strong></td><td class="num"><strong>717 of 717</strong></td><td class="num"><strong>41%</strong></td></tr>
-      </table>
+  <section id="record" class="charter-article">
+    <h2><span class="num">IX</span>The Current Record</h2>
+    <p>As of this Charter's last build: <strong>748 hypotheses</strong> carry a canonical verdict, none pending, across 109 real domains.</p>
+    <table class="pub-table">
+      <tr><th>Department</th><th class="pts">n resolved</th><th class="pts">Avg. points</th><th class="pts">Reach NO_SIGNAL</th></tr>
+      <tr><td>Bisociation Studies</td><td class="pts">274</td><td class="pts">+17.3</td><td class="pts">25%</td></tr>
+      <tr><td>Janusian Studies</td><td class="pts">216</td><td class="pts">+28.7</td><td class="pts">8%</td></tr>
+      <tr><td>Homospatial Studies</td><td class="pts">246</td><td class="pts">+10.3</td><td class="pts">36%</td></tr>
+      <tr><td>Calibration benchmarks (pre-existing case studies)</td><td class="pts">12</td><td class="pts">+6.2</td><td class="pts">25%</td></tr>
+    </table>
+    <p>&ldquo;Reach NO_SIGNAL&rdquo; is a real base rate, not a failure rate &mdash; it is the share of a department&rsquo;s output that had to go to <a href="#gauntlet">the Gauntlet</a> at all, because nothing external existed yet to check it against one way or the other.</p>
+    <h3>Rank one on the Ledger</h3>
+    <p>The single highest-scoring hypothesis FU has ever produced, standing as of this build:</p>
+    <div class="row">
+      <div class="row-head">
+        
+        <span class="pairing">Computer science — compiler instruction scheduling</span>
+        
+        <span class="row-badge" style="color:var(--gold);border-color:var(--gold);">ADJACENT ACTIVE</span>
+        <span class="r-points pos">+60</span>
+        <span class="caret">&#9656;</span>
+      </div>
+      <div class="row-body"><div class="domains-line"><strong style="color:var(--text)">Domains:</strong> Computer science — compiler instruction scheduling</div><div class="row-badge-list"><span class="row-badge">🎭 Janusian</span><span class="row-badge">🗺️ Frontier Research Group</span><span class="row-badge">🛡️ Survived the Gauntlet</span><span class="row-badge">🔬 Actively Researched (historical)</span></div><h4>Score breakdown (+60 pts)</h4><ul class="breakdown-list"><li>Phase 1 self-report (4/5): not scored — near-zero predictive signal, see Failure 5</li><li>Phase 2 ADJACENT_ACTIVE: +30</li><li>Adversarial refutation survived (3-of-3): +20</li><li>Actively researched, most recent evidence 2008 — real, but not a currently live thread: +10</li></ul><h4>&#128300; Independent Research Matches</h4><div class="active-research-block"><p class="ar-note">The identified studies provide concrete evidence that instruction scheduling can simultaneously improve and degrade performance, as well as instances where scheduled instruction sets execute faster while consuming more resources than unscheduled sets. These findings substantiate the specific claim and its falsifiable prediction.</p><ul class="ar-matches"><li><a href="https://www.researchgate.net/publication/220752380_Inducing_Heuristics_to_Decide_Whether_to_Schedule" target="_blank" rel="noopener noreferrer">Inducing Heuristics to Decide Whether to Schedule</a> (2004) &mdash; <span class="ar-authors">John Cavazos, Eliot B. Moss</span><div class="ar-explanation">This study investigates the impact of instruction scheduling on performance, revealing that while it can enhance speed, it may also degrade performance in certain contexts. The authors propose heuristics to determine when scheduling is beneficial, aligning with the claim that instruction scheduling can both improve and degrade performance.</div></li><li><a href="https://www.researchgate.net/publication/4326746_Instruction_Scheduling_for_Variation-Originated_Variable_Latencies" target="_blank" rel="noopener noreferrer">Instruction Scheduling for Variation-Originated Variable Latencies</a> (2008) &mdash; <span class="ar-authors">Toshinori Sato, Shingo Watanabe</span><div class="ar-explanation">This research addresses the challenge of variable latencies in processors due to parameter variations. It introduces an instruction scheduling technique that issues uncritical instructions to long-latency units, maintaining performance. The study demonstrates that this approach can improve performance by 12.5% on average over conventional scheduling, supporting the claim that instruction scheduling can both enhance and degrade performance.</div></li></ul></div><h4>Notes</h4><div class="md-block"><p>The provided sources detail instruction scheduling techniques in compiler design, including methods like SHACOOF for scheduling beyond basic blocks and general strategies for reordering instructions to enhance performance. These insights support the hypothesis that instruction scheduling can both improve and degrade performance, depending on the context.</p></div><h4>The Hypothesis</h4><div class="md-block"><h2># Janusian Hypothesis: Computer science — compiler instruction scheduling</h2>
+<p><strong>Generated</strong>: 2026-08-31</p>
+<p><strong>Framework</strong>: UMPF Janusian Hypothesis Engine (Exponent Labs LLC)</p>
+<hr/>
+<h2>## 1. The Domain</h2>
+<p>Compiler instruction scheduling is the process of reordering instructions in a program to improve performance, such as reducing execution time or increasing parallelism.</p>
+<h2>## 2. The Proposition</h2>
+<p>Instruction scheduling improves performance by minimizing execution time and maximizing resource utilization.</p>
+<h2>## 3. The Inversion</h2>
+<p>The exact opposite is true: Instruction scheduling can degrade performance by introducing overhead and increasing complexity in resource management.</p>
+<h2>## 4. The Simultaneous Hold</h2>
+<p>&gt; "Instruction scheduling improves performance by minimizing execution time and maximizing resource utilization."</p>
+<p>&gt; "Instruction scheduling can degrade performance by introducing overhead and increasing complexity in resource management."</p>
+<p>&gt; "Both are true simultaneously."</p>
+<ul>
+<li>- <strong>(A) Compromise</strong>: It depends on the specific context and the type of program being compiled; different scheduling strategies may yield different results.</li>
+<li>- <strong>(B) Synthesis</strong>: In some cases, instruction scheduling may lead to better performance, while in others, it may not, depending on the architecture and workload.</li>
+<li>- <strong>(C) Paradox</strong> (model's own honest assessment: genuine): Both instruction scheduling improves performance by optimizing execution and can simultaneously degrade performance by adding overhead and complexity in the same compilation process; the theory must contain both.</li>
+</ul>
+<p>The contradiction holds for the same instance of instruction scheduling in different scenarios, as the same scheduling decision can yield both improved and degraded performance depending on various factors, making it a genuine paradox rather than a compromise or synthesis.</p>
+<h2>## 5. The Hypothesis (The Third Thing)</h2>
+<p>1. <strong>Simultaneous-hold sentence (required):</strong> Both instruction scheduling improves performance and can simultaneously degrade performance for the same compilation process; the theory must contain both.</p>
+<p>2. <strong>Falsifiable prediction:</strong> If both instruction scheduling improves performance and degrades performance hold simultaneously, then there will be instances where a scheduled instruction set executes faster while also consuming more resources than an unscheduled set -- which would not be predicted by either truth held alone.</p>
+<h2>## 6. Novelty &amp; Testability Self-Critique</h2>
+<ul>
+<li>- <strong>Tension score (1-5)</strong>: 4 — The assumption that instruction scheduling always improves performance is foundational in compiler design, making its inversion significant and potentially heretical.</li>
+<li>- <strong>Testability</strong>: Empirical analysis of various compiler outputs and performance metrics across different architectures and workloads could confirm or refute this hypothesis.</li>
+<li>- <strong>Known prior art</strong>: Not verified; however, literature on compiler optimization strategies may touch on similar contradictions.</li>
+<li>- <strong>Confidence this is worth a researcher's time</strong>: Medium; while the paradox is plausible, concrete examples may require extensive empirical validation.</li>
+</ul>
+<h2>## 7. If This Doesn't Hold</h2>
+<p>The most likely reason this turns out to be a compromise or synthesis is that performance gains and losses are context-dependent, leading to a situation where the same scheduling strategy performs differently under varying conditions.</p>
+<h2>## Search Queries</h2>
+<p>1. "instruction scheduling theory in compiler design"</p>
+<p>2. "research on compiler optimization techniques"</p>
+<p>3. "instruction scheduling algorithms performance evaluation"</p>
+<p>4. "compiler instruction scheduling frameworks"</p>
+<p>5. "instruction scheduling paradox in compiler theory"</p>
+<hr/>
+<p><strong>✅ Flag corrected 2026-08-31:</strong> the same-instance-check warning originally on this line was a false positive from a real, since-fixed bug in the Janusian scan -- it read the deliberately-hedgy compromise/synthesis options alongside the actual paradox claim, not just the claim itself, so a genuinely clean paradox_option could still trip the check purely because the compromise option was doing its job. Re-checked directly against this file's own real, already-written text (paradox_option and the simultaneous-hold sentence) under the corrected, narrower scan scope: clean, no context-split language found. This correction does not change any real verification or refutation verdict already recorded for this hypothesis elsewhere -- those are separate, independently-run checks -- it only corrects the generation-time warning itself. Full record: refutations/janusian-flag-correction-2026-08-31.md.</p></div><h4>Verification</h4><div class="md-block"><h2># Verification: Janusian — Computer science — compiler instruction scheduling</h2>
+<p><strong>Verifies</strong>: <code>hypotheses/2026-08-31-janusian-computer-science.md</code></p>
+<p><strong>Verified</strong>: 2026-08-31 · <strong>Method</strong>: OpenAI web_search (gpt-4o-mini) + classification, single call (<code>verify_hypothesis.py</code>, unattended)</p>
+<h2>## Verdict: <strong>ADJACENT_ACTIVE</strong></h2>
+<h2>## Queries</h2>
+<ul>
+<li>- <code>instruction scheduling theory in compiler design</code></li>
+<li>- <code>research on compiler optimization techniques</code></li>
+<li>- <code>instruction scheduling algorithms performance evaluation</code></li>
+<li>- <code>compiler instruction scheduling frameworks</code></li>
+<li>- <code>instruction scheduling paradox in compiler theory</code></li>
+</ul>
+<h2>## What was found</h2>
+<p>1. <strong>Instruction Scheduling Across Control Flow</strong>: This 1993 paper introduces SHACOOF, a method that suppresses selected instruction subsequences to enable scheduling beyond basic blocks, aiming to reduce run-time delays. (<a href="https://research.ibm.com/publications/instruction-scheduling-across-control-flow?utm_source=openai" target="_blank" rel="noopener">research.ibm.com</a>)</p>
+<p>2. <strong>Instruction Scheduling</strong>: A chapter from "Engineering a Compiler" (Third Edition) discusses instruction scheduling as a compile-time activity that reorders operations to improve code quality, emphasizing the importance of this process for modern processors. (<a href="https://www.sciencedirect.com/topics/computer-science/instruction-scheduling?utm_source=openai" target="_blank" rel="noopener">sciencedirect.com</a>)</p>
+<p>3. <strong>Instruction Scheduling Across Control Flow</strong>: An article from Scientific Programming elaborates on instruction scheduling algorithms used in compilers to reduce run-time delays by reordering program statements, highlighting the significance of scheduling beyond basic blocks. (<a href="https://www.researchgate.net/publication/220060844_Instruction_Scheduling_Across_Control_Flow?utm_source=openai" target="_blank" rel="noopener">researchgate.net</a>)</p>
+<p>4. <strong>Instruction Scheduling</strong>: An overview from ScienceDirect Topics explains instruction scheduling as a compiler optimization technique aimed at improving instruction-level parallelism by reordering instructions to avoid pipeline stalls and illegal operations. (<a href="https://www.sciencedirect.com/topics/computer-science/instruction-scheduling?utm_source=openai" target="_blank" rel="noopener">sciencedirect.com</a>)</p>
+<h2>## Reasoning</h2>
+<p>The provided sources detail instruction scheduling techniques in compiler design, including methods like SHACOOF for scheduling beyond basic blocks and general strategies for reordering instructions to enhance performance. These insights support the hypothesis that instruction scheduling can both improve and degrade performance, depending on the context.</p></div><h4>Adversarial Refutation (independently confirmed)</h4><div class="md-block"><h2># Adversarial Refutation: Janusian — Computer science — compiler instruction scheduling</h2>
+<p><strong>Original</strong>: <code>hypotheses/2026-08-31-janusian-computer-science.md</code></p>
+<p><strong>Method</strong>: 3 independent OpenAI completions, one per lens (<code>refute_hypothesis.py</code>, unattended) — same rubric, same independence discipline as prior Claude-subagent rounds, at a fraction of the token cost</p>
+<h2>## Tally: 3 of 3 survive → <strong>SURVIVES</strong> (promoted out of NO_SIGNAL)</h2>
+<ul>
+<li>- <strong>Coherence — SURVIVES.</strong> The core claim rests on the term 'instruction scheduling,' which refers to the same formal object in both instances: the process of reordering instructions in a compiler to optimize performance. In both cases, the term denotes the same underlying mechanism, even though the outcomes can vary (improved performance vs. degraded performance). Therefore, there is no equivocation present, as the claim does not rely on conflating different meanings of the term. The hypothesis survives this lens as it accurately reflects the dual nature of instruction scheduling without misrepresenting the terms involved.</li>
+<li>- <strong>Testability — SURVIVES.</strong> The core claim presents a clear and specific falsifiable prediction regarding instruction scheduling in compiler design. It operationalizes the prediction by stating that there will be instances where a scheduled instruction set executes faster while consuming more resources than an unscheduled set. This prediction is directly testable through empirical evaluation of compiler performance metrics, such as execution time and resource consumption, thus satisfying the testability criteria. Therefore, the claim is not vague or generic, and it survives this lens.</li>
+<li>- <strong>Triviality — SURVIVES.</strong> The core claim states that instruction scheduling can both improve and degrade performance, which is a specific assertion about the behavior of a complex system (compilers). When stripped of domain-specific vocabulary, the claim reduces to a general statement about systems that can exhibit dual effects based on the same process. The phrase being tested for genericness is: "Both instruction scheduling improves performance and can simultaneously degrade performance for the same compilation process; the theory must contain both." This statement is not trivially true of all complex systems, as it requires specific mechanisms of instruction scheduling and performance metrics that are not universally applicable. Therefore, the claim does not reduce to something true of almost any two complex systems, and it survives this lens.</li>
+</ul>
+<h2>## What survived, and why this matters</h2>
+<p>3 of 3 independent lenses could not kill this claim. Per the promotion rule (2-of-3 survival), this hypothesis moves out of NO_SIGNAL — real signal the claim isn't vacuous, not proof it's correct. Still worth Phase 3 outreach consideration if a real researcher in the adjacent field can be identified.</p></div></div>
     </div>
-
-    <p>Match rate falls in a clean, monotonic line with the engine's own confidence &mdash; 71% for survivors down to 36% for outright rejects. Even the worst tier lands a real match better than one time in three: rejection is not the same claim as worthless. By mode: <strong>Janusian 70%, bisociation 41%, homospatial 16%</strong> &mdash; homospatial is the real laggard, not bisociation, as an early small sample had wrongly suggested.</p>
   </section>
 
-  <section id="blind-generation">
-    <h2><span class="num">12</span>Pointing the Engine at Real Discoveries, Blind</h2>
-    <p>A harder test: pointed at the exact domain pairs behind seven more real Nobel-linked discoveries (Marconi, Fleming, Prigogine, two Black-Scholes framings, Nash/Malthus, Watson-Crick/information theory), blind to the historical answer, can generation land anywhere near it on its own?</p>
-    <p><strong>2 of 7 landed clean.</strong> Prigogine's blind attempt (&ldquo;energy exchanges... local interactions... global emergent behavior&rdquo;) recognizably matches the real &ldquo;energy flowing through a system can create structure.&rdquo; The Watson-Crick attempt is genuinely close to &ldquo;a molecule that specifies how another is built is an information-bearing code.&rdquo; Four were refuted; two genuinely missed the mechanism &mdash; Marconi's attempt reduced to generic &ldquo;signal management,&rdquo; never reaching that wireless removes the need for a wire at all.</p>
-    <div class="callout">
-      <span class="callout-label">A real, disclosed limitation</span>
-      The generating model's training data plausibly already contains real facts about these cases &mdash; a hit is not clean proof of independent reasoning, it could partly reflect memorized recall.
+  <section id="history" class="charter-article">
+    <h2><span class="num">X</span>Founding-Era History</h2>
+    <p>Four real failures were found in FU's first working pilot batch &mdash; the original 58-hypothesis pool this university was founded on &mdash; three fixed, one left open at the time. They are reported here in full, dated plainly as founding history rather than restated as current statistics, because they are the clearest evidence for what actually made this institution trustworthy in the first place.</p>
+    <figure class="charter-fig">
+      <img src="fu-charter-verdict-40.jpg" alt="Bar chart: final status across an early 40-hypothesis snapshot, an even earlier count than the 58-hypothesis pilot pool this history describes">
+      <figcaption>Fig. 3 &mdash; an early snapshot from FU's own founding pilot, before the pool grew past 40 hypotheses. Kept here exactly as it was generated at the time, not updated &mdash; the current record lives on <a href="fu-leaderboard.html">the Ledger</a>, not in this figure.</figcaption>
+    </figure>
+
+    <h3>Failure 1 &mdash; Janusian&rsquo;s soft self-check got talked past</h3>
+    <p>All three of the first round of Janusian generations labeled a disguised compromise (&ldquo;beneficial in context A, detrimental in context B&rdquo;) as a genuine paradox &mdash; exactly the failure mode the prompt&rsquo;s own instructions described, just relabeled as success by the model itself. A mechanical &ldquo;same-instance test&rdquo; was added to the prompt (can the claimed paradox be rephrased as two <em>different</em> instances, rather than one instance holding both truths at once?) and the same three domains were regenerated: measurable improvement, 2 of 3 clearly passed.</p>
+
+    <h3>Failure 2 &mdash; homospatial&rsquo;s fusion criterion needed code, not just prompt text</h3>
+    <p>The first two homospatial generations were bisociation wearing a coined name &mdash; entities like &ldquo;Crowd Play&rdquo; and &ldquo;Narrative Lattice&rdquo; that were, on inspection, ordinary metaphors (&ldquo;mirrors,&rdquo; &ldquo;akin to,&rdquo; &ldquo;much like&rdquo;) rather than genuine fusions. A written prompt rule banning comparison language was tried first &mdash; it did not hold; the very next generation still used the banned words directly. This was escalated to <strong>code-level enforcement</strong>: after generation, the pipeline mechanically scans the fused-entity section for comparison words, and if any are found, sends one corrective re-prompt quoting the exact violation back to the model. Run at scale against 7 homospatial pairs: all 7 eventually passed (5 needed the corrective retry), and the one case where the retry still left a residual violation was flagged transparently in its own output file rather than hidden.</p>
+    <div class="charter-callout">
+      <span class="cl-label">The general lesson</span>
+      A soft, written self-check gets talked past by the model that&rsquo;s supposed to be checking itself. A mechanical, code-level check on the actual output text does not. This is the same finding, one level up, that motivated the Gauntlet in the first place: self-report is not verification.
+    </div>
+
+    <h3>Failure 3 &mdash; a real resource constraint, and its actual fix</h3>
+    <p>An early session&rsquo;s web-search budget was exhausted after only 5 of a planned 15 verification queries. Rather than fabricate the remaining verdicts or drop them silently, they were recorded with an explicit <code>PENDING_VERIFICATION</code> status, held out of scoring with a clear, visible reason, until a dedicated later session resolved the backlog by hand. The durable fix &mdash; a standalone script that runs verification unattended, with no live session and no shared search budget &mdash; has since been built and proven in real production runs.</p>
+
+    <h3>Failure 4 &mdash; the same-instance test let the same failure through three times in one batch</h3>
+    <p>Failure 1&rsquo;s fix was believed closed after the original three-domain regeneration showed 2 of 3 clearly passing. A later batch said otherwise: of 6 new Janusian hypotheses, 3 turned out, once put through the Gauntlet, to be the exact same disguised compromise Failure 1 was supposed to have fixed &mdash; each one&rsquo;s own self-critique quietly conceding &ldquo;different contexts&rdquo; or &ldquo;different datasets&rdquo; rather than a true same-instance contradiction. A second, smaller instance of the same class of problem showed up in homospatial output too: one hypothesis passed its code-level comparison-word scan on the first attempt, yet its own text read, verbatim, &ldquo;<em>akin to</em> laminar flow&rdquo; and &ldquo;<em>similar to</em> how turbulent eddies&rdquo; &mdash; exactly the banned comparison language the scan exists to catch. The Gauntlet caught what the earlier code-level scan missed both times.</p>
+    <div class="charter-callout warn">
+      <span class="cl-label">Open, not closed</span>
+      Both of these are the same shape as Failure 1 and Failure 2&rsquo;s original findings: a check believed fixed after a small sample turned out to still be beatable at a slightly larger scale. This is disclosed here as founding-era working engineering debt, not retroactively smoothed into a success story.
     </div>
   </section>
 
-  <section id="prefilter">
-    <h2><span class="num">13</span>The v2 Pre-Filter</h2>
-    <p>A pre-filter checks whether a proposed cross-domain connection actually composes &mdash; extends to a second, independent hop, not just holds for one &mdash; before a real generation call gets spent.</p>
-
-    <h3>The gold-standard test</h3>
-    <p>Against 80 real historical cross-domain discoveries, the zero-signal rate split cleanly by category:</p>
-    <div class="table-wrap">
-      <table>
-        <tr><th>Pair category</th><th class="num">n</th><th class="num">Zero-signal rate</th></tr>
-        <tr><td>Engineering / invention history</td><td class="num">14</td><td class="num">0%</td></tr>
-        <tr><td>Economics / social science</td><td class="num">16</td><td class="num">19%</td></tr>
-        <tr><td>Biology / evolution-adjacent</td><td class="num">24</td><td class="num">38%</td></tr>
-        <tr><td>Pure physics / astronomy / chemistry</td><td class="num">15</td><td class="num">53%</td></tr>
-        <tr><td>Exact-shared-equation pairs</td><td class="num">9</td><td class="num">56%</td></tr>
-      </table>
-    </div>
-    <p>It misses precisely on connections a physicist would find most rigorous (Shannon entropy and thermodynamic entropy are the same equation), never on narrative-shaped ones. A cheap classifier now routes narrative/mixed pairs through the pre-filter and skips it for formalism-shaped pairs. Live correlation with real outcomes: narrative-shaped pairs land a good result 87.5% of the time vs. 70.4% for mixed-uncertain &mdash; the same split the benchmark predicted, confirmed on production data. The pre-filter remains a net cost ($0.0084 vs. $0.0024) since it reorders the queue rather than deleting from it.</p>
-
-    <h3>Closing the formalism-shaped blind spot</h3>
-    <p>Formalism-shaped pairs skip the pre-filter by design, so a separate check &mdash; a category-theoretic checklist elevating a two-term analogy to a three-term one &mdash; was built and tested. Run against all 11 live formalism-shaped entries: <strong>2 of 11 (18%) STRONG</strong>, far above the near-zero background rate elsewhere. Not yet wired into automatic generation.</p>
-    <p>Mechanically-targeted, &ldquo;confirmed formalism-shaped&rdquo; pairs produced 0 of 20 STRONG hypotheses on fresh generation. A small, hand-picked set grounded in specific, named mathematical correspondences (the electro-mechanical analogy, Kalman filtering applied to magnetic fields) produced 2 of 13 (15%) &mdash; both from the same damped-harmonic-oscillator family, which tested exhaustively across all 15 possible pairs settled at 2 of 15 (13%). The lesson: classification tells you what's plausible; real domain knowledge tells you what's real.</p>
-
-    <h3>Repairing, not just checking</h3>
-    <p>A real diagnosis of one rejected hypothesis &mdash; a vibration/circuit pairing that mapped displacement to voltage, a vocabulary swap that says nothing &mdash; named a general pattern. Cross-domain claims come in three levels: <strong>lexical analogy</strong> (unfalsifiable), <strong>relational analogy</strong>, and <strong>structural homomorphism</strong> (an explicit mapping where one domain's equation actually transforms into the other's, checkable both mathematically and against literature). A new tool attempts the strongest level directly on any rejected, formalism-shaped hypothesis, honestly declining when no real mapping exists rather than forcing one.</p>
-    <div class="table-wrap">
-      <table>
-        <tr><th>Pool</th><th class="num">Attempted</th><th class="num">Constructed</th><th class="num">Rate</th></tr>
-        <tr><td>Formalism-shaped</td><td class="num">33 of 33</td><td class="num">4</td><td class="num">12.1%</td></tr>
-        <tr><td>Mixed-uncertain</td><td class="num">49 of 154</td><td class="num">1</td><td class="num">2.0%</td></tr>
-      </table>
-    </div>
-    <p>Every constructed reformulation was then adversarially refuted separately from its original. <strong>5 of 5 survive</strong> &mdash; where every original had been unanimously rejected. Wired directly into the automatic cycle; the first live test caught and fixed one real bug the same day, before it could recur.</p>
-  </section>
-
-  <section id="results">
-    <h2><span class="num">14</span>Results</h2>
-    <p><strong>755 live ledger entries</strong>: 509 ADJACENT_ACTIVE (fertile, unclaimed territory), 175 NO_SIGNAL, 62 COLLISION, 3 PENDING_VERIFICATION, 1 FLAGGED, 5 FACT_CHECK_FAIL. Adversarial refutation has run 419 times: <strong>403 REFUTED, 16 SURVIVES.</strong></p>
-
-    <div class="table-wrap">
-      <table>
-        <tr><th>Rank</th><th>Pairing</th><th class="num">Points</th><th>Verdict</th><th>Tier</th></tr>
-        <tr><td class="num">1</td><td>Janusian &mdash; Compiler instruction scheduling</td><td class="num">+50</td><td><span class="chip adj">ADJACENT_ACTIVE</span></td><td>Survived Refutation (3-of-3)</td></tr>
-        <tr><td class="num">2&ndash;6</td><td>Fisheries, mathematics, cognitive psychology, literature, zoology</td><td class="num">+42</td><td><span class="chip adj">ADJACENT_ACTIVE</span></td><td>Survived Refutation</td></tr>
-        <tr><td class="num">7</td><td>Nash &mdash; game theory &times; evolutionary biology</td><td class="num">+20</td><td><span class="chip col">COLLISION</span></td><td>Survived Refutation (unanimous)</td></tr>
-        <tr><td class="num">8&ndash;13</td><td>Kahneman &amp; Tversky, Planck, Jacob &amp; Monod, Ostrom, Simon, Hayek, Einstein/Maxwell</td><td class="num">+12</td><td>varies</td><td>Survived Refutation</td></tr>
-      </table>
-    </div>
-    <p>Full ranking of all live entries, tiered, filterable, and expandable, lives in the Leaderboard Experience (Section 10).</p>
-  </section>
-
-  <section id="postmortem">
-    <h2><span class="num">15</span>Postmortem</h2>
-    <p>Twenty real failures have been found and fixed along the way &mdash; reported in full because they are the clearest evidence of what actually makes this pipeline trustworthy.</p>
-
-    <div class="table-wrap">
-      <table>
-        <tr><th class="num">#</th><th>What broke</th><th>Real fix</th><th>Impact</th></tr>
-        <tr><td class="num">1</td><td>Janusian's self-check called a disguised compromise a genuine paradox</td><td>Mechanical same-instance test</td><td>Fixed</td></tr>
-        <tr><td class="num">2</td><td>Homospatial output was bisociation wearing a coined name</td><td>Code-level fusion scan</td><td>7 of 7 pairs passed</td></tr>
-        <tr><td class="num">3</td><td>Search budget exhausted mid-batch</td><td>Honest PENDING status + standalone verifier</td><td>Fixed</td></tr>
-        <tr><td class="num">4</td><td>Same-instance check scanned the wrong fields, wrongly flagging genuine paradoxes</td><td>Fixed scan scope</td><td>33 of 34 fresh gens passed; 121 of 128 historical flags were false positives, 32 entries left the worst tier</td></tr>
-        <tr><td class="num">5</td><td>Self-reported novelty score had two calculation bugs</td><td>Recomputed; excluded from scoring</td><td>39 affected entries corrected</td></tr>
-        <tr><td class="num">6</td><td>Filename collision silently destroyed a hypothesis</td><td>Loud disambiguation on save</td><td>25 historical collisions found, fixed</td></tr>
-        <tr><td class="num">7</td><td>The Failure 6 fix broke a downstream file matcher</td><td>Exact-match-first lookup</td><td>Fixed</td></tr>
-        <tr><td class="num">8</td><td>Search-API outage silently corrupted verdicts</td><td>Retry/backoff + fallback + honest non-verdict</td><td>Fixed</td></tr>
-        <tr><td class="num">9</td><td>Two same-day fixes silently overwrote each other's output</td><td>Collect-then-write-once</td><td>Fixed</td></tr>
-        <tr><td class="num">10</td><td>Retry logic kept paying cost after the API was confirmed dead</td><td>Circuit breaker</td><td>Fixed</td></tr>
-        <tr><td class="num">11</td><td>Ledger dedup silently dropped 2 real hypotheses off the leaderboard</td><td>Only verification records dedup</td><td>Fixed</td></tr>
-        <tr><td class="num">12</td><td>Output-length limit silently truncated required JSON fields</td><td>Explicit, generous token limit</td><td>Fixed</td></tr>
-        <tr><td class="num">13</td><td>Same dedup bug recurred in a script the first fix never touched</td><td>Same fix, applied a second place</td><td>Fixed</td></tr>
-        <tr><td class="num">14</td><td>Cost report blended two model eras, overstating verification cost</td><td>Recomputed from raw logs</td><td>Corrected</td></tr>
-        <tr><td class="num">15</td><td>Flat leaderboard points let a refuted claim outrank a survivor</td><td>Confidence tiers</td><td>Fixed</td></tr>
-        <tr><td class="num">16</td><td>Self-reported novelty was still scored on the public leaderboard</td><td>Removed from default scoring</td><td>Fixed</td></tr>
-        <tr><td class="num">17</td><td>5 ground-truth entries silently showed no content (ID mismatch)</td><td>Normalized identifiers</td><td>Fixed</td></tr>
-        <tr><td class="num">18</td><td>Janusian domain pool ran out, twice</td><td>Grew pool 59&rarr;109 domains</td><td>Fixed permanently</td></tr>
-        <tr><td class="num">19</td><td>Verifier could name its own evidence &ldquo;generic&rdquo; and still promote the entry anyway</td><td>Structural self-check forces an honest verdict</td><td>101 of 479 entries correctly reclassified</td></tr>
-        <tr><td class="num">20</td><td>Failure 19's own fix silently orphaned 161 real refutation results, including 9 of 15 SURVIVES cases</td><td>Field-by-field ledger merge, not whole-record overwrite</td><td>All 161 restored, 0 remaining orphans</td></tr>
-      </table>
-    </div>
-
-    <p>The Failure 19&rarr;20 chain is worth a sentence on its own: fixing a real verifier bug that had let 101 hypotheses get promoted on evidence the model itself called generic almost cost this report its own Nobel-benchmark discoveries, when the fix's ledger write briefly dropped 161 real refutation results from view &mdash; including 9 of the leaderboard's 15 survivors. Caught within the same session, by noticing a known number (7 real Janusian survivors) had silently become zero. Both are fixed and verified.</p>
-    <p>One open, unpatched finding: a real, independent review of all 15 Janusian SURVIVES/tested entries found every one's falsifiable prediction is a weak conjunction of two already-true facts, not a real mechanism &mdash; genuinely sound paradoxes, systematically weaker predictions. Disclosed rather than patched on the strength of one example (Section 16).</p>
-  </section>
-
-  <section id="limitations">
-    <h2><span class="num">16</span>Limitations</h2>
-
-    <div class="table-wrap">
-      <table>
-        <tr><th>Limitation</th><th>Real number</th><th>Status</th></tr>
-        <tr><td>Two Nobel cases remain unresolved after two rounds of lens fixes</td><td>Watson/Crick/Franklin, Hopfield</td><td>Real ceiling on rubric-only fixes; not chased further</td></tr>
-        <tr><td>Pre-filter correlation with real outcomes is real but thin</td><td>9 real &ldquo;would-promote&rdquo; cases</td><td>Directionally right, not statistically settled</td></tr>
-        <tr><td>Pre-filter costs more per candidate than the funnel it routes</td><td>$0.0084 vs. $0.0024</td><td>By design &mdash; reorders, never deletes</td></tr>
-        <tr><td>Outreach replies still pending</td><td>21-day clock from 2026-08-29</td><td>Open</td></tr>
-        <tr><td>Janusian's falsifiable predictions are systematically weak conjunctions</td><td>15 of 15 reviewed</td><td>Confirmed, corpus-wide, not yet patched</td></tr>
-        <tr><td>Verification search depth is bounded by the classifier model's own recall</td><td>8 of 15 flagged cases missed a real bridge a stronger model found</td><td>A model upgrade would cost ~7&times; more for mostly reclassification nuance; a periodic audit runs instead</td></tr>
-        <tr><td>Verification has real baseline instability</td><td>4 of 10 control re-checks flipped with no code change</td><td>Structural to a single-shot classifier; refutation already solves this with 3-vote redundancy, verification does not yet</td></tr>
-        <tr><td>Structural-correspondence targeting doesn't reliably survive real generation</td><td>0 of 20 mechanical vs. 2 of 13 hand-picked</td><td>Domain knowledge outperforms the funnel ~3&times;</td></tr>
-      </table>
-    </div>
-
-    <h3>By design, not a gap</h3>
-    <ul>
-      <li>The self-audit agent observes and proposes; it does not adopt without a human act.</li>
-      <li>Verification and refutation remain a check on plausibility, not a substitute for a real experiment.</li>
-    </ul>
-
-    <h3>Deliberately not attempted</h3>
-    <ul>
-      <li>Nothing schedules the engine yet &mdash; every real cycle to date was started by a human, a standing decision, not a code gap.</li>
+  <section id="limitations" class="charter-article">
+    <h2><span class="num">XI</span>Limitations and Open Questions</h2>
+    <ul style="padding-left:22px; line-height:1.9;">
+      <li><strong>The domain pool is a standing resource, not a finished one.</strong> 109 real domains yield many thousands of possible pairings; 748 hypotheses have been explored across all three departments and the calibration benchmarks combined &mdash; a real fraction of the possible ground, not implied complete. The current live count is always <a href="fu-course-catalog.html">the Course Catalog</a>, not any number printed in this Charter.</li>
+      <li><strong>Researcher Outreach has produced zero real drafts.</strong> No hypothesis to date has reached ADJACENT_ACTIVE-and-durable with a real researcher identified to contact &mdash; the mechanism exists (Article V) but hasn&rsquo;t been exercised for real yet.</li>
+      <li><strong>Verification and the Gauntlet remain a check on plausibility, not a substitute for an experiment.</strong> Nothing in this pipeline runs a real test of any hypothesis against the physical or social world &mdash; it only checks whether a hypothesis is novel, coherent, and worth someone&rsquo;s time to actually go test. That check is the entire value proposition described in Article III; it is not, and was never meant to be, the experiment itself.</li>
+      <li><strong>A hypothesis's status can and does change as the pool grows.</strong> Verdicts on this Ledger are not fixed at the moment of first scoring &mdash; a hypothesis judged one way in an earlier pilot batch can read differently once the record around it has grown. Article X's history is deliberately left as it happened rather than reconciled against the current Ledger; where the two disagree, the Ledger is the live truth and the history is the record of how FU got there.</li>
     </ul>
   </section>
 
-  <section id="conclusion">
-    <h2><span class="num">17</span>Conclusion</h2>
-    <p>The verification layer answers two questions at once: is one hypothesis novel, and does the underlying mechanism reliably find real cross-domain territory at all? 62 of 755 hypotheses have collided with genuine prior art; 509 sit in fertile, unclaimed territory; and a direct check of the engine's strongest candidates found 6 of 8 landing in the same territory as real, existing scholarship &mdash; not proof the engine discovers anything, but real evidence its sense of where fertile territory is happens to be right more often than chance.</p>
-    <p>The harder question &mdash; can the adversarial check that's supposed to separate real hypotheses from noise be trusted at all &mdash; is no longer open the way it was. Tested against 13 real, historically-confirmed discoveries, fixed twice, and validated the other direction against every hypothesis the pipeline has ever generated, it now has a real, disclosed shape: strict on the unvindicated, capable on the real thing. The project's working thesis &mdash; that generating successful bisociations is the beginning of a university &mdash; has been tested rather than assumed. A machine that can run Darwin's collision on purpose, thousands of times, and prove its own checking mechanism can tell a real discovery from a hollow one, does not replace the scientist. It replaces the coin flip.</p>
+  <section id="closing" class="charter-article">
+    <h2><span class="num">XII</span>The Closing Article</h2>
+    <p>The four-way verification layer answers two different questions at once, depending on how you read it: whether one specific hypothesis is novel (COLLISION says no), and whether the underlying generative mechanism reliably finds real, legitimate cross-domain territory at all (COLLISION, read this second way, says yes &mdash; every genuine collision found is evidence the reasoning is not hallucinated, even in the cases where a specific hypothesis turns out to be unoriginal). A real share of this record sits in genuinely fertile, unclaimed territory. Many more looked plausible on generation and did not survive independent adversarial scrutiny &mdash; caught, not hidden. That is the most important sentence in this Charter to sit with honestly: it is easier to build a system that finds connections than to build one that can be trusted when it says a connection is real.</p>
+    <blockquote>&ldquo;The mere fact that we&rsquo;re getting successful bisociations means we have the beginnings of a university.&rdquo;</blockquote>
+    <p>That line, from the real technical report this Charter is built on top of, was written before FU existed. It has since been tested rather than assumed &mdash; not by counting every generated hypothesis as a discovery, but by building the same four-way classifier and Gauntlet used throughout this Charter and applying them to results that turn out to be wrong just as rigorously as to the ones that don&rsquo;t. Article III&rsquo;s numbers are the reason any of this is worth doing at all: PhD researchers spend years, and the field as a whole spends tens of billions of dollars annually, finding out by hand which hypotheses don&rsquo;t hold up. A university that can run the same collision Darwin stumbled into once, on purpose, hundreds of times over &mdash; and then honestly tell you, in minutes, which of those collisions are worth a real person&rsquo;s year &mdash; does not replace the scientist. It replaces the coin flip. That, and nothing more elaborate than that, is what FU is chartered to be.</p>
   </section>
 
   </article>
-
-  <footer class="colophon">
-    Exponent Labs LLC &middot; scientific-intuition-engine/umpf_pipeline &middot; Generated 2026-09-01 from verification-log.jsonl (755 entries) &middot; Full data: Leaderboard Experience &middot; A longer, unabridged engineering log of this same project (every failure narrated in full, day by day) is preserved at <a href="whitepaper-engineering-log-v1.html">whitepaper-engineering-log-v1.html</a>
+  </div>
+  <script>
+document.querySelectorAll('.row-head').forEach(function(h) {
+  h.addEventListener('click', function() { h.closest('.row').classList.toggle('open'); });
+});
+document.querySelectorAll('.course-head').forEach(function(h) {
+  h.addEventListener('click', function() { h.closest('.course-item').classList.toggle('open'); });
+});
+</script>
+<footer class="fu-colophon">
+    FU: Fake University &middot; a positioning frame for <a href="whitepaper.html">The Eureka Engine</a> (Exponent Labs LLC) &middot; every real number sourced live from <code>leaderboard.md</code> (749 entries) and <code>domains.json</code> (109 domains) at build time
   </footer>
-</div>
+</body>
+</html>

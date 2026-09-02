@@ -249,6 +249,32 @@ h1, h2, h3 { font-family: var(--serif); text-wrap: balance; }
 .lb-search:focus { outline: none; border-color: var(--gold); }
 .lb-filter-label { font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-faint); font-size: 0.7rem; margin: 16px 0 6px; }
 .lb-count { font-family: var(--mono); font-size: 0.78rem; color: var(--text-faint); margin: 10px 0 6px; }
+
+
+.charter-masthead { padding: 48px 0 32px; border-bottom: 2px solid var(--gold); }
+.charter-masthead .dek { color: var(--text-muted); font-size: 1.1rem; max-width: 660px; margin: 14px 0 18px; line-height: 1.6; }
+.charter-masthead .byline { color: var(--text-faint); font-size: 0.85rem; font-family: var(--mono); }
+.charter-abstract { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 24px 26px; margin: 32px 0; font-size: 0.97rem; max-width: 760px; }
+.charter-toc { margin: 32px 0; padding: 20px 24px; border: 1px solid var(--border); border-radius: 10px; max-width: 760px; }
+.charter-toc ol { margin: 0; padding-left: 0; list-style: none; columns: 2; column-gap: 26px; }
+.charter-toc li { margin: 5px 0; font-size: 0.88rem; break-inside: avoid; }
+.charter-toc a { color: var(--text); text-decoration: none; border-bottom: 1px solid transparent; }
+.charter-toc a:hover { border-bottom-color: var(--gold); color: var(--gold); }
+.charter-article { margin: 52px 0; max-width: 760px; }
+.charter-article h2 { font-family: var(--serif); font-size: 1.5rem; font-weight: 600; margin: 0 0 16px; padding-bottom: 10px; border-bottom: 1px solid var(--border); text-wrap: balance; }
+.charter-article h2 .num { color: var(--gold); font-family: var(--mono); font-size: 0.92rem; margin-right: 10px; }
+.charter-article h3 { font-family: var(--serif); font-size: 1.08rem; font-weight: 600; margin: 26px 0 10px; }
+.charter-article p { margin: 13px 0; line-height: 1.7; }
+.charter-article blockquote { margin: 18px 0; padding: 4px 20px; border-left: 3px solid var(--gold); color: var(--text-muted); font-style: italic; font-size: 1rem; }
+.charter-article strong { color: var(--gold); font-weight: 600; }
+.charter-story::first-letter { font-family: var(--serif); font-size: 3.1rem; font-weight: 600; color: var(--gold); float: left; line-height: 0.85; margin: 5px 8px 0 0; }
+.charter-callout { background: var(--surface); border-left: 3px solid var(--gold); border-radius: 0 8px 8px 0; padding: 15px 18px; margin: 18px 0; font-size: 0.92rem; }
+.charter-callout.warn { border-left-color: var(--v-refuted); }
+.charter-callout .cl-label { font-family: var(--mono); text-transform: uppercase; font-size: 0.68rem; letter-spacing: 0.08em; color: var(--gold); display: block; margin-bottom: 6px; }
+.charter-callout.warn .cl-label { color: var(--v-refuted); }
+figure.charter-fig { margin: 26px 0; text-align: center; max-width: 760px; }
+figure.charter-fig img { max-width: 100%; border-radius: 10px; border: 1px solid var(--border); }
+figure.charter-fig figcaption { color: var(--text-faint); font-size: 0.8rem; margin-top: 8px; font-family: var(--mono); }
 </style>
 
 </head>
@@ -2438,7 +2464,7 @@ document.querySelectorAll('.course-head').forEach(function(h) {
 });
 </script>
 <footer class="fu-colophon">
-    FU: Fake University &middot; a positioning frame for <a href="whitepaper.html">The Eureka Engine</a> (Exponent Labs LLC) &middot; every real number sourced live from <code>leaderboard.md</code> (749 entries) and <code>domains.json</code> (109 domains) at build time &middot; see <a href="fu-fake-university-positioning-research.md">the positioning research</a> this site is built from
+    FU: Fake University &middot; a positioning frame for <a href="whitepaper.html">The Eureka Engine</a> (Exponent Labs LLC) &middot; every real number sourced live from <code>leaderboard.md</code> (749 entries) and <code>domains.json</code> (109 domains) at build time
   </footer>
 </body>
 </html>

@@ -350,14 +350,15 @@ def nav(active):
 
 def colophon():
     return f'''<footer class="fu-colophon">
-    FU: Fake University &middot; a positioning frame for <a href="whitepaper.html">The Eureka Engine</a> (Exponent Labs LLC) &middot; every real number sourced live from <code>leaderboard.md</code> ({TOTAL_ENTRIES} entries) and <code>domains.json</code> ({len(DOMAINS)} domains) at build time &middot; see <a href="fu-fake-university-positioning-research.md">the positioning research</a> this site is built from
+    FU: Fake University &middot; a positioning frame for <a href="whitepaper.html">The Eureka Engine</a> (Exponent Labs LLC) &middot; every real number sourced live from <code>leaderboard.md</code> ({TOTAL_ENTRIES} entries) and <code>domains.json</code> ({len(DOMAINS)} domains) at build time
   </footer>'''
 
 
 def wrap(title, body, active):
     return f'''<title>{title}</title>
 <style>{BASE_CSS}
-{ROW_CSS}</style>
+{ROW_CSS}
+{CHARTER_CSS}</style>
 {nav(active)}
 {body}
 {colophon()}
@@ -416,7 +417,7 @@ def build_home():
       <div class="stat-box"><div class="n">$6.75</div><div class="l">total real tuition spent to date (OpenAI tokens)</div></div>
     </div>
 
-    <h2 style="margin-top:56px;">The Story of FU</h2>
+    <h2 id="story-of-fu" style="margin-top:56px;">The Story of FU</h2>
     <p style="color:var(--text-muted); max-width:680px;">A short documentary: the Dean on why this exists, the real mechanism behind it, three department chairs on real findings, and three students on what a real adversarial review actually felt like. Hover any professor's photo anywhere on this site and it plays the same way &mdash; this is just the cut of it.</p>
     <video controls poster="fu-dean.jpg" preload="none" playsinline style="width:100%; border-radius:14px; border:1px solid var(--border); display:block; margin-top:16px;">
       <source src="fu-documentary-v10.mp4" type="video/mp4">
@@ -461,7 +462,7 @@ def build_people():
         <div class="org-box dean">
           <div class="role">Office of the Dean</div>
           <div class="desc">Evaluates the whole system before recommending it to anyone. Writes letters. Has changed its mind in public, in writing, more than once.</div>
-          <div class="real-thing">Real thing: <b>the five real Dean's Letters</b> &mdash; <a href="dean-letters.html">read them &rarr;</a></div>
+          <div class="real-thing">Real thing: the Dean's own correspondence and findings &mdash; <a href="fu-home.html#story-of-fu">watch her explain them &rarr;</a></div>
         </div>
         <div class="org-box external">
           <div class="role">Provost Alvarez</div>
@@ -1136,6 +1137,292 @@ def build_course_catalog():
 
 
 # ---------------------------------------------------------------------------
+# whitepaper.html -- The FU Charter. Not the real Eureka Engine technical
+# report (that lives in the separate eureka-engine-web repo, and that repo
+# isn't deployed anywhere FU can link to) -- FU's own governing document,
+# built natively here so the many "the real whitepaper" links across this
+# site actually resolve. Same real science, same real citations, same real
+# live numbers (pulled from ROWS/EXP/DOMAINS at build time, never hardcoded)
+# as everything else on FU -- recast as a charter with Articles instead of
+# a report with Sections, in FU's own institutional voice.
+# ---------------------------------------------------------------------------
+
+CHARTER_CSS = '''
+.charter-masthead { padding: 48px 0 32px; border-bottom: 2px solid var(--gold); }
+.charter-masthead .dek { color: var(--text-muted); font-size: 1.1rem; max-width: 660px; margin: 14px 0 18px; line-height: 1.6; }
+.charter-masthead .byline { color: var(--text-faint); font-size: 0.85rem; font-family: var(--mono); }
+.charter-abstract { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 24px 26px; margin: 32px 0; font-size: 0.97rem; max-width: 760px; }
+.charter-toc { margin: 32px 0; padding: 20px 24px; border: 1px solid var(--border); border-radius: 10px; max-width: 760px; }
+.charter-toc ol { margin: 0; padding-left: 0; list-style: none; columns: 2; column-gap: 26px; }
+.charter-toc li { margin: 5px 0; font-size: 0.88rem; break-inside: avoid; }
+.charter-toc a { color: var(--text); text-decoration: none; border-bottom: 1px solid transparent; }
+.charter-toc a:hover { border-bottom-color: var(--gold); color: var(--gold); }
+.charter-article { margin: 52px 0; max-width: 760px; }
+.charter-article h2 { font-family: var(--serif); font-size: 1.5rem; font-weight: 600; margin: 0 0 16px; padding-bottom: 10px; border-bottom: 1px solid var(--border); text-wrap: balance; }
+.charter-article h2 .num { color: var(--gold); font-family: var(--mono); font-size: 0.92rem; margin-right: 10px; }
+.charter-article h3 { font-family: var(--serif); font-size: 1.08rem; font-weight: 600; margin: 26px 0 10px; }
+.charter-article p { margin: 13px 0; line-height: 1.7; }
+.charter-article blockquote { margin: 18px 0; padding: 4px 20px; border-left: 3px solid var(--gold); color: var(--text-muted); font-style: italic; font-size: 1rem; }
+.charter-article strong { color: var(--gold); font-weight: 600; }
+.charter-story::first-letter { font-family: var(--serif); font-size: 3.1rem; font-weight: 600; color: var(--gold); float: left; line-height: 0.85; margin: 5px 8px 0 0; }
+.charter-callout { background: var(--surface); border-left: 3px solid var(--gold); border-radius: 0 8px 8px 0; padding: 15px 18px; margin: 18px 0; font-size: 0.92rem; }
+.charter-callout.warn { border-left-color: var(--v-refuted); }
+.charter-callout .cl-label { font-family: var(--mono); text-transform: uppercase; font-size: 0.68rem; letter-spacing: 0.08em; color: var(--gold); display: block; margin-bottom: 6px; }
+.charter-callout.warn .cl-label { color: var(--v-refuted); }
+figure.charter-fig { margin: 26px 0; text-align: center; max-width: 760px; }
+figure.charter-fig img { max-width: 100%; border-radius: 10px; border: 1px solid var(--border); }
+figure.charter-fig figcaption { color: var(--text-faint); font-size: 0.8rem; margin-top: 8px; font-family: var(--mono); }
+'''
+
+
+def _charter_example(pairing_name, note=""):
+    """One real hypothesis, looked up live and rendered as the same
+    click-expandable row used everywhere else on FU -- the mechanism this
+    whole Charter's Article II-III promise: cite a specific claim, let the
+    reader expand it to the real record right there in the text."""
+    e = EXP_BY_PAIRING.get(pairing_name.strip().lower())
+    if not e:
+        return f'<p class="real-thing">(expected real example not found: {pairing_name})</p>'
+    html = exp_row_html(e)
+    if note:
+        html = f'<p style="margin-bottom:8px;">{note}</p>' + html
+    return html
+
+
+def build_whitepaper():
+    tier_counts = {}
+    dept_counts = {}
+    for r in ROWS:
+        tier_counts[r["tier"]] = tier_counts.get(r["tier"], 0) + 1
+        dept_counts[dept_slug_for_row(r)] = dept_counts.get(dept_slug_for_row(r), 0) + 1
+    top_row = max(ROWS, key=lambda r: r["points"])
+
+    body = f'''<div class="page" style="padding-top:0;">
+  <header class="charter-masthead">
+    <span class="kicker">FU: Fake University &middot; Founding Charter</span>
+    <h1>The FU Charter</h1>
+    <p class="dek">The governing document of Fake University &mdash; twelve Articles, real science, real citations, real numbers pulled live from the same ledger every other page on this site reads from. This is also, in its bones, verbatim in every fact and every citation, the real technical report the whole university sits on top of.</p>
+    <p class="byline">Office of the Dean &middot; Fake University &middot; a positioning frame for the real Eureka Engine (Exponent Labs LLC)</p>
+  </header>
+
+  <div class="charter-abstract">
+    <span class="kicker" style="display:block; margin-bottom:10px;">Preamble</span>
+    <p>Most scientific breakthroughs do not come from staring harder at one field &mdash; they come from smashing two unrelated fields together (Darwin reading an economics pamphlet; Einstein imagining a falling man). FU exists to automate three specific, well-documented ways of forcing that collision &mdash; Arthur Koestler's <em>bisociation</em> and psychiatrist Albert Rothenberg's <em>Janusian</em> and <em>homospatial</em> thinking, one per department &mdash; and then, critically, to check honestly whether each resulting hypothesis is actually worth a researcher's time, the way a fact-checker or a skeptical colleague would, before anyone spends real months finding out by hand. As of this Charter's last build, <strong>{TOTAL_SCORED} hypotheses</strong> carry a canonical verdict across a <strong>{len(DOMAINS)}-domain</strong> pool: {tier_counts.get('🛡️ Survived Refutation', 0)} Survived Refutation, {tier_counts.get('🗺️ Verified, Unrefuted', 0)} Verified and Unrefuted, {tier_counts.get('🌗 Contested', 0)} Contested, and {tier_counts.get('💀 Refuted / Rejected', 0)} Refuted or Rejected &mdash; the full record, unfiltered, lives on <a href="fu-leaderboard.html">the Ledger</a>. This Charter exists to explain, from nothing, why that record is worth keeping honestly &mdash; and to show, in full, what it actually took to build a university that tells the truth about its own failures.</p>
+  </div>
+
+  <nav class="charter-toc">
+    <span class="kicker" style="display:block; margin-bottom:12px;">Articles</span>
+    <ol>
+      <li><a href="#founding">I. The Founding Collision</a></li>
+      <li><a href="#doctrines">II. The Three Doctrines</a></li>
+      <li><a href="#grievance">III. Why FU Was Founded</a></li>
+      <li><a href="#mechanisms">IV. The Three Departments, Formally</a></li>
+      <li><a href="#curriculum">V. The Four-Phase Curriculum</a></li>
+      <li><a href="#evidence">VI. Standing Rules of Evidence</a></li>
+      <li><a href="#gauntlet">VII. The Gauntlet</a></li>
+      <li><a href="#tenure">VIII. Tenure and the Ledger</a></li>
+      <li><a href="#record">IX. The Current Record</a></li>
+      <li><a href="#history">X. Founding-Era History</a></li>
+      <li><a href="#limitations">XI. Limitations and Open Questions</a></li>
+      <li><a href="#closing">XII. The Closing Article</a></li>
+    </ol>
+  </nav>
+
+  <article>
+
+  <section id="founding" class="charter-article">
+    <h2><span class="num">I</span>The Founding Collision</h2>
+    <p class="charter-story">In October 1838, Charles Darwin picked up a book that had nothing to do with finches, barnacles, or beetles. It was <em>An Essay on the Principle of Population</em>, an economics pamphlet by Thomas Malthus about the brutal arithmetic of famine &mdash; the observation that human populations grow faster than food supplies ever can, guaranteeing that most of every generation dies before it gets the chance to reproduce. Darwin was reading it, by his own account, &ldquo;for amusement.&rdquo; He wasn&rsquo;t looking for anything.</p>
+    <p>He had, by then, spent two years turning over a puzzle from a five-year voyage around the world: why do closely related species on nearby islands differ in small, specific ways &mdash; a slightly different beak here, a slightly different shell there? He had the observations. He didn&rsquo;t have the mechanism. Then, reading Malthus&rsquo;s chapter on the mathematics of overcrowded cities, something clicked. If human populations are held in check by a permanent, brutal excess of births over food, then every wild population must be too. Every generation of every species is born into a competition it mostly loses. And the individuals that happen to carry some small edge survive that competition more often than their siblings, on average, over and over, for millions of generations. No one has to design anything. You get evolution by natural selection.</p>
+    <p>Darwin named the collision himself, later, in his autobiography: reading Malthus is where the idea &ldquo;at once occurred to me.&rdquo; The single most consequential idea in the history of biology was not produced by staring harder at finches. It was produced by forcing two fields that had nothing to do with each other &mdash; population economics and natural history &mdash; into the same sentence.</p>
+    <p>This is not a freak occurrence. Johannes Kepler spent years trying to explain planetary orbits using the geometry of musical harmony. Claude Shannon founded information theory by noticing that the on/off logic of telephone relay switches was, structurally, the same thing as the true/false logic of Boolean algebra &mdash; a discipline built decades earlier to formalize philosophical logic, with no telephones in mind at all. The pattern recurs often enough across the history of science that FU was founded to ask a genuinely strange question in earnest: <strong>what if the collision itself &mdash; not talent, not luck, not years of immersion in one field &mdash; is the actual mechanism, and it can be done on purpose?</strong></p>
+    <p>A <strong>hypothesis</strong>, in the sense this Charter uses the word, is nothing more exotic than a specific, falsifiable guess about how two things are secretly connected &mdash; precise enough that it could turn out to be wrong. Darwin&rsquo;s guess was falsifiable: if population pressure didn&rsquo;t actually produce differential survival, the theory would collapse. Most guesses like this, tried by most people, go nowhere &mdash; a plausible-sounding connection that turns out, on inspection, to already be well known, or to not actually hold up, or to be too vague to ever be wrong. Finding that out is the slow, expensive part of research (Article III puts real numbers on exactly how expensive).</p>
+    <p>FU is an attempt to automate both halves of what Darwin did by accident once: <strong>force the collision on purpose, over and over, across a large pool of real subjects</strong> &mdash; and then <strong>honestly check each result</strong>, the way a skeptical colleague would, before anyone spends a year of their life finding out the hard way. Every Article after this one describes exactly how, and exactly where it has failed along the way.</p>
+  </section>
+
+  <section id="doctrines" class="charter-article">
+    <h2><span class="num">II</span>The Three Doctrines</h2>
+    <p>Darwin&rsquo;s collision has a name. Two researchers, working decades apart, each independently studied how minds actually produce insights like his &mdash; and between them, they described three distinct mechanisms, not one. FU's three departments each hold one, faithfully, as their entire discipline.</p>
+
+    <h3>Bisociation &mdash; two frames, collided (Department of Bisociation Studies)</h3>
+    <p>Arthur Koestler was not, by training, a scientist. He was a Hungarian-British novelist and journalist who, in 1964, published a 750-page book called <em>The Act of Creation</em>, trying to find one shared mechanism underneath humor, art, and scientific discovery. His answer was a word he had to coin himself: <strong>bisociation</strong> &mdash; perceiving a situation from inside two self-consistent frames of reference at once, frames normally kept completely apart. Koestler&rsquo;s own favorite illustration was the joke: a story appears to be going one way, following one frame &mdash; and the punchline reveals it fits a second, totally different frame just as well. Darwin&rsquo;s moment with Malthus is a clean, real-world case: population economics is one matrix, natural history is a second, and neither one by itself contains natural selection. The insight lives only in the collision.</p>
+    <p>The Department of Bisociation Studies does exactly this, mechanically: it takes two genuinely unrelated domains from FU's pool, forces them together, and asks for a precise, falsifiable structural mapping &mdash; not a cute metaphor (&ldquo;markets are <em>like</em> ecosystems&rdquo;), but a claim specific enough that it could turn out to be wrong. One standing member of the record:</p>
+    {_charter_example("Language Linguistics × Military Strategy", "Real example, Bisociation Studies &mdash; still standing on the current Ledger:")}
+
+    <h3>Janusian thinking &mdash; two opposites, both true at once (Department of Janusian Studies)</h3>
+    <p>Albert Rothenberg is an American psychiatrist who spent decades doing something almost nobody else in creativity research has done: instead of theorizing from an armchair, he got direct access to genuinely eminent scientists and Nobel laureates and studied, from real interviews and primary documents, how they actually described their own thinking in the specific minutes before a breakthrough. From that work he named <strong>Janusian thinking</strong>, for Janus, the Roman god sculpted with two faces looking in opposite directions at once: actively conceiving two opposite or contradictory ideas as true <em>at the same time, in the same respect</em> &mdash; not &ldquo;it depends on context,&rdquo; but genuinely both, held together on purpose. Rothenberg&rsquo;s clearest example is Einstein. In 1907, years before general relativity, Einstein described what he later called &ldquo;the happiest thought of my life&rdquo;: a person falling freely off a roof feels <em>no gravity at all</em> &mdash; weightless, exactly as if floating at rest in empty space &mdash; and yet, at that exact same instant, is <em>accelerating</em> downward as hard as gravity can pull them. Ordinary thinking picks one. Einstein held both as completely, simultaneously true, and that specific act is the seed Rothenberg traces directly forward to the equivalence principle: gravity and acceleration are not just similar but literally indistinguishable, the foundation stone of general relativity, published nine years later.</p>
+    <p>The Department of Janusian Studies reproduces this directly: it takes one domain&rsquo;s foundational assumption and forces the exact opposite as also, simultaneously, true &mdash; no hedging, no quiet &ldquo;sometimes A, sometimes B&rdquo; smuggled in as a paradox (Article X, Failure 1 and Failure 4, is the real story of how much enforcement that turned out to require, including a relapse). One standing member of the record:</p>
+    {_charter_example("Zoology — animal migration navigation", "Real example, Janusian Studies &mdash; Survived Refutation, one of FU's strongest standing findings:")}
+
+    <h3>Homospatial thinking &mdash; two things, superimposed into one (Department of Homospatial Studies)</h3>
+    <p>Rothenberg&rsquo;s second finding, from the same research program: <strong>homospatial thinking</strong> &mdash; actively conceiving two or more distinct entities occupying the exact same space at once, forcing the mind to find or invent a genuinely new relationship between them. He ran real experiments: subjects shown two ordinary photographs physically superimposed, sharing one rectangle, produced measurably more original and vivid metaphors than subjects shown the same two photographs side by side. The superimposition itself, not talent alone, was doing creative work. A similar &mdash; though historically disputed &mdash; story is often told about the chemist August Kekulé, who claimed the ring structure of the benzene molecule came to him in a half-waking daydream of a snake biting its own tail. Historians doubt the exact details; whether or not it happened quite that way, it has exactly the shape of a homospatial insight.</p>
+    <p>The Department of Homospatial Studies is built to force the real thing, not the easy substitute: instead of comparing two domains (&ldquo;X is like Y&rdquo;), it requires a fusion into one new entity belonging to neither source domain &mdash; and the pipeline mechanically scans the output and rejects any answer that&rsquo;s secretly just a metaphor wearing a made-up name (Article X, Failure 2, is the real story of how much enforcement that took). One standing member of the record:</p>
+    {_charter_example("Law × Informational Database State", "Real example, Homospatial Studies &mdash; Verified and Unrefuted:")}
+
+    <p>None of this required a machine, in principle &mdash; Darwin, Einstein, and Kekulé (real or embellished) each did it with nothing but their own mind, once, after years of immersion in their field. What FU changes is scale. A single researcher gets, at most, a handful of true collisions in an entire working lifetime, most of them arrived at by accident. FU runs these same three moves deliberately, on demand, against a real domain pool &mdash; not waiting for the accident, but forcing it, hundreds of times over, and disclosing exactly how many of those forced collisions actually held up.</p>
+  </section>
+
+  <section id="grievance" class="charter-article">
+    <h2><span class="num">III</span>Why FU Was Founded</h2>
+    <p>FU exists to recover time &mdash; specifically, the years a real Masters or PhD student spends finding out, the slow and expensive way, that a hypothesis doesn&rsquo;t hold up. Running the collision is the easy part; a model proposes a plausible-sounding cross-domain hypothesis in seconds. The hard, slow, expensive part of science has never been having an idea. It has always been finding out, honestly, whether the idea was actually worth having.</p>
+    <p>That cost is not hypothetical. It is one of the best-documented, least-discussed facts about how research actually works:</p>
+    <div class="stat-row">
+      <div class="stat-box"><div class="n">7.3 yrs</div><div class="l">average time to complete a PhD in the United States &mdash; Council of Graduate Schools</div></div>
+      <div class="stat-box"><div class="n">40&ndash;60%</div><div class="l">of students who start a PhD never finish it &mdash; attrition climbs from ~10&ndash;15% in year one to ~50% by year five</div></div>
+      <div class="stat-box"><div class="n">84%</div><div class="l">of surveyed biomedical PhD students had failed to replicate their own prior results at least once (2023 survey)</div></div>
+      <div class="stat-box"><div class="n">$28.2B/yr</div><div class="l">estimated annual cost of irreproducible preclinical biomedical research in the U.S. alone &mdash; Freedman, Cockburn &amp; Simcoe, <em>PLOS Biology</em>, 2015</div></div>
+    </div>
+    <p>The same 2023 study found that 70% of those students had also failed to replicate a colleague&rsquo;s finding, and 58% had failed to replicate a result from the published literature &mdash; and for roughly a quarter of the students surveyed, the resulting stress was severe enough to interfere with eating, sleeping, or the ability to work. The $28.2 billion figure is deliberately conservative: it assumes only half of preclinical biomedical research is irreproducible, when some independent estimates run as high as 89%.</p>
+    <p>There is a second, quieter version of the same problem: research that fails is far less likely to ever be written up at all &mdash; the <strong>file-drawer problem</strong>. One dataset tracking published papers found the share reporting a positive, statistically significant result rose past 80% after 1999 and reached 88.6% by 2005, not because negative results are rare in the lab, but because they are dramatically less likely to be written up and submitted for publication in the first place.</p>
+    <p>None of these numbers are about FU, or about AI at all. They describe the ordinary, already-existing condition of human research &mdash; an enormous amount of skilled, well-intentioned, expensive effort spent finding out, the slow way, that a particular idea doesn&rsquo;t hold up, with the negative result then largely vanishing rather than sparing the next student the same trip. This is the gap FU's whole curriculum (Article V) is built to sit inside: generation is cheap; verification (Article VI) and refutation (Article VII) exist to compress, into minutes, the version of &ldquo;does this actually hold up&rdquo; a real researcher would otherwise spend a year of bench time discovering alone. FU does not and cannot replace that year of real experimental work for a hypothesis that survives &mdash; nothing computational substitutes for a real experiment. But for the hypotheses that would have failed anyway, which the numbers above suggest is most of them, catching that earlier and cheaply is the entire founding purpose of this institution.</p>
+  </section>
+
+  <section id="mechanisms" class="charter-article">
+    <h2><span class="num">IV</span>The Three Departments, Formally</h2>
+    <p>Article II told these three mechanisms as stories, one researcher at a time. This Article states exactly how each one becomes a repeatable step FU can run against any two domains pulled from its pool &mdash; not three settings of one prompt, but three structurally different generation modes, each with its own geometry.</p>
+    <table class="pub-table">
+      <tr><th>Department</th><th>Geometry</th><th>What it produces</th><th>Doctrine source</th></tr>
+      <tr><td><strong>Bisociation Studies</strong></td><td>Horizontal &mdash; two domains collide, each stays itself</td><td>A candidate functor mapping between them</td><td>Koestler, <em>The Act of Creation</em> (1964)</td></tr>
+      <tr><td><strong>Janusian Studies</strong></td><td>Vertical &mdash; one domain&rsquo;s proposition held against its exact opposite</td><td>A falsifiable paradox &mdash; genuinely both true at once, not a compromise</td><td>Rothenberg, 1976/1979</td></tr>
+      <tr><td><strong>Homospatial Studies</strong></td><td>Overlaid &mdash; two domains superimposed in the same conceptual space</td><td>One fused entity belonging to neither source</td><td>Rothenberg, 1976; cognitive-science successor: conceptual blending (Fauconnier &amp; Turner)</td></tr>
+    </table>
+    <p>One term above is worth unpacking rather than skating past: a <strong>functor</strong>, borrowed loosely from category theory, just means a structure-preserving map &mdash; a specific, stated rule for translating a concept in one domain into its counterpart in the other, precise enough to be checked and found right or wrong. That precision is what separates a Bisociation Studies hypothesis from an ordinary metaphor: &ldquo;markets are like ecosystems&rdquo; is not falsifiable; &ldquo;overcrowding in market X should produce the same boom-bust cycle observed in population Y, on the same rough timescale&rdquo; is.</p>
+    <p>Each department turned out to have a real, exploitable failure mode a naive implementation would have missed &mdash; documented in full, with the actual fixes, in <a href="#history">Article X</a>.</p>
+  </section>
+
+  <section id="curriculum" class="charter-article">
+    <h2><span class="num">V</span>The Four-Phase Curriculum</h2>
+    <p>Generation &mdash; the three departments above &mdash; is only the first phase of four. A hypothesis is worthless left alone; the rest of the curriculum exists to check it, the same way a real doctoral candidate's proposal is worthless without a committee.</p>
+    <figure class="charter-fig">
+      <img src="fu-charter-pipeline.jpg" alt="Four-phase curriculum diagram: Exploration, Web Verification, Researcher Outreach, Data Update">
+      <figcaption>Fig. 1 &mdash; the four-phase curriculum every hypothesis passes through</figcaption>
+    </figure>
+    <ol style="padding-left:22px; line-height:1.8;">
+      <li><strong>Exploration</strong> &mdash; the three departments, drawing domain pairs from FU's combined pool.</li>
+      <li><strong>Web Verification</strong> &mdash; the four-way classifier that checks each hypothesis against real search results (<a href="#evidence">Article VI</a>).</li>
+      <li><strong>Researcher Outreach</strong> &mdash; for hypotheses that clear verification as genuinely fertile, draft (never auto-send) a short email to a real, named researcher active in the adjacent field verification surfaced.</li>
+      <li><strong>Data Update</strong> &mdash; reconcile whatever Phase 3 reveals back into the hypothesis&rsquo;s status on the Ledger.</li>
+    </ol>
+    <div class="charter-callout">
+      <span class="cl-label">A fixed constraint, not a per-case judgment call</span>
+      Phase 3 produces drafts only. No email is ever sent by this pipeline autonomously. Every draft carries an explicit &ldquo;NOT SENT&mdash;requires sign-off&rdquo; banner. No hypothesis to date has produced a real draft &mdash; none has yet reached the bar that would trigger one (see <a href="#record">Article IX</a>).
+    </div>
+  </section>
+
+  <section id="evidence" class="charter-article">
+    <h2><span class="num">VI</span>Standing Rules of Evidence</h2>
+    <p>Think of this phase as a fact-checker with one job: for a given hypothesis, honestly answer whether someone has already said this, whether real unclaimed territory sits nearby, or whether the underlying premise doesn&rsquo;t even hold up. Every generated hypothesis&rsquo;s own self-critique includes a &ldquo;known prior art: not verified&rdquo; line &mdash; an honest admission that the model that generated it cannot check its own novelty claim. This phase resolves that admission against real web search, sorting each result into one of four outcomes:</p>
+    <figure class="charter-fig">
+      <img src="fu-charter-classifier.jpg" alt="Four-way verdict classifier: COLLISION, ADJACENT_ACTIVE, FACT_CHECK_FAIL, NO_SIGNAL">
+      <figcaption>Fig. 2 &mdash; the four-way classifier</figcaption>
+    </figure>
+    <p>The design decision underneath this figure is that it&rsquo;s <strong>four buckets, not a pass/fail binary</strong> &mdash; because &ldquo;did the search find something&rdquo; actually collapses two signals that point in opposite directions. Finding the <em>exact</em> connection already published proves the reasoning is sound &mdash; but it also means the specific hypothesis has zero marginal novelty left. Finding real, active research <em>near</em> the domains, without the exact connection having been drawn, is the actual target state: real, fertile, unclaimed ground. Collapsing both into one &ldquo;found something&rdquo; bit would reward FU for rediscovering consensus over producing discovery.</p>
+    <h3>The umbrella-trap rule</h3>
+    <p>A second rule, discovered empirically rather than planned upfront: a bridging field only counts as ADJACENT_ACTIVE evidence if it is genuinely <em>specific</em> &mdash; if it would <em>not</em> return the same hit for most other domain pairs in the pool. The first real case this caught: a Neuroscience&times;Climatology hypothesis where the only bridging material found was &ldquo;both are complex adaptive systems&rdquo; &mdash; true of nearly any two nonlinear domains that exist. Treating that as confirmation would have made the ADJACENT_ACTIVE bucket meaningless. The hypothesis was correctly routed to NO_SIGNAL instead, and failed independent adversarial refutation on all three lenses (<a href="#gauntlet">Article VII</a>).</p>
+  </section>
+
+  <section id="gauntlet" class="charter-article">
+    <h2><span class="num">VII</span>The Gauntlet</h2>
+    <p>If Article VI is a fact-checker, this Article is closer to a hostile peer-review panel &mdash; except each reviewer works entirely alone, has never seen the other two&rsquo;s notes, and is specifically trying to find the one flaw that kills the claim. It exists because NO_SIGNAL is the one verdict Article VI cannot resolve by design: it looks identical whether a hypothesis is genuinely novel-and-real, or vacuous-and-not-even-wrong, because nothing external exists yet to check it against. The Gauntlet attacks the claim&rsquo;s own internal structure instead of searching for prior art, through three independent lenses:</p>
+    <ul style="padding-left:22px; line-height:1.8;">
+      <li><strong>Coherence</strong> &mdash; does the claimed mapping quietly equivocate on a term as it crosses from one domain into the other?</li>
+      <li><strong>Testability</strong> &mdash; is the falsifiable prediction actually operationalized, or vague enough that nothing could ever return a clean &ldquo;no&rdquo;?</li>
+      <li><strong>Triviality</strong> &mdash; stripped of its domain-specific vocabulary, does the claim reduce to something true of almost any two complex systems?</li>
+    </ul>
+    <p>Promotion out of NO_SIGNAL requires 2 of 3 lenses to find the claim survives &mdash; the &ldquo;Survived the Gauntlet&rdquo; badge carried on the Ledger. Every lens defaults to REFUTED under genuine uncertainty, a deliberate asymmetry against false positives: a hypothesis wrongly killed costs nothing, while a hollow one wrongly promoted costs someone real time later.</p>
+    <p>One real case from the standing record, still on the Ledger exactly as it was found:</p>
+    {_charter_example("Neural networks × Coral reef ecosystems", "An independent reviewer was asked simply to check whether the hypothesis's own document delivered on what its own abstract promised. It didn't:")}
+  </section>
+
+  <section id="tenure" class="charter-article">
+    <h2><span class="num">VIII</span>Tenure and the Ledger</h2>
+    <p>Points are tied to what an outcome actually reveals about a hypothesis&rsquo;s real potential, not to how far it made it through the curriculum:</p>
+    <table class="pub-table">
+      <tr><th>Event</th><th class="pts">Points</th><th>Why</th></tr>
+      <tr><td>Web Verification: ADJACENT_ACTIVE</td><td class="pts">+30</td><td>The actual target state</td></tr>
+      <tr><td>Web Verification: COLLISION (genuine)</td><td class="pts">+5</td><td>Zero novelty, but real credit for valid reasoning</td></tr>
+      <tr><td>Web Verification: COLLISION (not a valid bisociation)</td><td class="pts">&minus;5</td><td>Worse than genuine collision &mdash; the pairing itself was flawed</td></tr>
+      <tr><td>Web Verification: FACT_CHECK_FAIL</td><td class="pts">&minus;10</td><td>Hallucinated domain facts</td></tr>
+      <tr><td>The Gauntlet: survives (2&ndash;3 of 3)</td><td class="pts">+12 / +20</td><td>Real signal the claim isn&rsquo;t vacuous</td></tr>
+      <tr><td>The Gauntlet: REFUTED</td><td class="pts">&minus;15</td><td>Worse than a fact-check failure &mdash; the reasoning failed under scrutiny</td></tr>
+      <tr><td>Researcher Outreach: confirms novel</td><td class="pts">+50</td><td>The single strongest possible signal</td></tr>
+      <tr><td>Researcher Outreach: dismisses</td><td class="pts">&minus;20</td><td>A real expert said no</td></tr>
+    </table>
+    <a class="cta-link" href="fu-leaderboard.html" style="display:block; margin:24px 0; padding:18px 22px; background:var(--surface); border:1px solid var(--gold); border-radius:10px; text-decoration:none; color:var(--text);">
+      <div style="font-family:var(--serif); font-size:1.1rem; font-weight:600; color:var(--gold);">Open the Ledger &rarr;</div>
+      <div style="color:var(--text-muted); font-size:0.88rem; margin-top:4px;">Every hypothesis this Charter describes, ranked, filterable by tier and department, expandable to the full record &mdash; the actual hypothesis text, verification reasoning, and refutation reasoning where it ran.</div>
+    </a>
+  </section>
+
+  <section id="record" class="charter-article">
+    <h2><span class="num">IX</span>The Current Record</h2>
+    <p>As of this Charter's last build: <strong>{TOTAL_SCORED} hypotheses</strong> carry a canonical verdict, none pending, across {len(DOMAINS)} real domains.</p>
+    <table class="pub-table">
+      <tr><th>Department</th><th class="pts">n resolved</th><th class="pts">Avg. points</th><th class="pts">Reach NO_SIGNAL</th></tr>
+      <tr><td>Bisociation Studies</td><td class="pts">{DEPT_PERF.get('bisociation',{}).get('n','—')}</td><td class="pts">{DEPT_PERF.get('bisociation',{}).get('avg','—'):+.1f}</td><td class="pts">{DEPT_PERF.get('bisociation',{}).get('no_signal','—')}%</td></tr>
+      <tr><td>Janusian Studies</td><td class="pts">{DEPT_PERF.get('janusian',{}).get('n','—')}</td><td class="pts">{DEPT_PERF.get('janusian',{}).get('avg','—'):+.1f}</td><td class="pts">{DEPT_PERF.get('janusian',{}).get('no_signal','—')}%</td></tr>
+      <tr><td>Homospatial Studies</td><td class="pts">{DEPT_PERF.get('homospatial',{}).get('n','—')}</td><td class="pts">{DEPT_PERF.get('homospatial',{}).get('avg','—'):+.1f}</td><td class="pts">{DEPT_PERF.get('homospatial',{}).get('no_signal','—')}%</td></tr>
+      <tr><td>Calibration benchmarks (pre-existing case studies)</td><td class="pts">{DEPT_PERF.get('case-study',{}).get('n','—')}</td><td class="pts">{DEPT_PERF.get('case-study',{}).get('avg','—'):+.1f}</td><td class="pts">{DEPT_PERF.get('case-study',{}).get('no_signal','—')}%</td></tr>
+    </table>
+    <p>&ldquo;Reach NO_SIGNAL&rdquo; is a real base rate, not a failure rate &mdash; it is the share of a department&rsquo;s output that had to go to <a href="#gauntlet">the Gauntlet</a> at all, because nothing external existed yet to check it against one way or the other.</p>
+    <h3>Rank one on the Ledger</h3>
+    <p>The single highest-scoring hypothesis FU has ever produced, standing as of this build:</p>
+    {_charter_example(top_row["pairing"])}
+  </section>
+
+  <section id="history" class="charter-article">
+    <h2><span class="num">X</span>Founding-Era History</h2>
+    <p>Four real failures were found in FU's first working pilot batch &mdash; the original 58-hypothesis pool this university was founded on &mdash; three fixed, one left open at the time. They are reported here in full, dated plainly as founding history rather than restated as current statistics, because they are the clearest evidence for what actually made this institution trustworthy in the first place.</p>
+    <figure class="charter-fig">
+      <img src="fu-charter-verdict-40.jpg" alt="Bar chart: final status across an early 40-hypothesis snapshot, an even earlier count than the 58-hypothesis pilot pool this history describes">
+      <figcaption>Fig. 3 &mdash; an early snapshot from FU's own founding pilot, before the pool grew past 40 hypotheses. Kept here exactly as it was generated at the time, not updated &mdash; the current record lives on <a href="fu-leaderboard.html">the Ledger</a>, not in this figure.</figcaption>
+    </figure>
+
+    <h3>Failure 1 &mdash; Janusian&rsquo;s soft self-check got talked past</h3>
+    <p>All three of the first round of Janusian generations labeled a disguised compromise (&ldquo;beneficial in context A, detrimental in context B&rdquo;) as a genuine paradox &mdash; exactly the failure mode the prompt&rsquo;s own instructions described, just relabeled as success by the model itself. A mechanical &ldquo;same-instance test&rdquo; was added to the prompt (can the claimed paradox be rephrased as two <em>different</em> instances, rather than one instance holding both truths at once?) and the same three domains were regenerated: measurable improvement, 2 of 3 clearly passed.</p>
+
+    <h3>Failure 2 &mdash; homospatial&rsquo;s fusion criterion needed code, not just prompt text</h3>
+    <p>The first two homospatial generations were bisociation wearing a coined name &mdash; entities like &ldquo;Crowd Play&rdquo; and &ldquo;Narrative Lattice&rdquo; that were, on inspection, ordinary metaphors (&ldquo;mirrors,&rdquo; &ldquo;akin to,&rdquo; &ldquo;much like&rdquo;) rather than genuine fusions. A written prompt rule banning comparison language was tried first &mdash; it did not hold; the very next generation still used the banned words directly. This was escalated to <strong>code-level enforcement</strong>: after generation, the pipeline mechanically scans the fused-entity section for comparison words, and if any are found, sends one corrective re-prompt quoting the exact violation back to the model. Run at scale against 7 homospatial pairs: all 7 eventually passed (5 needed the corrective retry), and the one case where the retry still left a residual violation was flagged transparently in its own output file rather than hidden.</p>
+    <div class="charter-callout">
+      <span class="cl-label">The general lesson</span>
+      A soft, written self-check gets talked past by the model that&rsquo;s supposed to be checking itself. A mechanical, code-level check on the actual output text does not. This is the same finding, one level up, that motivated the Gauntlet in the first place: self-report is not verification.
+    </div>
+
+    <h3>Failure 3 &mdash; a real resource constraint, and its actual fix</h3>
+    <p>An early session&rsquo;s web-search budget was exhausted after only 5 of a planned 15 verification queries. Rather than fabricate the remaining verdicts or drop them silently, they were recorded with an explicit <code>PENDING_VERIFICATION</code> status, held out of scoring with a clear, visible reason, until a dedicated later session resolved the backlog by hand. The durable fix &mdash; a standalone script that runs verification unattended, with no live session and no shared search budget &mdash; has since been built and proven in real production runs.</p>
+
+    <h3>Failure 4 &mdash; the same-instance test let the same failure through three times in one batch</h3>
+    <p>Failure 1&rsquo;s fix was believed closed after the original three-domain regeneration showed 2 of 3 clearly passing. A later batch said otherwise: of 6 new Janusian hypotheses, 3 turned out, once put through the Gauntlet, to be the exact same disguised compromise Failure 1 was supposed to have fixed &mdash; each one&rsquo;s own self-critique quietly conceding &ldquo;different contexts&rdquo; or &ldquo;different datasets&rdquo; rather than a true same-instance contradiction. A second, smaller instance of the same class of problem showed up in homospatial output too: one hypothesis passed its code-level comparison-word scan on the first attempt, yet its own text read, verbatim, &ldquo;<em>akin to</em> laminar flow&rdquo; and &ldquo;<em>similar to</em> how turbulent eddies&rdquo; &mdash; exactly the banned comparison language the scan exists to catch. The Gauntlet caught what the earlier code-level scan missed both times.</p>
+    <div class="charter-callout warn">
+      <span class="cl-label">Open, not closed</span>
+      Both of these are the same shape as Failure 1 and Failure 2&rsquo;s original findings: a check believed fixed after a small sample turned out to still be beatable at a slightly larger scale. This is disclosed here as founding-era working engineering debt, not retroactively smoothed into a success story.
+    </div>
+  </section>
+
+  <section id="limitations" class="charter-article">
+    <h2><span class="num">XI</span>Limitations and Open Questions</h2>
+    <ul style="padding-left:22px; line-height:1.9;">
+      <li><strong>The domain pool is a standing resource, not a finished one.</strong> {len(DOMAINS)} real domains yield many thousands of possible pairings; {TOTAL_SCORED} hypotheses have been explored across all three departments and the calibration benchmarks combined &mdash; a real fraction of the possible ground, not implied complete. The current live count is always <a href="fu-course-catalog.html">the Course Catalog</a>, not any number printed in this Charter.</li>
+      <li><strong>Researcher Outreach has produced zero real drafts.</strong> No hypothesis to date has reached ADJACENT_ACTIVE-and-durable with a real researcher identified to contact &mdash; the mechanism exists (Article V) but hasn&rsquo;t been exercised for real yet.</li>
+      <li><strong>Verification and the Gauntlet remain a check on plausibility, not a substitute for an experiment.</strong> Nothing in this pipeline runs a real test of any hypothesis against the physical or social world &mdash; it only checks whether a hypothesis is novel, coherent, and worth someone&rsquo;s time to actually go test. That check is the entire value proposition described in Article III; it is not, and was never meant to be, the experiment itself.</li>
+      <li><strong>A hypothesis's status can and does change as the pool grows.</strong> Verdicts on this Ledger are not fixed at the moment of first scoring &mdash; a hypothesis judged one way in an earlier pilot batch can read differently once the record around it has grown. Article X's history is deliberately left as it happened rather than reconciled against the current Ledger; where the two disagree, the Ledger is the live truth and the history is the record of how FU got there.</li>
+    </ul>
+  </section>
+
+  <section id="closing" class="charter-article">
+    <h2><span class="num">XII</span>The Closing Article</h2>
+    <p>The four-way verification layer answers two different questions at once, depending on how you read it: whether one specific hypothesis is novel (COLLISION says no), and whether the underlying generative mechanism reliably finds real, legitimate cross-domain territory at all (COLLISION, read this second way, says yes &mdash; every genuine collision found is evidence the reasoning is not hallucinated, even in the cases where a specific hypothesis turns out to be unoriginal). A real share of this record sits in genuinely fertile, unclaimed territory. Many more looked plausible on generation and did not survive independent adversarial scrutiny &mdash; caught, not hidden. That is the most important sentence in this Charter to sit with honestly: it is easier to build a system that finds connections than to build one that can be trusted when it says a connection is real.</p>
+    <blockquote>&ldquo;The mere fact that we&rsquo;re getting successful bisociations means we have the beginnings of a university.&rdquo;</blockquote>
+    <p>That line, from the real technical report this Charter is built on top of, was written before FU existed. It has since been tested rather than assumed &mdash; not by counting every generated hypothesis as a discovery, but by building the same four-way classifier and Gauntlet used throughout this Charter and applying them to results that turn out to be wrong just as rigorously as to the ones that don&rsquo;t. Article III&rsquo;s numbers are the reason any of this is worth doing at all: PhD researchers spend years, and the field as a whole spends tens of billions of dollars annually, finding out by hand which hypotheses don&rsquo;t hold up. A university that can run the same collision Darwin stumbled into once, on purpose, hundreds of times over &mdash; and then honestly tell you, in minutes, which of those collisions are worth a real person&rsquo;s year &mdash; does not replace the scientist. It replaces the coin flip. That, and nothing more elaborate than that, is what FU is chartered to be.</p>
+  </section>
+
+  </article>
+  </div>
+  {ROW_TOGGLE_JS}'''
+    return wrap("The Charter — FU", body, None)
+
+
+# ---------------------------------------------------------------------------
 # fu-investors.html
 # ---------------------------------------------------------------------------
 
@@ -1161,7 +1448,7 @@ def build_investors():
       <li><b style="color:var(--text);">Adversarial refutation</b> puts survivors in front of three independent reviewers, blind to each other, each trying to kill the claim on coherence, testability, or triviality.</li>
       <li><b style="color:var(--text);">Scoring</b> converts the result into one ranked tier &mdash; the same tiers you'd use to decide a grant, from &ldquo;Survived Refutation&rdquo; down to &ldquo;Refuted / Rejected.&rdquo;</li>
     </ol>
-    <p class="real-thing">Real thing: <a href="whitepaper.html">the full technical report</a>, Sections 5&ndash;6 &amp; 10.</p>
+    <p class="real-thing">Real thing: <a href="whitepaper.html#curriculum">the Charter</a>, Articles V&ndash;VI &amp; VIII.</p>
 
     <h2 style="margin-top:40px;">The Current Shortlist</h2>
     <p style="color:var(--text-muted); max-width:700px;">The top 8 real, currently-standing candidates across all three departments &mdash; excluding the calibration benchmarks, which were never up for funding in the first place. Click any row for the full real record.</p>
@@ -1173,7 +1460,7 @@ def build_investors():
       <div class="stat-box"><div class="n">3</div><div class="l">independent reviewers per adversarial pass</div></div>
     </div>
 
-    <p style="margin-top:24px; color:var(--text-muted); max-width:700px;">This office makes recommendations. It does not disburse funds, does not replace a human program officer's judgment, and does not claim a &ldquo;Survived Refutation&rdquo; tag means a discovery is real &mdash; only that it survived three honest attempts to kill it. See <a href="fu-fake-university-positioning-research.md">the positioning research</a> for the honest limits of this claim.</p>
+    <p style="margin-top:24px; color:var(--text-muted); max-width:700px;">This office makes recommendations. It does not disburse funds, does not replace a human program officer's judgment, and does not claim a &ldquo;Survived Refutation&rdquo; tag means a discovery is real &mdash; only that it survived three honest attempts to kill it. See <a href="whitepaper.html#gauntlet">the Charter's own Article VII</a> for the honest limits of this claim.</p>
   </div>
   {ROW_TOGGLE_JS}'''
     return wrap("For Investors & Grant Officers — FU", body, "investors")
@@ -1592,7 +1879,7 @@ def build_campus_explore():
       </div>
       <div class="tour-caption">
         <h2>Administration Building</h2>
-        <p>Office of the Dean, upstairs. Real thing: <a href="dean-letters.html">the five real Dean's Letters</a>, all signed from here.</p>
+        <p>Office of the Dean, upstairs. Real thing: <a href="fu-home.html#story-of-fu">the Dean's own real correspondence and findings</a>, delivered from here.</p>
       </div>
     </div>
 
@@ -1616,7 +1903,7 @@ def build_campus_explore():
       <div class="tour-imgs"><img src="whitepaper-masthead.jpg" alt="The Founding Collision"></div>
       <div class="tour-caption">
         <h2>The Founding Collision</h2>
-        <p>FU's own founding story, told the way the real whitepaper opens it: Darwin reading Malthus, one collision producing a whole theory. Real thing: <a href="whitepaper.html">the whitepaper's real opening story</a>, Section 1.</p>
+        <p>FU's own founding story, told the way the Charter opens it: Darwin reading Malthus, one collision producing a whole theory. Real thing: <a href="whitepaper.html#founding">the Charter's own Article I</a>.</p>
       </div>
     </div>
   </div>'''
@@ -1714,6 +2001,7 @@ def main():
         "fu-department-homospatial.html": build_department_page("homospatial"),
         "fu-course-catalog.html": build_course_catalog(),
         "fu-leaderboard.html": build_leaderboard(),
+        "whitepaper.html": build_whitepaper(),
         "fu-investors.html": build_investors(),
         "fu-faculty.html": build_faculty_index(),
         "fu-campus-explore.html": build_campus_explore(),
