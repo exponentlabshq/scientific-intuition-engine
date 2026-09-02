@@ -198,11 +198,32 @@ def append_ledger_entry(slug, result):
     return entry
 
 
+def load_already_attempted():
+    """Every slug this script has ever run against, regardless of
+    outcome -- read from the RAW ledger (every line, not
+    load_latest_entries()'s per-slug latest), because a NO_MATCH result
+    from this script is a real, already-spent attempt that should never
+    silently re-run just because 'latest active_research_matches is
+    empty' looks identical to 'never checked.' Found 2026-09-02, before
+    it wasted real budget: --all-no-match's original filter could not
+    tell those two cases apart, so a second --all-no-match pass would
+    have re-charged every already-confirmed NO_MATCH from the first
+    pass forever."""
+    sys.path.insert(0, PIPELINE_DIR)
+    from ledger import read_raw_entries
+    return {
+        rec.get("hypothesis_slug")
+        for rec in read_raw_entries()
+        if "find_new_evidence.py" in (rec.get("active_research_method") or "")
+    }
+
+
 def main():
     parser = argparse.ArgumentParser(description="Second-look discovery pass (Exa) over hypotheses active_research_check.py already marked NO_MATCH")
     parser.add_argument("slugs", nargs="*")
-    parser.add_argument("--all-no-match", action="store_true", help="Run against every ledger entry currently NO_MATCH / never actively-researched")
+    parser.add_argument("--all-no-match", action="store_true", help="Run against every ledger entry currently NO_MATCH / never actively-researched, excluding slugs this script has already attempted")
     parser.add_argument("--limit", type=int, default=None, help="Cap how many hypotheses to check this pass")
+    parser.add_argument("--force", action="store_true", help="With --all-no-match, include slugs this script already attempted (re-rolls them)")
     parser.add_argument("--dry-run", action="store_true", help="Print results only; do not write to the ledger")
     args = parser.parse_args()
 
@@ -212,10 +233,14 @@ def main():
 
     slugs = list(args.slugs)
     if args.all_no_match:
-        slugs.extend(
+        already = set() if args.force else load_already_attempted()
+        candidates = [
             s for s, e in by_slug.items()
-            if not e.get("active_research_matches") and re.match(r"^\d{4}-\d{2}-\d{2}-", s)
-        )
+            if not e.get("active_research_matches") and re.match(r"^\d{4}-\d{2}-\d{2}-", s) and s not in already
+        ]
+        if already:
+            print(f"Skipping {len(already)} slug(s) already attempted by this script (pass --force to re-roll).")
+        slugs.extend(candidates)
     if not slugs:
         raise SystemExit("Pass one or more hypothesis slugs, or use --all-no-match.")
     slugs = list(dict.fromkeys(slugs))  # de-dupe, preserve order

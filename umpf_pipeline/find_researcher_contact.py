@@ -37,6 +37,7 @@ Usage:
 import argparse
 import json
 import os
+import re
 import sys
 from datetime import datetime, timezone
 
@@ -131,6 +132,78 @@ def resolve_one(researcher_or_authors, title, year, source_url, domains, slug=No
     return json.loads(resp.output_text), resp.usage
 
 
+_BARE_DOMAIN_RE = re.compile(r"^https?://(?:www\.)?([^/]+?)/?$")
+
+
+def _domain_matches_person(host, name):
+    """True if the domain's own first label plausibly belongs to the
+    named person (a personal vanity domain or username-style GitHub
+    Pages site) rather than an institution's shared root domain.
+    'zzlang-c.github.io' for 'Lang Cao' -> True ('lang' is in both);
+    'avi.press' for 'Avi Press' -> True ('avi' is in both);
+    'berkeley.edu' for 'Zijiao Zhang' -> False (no real overlap)."""
+    label = re.sub(r"[^a-z]", "", host.split(".")[0].lower())
+    name_parts = re.sub(r"[^a-z ]", "", name.lower()).split()
+    return any(len(p) >= 3 and p in label for p in name_parts)
+
+
+def _sanity_check(result, title):
+    """Catch two real, observed failure modes before either is ever
+    persisted, both found 2026-09-02 on the same real batch, the second
+    one refined the same day after a real, concrete counter-example
+    (a genuine Berkeley department page for a different real person,
+    'Yi Jiao', confirmed a real firstname+lastname @berkeley.edu
+    address pattern legitimately exists and is discoverable -- just
+    never on the university's own bare root homepage):
+
+    1. target_name is actually the SOURCE PAPER'S OWN TITLE, not a
+       person ('Humor Analysis in Interactive Stand-up Comedy Based on
+       Cooperative Principle' as a target_name, with a real, resolved
+       email attached to it).
+    2. email_source_url is a bare domain homepage with no path AND that
+       domain has no real connection to the person's own name --
+       'https://www.berkeley.edu/' for 'Zijiao Zhang' is a large shared
+       institutional root that cannot plausibly display one specific
+       person's email, confirmed by direct follow-up search: real
+       records for a person by that name point to a different current
+       institution entirely, so this was very likely the exact
+       firstname@domain pattern-guess the system prompt explicitly
+       forbids. A personal vanity domain or username-based GitHub Pages
+       site ('avi.press' for Avi Press, 'zzlang-c.github.io' for Lang
+       Cao) is NOT flagged -- a person's own homepage plausibly does
+       show their own contact info on its front page, the same real
+       shape as the Yi Jiao counter-example, just self-hosted instead
+       of on a department page.
+
+    Either failure downgrades the result to an honest not-found with
+    the reason recorded, rather than silently shipping a fabricated or
+    misattributed contact. Deliberately narrow so a real, if unusual,
+    real name or a real personal homepage is never wrongly flagged."""
+    name = (result.get("target_name") or "").strip()
+    if title and name and (name.lower() == title.strip().lower() or (len(name) > 15 and name.lower() in title.lower())):
+        return {
+            **result,
+            "resolved": False,
+            "target_name": "",
+            "email": "",
+            "email_source_url": "",
+            "profile_url": "",
+            "confidence": "LOW",
+            "notes": f"Sanity check rejected this result: target_name matched the source paper's own title ('{name}'), not a person. Original notes: {result.get('notes', '')}",
+        }
+    email_src = (result.get("email_source_url") or "").strip()
+    m = _BARE_DOMAIN_RE.match(email_src) if email_src else None
+    if result.get("email") and m and name and not _domain_matches_person(m.group(1), name):
+        return {
+            **result,
+            "email": "",
+            "email_source_url": "",
+            "confidence": "LOW",
+            "notes": f"Sanity check rejected the email in this result: its cited source ('{email_src}') is a bare domain homepage unconnected to {name}'s own name, which cannot actually display one specific person's email -- almost certainly a pattern-guessed address, not a real citation. Original notes: {result.get('notes', '')}",
+        }
+    return result
+
+
 def _clean(s):
     """Strip stray control characters (observed for real 2026-09-02: a
     NUL byte in place of an accented character -- "El\\x00as Castellanos"
@@ -169,28 +242,41 @@ def append_contact_record(slug, match, result):
     return entry
 
 
+def _match_key(hypothesis_slug, authors, url):
+    """The real identity of one source match: which hypothesis, which
+    real paper (by its real URL -- always unique per paper, unlike the
+    author string). Found and fixed 2026-09-02, twice on the same day:
+
+    Fix 1 -- keyed on source_match_authors alone, NOT the resolved
+    target_name: the skip-check at call time only ever has the raw
+    match's author-list string available (target_name doesn't exist yet
+    -- resolving it is the whole point of the call), so a
+    target_name-keyed index silently never matched any multi-author
+    match.
+
+    Fix 2 -- authors alone still wasn't enough: find_new_evidence.py's
+    own honest "never invent a name" discipline means many of its real
+    matches legitimately share the exact literal string 'authors not
+    specified in excerpt' -- so an authors-only key collapsed every
+    such match, across completely different real papers and
+    hypotheses, onto one dedup entry. The very next real batch after
+    Fix 1 shipped hit this directly: 4 brand-new matches from 4
+    different hypotheses all skipped as 'already resolved' because an
+    earlier, unrelated match happened to share that same placeholder
+    string. A real paper's URL is unique in a way an author string
+    is not, so the URL -- scoped to the hypothesis, since the same
+    real paper could legitimately be a real match for more than one
+    hypothesis -- is the actual identity a 'have we tried this exact
+    match before' check needs."""
+    return (hypothesis_slug, (url or authors or "").strip().lower())
+
+
 def load_resolved_matches():
     """Source matches already resolved (successfully or not) in a prior
     run, so a re-run over the same or an overlapping shortlist doesn't
-    re-spend real API cost re-searching the same paper/author-list again.
-
-    Keyed on the raw source_match_authors string -- deliberately NOT on
-    the resolved target_name, even though that reads as the more natural
-    key for "have we found this person before." Found and fixed
-    2026-09-02, by direct observation on the second real run: the
-    skip-check at call time only ever has the raw match's author-list
-    string available (target_name doesn't exist yet -- resolving it is
-    the whole point of the call), so a target_name-keyed index silently
-    never matches for any multi-author match and dedup quietly does
-    nothing beyond the trivial single-author case. Keying on the same
-    field the check actually compares against is what makes the skip
-    real. The real, disclosed tradeoff this keeps: a genuinely
-    already-resolved person can still get re-processed if they show up
-    again as part of a *different* author-list string (e.g. a second
-    paper with a different co-author) -- accepted rather than chased
-    further, since which individual an ambiguous multi-author match
-    resolves to is itself not fully deterministic between runs (see
-    resolve_one's own docstring note)."""
+    re-spend real API cost re-searching the same paper again. See
+    _match_key's own docstring for the two real dedup-key bugs found
+    and fixed here, in order, on the same day."""
     seen = {}
     if os.path.exists(CONTACTS_PATH):
         with open(CONTACTS_PATH, encoding="utf-8") as f:
@@ -199,8 +285,8 @@ def load_resolved_matches():
                 if not line:
                     continue
                 rec = json.loads(line)
-                key = (rec.get("source_match_authors") or "").strip().lower()
-                if key:
+                key = _match_key(rec.get("hypothesis_slug"), rec.get("source_match_authors"), rec.get("source_match_url"))
+                if key[1]:
                     seen[key] = rec
     return seen
 
@@ -249,7 +335,7 @@ def main():
             skipped_no_matches.append(slug)
             continue
         for m in matches:
-            key = (m.get("researcher_or_authors") or "").strip().lower()
+            key = _match_key(slug, m.get("researcher_or_authors"), m.get("url"))
             if key in already:
                 continue
             jobs.append((slug, e.get("domains", []), m))
@@ -271,6 +357,7 @@ def main():
         print(f"[{i}/{len(jobs)}] {slug} — {authors[:60]} ...", flush=True)
         try:
             result, usage = resolve_one(authors, m.get("title"), m.get("year"), m.get("url"), domains, slug=slug)
+            result = _sanity_check(result, m.get("title"))
             status = "FOUND EMAIL" if result.get("email") else ("RESOLVED (no email)" if result["resolved"] else "NOT FOUND")
             print(f"    {status} — {result.get('target_name')} · {result.get('institution') or '(institution unknown)'} · {usage.total_tokens} tokens", flush=True)
             if result.get("email"):
