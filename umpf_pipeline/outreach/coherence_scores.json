@@ -1186,5 +1186,761 @@
     "question": "Can urban planning traffic flow optimization function as informational cache miss handling within a Traffic Dataflow Optimization System?",
     "coherent": false,
     "concern": "The question implies a direct functional application of urban traffic flow optimization as a literal mechanism for handling cache misses, which overstates the relationship between the two concepts. While both share an abstract theme of optimizing flow, there is no proposed system that connects them in a way that allows one to function as the other, leading to a misleading interpretation of their relationship."
+  },
+  "email-aerospace-engineering-liu.md": {
+    "hypothesis_slug": "2026-08-31-janusian-aerospace-engineering",
+    "question": "Can both high angles of attack leading to stall and low angles of attack leading to stall be true simultaneously for the same flight conditions?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-anthropology-gift-economies-and-reciprocity-x-mili-harrisonbuck.md": {
+    "hypothesis_slug": "2026-08-28-anthropology-gift-economies-and-reciprocity-x-military-strategy",
+    "question": "Can understanding the dynamics of gift economies in anthropology provide insights into how coalition forces can better navigate uncertainty in military campaigns?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-anthropology-gift-economies-and-reciprocity-x-mili-itao.md": {
+    "hypothesis_slug": "2026-08-28-anthropology-gift-economies-and-reciprocity-x-military-strategy",
+    "question": "Can the dynamics of gift economies in anthropology influence how coalition forces navigate uncertainty in military campaigns?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-artificial-intelligence-vela.md": {
+    "hypothesis_slug": "2026-08-29-janusian-artificial-intelligence",
+    "question": "Can AI model training outcomes be both predictable and unpredictable at the same time due to complex internal dynamics and external influences?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-astrophysics-2-goldberg.md": {
+    "hypothesis_slug": "2026-08-31-janusian-astrophysics-2",
+    "question": "Can orbital resonance simultaneously stabilize and destabilize celestial bodies for the same instance?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-banking-lee.md": {
+    "hypothesis_slug": "2026-08-31-janusian-banking",
+    "question": "Can the fractional reserve banking system promote economic growth and undermine economic stability simultaneously?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-biological-systems-x-human-social-network-dynamics-tanksley.md": {
+    "hypothesis_slug": "2026-08-29-homospatial-biological-systems-x-human-social-network-dynamics",
+    "question": "Can changes in genetic expression within a population predict shifts in social behaviors and network structures?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-chemistry-x-human-social-network-dynamics-saveski.md": {
+    "hypothesis_slug": "2026-08-30-chemistry-x-human-social-network-dynamics",
+    "question": "Can a catalyst in chemistry function as an influencer in social networks, accelerating behavioral adoption without being consumed in the process?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-chemistry-x-physical-immune-system-young.md": {
+    "hypothesis_slug": "2026-08-31-chemistry-x-physical-immune-system",
+    "question": "Can the self-assembly of molecular structures in chemistry function as the self-organization of immune cells and proteins in the immune system?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-climate-science-x-gaming-narrative-cradockhenry.md": {
+    "hypothesis_slug": "2026-08-30-climate-science-x-gaming-narrative",
+    "question": "Can incorporating real-time player feedback mechanisms into climate models enhance prediction accuracy, similarly to how adapting climate data into gaming narratives boosts player engagement?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-climatology-ocean-current-circulation-x-epigenetic-eirinlopez.md": {
+    "hypothesis_slug": "2026-08-29-homospatial-climatology-ocean-current-circulation-x-epigenetics",
+    "question": "Can variations in ocean current temperatures and salinity levels correspond with measurable changes in the epigenetic profiles of marine organisms?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-climatology-ocean-current-circulation-x-epigenetic-janssens.md": {
+    "hypothesis_slug": "2026-08-29-homospatial-climatology-ocean-current-circulation-x-epigenetics",
+    "question": "Can ocean current temperature variations correspond with changes in the epigenetic profiles of marine organisms, indicating adaptative responses to environmental conditions?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-cognitive-ai-pipeline-orchestration-sofia.md": {
+    "hypothesis_slug": "2026-08-31-janusian-cognitive-ai-pipeline-orchestration",
+    "question": "Can both centralized and decentralized orchestration systems function simultaneously for the same cognitive AI pipeline?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-cognitive-ai-preprocessing-pipelines-hou.md": {
+    "hypothesis_slug": "2026-08-29-janusian-cognitive-ai-preprocessing-pipelines",
+    "question": "Can preprocessing steps enhance the performance of cognitive AI models while also hindering it under certain conditions?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-cognitive-psychology-li.md": {
+    "hypothesis_slug": "2026-08-31-janusian-cognitive-psychology",
+    "question": "Can both the limited capacity of working memory and the effective expansion of that capacity through chunking be true simultaneously for the same cognitive tasks?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-cognitive-psychology-nassar.md": {
+    "hypothesis_slug": "2026-08-31-janusian-cognitive-psychology",
+    "question": "Can working memory effectively expand its capacity through chunking while also maintaining its inherent limits?",
+    "coherent": false,
+    "concern": "The question implies that working memory can dynamically alter its capacity based on chunking in a literal sense, which suggests an operational mechanism that contradicts the original hypothesis's assertion of simultaneous limits and expansions. There's a gap between the abstract idea of chunking enhancing memory performance and the suggestion of a physical change in memory capacity itself."
+  },
+  "email-cognitive-psychology-thalmann.md": {
+    "hypothesis_slug": "2026-08-31-janusian-cognitive-psychology",
+    "question": "Can both the limited capacity of working memory and the effective expansion of that capacity through chunking hold true simultaneously for the same cognitive tasks?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-cognitive-reinforcement-learning-mcdougle.md": {
+    "hypothesis_slug": "2026-08-31-janusian-cognitive-reinforcement-learning",
+    "question": "Can cognitive processes both enhance learning efficiency and hinder learning efficiency simultaneously for the same learning instance?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-cognitive-streaming-data-processing-x-creative-fil-freudendal.md": {
+    "hypothesis_slug": "2026-08-31-cognitive-streaming-data-processing-x-creative-film-production-orchestration",
+    "question": "Can real-time data processing techniques improve responsiveness and creativity in film production orchestration?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-cognitive-streaming-data-processing-x-creative-fil-harrison.md": {
+    "hypothesis_slug": "2026-08-31-cognitive-streaming-data-processing-x-creative-film-production-orchestration",
+    "question": "Can real-time data processing techniques improve responsiveness and creativity in decision-making during filmmaking?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-cognitive-streaming-data-processing-x-creative-fil-karjalainen.md": {
+    "hypothesis_slug": "2026-08-31-cognitive-streaming-data-processing-x-creative-film-production-orchestration",
+    "question": "Can real-time data processing techniques in film production improve responsiveness and creativity in decision-making during the filmmaking process?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-comedy-x-cognitive-ai-attention-mirowski.md": {
+    "hypothesis_slug": "2026-08-31-comedy-x-cognitive-ai-attention",
+    "question": "Can an AI system designed with crowd work principles from comedy adapt its attention in real-time based on user feedback?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-control-theory-x-physical-magnetic-fluctuation-arpaia.md": {
+    "hypothesis_slug": "2026-09-01-control-theory-x-physical-magnetic-fluctuation",
+    "question": "Can Kalman filtering function as a method to improve predictive accuracy in modeling magnetic fluctuations?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-control-theory-x-quantum-physics-lu.md": {
+    "hypothesis_slug": "2026-08-31-homospatial-control-theory-x-quantum-physics",
+    "question": "Can Kalman filtering and quantum measurement be integrated to enhance the predictive accuracy of quantum systems through Quantum Kalman Dynamics?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-control-theory-x-quantum-physics-zhang.md": {
+    "hypothesis_slug": "2026-08-31-homospatial-control-theory-x-quantum-physics",
+    "question": "Can the integration of Kalman filtering and quantum measurement yield improved predictive accuracy in quantum systems?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-creative-artistic-arrangement-stamkou.md": {
+    "hypothesis_slug": "2026-08-31-janusian-creative-artistic-arrangement",
+    "question": "Can both harmony and discord hold simultaneously in artistic arrangement, such that artworks integrating tension evoke a stronger emotional response than those relying solely on harmony?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-creative-artistic-arrangement-wilson.md": {
+    "hypothesis_slug": "2026-08-31-janusian-creative-artistic-arrangement",
+    "question": "Can both harmony and discord hold simultaneously in artistic arrangement to enhance emotional response?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-creative-idea-uncertainty-ross.md": {
+    "hypothesis_slug": "2026-08-30-janusian-creative-idea-uncertainty",
+    "question": "Can both uncertainty and certainty hold simultaneously for the same creative process, yielding innovative and structured creative outputs?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-creative-improvisation-adjustment-calvomerino.md": {
+    "hypothesis_slug": "2026-08-29-janusian-creative-improvisation-adjustment",
+    "question": "Can effective creative improvisation simultaneously require and not require flexibility and adaptability to external cues and collaborative dynamics?",
+    "coherent": false,
+    "concern": "The drafted question suggests a direct relationship between the requirements of flexibility and adaptability in creative improvisation without a clear mechanism to bridge these seemingly contradictory demands. The underlying claim about the coexistence of flexibility and rigidity is abstract, and the question implies that one can hold both states simultaneously in a literal, mechanical sense, which isn't supported by the hypothesis."
+  },
+  "email-creative-improvisation-coordination-x-physical-evo-goupil.md": {
+    "hypothesis_slug": "2026-08-31-creative-improvisation-coordination-x-physical-evolutionary-selection",
+    "question": "Can the relational rule governing adaptive responses in creative improvisation also govern trait selection in physical evolution?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-creative-inspiration-variability-bledow.md": {
+    "hypothesis_slug": "2026-08-29-janusian-creative-inspiration-variability",
+    "question": "Can fluctuations in creativity manifest as responses to both external stimuli and internal psychological states at the same time?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-creative-inspiration-variability-hu.md": {
+    "hypothesis_slug": "2026-08-29-janusian-creative-inspiration-variability",
+    "question": "Can fluctuations in creativity manifest as responses to both environmental changes and shifts in individual cognition?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-creative-narrative-arc-development-x-human-team-co-clark.md": {
+    "hypothesis_slug": "2026-08-29-creative-narrative-arc-development-x-human-team-collaboration",
+    "question": "Can the effectiveness of a team's collaboration be predicted by analyzing the narrative arcs of their interactions?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-creative-performance-monitoring-x-human-cognitive-lebuda.md": {
+    "hypothesis_slug": "2026-08-31-homospatial-creative-performance-monitoring-x-human-cognitive-bias",
+    "question": "Can the interaction of Creative Performance Monitoring and Human Cognitive Bias lead to significant variance in creative performance evaluations?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-creative-performance-monitoring-x-human-cognitive-north.md": {
+    "hypothesis_slug": "2026-08-31-homospatial-creative-performance-monitoring-x-human-cognitive-bias",
+    "question": "Can evaluations of creative performance show significant variance based on known cognitive biases, revealing patterns absent in purely objective assessments?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-dance-theodorou.md": {
+    "hypothesis_slug": "2026-08-31-janusian-dance",
+    "question": "Can repetition in choreography both enhance and detract from the audience's understanding and appreciation of the dance piece simultaneously?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-economics-georganas.md": {
+    "hypothesis_slug": "2026-08-30-janusian-economics",
+    "question": "Can bidders demonstrate both rational and irrational behaviors simultaneously during the same auction?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-economics-x-cognitive-ai-attention-cabrera.md": {
+    "hypothesis_slug": "2026-08-31-economics-x-cognitive-ai-attention",
+    "question": "Can variations in market liquidity correlate with changes in attention allocation strategies in AI systems?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-education-x-human-meeting-participation-hoque.md": {
+    "hypothesis_slug": "2026-08-30-education-x-human-meeting-participation",
+    "question": "Can real-time feedback mechanisms in meetings function as adaptation drivers similar to educational assessment methods?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-education-x-human-meeting-participation-terken.md": {
+    "hypothesis_slug": "2026-08-30-education-x-human-meeting-participation",
+    "question": "Can real-time feedback mechanisms in meetings lead to improved decision-making outcomes?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-epidemiology-hiraoka.md": {
+    "hypothesis_slug": "2026-08-29-janusian-epidemiology",
+    "question": "Can the effectiveness of vaccination campaigns vary significantly even in populations that appear to meet a herd immunity threshold?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-epidemiology-x-creative-inspiration-variability-sarrazin.md": {
+    "hypothesis_slug": "2026-08-29-epidemiology-x-creative-inspiration-variability",
+    "question": "Can achieving a certain threshold of collaborative creative input lead to a significant increase in the quality and quantity of creative outputs?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-epigenetics-x-physical-magnetic-fluctuation-banaszabczyk.md": {
+    "hypothesis_slug": "2026-08-31-homospatial-epigenetics-x-physical-magnetic-fluctuation",
+    "question": "Can magnetic fluctuations modulate the regulatory processes of gene expression through epigenetic mechanisms?",
+    "coherent": false,
+    "concern": "The question implies that magnetic fluctuations can directly influence gene expression through concrete epigenetic mechanisms, suggesting a direct physical linkage which is not substantiated by the hypothesis. The hypothesis merely proposes that both domains can relate under the abstract concept of magnetoepigenesis without asserting a clear, testable mechanism by which one directly modulates the other."
+  },
+  "email-fisheries-jones.md": {
+    "hypothesis_slug": "2026-08-31-janusian-fisheries",
+    "question": "Can both higher fish stock levels and lower recruitment rates be true simultaneously for the same fish population?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-fisheries-miranda.md": {
+    "hypothesis_slug": "2026-08-31-janusian-fisheries",
+    "question": "Can higher fish stock levels and lower recruitment rates be true simultaneously for the same fish population?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-fisheries-zheng.md": {
+    "hypothesis_slug": "2026-08-31-janusian-fisheries",
+    "question": "Can higher fish stock levels and lower recruitment rates be true simultaneously for the same fish population?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-gaming-narrative-zhang.md": {
+    "hypothesis_slug": "2026-08-30-janusian-gaming-narrative",
+    "question": "Can player agency function as both a primary driver of narrative progression and simultaneously have little effect on narrative outcomes in the same game experience?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-healthcare-wahbeh.md": {
+    "hypothesis_slug": "2026-08-29-janusian-healthcare",
+    "question": "Can accurate and timely test results be essential and not essential for successful diagnosis and treatment at the same time?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-healthcare-x-creative-album-production-orchestrati-harrison.md": {
+    "hypothesis_slug": "2026-08-31-healthcare-x-creative-album-production-orchestration",
+    "question": "Can an increase in the coordination of healthcare interventions lead to better patient outcomes, similar to how feedback processes enhance final album quality?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-healthcare-x-creative-album-production-orchestrati-visser.md": {
+    "hypothesis_slug": "2026-08-31-healthcare-x-creative-album-production-orchestration",
+    "question": "Can an increase in the coordination of healthcare interventions lead to better patient outcomes as seen in creative album production?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-healthcare-x-creative-film-production-orchestratio-strauss.md": {
+    "hypothesis_slug": "2026-08-31-healthcare-x-creative-film-production-orchestration",
+    "question": "Can the adaptation of patient health through real-time feedback mechanisms function similarly to the adaptations in film production processes driven by ongoing evaluation?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-healthcare-x-creative-idea-uncertainty-lee.md": {
+    "hypothesis_slug": "2026-08-29-homospatial-healthcare-x-creative-idea-uncertainty",
+    "question": "Can the integration of patient health data with creative idea generation lead to improved treatment outcomes and faster adaptation of clinical practices?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-human-financial-trading-algorithms-x-physical-powe-siozios.md": {
+    "hypothesis_slug": "2026-08-30-homospatial-human-financial-trading-algorithms-x-physical-power-grid-orchestration",
+    "question": "Can the fusion of Human Financial Trading Algorithms and Physical Power Grid Orchestration create a system where fluctuations in energy demand influence trading strategies in financial markets?",
+    "coherent": false,
+    "concern": "The question implies a direct, physical mechanism where fluctuations in energy demand literally influence trading strategies, suggesting a causal link between two distinct systems that are more abstractly connected through analogous principles of data analysis. The hypothesis itself suggests a framework where both domains could inform each other without asserting a direct influence, creating a gap in the proposed mechanism."
+  },
+  "email-human-financial-trading-algorithms-x-physical-powe-wozabal.md": {
+    "hypothesis_slug": "2026-08-30-homospatial-human-financial-trading-algorithms-x-physical-power-grid-orchestration",
+    "question": "Can fluctuations in energy demand directly influence trading strategies in financial markets, observable through correlated price movements and trading volumes?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-human-learning-uncertainty-clarkstallkamp.md": {
+    "hypothesis_slug": "2026-08-29-janusian-human-learning-uncertainty",
+    "question": "Can uncertainty in human learning primarily enhance knowledge acquisition and retention while also hindering it?",
+    "coherent": false,
+    "concern": "The question suggests a direct causal relationship\u2014implying that uncertainty can enhance or hinder knowledge acquisition in a specific instance\u2014without proposing a mechanism or framework to reconcile how both effects can occur simultaneously within the same learning environment. The underlying hypothesis asserts that both effects can coexist but does not provide a clear pathway for how they interact in practice, leaving a gap in understanding."
+  },
+  "email-human-social-network-dynamics-neal.md": {
+    "hypothesis_slug": "2026-08-31-janusian-human-social-network-dynamics",
+    "question": "Can both strong ties and weak ties hold simultaneously for the dissemination of information in social networks?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-human-urban-planning-henao.md": {
+    "hypothesis_slug": "2026-08-30-janusian-human-urban-planning",
+    "question": "Can both human-centric design and vehicular efficiency coexist in urban planning to foster high levels of social interaction alongside efficient traffic flow?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-human-urban-planning-x-physical-ecosystem-successi-alberti.md": {
+    "hypothesis_slug": "2026-08-30-homospatial-human-urban-planning-x-physical-ecosystem-succession",
+    "question": "Can urban planning integrate with ecosystem succession to create sustainable urban environments that adapt over time?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-human-urban-planning-x-physical-ecosystem-successi-weiskopf.md": {
+    "hypothesis_slug": "2026-08-30-homospatial-human-urban-planning-x-physical-ecosystem-succession",
+    "question": "Can urban areas designed with integrated ecological principles significantly improve biodiversity and ecosystem function compared to conventional designs?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-immunology-2-vance.md": {
+    "hypothesis_slug": "2026-08-29-janusian-immunology-2",
+    "question": "Can the effectiveness of the innate immune response vary based on the presence of prior adaptive immunity?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-immunology-cobey.md": {
+    "hypothesis_slug": "2026-08-29-janusian-immunology",
+    "question": "Can adaptive immune memory be both reliable and unreliable in providing long-lasting protection against different pathogens?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-immunology-x-behavioral-psychology-hadamitzky.md": {
+    "hypothesis_slug": "2026-08-30-homospatial-immunology-x-behavioral-psychology",
+    "question": "Can the innate immune response function as a learning mechanism that adapts based on the outcomes of interactions with pathogens, similar to operant conditioning?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-informational-database-sharding-solat.md": {
+    "hypothesis_slug": "2026-08-29-janusian-informational-database-sharding",
+    "question": "Can specific query types exhibit both enhanced speed and increased latency when accessing data across shards?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-informational-database-sharding-x-informational-di-gao.md": {
+    "hypothesis_slug": "2026-09-01-informational-database-sharding-x-informational-distributed-consensus",
+    "question": "Can an effective sharding strategy improve performance in distributed consensus algorithms under high data contention?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-informational-database-sharding-x-informational-di-guo.md": {
+    "hypothesis_slug": "2026-09-01-informational-database-sharding-x-informational-distributed-consensus",
+    "question": "Can optimizing sharding strategies lead to improved performance in distributed consensus algorithms, particularly in scenarios with high data contention?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-informational-database-sharding-zwaenepoel.md": {
+    "hypothesis_slug": "2026-08-29-janusian-informational-database-sharding",
+    "question": "Can sharding improve and decrease database performance at the same time when accessing data across shards?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-informational-error-probability-x-physical-circuit-ferringer.md": {
+    "hypothesis_slug": "2026-08-30-informational-error-probability-x-physical-circuit-evolution",
+    "question": "Can increasing error rates in information transmission correlate with specific patterns of circuit design evolution aimed at mitigating those errors?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-informational-packet-buffer-management-mckeown.md": {
+    "hypothesis_slug": "2026-08-31-janusian-informational-packet-buffer-management",
+    "question": "Can both large buffers necessary to handle data bursts and small buffers essential to reduce latency coexist for the same network traffic?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-informational-sensor-networks-x-physical-power-gri-liu.md": {
+    "hypothesis_slug": "2026-08-31-homospatial-informational-sensor-networks-x-physical-power-grid-orchestration",
+    "question": "Can informational sensor networks and physical power grid orchestration create a Smart Energy Orchestrator that demonstrates measurable improvements in energy efficiency and grid stability compared to traditional systems?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-informational-software-version-control-borba.md": {
+    "hypothesis_slug": "2026-08-30-janusian-informational-software-version-control",
+    "question": "Can both the structured management of code changes by version control systems and the complexity they introduce in collaboration be true simultaneously for the same software project?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-knowledge-systems-x-informational-scientific-exper-wainrib.md": {
+    "hypothesis_slug": "2026-08-31-knowledge-systems-x-informational-scientific-experiment-orchestration",
+    "question": "Can increasing uncertainty in data interpretation within knowledge systems lead to a measurable increase in the variability of experimental outcomes?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-knowledge-systems-x-physical-power-grid-orchestrat-fan.md": {
+    "hypothesis_slug": "2026-08-31-homospatial-knowledge-systems-x-physical-power-grid-orchestration",
+    "question": "Can the integration of knowledge systems with power grid orchestration lead to the emergence of a Cognitive Power Grid that enhances energy efficiency and reliability?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-knowledge-systems-x-physical-power-grid-orchestrat-gitzel.md": {
+    "hypothesis_slug": "2026-08-31-homospatial-knowledge-systems-x-physical-power-grid-orchestration",
+    "question": "Can Knowledge Systems and Physical Power Grid Orchestration truly merge to create a Cognitive Power Grid that improves energy efficiency and reliability?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-language-linguistics-francesch.md": {
+    "hypothesis_slug": "2026-08-31-janusian-language-linguistics",
+    "question": "Can language translation be both accurate and inaccurate simultaneously for the same instance; does this reveal both precise meanings and inherent ambiguities?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-language-linguistics-x-military-strategy-weiss.md": {
+    "hypothesis_slug": "2026-08-29-language-linguistics-x-military-strategy",
+    "question": "Can improvements in language translation accuracy correlate with higher mission success rates in military operations that rely on effective communication?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-legal-systems-dong.md": {
+    "hypothesis_slug": "2026-08-29-janusian-legal-systems",
+    "question": "Can both legal outcomes being definitively determined and legal outcomes being ambiguous hold simultaneously for the same case?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-linguistics-historical-sound-change-kam.md": {
+    "hypothesis_slug": "2026-08-28-janusian-linguistics-historical-sound-change",
+    "question": "Can sound changes that are both regular and unpredictable coexist in the same linguistic context?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-linguistics-historical-sound-change-labov.md": {
+    "hypothesis_slug": "2026-08-28-janusian-linguistics-historical-sound-change",
+    "question": "Can sound changes that are both regular and predictable function alongside sound changes that are irregular and unpredictable within the same linguistic context?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-logic-paulson.md": {
+    "hypothesis_slug": "2026-08-31-janusian-logic",
+    "question": "Can both the statement that every consistent formal system can prove all true statements and the statement that there are true statements that cannot be proven hold simultaneously for the same formal system?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-mathematics-cochran.md": {
+    "hypothesis_slug": "2026-08-31-janusian-mathematics",
+    "question": "Can knot invariants provide a definitive classification of knots while also allowing different knots to share the same invariant values for the same instance?",
+    "coherent": false,
+    "concern": "The question implies that knot invariants can provide a definitive classification while simultaneously sharing invariant values among different knots, suggesting a direct mechanism of classification that the underlying claim does not support. The foundational idea is that knot invariants can classify some knots but fail for others, without a clear system or method showing how this duality operates in a practical sense."
+  },
+  "email-mathematics-kauffman.md": {
+    "hypothesis_slug": "2026-08-31-janusian-mathematics",
+    "question": "Can knot invariants provide a definitive classification of knots while also allowing different knots to share invariant values?",
+    "coherent": false,
+    "concern": "The question implies that knot invariants can provide a definitive classification of knots while also allowing different knots to share invariant values as if this dual nature is a causal relationship, whereas the underlying claim indicates that this paradox of classification cannot be resolved simply or mechanistically."
+  },
+  "email-music-theory-harrison.md": {
+    "hypothesis_slug": "2026-08-31-janusian-music-theory",
+    "question": "Can both the independence of voices and their parallel movement be true simultaneously for the same musical passage?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-music-theory-mota.md": {
+    "hypothesis_slug": "2026-08-29-janusian-music-theory",
+    "question": "Can jazz musicians produce performances that exhibit both innovative creativity and rigid adherence to structure in the same musical phrases?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-music-theory-x-human-social-network-dynamics-martinez.md": {
+    "hypothesis_slug": "2026-08-31-music-theory-x-human-social-network-dynamics",
+    "question": "Can variations in feedback mechanisms in social networks correlate with changes in improvisational styles in jazz?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-organizational-theory-x-creative-inspiration-varia-grabner.md": {
+    "hypothesis_slug": "2026-08-31-organizational-theory-x-creative-inspiration-variability",
+    "question": "Can increasing autonomy in self-organizing teams lead to greater variability in creative output?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-physical-acoustic-resonance-x-physical-photon-emis-carr.md": {
+    "hypothesis_slug": "2026-09-01-physical-acoustic-resonance-x-physical-photon-emission",
+    "question": "Can altering structural properties in acoustic resonance yield predictable changes in emitted photon wavelengths?",
+    "coherent": false,
+    "concern": "The question implies that directly altering structural properties in acoustic resonance can causally lead to changes in the emitted photon wavelengths, suggesting a direct mechanism that the hypothesis does not substantiate. The relationship outlined in the hypothesis is abstract, indicating a correlation rather than a literal causal link between the two processes."
+  },
+  "email-physical-acoustic-resonance-x-physical-photon-emis-finley.md": {
+    "hypothesis_slug": "2026-09-01-physical-acoustic-resonance-x-physical-photon-emission",
+    "question": "Can altering the structural properties of a resonator in acoustic resonance yield predictable changes in the wavelengths of emitted photons?",
+    "coherent": false,
+    "concern": "The question suggests a direct physical mechanism where altering resonance in acoustic systems would produce a predictable physical change in photon wavelengths, implying a causal link that the hypothesis only describes in abstract terms. The underlying claim relates to similarities in relational patterns between the two domains, not direct causation."
+  },
+  "email-physical-bridge-cable-tension-x-physical-elastic-d-huang.md": {
+    "hypothesis_slug": "2026-09-01-physical-bridge-cable-tension-x-physical-elastic-deformation",
+    "question": "Can increasing the tension in a cable produce a predictable pattern of deformation in an elastic material subjected to similar stress conditions?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-physical-chemical-reaction-networks-x-physical-mag-bund.md": {
+    "hypothesis_slug": "2026-08-31-homospatial-physical-chemical-reaction-networks-x-physical-magnetic-fluctuation",
+    "question": "Can physical magnetic fluctuation influence the reaction rates and product distributions of physical chemical reaction networks?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-physical-circuit-evolution-x-physical-electrical-n-thibault.md": {
+    "hypothesis_slug": "2026-09-01-physical-circuit-evolution-x-physical-electrical-noise",
+    "question": "Can improving circuit performance metrics lead to predictable changes in the characteristics of electrical noise observed in those circuits?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-physical-circuit-evolution-x-physical-mechanical-v-ashokkumar.md": {
+    "hypothesis_slug": "2026-09-01-physical-circuit-evolution-x-physical-mechanical-vibration",
+    "question": "Can a circuit designed to optimize performance under variable loads exhibit adaptive behaviors in a mechanical system subjected to varying vibrational forces?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-physical-circuit-evolution-x-physical-mechanical-v-rahi.md": {
+    "hypothesis_slug": "2026-09-01-physical-circuit-evolution-x-physical-mechanical-vibration",
+    "question": "Can a circuit designed to optimize performance under variable loads exhibit similar adaptive behaviors in a mechanical system subjected to varying vibrational forces?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-physical-ecosystem-succession-x-physical-immune-sy-fefferman.md": {
+    "hypothesis_slug": "2026-08-29-physical-ecosystem-succession-x-physical-immune-system",
+    "question": "Can the mechanisms of ecological succession function to predict how immune systems adapt to novel pathogens?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-physical-electrical-noise-x-physical-gear-system-m-esnaasharieh.md": {
+    "hypothesis_slug": "2026-09-01-physical-electrical-noise-x-physical-gear-system-mechanics",
+    "question": "Can an increase in electrical noise lead to a decrease in performance metrics, just as increased mechanical noise affects gear system efficiency?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-physical-flux-regulation-x-materials-science-heo.md": {
+    "hypothesis_slug": "2026-09-01-physical-flux-regulation-x-materials-science",
+    "question": "Can altering control parameters in a physical flux regulation model yield predictable changes in phase behavior in materials science models?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-physical-gear-system-mechanics-asada.md": {
+    "hypothesis_slug": "2026-08-31-janusian-physical-gear-system-mechanics",
+    "question": "Can gear systems function by maintaining a fixed ratio of input to output speeds while also functioning without a fixed ratio of input to output speeds for the same gear system?",
+    "coherent": false,
+    "concern": "The question implies that a gear system can inherently maintain both fixed and variable speed ratios at the same time in a literal, physical sense, which contradicts the framework of the hypothesis that contextualizes these conditions as distinct rather than simultaneous."
+  },
+  "email-physical-power-grid-orchestration-muluh.md": {
+    "hypothesis_slug": "2026-08-31-janusian-physical-power-grid-orchestration",
+    "question": "Can both centralized and decentralized control systems be essential for maintaining the stability and reliability of the power grid simultaneously?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-physical-power-grid-orchestration-zhao.md": {
+    "hypothesis_slug": "2026-08-31-janusian-physical-power-grid-orchestration",
+    "question": "Can both centralized and decentralized control systems be essential for maintaining the stability and reliability of the power grid simultaneously?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-physics-x-physics-abadarredondo.md": {
+    "hypothesis_slug": "2026-09-01-physics-x-physics",
+    "question": "Can symmetry breaking in particle interactions function as a generative rule for diffraction patterns in wave optics?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-quantum-physics-agrawal.md": {
+    "hypothesis_slug": "2026-08-31-janusian-quantum-physics",
+    "question": "Can the act of measurement both collapse a quantum system into a definite state and not collapse it, allowing for superposition, simultaneously for the same measurement event?",
+    "coherent": false,
+    "concern": "The question implies a direct physical possibility that a measurement can simultaneously collapse a quantum state and maintain superposition, which the underlying hypothesis only argues is conceptually contradictory. There is no proposed mechanism or scenario that supports the coexistence of these states in the same measurement event, making the question a literal misinterpretation of the abstract paradox."
+  },
+  "email-social-systems-erbaugh.md": {
+    "hypothesis_slug": "2026-08-31-janusian-social-systems",
+    "question": "Can both social systems be inherently unstable due to unpredictable human interactions and evolving cultural norms, and also inherently stable due to predictable patterns of human interactions and fixed cultural norms for the same interactions?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-social-systems-varley.md": {
+    "hypothesis_slug": "2026-08-31-janusian-social-systems",
+    "question": "Can social systems be both inherently stable due to predictable patterns and inherently unstable due to unpredictable interactions for the same social contexts?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-social-systems-x-human-team-collaboration-balkundi.md": {
+    "hypothesis_slug": "2026-08-29-social-systems-x-human-team-collaboration",
+    "question": "Can the evolution of social networks in broader social systems influence the effectiveness of human team collaboration in organizations?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-social-systems-x-human-team-collaboration-roth.md": {
+    "hypothesis_slug": "2026-08-29-social-systems-x-human-team-collaboration",
+    "question": "Can the evolution of social networks in broader social systems predictably influence the effectiveness of human team collaboration?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-social-systems-x-human-team-collaboration-xie.md": {
+    "hypothesis_slug": "2026-08-29-social-systems-x-human-team-collaboration",
+    "question": "Can the evolution of social networks in broader social systems predictably influence the effectiveness of human team collaboration?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-sports-athletics-x-physical-thermal-variation-eijsvogels.md": {
+    "hypothesis_slug": "2026-08-30-sports-athletics-x-physical-thermal-variation",
+    "question": "Can implementing real-time feedback mechanisms in thermal systems lead to improved stability and performance, similar to how athletes adjust their strategies based on performance monitoring?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-sports-takamido.md": {
+    "hypothesis_slug": "2026-08-30-janusian-sports",
+    "question": "Can effective pitch sequencing necessitate both varying pitch types and consistently repeating the same pitch type for higher strikeout rates?",
+    "coherent": false,
+    "concern": "The question implies there is a mechanism by which varying pitch types and repeating the same pitch types can coexist in the same sequence to achieve higher strikeout rates, suggesting a direct causal link between these actions and strikeout outcomes. However, the hypothesis focuses on their simultaneous coexistence as strategies rather than specifying how both can be operationalized together in a way that dictates outcomes, missing the nuanced abstract nature of the claim."
+  },
+  "email-supply-chain-logistics-x-cryptography-singh.md": {
+    "hypothesis_slug": "2026-08-30-homospatial-supply-chain-logistics-x-cryptography",
+    "question": "Can transactions in a supply chain confirm inventory readiness without revealing specific details about the inventory itself?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-swarm-robotics-x-creative-performance-monitoring-li.md": {
+    "hypothesis_slug": "2026-08-29-homospatial-swarm-robotics-x-creative-performance-monitoring",
+    "question": "Can a Creative Swarm Network function to improve novelty and effectiveness in creative outputs compared to isolated efforts?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-swarm-robotics-x-creative-performance-monitoring-ueshima.md": {
+    "hypothesis_slug": "2026-08-29-homospatial-swarm-robotics-x-creative-performance-monitoring",
+    "question": "Can a Creative Swarm Network demonstrate higher levels of collective creative output compared to isolated efforts by individual agents?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-telecommunications-x-cognitive-streaming-data-proc-khisti.md": {
+    "hypothesis_slug": "2026-08-30-telecommunications-x-cognitive-streaming-data-processing",
+    "question": "Can error-correcting codes from telecommunications enhance the adaptation and correction of inconsistencies in cognitive streaming data processing under noisy conditions?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-telecommunications-x-quantum-physics-mandil.md": {
+    "hypothesis_slug": "2026-08-30-homospatial-telecommunications-x-quantum-physics",
+    "question": "Can telecommunications packet switching function as a routing mechanism that adapts to quantum state measurements in the Quantum Packet Network?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-thermodynamics-x-creative-inspiration-variability-fox.md": {
+    "hypothesis_slug": "2026-08-31-homospatial-thermodynamics-x-creative-inspiration-variability",
+    "question": "Can the emergence of Creativity Entropy be demonstrated through specific cycles of order and disorder in creative processes?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-thermodynamics-x-creative-inspiration-variability-gabora.md": {
+    "hypothesis_slug": "2026-08-31-homospatial-thermodynamics-x-creative-inspiration-variability",
+    "question": "Can the emergence of Creativity Entropy from thermodynamics and creative inspiration variability illustrate cycles of order and disorder in creative processes?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-thermodynamics-x-creative-inspiration-variability-kenett.md": {
+    "hypothesis_slug": "2026-08-31-homospatial-thermodynamics-x-creative-inspiration-variability",
+    "question": "Can patterns of creative output quantitatively analyze and demonstrate a relationship with entropy, revealing cycles of order and disorder?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-urban-planning-x-agriculture-mier.md": {
+    "hypothesis_slug": "2026-08-31-urban-planning-x-agriculture",
+    "question": "Can applying traffic flow optimization methods to agricultural practices lead to measurable improvements in soil health and crop yields?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-urban-planning-x-creative-improvisation-adjustment-frde.md": {
+    "hypothesis_slug": "2026-08-30-urban-planning-x-creative-improvisation-adjustment",
+    "question": "Can adjustments in urban planning based on community feedback function similarly to adaptations in performance elements during audience engagement?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-urban-planning-x-cryptography-coyne.md": {
+    "hypothesis_slug": "2026-08-31-homospatial-urban-planning-x-cryptography",
+    "question": "Can urban planners effectively enforce zoning regulations while maintaining the confidentiality of property owners' identities and intentions through cryptographic validation?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-urban-planning-x-cryptography-marsalllacuna.md": {
+    "hypothesis_slug": "2026-08-31-homospatial-urban-planning-x-cryptography",
+    "question": "Can urban planners enforce zoning regulations while maintaining the confidentiality of property owners' identities and intentions through cryptographic validation?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-urban-planning-x-informational-sensor-networks-hajbabaie.md": {
+    "hypothesis_slug": "2026-08-31-urban-planning-x-informational-sensor-networks",
+    "question": "Can implementing real-time traffic optimization algorithms in sensor networks improve their data accuracy and responsiveness?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-urban-planning-x-physical-chemical-reaction-networ-geroliminis.md": {
+    "hypothesis_slug": "2026-08-31-urban-planning-x-physical-chemical-reaction-networks",
+    "question": "Can optimizing traffic flow in a city using principles from chemical reaction networks yield comparable improvements in congestion reduction?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-urban-planning-x-physical-chemical-reaction-networ-salman.md": {
+    "hypothesis_slug": "2026-08-31-urban-planning-x-physical-chemical-reaction-networks",
+    "question": "Can optimizing traffic flow in cities using principles from chemical reaction networks yield comparable improvements in congestion reduction?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-urban-planning-x-telecommunications-zrigui.md": {
+    "hypothesis_slug": "2026-08-31-urban-planning-x-telecommunications",
+    "question": "Can implementing traffic optimization algorithms in urban planning yield similar efficiency improvements in data routing protocols?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-veterinary-medicine-fu.md": {
+    "hypothesis_slug": "2026-08-31-janusian-veterinary-medicine",
+    "question": "Can both zoonotic disease transmission from animals to humans and from humans to animals hold simultaneously in populations with significant human-animal interactions?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-zoology-mouritsen.md": {
+    "hypothesis_slug": "2026-08-31-janusian-zoology",
+    "question": "Can both innate biological mechanisms and external environmental cues be true simultaneously for the same migration instance?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-zoology-wiltschko.md": {
+    "hypothesis_slug": "2026-08-31-janusian-zoology",
+    "question": "Can both innate biological mechanisms and external environmental cues be true simultaneously for animal migration navigation?",
+    "coherent": true,
+    "concern": ""
   }
 }
