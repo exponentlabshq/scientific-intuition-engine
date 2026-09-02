@@ -1969,8 +1969,9 @@ def build_password():
 
     body = f'''{style}
 <div class="gate-wrap">
-  <img class="gate-bg" src="fu-campus.jpg" alt="">
+  <video class="gate-bg" src="fu-password-teaser.mp4" poster="fu-campus.jpg" autoplay muted loop playsinline></video>
   <div class="gate-overlay"></div>
+  <button id="gate-unmute" class="hero-unmute">&#128264; Sound on</button>
   <div class="gate-card" id="gate-card">
     <img class="seal" src="fu-seal.jpg" alt="FU seal">
     <h1>FU: Fake University</h1>
@@ -1980,11 +1981,19 @@ def build_password():
       <button type="submit" id="gate-submit">Enter</button>
       <div class="gate-error" id="gate-error"></div>
     </form>
-    <div class="gate-hint">Not real security &mdash; a small pause before you go in. Everything past this door is disclosed in full at <a href="whitepaper.html">the real whitepaper</a>.</div>
+    <div class="gate-hint">Not real security &mdash; a small pause before you go in. Everything past this door is disclosed in full at <a href="whitepaper.html">the real whitepaper</a>. The video behind this card is the real documentary's own first 15 seconds.</div>
   </div>
 </div>
 <script>
 (function() {{
+  var v = document.querySelector('.gate-bg');
+  var btn = document.getElementById('gate-unmute');
+  if (v && btn) {{
+    btn.addEventListener('click', function() {{
+      v.muted = !v.muted;
+      btn.innerHTML = v.muted ? '&#128264; Sound on' : '&#128266; Sound off';
+    }});
+  }}
   var form = document.getElementById('gate-form');
   var input = document.getElementById('gate-input');
   var err = document.getElementById('gate-error');
