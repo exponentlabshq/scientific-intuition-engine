@@ -93,6 +93,15 @@ def load_drafted():
         # sent status is anchored at the START of the field ("SENT
         # 2026-08-29"), never preceded by "NOT" -- match that shape only.
         already_sent = bool(re.match(r"^SENT\b", status_text))
+        # A human flag overrides the sharpness judge's own verdict --
+        # first real case 2026-09-02 (Vajner: rated SHARP by the judge,
+        # but flagged on review as physically incoherent, a failure
+        # axis the judge isn't built to catch). A flagged draft must
+        # never appear as if it's ready to send, regardless of its
+        # score -- match the same literal marker written into the
+        # Status field by hand ("⚠️ FLAGGED"), not a separate list to
+        # drift out of sync with what's actually in the file.
+        flagged = "FLAGGED" in status_text
         email = tom.group(2).strip() if tom else ""
         if slugm and email and "TBD" not in email and "fill in" not in email:
             out.append({
@@ -101,6 +110,7 @@ def load_drafted():
                 "target_name": tom.group(1).strip() if tom else "",
                 "email": email,
                 "already_sent": already_sent,
+                "flagged": flagged,
             })
     return out
 
@@ -137,6 +147,7 @@ def main():
         entries.append({
             "send_priority": send_priority,
             "sharpness": sharpness or "NOT SCORED",
+            "flagged": d["flagged"],
             "points": points,
             "department": DEPT_NAMES.get(mode, mode),
             "dept_slug": mode,
@@ -147,13 +158,22 @@ def main():
         })
 
     entries.sort(key=lambda r: r["send_priority"], reverse=True)
+    flagged_entries = [e for e in entries if e["flagged"]]
+    entries = [e for e in entries if not e["flagged"]]
 
     by_dept = {}
     for e in entries:
         by_dept.setdefault(e["department"], []).append(e)
 
-    print(f"{len(entries)} unsent drafted email(s) in the backlog. {unscored} not yet sharpness-scored "
-          f"(run score_email_sharpness.py first for a complete ranking).\n")
+    print(f"{len(entries)} unsent, unflagged drafted email(s) in the backlog. {len(flagged_entries)} flagged "
+          f"(excluded from ranking below -- human review overrode the sharpness score). "
+          f"{unscored} not yet sharpness-scored (run score_email_sharpness.py first for a complete ranking).\n")
+
+    if flagged_entries:
+        print(f"=== ⚠️ FLAGGED — not send-ready regardless of score ({len(flagged_entries)}) ===")
+        for r in flagged_entries:
+            print(f"  ({r['sharpness']:10s} points={r['points']:3d}) {r['target_name']} <{r['email']}> -- {r['filename']}")
+        print()
 
     for dept, rows in sorted(by_dept.items(), key=lambda kv: -max(r["send_priority"] for r in kv[1])):
         print(f"=== {dept} ({len(rows)}) ===")
@@ -163,8 +183,8 @@ def main():
         print()
 
     with open(BACKLOG_PATH, "w", encoding="utf-8") as f:
-        json.dump(entries, f, indent=2)
-    print(f"Wrote {len(entries)} entries to {BACKLOG_PATH}")
+        json.dump({"ready": entries, "flagged": flagged_entries}, f, indent=2)
+    print(f"Wrote {len(entries)} ready + {len(flagged_entries)} flagged entries to {BACKLOG_PATH}")
 
 
 if __name__ == "__main__":
