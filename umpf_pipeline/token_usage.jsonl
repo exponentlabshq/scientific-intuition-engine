@@ -14861,3 +14861,17 @@
 {"timestamp": "2026-09-02T15:03:48.160370+00:00", "phase": "outreach_email_draft", "model": "gpt-4o-mini", "prompt_tokens": 8174, "completion_tokens": 158, "total_tokens": 8332, "hypothesis_slug": "2026-08-31-janusian-literature"}
 {"timestamp": "2026-09-02T15:03:51.880946+00:00", "phase": "outreach_email_draft", "model": "gpt-4o-mini", "prompt_tokens": 8174, "completion_tokens": 149, "total_tokens": 8323, "hypothesis_slug": "2026-08-29-janusian-physical-electrical-noise"}
 {"timestamp": "2026-09-02T15:03:55.408380+00:00", "phase": "outreach_email_draft", "model": "gpt-4o-mini", "prompt_tokens": 8174, "completion_tokens": 134, "total_tokens": 8308, "hypothesis_slug": "2026-08-30-homospatial-quantum-physics-x-physical-magnetic-field-control"}
+{"timestamp": "2026-09-02T15:10:15.616175+00:00", "phase": "outreach_sharpness_score", "model": "gpt-4o-mini", "prompt_tokens": 420, "completion_tokens": 50, "total_tokens": 470}
+{"timestamp": "2026-09-02T15:10:17.306712+00:00", "phase": "outreach_sharpness_score", "model": "gpt-4o-mini", "prompt_tokens": 417, "completion_tokens": 52, "total_tokens": 469}
+{"timestamp": "2026-09-02T15:10:18.800855+00:00", "phase": "outreach_sharpness_score", "model": "gpt-4o-mini", "prompt_tokens": 431, "completion_tokens": 64, "total_tokens": 495}
+{"timestamp": "2026-09-02T15:10:20.460974+00:00", "phase": "outreach_sharpness_score", "model": "gpt-4o-mini", "prompt_tokens": 409, "completion_tokens": 55, "total_tokens": 464}
+{"timestamp": "2026-09-02T15:10:21.996807+00:00", "phase": "outreach_sharpness_score", "model": "gpt-4o-mini", "prompt_tokens": 409, "completion_tokens": 51, "total_tokens": 460}
+{"timestamp": "2026-09-02T15:10:23.230622+00:00", "phase": "outreach_sharpness_score", "model": "gpt-4o-mini", "prompt_tokens": 457, "completion_tokens": 53, "total_tokens": 510}
+{"timestamp": "2026-09-02T15:10:24.692457+00:00", "phase": "outreach_sharpness_score", "model": "gpt-4o-mini", "prompt_tokens": 403, "completion_tokens": 52, "total_tokens": 455}
+{"timestamp": "2026-09-02T15:10:26.158703+00:00", "phase": "outreach_sharpness_score", "model": "gpt-4o-mini", "prompt_tokens": 397, "completion_tokens": 58, "total_tokens": 455}
+{"timestamp": "2026-09-02T15:10:27.585398+00:00", "phase": "outreach_sharpness_score", "model": "gpt-4o-mini", "prompt_tokens": 415, "completion_tokens": 64, "total_tokens": 479}
+{"timestamp": "2026-09-02T15:10:29.634487+00:00", "phase": "outreach_sharpness_score", "model": "gpt-4o-mini", "prompt_tokens": 421, "completion_tokens": 53, "total_tokens": 474}
+{"timestamp": "2026-09-02T15:10:31.418035+00:00", "phase": "outreach_sharpness_score", "model": "gpt-4o-mini", "prompt_tokens": 421, "completion_tokens": 49, "total_tokens": 470}
+{"timestamp": "2026-09-02T15:12:28.889230+00:00", "phase": "outreach_sharpness_score", "model": "gpt-4o-mini", "prompt_tokens": 430, "completion_tokens": 60, "total_tokens": 490}
+{"timestamp": "2026-09-02T15:12:30.466922+00:00", "phase": "outreach_sharpness_score", "model": "gpt-4o-mini", "prompt_tokens": 431, "completion_tokens": 61, "total_tokens": 492}
+{"timestamp": "2026-09-02T15:12:31.599673+00:00", "phase": "outreach_sharpness_score", "model": "gpt-4o-mini", "prompt_tokens": 431, "completion_tokens": 54, "total_tokens": 485}

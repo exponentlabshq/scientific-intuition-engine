@@ -1,0 +1,100 @@
+{
+  "email-2026-08-28-homospatial-creative-narrative-arc-development-x-informational-distributed-consensus.md": {
+    "hypothesis_slug": "2026-08-28-homospatial-creative-narrative-arc-development-x-informational-distributed-consensus",
+    "question": "Can a narrative arc co-created by a distributed consensus mechanism \u2014 where each participant's input is weighted and integrated through a decentralized decision-making algorithm \u2014 produce a story with higher perceived coherence and engagement than a traditionally authored narrative, when evaluated by a panel blind to the creation method?",
+    "sharpness": "SHARP",
+    "restates_domain_name": false,
+    "reason": "The question specifically investigates the comparative outcomes of two distinct narrative creation processes, focusing on coherence and engagement, which would require in-depth analysis and understanding of both mechanisms."
+  },
+  "email-2026-08-28-homospatial-physical-mechanical-spring-systems-x-human-emotional-fluctuation.md": {
+    "hypothesis_slug": "2026-08-28-homospatial-physical-mechanical-spring-systems-x-human-emotional-fluctuation",
+    "question": "Can a model using mechanical spring system analogs \u2014 where emotional buildup and release are mapped to potential and kinetic energy changes respectively \u2014 predict specific emotional response patterns to controlled stimuli with measurable accuracy, distinct from existing psychological models that do not use physical system analogies?",
+    "sharpness": "SHARP",
+    "restates_domain_name": false,
+    "reason": "The question explicitly focuses on a unique approach of using mechanical spring systems to model emotional responses, contrasting it with existing psychological models, which indicates a deep engagement with specific mechanisms."
+  },
+  "email-creative-versioning-sterman.md": {
+    "hypothesis_slug": "2026-08-31-homospatial-creative-improvisation-coordination-x-informational-software-version-control",
+    "question": "Can a version-control layer sit underneath a live creative-improvisation session \u2014 logging each contribution as a distinct, retrievable entry in real time \u2014 so the session's own history becomes a structured archive you can analyze for pattern and evolution after the fact, without slowing the improvisation itself down?",
+    "sharpness": "SHARP",
+    "restates_domain_name": false,
+    "reason": "The question specifically inquires about the feasibility of a version-control layer in a live creative session, addressing real-time logging and analysis, which goes beyond merely restating the paper\u2019s topic and engages with the implications of the proposed mechanism."
+  },
+  "email-literature-phelan.md": {
+    "hypothesis_slug": "2026-08-31-janusian-literature",
+    "question": "Can a narrator's subjective truth and objective unreliability coexist in the same narrative instance?",
+    "sharpness": "BORDERLINE",
+    "restates_domain_name": false,
+    "reason": "The question is relevant to the paper's theme of narrative reliability but mostly rephrases concepts already discussed in the literature without introducing a specific mechanism or variable that would prompt deeper exploration."
+  },
+  "email-magneto-operant-phillips.md": {
+    "hypothesis_slug": "2026-08-29-homospatial-behavioral-psychology-x-physical-magnetic-field-control",
+    "question": "Can a programmable magnetic-field manifold function as the reinforcement contingency itself \u2014 response-contingent field exposure producing classic schedule signatures under yoked controls \u2014 rather than as background exposure or a discriminative cue for food/shock?",
+    "sharpness": "SHARP",
+    "restates_domain_name": false,
+    "reason": "The question specifically investigates the role of a programmable magnetic-field manifold in reinforcement contingencies, indicating a depth of understanding and a nuanced inquiry rather than a generic restatement."
+  },
+  "email-neurogrid-optimization-papageorgiou.md": {
+    "hypothesis_slug": "2026-08-30-homospatial-neuroscience-x-physical-power-grid-orchestration",
+    "question": "Can the same rule the brain uses to prune underused synapses \u2014 continuously assessing connections and cutting or rerouting the weak ones \u2014 run as the actual control principle for a power grid, so redundant lines get pruned and load gets rerouted in real time the way a developing brain reorganizes itself, rather than the biological framing just being a metaphor for existing grid-management logic?",
+    "sharpness": "SHARP",
+    "restates_domain_name": false,
+    "reason": "The question explores a specific and nuanced analogy between synaptic pruning in the brain and real-time power grid management, indicating an understanding of both biological mechanisms and their potential engineering applications."
+  },
+  "email-physical-electrical-noise-wu.md": {
+    "hypothesis_slug": "2026-08-29-janusian-physical-electrical-noise",
+    "question": "Can physical electrical noise function as a beneficial factor that enhances the performance of electronic systems?",
+    "sharpness": "GENERIC",
+    "restates_domain_name": true,
+    "reason": "The question broadly addresses the concept of electrical noise in electronic systems without referencing specific mechanisms or variables discussed in the paper, making it a generic restatement of a common topic."
+  },
+  "email-quantum-physics-x-physical-magnetic-field-control-haas.md": {
+    "hypothesis_slug": "2026-08-30-homospatial-quantum-physics-x-physical-magnetic-field-control",
+    "question": "Can quantum particles' superposition states be controlled via magnetic fields?",
+    "sharpness": "BORDERLINE",
+    "restates_domain_name": false,
+    "reason": "The question asks about the control of superposition states via magnetic fields, which relates to the paper's topic but lacks a specific mechanism or detail that would indicate a deeper understanding of the model presented."
+  },
+  "email-reactive-control-network-enciso.md": {
+    "hypothesis_slug": "2026-08-30-homospatial-control-theory-x-physical-chemical-reaction-networks",
+    "question": "Can a Kalman-filtered feedback loop function as a chemical reaction network's own control law \u2014 continuously re-estimating reactant/product concentrations from noisy kinetic data and adjusting reaction conditions in real time?",
+    "sharpness": "SHARP",
+    "restates_domain_name": false,
+    "reason": "The question specifically addresses the role of a Kalman-filtered feedback loop in the context of chemical reaction networks, which shows a deep understanding of both the control law concept and its practical application in real-time adjustments based on noisy data."
+  },
+  "email-resonant-swarm-aronson.md": {
+    "hypothesis_slug": "2026-08-29-homospatial-swarm-robotics-x-physical-acoustic-resonance",
+    "question": "Can a swarm use collective environmental / cavity resonance as a stigmergic blackboard \u2014 configuration changes the resonant field, and the resonant field changes configuration \u2014 such that under chamber-geometry change the swarm spontaneously finds formations that exploit resonance without being given the global solution?",
+    "sharpness": "SHARP",
+    "restates_domain_name": false,
+    "reason": "The question is specific and complex, addressing the interaction between swarm behavior, environmental resonance, and geometry, indicating a deep understanding of the mechanisms at play rather than a generic inquiry."
+  },
+  "email-resonant-swarm-frey.md": {
+    "hypothesis_slug": "2026-08-29-homospatial-swarm-robotics-x-physical-acoustic-resonance",
+    "question": "Can a swarm use collective environmental / cavity resonance as a stigmergic blackboard \u2014 configuration changes the resonant field, and the resonant field changes configuration \u2014 such that under chamber-geometry change the swarm spontaneously finds formations that exploit resonance without being given the global solution?",
+    "sharpness": "SHARP",
+    "restates_domain_name": false,
+    "reason": "The question proposes a specific and nuanced mechanism involving collective environmental resonance and stigmergy in swarms, indicating a depth of understanding that goes beyond generic inquiries."
+  },
+  "email-creative-block-schooler.md": {
+    "hypothesis_slug": "2026-08-28-janusian-creative-creative-block",
+    "question": "For a single unfinished creative work left incomplete \u2014 not a break-then-return incubation task \u2014 does longer stuck duration both cut interim word/page count and raise judged novelty of the eventual finished piece relative to matched projects finished without a block, or does existing incubation / mind-wandering work already cover that dual role under another name?",
+    "sharpness": "BORDERLINE",
+    "restates_domain_name": false,
+    "reason": "The question touches on specific variables related to creative work completion and the effects of stuck duration, but it primarily echoes themes from existing literature about incubation and mind-wandering without presenting a unique mechanism or independent inquiry."
+  },
+  "email-permit-pattern-el-gohary.md": {
+    "hypothesis_slug": "2026-08-29-homospatial-architecture-x-cross-domain-pattern-recognition",
+    "question": "After a building is constructed and inspected, do the as-built BIM and inspection outcomes write new compliance cases into a shared library that then accepts or rejects the next project's permit check \u2014 such that changing the code extract remaps which designs get approved \u2014 or is automated compliance checking still only one-way (design model checked against fixed rules)?",
+    "sharpness": "BORDERLINE",
+    "restates_domain_name": false,
+    "reason": "While the question touches on specific mechanisms related to compliance checking in BIM (Building Information Modeling), it mainly reiterates existing concepts of the process without introducing a distinct, nuanced inquiry that a domain expert would find compelling."
+  },
+  "email-permit-pattern-zhang.md": {
+    "hypothesis_slug": "2026-08-29-homospatial-architecture-x-cross-domain-pattern-recognition",
+    "question": "After a building is constructed and inspected, do the as-built BIM and inspection outcomes write new compliance cases into a shared library that then accepts or rejects the next project's permit check \u2014 such that changing the code extract remaps which designs get approved \u2014 or is automated compliance checking still only one-way (design model checked against fixed rules)?",
+    "sharpness": "SHARP",
+    "restates_domain_name": false,
+    "reason": "The question specifically addresses the relationship between as-built BIM, inspection outcomes, and the process of automated compliance checking, indicating a nuanced understanding of the mechanisms involved rather than a generic inquiry."
+  }
+}

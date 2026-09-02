@@ -1,0 +1,101 @@
+[
+  {
+    "send_priority": 88,
+    "sharpness": "SHARP",
+    "points": 55,
+    "department": "Department of Homospatial Studies",
+    "dept_slug": "homospatial",
+    "target_name": "Panos C. Papageorgiou",
+    "email": "panos.papageorgiou@tudelft.nl",
+    "hypothesis_slug": "2026-08-30-homospatial-neuroscience-x-physical-power-grid-orchestration",
+    "filename": "email-neurogrid-optimization-papageorgiou.md"
+  },
+  {
+    "send_priority": 85,
+    "sharpness": "BORDERLINE",
+    "points": 67,
+    "department": "Department of Janusian Studies",
+    "dept_slug": "janusian",
+    "target_name": "James Phelan",
+    "email": "phelan.1@osu.edu",
+    "hypothesis_slug": "2026-08-31-janusian-literature",
+    "filename": "email-literature-phelan.md"
+  },
+  {
+    "send_priority": 75,
+    "sharpness": "BORDERLINE",
+    "points": 55,
+    "department": "Department of Homospatial Studies",
+    "dept_slug": "homospatial",
+    "target_name": "Fernando Haas",
+    "email": "fernando.haas@ufrgs.br",
+    "hypothesis_slug": "2026-08-30-homospatial-quantum-physics-x-physical-magnetic-field-control",
+    "filename": "email-quantum-physics-x-physical-magnetic-field-control-haas.md"
+  },
+  {
+    "send_priority": 72,
+    "sharpness": "SHARP",
+    "points": 45,
+    "department": "Department of Homospatial Studies",
+    "dept_slug": "homospatial",
+    "target_name": "Sarah Sterman",
+    "email": "ssterman@illinois.edu",
+    "hypothesis_slug": "2026-08-31-homospatial-creative-improvisation-coordination-x-informational-software-version-control",
+    "filename": "email-creative-versioning-sterman.md"
+  },
+  {
+    "send_priority": 63,
+    "sharpness": "SHARP",
+    "points": 40,
+    "department": "Department of Homospatial Studies",
+    "dept_slug": "homospatial",
+    "target_name": "German Enciso",
+    "email": "enciso@uci.edu",
+    "hypothesis_slug": "2026-08-30-homospatial-control-theory-x-physical-chemical-reaction-networks",
+    "filename": "email-reactive-control-network-enciso.md"
+  },
+  {
+    "send_priority": 60,
+    "sharpness": "GENERIC",
+    "points": 55,
+    "department": "Department of Janusian Studies",
+    "dept_slug": "janusian",
+    "target_name": "Junhui Wu",
+    "email": "jwu@nuaa.edu.cn",
+    "hypothesis_slug": "2026-08-29-janusian-physical-electrical-noise",
+    "filename": "email-physical-electrical-noise-wu.md"
+  },
+  {
+    "send_priority": 53,
+    "sharpness": "BORDERLINE",
+    "points": 45,
+    "department": "Department of Janusian Studies",
+    "dept_slug": "janusian",
+    "target_name": "Jonathan Schooler",
+    "email": "schooler@psych.ucsb.edu",
+    "hypothesis_slug": "2026-08-28-janusian-creative-creative-block",
+    "filename": "email-creative-block-schooler.md"
+  },
+  {
+    "send_priority": 53,
+    "sharpness": "SHARP",
+    "points": 30,
+    "department": "Department of Homospatial Studies",
+    "dept_slug": "homospatial",
+    "target_name": "Jiansong Zhang",
+    "email": "zhan3062@purdue.edu",
+    "hypothesis_slug": "2026-08-29-homospatial-architecture-x-cross-domain-pattern-recognition",
+    "filename": "email-permit-pattern-zhang.md"
+  },
+  {
+    "send_priority": 38,
+    "sharpness": "BORDERLINE",
+    "points": 30,
+    "department": "Department of Homospatial Studies",
+    "dept_slug": "homospatial",
+    "target_name": "Nora El-Gohary",
+    "email": "gohary@illinois.edu",
+    "hypothesis_slug": "2026-08-29-homospatial-architecture-x-cross-domain-pattern-recognition",
+    "filename": "email-permit-pattern-el-gohary.md"
+  }
+]
