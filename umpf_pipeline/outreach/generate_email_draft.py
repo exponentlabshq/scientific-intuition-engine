@@ -60,6 +60,7 @@ import json
 import os
 import re
 import sys
+import unicodedata
 from datetime import datetime, timezone
 
 from dotenv import load_dotenv
@@ -240,6 +241,21 @@ def draft_one(candidate):
     return json.loads(resp.output_text), resp.usage, exa_cost
 
 
+def _ascii_fold(s):
+    """Real bug found 2026-09-02, batch of 55: 'Ignacio Saez' (the
+    resolved contact) and 'Ignacio Sáez' (the same real person's name
+    as it actually appears on his own paper) were treated as a
+    surname MISMATCH -- the old [^a-z0-9] strip DROPS an accented
+    character entirely instead of folding it to its base letter, so
+    'Sáez' became 'sez' while 'Saez' stayed 'saez'. Real academic
+    names routinely carry diacritics (é, ñ, ü, ö...); dropping them
+    instead of folding produces exactly this kind of false-negative
+    mismatch on a genuinely correct match. NFKD-normalize then drop
+    remaining combining marks, so 'á' -> 'a', not '' -- applied before
+    the alpha-only strip in both _surname and _first_name_token."""
+    return "".join(c for c in unicodedata.normalize("NFKD", s) if not unicodedata.combining(c))
+
+
 def _surname(name):
     """Real bug found 2026-09-02, same batch as the semicolon-splitting
     fix: 'Last word = surname' is only true for 'First Last' order. A
@@ -256,7 +272,7 @@ def _surname(name):
     else:
         parts = name.split()
         surname_part = parts[-1] if parts else "unknown"
-    return re.sub(r"[^a-z0-9]", "", surname_part.lower()) or "unknown"
+    return re.sub(r"[^a-z0-9]", "", _ascii_fold(surname_part.lower())) or "unknown"
 
 
 def _first_name_token(name):
@@ -282,7 +298,7 @@ def _first_name_token(name):
         parts = name.split()
         rest = parts[0] if len(parts) > 1 else ""  # single-token name has no separate first name
     is_abbreviated = "." in rest
-    return re.sub(r"[^a-zA-Z]", "", rest).lower(), is_abbreviated
+    return re.sub(r"[^a-zA-Z]", "", _ascii_fold(rest)).lower(), is_abbreviated
 
 
 def _first_names_conflict(target, real):

@@ -490,5 +490,269 @@
     "question": "Can thermodynamic principles of entropy and physical elastic deformation be fused to reveal emergent behavior in materials under stress?",
     "coherent": true,
     "concern": ""
+  },
+  "email-astrophysics-x-human-social-influence-goldy.md": {
+    "hypothesis_slug": "2026-08-30-homospatial-astrophysics-x-human-social-influence",
+    "question": "Can changes in social behavior patterns directly correlate with observable cosmic events, indicating a predictive relationship between the two domains?",
+    "coherent": false,
+    "concern": "The question implies a direct causal relationship where social behavior patterns respond to observable cosmic events as if changes in one could trigger measurable changes in the other. However, the underlying hypothesis only suggests a predictive relationship characterized by emergent patterns in a conceptual framework, not a direct physical influence."
+  },
+  "email-behavioral-psychology-x-creative-musical-motif-dev-omigie.md": {
+    "hypothesis_slug": "2026-09-01-behavioral-psychology-x-creative-musical-motif-deviation",
+    "question": "Can habit formation loops function as a framework to understand how systematic variations in musical motifs lead to increased listener engagement?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-behavioral-psychology-x-creative-musical-motif-dev-tsai.md": {
+    "hypothesis_slug": "2026-09-01-behavioral-psychology-x-creative-musical-motif-deviation",
+    "question": "Can systematically varying musical motifs function as a mechanism for reinforcing habit formation loops through cue, routine, and reward components?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-biological-systems-latrille.md": {
+    "hypothesis_slug": "2026-08-30-janusian-biological-systems",
+    "question": "Can both harmful and beneficial mutations be true simultaneously for the same organism, as your paper suggests there could be a balance of damaged and restored genomes?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-cell-biology-x-human-social-network-dynamics-han.md": {
+    "hypothesis_slug": "2026-08-31-cell-biology-x-human-social-network-dynamics",
+    "question": "Can efficiency in electron transfer during mitochondrial energy production correlate with improved information dissemination within social networks?",
+    "coherent": false,
+    "concern": "The drafted question implies a direct causal link between the efficiency of electron transfer in mitochondria and information dissemination in social networks, suggesting that improving one would literally affect the other. However, the hypothesis only posits a shared abstract principle of gradient-driven efficiency, not a direct physical or mechanistic correlation between the two domains."
+  },
+  "email-cognitive-neuron-activation-x-physical-ecosystem-s-levin.md": {
+    "hypothesis_slug": "2026-08-29-homospatial-cognitive-neuron-activation-x-physical-ecosystem-succession",
+    "question": "Can patterns of neural activation in response to learning experiences exhibit measurable similarities to the stages of ecological succession, revealing predictable pathways of cognitive development?",
+    "coherent": false,
+    "concern": "The question suggests that patterns of neural activation can be directly measured against the stages of ecological succession, implying a literal causal link or measurable mechanism between the two. However, the underlying claim only proposes a conceptual analogy between cognitive development and ecological processes, without a direct system or implementation that connects neural activation to ecological succession."
+  },
+  "email-comedy-x-physical-gear-system-mechanics-cafiero.md": {
+    "hypothesis_slug": "2026-08-31-homospatial-comedy-x-physical-gear-system-mechanics",
+    "question": "Can audience engagement during performances act as force inputs that directly influence the timing and effectiveness of comedic delivery?",
+    "coherent": false,
+    "concern": "The question implies that audience engagement can directly act as physical force inputs affecting comedic delivery in a mechanistic way. However, the underlying hypothesis only describes an abstract relationship between audience feedback and comedic timing, without proposing a concrete mechanism that links them as physical forces. The gap lies in treating audience reactions as literal force inputs rather than as sources of feedback that influence the comedian's timing and delivery."
+  },
+  "email-comedy-x-physical-gear-system-mechanics-peng.md": {
+    "hypothesis_slug": "2026-08-31-homospatial-comedy-x-physical-gear-system-mechanics",
+    "question": "Can the analysis of audience engagement during performances reveal distinct patterns of interaction that directly influence the timing and effectiveness of comedic delivery?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-comedy-x-physical-gear-system-mechanics-pope.md": {
+    "hypothesis_slug": "2026-08-31-homospatial-comedy-x-physical-gear-system-mechanics",
+    "question": "Can Comedic Gear Dynamics emerge as a system where audience engagement influences timing and effectiveness of comedic delivery?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-creative-artistic-critique-goree.md": {
+    "hypothesis_slug": "2026-08-30-janusian-creative-artistic-critique",
+    "question": "Can both objective standards and subjective interpretations be true simultaneously for the same critique?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-creative-musical-motif-deviation-x-evolutionary-bi-nakamura.md": {
+    "hypothesis_slug": "2026-08-28-creative-musical-motif-deviation-x-evolutionary-biology",
+    "question": "Can patterns of motif evolution in music exhibit rates and types of variation similar to those in species during punctuated equilibrium periods?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-cross-domain-pattern-recognition-x-human-team-coll-chen.md": {
+    "hypothesis_slug": "2026-08-30-cross-domain-pattern-recognition-x-human-team-collaboration",
+    "question": "Can enhancing the pattern recognition processes in teams lead to measurable improvements in team performance and cohesion?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-cross-domain-pattern-recognition-x-human-team-coll-yen.md": {
+    "hypothesis_slug": "2026-08-30-cross-domain-pattern-recognition-x-human-team-collaboration",
+    "question": "Can enhancing the pattern recognition processes in teams lead to measurable improvements in team performance and cohesion?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-cryptography-feige.md": {
+    "hypothesis_slug": "2026-08-31-janusian-cryptography",
+    "question": "Can both it is possible to prove knowledge of a secret without revealing any information about the secret itself and it is impossible to prove knowledge of a secret without revealing some information about the secret itself be true simultaneously for the same cryptographic protocol?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-cryptography-goldwasser.md": {
+    "hypothesis_slug": "2026-08-31-janusian-cryptography",
+    "question": "Can both it is possible to prove knowledge of a secret without revealing any information about the secret itself and it is impossible to prove knowledge of a secret without revealing some information about the secret itself be true simultaneously for the same cryptographic protocol?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-cryptography-x-physical-voltage-spikes-benzaquen.md": {
+    "hypothesis_slug": "2026-08-31-cryptography-x-physical-voltage-spikes",
+    "question": "Can the effectiveness of a voltage protection system correlate with the strength of its design in maintaining operational integrity, similar to how cryptographic key strength correlates with communication security?",
+    "coherent": false,
+    "concern": "The question suggests a direct correlation between the effectiveness of a voltage protection system and its design strength, akin to a causal relationship seen in cryptography. However, the underlying hypothesis only asserts that both domains share an abstract relational principle regarding integrity maintained through protective measures, without a proposed mechanism for how alterations in one domain could literally affect the other."
+  },
+  "email-culinary-arts-bertinetto.md": {
+    "hypothesis_slug": "2026-08-29-janusian-culinary-arts",
+    "question": "Can a dish's success depend on both adherence to a recipe and the chef's improvisation simultaneously, affecting the perceived quality based on the diner's expectations?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-decision-support-x-creative-brainstorming-facilita-jr.md": {
+    "hypothesis_slug": "2026-08-30-homospatial-decision-support-x-creative-brainstorming-facilitation",
+    "question": "Can decision support systems and creative brainstorming facilitation function together to create the Creative Decision Nexus as predicted?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-economics-x-cognitive-attention-map-evolution-martinezsaito.md": {
+    "hypothesis_slug": "2026-08-30-homospatial-economics-x-cognitive-attention-map-evolution",
+    "question": "Can bidders' attention allocation function as a driving force in shaping their bidding strategies during auctions?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-efficient-market-hypothesis-shamsuddin.md": {
+    "hypothesis_slug": "2026-08-29-janusian-efficient-market-hypothesis",
+    "question": "Can financial markets be both efficient and inefficient simultaneously, while certain market anomalies persist and others disappear?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-fluid-dynamics-x-creative-narrative-arc-developmen-doxas.md": {
+    "hypothesis_slug": "2026-08-31-homospatial-fluid-dynamics-x-creative-narrative-arc-development",
+    "question": "Can analyzing a story's structure through the lens of fluid dynamics reveal distinct phases of turbulence and laminar flow that correlate with audience engagement metrics?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-fluid-dynamics-x-creative-narrative-arc-developmen-fedriga.md": {
+    "hypothesis_slug": "2026-08-31-homospatial-fluid-dynamics-x-creative-narrative-arc-development",
+    "question": "Can fluid dynamics function as a lens to analyze narrative structure in stories, revealing phases of turbulence and laminar flow that correlate with audience engagement metrics?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-fluid-dynamics-x-creative-narrative-arc-developmen-pianzola.md": {
+    "hypothesis_slug": "2026-08-31-homospatial-fluid-dynamics-x-creative-narrative-arc-development",
+    "question": "Can analyzing a story's structure through the lens of fluid dynamics reveal distinct phases of turbulence and laminar flow that correlate with audience engagement metrics?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-game-theory-x-informational-measurement-data-evolu-gill.md": {
+    "hypothesis_slug": "2026-08-29-game-theory-x-informational-measurement-data-evolution",
+    "question": "Can the evolution of strategies in the repeated prisoner\u2019s dilemma directly influence the reliability and relevance of data in measurement processes?",
+    "coherent": false,
+    "concern": "The question implies a literal mechanism where the evolution of strategies in the repeated prisoner's dilemma directly impacts the reliability and relevance of measurement data, suggesting a direct causal link between two separate domains without an outlined or plausible implementation connecting them. The hypothesis, however, proposes an abstract mapping between these domains rather than a direct influence."
+  },
+  "email-healthcare-x-legal-systems-scurich.md": {
+    "hypothesis_slug": "2026-08-31-healthcare-x-legal-systems",
+    "question": "Can the absence of critical elements in healthcare and legal systems similarly affect decision-making efficacy?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-human-cognitive-bias-x-informational-backup-system-youmans.md": {
+    "hypothesis_slug": "2026-08-31-homospatial-human-cognitive-bias-x-informational-backup-systems",
+    "question": "Can cognitive biases embedded in informational backup systems influence data retention patterns, favoring user preconceptions over objective data?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-human-meeting-participation-x-informational-event-schecter.md": {
+    "hypothesis_slug": "2026-08-31-human-meeting-participation-x-informational-event-driven-systems",
+    "question": "Can altering the sequence of participant contributions in a meeting yield a comparable change in the state transitions of an event-driven system?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-human-meeting-participation-x-physical-quantum-mea-sievers.md": {
+    "hypothesis_slug": "2026-08-30-homospatial-human-meeting-participation-x-physical-quantum-measurement",
+    "question": "Can Consensus Quantum Dynamics emerge when human meeting participation parallels physical quantum measurement?",
+    "coherent": false,
+    "concern": "The question implies that human meeting participation could literally create or lead to a physical quantum phenomenon, suggesting a direct mechanism that doesn't exist. The underlying claim is more about an abstract analogy between group dynamics and quantum measurement, not that one can directly induce quantum dynamics through human interactions."
+  },
+  "email-informational-hash-collisions-rothblum.md": {
+    "hypothesis_slug": "2026-08-31-janusian-informational-hash-collisions",
+    "question": "Can hash functions both be designed to be collision-resistant and also prone to collisions for the same instances of input?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-informational-load-balancing-x-physical-immune-sys-banerjee.md": {
+    "hypothesis_slug": "2026-08-29-homospatial-informational-load-balancing-x-physical-immune-system",
+    "question": "Can the Immuno-Informatic Response System (IIRS) operate as a cohesive unit that processes both data and biological threats simultaneously?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-law-x-creative-idea-uncertainty-grandori.md": {
+    "hypothesis_slug": "2026-08-30-homospatial-law-x-creative-idea-uncertainty",
+    "question": "Can the processes of contract formation function as a framework for fostering Creative Contractuality in uncertain creative contexts?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-law-x-creative-idea-uncertainty-landes.md": {
+    "hypothesis_slug": "2026-08-31-law-x-creative-idea-uncertainty",
+    "question": "Can established legal precedents shape the outcomes of new creative ideas in a similar manner?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-linguistics-x-fluid-dynamics-chacoma.md": {
+    "hypothesis_slug": "2026-08-29-homospatial-linguistics-x-fluid-dynamics",
+    "question": "Can phonetic turbulence demonstrate both stable transitions and sudden, chaotic shifts that correlate with specific social influences?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-music-theory-x-informational-database-sharding-goldstone.md": {
+    "hypothesis_slug": "2026-08-30-music-theory-x-informational-database-sharding",
+    "question": "Can optimizing query performance in sharded databases exhibit similar patterns of adaptive responsiveness as seen in successful jazz improvisations?",
+    "coherent": false,
+    "concern": "The question implies a direct physical or causal connection between optimizing query performance in databases and patterns in jazz improvisation without establishing a concrete system where these two domains interact. The underlying claim only suggests a shared abstract principle of adaptive responsiveness, not that techniques from one can be used to influence the other directly."
+  },
+  "email-music-theory-x-informational-database-sharding-quick.md": {
+    "hypothesis_slug": "2026-08-30-music-theory-x-informational-database-sharding",
+    "question": "Can the unpredictability of musical interactions in jazz improvisation directly influence the efficiency of query performance in sharded databases?",
+    "coherent": false,
+    "concern": "The question implies a direct causal link between unpredictability in jazz improvisation and database query performance, suggesting that specific musical interactions can influence the performance metrics of a technical system. However, the underlying claim only asserts that both domains share abstract principles of adaptability and responsiveness, without providing a concrete mechanism connecting them."
+  },
+  "email-physical-chemical-reaction-networks-x-human-commit-daniels.md": {
+    "hypothesis_slug": "2026-08-28-homospatial-physical-chemical-reaction-networks-x-human-committee-formation",
+    "question": "Can the interactions and feedback loops among participants in a Decision Reaction Network influence decision-making efficiency and quality similarly to reaction rates in a chemical network?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-physical-chemical-reaction-networks-x-human-commit-kivan.md": {
+    "hypothesis_slug": "2026-08-28-homospatial-physical-chemical-reaction-networks-x-human-committee-formation",
+    "question": "Can a Decision Reaction Network function as a predictive model for decision-making efficiency akin to chemical reaction kinetics?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-physical-ecosystem-succession-x-physical-feedback-breugel.md": {
+    "hypothesis_slug": "2026-08-31-physical-ecosystem-succession-x-physical-feedback-loop-control",
+    "question": "Can changes in species composition during ecological succession predictably influence feedback loop adjustments in control systems?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-physical-electrical-noise-x-physical-acoustic-reso-giuliano.md": {
+    "hypothesis_slug": "2026-09-01-physical-electrical-noise-x-physical-acoustic-resonance",
+    "question": "Can specific patterns of electrical noise correspond to enhanced resonance frequencies in acoustic systems under controlled experimental conditions?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-physical-electrical-noise-x-physical-acoustic-reso-stelson.md": {
+    "hypothesis_slug": "2026-09-01-physical-electrical-noise-x-physical-acoustic-resonance",
+    "question": "Can specific patterns of electrical noise correspond to enhanced resonance frequencies in acoustic systems under controlled experimental conditions?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-political-science-cipullo.md": {
+    "hypothesis_slug": "2026-09-01-janusian-political-science",
+    "question": "Can coalition governments create political stability and foster instability simultaneously for the same political context?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-political-science-taylor.md": {
+    "hypothesis_slug": "2026-09-01-janusian-political-science",
+    "question": "Can coalition governments create political stability and foster instability simultaneously for the same political context?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-sports-athletics-x-cognitive-swarm-intelligence-silva.md": {
+    "hypothesis_slug": "2026-08-30-sports-athletics-x-cognitive-swarm-intelligence",
+    "question": "Can enhancing local strategies in athletic training lead to measurable improvements in team performance metrics, similar to optimizing individual agent behaviors in swarm tasks?",
+    "coherent": true,
+    "concern": ""
+  },
+  "email-sports-marmarinos.md": {
+    "hypothesis_slug": "2026-08-31-janusian-sports",
+    "question": "Can both precise coordination and chaotic execution hold simultaneously for the same pick-and-roll play?",
+    "coherent": true,
+    "concern": ""
   }
 }
