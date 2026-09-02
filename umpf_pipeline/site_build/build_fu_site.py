@@ -341,6 +341,7 @@ def nav(active):
       {link("fu-campus-explore.html", "Campus", "campus")}
       {link("fu-people.html", "About &amp; Org Chart", "people")}
       {link("fu-course-catalog.html", "Course Catalog", "catalog")}
+      {link("fu-leaderboard.html", "Leaderboard", "leaderboard")}
       {link("fu-investors.html", "For Investors &amp; Grant Officers", "investors")}
     </div>
   </div>
@@ -903,6 +904,12 @@ ROW_CSS = '''
 .course-item.open > .course-head .caret { transform: rotate(90deg); }
 .course-body { display: none; padding: 4px 12px 12px; }
 .course-item.open > .course-body { display: block; }
+
+.lb-toolbar { margin: 20px 0 4px; }
+.lb-search { width: 100%; max-width: 420px; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; color: var(--text); font-family: var(--sans); font-size: 0.9rem; padding: 10px 14px; }
+.lb-search:focus { outline: none; border-color: var(--gold); }
+.lb-filter-label { font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-faint); font-size: 0.7rem; margin: 16px 0 6px; }
+.lb-count { font-family: var(--mono); font-size: 0.78rem; color: var(--text-faint); margin: 10px 0 6px; }
 '''
 
 ROW_TOGGLE_JS = '''<script>
@@ -1253,6 +1260,148 @@ FILTER_JS = '''<script>
 </script>'''
 
 
+LEADERBOARD_FILTER_JS = '''<script>
+(function() {
+  var searchInput = document.getElementById('lb-search');
+  var tierButtons = document.querySelectorAll('.lb-tier-filter button');
+  var deptButtons = document.querySelectorAll('.lb-dept-filter button');
+  var rows = document.querySelectorAll('#lb-rows .row');
+  var countEl = document.getElementById('lb-count');
+  var state = { tier: 'all', dept: 'all', q: '' };
+
+  function apply() {
+    var shown = 0;
+    rows.forEach(function(r) {
+      var tierOk = state.tier === 'all' || r.getAttribute('data-tier') === state.tier;
+      var deptOk = state.dept === 'all' || r.getAttribute('data-dept') === state.dept;
+      var pairingEl = r.querySelector('.pairing');
+      var text = pairingEl ? pairingEl.textContent.toLowerCase() : '';
+      var qOk = state.q === '' || text.indexOf(state.q) !== -1;
+      var visible = tierOk && deptOk && qOk;
+      r.style.display = visible ? '' : 'none';
+      if (visible) shown++;
+    });
+    if (countEl) countEl.textContent = shown + ' of ' + rows.length + ' shown';
+  }
+
+  tierButtons.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      tierButtons.forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      state.tier = btn.getAttribute('data-filter');
+      apply();
+    });
+  });
+  deptButtons.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      deptButtons.forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      state.dept = btn.getAttribute('data-filter');
+      apply();
+    });
+  });
+  if (searchInput) {
+    searchInput.addEventListener('input', function() {
+      state.q = searchInput.value.toLowerCase();
+      apply();
+    });
+  }
+})();
+</script>'''
+
+
+TIER_SLUG = {
+    "🛡️ Survived Refutation": "survived",
+    "🗺️ Verified, Unrefuted": "verified",
+    "🌗 Contested": "contested",
+    "💀 Refuted / Rejected": "refuted",
+}
+
+
+def dept_slug_for_row(r):
+    for k, v in MODE_META.items():
+        if v["badge"] in r["badges"]:
+            return k
+    return "calibration"
+
+
+def build_leaderboard():
+    """The full real record, unfiltered -- every row leaderboard.md has,
+    in its own real rank order (tier first, points as tie-breaker), each
+    one the same real click-expandable content the faculty pages and course
+    catalog use. Curated top-N lists live elsewhere on this site; this page
+    is the whole ledger they were each drawn from."""
+    tier_counts = {}
+    dept_counts = {}
+    rows_html = []
+    for r in ROWS:
+        tier_slug = TIER_SLUG.get(r["tier"], "other")
+        dept_slug = dept_slug_for_row(r)
+        tier_counts[tier_slug] = tier_counts.get(tier_slug, 0) + 1
+        dept_counts[dept_slug] = dept_counts.get(dept_slug, 0) + 1
+
+        e = EXP_BY_PAIRING.get(r["pairing"].strip().lower())
+        if e:
+            row_html = exp_row_html(e, rank=r["rank"])
+        else:
+            pts_class = "pos" if r["points"] > 0 else ("neg" if r["points"] < 0 else "zero")
+            row_html = f'''<div class="row"><div class="row-head" style="cursor:default;">
+              <span class="rank">{r['rank']}</span><span class="pairing">{r['pairing']}</span>
+              <span class="row-badge" style="color:var(--gold);border-color:var(--gold);">{r['verdict']}</span>
+              <span class="r-points {pts_class}">{r['points']:+d}</span>
+            </div></div>'''
+        row_html = row_html.replace(
+            '<div class="row">',
+            f'<div class="row" data-tier="{tier_slug}" data-dept="{dept_slug}">',
+            1,
+        )
+        rows_html.append(row_html)
+
+    tier_defs = [
+        ("all", "All Tiers", len(ROWS)),
+        ("survived", "🛡️ Survived Refutation", tier_counts.get("survived", 0)),
+        ("verified", "🗺️ Verified, Unrefuted", tier_counts.get("verified", 0)),
+        ("contested", "🌗 Contested", tier_counts.get("contested", 0)),
+        ("refuted", "💀 Refuted / Rejected", tier_counts.get("refuted", 0)),
+    ]
+    dept_defs = [
+        ("all", "All Departments", len(ROWS)),
+        ("bisociation", "Bisociation Studies", dept_counts.get("bisociation", 0)),
+        ("janusian", "Janusian Studies", dept_counts.get("janusian", 0)),
+        ("homospatial", "Homospatial Studies", dept_counts.get("homospatial", 0)),
+        ("calibration", "Calibration Benchmarks", dept_counts.get("calibration", 0)),
+    ]
+    tier_buttons = "".join(
+        f'<button class="{"active" if k == "all" else ""}" data-filter="{k}">{label} ({n})</button>'
+        for k, label, n in tier_defs
+    )
+    dept_buttons = "".join(
+        f'<button class="{"active" if k == "all" else ""}" data-filter="{k}">{label} ({n})</button>'
+        for k, label, n in dept_defs
+    )
+
+    body = f'''<div class="page wide" style="padding-top:40px;">
+    <span class="kicker">Office of the Registrar</span>
+    <h1>The Full Ledger</h1>
+    <p style="color:var(--text-muted); max-width:700px;">Every real hypothesis FU has ever produced, in the exact order the university's own scoring system ranks them &mdash; tier first, points as the tie-breaker, nothing curated out. The department, faculty, and course-catalog pages elsewhere on this site each show a curated slice of this record; this is the whole thing, all {len(ROWS)} scored entries. Click any row for its full real hypothesis, verification, and adversarial refutation.</p>
+    <p class="real-thing">Real thing: <code>leaderboard.md</code> in full &mdash; every row, in the exact rank order the real automated scoring pipeline produced it. The 12 &ldquo;Calibration Benchmarks&rdquo; are pre-existing, already-known case studies used to sanity-check the scorer, not department output &mdash; excluded from every other page's rankings, included here for completeness.</p>
+
+    <div class="lb-toolbar">
+      <input type="text" id="lb-search" class="lb-search" placeholder="Search by pairing (e.g. &ldquo;compiler&rdquo;, &ldquo;immune system&rdquo;)&hellip;" autocomplete="off">
+    </div>
+    <div class="lb-filter-label">Tier</div>
+    <div class="faculty-filter lb-tier-filter">{tier_buttons}</div>
+    <div class="lb-filter-label">Department</div>
+    <div class="faculty-filter lb-dept-filter">{dept_buttons}</div>
+    <div class="lb-count" id="lb-count">{len(ROWS)} of {len(ROWS)} shown</div>
+
+    <div id="lb-rows" style="margin-top:8px;">{"".join(rows_html)}</div>
+  </div>
+  {ROW_TOGGLE_JS}
+  {LEADERBOARD_FILTER_JS}'''
+    return wrap("The Full Ledger — FU", body, "leaderboard")
+
+
 def build_faculty_index():
     cards = "".join(chair_card_html(m) for m in ("bisociation", "janusian", "homospatial"))
     cards += "".join(faculty_card_html(f) for f in FACULTY)
@@ -1564,6 +1713,7 @@ def main():
         "fu-department-janusian.html": build_department_page("janusian"),
         "fu-department-homospatial.html": build_department_page("homospatial"),
         "fu-course-catalog.html": build_course_catalog(),
+        "fu-leaderboard.html": build_leaderboard(),
         "fu-investors.html": build_investors(),
         "fu-faculty.html": build_faculty_index(),
         "fu-campus-explore.html": build_campus_explore(),
