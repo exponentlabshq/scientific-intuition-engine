@@ -292,6 +292,24 @@ def _sanity_check(result, title):
             "confidence": "LOW",
             "notes": f"Sanity check rejected the email in this result: it was the literal text '{email}' -- a site's own asterisk-masked/paywalled teaser (e.g. a lead-gen directory site), not a real decoded address. Original notes: {result.get('notes', '')}",
         }
+    if email and "@" not in email:
+        # Seventh real failure mode, found 2026-09-02 while spot-checking
+        # candidates for outreach drafts: "jonnyyugs.ncku.edutw" for Chi-Hua
+        # Yu at National Cheng Kung University -- HIGH confidence, real
+        # institution, real profile page, but the "@" is simply missing and
+        # ".edu.tw" is mashed into "edutw". Not an obfuscation stub (no
+        # masking character, no placeholder word) -- looks like a real
+        # address the model mis-transcribed off the page. Whatever the
+        # cause, a string with no "@" is definitionally not a deliverable
+        # email, so it can never be shipped as one regardless of how it
+        # got mangled.
+        return {
+            **result,
+            "email": "",
+            "email_source_url": "",
+            "confidence": "LOW",
+            "notes": f"Sanity check rejected the email in this result: '{email}' has no '@' and is not a valid, deliverable email address (likely a mis-transcription off the source page). Original notes: {result.get('notes', '')}",
+        }
     return result
 
 
