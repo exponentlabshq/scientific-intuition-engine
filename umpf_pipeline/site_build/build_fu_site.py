@@ -382,7 +382,7 @@ def build_home():
     </a>'''
 
     body = f'''<header class="hero-section">
-    <video id="hero-drone" class="hero-bg-video" src="fu-drone-campus.mp4" poster="fu-campus.jpg" autoplay muted loop playsinline></video>
+    <video id="hero-drone" class="hero-bg-video" src="fu-drone-hero-v2.mp4" poster="fu-campus.jpg" autoplay muted loop playsinline></video>
     <div class="hero-overlay"></div>
     <button id="hero-unmute" class="hero-unmute">&#128264; Sound on</button>
     <div class="page wide hero-content">
