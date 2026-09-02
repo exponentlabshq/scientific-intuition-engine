@@ -75,6 +75,41 @@ same match can occasionally resolve a different (still real) person or source. T
 dedup skip (keyed on the source match, not the resolved name) still prevents re-spending
 on a match already attempted once; pass `--force` to re-roll one deliberately.
 
+## COA 7 — Exa as a second discovery source (2026-09-02)
+
+`find_new_evidence.py`: a second look at hypotheses `active_research_check.py` already
+marked `NO_MATCH`, using Exa's `category="research paper"` search (its own docs claim
+~350M papers) as a different real discovery source than OpenAI's general-purpose
+`web_search`. Tested fibonacically (1,1,2,3,5 = 12 hypotheses) before scaling, per direct
+instruction, since real cost turned out trivial (~$0.007/search measured directly) — the
+actual constraint was result quality, not budget.
+
+**Never trusts Exa's own relevance ranking as a verdict.** A real, genuinely topical
+candidate (a 2025 LLM-design-by-analogy paper) was the very first thing this script ever
+found — and it did NOT survive the same "same specific mechanism, not same neighborhood"
+judgment `active_research_check.py` already applies, once actually checked against the
+hypothesis's precise claim. So every candidate Exa retrieves goes through that exact same
+structured judgment (same schema, same skeptical system prompt) before counting as a
+match — Exa supplies real evidence, the judgment is unchanged.
+
+```bash
+python3 find_new_evidence.py <slug> [<slug> ...]
+python3 find_new_evidence.py --all-no-match --limit 10
+python3 find_new_evidence.py --all-no-match --dry-run   # preview, no write
+```
+
+Real first run (2026-09-02), 12 real leaderboard-ranked NO_MATCH hypotheses: **7 real,
+judged-and-surviving new matches (58%)** — including "HyphaNet: bioInspired routing
+protocol for MANETs based on fungi networks," a real 2020 protocol directly modeling
+network routing on mycorrhizal fungal networks, for the hypothesis proposing exactly
+that. Contact resolution on those 7: 10 more real emails found (77%).
+
+Writes to the exact same ledger field `active_research_check.py` already writes to
+(`active_research_matches` / `actively_researched`) — not a parallel data store — so a
+real new match here also earns the real `+20` scoring bonus, becomes eligible for
+`find_researcher_contact.py`, and shows up in the sitewide contact display (COA 6)
+automatically. `active_research_method` discloses Exa as the real source per entry.
+
 ## Packet contents
 
 See `packets/*.md`: hypothesis, generative relation, Phase 2 evidence, queries,
