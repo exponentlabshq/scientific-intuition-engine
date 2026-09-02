@@ -1985,7 +1985,7 @@ def build_password():
 
     body = f'''{style}
 <div class="gate-wrap">
-  <video class="gate-bg" id="gate-video" src="fu-password-teaser.mp4" poster="fu-campus.jpg" autoplay muted loop playsinline webkit-playsinline preload="auto"></video>
+  <video class="gate-bg" id="gate-video" src="fu-drone-hero-v2.mp4" poster="fu-campus.jpg" autoplay muted loop playsinline webkit-playsinline preload="auto"></video>
   <div class="gate-overlay"></div>
   <button id="gate-unmute" class="hero-unmute">&#128264; Sound on</button>
   <div class="gate-card" id="gate-card">
@@ -1997,7 +1997,7 @@ def build_password():
       <button type="submit" id="gate-submit">Enter</button>
       <div class="gate-error" id="gate-error"></div>
     </form>
-    <div class="gate-hint">Not real security &mdash; a small pause before you go in. Everything past this door is disclosed in full at <a href="whitepaper.html">the real whitepaper</a>. The video behind this card is the real documentary's own first 15 seconds.</div>
+    <div class="gate-hint">Not real security &mdash; a small pause before you go in. Everything past this door is disclosed in full at <a href="whitepaper.html">the real whitepaper</a>. The video behind this card is the same drone shot that opens the home page.</div>
   </div>
 </div>
 <script>
